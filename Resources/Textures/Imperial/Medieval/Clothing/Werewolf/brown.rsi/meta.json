@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+  "copyright": "by Нерыч#2073",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "equipped-HAND",
+      "directions": 4
+    },
+    {
+      "name": "equipped-HELMET",
+      "directions": 4
+    },
+    {
+      "name": "equipped-FEET",
+      "directions": 4
+    },
+    {
+      "name": "equipped-NECK",
+      "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "equipped-MASK",
+      "directions": 4
+    }
+  ]
+}

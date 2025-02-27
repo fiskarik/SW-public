@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "size":
+  {
+    "x": 67,
+    "y": 67
+  },
+  "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+  "copyright": "by pyrolizz",
+  "states":
+  [
+    {
+      "name": "vendigo",
+      "directions": 4,
+      "delays": [[1],[1],[1],[1]]
+    },
+
+    {
+      "name": "vendigo_dead",
+      "directions": 1,
+      "delays": [[1]]
+    }
+  ]
+}

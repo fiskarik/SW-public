@@ -1,0 +1,23 @@
+{
+  "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+  "copyright": "for imperial space",
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "red"
+    },
+    {
+      "name": "none"
+    },
+    {
+      "name": "black"
+    },
+    {
+      "name": "blue"
+    }
+  ]
+}

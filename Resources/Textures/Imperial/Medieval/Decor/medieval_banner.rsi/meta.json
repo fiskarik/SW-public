@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+  "copyright": "Made for the Imperial Space community, authors'es discord nickname: pyrolizz",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "banner"
+    },
+    {
+      "name": "banner_black"
+    },
+    {
+      "name": "banner_blul"
+    },
+    {
+      "name": "banner_blul_gold"
+    },
+    {
+      "name": "banner_fish"
+    },
+    {
+      "name": "banner_green"
+    },
+    {
+      "name": "banner_red"
+    },
+    {
+      "name": "banner_red_gold"
+    },
+    {
+      "name": "banner_white"
+    },
+    {
+      "name": "banner_yll"
+    },
+    {
+      "name": "banner_hell"
+    }
+  ]
+}

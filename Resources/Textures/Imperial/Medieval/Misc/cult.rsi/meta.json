@@ -1,0 +1,31 @@
+{
+    "version": 1,
+    "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+    "copyright": "by crookielv",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "book"
+        },
+        {
+            "name": "bloody"
+        },
+        {
+            "name": "red"
+        },
+        {
+            "name": "cutlaltar",
+            "delays": [
+              [
+                0.35,
+                0.35,
+                0.35,
+                0.35
+              ]
+            ]
+        }
+    ]
+}

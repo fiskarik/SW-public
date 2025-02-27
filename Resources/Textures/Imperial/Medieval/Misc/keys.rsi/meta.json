@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+  "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/e1142f20f5e4661cb6845cfcf2dd69f864d67432 and modified by Swept",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "alchem"
+    },
+    {
+      "name": "chapel"
+    },
+    {
+      "name": "king"
+    },
+    {
+      "name": "secure"
+    },
+    {
+      "name": "tavern"
+    },
+    {
+      "name": "wizard"
+    },
+    {
+      "name": "leather"
+    },
+    {
+      "name": "unknown"
+    },
+    {
+      "name": "farmer"
+    },
+    {
+      "name": "maid"
+    },
+    {
+      "name": "wood"
+    },
+    {
+      "name": "blacksmith"
+    },
+    {
+      "name": "gate"
+    },
+    {
+      "name": "storage"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "size":
+  {
+    "x": 32,
+    "y": 32
+  },
+  "license": "cc-by-sa 3.0",
+  "copyright": "taken from ss14 build",
+  "states":
+  [
+    {
+      "name": "wall"
+    }
+  ]
+}

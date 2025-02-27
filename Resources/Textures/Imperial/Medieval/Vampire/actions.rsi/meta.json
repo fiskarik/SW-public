@@ -1,0 +1,62 @@
+{
+    "version": 1,
+    "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+    "copyright": "for imperial space",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "drink"
+      },
+      {
+        "name": "zveres"
+      },
+      {
+        "name": "cuff"
+      },
+      {
+        "name": "obj"
+      },
+      {
+        "name": "trell"
+      },
+      {
+        "name": "live"
+      },
+      {
+        "name": "kill"
+      },
+      {
+        "name": "stop"
+      },
+      {
+        "name": "boost"
+      },
+      {
+        "name": "regen"
+      },
+      {
+        "name": "border"
+      },
+      {
+        "name": "cloak"
+      },
+      {
+        "name": "sword"
+      },
+      {
+        "name": "say"
+      },
+      {
+        "name": "level"
+      },
+      {
+        "name": "invis"
+      },
+      {
+        "name": "create"
+      }
+    ]
+  }

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+  "copyright": "by dantanat#7095",
+  "size": {
+    "x": 52,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "watertank"
+    },
+    {
+        "name": "pit-content-1"
+    },
+    {
+        "name": "pit-content-2"
+    },
+    {
+        "name": "pit-content-3"
+    },
+    {
+        "name": "pit-content-4"
+    }
+  ]
+}

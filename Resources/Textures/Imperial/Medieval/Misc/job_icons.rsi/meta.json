@@ -1,0 +1,149 @@
+{
+    "version": 1,
+    "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+    "copyright": "by zhenya28 and dantanat for imperial space",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "avanturist"
+        },
+        {
+            "name": "cult"
+        },
+        {
+            "name": "cultlead"
+        },
+        {
+            "name": "miner"
+        },
+        {
+            "name": "miner_leader"
+        },
+        {
+            "name": "blacksmith"
+        },
+        {
+            "name": "blacksmithleg"
+        },
+        {
+            "name": "blacksmithins"
+        },
+        {
+            "name": "student"
+        },
+        {
+            "name": "studentleg"
+        },
+        {
+            "name": "studentins"
+        },
+        {
+            "name": "farmer"
+        },
+        {
+            "name": "alchemic"
+        },
+        {
+            "name": "band_common"
+        },
+        {
+            "name": "band_leader"
+        },
+        {
+            "name": "band_recruit"
+        },
+        {
+            "name": "band_veteran"
+        },
+        {
+            "name": "bard"
+        },
+        {
+            "name": "bum"
+        },
+        {
+            "name": "chaplain"
+        },
+        {
+            "name": "collegium_common"
+        },
+        {
+            "name": "collegium_leader"
+        },
+        {
+            "name": "collegium_recruit"
+        },
+        {
+            "name": "innkeeper"
+        },
+        {
+            "name": "ins_common"
+        },
+        {
+            "name": "ins_leader"
+        },
+        {
+            "name": "ins_mag"
+        },
+        {
+            "name": "ins_recruit"
+        },
+        {
+            "name": "ins_tribun"
+        },
+        {
+            "name": "ins_veteran"
+        },
+        {
+            "name": "ins_gateman"
+        },
+        {
+            "name": "legion_common"
+        },
+        {
+            "name": "legion_leader"
+        },
+        {
+            "name": "legion_mag"
+        },
+        {
+            "name": "legion_recruit"
+        },
+        {
+            "name": "legion_tribun"
+        },
+        {
+            "name": "legion_veteran"
+        },
+        {
+            "name": "legion_gateman"
+        },
+        {
+            "name": "merc_common"
+        },
+        {
+            "name": "merc_leader"
+        },
+        {
+            "name": "trader"
+        },
+        {
+            "name": "traveller"
+        },
+        {
+            "name": "tribe_common"
+        },
+        {
+            "name": "tribe_leader"
+        },
+        {
+            "name": "tribe_recruit"
+        },
+        {
+            "name": "wandernag"
+        }
+    ]
+}

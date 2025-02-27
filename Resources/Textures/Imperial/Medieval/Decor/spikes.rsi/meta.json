@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+  "copyright": "by dantanat#7095",
+  "size": {
+    "x": 45,
+    "y": 45
+  },
+  "states": [
+    {
+      "name": "spike1"
+    },
+    {
+      "name": "spike2"
+    },
+    {
+      "name": "spike3"
+    },
+    {
+      "name": "spike4"
+    },
+    {
+      "name": "spike5"
+    },
+    {
+      "name": "spike6"
+    },
+    {
+      "name": "spike7"
+    },
+    {
+      "name": "spike8"
+    }
+  ]
+}

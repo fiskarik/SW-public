@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+  "copyright": "Made for the Imperial Space community, authors'es discord nickname: pyrolizz",
+  "states": [
+    {
+      "name": "mixer_empty",
+      "delays": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "name": "mixer_broken",
+      "delays": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "name": "mixer_loaded",
+      "delays": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "name": "mixer_screens",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.1,
+          0.2,
+          0.1,
+          0.2,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "mixer_screen_broken",
+      "delays": [
+        [
+          1
+        ]
+      ]
+    }
+  ]
+}

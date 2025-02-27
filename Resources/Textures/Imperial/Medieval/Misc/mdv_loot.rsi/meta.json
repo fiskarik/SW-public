@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+  "copyright": "by frcts & dantanat. crab and dcrab by @pyrolizz",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "goblin"
+    },
+    {
+        "name": "hog"
+    },
+    {
+        "name": "crab"
+    },
+    {
+        "name": "dcrab"
+    },
+    {
+        "name": "wolf"
+    },
+    {
+        "name": "dmouse"
+    },
+    {
+        "name": "hitin"
+    },
+    {
+        "name": "bear"
+    },
+    {
+        "name": "weak"
+    },
+    {
+        "name": "meat"
+    },
+    {
+        "name": "fighter"
+    },
+    {
+        "name": "legion"
+    },
+    {
+        "name": "egg"
+    },
+    {
+        "name": "hunter"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "this content is under ICLA licence, read more on https://wiki.imperialspace.net/icla",
+    "copyright": "Made for the Imperial Space community, authors'es discord nickname: thenekron",
+    "size": {
+      "x": 32,
+      "y": 64
+    },
+    "states": [
+      {
+        "name": "base"
+      },
+      {
+        "name": "door-close"
+      },
+      {
+        "name": "door-open"
+      },
+      {
+        "name": "indicator-locked"
+      },
+      {
+        "name": "indicator-notworking"
+      },
+      {
+        "name": "indicator-unlocked"
+      }
+    ]
+  }
