@@ -1,0 +1,2 @@
+license: This content is under ICLA. Copyright holder: mirton4005 (discord) (Read more on: https://wiki.imperialspace.net/ru/icla)
+copyright: "mirton4005 (discord)"
