@@ -27,6 +27,8 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+  - type: BadSmellRaceModifier # imperial medieval
+    modifier: 0.7 # imperial medieval
 
 
 - type: entity

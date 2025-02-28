@@ -1,4 +1,4 @@
-ent-FoodBowlBig = миска
+ent-FoodBowlBig = глиняная миска
     .desc = Простая миска, используемая для супов и салатов.
     .suffix = { "" }
 ent-FoodBowlBigTrash = разбитая миска

@@ -1,0 +1,688 @@
+- type: entity
+  name: crossbow
+  parent: BaseWeaponSniper
+  id: MedievalWeaponCrossbow
+  description: A portable anti-armour rifle. Fires armor piercing 14.5mm shells. Uses .60 anti-material ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/crossbow.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Gun/crossbow.rsi
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - Bolt
+    capacity: 1
+    proto: MedievalBolt
+    autoCycle: true
+    soundInsert:
+      path: /Audio/Imperial/Medieval/ES_Crossbow_Fire_10_-_SFX_Producer.ogg
+  - type: Gun
+    resetOnHandSelected: false
+    fireRate: 0.25
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Imperial/Medieval/ES_Arrow_Release_1_-_SFX_Producer.ogg
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalWeaponCrossbow # imperial medieval
+  - type: HeldSpeedModifier
+    walkModifier: 0.88
+    sprintModifier: 0.88
+    mirrorClothingModifier: false
+  - type: UseDelayOnMelee
+  - type: UseDelay
+    delay: 4
+  - type: TrashClear
+    safe: true
+
+- type: entity
+  name: crossbow
+  parent: BaseWeaponSniper
+  id: MedievalWeaponCrossbowSpeed
+  description: A portable anti-armour rifle. Fires armor piercing 14.5mm shells. Uses .60 anti-material ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/crossbow.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Gun/crossbow.rsi
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - Bolt
+    capacity: 4
+    proto: MedievalBolt
+    autoCycle: true
+    soundInsert:
+      path: /Audio/Imperial/Medieval/ES_Crossbow_Fire_10_-_SFX_Producer.ogg
+  - type: Gun
+    resetOnHandSelected: false
+    fireRate: 0.8
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Imperial/Medieval/ES_Arrow_Release_1_-_SFX_Producer.ogg
+
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalBoltSteel
+  name: MedievalBolt
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Bolt
+  - type: CartridgeAmmo
+    proto: MedievalBoltBulletSteel
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/bolt.rsi
+    rotation: -135
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  id: MedievalBoltBulletSteel
+  name: base bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 56
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/bolt.rsi
+    rotation: -135
+    layers:
+    - state: proto
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalBolt
+  name: MedievalBolt
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Bolt
+  - type: CartridgeAmmo
+    proto: MedievalBoltBullet
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/bolt.rsi
+    rotation: -135
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  id: MedievalBoltBullet
+  name: base bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 44
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/bolt.rsi
+    rotation: -135
+    layers:
+    - state: proto
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalBoltWeak
+  name: MedievalBoltWeak
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Bolt
+  - type: CartridgeAmmo
+    proto: MedievalBoltWeakBullet
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/bolt.rsi
+    rotation: -135
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  id: MedievalBoltWeakBullet
+  name: base bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 47
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/bolt.rsi
+    rotation: -135
+    layers:
+    - state: proto
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalBoltPractice
+  name: MedievalBoltPractice
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Bolt
+  - type: CartridgeAmmo
+    proto: MedievalBoltBulletPractice
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/bolt_practice.rsi
+    rotation: -135
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  id: MedievalBoltBulletPractice
+  name: base bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/bolt_practice.rsi
+    rotation: -135
+    layers:
+    - state: proto
+  - type: StaminaDamageOnCollide
+    damage: 45
+
+- type: entity
+  id: MedievalProjectileRuneArrow
+  name: base bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 170
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/rune_arrow.rsi
+    layers:
+    - state: proto
+
+- type: entity
+  name: MedievalWeaponWand
+  parent: BaseWeaponSniper
+  id: MedievalWeaponWand
+  description: A portable anti-armour rifle. Fires armor piercing 14.5mm shells. Uses .60 anti-material ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/medieval_wand.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Gun/medieval_wand.rsi
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - MedievalRune
+    capacity: 1
+    proto: MedievalRuneArrow
+    soundInsert:
+      path: /Audio/Imperial/Medieval/ES_Crossbow_Fire_10_-_SFX_Producer.ogg
+  - type: Gun
+    resetOnHandSelected: false
+    fireRate: 0.5
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalRuneHealing
+  name: MedievalRuneHealing
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MedievalRune
+  - type: CartridgeAmmo
+    proto: ProjectileHealingBolt
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/rune_health.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalRuneFireBall
+  name: MedievalRuneFireBall
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MedievalRune
+  - type: CartridgeAmmo
+    proto: MedievalProjectileFireball
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/rune_fireball.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalRuneArrow
+  name: MedievalRuneArrow
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MedievalRune
+  - type: CartridgeAmmo
+    proto: MedievalProjectileRuneArrow
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/rune_arrow.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalRuneLighting
+  name: MedievalRuneLighting
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MedievalRune
+  - type: CartridgeAmmo
+    proto: BulletTaser
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/rune_lighting.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalRuneFlash
+  name: MedievalRuneFlash
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MedievalRune
+  - type: CartridgeAmmo
+    proto: BulletGrenadeFlash
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/rune_flash.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  id: MedievalProjectileFireball
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: fireball
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 13
+    intensitySlope: 2
+    totalIntensity: 140
+    maxTileBreak: 0
+
+- type: entity
+  name: bow
+  parent: BaseWeaponSniper
+  id: MedievalWeaponBow
+  description: A portable anti-armour rifle. Fires armor piercing 14.5mm shells. Uses .60 anti-material ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/bow.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Gun/bow.rsi
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - Arrow
+    capacity: 1
+    proto: MedievalArrow
+    autoCycle: true
+    soundInsert:
+      path: /Audio/Imperial/Medieval/ES_Bow_Pull_String_3_-_SFX_Producer.ogg
+  - type: Gun
+    resetOnHandSelected: false
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Medieval/ES_Bow_Release_Arrow_-_SFX_Producer.ogg
+
+- type: entity
+  parent: BaseArrow
+  id: MedievalArrowIronPhysics
+  name: arrow
+  description: You can feel the power of the steppe within you.
+  components:
+  - type: Sprite
+    layers:
+    - state: tail
+      color: red
+    - state: rod
+      color: brown
+    - state: tip
+    - state: solution1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 23
+
+- type: entity
+  parent: BaseArrow
+  id: MedievalArrowSteelPhysics
+  name: arrow
+  description: You can feel the power of the steppe within you.
+  components:
+  - type: Sprite
+    layers:
+    - state: tail
+      color: red
+    - state: rod
+      color: brown
+    - state: tip
+    - state: solution1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 28
+
+- type: entity
+  name: bow
+  parent: BaseWeaponSniper
+  id: MedievalWeaponBowNecro
+  description: A portable anti-armour rifle. Fires armor piercing 14.5mm shells. Uses .60 anti-material ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/necro_bow.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Gun/necro_bow.rsi
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - Arrow
+    capacity: 1
+    proto: MedievalArrow
+    autoCycle: true
+    soundInsert:
+      path: /Audio/Imperial/Medieval/ES_Bow_Pull_String_3_-_SFX_Producer.ogg
+  - type: Gun
+    resetOnHandSelected: false
+    fireRate: 0.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Medieval/ES_Bow_Release_Arrow_-_SFX_Producer.ogg
+  - type: RadiationSource
+    intensity: 2
+    slope: 3
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalArrowSteel
+  name: MedievalArrow
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Arrow
+  - type: CartridgeAmmo
+    proto: MedievalArrowBulletSteel
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/arrow.rsi
+    rotation: -135
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  id: MedievalArrowBulletSteel
+  name: base bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 41
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/arrow.rsi
+    rotation: -135
+    layers:
+    - state: proto
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalArrow
+  name: MedievalArrow
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Arrow
+  - type: CartridgeAmmo
+    proto: MedievalArrowBullet
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/arrow.rsi
+    rotation: -135
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  id: MedievalArrowBullet
+  name: base bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 19
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/arrow.rsi
+    rotation: -135
+    layers:
+    - state: proto
+
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalArrowFire
+  name: MedievalArrow
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Arrow
+  - type: CartridgeAmmo
+    proto: MedievalArrowBulletFire
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/arrow_fire.rsi
+    rotation: -135
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  id: MedievalArrowBulletFire
+  name: base bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/arrow_fire.rsi
+    rotation: -135
+    layers:
+    - state: proto
+  - type: IgniteOnCollide
+    fireStacks: 2.6
+  - type: PointLight
+    color: orange
+    energy: 3
+    radius: 1.5
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalArrowNecro
+  name: MedievalArrow
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Arrow
+  - type: CartridgeAmmo
+    proto: MedievalArrowBulletNecro
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/arrow_necro.rsi
+    rotation: -135
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  id: MedievalArrowBulletNecro
+  name: base bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 28
+        Caustic: 6.5
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/arrow_necro.rsi
+    rotation: -135
+    layers:
+    - state: proto
+
+
+- type: entity
+  parent: BaseCartridge
+  id: MedievalArrowPractice
+  name: MedievalArrowPractice
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - Arrow
+  - type: CartridgeAmmo
+    proto: MedievalArrowBulletPractice
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/arrow_practice.rsi
+    rotation: -135
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: Item
+    size: Small
+
+- type: entity
+  id: MedievalArrowBulletPractice
+  name: base bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/arrow_practice.rsi
+    rotation: -135
+    layers:
+    - state: proto
+  - type: StaminaDamageOnCollide
+    damage: 25

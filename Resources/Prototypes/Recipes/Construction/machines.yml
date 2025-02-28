@@ -1,4 +1,5 @@
 ﻿- type: construction
+  hide: true # imperial medieval craft disable
   name: Каркас компьютера # Imperial Recipes Locale
   id: Computer
   graph: Computer
@@ -13,6 +14,7 @@
     state: 4
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Каркас машины # Imperial Recipes Locale
   description: Основа, используемая для постройки различных машин. # Imperial Recipes Locale
   id: MachineFrame
@@ -28,6 +30,7 @@
 
 # Switching
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Двухпозиционный рычаг # Imperial Recipes Locale
   id: TwoWayLeverRecipe
   graph: LeverGraph
@@ -44,6 +47,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Переключатель сети ЛКП # Imperial Recipes Locale
   id: LightSwitchRecipe
   graph: LightSwitchGraph
@@ -62,6 +66,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Переключатель сигнала # Imperial Recipes Locale
   id: SignalSwitchRecipe
   graph: SignalSwitchGraph
@@ -80,6 +85,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Кнопка сигнала # Imperial Recipes Locale
   id: SignalButtonRecipe
   graph: SignalButtonGraph
@@ -98,6 +104,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Направленный переключатель сети ЛКП # Imperial Recipes Locale
   id: LightSwitchDirectionalRecipe
   graph: LightSwitchDirectionalGraph
@@ -116,6 +123,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Направленный переключатель сигнала # Imperial Recipes Locale
   id: SignalSwitchDirectionalRecipe
   graph: SignalSwitchDirectionalGraph
@@ -134,6 +142,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Направленная кнопка сигнала # Imperial Recipes Locale
   id: SignalButtonDirectionalRecipe
   graph: SignalButtonDirectionalGraph

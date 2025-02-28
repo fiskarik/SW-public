@@ -1,4 +1,5 @@
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Чистобот # Imperial Recipes Locale
   id: cleanbot
   graph: CleanBot
@@ -12,6 +13,7 @@
     state: cleanbot
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Пожарбот # Imperial Recipes Locale
   id: firebot
   graph: FireBot
@@ -25,6 +27,7 @@
     state: firebot
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Хонкобот # Imperial Recipes Locale
   id: honkbot
   graph: HonkBot
@@ -38,6 +41,7 @@
     state: honkbot
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Кринжбот # Imperial Recipes Locale
   id: jonkbot
   graph: JonkBot
@@ -51,6 +55,7 @@
     state: jonkbot
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Медибот # Imperial Recipes Locale
   id: medibot
   graph: MediBot
@@ -64,6 +69,7 @@
     state: medibot
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Мимбот # Imperial Recipes Locale
   id: mimebot
   graph: MimeBot
@@ -77,6 +83,7 @@
     state: mimebot
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Каргобот # Imperial Recipes Locale
   id: supplybot
   graph: SupplyBot

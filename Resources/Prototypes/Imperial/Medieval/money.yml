@@ -1,0 +1,164 @@
+- type: currency
+  id: Revent
+  displayName: store-currency-display-revent
+  cash:
+    1: MedievalRevent
+  canWithdraw: true
+
+
+- type: entity
+  name: MedievalRevent
+  parent: BaseItem
+  id: MedievalRevent
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    layers:
+    - state: revent
+      map: ["base"]
+  - type: Tag
+    tags:
+    - RawMaterial
+    - MedievalRevent
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalRevent: 1
+  - type: Stack
+    stackType: MedievalRevent
+    count: 1
+    baseLayer: base
+    layerStates:
+    - revent
+    - revent_2
+    - revent_3
+    - revent_4
+    - revent_5
+    - revent_6
+    - revent_7
+    - revent_8
+  - type: Currency
+    price:
+      Revent: 1
+  - type: Appearance
+  - type: StealTarget
+    stealGroup: MedievalMoney
+
+
+- type: entity
+  name: MedievalRevent
+  parent: MedievalRevent
+  id: MedievalRevent5
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalRevent
+    count: 5
+
+- type: entity
+  name: MedievalRevent
+  parent: MedievalRevent
+  id: MedievalRevent25
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalRevent
+    count: 25
+
+- type: entity
+  name: MedievalRevent
+  parent: MedievalRevent
+  id: MedievalRevent10
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalRevent
+    count: 10
+
+- type: entity
+  name: MedievalRevent
+  parent: MedievalRevent
+  id: MedievalRevent50
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalRevent
+    count: 50
+
+- type: entity
+  name: MedievalRevent
+  parent: MedievalRevent
+  id: MedievalRevent100
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalRevent
+    count: 100
+
+- type: entity
+  name: MedievalRevent
+  parent: MedievalRevent
+  id: MedievalRevent200
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalRevent
+    count: 200
+
+- type: entity
+  name: MedievalRevent
+  parent: MedievalRevent
+  id: MedievalRevent500
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalRevent
+    count: 500
+
+- type: material
+  id: MedievalRevent
+  stackEntity: MedievalRevent
+  name: materials-revent
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: revent }
+  color: "#d9d9d9"
+  price: 1
+
+- type: stack
+  id: MedievalRevent
+  name: MedievalRevent
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: revent }
+  spawn: MedievalRevent
+  maxCount: 100
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: MedievalCoinBag
+  name: MedievalCoinBag
+  description: A belt used to hold coins.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Belt/coin_bag.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Belt/coin_bag.rsi
+  - type: Storage
+    storageInsertSound:
+        path: /Audio/Imperial/Medieval/coin_in.ogg
+        params:
+          variation: 0.05
+    storageRemoveSound:
+        path: /Audio/Imperial/Medieval/coin_out.ogg
+        params:
+          variation: 0.05
+    storageOpenSound:
+        path: /Audio/Imperial/Medieval/coin_bag.ogg
+        params:
+          variation: 0.05
+    grid:
+    - 0,0,4,1
+    whitelist:
+      tags:
+        - MedievalRevent
+  - type: Appearance
+  - type: Item
+    size: Small

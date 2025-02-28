@@ -1,0 +1,87 @@
+- type: entity
+  parent: WindowUnbreakable
+  id: ReinforcedWindowUnbreakable
+  name: reinforced window
+  components:
+    - type: Tag
+      tags:
+        - Window
+    - type: Sprite
+      drawdepth: WallTops
+      sprite: Structures/Windows/tinted_window.rsi
+    - type: Icon
+      sprite: Structures/Windows/tinted_window.rsi
+    - type: IconSmooth
+      key: walls
+      base: twindow
+
+- type: entity
+  id: WindowUnbreakable
+  parent: BaseStructure
+  name: window
+  description: Don't smudge up the glass down there.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Effects/glass_hit.ogg"
+  - type: WallMount
+    arc: 360 # interact despite grilles
+  - type: Tag
+    tags:
+      - ForceFixRotations
+      - Window
+  - type: Sprite
+    netsync: false
+    drawdepth: WallTops
+    sprite: Structures/Windows/window.rsi
+  - type: Icon
+    sprite: Structures/Windows/window.rsi
+    state: full
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: ExaminableDamage
+    messages: WindowMessages
+  - type: Repairable
+  - type: Airtight
+  - type: IconSmooth
+    key: walls
+    base: window
+  - type: InteractionPopup
+    interactSuccessString: comp-window-knock
+    messagePerceivedByOthers: comp-window-knock
+    interactSuccessSound:
+      path: /Audio/Effects/glass_knock.ogg
+  - type: Appearance
+  - type: StaticPrice
+    price: 75
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Glass
+
+- type: entity
+  parent: CollideRune
+  id: SummoningRune
+  name: "Summoning Rune"
+  components:
+  - type: Sprite
+    sprite: Structures/Magic/Cult/rune.rsi
+    netsync: false
+    layers:
+    - state: cult1
+      color: '#F80000'
+  - type: Appearance

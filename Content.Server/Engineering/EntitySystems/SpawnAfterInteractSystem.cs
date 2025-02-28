@@ -66,9 +66,12 @@ namespace Content.Server.Engineering.EntitySystems
             }
 
             EntityManager.SpawnEntity(component.Prototype, args.ClickLocation.SnapToGrid(grid));
-
-            if (component.RemoveOnInteract && stackComp == null)
-                TryQueueDel(uid);
+            // Imperial Medieval Start
+            // if (component.RemoveOnInteract && stackComp == null)
+            //     TryQueueDel(uid);
+            if (component.DeleteOnInteract)
+                QueueDel(uid);
+            // Imperial Medieval End
         }
     }
 }

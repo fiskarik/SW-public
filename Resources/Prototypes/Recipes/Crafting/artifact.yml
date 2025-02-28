@@ -1,4 +1,5 @@
 ﻿- type: construction
+  hide: true # imperial medieval craft disable
   name: Инопланетный артефакт # Imperial Recipes Locale
   id: Artifact
   graph: Artifact

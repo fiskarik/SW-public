@@ -1,0 +1,155 @@
+- type: entity
+  id: SpawnPointMedievalTraveller
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalTraveller
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalAvanturist
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalAvanturist
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalBard
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalBard
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalBum
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalBum
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalInnkeeper
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalInnkeeper
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalChaplain
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalChaplain
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalWanderMag
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalWanderMag
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalLegionRecruit
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalLegionRecruit
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalLegionLegioner
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalLegionLegioner
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalLegionOpcion
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalLegionOpcion
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalLegionTribun
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalLegionTribun
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalLegionLegat
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalLegionLegat
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer
+
+- type: entity
+  id: SpawnPointMedievalLegionMag
+  parent: SpawnPointJobBase
+  name: securityofficer
+  components:
+  - type: SpawnPoint
+    job_id: MedievalLegionMag
+  - type: Sprite
+    layers:
+      - state: green
+      - state: security_officer

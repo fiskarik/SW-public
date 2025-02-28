@@ -39,3 +39,9 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+  # Imperial Medieval Start
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: ChurchBell
+  # Imperial Medieval End

@@ -1,6 +1,6 @@
-ent-ClothingHandsChameleon = чёрные перчатки
+ent-ClothingHandsChameleon = чёрные кожаные перчатки
     .desc = Обычные чёрные перчатки, которые не спасут вас от поджаривания.
     .suffix = Хамелеон
-ent-ClothingHandsChameleonThief = чёрные перчатки
+ent-ClothingHandsChameleonThief = чёрные кожаные перчатки
     .desc = Обычные чёрные перчатки, которые не спасут вас от поджаривания.
     .suffix = Хамелеон, вор

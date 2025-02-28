@@ -1,0 +1,2296 @@
+- type: storeCategory
+  id: MedievalFoodDemo
+  name: medieval-category-food
+  priority: 0
+
+- type: storeCategory
+  id: MedievalMagicDemo
+  name: medieval-category-magic
+  priority: 0
+
+- type: storeCategory
+  id: MedievalBuildDemo
+  name: medieval-category-build
+  priority: 4
+
+- type: storeCategory
+  id: MedievalArmorDemo
+  name: medieval-category-armor
+  priority: 3
+
+- type: storeCategory
+  id: MedievalMedDemo
+  name: medieval-category-med
+  priority: 1
+
+- type: storeCategory
+  id: MedievalWeaponDemo
+  name: medieval-category-weapon
+  priority: 2
+
+- type: storeCategory
+  id: MedievalPlantsDemo
+  name: medieval-category-plants
+  priority: 8
+
+- type: storeCategory
+  id: MedievalMiscDemo
+  name: medieval-category-misc
+  priority: 9
+
+- type: storeCategory
+  id: MedievalQuestDemo
+  name: medieval-category-quest
+  priority: 7
+
+- type: storeCategory
+  id: MedievalBackpackDemo
+  name: medieval-category-backpack
+  priority: 6
+
+- type: storeCategory
+  id: MedievalClothingDemo
+  name: medieval-category-clothing
+  priority: 5
+
+- type: listing
+  id: DemoMdvShopFoodBreadPlain
+  productEntity: FoodBreadPlain
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodBreadCorn
+  productEntity: FoodBreadCorn
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodTomato
+  productEntity: FoodTomato
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodBreadSlime
+  productEntity: FoodBreadSlime
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodBakedPretzel
+  productEntity: FoodBakedPretzel
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodBakedBunMeat
+  productEntity: FoodBakedBunMeat
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodBakedCookieSugar
+  productEntity: FoodBakedCookieSugar
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodBakedPancakeBb
+  productEntity: FoodBakedPancakeBb
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodBakedPancake
+  productEntity: FoodBakedPancake
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodBakedBunHoney
+  productEntity: FoodBakedBunHoney
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodMeatSalami
+  productEntity: FoodMeatSalami
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodMeatLizardCooked
+  productEntity: FoodMeatLizardCooked
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodMeatCooked
+  productEntity: FoodMeatCooked
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodCheese
+  productEntity: FoodCheese
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodMeatChickenFried
+  productEntity: FoodMeatChickenFried
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodMealFriedegg
+  productEntity: FoodMealFriedegg
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodSoupBeet
+  productEntity: FoodSoupBeet
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodCakeBlueberry
+  productEntity: FoodCakeBlueberry
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodSoupMeatball
+  productEntity: FoodSoupMeatball
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodCakePumpkin
+  productEntity: FoodCakePumpkin
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodOatmeal
+  productEntity: FoodOatmeal
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodSoupStew
+  productEntity: FoodSoupStew
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodSoupPotato
+  productEntity: FoodSoupPotato
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodSoupVegetable
+  productEntity: FoodSoupVegetable
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodCakeCarrot
+  productEntity: FoodCakeCarrot
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodMealMilkape
+  productEntity: FoodMealMilkape
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopFoodSoupMonkey
+  productEntity: FoodSoupMonkey
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalFoodDemo
+
+- type: listing
+  id: DemoMdvShopMedievalFoundryCraft
+  productEntity: MedievalFoundryCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalBlacksmithArmorCraft
+  productEntity: MedievalBlacksmithArmorCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalLeatherWorkingPlaceCraft
+  productEntity: MedievalLeatherWorkingPlaceCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalWoodWorkerPlaceCraft
+  productEntity: MedievalWoodWorkerPlaceCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalDecorKotelForCoockingPotionsCraft
+  productEntity: MedievalDecorKotelForCoockingPotionsCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+
+
+- type: listing
+  id: DemoMdvShopMedievalWoodenFloorCraft
+  productEntity: MedievalWoodenFloorCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalDecorMogila3Craft
+  productEntity: MedievalDecorMogila3Craft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalDecorMogila1Craft
+  productEntity: MedievalDecorMogila1Craft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalDecorMogila2Craft
+  productEntity: MedievalDecorMogila2Craft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalFloorDrainCraft
+  productEntity: MedievalFloorDrainCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalDecorAnonsCraft
+  productEntity: MedievalDecorAnonsCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopCarpetBlack
+  productEntity: CarpetBlack
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopCarpet
+  productEntity: Carpet
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopCarpetPurple
+  productEntity: CarpetPurple
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopCarpetSBlue
+  productEntity: CarpetSBlue
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopCarpetGreen
+  productEntity: CarpetGreen
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopCarpetOrange
+  productEntity: CarpetOrange
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopCarpetBlue
+  productEntity: CarpetBlue
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopCarpetPink
+  productEntity: CarpetPink
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalStoneLoopHoleCraft
+  productEntity: MedievalStoneLoopHoleCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalMedicalBedCraft
+  productEntity: MedievalMedicalBedCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalStoneWallCraft
+  productEntity: MedievalStoneWallCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalPrisonGrilleCraft
+  productEntity: MedievalPrisonGrilleCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalMortarCraft
+  productEntity: MedievalMortarCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMortarCraft
+
+- type: listing
+  id: DemoMdvShopMedievalDecorTorchColoneCraft
+  productEntity: MedievalDecorTorchColoneCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBuildDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorFur
+  productEntity: MedievalClothingOuterArmorFur
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorStudded
+  productEntity: MedievalClothingOuterArmorStudded
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalIronGloves
+  productEntity: MedievalIronGloves
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalIronGlovesBear
+  productEntity: MedievalIronGlovesBear
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalIronGlovesBrig
+  productEntity: MedievalIronGlovesBrig
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingFeetSteel
+  productEntity: MedievalClothingFeetSteel
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorLeather
+  productEntity: MedievalClothingOuterArmorLeather
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorLeatherLight
+  productEntity: MedievalClothingOuterArmorLeatherLight
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorChainMailLight
+  productEntity: MedievalClothingOuterArmorChainMailLight
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorChainMail
+  productEntity: MedievalClothingOuterArmorChainMail
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorLeatherHeavy
+  productEntity: MedievalClothingOuterArmorLeatherHeavy
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorIronCuirass
+  productEntity: MedievalClothingOuterArmorIronCuirass
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorIronCuirassLight
+  productEntity: MedievalClothingOuterArmorIronCuirassLight
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorIron
+  productEntity: MedievalClothingOuterArmorIron
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorUpIron
+  productEntity: MedievalClothingOuterArmorUpIron
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorUpIron2
+  productEntity: MedievalClothingOuterArmorUpIron2
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHelmetShapel
+  productEntity: MedievalClothingHeadHelmetShapel
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHelmetCrusader
+  productEntity: MedievalClothingHeadHelmetCrusader
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHelmetNormand
+  productEntity: MedievalClothingHeadHelmetNormand
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHelmetNormandFree
+  productEntity: MedievalClothingHeadHelmetNormandFree
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHelmetNazal
+  productEntity: MedievalClothingHeadHelmetNazal
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopClothingOuterArmorPodWars
+  productEntity: ClothingOuterArmorPodWars
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHelmetSalad
+  productEntity: MedievalClothingHeadHelmetSalad
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHelmetSaladLight
+  productEntity: MedievalClothingHeadHelmetSaladLight
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHelmetBacinet
+  productEntity: MedievalClothingHeadHelmetBacinet
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalArmorDemo
+
+- type: listing
+  id: DemoMdvShopOintment
+  productEntity: Ointment
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMedDemo
+
+- type: listing
+  id: DemoMdvShopGauze
+  productEntity: Gauze
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMedDemo
+
+- type: listing
+  id: DemoMdvShopBrutepack
+  productEntity: MedievalBrutepack
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMedDemo
+
+#- type: listing
+#  id: MdvShopMedievalBloodChemistryBottle
+#  productEntity: MedievalBloodChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MedievalGeneticChemistryBottle
+#  productEntity: MedievalGeneticChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MdvShopMedievalHealthChemistryBottle
+#  productEntity: MedievalHealthChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+
+#- type: listing
+#  id: MdvShopMedievalHealMedievalBiomassReclaimerCraft
+#  productEntity: MedievalBiomassReclaimerCraft
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MdvShopMedievalHealMaterialBiomass
+#  productEntity: MaterialBiomass
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+
+#- type: listing
+#  id: MdvShopMedievalHealMedievalComputerCloningConsoleCraft
+#  productEntity: MedievalComputerCloningConsoleCraft
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MdvShopMedievalHealMedievalMedicalScannerCraft
+#  productEntity: MedievalMedicalScannerCraft
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+
+- type: listing
+  id: DemoMdvShopMedievalHealDrinkGlassWhite
+  productEntity: DrinkGlassWhite
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMedDemo
+
+#- type: listing
+#  id: MdvShopMedievalHealMedievalCloningPodCraft
+#  productEntity: MedievalCloningPodCraft
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MdvShopMedievalRadChemistryBottle
+#  productEntity: MedievalRadChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MedievalGigaHealChemistryBottle
+#  productEntity: MedievalGigaHealChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MdvShopMedievalDrugChemistryBottle
+#  productEntity: MedievalDrugChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MdvShopMedievalSpaceChemistryBottle
+#  productEntity: MedievalSpaceChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MdvShopMedievalBaffChemistryBottle
+#  productEntity: MedievalBaffChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MdvShopMedievalMuteChemistryBottle
+#  productEntity: MedievalMuteChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MdvShopMedievalFireChemistryBottle
+#  productEntity: MedievalFireChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+#
+#- type: listing
+#  id: MdvShopMedievalSleepChemistryBottle
+#  productEntity: MedievalSleepChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+
+#- type: listing
+#  id: MdvShopMedievalMedkitFilled
+#  productEntity: MedievalMedkitFilled
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMedDemo
+
+- type: listing
+  id: DemoMdvShopMedievalArrow
+  productEntity: MedievalArrowIronPhysics
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalMopItem
+  productEntity: MedievalMopItem
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalDaggerT3
+  productEntity: MedievalDaggerT3
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+#- type: listing
+#  id: MdvShopMedievalDaggerT3Steel
+#  productEntity: MedievalDaggerT3Steel
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+
+#- type: listing
+#  id: MdvShopMedievalWrench
+#  productEntity: MedievalWrench
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalHatchet
+  productEntity: MedievalHatchet
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalWoodenShield
+  productEntity: MedievalWoodenShield
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalWoodenShieldKnight
+  productEntity: MedievalWoodenShieldKnight
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalWoodenShieldBuckler
+  productEntity: MedievalWoodenShieldBuckler
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalMaceT3
+  productEntity: MedievalMaceT3
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalPalice
+  productEntity: MedievalPalice
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalMaceT3Heavy
+  productEntity: MedievalMaceT3Heavy
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalFalshionT3
+  productEntity: MedievalFalshionT3
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalShortSword
+  productEntity: MedievalShortSword
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalSaber
+  productEntity: MedievalSaber
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalPickaxe
+  productEntity: MedievalPickaxe
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalPickaxeSteel
+  productEntity: MedievalPickaxeSteel
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopBowImprovised
+  productEntity: BowImprovised
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalSpearT3
+  productEntity: MedievalSpearT3
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalIronHammer
+  productEntity: MedievalIronHammer
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalGrenade
+  productEntity: MedievalGrenade
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvFactionEagleMedievalIronShieldMainBuckler
+  productEntity: MedievalIronShieldBuckler
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvFactionWolfMedievalWeaponCrossbowMain
+  productEntity: MedievalWeaponCrossbow
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvFactionWolfMedievalBoltMain
+  productEntity: MedievalBolt
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+#- type: listing
+#  id: MdvFactionWolfMedievalMaceT3SteelMain
+#  productEntity: MedievalMaceT3Steel
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+#
+#- type: listing
+#  id: MdvShopMedievalPaliceSteel
+#  productEntity: MedievalPaliceSteel
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+#
+#- type: listing
+#  id: MdvShopMedievalMaceT3HeavySteel
+#  productEntity: MedievalMaceT3SteelHeavy
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+
+#- type: listing
+#  id: MdvFactionFlameMedievalIronHammerSteelMain
+#  productEntity: MedievalIronHammerSteel
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+#
+#- type: listing
+#  id: MdvFactionFlameMedievalSpearT3SteelMain
+#  productEntity: MedievalSpearT3Steel
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvFactionEagleMedievalIronSekir
+  productEntity: MedievalIronSekir
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+#- type: listing
+#  id: MdvFactionEagleMedievalIronSekirSteel
+#  productEntity: MedievalIronSekirSteel
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+#
+#- type: listing
+#  id: MdvFactionEagleMedievalIronHalberdT3Steel2
+#  productEntity: MedievalIronHalberdT3Steel
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+#
+#- type: listing
+#  id: MdvFactionWolfMedievalFalshionT3SteelMain
+#  productEntity: MedievalFalshionT3Steel
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+#
+#- type: listing
+#  id: MdvFactionWolfMedievalShortSwordSteel
+#  productEntity: MedievalShortSwordSteel
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+#
+#- type: listing
+#  id: MdvFactionWolfMedievalSaberSteel
+#  productEntity: MedievalSaberSteel
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalIronHalberdT3
+  productEntity: MedievalIronHalberdT3
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalWeaponDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth11
+  productEntity: MedievalClothingUniformJumpsuitShitCloth11
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth33
+  productEntity: MedievalClothingUniformJumpsuitShitCloth33
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth34
+  productEntity: MedievalClothingUniformJumpsuitShitCloth34
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth35
+  productEntity: MedievalClothingUniformJumpsuitShitCloth35
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth36
+  productEntity: MedievalClothingUniformJumpsuitShitCloth36
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth37
+  productEntity: MedievalClothingUniformJumpsuitShitCloth37
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth38
+  productEntity: MedievalClothingUniformJumpsuitShitCloth38
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth39
+  productEntity: MedievalClothingUniformJumpsuitShitCloth39
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth40
+  productEntity: MedievalClothingUniformJumpsuitShitCloth40
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth41
+  productEntity: MedievalClothingUniformJumpsuitShitCloth41
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth42
+  productEntity: MedievalClothingUniformJumpsuitShitCloth42
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth43
+  productEntity: MedievalClothingUniformJumpsuitShitCloth43
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth44
+  productEntity: MedievalClothingUniformJumpsuitShitCloth44
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth45
+  productEntity: MedievalClothingUniformJumpsuitShitCloth45
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth46
+  productEntity: MedievalClothingUniformJumpsuitShitCloth46
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth47
+  productEntity: MedievalClothingUniformJumpsuitShitCloth47
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth48
+  productEntity: MedievalClothingUniformJumpsuitShitCloth48
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth49
+  productEntity: MedievalClothingUniformJumpsuitShitCloth49
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth50
+  productEntity: MedievalClothingUniformJumpsuitShitCloth50
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth51
+  productEntity: MedievalClothingUniformJumpsuitShitCloth51
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth52
+  productEntity: MedievalClothingUniformJumpsuitShitCloth52
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth53
+  productEntity: MedievalClothingUniformJumpsuitShitCloth53
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth54
+  productEntity: MedievalClothingUniformJumpsuitShitCloth54
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth55
+  productEntity: MedievalClothingUniformJumpsuitShitCloth55
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth56
+  productEntity: MedievalClothingUniformJumpsuitShitCloth56
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth57
+  productEntity: MedievalClothingUniformJumpsuitShitCloth57
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth58
+  productEntity: MedievalClothingUniformJumpsuitShitCloth58
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth59
+  productEntity: MedievalClothingUniformJumpsuitShitCloth59
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth60
+  productEntity: MedievalClothingUniformJumpsuitShitCloth60
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth61
+  productEntity: MedievalClothingUniformJumpsuitShitCloth61
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth62
+  productEntity: MedievalClothingUniformJumpsuitShitCloth62
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth63
+  productEntity: MedievalClothingUniformJumpsuitShitCloth63
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth64
+  productEntity: MedievalClothingUniformJumpsuitShitCloth64
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalMedievalAlchemicBelt
+  productEntity: MedievalAlchemicBelt
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth10
+  productEntity: MedievalClothingUniformJumpsuitShitCloth10
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth8
+  productEntity: MedievalClothingUniformJumpsuitShitCloth8
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth24
+  productEntity: MedievalClothingUniformJumpsuitShitCloth24
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalBastShoes
+  productEntity: MedievalBastShoes
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth4
+  productEntity: MedievalClothingUniformJumpsuitShitCloth4
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterApronChef
+  productEntity: MedievalClothingOuterApronChef
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHandsGlovesColorBrown
+  productEntity: ClothingHandsGlovesColorBrown
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalGlovesBlacksmith
+  productEntity: MedievalGlovesBlacksmith
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHandsGlovesColorLightBrown
+  productEntity: ClothingHandsGlovesColorLightBrown
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoClothingHandsGlovesColorBlack
+  productEntity: ClothingHandsGlovesColorBlack
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHandsGlovesColorBrownMedieval
+  productEntity: MedievalClothingHandsGlovesColorBrown
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHandsGlovesColorLightBrownMedieval
+  productEntity: MedievalClothingHandsGlovesColorLightBrown
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoClothingHandsGlovesColorBlackMedieval
+  productEntity: MedievalClothingHandsGlovesColorBlack
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingShoesLeather
+  productEntity: MedievalClothingShoesLeather
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalShoesSapogi
+  productEntity: MedievalShoesSapogi
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalShoesSapogiRobin
+  productEntity: MedievalShoesSapogiRobin
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalShoesSapogiHigh
+  productEntity: MedievalShoesSapogiHigh
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalShoesValenki
+  productEntity: MedievalShoesValenki
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth21
+  productEntity: MedievalClothingUniformJumpsuitShitCloth21
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitFlannel
+  productEntity: MedievalClothingUniformJumpsuitFlannel
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth17
+  productEntity: MedievalClothingUniformJumpsuitShitCloth17
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth20
+  productEntity: MedievalClothingUniformJumpsuitShitCloth20
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth12
+  productEntity: MedievalClothingUniformJumpsuitShitCloth12
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadFarmerHat
+  productEntity: MedievalClothingHeadFarmerHat
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalPlantsDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHelmetHood
+  productEntity: MedievalClothingHeadHelmetHood
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth3
+  productEntity: MedievalClothingUniformJumpsuitShitCloth3
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth1
+  productEntity: MedievalClothingUniformJumpsuitShitCloth1
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth2
+  productEntity: MedievalClothingUniformJumpsuitShitCloth2
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadArcherHat
+  productEntity: MedievalClothingHeadArcherHat
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalMaskFace
+  productEntity: MedievalMaskFace
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHatPlaguedoctor
+  productEntity: MedievalClothingHeadHatPlaguedoctor
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingMaskPlague
+  productEntity: MedievalClothingMaskPlague
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterPlagueSuit
+  productEntity: MedievalClothingOuterPlagueSuit
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth18
+  productEntity: MedievalClothingUniformJumpsuitShitCloth18
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth19
+  productEntity: MedievalClothingUniformJumpsuitShitCloth19
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth15
+  productEntity: MedievalClothingUniformJumpsuitShitCloth15
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth7
+  productEntity: MedievalClothingUniformJumpsuitShitCloth7
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpsuitShitCloth6
+  productEntity: MedievalClothingUniformJumpsuitShitCloth6
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingUniformJumpskirtJanimaid
+  productEntity: MedievalClothingUniformJumpskirtJanimaid
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalClothingDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingBackpackBox
+  productEntity: MedievalClothingBackpackBox
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMdvShopOreBag
+  productEntity: OreBag
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMdvShopPlantBag
+  productEntity: PlantBag
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMedievalClothingBackpackSatchelLeather
+  productEntity: MedievalClothingBackpackSatchelLeather
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMedievalClothingBackpackSatchelLeather2
+  productEntity: MedievalClothingBackpackSatchelLeather2
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMedievalClothingBackpackSatchelLeather3
+  productEntity: MedievalClothingBackpackSatchelLeather3
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMdvShopMedievalQuiver
+  productEntity: MedievalQuiver
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMdvShopMedievalQuiverSteel
+  productEntity: MedievalQuiverSteel
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMdvShopMedievalCoinBag
+  productEntity: MedievalCoinBag
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+#- type: listing
+#  id: MdvShopClothingBeltStorageWaistbag
+#  productEntity: ClothingBeltStorageWaistbag
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingBackpackLeather
+  productEntity: MedievalClothingBackpackLeather
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingBackpackSatchelTraveller
+  productEntity: MedievalClothingBackpackSatchelTraveller
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalBackpackDemo
+
+- type: listing
+  id: DemoMdvShopTorch
+  productEntity: Torch
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopMedievalHolySalt
+  productEntity: MedievalHolySalt
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopMedievalRepairStone
+  productEntity: MedievalRepairStone
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopMedievalPaper
+  productEntity: MedievalPaper
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopMedievalPen
+  productEntity: MedievalPen
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+#- type: listing
+#  id: MdvShopSoap
+#  productEntity: Soap
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMiscDemo
+
+#- type: listing
+#  id: MdvShopMedievalMultitool
+#  productEntity: MedievalMultitool
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopFoodGarlic
+  productEntity: FoodGarlic
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopMedievalBeaker
+  productEntity: MedievalBeaker
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopMedievalBanjoInstrument
+  productEntity: MedievalBanjoInstrument
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopMedievalWineskin
+  productEntity: MedievalWineskin
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopMedievalHandheldGPSBasic
+  productEntity: MedievalHandheldGPSBasic
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedievalServerMap
+  productEntity: MedievalServerMap
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopMedievalChest2
+  productEntity: MedievalChest2
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvMedievalLockpick
+  productEntity: MedievalLockpick
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+- type: listing
+  id: DemoMdvShopMedievalRope
+  productEntity: MedievalRope
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMiscDemo
+
+#- type: listing
+#  id: qualityCartrigeTool01
+#  productEntity: qualityCartrigeTool01
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalUpgrade
+#
+#- type: listing
+#  id: qualityCartrigeArmor01
+#  productEntity: qualityCartrigeArmor01
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalUpgrade
+#
+#- type: listing
+#  id: qualityCartrigeTool12
+#  productEntity: qualityCartrigeTool12
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalUpgrade
+#
+#- type: listing
+#  id: qualityCartrigeArmor12
+#  productEntity: qualityCartrigeArmor12
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalUpgrade
+#
+#- type: listing
+#  id: qualityCartrigeTool23
+#  productEntity: qualityCartrigeTool23
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalUpgrade
+#
+#- type: listing
+#  id: qualityCartrigeArmor23
+#  productEntity: qualityCartrigeArmor23
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalUpgrade
+#
+#- type: listing
+#  id: qualityCartrigeTool34
+#  productEntity: qualityCartrigeTool34
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalUpgrade
+#
+#- type: listing
+#  id: qualityCartrigeArmor34
+#  productEntity: qualityCartrigeArmor34
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalUpgrade
+#
+#- type: listing
+#  id: qualityCartrigeTool45
+#  productEntity: qualityCartrigeTool45
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalUpgrade
+#
+#- type: listing
+#  id: qualityCartrigeArmor45
+#  productEntity: qualityCartrigeArmor45
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalUpgrade
+
+- type: listing
+  id: DemoMdvShopMedievalhydroponicsSoilCraft
+  productEntity: MedievalhydroponicsSoilCraft
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalPlantsDemo
+
+#- type: listing
+#  id: MdvShopMedievalMutagenChemistryBottle
+#  productEntity: MedievalMutagenChemistryBottle
+#  cost:
+#    UnknownMedieval: 1
+#  categories:
+#  - MedievalPlantsDemo
+
+- type: listing
+  id: DemoMdvShopRobustHarvestChemistryBottle
+  productEntity: RobustHarvestChemistryBottle
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalPlantsDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClippers
+  productEntity: MedievalClippers
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalPlantsDemo
+
+- type: listing
+  id: DemoMdvShopMedievalHoe
+  productEntity: MedievalHoe
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalPlantsDemo
+
+- type: listing
+  id: DemoMdvShopMedievalShovel
+  productEntity: MedievalShovel
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalPlantsDemo
+
+- type: listing
+  id: DemoMdvShopMedievalMopBucket
+  productEntity: MedievalMopBucket
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalPlantsDemo
+
+- type: listing
+  id: DemoMdvShopWheatSeeds
+  productEntity: WheatSeeds
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalPlantsDemo
+
+- type: listing
+  id: DemoMdvShopPotatoSeeds
+  productEntity: PotatoSeeds
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalPlantsDemo
+
+- type: listing
+  id: DemoMdvShopCarrotSeeds
+  productEntity: CarrotSeeds
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalPlantsDemo
+
+- type: listing
+  id: DemoMdvShopMedievalShoesSpeed
+  productEntity: MedievalShoesSpeed
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedaljonMana
+  productEntity: MedaljonMana
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedaljonDark
+  productEntity: MedaljonDark
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedaljonDef
+  productEntity: MedaljonDef
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedaljonFlashImmune
+  productEntity: MedaljonFlashImmune
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedaljonExpl
+  productEntity: MedaljonExpl
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedaljonSpeed
+  productEntity: MedaljonSpeed
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedaljonNoslip
+  productEntity: MedaljonNoslip
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedaljonAntiMana
+  productEntity: MedaljonAntiMana
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedievalScrollBarrierWeak
+  productEntity: MedievalScrollBarrierWeak
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedievalScrollBarrierNormal
+  productEntity: MedievalScrollBarrierNormal
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopBible
+  productEntity: Bible
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedievalGlowStone
+  productEntity: MedievalGlowStone
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedievalHandheldHealthAnalyzer
+  productEntity: MedievalHandheldHealthAnalyzer
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopCompactDefibrillator
+  productEntity: CompactDefibrillator
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingOuterArmorCharmerWeak
+  productEntity: MedievalClothingOuterArmorCharmerWeak
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedievalClothingHeadHelmetCharmerWeak
+  productEntity: MedievalClothingHeadHelmetCharmerWeak
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalMagicDemo
+
+- type: listing
+  id: DemoMdvShopMedievalQuestContractInsMobsLight
+  productEntity: MedievalQuestContractInsMobsLight
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalQuestDemo
+
+- type: listing
+  id: DemoMdvShopMedievalQuestContractInsMobsHard
+  productEntity: MedievalQuestContractInsMobsHard
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalQuestDemo
+
+- type: listing
+  id: DemoMdvShopMedievalQuestContractInsMelee
+  productEntity: MedievalQuestContractInsMelee
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalQuestDemo
+
+- type: listing
+  id: DemoMdvShopMedievalQuestContractInsArmorLight
+  productEntity: MedievalQuestContractInsArmorLight
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalQuestDemo
+
+- type: listing
+  id: DemoMdvShopMedievalQuestContractInsArmorMedium
+  productEntity: MedievalQuestContractInsArmorMedium
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalQuestDemo
+
+- type: listing
+  id: DemoMdvShopMedievalQuestContractInsArmorHard
+  productEntity: MedievalQuestContractInsArmorHard
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalQuestDemo
+
+- type: listing
+  id: DemoMdvShopMedievalQuestContractInsFarm
+  productEntity: MedievalQuestContractInsFarm
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalQuestDemo
+
+- type: listing
+  id: DemoMdvShopMedievalQuestContractInsWood
+  productEntity: MedievalQuestContractInsWood
+  cost:
+    UnknownMedieval: 1
+  categories:
+  - MedievalQuestDemo

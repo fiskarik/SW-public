@@ -19,7 +19,8 @@ namespace Content.Server.Entry
             "InventorySlots",
             "LightFade",
             "HolidayRsiSwap",
-            "OptionsVisualizer"
+            "OptionsVisualizer",
+            "CP14WaveShader", // Imperial medieval CP14 Wave shader
         };
     }
 }

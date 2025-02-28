@@ -8,7 +8,7 @@ public readonly record struct OnIrradiatedEvent(float FrameTime, float RadsPerSe
 {
     public readonly float FrameTime = FrameTime;
 
-    public readonly float RadsPerSecond = RadsPerSecond;
+    public readonly float RadsPerSecond = RadsPerSecond / 10f; // Imperial Medieval
 
     public float TotalRads => RadsPerSecond * FrameTime;
 }

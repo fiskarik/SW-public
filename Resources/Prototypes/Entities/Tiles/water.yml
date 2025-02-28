@@ -13,14 +13,14 @@
   - type: SyncSprite
   - type: Clickable
   - type: Sprite
-    sprite: Tiles/Planet/water.rsi
+    sprite: Imperial/Medieval/Tiles/Planet/water_new.rsi # Imperial Medieval Start
     drawdepth: BelowFloor
-    layers:
-      - state: shoreline_water
+    #layers: # Imperial Medieval Start
+    #  - state: full # Imperial Medieval Start
   - type: SolutionContainerManager
     solutions:
       pool:
-        maxVol: 9999999 #.inf seems to break the whole yaml file, but would definitely be preferable. 
+        maxVol: 9999999 #.inf seems to break the whole yaml file, but would definitely be preferable.
         reagents:
         - ReagentId: Water
           Quantity: 9999999
@@ -29,7 +29,7 @@
     generated:
       reagents:
       - ReagentId: Water
-        Quantity: 100
+        Quantity: 1000 # Imperial Medieval Start
   - type: DrainableSolution
     solution: pool
   - type: SpeedModifierContacts
@@ -63,3 +63,15 @@
   - type: TileEntityEffect
     effects:
     - !type:ExtinguishReaction
+  # Imperial Medieval Start
+  - type: IconSmooth
+    key: water
+    base: water
+
+  - type: BadSmelWash
+  - type: AmbientSound
+    volume: -13
+    range: 2
+    sound:
+      path: /Audio/Imperial/Medieval/water.ogg
+  # Imperial Medieval End

@@ -1,0 +1,556 @@
+- type: entity
+  id: PartTifling
+  parent: [BaseItem, BasePart]
+  name: Часть от инферна
+  abstract: true
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: DemonsBlood
+        Quantity: 10
+
+- type: entity
+  id: TorsoTifling
+  name: Туловище инферна
+  parent: [PartHuman, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: "torso_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: DemonsBlood
+        Quantity: 20
+
+- type: entity
+  id: HeadTifling
+  name: Голова инферна
+  parent: [PartHuman, BaseHead]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: "head_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: DemonsBlood
+        Quantity: 10
+
+- type: entity
+  id: LeftArmTifling
+  name: Левая рука инферна
+  parent: [PartHuman, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmTifling
+  name: Правая рука инферна
+  parent: [PartHuman, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandTifling
+  name: Левая кисть инферна
+  parent: [PartHuman, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandTifling
+  name: Правая кисть инферна
+  parent: [PartHuman, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: "r_hand"
+
+- type: entity
+  id: LeftLegTifling
+  name: Левая нога инферна
+  parent: [PartHuman, BaseLeftLeg]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: "l_leg"
+
+- type: entity
+  id: RightLegTifling
+  name: Правая нога инферна
+  parent: [PartHuman, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: "r_leg"
+
+- type: entity
+  id: LeftFootTifling
+  name: Левая ступня инферна
+  parent: [PartHuman, BaseLeftFoot]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootTifling
+  name: Правая ступня инферна
+  parent: [PartHuman, BaseRightFoot]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: "r_foot"
+
+#2
+- type: damageModifierSet
+  id: Tifling
+  coefficients:
+    Blunt: 1.1
+    Piercing: 1.1
+    Slash: 1.1
+    Heat: 0.8
+
+- type: body
+  name: Инферн
+  id: Tifling
+  root: torso
+  slots:
+    head:
+      part: HeadTifling
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoTifling
+      organs:
+        heart: OrganHumanHeart
+        lungs: OrganHumanLungs
+        stomach: OrganHumanStomach
+        liver: OrganHumanLiver
+        kidneys: OrganHumanKidneys
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+    right arm:
+      part: RightArmTifling
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmTifling
+      connections:
+      - left hand
+    right hand:
+      part: RightHandTifling
+    left hand:
+      part: LeftHandTifling
+    right leg:
+      part: RightLegTifling
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegTifling
+      connections:
+      - left foot
+    right foot:
+      part: RightFootTifling
+    left foot:
+      part: LeftFootTifling
+
+# 3
+- type: accent
+  id: tifling
+  wordReplacements:
+    это: цес
+    этой: цесой
+    этому: цесму
+    этого: цесго
+    эту: цесу
+    эти: цеси
+    эта: цеса
+    этот: цест
+    этом: цесм
+    спасибо: мерси
+    мой: мон
+
+- type: typingIndicator
+  id: tifling
+  typingState: tifling
+  offset: 0, 0.0625
+
+- type: entity
+  save: false
+  name: Урист ИнфернХэндс
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobTifling
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Tifling
+    hideLayersOnEquip:
+    - Hair
+    - Snout
+  - type: Hunger
+  - type: Puller
+    needsHands: false
+  - type: Thirst
+  - type: Icon
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: full
+  - type: Body
+    prototype: Tifling
+    requiredLegs: 2
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatGoliath
+      amount: 5
+  - type: Speech
+  - type: TypingIndicator
+    proto: tifling
+  - type: Vocal
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Tifling
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+  - type: Temperature
+    heatDamageThreshold: 500
+    coldDamageThreshold: 285
+    currentTemperature: 350.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold : 0.1 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat : 1.0 #per second, scales with temperature & other constants
+  - type: TemperatureSpeed
+    thresholds:
+      301: 0.8
+      295: 0.6
+      285: 0.4
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Imperial/Medieval/Species/Tifling/displacement.rsi
+            state: jumpsuit-female
+  - type: Bloodstream
+    bloodReagent: DemonsBlood
+  - type: Reactive
+    reactions:
+    - reagents: [Ethanol]
+      methods: [Ingestion, Injection]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Poison: 1
+  - type: ReplacementAccent
+    accent: tifling
+  - type: Mana
+    maxManaRaceModifier: 1.07
+    regenRaceModifier: 1.07
+  - type: NeedSleepRaceModifier
+    modifier: 1.05
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobTiflingDummy
+  categories: [ HideSpawnMenu ]
+  description: A dummy tifling meant to be used in character setup.
+  components:
+  - type: HumanoidAppearance
+    species: Tifling
+    hideLayersOnEquip:
+    - HeadTop
+    - HeadSide
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Imperial/Medieval/Species/Tifling/displacement.rsi
+            state: jumpsuit-female
+
+- type: entity
+  save: false
+  name: Урист ИнфернХэндс
+  suffix: Урист ИнфернХэндс
+  parent: BaseMobTifling
+  id: MobTifling
+
+- type: marking
+  id: TiflingTailSmooth
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Tifling]
+  sprites:
+  - sprite: Imperial/Medieval/Species/Tifling/tails.rsi
+    state: tail_smooth_primary
+
+- type: marking
+  id: TiflingChestPlatesOne
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Tifling]
+  followSkinColor: true
+  sprites:
+  - sprite: Imperial/Medieval/Species/Tifling/plates.rsi
+    state: torso1
+
+- type: marking
+  id: TiflingChestPlatesTwo
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Tifling]
+  followSkinColor: true
+  sprites:
+  - sprite: Imperial/Medieval/Species/Tifling/plates.rsi
+    state: torso2
+
+- type: marking
+  id: TiflingChestPlatesThree
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Tifling]
+  followSkinColor: true
+  sprites:
+  - sprite: Imperial/Medieval/Species/Tifling/plates.rsi
+    state: torso3
+
+- type: marking
+  id: TiflingLArmPlatesOne
+  bodyPart: LArm
+  markingCategory: Arms
+  speciesRestriction: [Tifling]
+  followSkinColor: true
+  sprites:
+  - sprite: Imperial/Medieval/Species/Tifling/plates.rsi
+    state: larm1
+
+- type: marking
+  id: TiflingRArmPlatesOne
+  bodyPart: RArm
+  markingCategory: Arms
+  speciesRestriction: [Tifling]
+  followSkinColor: true
+  sprites:
+  - sprite: Imperial/Medieval/Species/Tifling/plates.rsi
+    state: rarm1
+
+- type: marking
+  id: TiflingLLegPlatesOne
+  bodyPart: LLeg
+  markingCategory: Legs
+  speciesRestriction: [Tifling]
+  followSkinColor: true
+  sprites:
+  - sprite: Imperial/Medieval/Species/Tifling/plates.rsi
+    state: lleg1
+
+- type: marking
+  id: TiflingLLegPlatesTwo
+  bodyPart: LLeg
+  markingCategory: Legs
+  speciesRestriction: [Tifling]
+  followSkinColor: true
+  sprites:
+  - sprite: Imperial/Medieval/Species/Tifling/plates.rsi
+    state: lleg2
+
+- type: marking
+  id: TiflingRLegPlatesOne
+  bodyPart: RLeg
+  markingCategory: Legs
+  speciesRestriction: [Tifling]
+  followSkinColor: true
+  sprites:
+  - sprite: Imperial/Medieval/Species/Tifling/plates.rsi
+    state: rleg1
+
+- type: marking
+  id: TiflingRLegPlatesTwo
+  bodyPart: RLeg
+  markingCategory: Legs
+  speciesRestriction: [Tifling]
+  followSkinColor: true
+  sprites:
+  - sprite: Imperial/Medieval/Species/Tifling/plates.rsi
+    state: rleg2
+
+# 3
+- type: species
+  id: Tifling
+  name: Инферн
+  roundStart: true
+  prototype: MobTifling
+  sprites: MobTiflingSprites
+  defaultSkinTone: "#34a223"
+  markingLimits: MobTiflingMarkingLimits
+  dollPrototype: MobTiflingDummy
+  skinColoration: TintedHues
+  maleFirstNames: names_reptilian_male
+  femaleFirstNames: names_reptilian_female
+  naming: FirstDashFirst
+
+- type: speciesBaseSprites
+  id: MobTiflingSprites
+  sprites:
+    Head: MobTiflingHead
+    Chest: MobTiflingTorso
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    Eyes: MobHumanoidEyes
+    LArm: MobTiflingLArm
+    RArm: MobTiflingRArm
+    LHand: MobTiflingLHand
+    RHand: MobTiflingRHand
+    LLeg: MobTiflingLLeg
+    RLeg: MobTiflingRLeg
+    LFoot: MobTiflingLFoot
+    RFoot: MobTiflingRFoot
+
+- type: markingPoints
+  id: MobTiflingMarkingLimits
+  onlyWhitelisted: false
+  points:
+    Hair:
+      points: 1
+      required: false
+    FacialHair:
+      points: 1
+      required: false
+    Tail:
+      points: 1
+      required: true
+      defaultMarkings: [ TiflingTailSmooth ]
+    HeadTop:
+      points: 2
+      required: false
+    HeadSide:
+      points: 1
+      required: false
+    Chest:
+      points: 3
+      required: false
+    Legs:
+      points: 4
+      required: false
+    Arms:
+      points: 2
+      required: false
+
+- type: humanoidBaseSprite
+  id: MobTiflingHead
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobTiflingHeadMale
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobTiflingHeadFemale
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
+  id: MobTiflingTorso
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobTiflingTorsoMale
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobTiflingTorsoFemale
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobTiflingLLeg
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobTiflingLHand
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobTiflingLArm
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobTiflingLFoot
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobTiflingRLeg
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobTiflingRHand
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobTiflingRArm
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobTiflingRFoot
+  baseSprite:
+    sprite: Imperial/Medieval/Species/Tifling/parts.rsi
+    state: r_foot

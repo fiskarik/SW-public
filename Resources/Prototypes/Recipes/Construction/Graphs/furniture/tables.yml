@@ -11,7 +11,7 @@
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: MetalRod
+            - material: WoodPlank # Imperial Medieval
               amount: 2
               doAfter: 1
         - to: CounterWoodFrame
@@ -37,7 +37,7 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-                prototype: PartRodMetal
+                prototype: WoodPlank # Imperial Medieval
                 amount: 2
           steps:
             - tool: Anchoring
@@ -121,8 +121,8 @@
         - to: CounterWood
           steps:
             - material: WoodPlank
-              amount: 1
-              doAfter: 1
+              amount: 3 # Imperial Medieval
+              doAfter: 3 # Imperial Medieval
 
     - node: CounterMetalFrame
       entity: CounterMetalFrame

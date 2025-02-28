@@ -6,6 +6,14 @@
   - type: Clothing
     slots:
     - FEET
+  # Imperial Medieval Start
+    equipDelay: 0.01
+    unequipDelay: 0.01
+    equipSound:
+      path: /Audio/Imperial/Medieval/shoes_equip.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/shoes_unequip.ogg
+  # Imperial Medieval End
   - type: Sprite
     state: icon
   - type: Item

@@ -78,6 +78,11 @@
   - type: DeleteOnTrigger
   - type: StaticPrice
     price: 0
+  # Imperial Medieval Start
+  - type: TrashClear
+    enabled: true
+    onTheGround: true
+  # Imperial Medieval End
 
 - type: entity
   parent: ShardBase

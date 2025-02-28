@@ -18,5 +18,5 @@ public sealed partial class ThievingComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("stealthy")]
-    public bool Stealthy;
+    public bool Stealthy = true; // Imperial Medieval
 }

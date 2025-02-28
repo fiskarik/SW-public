@@ -1,0 +1,331 @@
+- type: entity
+  abstract: true
+  name: MedievalQuestContractBase
+  parent: BaseItem
+  id: MedievalQuestContractBase
+  description: ""
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/quest.rsi
+  - type: Item
+    size: Tiny
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractLegionMobsLight
+  description: ""
+  components:
+  - type: Sprite
+    state: leg
+  - type: QuestContract
+    contractTypes:
+    #- "уши гоблинов"
+    - "муравьиный хитин"
+    - "волчьи хвосты или кабаньи клыки"
+    - "головы небронированных скелетов"
+    #- "паучьи яйца"
+    #- "клешни хантера"
+    - "клешни краба"
+    contractPartner: "порт легиона"
+    minReward: 70
+    maxReward: 110
+    minAmount: 3
+    maxAmount: 5
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractLegionMobsHard
+  description: ""
+  components:
+  - type: Sprite
+    state: leg
+  - type: QuestContract
+    contractTypes:
+    - "уши гоблинов"
+    #- "волчьи хвосты или кабаньи клыки"
+    - "головы бронированных скелетов"
+    - "паучьи яйца"
+    - "клешни хантера"
+    #- "клешни краба"
+    contractPartner: "порт легиона"
+    minReward: 155
+    maxReward: 220
+    minAmount: 4
+    maxAmount: 6
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractLegionMelee
+  description: ""
+  components:
+  - type: Sprite
+    state: leg
+  - type: QuestContract
+    contractTypes:
+    - "любое двуручное оружие"
+    - "любое дробящее одноручное оружие"
+    - "любые одноручные мечи"
+    - "любые кинжалы"
+    contractPartner: "порт легиона"
+    minReward: 115
+    maxReward: 165
+    minAmount: 3
+    maxAmount: 6
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractLegionArmorLight
+  description: ""
+  components:
+  - type: Sprite
+    state: leg
+  - type: QuestContract
+    contractTypes:
+    - "сыромятная или легкая броня"
+    - "любая кожаная кираса"
+    contractPartner: "порт легиона"
+    minReward: 150
+    maxReward: 230
+    minAmount: 3
+    maxAmount: 6
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractLegionArmorMedium
+  description: ""
+  components:
+  - type: Sprite
+    state: leg
+  - type: QuestContract
+    contractTypes:
+    - "любая пластинчатая или прочная железная броня"
+    - "любая железная кираса"
+    contractPartner: "порт легиона"
+    minReward: 210
+    maxReward: 305
+    minAmount: 2
+    maxAmount: 4
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractLegionArmorHard
+  description: ""
+  components:
+  - type: Sprite
+    state: leg
+  - type: QuestContract
+    contractTypes:
+    - "латная броня"
+    contractPartner: "порт легиона"
+    minReward: 410
+    maxReward: 675
+    minAmount: 1
+    maxAmount: 1
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractLegionFarm
+  description: ""
+  components:
+  - type: Sprite
+    state: leg
+  - type: QuestContract
+    contractTypes:
+    - "яблоки"
+    - "помидоры"
+    - "капуста"
+    - "картофель"
+    - "пшеница"
+    - "морковь"
+    - "конопля"
+    - "табак"
+    - "хлопок"
+    contractPartner: "порт легиона"
+    minReward: 85
+    maxReward: 225
+    minAmount: 10
+    maxAmount: 20
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractLegionWood
+  description: ""
+  components:
+  - type: Sprite
+    state: leg
+  - type: QuestContract
+    contractTypes:
+    - "бревна"
+    contractPartner: "порт легиона"
+    minReward: 18
+    maxReward: 28
+    minAmount: 14
+    maxAmount: 20
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractInsWood
+  description: ""
+  components:
+  - type: Sprite
+    state: ins
+  - type: QuestContract
+    contractTypes:
+    - "бревна"
+    contractPartner: "дракар в порту мятежников"
+    minReward: 18
+    maxReward: 28
+    minAmount: 14
+    maxAmount: 20
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractInsMobsLight
+  description: ""
+  components:
+  - type: Sprite
+    state: ins
+  - type: QuestContract
+    contractTypes:
+    #- "уши гоблинов"
+    - "муравьиный хитин"
+    - "волчьи хвосты или кабаньи клыки"
+    - "головы небронированных скелетов"
+    #- "паучьи яйца"
+    #- "клешни хантера"
+    - "клешни краба"
+    contractPartner: "дракар в порту мятежников"
+    minReward: 70
+    maxReward: 110
+    minAmount: 3
+    maxAmount: 5
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractInsMobsHard
+  description: ""
+  components:
+  - type: Sprite
+    state: ins
+  - type: QuestContract
+    contractTypes:
+    - "уши гоблинов"
+    #- "волчьи хвосты или кабаньи клыки"
+    - "головы бронированных скелетов"
+    - "паучьи яйца"
+    - "клешни хантера"
+    #- "клешни краба"
+    contractPartner: "дракар в порту мятежников"
+    minReward: 155
+    maxReward: 220
+    minAmount: 4
+    maxAmount: 6
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractInsMelee
+  description: ""
+  components:
+  - type: Sprite
+    state: ins
+  - type: QuestContract
+    contractTypes:
+    - "любое двуручное оружие"
+    - "любое дробящее одноручное оружие"
+    - "любые одноручные мечи"
+    - "любые кинжалы"
+    contractPartner: "дракар в порту мятежников"
+    minReward: 115
+    maxReward: 165
+    minAmount: 3
+    maxAmount: 6
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractInsArmorLight
+  description: ""
+  components:
+  - type: Sprite
+    state: ins
+  - type: QuestContract
+    contractTypes:
+    - "сыромятная или легкая броня"
+    - "любая кожаная кираса"
+    contractPartner: "дракар в порту мятежников"
+    minReward: 150
+    maxReward: 230
+    minAmount: 3
+    maxAmount: 6
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractInsArmorMedium
+  description: ""
+  components:
+  - type: Sprite
+    state: ins
+  - type: QuestContract
+    contractTypes:
+    - "любая пластинчатая или прочная железная броня"
+    - "любая железная кираса"
+    contractPartner: "дракар в порту мятежников"
+    minReward: 210
+    maxReward: 305
+    minAmount: 2
+    maxAmount: 4
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractInsArmorHard
+  description: ""
+  components:
+  - type: Sprite
+    state: ins
+  - type: QuestContract
+    contractTypes:
+    - "латная броня"
+    contractPartner: "дракар в порту мятежников"
+    minReward: 410
+    maxReward: 675
+    minAmount: 1
+    maxAmount: 1
+
+- type: entity
+  name: MedievalQuestContract
+  parent: MedievalQuestContractBase
+  id: MedievalQuestContractInsFarm
+  description: ""
+  components:
+  - type: Sprite
+    state: ins
+  - type: QuestContract
+    contractTypes:
+    - "яблоки"
+    - "помидоры"
+    - "капуста"
+    - "картофель"
+    - "пшеница"
+    - "морковь"
+    - "конопля"
+    - "табак"
+    - "хлопок"
+    contractPartner: "дракар в порту мятежников"
+    minReward: 85
+    maxReward: 225
+    minAmount: 10
+    maxAmount: 20

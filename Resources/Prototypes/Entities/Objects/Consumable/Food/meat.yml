@@ -460,6 +460,11 @@
           Quantity: 4
         - ReagentId: Fat
           Quantity: 4
+  # Imperial Medieval Start
+  - type: TrashClear
+    enabled: true
+    onTheGround: true
+  # Imperial Medieval End
 
 - type: entity
   name: raw spider meat
@@ -632,6 +637,8 @@
     damage:
       types:
         Blunt: 2
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetFoodMeatSalami # imperial medieval
 
 - type: entity
   name: meat clown

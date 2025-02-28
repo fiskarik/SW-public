@@ -414,8 +414,22 @@ public abstract partial class SharedDoorSystem : EntitySystem
         if (!Resolve(uid, ref door))
             return false;
 
+        // Imperial Medieval Start
+        // if (!CanClose(uid, door, user))
+        //     return false;
         if (!CanClose(uid, door, user))
+        {
+            if (door.CanCrush)
+            {
+                Crush(uid, door);
+                StartClosing(uid, door, user, predicted);
+
+                return true;
+            }
+
             return false;
+        }
+        // Imperial Medieval End
 
         StartClosing(uid, door, user, predicted);
         return true;

@@ -136,6 +136,15 @@
     tags:
       - Trash
       - CrystalRed
+  # Imperial Medieval Start
+  - type: StealTarget
+    stealGroup: MedievalGetShardCrystalRed
+  - type: Currency
+    price:
+      Revent: 25
+  - type: CultHolyItem
+    holyItemType: shard
+  # Imperial Medieval End
 
 - type: entity
   parent: ShardCrystalBase

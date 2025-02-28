@@ -17,5 +17,10 @@ namespace Content.Server.Engineering.Components
 
         [DataField("removeOnInteract")]
         public bool RemoveOnInteract = false;
+
+        // Imperial Medieval Start
+        [DataField("deleteOnInteract")]
+        public bool DeleteOnInteract = false;
+        // Imperial Medieval End
     }
 }

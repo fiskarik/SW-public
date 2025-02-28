@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Designed by @vladegeg",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "larm1",
+      "directions": 4
+    },
+    {
+      "name": "lleg1",
+      "directions": 4
+    },
+    {
+      "name": "rarm1",
+      "directions": 4
+    },
+    {
+      "name": "rleg1",
+      "directions": 4
+    },
+    {
+      "name": "torso1",
+      "directions": 4
+    },
+    {
+      "name": "torso2",
+      "directions": 4
+    },
+    {
+      "name": "torso3",
+      "directions": 4
+    },
+    {
+      "name": "rleg2",
+      "directions": 4
+    },
+    {
+      "name": "lleg2",
+      "directions": 4
+    }
+  ]
+}

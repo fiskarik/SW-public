@@ -475,7 +475,7 @@
     wideAnimationRotation: 45
     damage:
       types:
-        Blunt: 14
+        Blunt: 8 # Imperial Medieval
     soundHit:
       collection: MetalThud
   - type: Item

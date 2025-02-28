@@ -13,6 +13,12 @@
     quickEquip: false
     slots:
     - back
+    equipDelay: 0.01 # imperial medieval
+    unequipDelay: 0.01 # imperial medieval
+    equipSound: # imperial medieval
+      path: /Audio/Imperial/Medieval/backpack_equip.ogg # imperial medieval
+    unequipSound: # imperial medieval
+      path: /Audio/Imperial/Medieval/backpack_unequip.ogg # imperial medieval
   - type: Storage
     grid:
     - 0,0,6,3

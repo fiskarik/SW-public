@@ -1,9 +1,9 @@
-ent-BaseBallBat = бейсбольная бита
-    .desc = Прочная бейсбольная бита.
+ent-BaseBallBat = дубинка
+    .desc = Прочная дубинка. Чуть лучше кулака.
     .suffix = { "" }
 ent-Sledgehammer = кувалда
     .desc = Идеален для ремонта в каюте капитана
 ent-WeaponMeleeKnockbackStick = Боньк балка
     .desc = NO ERP
-ent-IncompleteBaseBallBat = незаконченная бейсбольная бита
+ent-IncompleteBaseBallBat = незаконченная дубинка
     .desc = несколько деревянных досок, склеенных вместе.

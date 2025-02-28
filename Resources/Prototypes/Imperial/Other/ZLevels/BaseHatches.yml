@@ -1,0 +1,82 @@
+- type: entity
+  id: BaseLadder
+  name: Hatch
+  desc: The hatch in the floor. Where does it lead to
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.48,-0.24,0.48,0.25"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Appearance
+  - type: Transform
+    anchored: true
+  - type: Ladder
+
+- type: entity
+  id: BaseLadderWithLight
+  name: BaseLadderWithLight
+  desc: BaseLadderWithLight
+  parent: BaseLadder
+  abstract: true
+  components:
+    - type: PointLight
+
+- type: entity
+  id: BaseLadderWithDayTimeLight
+  name: BaseLadderWithDayTimeLight
+  desc: BaseLadderWithDayTimeLight
+  parent: BaseLadderWithLight
+  abstract: true
+  components:
+    - type: DayTimeSubscriber
+    - type: Ladder
+      lightColorByDayTime: true
+
+- type: entity
+  id: BaseLadderWithAccess
+  name: BaseLadderWithAccess
+  desc: BaseLadderWithAccess
+  parent: BaseLadder
+  abstract: true
+  components:
+    - type: AccessReader
+    - type: Ladder
+      checkAccessForLock: true
+
+- type: entity
+  id: BaseLadderWithDoor
+  name: BaseLadderWithDoor
+  desc: BaseLadderWithDoor
+  parent: BaseLadder
+  abstract: true
+  components:
+    - type: Ladder
+      canClosed: true
+      startLadderDoorState: Closed
+
+- type: entity
+  id: BaseLadderWithLock
+  name: BaseLadderWithLock
+  desc: BaseLadderWithLock
+  parent: BaseLadderWithDoor
+  abstract: true
+  components:
+    - type: Ladder
+      canLocked: true
+      startLadderIndicatorState: Locked
+

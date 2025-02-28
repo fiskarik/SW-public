@@ -24,7 +24,7 @@
   - type: IncreaseDamageOnWield
     damage:
       groups:
-        Brute: 10
+        Brute: 4 # imperial medieval
       types:
         Structural: 30
   - type: Item

@@ -12,3 +12,4 @@ store-ui-button-out-of-stock = { "" } (Нет в наличии)
 store-preset-name-uplink = Аплинк
 store-preset-name-spellbook = Книга заклинаний
 store-not-account-owner = Этот { $store } не привязан к вам!
+store-cannot-insert-currency = Вы не можете это вставить!

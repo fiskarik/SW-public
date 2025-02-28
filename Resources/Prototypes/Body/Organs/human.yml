@@ -26,6 +26,12 @@
   - type: Tag
     tags:
       - Meat
+  # Imperial Medieval Start
+  - type: TrashClear
+    safe: false
+    onTheGround: true
+    enabled: true
+  # Imperial Medieval End
 
 - type: entity
   id: BaseHumanOrgan
@@ -74,7 +80,7 @@
   - type: Item
     size: Small
     heldPrefix: brain
-  
+
 - type: entity
   id: OrganHumanEyes
   parent: BaseHumanOrgan

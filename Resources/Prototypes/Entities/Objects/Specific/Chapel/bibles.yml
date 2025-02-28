@@ -53,7 +53,8 @@
     tags:
     - Book
   - type: StealTarget
-    stealGroup: Bible
+    stealGroup: MedievalGetBible # imperial medieval get bible
+  - type: NocturnBlockBite # imperial medieval
 
 - type: entity
   parent: [Bible, BaseSyndicateContraband]

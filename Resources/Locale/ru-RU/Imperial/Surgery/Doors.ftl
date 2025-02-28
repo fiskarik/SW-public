@@ -1,0 +1,19 @@
+ent-AirlockImperialSurgerySolid = { ent-Airlock }
+    .desc = { ent-Airlock.desc }
+    .suffix = Surgery
+ent-AirlockImperialSurgerySolidLocked = { ent-Airlock }
+    .desc = { ent-Airlock.desc }
+    .suffix = Surgery, Locked
+ent-AirlockImperialSurgeryGlass = { ent-Airlock }
+    .desc = { ent-Airlock.desc }
+    .suffix = Surgery
+ent-AirlockImperialSurgeryGlassLocked = { ent-Airlock }
+    .desc = { ent-Airlock.desc }
+    .suffix = Surgery, Locked
+
+ent-WindoorImperialSurgeryLocked = { ent-Windoor }
+    .desc = { ent-Windoor.desc }
+    .suffix = Surgery, Locked
+ent-WindoorSecureImperialSurgeryLocked = { ent-WindoorSecure }
+    .desc = { ent-WindoorSecure.desc }
+    .suffix = Surgery, Locked

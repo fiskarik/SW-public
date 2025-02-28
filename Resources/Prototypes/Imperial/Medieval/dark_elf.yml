@@ -1,0 +1,322 @@
+- type: entity
+  id: OrganDarkElfHeart
+  parent: OrganHumanHeart
+  name: DarkElf heart
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [DarkElf]
+
+- type: entity
+  id: OrganDarkElfLiver
+  parent: OrganHumanLiver
+  name: DarkElf liver
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [DarkElf]
+
+- type: entity
+  id: OrganDarkElfStomach
+  parent: OrganHumanStomach
+  name: DarkElf stomach
+  components:
+  - type: Sprite
+    state: stomach
+  - type: Organ
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 75
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+  - type: Stomach
+  - type: Metabolizer
+    # mm very yummy
+    maxReagents: 5
+    metabolizerTypes: [DarkElf]
+
+- type: body
+  id: DarkElf
+  name: "darkElf"
+  root: torso
+  slots:
+    head:
+      part: HeadDarkElf
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoDarkElf
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        heart: OrganDarkElfHeart
+        lungs: OrganHumanLungs
+        stomach: OrganDarkElfStomach
+        liver: OrganDarkElfLiver
+        kidneys: OrganHumanKidneys
+    right arm:
+      part: RightArmDarkElf
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmDarkElf
+      connections:
+      - left hand
+    right hand:
+      part: RightHandDarkElf
+    left hand:
+      part: LeftHandDarkElf
+    right leg:
+      part: RightLegDarkElf
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegDarkElf
+      connections:
+      - left foot
+    right foot:
+      part: RightFootDarkElf
+    left foot:
+      part: LeftFootDarkElf
+
+- type: metabolizerType
+  id: DarkElf
+  name: DarkElf
+
+- type: entity
+  save: false
+  name: Урист МакДаркЭльф
+  parent: BaseMobDarkElf
+  id: MobDarkElf
+
+- type: entity
+  save: false
+  name: Urist McHands The DarkElf
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobDarkElf
+  abstract: true
+  components:
+  - type: Hunger
+  - type: Thirst
+  - type: Icon
+    sprite: Imperial/Medieval/Species/Slime/parts.rsi # It was like this beforehand, no idea why.
+    state: full
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 1.7
+    damageRecovery:
+      types:
+        Asphyxiation: -0.7
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    scale: 0.97, 1.03
+  - type: Body
+    prototype: DarkElf
+    requiredLegs: 2
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatHuman
+      amount: 6
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.39
+        # they r smaller
+        density: 150
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+      medieval-spawner: # imperial medieval start
+        shape: !type:PhysShapeCircle
+          radius: 12
+        #layer:
+        #- DoorPassable
+        mask:
+        - MedievalSpawnerLayer
+        hard: false # imperial medieval end
+  - type: Vocal
+    sounds:
+      Male: MaleHuman
+      Female: FemaleHuman
+      Unsexed: MaleHuman
+  - type: Speech
+    speechSounds: Alto
+  - type:  HumanoidAppearance
+    species: DarkElf
+  - type: Mana
+    maxManaRaceModifier: 1.25
+    regenRaceModifier: 1.25
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Imperial/Medieval/Species/DarkElf/displacement.rsi
+            state: jumpsuit-female
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      105: Critical
+      180: Dead
+  - type: NeedSleepRaceModifier
+    modifier: 0.7
+
+- type: entity
+  parent: BaseMobDarkElf
+  id: MobDarkElfDummy
+  noSpawn: true
+  components:
+  - type: Sprite
+    scale: 0.97, 1.03
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Imperial/Medieval/Species/DarkElf/displacement.rsi
+            state: jumpsuit-female
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      105: Critical
+      180: Dead
+  - type: Mana
+    maxManaRaceModifier: 1.5
+    regenRaceModifier: 1.5
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 1.7
+    damageRecovery:
+      types:
+        Asphyxiation: -0.7
+
+
+- type: species
+  id: DarkElf
+  name: Темный эльф
+  roundStart: true
+  prototype: MobDarkElf
+  sprites: MobDarkElfSprites
+  markingLimits: MobHumanMarkingLimits
+  dollPrototype: MobDarkElfDummy
+  skinColoration: Hues
+
+- type: speciesBaseSprites
+  id: MobDarkElfSprites
+  sprites:
+    Head: MobDarkElfHead
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Chest: MobDarkElfTorso
+    Eyes: MobHumanoidEyes
+    LArm: MobDarkElfLArm
+    RArm: MobDarkElfRArm
+    LHand: MobDarkElfLHand
+    RHand: MobDarkElfRHand
+    LLeg: MobDarkElfLLeg
+    RLeg: MobDarkElfRLeg
+    LFoot: MobDarkElfLFoot
+    RFoot: MobDarkElfRFoot
+    #Tail: MobHumanoidAnyMarking # imperial HairAndTail
+    #HeadTop: MobHumanoidAnyMarking # imperial HairAndTail
+
+- type: humanoidBaseSprite
+  id: MobDarkElfHead
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobDarkElfHeadMale
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobDarkElfHeadFemale
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
+  id: MobDarkElfTorso
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobDarkElfTorsoMale
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobDarkElfTorsoFemale
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobDarkElfLLeg
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobDarkElfLArm
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobDarkElfLHand
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobDarkElfLFoot
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobDarkElfRLeg
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobDarkElfRArm
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobDarkElfRHand
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobDarkElfRFoot
+  baseSprite:
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: r_foot

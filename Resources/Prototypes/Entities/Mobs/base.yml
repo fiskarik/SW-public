@@ -64,14 +64,16 @@
     - trigger:
         !type:DamageTypeTrigger
         damageType: Blunt
-        damage: 400
+        damage: 550 # imperial medieval
       behaviors:
+      - !type:GoSSDBehavior { } # imperial medieval
       - !type:GibBehavior { }
     - trigger:
         !type:DamageTypeTrigger
         damageType: Heat
-        damage: 1500
+        damage: 1500 # imperial medieval
       behaviors:
+      - !type:GoSSDBehavior { } # imperial medieval
       - !type:SpawnEntitiesBehavior
         spawnInContainer: true
         spawn:

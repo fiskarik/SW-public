@@ -42,6 +42,8 @@
   id: WheatBushel
   parent: ProduceBase
   components:
+  - type: QuestItem # imperial medieval
+    contractName: "пшеница" # imperial medieval
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/wheat.rsi
   - type: SolutionContainerManager
@@ -177,7 +179,9 @@
   - type: MeleeWeapon
     damage:
       types:
-        Blunt: 10
+        Blunt: 6 # imperial medieval start
+  - type: QuestItem
+    contractName: "бревна"  # imperial medieval end
   - type: Produce
     seedId: towercap
   - type: Log
@@ -454,6 +458,8 @@
   id: FoodCarrot
   description: It's good for the eyes!
   components:
+  - type: QuestItem # imperial medieval
+    contractName: "морковь" # imperial medieval
   - type: FlavorProfile
     flavors:
       - carrot
@@ -494,6 +500,8 @@
   id: FoodCabbage
   description: Ewwwwwwwwww. Cabbage.
   components:
+  - type: QuestItem # imperial medieval
+    contractName: "капуста" # imperial medieval
   - type: FlavorProfile
     flavors:
       - cabbage
@@ -549,6 +557,7 @@
     entries:
       Burger: GarlicBurger
       Taco: Garlic
+  - type: NocturnBlockBite # imperial medieval
 
 - type: entity
   name: lemon
@@ -758,6 +767,8 @@
   id: FoodPotato
   description: The space Irish starved to death after their potato crops died. Sadly they were unable to fish for space carp due to it being the queen's space. Bringing this up to any space IRA member will drive them insane with anger.
   components:
+  - type: QuestItem # imperial medieval
+    contractName: "картофель" # imperial medieval
   - type: FlavorProfile
     flavors:
       - potatoes
@@ -795,6 +806,8 @@
   id: FoodTomato
   description: I say to-mah-to, you say tom-mae-to.
   components:
+  - type: QuestItem # imperial medieval
+    contractName: "помидоры" # imperial medieval
   - type: FlavorProfile
     flavors:
       - tomato
@@ -979,6 +992,8 @@
   id: FoodApple
   description: It's a little piece of Eden.
   components:
+  - type: QuestItem # imperial medieval
+    contractName: "яблоки" # imperial medieval
   - type: FlavorProfile
     flavors:
       - apple
@@ -1003,10 +1018,8 @@
   - type: Tag
     tags:
     - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Burger: Apple
-      Taco: Apple
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetFoodApple # imperial medieval
 
 - type: entity
   name: golden apple
@@ -2436,6 +2449,8 @@
   id: CottonBol
   parent: FoodProduceBase
   components:
+  - type: QuestItem # imperial medieval
+    contractName: "хлопок" # imperial medieval
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/cotton.rsi
   - type: FlavorProfile

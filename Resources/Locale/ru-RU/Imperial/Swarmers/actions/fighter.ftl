@@ -1,0 +1,12 @@
+ent-SwarmerFighterTeleportAction = Телепорт
+    .desc = Телепортирует людей куда подальше. Также оглушает их.
+    .suffix = { "Свармер" }
+ent-SwarmerFighterDeconstructionAction = Разборка
+    .desc = Разберите структуры на энергоматериалы.
+    .suffix = { "Свармер" }
+ent-SwarmerFighterWallAction = Замена структуры
+    .desc = Действие, заменяющее любую стену или окно на свармерскую стену. Вперед, перестраивать станцию!
+    .suffix = { "Свармер" }
+ent-SwarmerFighterHoloBarrierAction = Установка атмос-проектора
+    .desc = Устанавливает временный атмос барьер, который поможет избежать разгерметизации.
+    .suffix = { "Свармер" }

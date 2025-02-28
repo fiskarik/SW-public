@@ -1,14 +1,3 @@
-ent-ClothingHeadsetLinkDiodeRegularForce = связной диод
-    .desc = Портативный, легко снимаемый имплант для общения с другими членами вашего подразделения.
-ent-ClothingHeadsetLinkDiodeGuard = связной диод
-    .desc = Портативный, легко снимаемый имплант для общения с другими членами вашего подразделения.
-ent-ClothingHeadsetLinkDiodeMedCorps = связной диод
-    .desc = Портативный, легко снимаемый имплант для общения с другими членами вашего подразделения.
-
-ent-ClothingEyesHudRegularForce = визор Регулярных Сил
-ent-ClothingEyesHudMedCorps = медицинский визор
-ent-ClothingEyesHudGuard = гвардейский визор
-
 ent-ClothingBeltKama = тактическая кама
     .desc = Гибкий кожаный элемент брони в виде полуюбки, прикрепленной к поясу.
 ent-ClothingBeltKamaRed = тактическая кама
@@ -72,6 +61,3 @@ ent-ClothingHeadHelmetHardsuitRegularForceMedic = Шлем "Орбитал"
 ent-ClothingHeadHelmetHardsuitRegularForceGuard = Шлем "Соната Mk2"
 ent-ClothingHeadHelmetHardsuitRegularForcePilot = Шлем "Феникс"
 ent-ClothingHeadHelmetHardsuitRegularForceAssassin = Капюшон "Ассасин Mk1"
-
-ent-ClothingNanoMask = наномаска
-    .desc = Дыхательная маска, созданная с применением наноткани.

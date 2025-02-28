@@ -130,7 +130,7 @@ namespace Content.Server.GameTicking
             EntityUid station,
             string? jobId = null,
             bool lateJoin = true,
-            bool silent = false)
+            bool silent = true)
         {
             var character = GetPlayerProfile(player);
 
@@ -154,7 +154,7 @@ namespace Content.Server.GameTicking
             EntityUid station,
             string? jobId = null,
             bool lateJoin = true,
-            bool silent = false)
+            bool silent = true)  // Imperial Medieval (OLD: bool silent = false)
         {
             // Can't spawn players with a dummy ticker!
             if (DummyTicker)
@@ -326,7 +326,7 @@ namespace Content.Server.GameTicking
         /// <param name="station">The station they're spawning on</param>
         /// <param name="jobId">An optional job for them to spawn as</param>
         /// <param name="silent">Whether or not the player should be greeted upon joining</param>
-        public void MakeJoinGame(ICommonSession player, EntityUid station, string? jobId = null, bool silent = false)
+        public void MakeJoinGame(ICommonSession player, EntityUid station, string? jobId = null, bool silent = true) // Imperial Medieval (OLD: bool silent = false)
         {
             if (!_playerGameStatuses.ContainsKey(player.UserId))
                 return;

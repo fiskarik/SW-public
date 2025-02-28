@@ -667,10 +667,12 @@
     - type: Transform
       noRot: true
     - type: SoundOnGather
-    - type: Gatherable
-      toolWhitelist:
-        tags:
-          - Pickaxe
+    # Imperial Medieval Start
+    #- type: Gatherable
+    #  toolWhitelist:
+    #    tags:
+    #      - Pickaxe
+    # Imperial Medieval End
     - type: Damageable
       damageContainer: StructuralInorganic
       damageModifierSet: Metallic
@@ -678,7 +680,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 150
+            damage: 1500000 # imperial medieval
           behaviors:
             - !type:DoActsBehavior
               acts: ["Destruction"]

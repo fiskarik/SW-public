@@ -1,0 +1,405 @@
+#- type: entity
+#  id: MedievalRandomHumanoidSpawnerTraveller
+#  name: ERT leader
+#  suffix: EVA
+#  components:
+#    - type: Sprite
+#      netsync: false
+#      sprite: Markers/jobs.rsi
+#      state: ertleadereva
+#    - type: RandomHumanoidSpawner
+#      settings: MedievalTraveller
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#
+#- type: randomHumanoidSettings
+#  id: MedievalTraveller
+#  parent: ERTLeader
+#  components:
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-traveller-name
+#      description: ghost-role-information-medieval-traveller-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ RPGMedievalTraveller ]
+#    - type: RandomHumanoidAppearance
+#
+#- type: entity
+#  parent: MobHumanForEvents
+#  id: MedievalRanger
+#  name: Syndicate Agent
+#  components:
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-archer-name
+#      description: ghost-role-information-medieval-archer-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ MedievalRange ]
+#
+#
+#- type: entity
+#  parent: MobHumanForEvents
+#  id: MedievalMedium
+#  name: Syndicate Agent
+#  components:
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-medium-name
+#      description: ghost-role-information-medieval-medium-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ MedievalMedium ]
+#
+#- type: entity
+#  parent: MobHumanForEvents
+#  id: MedievalHeavy
+#  name: Syndicate Agent
+#  components:
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-heavy-name
+#      description: ghost-role-information-medieval-heavy-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ MedievalHeavy ]
+#
+#- type: entity
+#  parent: MobHumanForEvents
+#  id: MedievalPeasant
+#  name: Syndicate Agent
+#  components:
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-peasant-name
+#      description: ghost-role-information-medieval-peasant-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ MedievalPeasant ]
+#
+#- type: entity
+#  parent: MobHumanForEvents
+#  id: MedievalMobHumanTraveller
+#  name: Syndicate Agent
+#  components:
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-traveller-name
+#      description: ghost-role-information-medieval-traveller-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ RPGMedievalTraveller ]
+#
+#
+#- type: entity
+#  id: MedievalRandomHumanoidSpawnerWolf
+#  name: ERT leader
+#  suffix: EVA
+#  components:
+#    - type: Sprite
+#      netsync: false
+#      sprite: Markers/jobs.rsi
+#      state: ertleadereva
+#    - type: RandomHumanoidSpawner
+#      settings: MedievalWolf
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#
+#- type: randomHumanoidSettings
+#  id: MedievalWolf
+#  parent: ERTLeader
+#  components:
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-wolf-name
+#      description: ghost-role-information-medieval-wolf-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ RPGMedievalWolf ]
+#    - type: RandomHumanoidAppearance
+#
+#- type: entity
+#  id: MedievalRandomHumanoidSpawnerFish
+#  name: ERT leader
+#  suffix: EVA
+#  components:
+#    - type: Sprite
+#      netsync: false
+#      sprite: Markers/jobs.rsi
+#      state: ertleadereva
+#    - type: RandomHumanoidSpawner
+#      settings: MedievalFish
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#
+#- type: randomHumanoidSettings
+#  id: MedievalFish
+#  parent: ERTLeader
+#  components:
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-fish-name
+#      description: ghost-role-information-medieval-fish-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ RPGMedievalFish ]
+#    - type: RandomHumanoidAppearance
+
+# - type: entity
+#   id: MedievalRandomHumanoidSpawnerFlame
+#   name: ERT leader
+#   suffix: EVA
+#   components:
+#     - type: Sprite
+#       netsync: false
+#       sprite: Markers/jobs.rsi
+#       state: ertleadereva
+#     - type: RandomHumanoidSpawner
+#       settings: MedievalFlame
+#     - type: RandomHumanoidAppearance
+#     - type: RandomMetadata
+#       nameSegments:
+#       - names_first
+#       - names_last
+#
+# - type: randomHumanoidSettings
+#   id: MedievalFlame
+#   parent: ERTLeader
+#   components:
+#     - type: GhostRole
+#       name: ghost-role-information-medieval-flame-name
+#       description: ghost-role-information-medieval-flame-description
+#     - type: GhostTakeoverAvailable
+#     - type: RandomHumanoidAppearance
+#     - type: Loadout
+#       prototypes: [ RPGMedievalFlame ]
+
+#- type: entity
+#  id: MedievalRandomHumanoidSpawnerEagle
+#  name: ERT leader
+#  suffix: EVA
+#  components:
+#    - type: Sprite
+#      netsync: false
+#      sprite: Markers/jobs.rsi
+#      state: ertleadereva
+#    - type: RandomHumanoidSpawner
+#      settings: MedievalEagle
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#
+#- type: randomHumanoidSettings
+#  id: MedievalEagle
+#  parent: ERTLeader
+#  components:
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-eagle-name
+#      description: ghost-role-information-medieval-eagle-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ RPGMedievalEagle ]
+#    - type: RandomHumanoidAppearance
+
+#- type: entity
+#  parent: MobHumanForEvents
+#  id: MedievalMobHumanEagle
+#  name: Syndicate Agent
+#  components:
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-eagle-name
+#      description: ghost-role-information-medieval-eagle-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ RPGMedievalEagle ]
+#
+#- type: entity
+#  parent: MobHumanForEvents
+#  id: MedievalMobHumanLeader
+#  name: Syndicate Agent
+#  components:
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-leader-name
+#      description: ghost-role-information-medieval-leader-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ RPGMedievalLeader ]
+#
+#- type: entity
+#  parent: MobHumanForEvents
+#  id: MedievalMobHumanChamber
+#  name: Syndicate Agent
+#  components:
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-chamber-name
+#      description: ghost-role-information-medieval-chamber-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ RPGMedievalChamber ]
+#
+#- type: entity
+#  parent: MobHumanForEvents
+#  id: MedievalMobHumanFlame
+#  name: Syndicate Agent
+#  components:
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-flame-name
+#      description: ghost-role-information-medieval-flame-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ RPGMedievalFlame ]
+#
+#- type: entity
+#  parent: MobHumanForEvents
+#  id: MedievalMobHumanNecro
+#  name: Syndicate Agent
+#  components:
+#    - type: RandomHumanoidAppearance
+#    - type: RandomMetadata
+#      nameSegments:
+#      - names_first
+#      - names_last
+#    - type: GhostRole
+#      name: ghost-role-information-medieval-necro-name
+#      description: ghost-role-information-medieval-necro-description
+#    - type: GhostTakeoverAvailable
+#    - type: Loadout
+#      prototypes: [ RPGMedievalNecro ]
+#    - type: NpcFactionMember
+#      factions:
+#        - Syndicate
+#
+##- type: entity
+##  id: MedievalRandomHumanoidSpawnerNecro
+##  name: ERT leader
+##  suffix: EVA
+##  components:
+##    - type: Sprite
+##      netsync: false
+##      sprite: Markers/jobs.rsi
+##      state: ertleadereva
+##    - type: RandomHumanoidSpawner
+##      settings: MedievalNecro
+##    - type: RandomHumanoidAppearance
+##    - type: RandomMetadata
+##      nameSegments:
+##      - names_first
+##      - names_last
+##
+##- type: randomHumanoidSettings
+##  id: MedievalNecro
+##  parent: ERTLeader
+##  components:
+##    - type: GhostRole
+##      name: ghost-role-information-medieval-necro-name
+##      description: ghost-role-information-medieval-necro-description
+##    - type: GhostTakeoverAvailable
+##    - type: Loadout
+##      prototypes: [ RPGMedievalNecro ]
+##    - type: NpcFactionMember
+##      factions:
+##        - Syndicate
+##    - type: RandomHumanoidAppearance
+#
+- type: entity
+  name: GreyTide
+  parent: BaseMobHuman
+  id: MobGreyTide
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: Loadout
+      prototypes:
+        - PassengerGear
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompound
+
+- type: entity
+  name: MobSkeletonPersonAngry
+  parent: MobSkeletonPerson
+  id: MobSkeletonPersonAngry
+  components:
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 2.7
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Critical
+      31: Dead
+  - type: TransferMindOnGib
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:GibBehavior { }
+  - type: SSDFree
+    enabled: false
+  - type: MeleeWeapon
+    range: 1.25
+    attackRate: 0.65
+  - type: MedievalSpikeTarget # imperial medieval
+    enabled: false

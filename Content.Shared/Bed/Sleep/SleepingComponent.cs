@@ -17,7 +17,7 @@ public sealed partial class SleepingComponent : Component
     /// How much damage of any type it takes to wake this entity.
     /// </summary>
     [DataField]
-    public FixedPoint2 WakeThreshold = FixedPoint2.New(2);
+    public FixedPoint2 WakeThreshold = FixedPoint2.New(220); // Imperial Medieval
 
     /// <summary>
     ///     Cooldown time between users hand interaction.

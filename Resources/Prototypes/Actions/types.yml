@@ -281,7 +281,7 @@
     checkConsciousness: false
     event: !type:WakeActionEvent
     startDelay: true
-    useDelay: 2
+    useDelay: 8 # imperial medieval
 
 - type: entity
   id: ActionActivateHonkImplant
@@ -346,7 +346,7 @@
   name: Toggle Paramedic Siren
   description: Toggles the paramedic siren on and off.
   components:
-  - type: InstantAction 
+  - type: InstantAction
     icon:
       sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
       state: icon-siren

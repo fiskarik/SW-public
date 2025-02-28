@@ -1,10 +1,12 @@
-- type: trait
-  id: Pacifist
-  name: trait-pacifist-name
-  description: trait-pacifist-desc
-  category: Quirks
-  components:
-  - type: Pacified
+# Imperial Medieval Start
+#- type: trait
+#  id: Pacifist
+#  name: trait-pacifist-name
+#  description: trait-pacifist-desc
+#  category: Quirks
+#  components:
+#  - type: Pacified
+# Imperial Medieval End
 
 - type: trait
   id: LightweightDrunk

@@ -1,0 +1,353 @@
+- type: entity
+  parent: BaseStructure
+  id: MedievalShopHoleLegion
+  name: MedievalShopHole
+  description: Suspiciously looking old radio...
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_shop.rsi
+    layers:
+    - state: eagle
+    netsync: false
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    singleUser: true
+    key: enum.StoreUiKey.Key
+  - type: Store
+    categories:
+    - MedievalLegionWeapon
+    - MedievalLegionArmor
+    currencyWhitelist:
+    - MedalLegion
+    balance:
+      MedalLegion: 0
+  - type: ActivatableUIRequiresAccess
+  - type: AccessReader
+    access: [["Atmospherics"]]
+
+- type: storeCategory
+  id: MedievalLegionWeapon
+  name: medieval-category-weapon
+  priority: 0
+
+- type: storeCategory
+  id: MedievalLegionArmor
+  name: medieval-category-armor
+  priority: 1
+
+- type: currency
+  id: MedalLegion
+  displayName: store-currency-display-medal
+  cash:
+    1: MedievalMedalLegion
+  canWithdraw: true
+
+- type: entity
+  name: MedievalMedalLegion
+  parent: BaseItem
+  id: MedievalMedalLegion
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    layers:
+    - state: medal_legion
+      map: ["base"]
+  - type: Tag
+    tags:
+    - RawMaterial
+    - MedievalMedalLegion
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedalLegion: 1
+  - type: Stack
+    stackType: MedalLegion
+    count: 1
+  - type: Currency
+    price:
+      MedalLegion: 1
+
+- type: material
+  id: MedalLegion
+  stackEntity: MedievalMedalLegion
+  name: materials-medal
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: medal_legion }
+  color: "#d9d9d9"
+  price: 1
+
+- type: stack
+  id: MedalLegion
+  name: MedalLegion
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: medal_legion }
+  spawn: MedievalMedalLegion
+  maxCount: 100
+
+- type: Tag
+  id: MedalLegion
+
+- type: listing
+  id: MdvLegionMedievalMaceT3
+  productEntity: MedievalMaceT3
+  cost:
+    MedalLegion: 1
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalSpearT3
+  productEntity: MedievalSpearT3
+  cost:
+    MedalLegion: 2
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalIronHammer
+  productEntity: MedievalIronHammer
+  cost:
+    MedalLegion: 3
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalWoodenShieldBuckler
+  productEntity: MedievalWoodenShieldBuckler
+  cost:
+    MedalLegion: 1
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalWoodenShield
+  productEntity: MedievalWoodenShield
+  cost:
+    MedalLegion: 2
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalWoodenShieldKnight
+  productEntity: MedievalWoodenShieldKnight
+  cost:
+    MedalLegion: 3
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalMaceT3Steel
+  productEntity: MedievalMaceT3Steel
+  cost:
+    MedalLegion: 6
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalSpearT3Steel
+  productEntity: MedievalSpearT3Steel
+  cost:
+    MedalLegion: 6
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalIronHammerSteel
+  productEntity: MedievalIronHammerSteel
+  cost:
+    MedalLegion: 8
+  categories:
+  - MedievalLegionWeapon
+
+
+
+
+
+
+
+- type: listing
+  id: MdvLegionMedievalSaber
+  productEntity: MedievalSaber
+  cost:
+    MedalLegion: 1
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalSaberSteel
+  productEntity: MedievalSaberSteel
+  cost:
+    MedalLegion: 6
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalFalshionT3Legion
+  productEntity: MedievalFalshionT3Legion
+  cost:
+    MedalLegion: 1
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalHandcuffs
+  productEntity: MedievalHandcuffs
+  cost:
+    MedalLegion: 1
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalKnut
+  productEntity: MedievalKnut
+  cost:
+    MedalLegion: 1
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalFalshionT3LegionSteel
+  productEntity: MedievalFalshionT3LegionSteel
+  cost:
+    MedalLegion: 7
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalIronHalberdT3
+  productEntity: MedievalIronHalberdT3
+  cost:
+    MedalLegion: 3
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalIronHalberdT3Steel
+  productEntity: MedievalIronHalberdT3Steel
+  cost:
+    MedalLegion: 9
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
+  id: MdvLegionMedievalClothingOuterArmorLeather
+  productEntity: MedievalClothingOuterArmorLeather
+  cost:
+    MedalLegion: 1
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalClothingOuterArmorLeatherLight
+  productEntity: MedievalClothingOuterArmorLeatherLight
+  cost:
+    MedalLegion: 2
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalClothingOuterArmorChainMail
+  productEntity: MedievalClothingOuterArmorChainMail
+  cost:
+    MedalLegion: 4
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalClothingOuterArmorChainMailLight
+  productEntity: MedievalClothingOuterArmorChainMailLight
+  cost:
+    MedalLegion: 2
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalClothingOuterArmorIronCuirassLight
+  productEntity: MedievalClothingOuterArmorIronCuirassLight
+  cost:
+    MedalLegion: 5
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionClothingOuterArmorPodWars
+  productEntity: ClothingOuterArmorPodWars
+  cost:
+    MedalLegion: 15
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalClothingOuterArmorIronCuirass
+  productEntity: MedievalClothingOuterArmorIronCuirass
+  cost:
+    MedalLegion: 12
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalClothingOuterArmorIron
+  productEntity: MedievalClothingOuterArmorIron
+  cost:
+    MedalLegion: 26
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalClothingOuterArmorUpIron
+  productEntity: MedievalClothingOuterArmorUpIron
+  cost:
+    MedalLegion: 36
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalIronGloves
+  productEntity: MedievalIronGloves
+  cost:
+    MedalLegion: 3
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalIronGlovesBrig
+  productEntity: MedievalIronGlovesBrig
+  cost:
+    MedalLegion: 3
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalIronGlovesBear
+  productEntity: MedievalIronGlovesBear
+  cost:
+    MedalLegion: 3
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalClothingFeetSteel
+  productEntity: MedievalClothingFeetSteel
+  cost:
+    MedalLegion: 3
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalClothingBackpackLeather
+  productEntity: MedievalClothingBackpackLeather
+  cost:
+    MedalLegion: 5
+  categories:
+  - MedievalLegionArmor
+
+- type: listing
+  id: MdvLegionMedievalClothingBackpackSatchelTraveller
+  productEntity: MedievalClothingBackpackSatchelTraveller
+  cost:
+    MedalLegion: 10
+  categories:
+  - MedievalLegionArmor

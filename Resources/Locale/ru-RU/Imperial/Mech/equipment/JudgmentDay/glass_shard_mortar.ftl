@@ -1,0 +1,22 @@
+ent-MechEquipmentGlassShardMortar = Осколочная мортира
+    .suffix = Механоид
+    .desc = На передней стороне корпуса выгравированно большими красными буквами: "НЕ ДАВАТЬ ЭТО КЛОУНУ"
+
+ent-MechGlassShard1 = осколок стекла
+    .desc = Небольшой кусок стекла.
+ent-MechGlassShard2 = осколок стекла
+    .desc = Небольшой кусок стекла.
+ent-MechGlassShard3 = осколок стекла
+    .desc = Небольшой кусок стекла.
+ent-MechGlassShard4 = осколок стекла
+    .desc = Небольшой кусок стекла.
+ent-MechGlassShard5 = осколок стекла
+    .desc = Небольшой кусок стекла.
+ent-MechGlassShard6 = осколок стекла
+    .desc = Небольшой кусок стекла.
+ent-MechGlassShard7 = осколок стекла
+    .desc = Небольшой кусок стекла.
+ent-MechGlassShard8 = осколок стекла
+    .desc = Небольшой кусок стекла.
+ent-MechGlassShard9 = осколок стекла
+    .desc = Небольшой кусок стекла.

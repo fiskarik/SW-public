@@ -4,11 +4,17 @@
   id: ClothingNeckBase
   components:
   - type: Item
-    size: Small
+    size: Normal # imperial medieval
   - type: Clothing
     quickEquip: true
     slots:
     - neck
+    equipDelay: 0.01 # imperial medieval
+    unequipDelay: 0.01 # imperial medieval
+    equipSound: # imperial medieval
+      path: /Audio/Imperial/Medieval/cloak_equip.ogg # imperial medieval
+    unequipSound: # imperial medieval
+      path: /Audio/Imperial/Medieval/cloak_unequip.ogg # imperial medieval
   - type: Sprite
     state: icon
   - type: Butcherable

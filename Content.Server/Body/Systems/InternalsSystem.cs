@@ -172,12 +172,12 @@ public sealed class InternalsSystem : EntitySystem
 
     private void OnInternalsStartup(Entity<InternalsComponent> ent, ref ComponentStartup args)
     {
-        _alerts.ShowAlert(ent, ent.Comp.InternalsAlert, GetSeverity(ent));
+        //_alerts.ShowAlert(ent, ent.Comp.InternalsAlert, GetSeverity(ent)); # Imperial Medieval
     }
 
     private void OnInternalsShutdown(Entity<InternalsComponent> ent, ref ComponentShutdown args)
     {
-        _alerts.ClearAlert(ent, ent.Comp.InternalsAlert);
+        //_alerts.ClearAlert(ent, ent.Comp.InternalsAlert); # Imperial Medieval
     }
 
     private void OnInhaleLocation(Entity<InternalsComponent> ent, ref InhaleLocationEvent args)
@@ -187,7 +187,7 @@ public sealed class InternalsSystem : EntitySystem
             var gasTank = Comp<GasTankComponent>(ent.Comp.GasTankEntity!.Value);
             args.Gas = _gasTank.RemoveAirVolume((ent.Comp.GasTankEntity.Value, gasTank), Atmospherics.BreathVolume);
             // TODO: Should listen to gas tank updates instead I guess?
-            _alerts.ShowAlert(ent, ent.Comp.InternalsAlert, GetSeverity(ent));
+            //_alerts.ShowAlert(ent, ent.Comp.InternalsAlert, GetSeverity(ent)); # Imperial Medieval
         }
     }
     public void DisconnectBreathTool(Entity<InternalsComponent> ent, EntityUid toolEntity)
@@ -200,7 +200,7 @@ public sealed class InternalsSystem : EntitySystem
         if (ent.Comp.BreathTools.Count == 0)
             DisconnectTank(ent);
 
-        _alerts.ShowAlert(ent, ent.Comp.InternalsAlert, GetSeverity(ent));
+        //_alerts.ShowAlert(ent, ent.Comp.InternalsAlert, GetSeverity(ent)); # Imperial Medieval
     }
 
     public void ConnectBreathTool(Entity<InternalsComponent> ent, EntityUid toolEntity)
@@ -208,7 +208,7 @@ public sealed class InternalsSystem : EntitySystem
         if (!ent.Comp.BreathTools.Add(toolEntity))
             return;
 
-        _alerts.ShowAlert(ent, ent.Comp.InternalsAlert, GetSeverity(ent));
+        //_alerts.ShowAlert(ent, ent.Comp.InternalsAlert, GetSeverity(ent)); # Imperial Medieval
     }
 
     public void DisconnectTank(Entity<InternalsComponent> ent)
@@ -217,7 +217,7 @@ public sealed class InternalsSystem : EntitySystem
             _gasTank.DisconnectFromInternals((ent.Comp.GasTankEntity.Value, tank));
 
         ent.Comp.GasTankEntity = null;
-        _alerts.ShowAlert(ent.Owner, ent.Comp.InternalsAlert, GetSeverity(ent.Comp));
+        //_alerts.ShowAlert(ent.Owner, ent.Comp.InternalsAlert, GetSeverity(ent.Comp)); # Imperial Medieval
     }
 
     public bool TryConnectTank(Entity<InternalsComponent> ent, EntityUid tankEntity)
@@ -229,7 +229,7 @@ public sealed class InternalsSystem : EntitySystem
             _gasTank.DisconnectFromInternals((ent.Comp.GasTankEntity.Value, tank));
 
         ent.Comp.GasTankEntity = tankEntity;
-        _alerts.ShowAlert(ent, ent.Comp.InternalsAlert, GetSeverity(ent));
+        //_alerts.ShowAlert(ent, ent.Comp.InternalsAlert, GetSeverity(ent)); # Imperial Medieval
         return true;
     }
 

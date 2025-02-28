@@ -43,7 +43,7 @@ alerts-dead-name = Смерть
 alerts-dead-desc = Вы мертвы. Учтите, что вас еще можно воскресить!
 
 alerts-health-name = Здоровье
-alerts-health-desc = [color=green]Синий и зелёный[/color] хорошо. [color=red]Красный[/color] плохо.
+alerts-health-desc = [color=green]Сердце без крови[/color] хорошо. [color=red]кровь и частое сердцебиение[/color] плохо.
 
 alerts-internals-name = Переключить баллон
 alerts-internals-desc = Включает или отключает подачу газа из баллона.

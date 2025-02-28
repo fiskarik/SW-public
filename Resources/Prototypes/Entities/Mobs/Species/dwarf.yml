@@ -13,14 +13,14 @@
   - type: Respirator
     damage:
       types:
-        Asphyxiation: 2
+        Asphyxiation: 2.4 # imperial medieval
     damageRecovery:
       types:
         Asphyxiation: -1.0
   - type: Sprite
     noRot: true
     drawdepth: Mobs
-    scale: 1, 0.8
+    scale: 1, 0.835 # imperial medieval
   - type: Body
     prototype: Dwarf
     requiredLegs: 2
@@ -42,6 +42,15 @@
         - MobMask
         layer:
         - MobLayer
+      # Imperial Medieval Start
+      medieval-spawner:
+        shape: !type:PhysShapeCircle
+          radius: 0.4
+        layer: []
+        mask:
+        - MedievalSpawnerLayer
+        hard: false
+      # Imperial Medieval End
   - type: Vocal
     sounds:
       Male: UnisexDwarf

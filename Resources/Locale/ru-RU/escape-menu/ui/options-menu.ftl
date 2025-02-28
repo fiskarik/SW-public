@@ -76,6 +76,7 @@ ui-options-hud-theme-slimecore = Слаймкор
 ui-options-hud-theme-clockwork = Механизм
 ui-options-hud-theme-retro = Ретро
 ui-options-hud-theme-minimalist = Минимализм
+ui-options-hud-theme-eris = Эрис
 ui-options-hud-theme-ashen = Пепел
 ui-options-vp-stretch = Растянуть изображение для соответствия окну игры
 ui-options-vp-scale = Фиксированный масштаб окна игры:
@@ -92,7 +93,7 @@ ui-options-vp-vertical-fit-tooltip = Когда функция включена,
 ui-options-vp-low-res = Изображение низкого разрешения
 ui-options-parallax-low-quality = Низкокачественный параллакс (фон)
 ui-options-fps-counter = Показать счетчик FPS
-ui-options-vp-width = Ширина окна игры: { $width }
+ui-options-vp-width = Ширина окна игры:
 ui-options-hud-layout = Тип HUD:
 
 ## Controls menu

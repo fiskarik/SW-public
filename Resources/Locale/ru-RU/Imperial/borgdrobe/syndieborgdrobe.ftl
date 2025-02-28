@@ -9,3 +9,5 @@ borgdrobe-uplink-borg-assault-name = Штурмовой борг
 borgdrobe-uplink-borg-assault-desc = бездушная машина для убийств, мясорубка и потеря надежды для станции NT. Он - воплощение хаоса и разрушения на поле битвы. Как минимум на этикетке.
 store-category-borgomat-borg = Борги
 store-category-borgomat-mech = Мехи
+
+store-borgdrobe = Боргомат синдиката

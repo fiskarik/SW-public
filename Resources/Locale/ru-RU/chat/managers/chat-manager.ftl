@@ -98,7 +98,7 @@ chat-speech-verb-robotic-1 = стоит
 chat-speech-verb-robotic-2 = бипает
 chat-speech-verb-robotic-3 = бупает
 
-chat-speech-verb-name-reptilian = Унатх
+chat-speech-verb-name-reptilian = Ящер
 chat-speech-verb-reptilian-1 = шипит
 chat-speech-verb-reptilian-2 = фыркает
 chat-speech-verb-reptilian-3 = раздражается

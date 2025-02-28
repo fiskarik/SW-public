@@ -4,7 +4,7 @@ reagent-desc-desoxyephedrine = Более известный как метамф
 reagent-name-ephedrine = эфедрин
 reagent-desc-ephedrine = Повышает устойчивость к оглушению и скорость передвижения, вызывает судороги рук. Передозировка наносит урон токсинами и затрудняет дыхание.
 
-reagent-name-stimulants = стимулятор
+reagent-name-stimulants = зелье
 reagent-desc-stimulants = Химический коктейль, разработанный компанией Donk Co., который позволяет агентам быстрее оправляться от оглушения, быстрее передвигаться, и легко излечивает в критическом состоянии. Из-за комплексной природы этого вещества организму гораздо труднее вывести его из организма естественным путем.
 
 reagent-name-experimental-stimulants = экспериментальный стимулятор
@@ -19,16 +19,16 @@ reagent-desc-thc-oil = Чистое масло ТГК, полученное из
 reagent-name-nicotine = никотин
 reagent-desc-nicotine = Опасен и вызывает сильное привыкание.
 
-reagent-name-impedrezene = импедризин
+reagent-name-impedrezene = зелье
 reagent-desc-impedrezene = Наркотик, который лишает человека дееспособности, замедляя высшие функции клеток мозга. Вызывает обширные повреждения мозга.
 
-reagent-name-space-drugs = космические наркотики
+reagent-name-space-drugs = зелье
 reagent-desc-space-drugs = Запрещенное вещество, вызывающее ряд таких эффектов, как потеря равновесия и нарушения зрения.
 
-reagent-name-nocturine = ноктюрин
+reagent-name-nocturine = зелье
 reagent-desc-nocturine = Заставляет вас чувствовать сильную усталость и неспособность встать. По сути, это сок, вызывающий боль в костях.
 
-reagent-name-mute-toxin = токсин немоты
+reagent-name-mute-toxin = зелье
 reagent-desc-mute-toxin = Лишает вас возможности разговаривать пока в организме.
 
 reagent-name-norepinephric-acid = норэпинефриновая кислота

@@ -4,6 +4,13 @@ ent-CrateEngineeringAMEShielding = Ящик компонентов ДАМ
 ent-CrateEngineeringAMEJar = Ящик антиматериевого топлива
     .desc = 3 канистры антиматериевого топлива, для заправки двигателя антиматерии.
 
+ent-CrateEngineeringAMEJar1 = { ent-CrateEngineeringAMEJar }
+    .desc = { ent-CrateEngineeringAMEJar.desc }
+ent-CrateEngineeringAMEJar2 = { ent-CrateEngineeringAMEJar }
+    .desc = { ent-CrateEngineeringAMEJar.desc }
+ent-CrateEngineeringAMEJar3 = { ent-CrateEngineeringAMEJar }
+    .desc = { ent-CrateEngineeringAMEJar.desc }
+
 ent-CrateEngineeringAMEControl = Ящик с контроллером управления ДАМ
     .desc = Управляющий компьютер ДАМ.
 

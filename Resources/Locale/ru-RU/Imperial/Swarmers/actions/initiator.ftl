@@ -1,0 +1,15 @@
+ent-SwarmerInitiatorTeleportAction = Телепорт
+    .desc = Телепортирует людей куда подальше. Также оглушает их.
+    .suffix = { "Свармер" }
+ent-SwarmerInitiatorDeconstructionAction = Разборка
+    .desc = Разберите структуры на энергоматериалы.
+    .suffix = { "Свармер" }
+ent-SwarmerInitiatorWallAction = Замена структуры
+    .desc = Действие, заменяющее любую стену или окно на свармерскую стену. Вперед, перестраивать станцию!
+    .suffix = { "Свармер" }
+ent-SwarmerInitiatorTileAction = Замена тайлов
+    .desc = Заменяет тайлы вокруг вас.
+    .suffix = { "Свармер" }
+ent-SwarmerInitiatorHoloBarrierAction = Установка атмос-проектора
+    .desc = Устанавливает временный атмос барьер, который поможет избежать разгерметизации.
+    .suffix = { "Свармер" }

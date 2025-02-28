@@ -1,0 +1,253 @@
+- type: startingGear
+  id: WerwolfBlack
+  equipment:
+    shoes: ClothingFeetFurSuitBlackUnrem
+    head: ClothingHeadFurSuitBlackUnrem
+    gloves: ClothingHandsFurSuitBlackUnrem
+    outerClothing: ClothingArmorFurSuitBlackUnrem
+    neck: ClothingNeckFurSuitBlackUnrem
+    mask: ClothingMaskFurSuitBlackUnrem
+
+- type: startingGear
+  id: WerwolfDarkPurple
+  equipment:
+    shoes: ClothingFeetFurSuitDPurpleUnrem
+    head: ClothingHeadFurSuitDPurpleUnrem
+    gloves: ClothingHandsFurSuitDPurpleUnrem
+    outerClothing: ClothingArmorFurSuitDPurpleUnrem
+    neck: ClothingNeckFurSuitDPurpleUnrem
+    mask: ClothingMaskFurSuitDPurpleUnrem
+
+- type: startingGear
+  id: WerwolfRed
+  equipment:
+    shoes: ClothingFeetFurSuitRedUnrem
+    head: ClothingHeadFurSuitRedUnrem
+    gloves: ClothingHandsFurSuitRedUnrem
+    outerClothing: ClothingArmorFurSuitRedUnrem
+    neck: ClothingNeckFurSuitRedUnrem
+    mask: ClothingMaskFurSuitRedUnrem
+
+- type: startingGear
+  id: WerwolfWhite
+  equipment:
+    shoes: ClothingFeetFurSuitWhiteUnrem
+    head: ClothingHeadFurSuitWhiteUnrem
+    gloves: ClothingHandsFurSuitWhiteUnrem
+    outerClothing: ClothingArmorFurSuitWhiteUnrem
+    neck: ClothingNeckFurSuitWhiteUnrem
+    mask: ClothingMaskFurSuitWhiteUnrem
+
+- type: startingGear
+  id: WerwolfBlue
+  equipment:
+    shoes: ClothingFeetFurSuitBlueUnrem
+    head: ClothingHeadFurSuitBlueUnrem
+    gloves: ClothingHandsFurSuitBlueUnrem
+    outerClothing: ClothingArmorFurSuitBlueUnrem
+    neck: ClothingNeckFurSuitBlueUnrem
+    mask: ClothingMaskFurSuitBlueUnrem
+
+- type: startingGear
+  id: WerwolfDBlue
+  equipment:
+    shoes: ClothingFeetFurSuitDBlueUnrem
+    head: ClothingHeadFurSuitDBlueUnrem
+    gloves: ClothingHandsFurSuitDBlueUnrem
+    outerClothing: ClothingArmorFurSuitDBlueUnrem
+    neck: ClothingNeckFurSuitDBlueUnrem
+    mask: ClothingMaskFurSuitDBlueUnrem
+
+- type: startingGear
+  id: MedievalNothingWerwolf
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth9
+
+- type: startingGear
+  id: MedievalMedium
+  equipment:
+    shoes: MedievalClothingFeetSteel
+    head: MedievalClothingHeadHelmetNormand
+    gloves: MedievalIronGloves
+    outerClothing: MedievalClothingOuterArmorIron
+    mask: MedievalMaskFace
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth3
+
+- type: startingGear
+  id: MedievalMediumSword
+  equipment:
+    shoes: MedievalClothingFeetSteel
+    head: MedievalClothingHeadHelmetNormand
+    gloves: MedievalIronGloves
+    outerClothing: MedievalClothingOuterArmorIron
+    mask: MedievalMaskFace
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth3
+    back: MedievalFalshionT3LegionSteel
+
+- type: startingGear
+  id: MedievalRange
+  equipment:
+    shoes: MedievalClothingShoesLeather
+    head: MedievalClothingHeadHelmetShapel
+    gloves: MedievalClothingHandsGlovesColorBrown
+    outerClothing: MedievalClothingOuterArmorIronCuirass
+    mask: MedievalMaskFace
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth2
+    belt: MedievalQuiver
+
+- type: startingGear
+  id: MedievalHeavy
+  equipment:
+    shoes: MedievalClothingFeetSteel
+    head: MedievalClothingHeadHelmetCrusader
+    gloves: MedievalIronGloves
+    outerClothing: MedievalClothingOuterArmorUpIron
+    mask: MedievalMaskFace
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth7
+
+- type: startingGear
+  id: MedievalPeasant
+  equipment:
+    shoes: MedievalBastShoes
+    mask: MedievalMaskFace
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth8
+
+- type: startingGear
+  id: MedievalNecro
+  equipment:
+    shoes: MedievalClothingFeetNecromancerLight
+    head: MedievalClothingHeadNecro
+    gloves: MedievalNecroGlovesLight
+    outerClothing: MedievalClothingOuterArmorNecroLight
+    mask: MedievalMaskFace
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth13Necro
+
+#- type: startingGear
+#  id: MedievalNecroLeader
+#  equipment:
+#    shoes: MedievalClothingFeetNecromancer
+#    head: MedievalClothingHeadNecro
+#    gloves: MedievalNecroGloves
+#    outerClothing: MedievalClothingOuterArmorNecro
+#    mask: MedievalMaskFace
+#    jumpsuit: MedievalClothingUniformJumpsuitShitCloth13Necro
+
+- type: startingGear
+  id: MedievalShadowBlack
+  equipment:
+    shoes: MedievalShoesShadowBlack
+    gloves: ClothingHandsShadowBlack
+    mask: MedievalMaskShadowBlack
+    jumpsuit: MedievalClothingUniformJumpsuitShadowBlack
+    neck: MedievalClothingNeckCloakShadowBlack
+
+- type: startingGear
+  id: MedievalShadowBlue
+  equipment:
+    shoes: MedievalShoesShadowBlue
+    gloves: ClothingHandsShadowBlue
+    mask: MedievalMaskShadowBlue
+    jumpsuit: MedievalClothingUniformJumpsuitShadowBlue
+    neck: MedievalClothingNeckCloakShadowBlue
+
+- type: startingGear
+  id: MedievalShadowRed
+  equipment:
+    shoes: MedievalShoesShadowRed
+    gloves: ClothingHandsShadowRed
+    mask: MedievalMaskShadowRed
+    jumpsuit: MedievalClothingUniformJumpsuitShadowRed
+    neck: MedievalClothingNeckCloakShadowRed
+
+- type: startingGear
+  id: MedievalShadowGreen
+  equipment:
+    shoes: MedievalShoesShadowGreen
+    gloves: ClothingHandsShadowGreen
+    mask: MedievalMaskShadowGreen
+    jumpsuit: MedievalClothingUniformJumpsuitShadowGreen
+    neck: MedievalClothingNeckCloakShadowGreen
+
+- type: startingGear
+  id: RPGMedievalTraveller
+  equipment:
+    shoes: MedievalShoesSapogi
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth24
+    back: MedievalClothingBackpackSatchelLeather
+    pocket1: MedievalRevent50
+    pocket2: MedievalPaperGuide
+
+- type: startingGear
+  id: RPGMedievalNecro
+  equipment:
+    shoes: MedievalClothingFeetNecromancerLight
+    head: MedievalClothingHeadNecro
+    gloves: MedievalNecroGlovesLight
+    outerClothing: MedievalClothingOuterArmorNecroLight
+    mask: MedievalMaskFace
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth13Necro
+    back: ClothingBackpackSatchelNecro
+    pocket1: MedievalRevent200
+
+- type: startingGear
+  id: RPGMedievalWolf
+  equipment:
+    shoes: MedievalShoesSapogi
+    outerClothing: MedievalClothingOuterArmorLeatherLight
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
+    back: MedievalClothingBackpackSatchelLeather
+    pocket1: MedievalRevent100
+    neck: MedievalClothingNeckCloakClanWolf
+    belt: MedievalFalshionT3
+
+- type: startingGear
+  id: RPGMedievalFish
+  equipment:
+    shoes: MedievalShoesSapogi
+    outerClothing: MedievalClothingOuterArmorLeatherLight
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth17
+    back: MedievalClothingBackpackSatchelLeather
+    pocket1: MedievalRevent100
+    neck: MedievalClothingNeckCloakColorLightBlue
+    belt: MedievalFalshionT3
+
+- type: startingGear
+  id: RPGMedievalFlame
+  equipment:
+    shoes: MedievalShoesSapogi
+    outerClothing: MedievalClothingOuterArmorLeatherLight
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth5
+    back: MedievalClothingBackpackSatchelLeather
+    pocket1: MedievalRevent100
+    neck: MedievalClothingNeckCloakClanFlame
+    belt: MedievalFalshionT3
+
+- type: startingGear
+  id: RPGMedievalEagle
+  equipment:
+    shoes: MedievalShoesSapogi
+    outerClothing: MedievalClothingOuterArmorLeatherLight
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth14
+    back: MedievalClothingBackpackSatchelLeather
+    pocket1: MedievalRevent100
+    neck: MedievalClothingNeckCloakClanEagle
+    belt: MedievalFalshionT3
+
+- type: startingGear
+  id: RPGMedievalLeader
+  equipment:
+    shoes: MedievalShoesSapogi
+    outerClothing: MedievalClothingOuterArmorLeatherLight
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth24
+    back: MedievalClothingBackpackSatchelLeather
+    pocket1: MedievalRevent200
+    pocket2: MedievalRevent200
+    belt: MedievalFalshionT3
+
+- type: startingGear
+  id: RPGMedievalChamber
+  equipment:
+    shoes: MedievalShoesChamber
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth23
+    pocket1: MedievalRevent100
+    pocket2: MedievalRevent50

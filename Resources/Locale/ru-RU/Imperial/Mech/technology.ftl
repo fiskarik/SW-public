@@ -1,0 +1,14 @@
+research-technology-mech-phazon = Эксперементальные экзокостюмы
+research-technology-mech-firefighter = Огнеупорные экзокостюмы
+research-technology-mech-clark = Горнодобывающие экзокостюмы
+research-technology-mech-odissey = Медицинские экзокостюмы
+research-technology-mech-reticence = ...
+research-technology-mech-gugax = Боевые экзокостюмы
+research-technology-mech-durand = Сдерживающие экзокостюмы
+research-technology-mech-guns1 = Самооборонительные навесы
+research-technology-mech-laser = Энергетическая конвертация
+research-technology-mech-raffle = Безопасные ракетоносители
+research-technology-mech-buff1 = Базовые улучшения механоидов
+research-technology-mech-buff2 = Улучшения механоидов
+research-technology-mech-buff3 = Эксперементальные улучшения механоидов
+research-technology-mech-industrial3 = Индустриальное снаряжение механоидов

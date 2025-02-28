@@ -79,6 +79,11 @@ namespace Content.Server.Light.EntitySystems
                             _item.SetHeldPrefix(ent, "unlit", component: item);
                         }
 
+                        // Imperial Medieval Start
+                        if (component.DespawnOnSpent) // imperial medieval
+                            QueueDel(ent); // imperial medieval
+                        // Imperial Medieval End
+
                         break;
                 }
             }

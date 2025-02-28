@@ -19,6 +19,7 @@
 
 - type: construction
   name: Комфортный диван
+  hide: true # imperial medieval craft disable
   id: CouchComfy
   graph: Seat
   startNode: start
@@ -56,6 +57,7 @@
 
 - type: construction
   name: Золотой диван
+  hide: true # imperial medieval craft disable
   id: CouchGold
   graph: Seat
   startNode: start

@@ -51,10 +51,10 @@
           steps:
             - material: Brass
               amount: 1
-    
+
     - node: filledPlate
       entity: FloorTileItemBrassFilled
-      
+
     - node: reebe
       entity: FloorTileItemBrassReebe
 
@@ -115,9 +115,9 @@
         - to: woodtilelarge
           completed:
             - !type:SetStackCount
-              amount: 4
+              amount: 1 # imperial medieval floor
           steps:
             - material: WoodPlank
-              amount: 2
+              amount: 1 # imperial medieval floor
     - node: woodtilelarge
-      entity: FloorTileItemWoodLarge
+      entity: MedievalWoodenFloorCraft # imperial medieval floor

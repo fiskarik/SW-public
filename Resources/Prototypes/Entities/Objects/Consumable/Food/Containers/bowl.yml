@@ -63,6 +63,11 @@
   - type: Tag
     tags:
     - Trash
+  # Imperial Medieval Start
+  - type: Currency
+    price:
+      Revent: 5
+  # Imperial Medieval End
 
 - type: entity
   name: broken bowl

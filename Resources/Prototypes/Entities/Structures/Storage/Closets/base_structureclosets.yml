@@ -25,16 +25,18 @@
       sprite: Structures/Storage/closet_labels.rsi
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: MovedByPressure
-  - type: PaperLabel
-    labelSlot:
-      insertVerbText: comp-paper-label-insert
-      ejectVerbText: comp-paper-label-eject
-      whitelist:
-        components:
-        - Paper
-      blacklist:
-        tags:
-        - Book
+  # Imperial Medieval Start
+  # - type: PaperLabel
+  #   labelSlot:
+  #     insertVerbText: comp-paper-label-insert
+  #     ejectVerbText: comp-paper-label-eject
+  #     whitelist:
+  #       components:
+  #       - Paper
+  #     blacklist:
+  #       tags:
+  #       - Book
+  # Imperial Medieval End
   - type: ItemSlots
   - type: DamageOnHighSpeedImpact
     damage:

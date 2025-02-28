@@ -1,0 +1,415 @@
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalLeatherKey
+  name: security key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: leather
+  - type: PresetIdCard
+    job: LeatherKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalGuardKey
+  name: security key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: gate
+  - type: PresetIdCard
+    job: GuardKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalUnknownKey
+  name: security key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: unknown
+  - type: PresetIdCard
+    job: UnknownKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalFarmerKey
+  name: security key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: farmer
+  - type: PresetIdCard
+    job: FarmerKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalGateKey
+  name: security key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: gate
+  - type: PresetIdCard
+    job: GateKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalBlacksmithKey
+  name: security key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: blacksmith
+  - type: PresetIdCard
+    job: BlacksmithKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalWoodKey
+  name: security key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: wood
+  - type: PresetIdCard
+    job: WoodKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalMaidKey
+  name: security key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: maid
+  - type: PresetIdCard
+    job: MaidKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalKeyGuard
+  name: security key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: secure
+  - type: PresetIdCard
+    job: GateKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalKeyChapel
+  name: chapel key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: chapel
+  - type: PresetIdCard
+    job: ChapelKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalKeyAlchem
+  name: alchem key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: alchem
+  - type: PresetIdCard
+    job: AlchemKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalKeyTavern
+  name: tavern key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: tavern
+  - type: PresetIdCard
+    job: TavernaKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalKeyKing
+  name: king key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: king
+  - type: PresetIdCard
+    job: KingKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalKeyWizard
+  name: wizard key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: wizard
+  - type: PresetIdCard
+    job: WizardKey
+
+- type: entity
+  parent: Clothing
+  id: MedievalKeyStandard
+  name: key
+  description: key
+  noSpawn: true
+  components:
+  - type: Clothing
+    slots:
+    - idcard
+  - type: Item
+    size: Tiny
+  - type: Access
+  - type: Tag
+    tags:
+    - MedievalKey
+
+- type: entity
+  parent: MedievalKeyStandard
+  id: MedievalKeyCargo
+  name: storage key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: storage
+  - type: PresetIdCard
+    job: StorageKey
+
+- type: job
+  id: TavernaKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval1
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Bar
+
+- type: job
+  id: KingKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval2
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Captain
+
+- type: job
+  id: AlchemKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval3
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Chemistry
+
+- type: job
+  id: StorageKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval4
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Cargo
+
+- type: job
+  id: ChapelKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval5
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Chapel
+
+- type: job
+  id: WizardKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval6
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Research
+
+- type: job
+  id: GuardKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval7
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Security
+
+- type: job
+  id: LeatherKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval8
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Atmospherics
+
+- type: job
+  id: UnknownKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval9
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Maintenance
+
+- type: job
+  id: FarmerKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval10
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Hydroponics
+
+- type: job
+  id: MaidKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval11
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Janitor
+
+- type: job
+  id: WoodKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval12
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - ChiefEngineer
+
+- type: job
+  id: BlacksmithKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval13
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Engineering
+
+- type: job
+  id: GateKey
+  name: key
+  setPreference: false
+  description: key
+  playTimeTracker: Medieval14
+  startingGear: CargoTechGear
+  icon: "CargoTechnician"
+  supervisors: job-supervisors-hop-qm
+  access:
+  - Medical
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: MedievalKeyStorage
+  name: MedievalKeyStorage
+  description: A storage used to hold keys.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/key_storage.rsi
+  - type: Storage
+    grid:
+    - 0,0,6,1
+    whitelist:
+      tags:
+        - MedievalKey
+  - type: Item
+    size: Normal
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - idcard
+
+- type: playTimeTracker
+  id: Medieval0
+
+- type: playTimeTracker
+  id: Medieval1
+
+- type: playTimeTracker
+  id: Medieval2
+
+- type: playTimeTracker
+  id: Medieval3
+
+- type: playTimeTracker
+  id: Medieval4
+
+- type: playTimeTracker
+  id: Medieval5
+
+- type: playTimeTracker
+  id: Medieval6
+
+- type: playTimeTracker
+  id: Medieval7
+
+- type: playTimeTracker
+  id: Medieval8
+
+- type: playTimeTracker
+  id: Medieval9
+
+- type: playTimeTracker
+  id: Medieval10
+
+- type: playTimeTracker
+  id: Medieval11
+
+- type: playTimeTracker
+  id: Medieval12
+
+- type: playTimeTracker
+  id: Medieval13
+
+- type: playTimeTracker
+  id: Medieval14

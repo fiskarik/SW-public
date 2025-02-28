@@ -30,20 +30,32 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      30: Critical
-      60: Dead
+      110: Critical # Imperial Medieval
+      111: Dead # Imperial Medieval
   - type: TransferMindOnGib
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 110 # Imperial Medieval
       behaviors:
+      - !type:GoSSDBehavior { } # Imperial Medieval
       - !type:GibBehavior { }
   - type: SlowOnDamage #modified speeds because they're so weak
     speedModifierThresholds:
-      15: 0.9
-      20: 0.7
+      # Imperial Medieval Start
+      # 15: 0.9
+      # 20: 0.7
+      10: 0.95
+      20: 0.9
+      30: 0.83
+      40: 0.75
+      50: 0.7
+      60: 0.63
+      70: 0.58
+      80: 0.53
+      90: 0.4
+      # Imperial Medieval End
   - type: Speech
     speechVerb: Skeleton
   - type: ZombieImmune
@@ -65,6 +77,15 @@
           - MobMask
         layer:
           - MobLayer
+      # Imperial Medieval Start
+      medieval-spawner:
+        shape: !type:PhysShapeCircle
+          radius: 0.4
+        layer: []
+        mask:
+        - MedievalSpawnerLayer
+        hard: false
+      # Imperial Medieval End
   - type: Reactive
     groups:
       Flammable: [ Touch ]
@@ -109,6 +130,13 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+  # Imperial Medieval Start
+  - type: BadSmellFeel
+    enabled: false
+    descEnabled: false
+  - type: NeedSleep
+    enabled: false
+  # Imperial Medieval End
 
 - type: entity
   parent: BaseSpeciesDummy

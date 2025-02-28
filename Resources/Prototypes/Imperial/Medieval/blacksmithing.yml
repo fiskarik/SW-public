@@ -1,0 +1,282 @@
+- type: tool
+  id: MedievalBlacksmithing
+  name: medieval-tool-blacksmithing-name
+  toolName: medieval-tool-blacksmithing-tool-name
+  spawn: MedievalMaceNecro
+  icon: { sprite: Objects/Fun/bikehorn.rsi, state: icon }
+
+- type: entity
+  name: blacksmith hammer
+  parent: BaseItem
+  id: MedievalHammerBlacksmith
+  description: An ancient war blade.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/blacksmith_hammer.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 6
+  - type: Item
+    size: Normal
+  - type: DisarmMalus
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 7
+  - type: Tool
+    qualities:
+      - MedievalBlacksmithing
+    speed: 1.0
+
+- type: entity
+  name: falshion
+  parent: BaseItem
+  id: MedievalFalshionNotReady
+  description: An ancient war blade.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/not_ready.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Construction
+    graph: MedievalBlacksmithSword
+    node: start
+    deconstructionTarget: null
+
+- type: constructionGraph
+  id: MedievalBlacksmithSword
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: medievalblacksmith
+          steps:
+            - tool: MedievalBlacksmithing
+              doAfter: 17
+    - node: medievalblacksmith
+      entity: SpawnMedievalSword
+
+- type: entity
+  name: Exception Spawner
+  id: SpawnMedievalSword
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+      - MedievalFalshionT3
+      - MedievalFalshionT3
+      chance: 1.0
+
+- type: entity
+  name: falshion
+  parent: BaseItem
+  id: MedievalDaggerNotReady
+  description: An ancient war blade.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/not_ready.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Construction
+    graph: MedievalBlacksmithDagger
+    node: start
+    deconstructionTarget: null
+
+- type: constructionGraph
+  id: MedievalBlacksmithDagger
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: medievalblacksmith
+          steps:
+            - tool: MedievalBlacksmithing
+              doAfter: 7
+    - node: medievalblacksmith
+      entity: SpawnMedievalDagger
+
+- type: entity
+  name: Exception Spawner
+  id: SpawnMedievalDagger
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+      - MedievalDaggerT3
+      - MedievalDaggerT3
+      chance: 1.0
+
+- type: entity
+  name: falshion
+  parent: BaseItem
+  id: MedievalSpearNotReady
+  description: An ancient war blade.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/not_ready.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Construction
+    graph: MedievalBlacksmithSpear
+    node: start
+    deconstructionTarget: null
+
+- type: constructionGraph
+  id: MedievalBlacksmithSpear
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: medievalblacksmith
+          steps:
+            - tool: MedievalBlacksmithing
+              doAfter: 20
+    - node: medievalblacksmith
+      entity: SpawnMedievalSpear
+
+- type: entity
+  name: Exception Spawner
+  id: SpawnMedievalSpear
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+      - MedievalSpearT3
+      - MedievalSpearT3
+      chance: 1.0
+
+- type: entity
+  name: falshion
+  parent: BaseItem
+  id: MedievalMaceNotReady
+  description: An ancient war blade.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/not_ready.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Construction
+    graph: MedievalBlacksmithMace
+    node: start
+    deconstructionTarget: null
+
+- type: constructionGraph
+  id: MedievalBlacksmithMace
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: medievalblacksmith
+          steps:
+            - tool: MedievalBlacksmithing
+              doAfter: 20
+    - node: medievalblacksmith
+      entity: SpawnMedievalMace
+
+- type: entity
+  name: Exception Spawner
+  id: SpawnMedievalMace
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+      - MedievalMaceT3
+      - MedievalMaceT3
+      chance: 1.0
+
+- type: entity
+  name: falshion
+  parent: BaseItem
+  id: MedievalIronHalberdNotReady
+  description: An ancient war blade.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/not_ready.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Construction
+    graph: MedievalBlacksmithHalberd
+    node: start
+    deconstructionTarget: null
+
+- type: constructionGraph
+  id: MedievalBlacksmithHalberd
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: medievalblacksmith
+          steps:
+            - tool: MedievalBlacksmithing
+              doAfter: 20
+    - node: medievalblacksmith
+      entity: SpawnMedievalHalberd
+
+- type: entity
+  name: Exception Spawner
+  id: SpawnMedievalHalberd
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+      - MedievalIronHalberdT3
+      - MedievalIronHalberdT3
+      chance: 1.0
+
+- type: entity
+  name: falshion
+  parent: BaseItem
+  id: MedievalIronHammerNotReady
+  description: An ancient war blade.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/not_ready.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Construction
+    graph: MedievalBlacksmithHammer
+    node: start
+    deconstructionTarget: null
+
+- type: constructionGraph
+  id: MedievalBlacksmithHammer
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: medievalblacksmith
+          steps:
+            - tool: MedievalBlacksmithing
+              doAfter: 20
+    - node: medievalblacksmith
+      entity: MedievalIronHammer

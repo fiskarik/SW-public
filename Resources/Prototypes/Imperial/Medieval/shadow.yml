@@ -1,0 +1,583 @@
+- type: entity
+  parent: Clothing
+  id: ClothingHandsShadowBlack
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/gloves.rsi
+    state: icon
+  - type: Clothing
+    slots: [gloves]
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/gloves.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.65
+  - type: MeleeWeapon
+    attackRate: 1.4
+    range: 1.2
+    damage:
+      types:
+        Caustic: 1
+    animation: WeaponArcClaw
+    soundHit:
+     collection: AlienClaw
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/gloves.rsi
+    state: icon
+  - type: StaminaDamageOnHit
+    damage: 22
+  - type: Sharp
+
+- type: entity
+  parent: Clothing
+  id: ClothingHandsShadowBlue
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/gloves.rsi
+    state: icon
+  - type: Clothing
+    slots: [gloves]
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/gloves.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.65
+  - type: MeleeWeapon
+    attackRate: 1.4
+    range: 1.2
+    damage:
+      types:
+        Caustic: 1
+    animation: WeaponArcClaw
+    soundHit:
+     collection: AlienClaw
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/gloves.rsi
+    state: icon
+  - type: StaminaDamageOnHit
+    damage: 22
+  - type: Sharp
+
+- type: entity
+  parent: Clothing
+  id: ClothingHandsShadowRed
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/gloves.rsi
+    state: icon
+  - type: Clothing
+    slots: [gloves]
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/gloves.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.65
+  - type: MeleeWeapon
+    attackRate: 1.4
+    range: 1.2
+    damage:
+      types:
+        Caustic: 1
+    animation: WeaponArcClaw
+    soundHit:
+     collection: AlienClaw
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/gloves.rsi
+    state: icon
+  - type: StaminaDamageOnHit
+    damage: 22
+  - type: Sharp
+
+- type: entity
+  parent: Clothing
+  id: ClothingHandsShadowGreen
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/gloves.rsi
+    state: icon
+  - type: Clothing
+    slots: [gloves]
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/gloves.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.65
+  - type: MeleeWeapon
+    attackRate: 1.4
+    range: 1.2
+    damage:
+      types:
+        Caustic: 1
+    animation: WeaponArcClaw
+    soundHit:
+     collection: AlienClaw
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/gloves.rsi
+    state: icon
+  - type: StaminaDamageOnHit
+    damage: 22
+  - type: Sharp
+
+- type: entity
+  parent: ClothingUniformBase
+  id: MedievalClothingUniformJumpsuitShadowBlack
+  name: shit cloth
+  description: hoho
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/jumpsuit.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/jumpsuit.rsi
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+  - type: Item
+    size: Tiny
+
+- type: entity
+  parent: ClothingUniformBase
+  id: MedievalClothingUniformJumpsuitShadowBlue
+  name: shit cloth
+  description: hoho
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/jumpsuit.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/jumpsuit.rsi
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+  - type: Item
+    size: Tiny
+
+- type: entity
+  parent: ClothingUniformBase
+  id: MedievalClothingUniformJumpsuitShadowRed
+  name: shit cloth
+  description: hoho
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/jumpsuit.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/jumpsuit.rsi
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+  - type: Item
+    size: Tiny
+
+- type: entity
+  parent: ClothingUniformBase
+  id: MedievalClothingUniformJumpsuitShadowGreen
+  name: shit cloth
+  description: hoho
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/jumpsuit.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/jumpsuit.rsi
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+  - type: Item
+    size: Tiny
+
+- type: entity
+  parent: ClothingMaskGas
+  id: MedievalMaskShadowBlack
+  name: medievalMaskFace
+  description: edievalMaskFace
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/mask.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/mask.rsi
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+
+- type: entity
+  parent: ClothingMaskGas
+  id: MedievalMaskShadowBlue
+  name: medievalMaskFace
+  description: edievalMaskFace
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/mask.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/mask.rsi
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+
+- type: entity
+  parent: ClothingMaskGas
+  id: MedievalMaskShadowRed
+  name: medievalMaskFace
+  description: edievalMaskFace
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/mask.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/mask.rsi
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+
+- type: entity
+  parent: ClothingMaskGas
+  id: MedievalMaskShadowGreen
+  name: medievalMaskFace
+  description: edievalMaskFace
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/mask.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/mask.rsi
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+
+- type: entity
+  parent: ClothingHeadBase
+  id: MedievalClothingHeadHelmetHoodShadowBlack
+  name: Medieval
+  description: Medieval
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/head.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/head.rsi
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: HideLayerClothing
+    slots:
+    - Hair
+  - type: Item
+    size: Tiny
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+
+- type: entity
+  parent: ClothingHeadBase
+  id: MedievalClothingHeadHelmetHoodShadowBlue
+  name: Medieval
+  description: Medieval
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/head.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/head.rsi
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: HideLayerClothing
+    slots:
+    - Hair
+  - type: Item
+    size: Tiny
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+
+- type: entity
+  parent: ClothingHeadBase
+  id: MedievalClothingHeadHelmetHoodShadowRed
+  name: Medieval
+  description: Medieval
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/head.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/head.rsi
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: HideLayerClothing
+    slots:
+    - Hair
+  - type: Item
+    size: Tiny
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+
+- type: entity
+  parent: ClothingHeadBase
+  id: MedievalClothingHeadHelmetHoodShadowGreen
+  name: Medieval
+  description: Medieval
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/head.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/head.rsi
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: HideLayerClothing
+    slots:
+    - Hair
+  - type: Item
+    size: Tiny
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakShadowBlack
+  name: MedievalClothingNeckCloakShadow
+  description: MedievalClothingNeckCloakShadow
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/neck.rsi
+  - type: Insulated
+  - type: ToggleableClothing
+    clothingPrototype: MedievalClothingHeadHelmetHoodShadowBlack
+    requiredSlot:
+    - neck
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakShadowBlue
+  name: MedievalClothingNeckCloakShadow
+  description: MedievalClothingNeckCloakShadow
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/neck.rsi
+  - type: Insulated
+  - type: ToggleableClothing
+    clothingPrototype: MedievalClothingHeadHelmetHoodShadowBlue
+    requiredSlot:
+    - neck
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakShadowRed
+  name: MedievalClothingNeckCloakShadow
+  description: MedievalClothingNeckCloakShadow
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/neck.rsi
+  - type: Insulated
+  - type: ToggleableClothing
+    clothingPrototype: MedievalClothingHeadHelmetHoodShadowRed
+    requiredSlot:
+    - neck
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakShadowGreen
+  name: MedievalClothingNeckCloakShadow
+  description: MedievalClothingNeckCloakShadow
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/neck.rsi
+  - type: Insulated
+  - type: ToggleableClothing
+    clothingPrototype: MedievalClothingHeadHelmetHoodShadowGreen
+    requiredSlot:
+    - neck
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: MedievalShoesShadowBlack
+  name: Medieval
+  description: Bastard
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/shoes.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/shoes.rsi
+  - type: Item
+    size: Tiny
+  - type: NoSlip
+  - type: ClothingSpeedModifier
+    walkModifier: 1.08
+    sprintModifier: 1.08
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: MedievalShoesShadowBlue
+  name: Medieval
+  description: Bastard
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/shoes.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Blue/shoes.rsi
+  - type: Item
+    size: Tiny
+  - type: NoSlip
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: MedievalShoesShadowRed
+  name: Medieval
+  description: Bastard
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/shoes.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Red/shoes.rsi
+  - type: Item
+    size: Tiny
+  - type: NoSlip
+  - type: ClothingSpeedModifier
+    walkModifier: 1.08
+    sprintModifier: 1.08
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: MedievalShoesShadowGreen
+  name: Medieval
+  description: Bastard
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/shoes.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shadow/Green/shoes.rsi
+  - type: Item
+    size: Tiny
+  - type: NoSlip
+  - type: ClothingSpeedModifier
+    walkModifier: 1.08
+    sprintModifier: 1.08

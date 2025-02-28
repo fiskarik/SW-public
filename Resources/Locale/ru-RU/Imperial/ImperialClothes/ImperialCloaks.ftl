@@ -6,3 +6,6 @@ ent-ClothingNeckCloakHosFormal = Торжественный плащ Главы 
 
 ent-WardenMantleID = мантия смотрителя
    .desc = Заключенные должны бояться вас!
+
+ent-ClothingNeckCloakVampire = плащ вампира
+   .desc = Красивый алый плащ.

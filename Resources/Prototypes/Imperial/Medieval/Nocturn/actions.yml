@@ -1,0 +1,144 @@
+- type: entity
+  id: NocturnDrinkAction
+  name: infection
+  description: drink blood
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      itemIconStyle: BigAction
+      useDelay: 2.2
+      deselectOnMiss: true
+      repeat: false
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Medieval/Vampire/actions.rsi
+        state: drink
+      event: !type:NocturnDrinkActionEvent
+      whitelist:
+        components:
+          - HumanoidAppearance
+          - NocturnBadFood
+
+- type: alert
+  id: NocturnBlood
+  icons:
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed0
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed1
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed2
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed3
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed4
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed5
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed6
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed7
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed8
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed9
+  - sprite: /Textures/Imperial/Medieval/Vampire/bleed.rsi
+    state: bleed10
+  name: Уровень крови
+  description: Шкала, примерно отображающая ваш голод. Если запас крови близок к нулю, идет слабый урон. Если кровь на нуле - сильный урон. Если запас больше половины и полученый урон меньше 70, то идет постепенная слабая регенерация, расход увеличивается в 3 раза. Если запас больше половины и полученый урон от 70 до 100, то регенерация увеличивается в 3 раза, а расход крови в 40 раз.
+  minSeverity: 0
+  maxSeverity: 10
+
+- type: entity
+  id: ZveresScreamAction
+  name: infection
+  description: drink blood
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 240
+      icon:
+        sprite: /Textures/Imperial/Medieval/Vampire/actions.rsi
+        state: zveres
+      event: !type:ZveresScreamActionEvent
+
+- type: entity
+  id: CloackMessageActionLegion
+  name: not infection
+  description: magic
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 90
+      icon:
+        sprite: /Textures/Imperial/Medieval/Misc/cloack_message.rsi
+        state: legion
+      event: !type:CloackMessageActionEvent
+
+- type: entity
+  id: CloackMessageActionIns
+  name: not infection
+  description: magic
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 90
+      icon:
+        sprite: /Textures/Imperial/Medieval/Misc/cloack_message.rsi
+        state: myateg
+      event: !type:CloackMessageActionEvent
+
+- type: entity
+  id: CloackMessageActionBand
+  name: not infection
+  description: magic
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 90
+      icon:
+        sprite: /Textures/Imperial/Medieval/Misc/cloack_message.rsi
+        state: bandits
+      event: !type:CloackMessageActionEvent
+
+- type: entity
+  id: CloackMessageActionMerc
+  name: not infection
+  description: magic
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 90
+      icon:
+        sprite: /Textures/Imperial/Medieval/Misc/cloack_message.rsi
+        state: naemniki
+      event: !type:CloackMessageActionEvent
+
+- type: entity
+  id: CloackMessageActionCollegium
+  name: not infection
+  description: magic
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 90
+      icon:
+        sprite: /Textures/Imperial/Medieval/Misc/cloack_message.rsi
+        state: kollegiya
+      event: !type:CloackMessageActionEvent
+
+- type: entity
+  id: CloackMessageActionMine
+  name: not infection
+  description: magic
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 90
+      icon:
+        sprite: /Textures/Imperial/Medieval/Misc/cloack_message.rsi
+        state: miner
+      event: !type:CloackMessageActionEvent

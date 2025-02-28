@@ -37,6 +37,11 @@ public abstract partial class SharedExpendableLightComponent : Component
 
     [DataField("dieSound")]
     public SoundSpecifier? DieSound { get; set; } = null;
+
+    // Imperial Medieval Start
+    [DataField]
+    public bool DespawnOnSpent = false;
+    // Imperial Medieval End
 }
 
 [Serializable, NetSerializable]

@@ -7,14 +7,14 @@ reagent-grinder-component-cannot-put-entity-message = Вы не можете п�
 reagent-grinder-component-upgrade-work-time = Время работы
 reagent-grinder-component-upgrade-storage = Вместимость
 
-grinder-menu-title = Универсальный Измельчитель 3000
+grinder-menu-title = Ступка
 grinder-menu-grind-button = Измельчить
 grinder-menu-juice-button = Выжать
-grinder-menu-auto-label = Авто режим
+grinder-menu-auto-label = Маг. режим
 grinder-menu-auto-button-off = Выкл
 grinder-menu-manual-label = Ручной режим
 grinder-menu-chamber-content-box-label = Камера
 grinder-menu-chamber-content-box-button = Извлечь содержимое
-grinder-menu-beaker-content-box-label = Стакан
+grinder-menu-beaker-content-box-label = Кружка
 grinder-menu-beaker-content-box-button = Извлечь контейнер
 grinder-menu-beaker-content-box-is-empty = Пусто

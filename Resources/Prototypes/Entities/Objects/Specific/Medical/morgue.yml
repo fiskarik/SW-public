@@ -133,6 +133,11 @@
     solution: food
   - type: Extractable
     grindableSolutionName: food
+  # Imperial Medieval Start
+  - type: TrashClear
+    enabled: true
+    onTheGround: true
+  # Imperial Medieval End
 
 - type: entity
   parent: Ash

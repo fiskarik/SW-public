@@ -1,0 +1,197 @@
+- type: entity
+  id: OrganElfHeart
+  parent: OrganHumanHeart
+  name: Elf heart
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [Elf]
+
+- type: entity
+  id: OrganElfLiver
+  parent: OrganHumanLiver
+  name: Elf liver
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [Elf]
+
+- type: entity
+  id: OrganElfStomach
+  parent: OrganHumanStomach
+  name: Elf stomach
+  components:
+  - type: Sprite
+    state: stomach
+  - type: Organ
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 75
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+  - type: Stomach
+  - type: Metabolizer
+    # mm very yummy
+    maxReagents: 5
+    metabolizerTypes: [Elf]
+
+- type: body
+  id: Elf
+  name: "elf"
+  root: torso
+  slots:
+    head:
+      part: HeadHuman
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoHuman
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        heart: OrganElfHeart
+        lungs: OrganHumanLungs
+        stomach: OrganElfStomach
+        liver: OrganElfLiver
+        kidneys: OrganHumanKidneys
+    right arm:
+      part: RightArmHuman
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmHuman
+      connections:
+      - left hand
+    right hand:
+      part: RightHandHuman
+    left hand:
+      part: LeftHandHuman
+    right leg:
+      part: RightLegHuman
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegHuman
+      connections:
+      - left foot
+    right foot:
+      part: RightFootHuman
+    left foot:
+      part: LeftFootHuman
+
+- type: metabolizerType
+  id: Elf
+  name: elf
+
+- type: entity
+  save: false
+  name: Урист МакФорестЭльф
+  parent: BaseMobElf
+  id: MobElf
+
+- type: entity
+  save: false
+  name: Urist McHands The Elf
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobElf
+  abstract: true
+  components:
+  - type: Hunger
+  - type: Thirst
+  - type: Icon
+    sprite: Mobs/Species/Slime/parts.rsi # It was like this beforehand, no idea why.
+    state: full
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 1.35
+    damageRecovery:
+      types:
+        Asphyxiation: -0.85
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    scale: 0.97, 1.03
+  - type: Body
+    prototype: Elf
+    requiredLegs: 2
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatHuman
+      amount: 6
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.37
+        # they r smaller
+        density: 150
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+      medieval-spawner: # imperial medieval start
+        shape: !type:PhysShapeCircle
+          radius: 0.4
+        layer: []
+        #layer:
+        #- DoorPassable
+        mask:
+        - MedievalSpawnerLayer
+        hard: false # imperial medieval end
+  - type: Vocal
+    sounds:
+      Male: MaleHuman
+      Female: FemaleHuman
+      Unsexed: MaleHuman
+  - type: Speech
+    speechSounds: Alto
+  - type:  HumanoidAppearance
+    species: Elf
+  - type: Mana
+    maxManaRaceModifier: 1.12
+    regenRaceModifier: 1.12
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobElfDummy
+  noSpawn: true
+  components:
+  - type: Sprite
+    scale: 0.97, 1.03
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+
+- type: species
+  id: Elf
+  name: Лесной эльф
+  roundStart: true
+  prototype: MobElf
+  sprites: MobHumanSprites
+  markingLimits: MobHumanMarkingLimits
+  dollPrototype: MobElfDummy
+  skinColoration: TintedHues

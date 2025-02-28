@@ -93,6 +93,9 @@
   - type: Loadout
     prototypes: [ MobAghostGear ]
   - type: BypassInteractionChecks
+  - type: BadSmellFeel # imperial medieval
+  - type: MedievalPotionChecker # imperial medieval
+  - type: MedievalMoneyChecker # imperial medieval
 
 - type: entity
   id: ActionAGhostShowSolar

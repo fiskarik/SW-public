@@ -1,5 +1,6 @@
 #chairs
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стул # Imperial Recipes Locale
   id: Chair
   graph: Seat
@@ -17,6 +18,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Табурет # Imperial Recipes Locale
   id: Stool
   graph: Seat
@@ -34,6 +36,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Барный стул # Imperial Recipes Locale
   id: StoolBar
   graph: Seat
@@ -51,6 +54,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Латунный стул # Imperial Recipes Locale
   id: ChairBrass
   graph: Seat
@@ -68,6 +72,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Белое офисное кресло # Imperial Recipes Locale
   id: ChairOfficeLight
   graph: Seat
@@ -85,6 +90,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Тёмное офисное кресло # Imperial Recipes Locale
   id: ChairOfficeDark
   graph: Seat
@@ -103,6 +109,7 @@
 
 - type: construction
   name: Удобное кресло # Imperial Recipes Locale
+  hide: true # imperial medieval craft disable
   id: ChairComfy
   graph: Seat
   startNode: start
@@ -119,6 +126,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Кресло пилота # Imperial Recipes Locale
   id: chairPilotSeat
   graph: Seat
@@ -153,6 +161,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Мясной стул # Imperial Recipes Locale
   id: ChairMeat
   graph: Seat
@@ -187,6 +196,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Раскладной стул # Imperial Recipes Locale
   id: ChairFolding
   graph: Seat
@@ -204,6 +214,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стальная скамейка # Imperial Recipes Locale
   id: ChairSteelBench
   graph: Seat
@@ -238,6 +249,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Удобная красная скамейка # Imperial Recipes Locale
   id: RedComfBench
   graph: Seat
@@ -255,6 +267,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Удобная синяя скамейка # Imperial Recipes Locale
   id: BlueComfBench
   graph: Seat
@@ -273,6 +286,7 @@
 
 #tables
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стол # Imperial Recipes Locale
   id: Table
   graph: Table
@@ -290,6 +304,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Укреплённый стол # Imperial Recipes Locale
   id: TableReinforced
   graph: Table
@@ -307,6 +322,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стеклянный стол # Imperial Recipes Locale
   id: TableGlass
   graph: Table
@@ -324,6 +340,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стол из бронестекла # Imperial Recipes Locale
   id: TableReinforcedGlass
   graph: Table
@@ -341,6 +358,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стол из плазменного стекла # Imperial Recipes Locale
   id: TablePlasmaGlass
   graph: Table
@@ -358,6 +376,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Латунный стол # Imperial Recipes Locale
   id: TableBrass
   graph: Table
@@ -392,6 +411,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Игорный стол # Imperial Recipes Locale
   id: TableCarpet
   graph: Table
@@ -562,6 +582,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Металлическая стойка # Imperial Recipes Locale
   id: TableCounterMetal
   graph: Table
@@ -597,6 +618,7 @@
 
 #bathroom
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Туалет # Imperial Recipes Locale
   id: ToiletEmpty
   graph: Toilet
@@ -615,6 +637,7 @@
 
 #bedroom
 - type: construction
+  hide: true # imperial medieval craft disable
   id: Bed
   name: Кровать # Imperial Recipes Locale
   description: На ней можно лежать или спать пристёгнутым. # Imperial Recipes Locale
@@ -632,6 +655,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: MedicalBed
   name: Больничная койка # Imperial Recipes Locale
   description: Больничная койка для реабилитации пациентов. Отдых в ней обеспечивает медленное исцеление. # Imperial Recipes Locale
@@ -649,6 +673,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: DogBed
   name: Собачья лежанка # Imperial Recipes Locale
   description: Удобная лежанка для собак. Вы даже можете пристегнуть своего питомца в случае отключения гравитации. # Imperial Recipes Locale
@@ -666,6 +691,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: Dresser
   name: Комод # Imperial Recipes Locale
   description: Деревянный комод, в котором можно хранить вещи. # Imperial Recipes Locale
@@ -684,6 +710,7 @@
 
 #racks
 - type: construction
+  hide: true # imperial medieval craft disable
   id: Rack
   name: Стойка # Imperial Recipes Locale
   description: Стойка для хранения вещей. # Imperial Recipes Locale
@@ -732,7 +759,7 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsBlack
   name: Чёрные шторы # Imperial Recipes Locale
@@ -762,7 +789,7 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsCyan
   name: Голубые шторы # Imperial Recipes Locale
@@ -777,7 +804,7 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsGreen
   name: Зелёные шторы # Imperial Recipes Locale
@@ -792,7 +819,7 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsOrange
   name: Оранжевые шторы # Imperial Recipes Locale
@@ -807,7 +834,7 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsPink
   name: Розовые шторы # Imperial Recipes Locale
@@ -822,7 +849,7 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsPurple
   name: Фиолетовые шторы # Imperial Recipes Locale
@@ -837,7 +864,7 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsRed
   name: Красные шторы # Imperial Recipes Locale
@@ -886,6 +913,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: NoticeBoard
   name: Доска объявлений # Imperial Recipes Locale
   description: Деревянная доска объявлений, может хранить внутри себя бумагу. # Imperial Recipes Locale

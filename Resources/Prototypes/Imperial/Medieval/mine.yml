@@ -1,0 +1,312 @@
+- type: Tag
+  id: MineCave
+
+- type: entity
+  parent: MaterialGunpowder
+  id: MaterialGunpowder10
+  name: gunpowder
+  description: An explosive compound.
+  components:
+  - type: Stack
+    stackType: Gunpowder
+    count: 10
+
+- type: entity
+  id: MedievalMineCaveRoomMarker
+  parent: BaseRoomMarker
+  name: marker
+  components:
+  - type: RoomFill
+    #clearExisting: true
+    size: 9,9
+    roomWhitelist:
+      tags:
+      - MineCave
+
+- type: dungeonRoom
+  id: MedievalMineCave9x9a
+  ignoreTile: FloorShuttlePurple
+  size: 9,9
+  atlas: /Maps/Dungeon/medieval_mine.yml
+  offset: 0,0
+  tags:
+  - MineCave
+
+- type: dungeonRoom
+  id: MedievalMineCave9x9b
+  ignoreTile: FloorShuttlePurple
+  size: 9,9
+  atlas: /Maps/Dungeon/medieval_mine.yml
+  offset: 10,0
+  tags:
+  - MineCave
+
+- type: dungeonRoom
+  id: MedievalMineCave9x9c
+  ignoreTile: FloorShuttlePurple
+  size: 9,9
+  atlas: /Maps/Dungeon/medieval_mine.yml
+  offset: 20,0
+  tags:
+  - MineCave
+
+- type: dungeonRoom
+  id: MedievalMineCave9x9d
+  ignoreTile: FloorShuttlePurple
+  size: 9,9
+  atlas: /Maps/Dungeon/medieval_mine.yml
+  offset: 30,0
+  tags:
+  - MineCave
+
+- type: dungeonRoom
+  id: MedievalMineCave9x9e
+  ignoreTile: FloorShuttlePurple
+  size: 9,9
+  atlas: /Maps/Dungeon/medieval_mine.yml
+  offset: 40,0
+  tags:
+  - MineCave
+
+- type: dungeonRoom
+  id: MedievalMineCave9x9f
+  ignoreTile: FloorShuttlePurple
+  size: 9,9
+  atlas: /Maps/Dungeon/medieval_mine.yml
+  offset: 50,0
+  tags:
+  - MineCave
+
+- type: dungeonRoom
+  id: MedievalMineCave9x9g
+  ignoreTile: FloorShuttlePurple
+  size: 9,9
+  atlas: /Maps/Dungeon/medieval_mine.yml
+  offset: 60,0
+  tags:
+  - MineCave
+
+- type: dungeonRoom
+  id: MedievalMineCave9x9h
+  ignoreTile: FloorShuttlePurple
+  size: 9,9
+  atlas: /Maps/Dungeon/medieval_mine.yml
+  offset: 70,0
+  tags:
+  - MineCave
+
+- type: dungeonRoom
+  id: MedievalMineCave9x9k
+  ignoreTile: FloorShuttlePurple
+  size: 9,9
+  atlas: /Maps/Dungeon/medieval_mine.yml
+  offset: 80,0
+  tags:
+  - MineCave
+
+- type: entity
+  name: Exception Spawner
+  id: MedievalSpawnMineCaveRandom
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+      - MedievalMineCaveRoomMarker
+      chance: 0.2
+      offset: 0
+
+- type: entity
+  name: Exception Spawner
+  id: MedievalMineCaveMarkerCenter
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: MineCaveArea
+
+- type: entity
+  id: MedievalWallRockMine
+  parent: BaseStructure
+  name: rock
+  components:
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: Metallic
+    - type: MedievalDiggAble
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 80
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                MedievalSpawnMineCaveAfterStoneDestroy:
+                  min: 1
+                  max: 1
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/Effects/break_stone.ogg
+                params:
+                  volume: -6
+    - type: Occluder
+    - type: Airtight
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          density: 100
+          mask:
+            - FullTileMask
+          layer:
+            - WallLayer
+    - type: IconSmooth
+      key: walls
+      mode: NoSprite
+    - type: SmoothEdge
+    - type: Sprite
+      sprite: Imperial/Medieval/Walls/rock.rsi
+      netsync: false
+      layers:
+        - state: rock
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_west
+    - type: MedievalMeleeBadTarget # imperial medieval
+      safeToHitGroup: ore # imperial medieval
+    - type: MineCaveStone
+
+- type: entity
+  name: Exception Spawner
+  id: MedievalSpawnMineCaveStone
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - WallRockBasaltForstone
+      - MedievalWallRockMine
+      - SpiderWeb
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - WallRockBasaltForstone
+      - MedievalWallRockMine
+      - SpiderWeb
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalTimedSpawnerMedievalMobSpiderCave
+      #- WallRockBasaltEbonut
+      - MedievalWallRockMine
+      - SpiderWeb
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalWallRockMine
+      - MedievalTimedSpawnerMedievalMobAnt
+      - MedievalTimedSpawnerMedievalMobAnt
+      - WallRockBasaltEbonut
+      - MedievalWallRockMine
+      - SpiderWeb
+      - MedievalSpawnMineCaveRandom
+      chance: 0.98
+      offset: 0
+
+- type: entity
+  name: Exception Spawner
+  id: MedievalSpawnMineCaveAfterStoneDestroy
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreIron
+        - MedievalOreIron
+        - MedievalOreGold
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreCoal
+        - MedievalOreIron
+        - MedievalOreIron
+        - MedievalOreIron
+        - MedievalOreGold
+        - MedievalOreTopaz
+        - MedievalOreSerd
+        - MedievalOreAdam
+      chance: 0.34
+      offset: 0

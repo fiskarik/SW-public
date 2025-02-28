@@ -1,0 +1,2074 @@
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetSalad
+  craftTime: 9
+  stacks:
+    MedievalIronIngot: 1
+    MedievalIronPlateSmall: 5
+    MedievalRivets: 1
+  result: MedievalClothingHeadHelmetSalad
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetForstone
+  craftTime: 30
+  stacks:
+    MedievalSteelIngot: 5
+    MedievalForstoneIngot: 4
+    MedievalRivets: 2
+  result: MedievalClothingHeadHelmetForstone
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetEbonit
+  craftTime: 30
+  stacks:
+    MedievalSteelIngot: 5
+    MedievalEbonitIngot: 4
+    MedievalRivets: 2
+  result: MedievalClothingHeadHelmetEbonit
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetEbonit2
+  craftTime: 30
+  stacks:
+    MedievalSteelIngot: 5
+    MedievalEbonitIngot: 4
+    MedievalRivets: 2
+  result: MedievalClothingHeadHelmetEbonit2
+
+- type: CP14Recipe
+  id: MedievalKeyStorage
+  craftTime: 4
+  stacks:
+    MedievalIronIngot: 5
+  result: MedievalKeyStorage
+
+- type: CP14Recipe
+  id: MedievalChemistryEmptyBottle04
+  craftTime: 3
+  stacks:
+    MedievalIronIngot: 1
+  result: MedievalChemistryEmptyBottle04
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetSaladLight
+  craftTime: 9
+  stacks:
+    MedievalIronIngot: 1
+    MedievalIronPlateSmall: 5
+    MedievalRivets: 1
+  result: MedievalClothingHeadHelmetSaladLight
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetNormand
+  craftTime: 9
+  stacks:
+    MedievalIronIngot: 1
+    MedievalIronPlateSmall: 5
+    MedievalRivets: 1
+  result: MedievalClothingHeadHelmetNormand
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetNormandFree
+  craftTime: 9
+  stacks:
+    MedievalIronIngot: 1
+    MedievalIronPlateSmall: 5
+    MedievalRivets: 1
+  result: MedievalClothingHeadHelmetNormandFree
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetBacinet
+  craftTime: 9
+  stacks:
+    MedievalIronIngot: 1
+    MedievalIronPlateSmall: 5
+    MedievalRivets: 1
+  result: MedievalClothingHeadHelmetBacinet
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetShapel
+  craftTime: 9
+  stacks:
+    MedievalIronIngot: 1
+    MedievalIronPlateSmall: 5
+    MedievalRivets: 1
+  result: MedievalClothingHeadHelmetShapel
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetCrusader
+  craftTime: 9
+  stacks:
+    MedievalIronIngot: 1
+    MedievalIronPlateSmall: 5
+    MedievalRivets: 1
+  result: MedievalClothingHeadHelmetCrusader
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorIronCuirass
+  craftTime: 28
+  stacks:
+    MedievalIronPlate: 6
+    MedievalRivets: 3
+    MedievalIronPlateSmall: 6
+    # total 38 ingots
+  result: MedievalClothingOuterArmorIronCuirass
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorIronCuirassLight
+  craftTime: 28
+  stacks:
+    MedievalIronPlate: 3
+    MedievalRivets: 2
+    MedievalIronPlateSmall: 5
+    # total 21 ingots
+    Cloth: 3
+  result: MedievalClothingOuterArmorIronCuirassLight
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorChainMailLight
+  craftTime: 35
+  stacks:
+    MedievalChain: 3
+  result: MedievalClothingOuterArmorChainMailLight
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorChainMail
+  craftTime: 35
+  stacks:
+    MedievalChain: 4
+    MedievalLeatherBelt: 1
+    MedievalRivets: 1
+  result: MedievalClothingOuterArmorChainMail
+
+- type: CP14Recipe
+  id: ClothingOuterArmorPodWars
+  craftTime: 35
+  stacks:
+    MedievalIronPlate: 1
+    MedievalRivets: 8
+    MedievalShoulder: 2
+    MedievalLeatherBelt: 1
+    MedievalChain: 3
+    MedievalIronPlateSmall: 21
+    # total 70 ingots
+  result: ClothingOuterArmorPodWars
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorIron
+  craftTime: 43
+  stacks:
+    MedievalIronPlate: 5
+    MedievalRivets: 12
+    MedievalShoulder: 2
+    MedievalLeatherBelt: 2
+    MedievalChain: 7
+    MedievalIronPlateSmall: 14
+    # total 97 ingots
+    Cloth: 8
+  result: MedievalClothingOuterArmorIron
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorUpIron
+  craftTime: 62
+  stacks:
+    MedievalIronPlate: 16
+    MedievalRivets: 15
+    MedievalShoulder: 2
+    MedievalLeatherBelt: 2
+    MedievalChain: 9
+    MedievalIronPlateSmall: 12
+    # total 151 ingots
+    Cloth: 12
+  result: MedievalClothingOuterArmorUpIron
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorForstone
+  craftTime: 60
+  stacks:
+    MedievalRivets: 4
+    MedievalIronPlate: 12
+    MedievalSteelIngot: 10
+    MedievalChain: 2
+    MedievalShoulder: 2
+    MedievalForstoneIngot: 12
+  result: MedievalClothingOuterArmorForstone
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorEbonit
+  craftTime: 60
+  stacks:
+    MedievalRivets: 4
+    MedievalIronPlate: 12
+    MedievalSteelIngot: 10
+    MedievalChain: 2
+    MedievalShoulder: 2
+    MedievalEbonitIngot: 12
+  result: MedievalClothingOuterArmorEbonit
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorEbonit2
+  craftTime: 60
+  stacks:
+    MedievalRivets: 4
+    MedievalIronPlate: 12
+    MedievalSteelIngot: 10
+    MedievalChain: 2
+    MedievalShoulder: 2
+    MedievalEbonitIngot: 12
+  result: MedievalClothingOuterArmorEbonit2
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorUpIron2
+  craftTime: 26
+  stacks:
+    MedievalSteelIngot: 52
+  result: MedievalClothingOuterArmorUpIron2
+
+- type: CP14Recipe
+  id: MedievalDoorLock
+  craftTime: 12
+  stacks:
+    MedievalRivets: 1
+    MedievalIronPlateSmall: 2
+    MedievalGear: 1
+  result: MedievalDoorLock
+
+- type: CP14Recipe
+  id: MedievalIronGloves
+  craftTime: 12
+  stacks:
+    MedievalRivets: 1
+    MedievalIronPlateSmall: 6
+    # 10 total
+  result: MedievalIronGloves
+
+- type: CP14Recipe
+  id: MedievalIronGlovesBear
+  craftTime: 12
+  stacks:
+    MedievalRivets: 1
+    MedievalIronPlateSmall: 6
+    # 10 total
+  result: MedievalIronGlovesBear
+
+- type: CP14Recipe
+  id: MedievalIronGlovesBrig
+  craftTime: 12
+  stacks:
+    MedievalRivets: 1
+    MedievalIronPlateSmall: 6
+    # 10 total
+  result: MedievalIronGlovesBrig
+
+- type: CP14Recipe
+  id: MedievalForstoneGloves
+  craftTime: 25
+  stacks:
+    MedievalRivets: 1
+    MedievalSteelIngot: 2
+    MedievalEbonitIngot: 2
+  result: MedievalForstoneGloves
+
+- type: CP14Recipe
+  id: MedievalEbonitGloves
+  craftTime: 25
+  stacks:
+    MedievalRivets: 1
+    MedievalSteelIngot: 2
+    MedievalEbonitIngot: 2
+  result: MedievalEbonitGloves
+
+- type: CP14Recipe
+  id: MedievalEbonitGloves2
+  craftTime: 25
+  stacks:
+    MedievalRivets: 1
+    MedievalSteelIngot: 2
+    MedievalEbonitIngot: 2
+  result: MedievalEbonitGloves2
+
+- type: CP14Recipe
+  id: MedievalSpear
+  craftTime: 11
+  stacks:
+    MedievalIronIngot: 14
+    WoodPlank: 8
+  result: MedievalSpearT3
+
+- type: CP14Recipe
+  id: MedievalSpearT3Steel
+  craftTime: 11
+  stacks:
+    MedievalSteelIngot: 12
+    WoodPlank: 8
+  result: MedievalSpearT3Steel
+
+- type: CP14Recipe
+  id: MedievalHatchet
+  craftTime: 11
+  stacks:
+    MedievalIronIngot: 6
+    WoodPlank: 4
+  result: MedievalHatchet
+
+- type: CP14Recipe
+  id: BarberScissors
+  craftTime: 5
+  stacks:
+    MedievalIronIngot: 2
+    WoodPlank: 1
+  result: BarberScissors
+
+- type: CP14Recipe
+  id: MedievalDagger
+  craftTime: 4
+  stacks:
+    MedievalIronIngot: 3
+    WoodPlank: 1
+  result: MedievalDaggerT3
+
+- type: CP14Recipe
+  id: MedievalDaggerT3Steel
+  craftTime: 4
+  stacks:
+    MedievalSteelIngot: 3
+    WoodPlank: 1
+  result: MedievalDaggerT3Steel
+
+- type: CP14Recipe
+  id: MedievalGrenade
+  craftTime: 13
+  stacks:
+    MedievalSteelIngot: 3
+    Gunpowder: 25
+    MedievalRope: 1
+  result: MedievalGrenade
+
+- type: CP14Recipe
+  id: MedievalFalshion
+  craftTime: 10
+  stacks:
+    MedievalIronIngot: 8
+    WoodPlank: 7
+  result: MedievalFalshionT3
+
+- type: CP14Recipe
+  id: MedievalFalshionT3Steel
+  craftTime: 10
+  stacks:
+    MedievalSteelIngot: 8
+    WoodPlank: 7
+  result: MedievalFalshionT3Steel
+
+- type: CP14Recipe
+  id: MedievalShortSword
+  craftTime: 10
+  stacks:
+    MedievalIronIngot: 7
+    WoodPlank: 7
+  result: MedievalShortSword
+
+- type: CP14Recipe
+  id: MedievalShortSwordSteel
+  craftTime: 10
+  stacks:
+    MedievalSteelIngot: 7
+    WoodPlank: 7
+  result: MedievalShortSwordSteel
+
+- type: CP14Recipe
+  id: MedievalSaber
+  craftTime: 10
+  stacks:
+    MedievalIronIngot: 11
+    WoodPlank: 7
+  result: MedievalSaber
+
+- type: CP14Recipe
+  id: MedievalSaberSteel
+  craftTime: 10
+  stacks:
+    MedievalSteelIngot: 9
+    WoodPlank: 7
+  result: MedievalSaberSteel
+
+- type: CP14Recipe
+  id: MedievalMace
+  craftTime: 10
+  stacks:
+    MedievalIronIngot: 18
+    WoodPlank: 5
+  result: MedievalMaceT3
+
+- type: CP14Recipe
+  id: MedievalMaceT3Steel
+  craftTime: 10
+  stacks:
+    MedievalSteelIngot: 14
+    WoodPlank: 5
+  result: MedievalMaceT3Steel
+
+- type: CP14Recipe
+  id: MedievalPalice
+  craftTime: 10
+  stacks:
+    MedievalIronIngot: 23
+    WoodPlank: 6
+  result: MedievalPalice
+
+- type: CP14Recipe
+  id: MedievalPaliceSteel
+  craftTime: 10
+  stacks:
+    MedievalSteelIngot: 15
+    WoodPlank: 6
+  result: MedievalPaliceSteel
+
+- type: CP14Recipe
+  id: MedievalMaceT3Heavy
+  craftTime: 10
+  stacks:
+    MedievalIronIngot: 28
+    WoodPlank: 7
+  result: MedievalMaceT3Heavy
+
+- type: CP14Recipe
+  id: MedievalMaceT3SteelHeavy
+  craftTime: 10
+  stacks:
+    MedievalSteelIngot: 18
+    WoodPlank: 7
+  result: MedievalMaceT3SteelHeavy
+
+- type: CP14Recipe
+  id: MedievalRepairStone
+  craftTime: 5
+  stacks:
+    MedievalIronIngot: 1
+    MedievalSteelIngot: 1
+  result: MedievalRepairStone
+
+- type: CP14Recipe
+  id: MedievalPickaxe
+  craftTime: 5
+  stacks:
+    MedievalIronIngot: 6
+    WoodPlank: 3
+  result: MedievalPickaxe
+
+- type: CP14Recipe
+  id: MedievalPickaxeSteel
+  craftTime: 7
+  stacks:
+    MedievalSteelIngot: 6
+    WoodPlank: 4
+  result: MedievalPickaxe
+
+- type: CP14Recipe
+  id: MedievalIronHalberd
+  craftTime: 22
+  stacks:
+    MedievalIronIngot: 35
+    WoodPlank: 12
+  result: MedievalIronHalberdT3
+
+- type: CP14Recipe
+  id: MedievalIronHalberdT3Steel
+  craftTime: 22
+  stacks:
+    MedievalSteelIngot: 27
+    WoodPlank: 12
+  result: MedievalIronHalberdT3Steel
+
+- type: CP14Recipe
+  id: MedievalIronSekir
+  craftTime: 22
+  stacks:
+    MedievalIronIngot: 27
+    WoodPlank: 12
+  result: MedievalIronSekir
+
+- type: CP14Recipe
+  id: MedievalIronSekirSteel
+  craftTime: 22
+  stacks:
+    MedievalSteelIngot: 17
+    WoodPlank: 25
+  result: MedievalIronSekirSteel
+
+- type: CP14Recipe
+  id: MedievalIronHammer
+  craftTime: 22
+  stacks:
+    MedievalIronIngot: 29
+    WoodPlank: 17
+  result: MedievalIronHammer
+
+- type: CP14Recipe
+  id: MedievalIronHammerSteel
+  craftTime: 22
+  stacks:
+    MedievalSteelIngot: 18
+    WoodPlank: 17
+  result: MedievalIronHammerSteel
+
+- type: CP14Recipe
+  id: MedievalLockpickPack
+  craftTime: 10
+  stacks:
+    MedievalSteelIngot: 3
+    WoodPlank: 1
+    MedievalLeather1: 2
+    MedievalLeatherBelt: 1
+  result: MedievalLockpickPack
+
+- type: CP14Recipe
+  id: MedievalLockpick
+  craftTime: 10
+  stacks:
+    MedievalIronIngot: 3
+  result: MedievalLockpick
+
+- type: CP14Recipe
+  id: MedievalCoinBag
+  craftTime: 3
+  stacks:
+    MedievalLeather1: 2
+    MedievalRope: 1
+  result: MedievalCoinBag
+
+- type: CP14Recipe
+  id: MedievalIronShield
+  craftTime: 10
+  stacks:
+    MedievalRivets: 2
+    MedievalIronPlate: 3
+  result: MedievalIronShieldBuckler
+
+- type: CP14Recipe
+  id: MedievalShovel
+  craftTime: 7
+  stacks:
+    MedievalIronIngot: 5
+    WoodPlank: 4
+  result: MedievalShovel
+
+- type: CP14Recipe
+  id: MedievalHoe
+  craftTime: 7
+  stacks:
+    MedievalIronIngot: 3
+    WoodPlank: 2
+  result: MedievalHoe
+
+- type: CP14Recipe
+  id: MedievalDoorKeyCheck
+  craftTime: 7
+  stacks:
+    MedievalIronIngot: 3
+  result: MedievalDoorKeyCheck
+
+- type: CP14Recipe
+  id: MedievalScythe
+  craftTime: 7
+  stacks:
+    MedievalIronIngot: 5
+    WoodPlank: 4
+  result: MedievalScythe
+
+- type: CP14Recipe
+  id: MedievalClippers
+  craftTime: 7
+  stacks:
+    MedievalIronIngot: 2
+    WoodPlank: 1
+  result: MedievalClippers
+
+- type: CP14Recipe
+  id: MedievaldDiceBag
+  craftTime: 6
+  stacks:
+    WoodPlank: 1
+    MedievalLeather1: 1
+  result: DiceBag
+
+- type: CP14Recipe
+  id: MedievalWoodenSword
+  craftTime: 5
+  stacks:
+    WoodPlank: 3
+  result: MedievalWoodenSword
+
+- type: CP14Recipe
+  id: MedievalDecorMogila1Craft
+  craftTime: 5
+  stacks:
+    MedievalStone: 20
+  result: MedievalDecorMogila1Craft
+
+- type: CP14Recipe
+  id: MedievalDecorMogila2Craft
+  craftTime: 5
+  stacks:
+    MedievalStone: 20
+  result: MedievalDecorMogila2Craft
+
+- type: CP14Recipe
+  id: MedievalDecorMogila3Craft
+  craftTime: 5
+  stacks:
+    MedievalStone: 20
+  result: MedievalDecorMogila3Craft
+
+- type: CP14Recipe
+  id: MedievalHandcuffs
+  craftTime: 6
+  stacks:
+    MedievalIronIngot: 3
+    MedievalGear: 1
+  result: MedievalHandcuffs
+
+- type: CP14Recipe
+  id: MedievalHandheldGPSBasic
+  craftTime: 10
+  stacks:
+    MedievalTopaz: 1
+    MedievalFireSerdolick: 1
+    #MedievalGold: 1 (хз, как-то много, учитывая что в исходном варианте всего 15 условных единиц)
+  result: MedievalHandheldGPSBasic
+
+- type: CP14Recipe
+  id: MedaljonSpeed
+  craftTime: 20
+  stacks:
+    MedievalTopaz: 3
+    MedievalGold: 2
+    MedievalEssence: 2
+  result: MedaljonSpeed
+
+- type: CP14Recipe
+  id: MedievalShoesSpeed
+  craftTime: 20
+  stacks:
+    MedievalTopaz: 7
+    MedievalAdam: 4
+    MedievalGold: 2
+    MedievalEssence: 4
+  result: MedievalShoesSpeed
+
+- type: CP14Recipe
+  id: MedaljonMana
+  craftTime: 20
+  stacks:
+    MedievalTopaz: 2
+    MedievalGold: 2
+    MedievalEssence: 3
+  result: MedaljonMana
+
+- type: CP14Recipe
+  id: MedievalCompactDefibrillator
+  craftTime: 20
+  stacks:
+    MedievalTopaz: 2
+    MedievalAdam: 5
+    MedievalGold: 2
+    MedievalEssence: 3
+  result: CompactDefibrillator
+
+- type: CP14Recipe
+  id: MedievalClothingEyesEyepatchHudMedical
+  craftTime: 20
+  stacks:
+    MedievalTopaz: 12
+    MedievalRope: 1
+    MedievalIronIngot: 1
+  result: ClothingEyesEyepatchHudMedical
+
+- type: CP14Recipe
+  id: MedievalClothingEyesEyepatchHudBeer
+  craftTime: 20
+  stacks:
+    MedievalFireSerdolick: 8
+    MedievalRope: 1
+    MedievalIronIngot: 1
+  result: ClothingEyesEyepatchHudBeer
+
+- type: CP14Recipe
+  id: MedaljonNoslip
+  craftTime: 20
+  stacks:
+    MedievalAdam: 2
+    MedievalGold: 2
+  result: MedaljonNoslip
+
+- type: CP14Recipe
+  id: MedaljonThieving
+  craftTime: 20
+  stacks:
+    MedievalAdam: 3
+    MedievalGold: 2
+    MedievalEssence: 1
+  result: MedaljonThieving
+
+- type: CP14Recipe
+  id: MedaljonDark
+  craftTime: 20
+  stacks:
+    MedievalAdam: 2
+    MedievalGold: 1
+    #MedievalEssence: 1
+  result: MedaljonDark
+
+- type: CP14Recipe
+  id: MedievalHandheldHealthAnalyzer
+  craftTime: 20
+  stacks:
+    MedievalFireSerdolick: 2
+    MedievalGold: 1
+    MedievalAdam: 1
+  result: MedievalHandheldHealthAnalyzer
+
+- type: CP14Recipe
+  id: MedaljonAntiMana
+  craftTime: 20
+  stacks:
+    MedievalFireSerdolick: 1
+    MedievalTopaz: 1
+    MedievalGold: 1
+    MedievalAdam: 2
+  result: MedaljonAntiMana
+
+- type: CP14Recipe
+  id: MedaljonFlashImmune
+  craftTime: 20
+  stacks:
+    MedievalFireSerdolick: 1
+    MedievalTopaz: 2
+    MedievalGold: 2
+  result: MedaljonFlashImmune
+
+- type: CP14Recipe
+  id: MedaljonDef
+  craftTime: 20
+  stacks:
+    MedievalFireSerdolick: 3
+    MedievalGold: 2
+  result: MedaljonDef
+
+- type: CP14Recipe
+  id: MedaljonExpl
+  craftTime: 20
+  stacks:
+    MedievalFireSerdolick: 2
+    MedievalGold: 2
+  result: MedaljonExpl
+
+- type: CP14Recipe
+  id: MedievalFetter
+  craftTime: 6
+  stacks:
+    MedievalIronIngot: 3
+  result: MedievalFetter
+
+- type: CP14Recipe
+  id: SheetSteelMedieval
+  craftTime: 1
+  stacks:
+    SteelOre: 1
+    MedievalCoal: 1
+    MedievalGlinaFormaReady: 1
+  result: MedievalIronIngot
+
+- type: CP14Recipe
+  id: MedievalGlinaForma
+  craftTime: 1
+  stacks:
+    MedievalGlina: 1
+    #MedievalCoal: 1
+  result: MedievalGlinaForma
+
+- type: CP14Recipe
+  id: MedievalGlinaFormaReady
+  craftTime: 1
+  stacks:
+    MedievalGlinaForma: 1
+    MedievalCoal: 1
+  result: MedievalGlinaFormaReady
+
+- type: CP14Recipe
+  id: FoodBowlBig
+  craftTime: 12
+  stacks:
+    MedievalGlinaFormaBowl: 1
+    MedievalCoal: 1
+  result: FoodBowlBig
+
+- type: CP14Recipe
+  id: SheetSteelMedieval10
+  craftTime: 10
+  stacks:
+    SteelOre: 10
+    MedievalCoal: 10
+    MedievalGlinaFormaReady: 10
+  result: MedievalIronIngot10
+
+- type: CP14Recipe
+  id: MaterialGunpowder
+  craftTime: 1
+  stacks:
+    WoodPlank: 1
+    MedievalCoal: 1
+  result: MaterialGunpowder
+
+- type: CP14Recipe
+  id: MaterialGunpowder10
+  craftTime: 10
+  stacks:
+    WoodPlank: 10
+    MedievalCoal: 10
+  result: MaterialGunpowder10
+
+- type: CP14Recipe
+  id: EbonitMedieval
+  craftTime: 1
+  stacks:
+    MedievalEbonitOre: 1
+    MedievalCoal: 1
+    MedievalGlinaFormaReady: 1
+  result: MedievalEbonitIngot
+
+- type: CP14Recipe
+  id: EbonitMedieval10
+  craftTime: 10
+  stacks:
+    MedievalEbonitOre: 10
+    MedievalCoal: 10
+    MedievalGlinaFormaReady: 10
+  result: MedievalEbonitIngot10
+
+- type: CP14Recipe
+  id: ForstoneMedieval
+  craftTime: 1
+  stacks:
+    MedievalForstoneOre: 1
+    MedievalCoal: 1
+    MedievalGlinaFormaReady: 1
+  result: MedievalForstoneIngot
+
+- type: CP14Recipe
+  id: ForstoneMedieval10
+  craftTime: 10
+  stacks:
+    MedievalForstoneOre: 10
+    MedievalCoal: 10
+    MedievalGlinaFormaReady: 10
+  result: MedievalForstoneIngot10
+
+- type: CP14Recipe
+  id: MedievalSteelIngot
+  craftTime: 1
+  stacks:
+    MedievalIronIngot: 4
+    MedievalCoal: 1
+    MedievalGlinaFormaReady: 1
+  result: MedievalSteelIngot
+
+- type: CP14Recipe
+  id: MedievalSteelIngot10
+  craftTime: 10
+  stacks:
+    MedievalIronIngot: 40
+    MedievalCoal: 10
+    MedievalGlinaFormaReady: 10
+  result: MedievalSteelIngot10
+
+- type: CP14Recipe
+  id: MedievalGoldOre
+  craftTime: 2
+  stacks:
+    MedievalGoldOre: 2
+    MedievalCoal: 1
+    MedievalGlinaFormaReady: 1
+  result: MedievalIngotGold
+
+- type: CP14Recipe
+  id: MedievalGoldOre10
+  craftTime: 20
+  stacks:
+    MedievalGoldOre: 20
+    MedievalCoal: 10
+    MedievalGlinaFormaReady: 10
+  result: MedievalIngotGold10
+
+- type: CP14Recipe
+  id: MedievalClothingFeetSteel
+  craftTime: 10
+  stacks:
+    MedievalRivets: 1
+    MedievalIronPlateSmall: 5
+    # 10 total
+  result: MedievalClothingFeetSteel
+
+- type: CP14Recipe
+  id: MedievalClothingFeetForstone
+  craftTime: 30
+  stacks:
+    MedievalRivets: 1
+    MedievalSteelIngot: 2
+    MedievalEbonitIngot: 2
+  result: MedievalClothingFeetForstone
+
+- type: CP14Recipe
+  id: MedievalClothingFeetEbonit
+  craftTime: 30
+  stacks:
+    MedievalRivets: 1
+    MedievalSteelIngot: 2
+    MedievalEbonitIngot: 2
+  result: MedievalClothingFeetEbonit
+
+- type: CP14Recipe
+  id: MedievalClothingFeetEbonit2
+  craftTime: 30
+  stacks:
+    MedievalRivets: 1
+    MedievalSteelIngot: 2
+    MedievalEbonitIngot: 2
+  result: MedievalClothingFeetEbonit2
+
+- type: CP14Recipe
+  id: MedievalPrisonGrilleCraft
+  craftTime: 10
+  stacks:
+    MedievalIronIngot: 2
+    MedievalIronPlate: 1
+  result: MedievalPrisonGrilleCraft
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHatCowboyBrown
+  craftTime: 10
+  stacks:
+    MedievalLeather1: 2
+    Cloth: 1
+  result: ClothingHeadHatCowboyBrown
+
+- type: CP14Recipe
+  id: MedievalMedicalBedCraft
+  craftTime: 10
+  stacks:
+    MedievalLeather1: 1
+    MedievalRope: 1
+    WoodPlank: 6
+    Cloth: 2
+  result: MedievalMedicalBedCraft
+
+- type: CP14Recipe
+  id: MedievalMedicalBed2Craft
+  craftTime: 20
+  stacks:
+    MedievalLeather1: 3
+    MedievalRope: 1
+    WoodPlank: 14
+    Cloth: 7
+    MedievalIronIngot: 5
+  result: MedievalMedicalBed2Craft
+
+- type: CP14Recipe
+  id: MedievalOreBag
+  craftTime: 10
+  stacks:
+    MedievalLeather1: 2
+    MedievalRope: 1
+    MedievalLeatherBelt: 2
+  result: OreBag
+
+- type: CP14Recipe
+  id: MedievalPlantBag
+  craftTime: 10
+  stacks:
+    MedievalLeather1: 2
+    MedievalRope: 1
+    MedievalLeatherBelt: 2
+  result: PlantBag
+
+- type: CP14Recipe
+  id: MedievalWineskin
+  craftTime: 6
+  stacks:
+    MedievalLeather1: 2
+    MedievalRope: 1
+  result: MedievalWineskin
+
+- type: CP14Recipe
+  id: MedievalClothingHeadBag
+  craftTime: 7
+  stacks:
+    MedievalLeather1: 1
+    MedievalRope: 1
+  result: MedievalClothingHeadBag
+
+- type: CP14Recipe
+  id: MedievalClothingMaskPlague
+  craftTime: 13
+  stacks:
+    MedievalLeather1: 2
+  result: MedievalClothingMaskPlague
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetHood
+  craftTime: 10
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalClothingHeadHelmetHood
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetHood3
+  craftTime: 10
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalClothingHeadHelmetHood3
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetCap
+  craftTime: 10
+  stacks:
+    MedievalLeather1: 1
+    WoodPlank: 1
+  result: MedievalClothingHeadHelmetCap
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorLeather
+  craftTime: 17
+  stacks:
+    MedievalLeather1: 2
+    MedievalLeatherBelt: 1
+    WoodPlank: 6
+    MedievalRope: 1
+  result: MedievalClothingOuterArmorLeather
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorLeatherLight
+  craftTime: 20
+  stacks:
+    MedievalLeather1: 3
+    MedievalLeatherBelt: 2
+    WoodPlank: 8
+    MedievalRope: 2
+    #MedievalIronIngot: 3
+  result: MedievalClothingOuterArmorLeatherLight
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorLeatherHeavy
+  craftTime: 20
+  stacks:
+    MedievalLeather1: 5
+    MedievalLeatherBelt: 3
+    WoodPlank: 12
+    MedievalRope: 4
+    #MedievalIronIngot: 5
+  result: MedievalClothingOuterArmorLeatherHeavy
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorStudded
+  craftTime: 20
+  stacks:
+    MedievalLeather1: 2
+    WoodPlank: 3
+  result: MedievalClothingOuterArmorStudded
+
+- type: CP14Recipe
+  id: MedievalClothingOuterArmorFur
+  craftTime: 15
+  stacks:
+    MedievalLeather1: 1
+    #WoodPlank: 2
+  result: MedievalClothingOuterArmorFur
+
+- type: CP14Recipe
+  id: MedievalAlchemicBelt
+  craftTime: 15
+  stacks:
+    MedievalLeather1: 2
+    MedievalRope: 2
+    WoodPlank: 1
+    MedievalLeatherBelt: 1
+  result: MedievalAlchemicBelt
+
+- type: CP14Recipe
+  id: MedievalClothingBackpackSatchelLeather
+  craftTime: 5
+  stacks:
+    MedievalLeather1: 1
+    MedievalLeatherBelt: 1
+    MedievalRope: 1
+  result: MedievalClothingBackpackSatchelLeather
+
+- type: CP14Recipe
+  id: MedievalClothingBackpackSatchelLeather2
+  craftTime: 5
+  stacks:
+    MedievalLeather1: 1
+    MedievalLeatherBelt: 1
+    MedievalRope: 1
+  result: MedievalClothingBackpackSatchelLeather2
+
+- type: CP14Recipe
+  id: MedievalClothingBackpackSatchelLeather3
+  craftTime: 5
+  stacks:
+    MedievalLeather1: 1
+    MedievalLeatherBelt: 1
+    MedievalRope: 1
+  result: MedievalClothingBackpackSatchelLeather3
+
+- type: CP14Recipe
+  id: MedievalClothingBackpackLeather
+  craftTime: 11
+  stacks:
+    MedievalLeather1: 3
+    MedievalLeatherBelt: 1
+    MedievalRope: 2
+  result: MedievalClothingBackpackLeather
+
+- type: CP14Recipe
+  id: MedievalClothingBackpackSatchelTraveller
+  craftTime: 24
+  stacks:
+    MedievalLeather1: 6
+    MedievalLeatherBelt: 2
+    MedievalRope: 3
+    MedievalIronIngot: 4
+  result: MedievalClothingBackpackSatchelTraveller
+
+- type: CP14Recipe
+  id: MedievalGag
+  craftTime: 4
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalGag
+
+- type: CP14Recipe
+  id: MedievalClothingOuterApronChef
+  craftTime: 9
+  stacks:
+    MedievalLeather1: 1
+    MedievalLeatherBelt: 1
+  result: MedievalClothingOuterApronChef
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth2
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 1
+  result: MedievalClothingUniformJumpsuitShitCloth2
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth19
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 1
+  result: MedievalClothingUniformJumpsuitShitCloth19
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth3
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 1
+  result: MedievalClothingUniformJumpsuitShitCloth3
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth4
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 1
+  result: MedievalClothingUniformJumpsuitShitCloth4
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitFlannel
+  craftTime: 8
+  stacks:
+    Cloth: 3
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitFlannel
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth8
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 1
+  result: MedievalClothingUniformJumpsuitShitCloth8
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth10
+  craftTime: 3
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 1
+  result: MedievalClothingUniformJumpsuitShitCloth10
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth11
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 1
+  result: MedievalClothingUniformJumpsuitShitCloth11
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth12
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 1
+  result: MedievalClothingUniformJumpsuitShitCloth12
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth14
+  craftTime: 8
+  stacks:
+    MedievalLeather1: 3
+  result: MedievalClothingUniformJumpsuitShitCloth14
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth15
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth15
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth17
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 1
+  result: MedievalClothingUniformJumpsuitShitCloth17
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth18
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth18
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth33
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth33
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth34
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth34
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth35
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth35
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth36
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth36
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth37
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth37
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth38
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth38
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth39
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth39
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth40
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth40
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth41
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth41
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth42
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth42
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth43
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth43
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth44
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth44
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth45
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth45
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth46
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth46
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth47
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth47
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth48
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth48
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth49
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth49
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth50
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth50
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth51
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth51
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth52
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth52
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth53
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth53
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth54
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth54
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth55
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth55
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth56
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth56
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth57
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth57
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth58
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth58
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth59
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth59
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth60
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth60
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth61
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth61
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth62
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth62
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth63
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth63
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth64
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth64
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth21
+  craftTime: 8
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 2
+  result: MedievalClothingUniformJumpsuitShitCloth21
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth22
+  craftTime: 8
+  stacks:
+    MedievalLeather1: 3
+  result: MedievalClothingUniformJumpsuitShitCloth22
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpsuitShitCloth32
+  craftTime: 3
+  stacks:
+    Cloth: 5
+    MedievalLeather1: 1
+  result: MedievalClothingUniformJumpsuitShitCloth32
+
+- type: CP14Recipe
+  id: MedievalRope
+  craftTime: 2
+  stacks:
+    MedievalLeather1: 2
+  result: MedievalRope
+
+- type: CP14Recipe
+  id: MedievalRopeSpider
+  craftTime: 2
+  stacks:
+    MedievalSpiderHair: 1
+  result: MedievalRope
+
+- type: CP14Recipe
+  id: MedievalRopeCloth
+  craftTime: 2
+  stacks:
+    Cloth: 3
+  result: MedievalRope
+
+- type: CP14Recipe
+  id: MedievalClothingShoesSpider
+  craftTime: 5
+  stacks:
+    MedievalSpiderHair: 2
+  result: MedievalClothingShoesSpider
+
+- type: CP14Recipe
+  id: MedievalClothingUniformJumpskirtJanimaid
+  craftTime: 8
+  stacks:
+    MedievalLeather1: 3
+    MedievalLeatherBelt: 1
+    Cloth: 5
+  result: MedievalClothingUniformJumpskirtJanimaid
+
+- type: CP14Recipe
+  id: MedievalClothingHeadFarmerHat
+  craftTime: 8
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalClothingHeadFarmerHat
+
+- type: CP14Recipe
+  id: MedievalClothingHeadArcherHat
+  craftTime: 8
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalClothingHeadArcherHat
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetExecutor1
+  craftTime: 8
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalClothingHeadHelmetExecutor1
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHelmetExecutor2
+  craftTime: 8
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalClothingHeadHelmetExecutor2
+
+- type: CP14Recipe
+  id: MedievalClothingHeadHatPlaguedoctor
+  craftTime: 4
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalClothingHeadHatPlaguedoctor
+
+- type: CP14Recipe
+  id: MedievalClothingOuterPlagueSuit
+  craftTime: 8
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalClothingOuterPlagueSuit
+
+- type: CP14Recipe
+  id: MedievalClothingShoesLeather
+  craftTime: 4
+  stacks:
+    MedievalLeather1: 1
+    MedievalRope: 1
+  result: MedievalClothingShoesLeather
+
+- type: CP14Recipe
+  id: MedievalBastShoes
+  craftTime: 4
+  stacks:
+    WoodPlank: 1
+  result: MedievalBastShoes
+
+- type: CP14Recipe
+  id: MedievalClothingHandsGlovesColorBrown
+  craftTime: 4
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalClothingHandsGlovesColorBrown
+
+- type: CP14Recipe
+  id: MedievalGlovesBlacksmith
+  craftTime: 4
+  stacks:
+    MedievalLeather1: 2
+  result: MedievalGlovesBlacksmith
+
+- type: CP14Recipe
+  id: MedievalClothingHandsGlovesColorBlack
+  craftTime: 4
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalClothingHandsGlovesColorBlack
+
+- type: CP14Recipe
+  id: MedievalGauze
+  craftTime: 1
+  stacks:
+    MedievalLeather1: 1
+    MedievalRope: 1
+  result: Gauze1
+
+- type: CP14Recipe
+  id: MedievalPaper
+  craftTime: 1
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalPaper
+
+- type: CP14Recipe
+  id: MedievalMaskFace
+  craftTime: 1
+  stacks:
+    MedievalLeather1: 1
+  result: MedievalMaskFace
+
+- type: CP14Recipe
+  id: MedievalWeaponCrossbow
+  craftTime: 25
+  stacks:
+    MedievalRope: 3
+    WoodPlank: 9
+    MedievalSteelIngot: 2
+    MedievalGear: 3
+  result: MedievalWeaponCrossbow
+
+- type: CP14Recipe
+  id: MedievalWeaponTurretNanoTrasenCraft
+  craftTime: 45
+  stacks:
+    MedievalRope: 4
+    WoodPlank: 15
+    MedievalSteelIngot: 3
+    MedievalGear: 5
+  result: MedievalWeaponTurretNanoTrasenCraft
+
+- type: CP14Recipe
+  id: MedievalMopBucket
+  craftTime: 12
+  stacks:
+    WoodPlank: 6
+    MedievalIronIngot: 6
+    MedievalRope: 2
+  result: MedievalMopBucket
+
+- type: CP14Recipe
+  id: MedievalBrutepack
+  craftTime: 8
+  stacks:
+    MedievalLeather1: 1
+    MedievalIronIngot: 1
+  result: MedievalBrutepack
+
+- type: CP14Recipe
+  id: MedievalKnut
+  craftTime: 8
+  stacks:
+    MedievalRope: 2
+    WoodPlank: 3
+  result: MedievalKnut
+
+- type: CP14Recipe
+  id: CarpetBlackCraft
+  craftTime: 7
+  stacks:
+    Cloth: 2
+    MedievalLeather1: 1
+  result: FloorCarpetItemBlack
+
+- type: CP14Recipe
+  id: CarpetPinkCraft
+  craftTime: 7
+  stacks:
+    Cloth: 2
+    MedievalLeather1: 1
+  result: FloorCarpetItemPink
+
+- type: CP14Recipe
+  id: CarpetRedCraft
+  craftTime: 7
+  stacks:
+    Cloth: 2
+    MedievalLeather1: 1
+  result: FloorCarpetItemRed
+
+- type: CP14Recipe
+  id: CarpetPurpleCraft
+  craftTime: 7
+  stacks:
+    Cloth: 2
+    MedievalLeather1: 1
+  result: FloorCarpetItemPurple
+
+- type: CP14Recipe
+  id: CarpetBlueCraft
+  craftTime: 7
+  stacks:
+    Cloth: 2
+    MedievalLeather1: 1
+  result: FloorCarpetItemBlue
+
+- type: CP14Recipe
+  id: CarpetOrangeCraft
+  craftTime: 7
+  stacks:
+    Cloth: 2
+    MedievalLeather1: 1
+  result: FloorCarpetItemOrange
+
+- type: CP14Recipe
+  id: CarpetGreenCraft
+  craftTime: 7
+  stacks:
+    Cloth: 2
+    MedievalLeather1: 1
+  result: FloorCarpetItemGreen
+
+- type: CP14Recipe
+  id: CarpetCyanCraft
+  craftTime: 7
+  stacks:
+    Cloth: 2
+    MedievalLeather1: 1
+  result: FloorCarpetItemCyan
+
+- type: CP14Recipe
+  id: CarpetWhiteCraft
+  craftTime: 7
+  stacks:
+    Cloth: 2
+    MedievalLeather1: 1
+  result: FloorCarpetItemWhite
+
+- type: CP14Recipe
+  id: MedievalTarget
+  craftTime: 12
+  stacks:
+    Cloth: 2
+    MedievalLeather1: 1
+    WoodPlank: 3
+    MedievalRope: 1
+  result: MedievalTarget
+
+- type: CP14Recipe
+  id: MedievalMopItem
+  craftTime: 12
+  stacks:
+    Cloth: 1
+    MedievalLeather1: 1
+    WoodPlank: 5
+  result: MedievalMopItem
+
+- type: CP14Recipe
+  id: MedievalChest
+  craftTime: 8
+  stacks:
+    WoodPlank: 6
+    #MedievalIronIngot: 1
+  result: MedievalChest4
+
+- type: CP14Recipe
+  id: MedievalCrateCoffin
+  craftTime: 10
+  stacks:
+    MedievalLeather1: 1
+    WoodPlank: 13
+  result: MedievalCrateCoffin
+
+- type: CP14Recipe
+  id: MedievalPen
+  craftTime: 2
+  stacks:
+    WoodPlank: 1
+  result: MedievalPen
+
+- type: CP14Recipe
+  id: MedievalBolt
+  craftTime: 1
+  stacks:
+    WoodPlank: 1
+    MedievalIronIngot: 1
+  result: MedievalBolt
+
+- type: CP14Recipe
+  id: MedievalBoltSteel
+  craftTime: 1
+  stacks:
+    WoodPlank: 1
+    MedievalSteelIngot: 1
+  result: MedievalBoltSteel
+
+- type: CP14Recipe
+  id: MedievalBoltPractice
+  craftTime: 1
+  stacks:
+    WoodPlank: 1
+  result: MedievalBoltPractice
+
+- type: CP14Recipe
+  id: MedievalBow
+  craftTime: 12
+  stacks:
+    MedievalRope: 2
+    WoodPlank: 6
+  result: BowImprovised
+
+- type: CP14Recipe
+  id: MedievalArrow
+  craftTime: 1
+  stacks:
+    WoodPlank: 1
+    MedievalIronIngot: 1
+  result: MedievalArrowIronPhysics
+
+- type: CP14Recipe
+  id: MedievalArrowPractice
+  craftTime: 1
+  stacks:
+    WoodPlank: 1
+    MedievalSteelIngot: 1
+  result: MedievalArrowSteelPhysics
+
+- type: CP14Recipe
+  id: MedievalArrowFire
+  craftTime: 1
+  stacks:
+    WoodPlank: 1
+    MedievalSteelIngot: 1
+    MedievalFireSerdolick: 1
+  result: MedievalArrowFire
+
+- type: CP14Recipe
+  id: MedievalGlowStone
+  craftTime: 1
+  stacks:
+    MedievalFireSerdolick: 1
+  result: MedievalGlowStone
+
+- type: CP14Recipe
+  id: MedievalQuiver
+  craftTime: 12
+  stacks:
+    MedievalLeather1: 2
+    MedievalRope: 1
+    MedievalLeatherBelt: 1
+  result: MedievalQuiver
+
+- type: CP14Recipe
+  id: MedievalQuiverSteel
+  craftTime: 16
+  stacks:
+    MedievalLeather1: 3
+    MedievalSteelIngot: 3
+    MedievalRope: 2
+    MedievalLeatherBelt: 1
+  result: MedievalQuiverSteel
+
+- type: CP14Recipe
+  id: MedievalBeaker
+  craftTime: 4
+  stacks:
+    WoodPlank: 1
+  result: MedievalBeaker
+
+- type: CP14Recipe
+  id: MedievalWoodenShield
+  craftTime: 12
+  stacks:
+    WoodPlank: 10
+    MedievalLeather1: 1
+    MedievalIronPlateSmall: 2
+  result: MedievalWoodenShield
+
+- type: CP14Recipe
+  id: MedievalWoodenShield2
+  craftTime: 12
+  stacks:
+    WoodPlank: 7
+    MedievalLeather1: 1
+    MedievalIronPlateSmall: 2
+  result: MedievalWoodenShieldBuckler
+
+- type: CP14Recipe
+  id: MedievalWoodenShield3
+  craftTime: 12
+  stacks:
+    WoodPlank: 15
+    MedievalLeather1: 2
+    MedievalIronPlateSmall: 3
+  result: MedievalWoodenShieldKnight
+
+- type: CP14Recipe
+  id: MedievalBanjoInstrument
+  craftTime: 8
+  stacks:
+    WoodPlank: 6
+    MedievalLeather1: 1
+    MedievalRope: 1
+    MedievalIronIngot: 1
+  result: MedievalBanjoInstrument
+
+- type: CP14Recipe
+  id: MedievalGear
+  craftTime: 2
+  stacks:
+    MedievalIronPlateSmall: 1
+    MedievalSteelIngot: 1
+  result: MedievalGear
+
+- type: CP14Recipe
+  id: MedievalCoal
+  craftTime: 1
+  stacks:
+    WoodPlank: 1
+  result: MedievalCoal
+
+- type: CP14Recipe
+  id: MedievalCoal10
+  craftTime: 10
+  stacks:
+    WoodPlank: 10
+  result: MedievalCoal10
+
+- type: CP14Recipe
+  id: ClothingMaskBandGreen
+  craftTime: 4
+  stacks:
+    Cloth: 2
+  result: ClothingMaskBandGreen
+
+- type: CP14Recipe
+  id: ClothingMaskBandGold
+  craftTime: 4
+  stacks:
+    Cloth: 2
+  result: ClothingMaskBandGold
+
+- type: CP14Recipe
+  id: ClothingMaskBandBrown
+  craftTime: 4
+  stacks:
+    Cloth: 2
+  result: ClothingMaskBandBrown
+
+- type: CP14Recipe
+  id: ClothingMaskBandRed
+  craftTime: 4
+  stacks:
+    Cloth: 2
+  result: ClothingMaskBandRed
+
+- type: CP14Recipe
+  id: ClothingMaskBandBlue
+  craftTime: 4
+  stacks:
+    Cloth: 2
+  result: ClothingMaskBandBlue
+
+- type: CP14Recipe
+  id: ClothingMaskBandBlack
+  craftTime: 4
+  stacks:
+    Cloth: 2
+  result: ClothingMaskBandBlack
+
+- type: CP14Recipe
+  id: MedievalChain
+  craftTime: 12
+  stacks:
+    MedievalIronIngot: 3
+  result: MedievalChain
+
+- type: CP14Recipe
+  id: MedievalClothFromGrass
+  craftTime: 3
+  stacks:
+    MedievalGrass: 1
+  result: MaterialCloth1
+
+- type: CP14Recipe
+  id: MedievalLeatherBelt
+  craftTime: 5
+  stacks:
+    MedievalIronIngot: 1
+    MedievalLeather1: 2
+  result: MedievalLeatherBelt
+
+- type: CP14Recipe
+  id: MedievalIronPlate
+  craftTime: 7
+  stacks:
+    MedievalIronIngot: 4
+  result: MedievalIronPlate
+
+- type: CP14Recipe
+  id: MedievalIronPlateSmall
+  craftTime: 2
+  stacks:
+    MedievalIronIngot: 1
+  result: MedievalIronPlateSmall
+
+- type: CP14Recipe
+  id: MedievalRivets
+  craftTime: 4
+  stacks:
+    MedievalIronIngot: 2
+  result: MedievalRivets
+
+- type: CP14Recipe
+  id: MedievalShoulder
+  craftTime: 9
+  stacks:
+    MedievalIronIngot: 2
+    MedievalIronPlateSmall: 3
+  result: MedievalShoulder

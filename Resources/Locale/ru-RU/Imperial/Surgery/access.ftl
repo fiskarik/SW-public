@@ -1,0 +1,1 @@
+imperial-surgery-access-level-name = Хирургия

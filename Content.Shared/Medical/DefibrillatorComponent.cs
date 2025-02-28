@@ -64,19 +64,19 @@ public sealed partial class DefibrillatorComponent : Component
     /// The sound when someone is zapped.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField("zapSound")]
-    public SoundSpecifier? ZapSound = new SoundPathSpecifier("/Audio/Items/Defib/defib_zap.ogg");
+    public SoundSpecifier? ZapSound = new SoundPathSpecifier("/Audio/Imperial/Medieval/magic-shipenie.ogg"); // Imperial Medieval
 
     [ViewVariables(VVAccess.ReadWrite), DataField("chargeSound")]
-    public SoundSpecifier? ChargeSound = new SoundPathSpecifier("/Audio/Items/Defib/defib_charge.ogg");
+    public SoundSpecifier? ChargeSound = new SoundPathSpecifier("/Audio/Imperial/Medieval/magic-shipenie.ogg"); // Imperial Medieval
 
     [ViewVariables(VVAccess.ReadWrite), DataField("failureSound")]
-    public SoundSpecifier? FailureSound = new SoundPathSpecifier("/Audio/Items/Defib/defib_failed.ogg");
+    public SoundSpecifier? FailureSound = new SoundPathSpecifier("/Audio/Imperial/Medieval/magic-break.ogg"); // Imperial Medieval
 
     [ViewVariables(VVAccess.ReadWrite), DataField("successSound")]
-    public SoundSpecifier? SuccessSound = new SoundPathSpecifier("/Audio/Items/Defib/defib_success.ogg");
+    public SoundSpecifier? SuccessSound = new SoundPathSpecifier("/Audio/Imperial/Medieval/magic_craft.ogg"); // Imperial Medieval
 
     [ViewVariables(VVAccess.ReadWrite), DataField("readySound")]
-    public SoundSpecifier? ReadySound = new SoundPathSpecifier("/Audio/Items/Defib/defib_ready.ogg");
+    public SoundSpecifier? ReadySound = new SoundPathSpecifier("/Audio/Imperial/Medieval/magic-power.ogg"); // Imperial Medieval
 }
 
 [Serializable, NetSerializable]

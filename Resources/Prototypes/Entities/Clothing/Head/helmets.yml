@@ -403,6 +403,8 @@
   - type: Construction
     graph: BoneHelmet
     node: helmet
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetClothingHeadHelmetBone # imperial medieval
 
 - type: entity
   parent: [ ClothingHeadHelmetBase, BaseMinorContraband ]

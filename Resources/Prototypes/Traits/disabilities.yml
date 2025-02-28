@@ -3,7 +3,8 @@
   name: trait-blindness-name
   description: trait-blindness-desc
   traitGear: WhiteCane
-  category: Disabilities
+  category: MedievalBody # imperial medieval
+  cost: -4 # imperial medieval
   whitelist:
     components:
       - Blindable
@@ -15,7 +16,8 @@
   name: trait-poor-vision-name
   description: trait-poor-vision-desc
   traitGear: ClothingEyesGlasses
-  category: Disabilities
+  category: MedievalBody # imperial medieval
+  cost: -2 # imperial medieval
   whitelist:
     components:
       - Blindable
@@ -27,7 +29,8 @@
   id: Narcolepsy
   name: trait-narcolepsy-name
   description: trait-narcolepsy-desc
-  category: Disabilities
+  category: MedievalBody # imperial medieval
+  cost: -3 # imperial medieval
   components:
     - type: Narcolepsy
       timeBetweenIncidents: 300, 600
@@ -45,30 +48,25 @@
   id: Muted
   name: trait-muted-name
   description: trait-muted-desc
-  category: Disabilities
+  category: MedievalBody # imperial medieval
+  cost: -2 # imperial medieval
   blacklist:
     components:
       - BorgChassis
   components:
     - type: Muted
 
-- type: trait
-  id: Paracusia
-  name: trait-paracusia-name
-  description: trait-paracusia-desc
-  category: Disabilities
-  components:
-    - type: Paracusia
-      minTimeBetweenIncidents: 0.1
-      maxTimeBetweenIncidents: 300
-      maxSoundDistance: 7
-      sounds:
-        collection: Paracusia
-
-- type: trait
-  id: PainNumbness
-  name: trait-painnumbness-name
-  description: trait-painnumbness-desc
-  category: Disabilities
-  components:
-  - type: PainNumbness
+# Imperial Medieval Start
+# - type: trait
+#   id: Paracusia
+#   name: trait-paracusia-name
+#   description: trait-paracusia-desc
+#   category: Disabilities
+#   components:
+#     - type: Paracusia
+#       minTimeBetweenIncidents: 0.1
+#       maxTimeBetweenIncidents: 300
+#       maxSoundDistance: 7
+#       sounds:
+#         collection: Paracusia
+# Imperial Medieval End

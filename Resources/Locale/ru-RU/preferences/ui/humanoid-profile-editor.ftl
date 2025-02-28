@@ -24,7 +24,7 @@ humanoid-profile-editor-spawn-priority-label = Приоритет появлен
 humanoid-profile-editor-eyes-label = Цвет глаз:
 humanoid-profile-editor-jobs-tab = Должности
 humanoid-profile-editor-preference-unavailable-stay-in-lobby-button = Остаться в лобби, если должность недоступна.
-humanoid-profile-editor-preference-unavailable-spawn-as-overflow-button = Получить должность {INDEFINITE($overflowJob)} {$overflowJob}, если должность недоступна.
+humanoid-profile-editor-preference-unavailable-spawn-as-overflow-button = Получить должность {$overflowJob}, если должность недоступна.
 humanoid-profile-editor-preference-jumpsuit = Комбинезон
 humanoid-profile-editor-preference-jumpskirt = Юбка-комбинезон
 humanoid-profile-editor-preference-backpack = Рюкзак
@@ -34,8 +34,8 @@ humanoid-profile-editor-guidebook-button-tooltip = Нажмите, чтобы п
 
 # Spawn priority
 humanoid-profile-editor-preference-spawn-priority-none = Нету
-humanoid-profile-editor-preference-spawn-priority-arrivals = Прибытие
-humanoid-profile-editor-preference-spawn-priority-cryosleep = Криохранилище
+humanoid-profile-editor-preference-spawn-priority-arrivals = Легион
+humanoid-profile-editor-preference-spawn-priority-cryosleep = Мятежники
 
 humanoid-profile-editor-jobs-amount-in-department-tooltip = {$departmentName}
 humanoid-profile-editor-department-jobs-label = {$departmentName}
@@ -47,7 +47,7 @@ humanoid-profile-editor-job-priority-high-button = Высокий
 humanoid-profile-editor-job-priority-medium-button = Средний
 humanoid-profile-editor-job-priority-low-button = Низкий
 humanoid-profile-editor-job-priority-never-button = Никогда
-humanoid-profile-editor-naming-rules-warning = Внимание: Оскорбительные или странные имена и описания могут повлечь за собой беседу с администрацией. Прочитайте \[Правила\].
+humanoid-profile-editor-naming-rules-warning = Внимание: Имя персонажа должно вписываться в фентези вселенную, рекомендуем придумать его самостоятельно, а не пользоваться генератором. Оскорбительные или странные имена и описания могут повлечь за собой беседу с администрацией. Прочитайте \[Правила\].
 humanoid-profile-editor-markings-tab = Черты внешности
 humanoid-profile-editor-flavortext-tab = Описание
 

@@ -45,6 +45,8 @@
         Quantity: 5
       - ReagentId: Blood
         Quantity: 10
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetHeadHuman # imperial medieval
 
 - type: entity
   id: LeftArmHuman

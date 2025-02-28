@@ -4,6 +4,13 @@ ent-EngineAmeShielding = { ent-CrateEngineeringAMEShielding }
 ent-EngineAmeJar = { ent-CrateEngineeringAMEJar }
     .desc = { ent-CrateEngineeringAMEJar.desc }
 
+ent-EngineAmeJar1 = { ent-CrateEngineeringAMEJar1 }
+    .desc = { ent-CrateEngineeringAMEJar1.desc }
+ent-EngineAmeJar2 = { ent-CrateEngineeringAMEJar2 }
+    .desc = { ent-CrateEngineeringAMEJar2.desc }
+ent-EngineAmeJar3 = { ent-CrateEngineeringAMEJar3 }
+    .desc = { ent-CrateEngineeringAMEJar3.desc }
+
 ent-EngineAmeControl = { ent-CrateEngineeringAMEControl }
     .desc = { ent-CrateEngineeringAMEControl.desc }
 

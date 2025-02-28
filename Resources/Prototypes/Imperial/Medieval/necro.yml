@@ -1,0 +1,568 @@
+- type: entity
+  save: false
+  name: Urist McSkelly
+  parent: MobSkeletonPerson
+  id: MedievalMobSkeletonNecro
+  noSpawn: false
+  description: A dummy skeleton meant to be used in character setup.
+  components:
+  - type: HumanoidAppearance
+    species: Skeleton
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: RadiationBlocker
+  - type: Damageable
+    damageContainer: SkeletonNecro
+    damageModifierSet: SkeletonNecro
+  - type: MedievalSpikeTarget # imperial medieval
+    enabled: false
+  - type: Mana
+    maxManaRaceModifier: 1.5
+    regenRaceModifier: 1.5
+  - type: PointLight
+    color: red
+    energy: 1.8
+    radius: 2.5
+
+- type: damageContainer
+  id: SkeletonNecro
+  supportedGroups:
+    - Brute
+    - Burn
+
+- type: damageModifierSet
+  id: SkeletonNecro
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.7
+    Piercing: 0.7
+    Cold: 1.1
+    Poison: 0.0
+    Radiation: 0.0
+    Asphyxiation: 0.0
+    Bloodloss: 0.0
+    Cellular: 0.0
+  flatReductions:
+    #Blunt: 1
+    Slash: 2
+    Piercing: 3
+
+- type: entity
+  #noSpawn: true
+  id: MedievalSpawnNecroBasePreset
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: ertcall-cburn-security-eva-name
+      description: ertcall-cburn-security-eva-desc
+      rules: ertcall-cburn-security-eva-rules
+      raffle:
+        settings: short
+    - type: GhostRoleMobSpawner
+      prototype: MedievalMobSkeletonNecro
+    - type: Sprite
+      sprite: Imperial/Other/ErtCall/imperial_jobs.rsi
+      layers:
+        - state: green
+        - sprite: Imperial/Other/ErtCall/imperial_jobs.rsi
+          state: cburn
+
+- type: entity
+  #noSpawn: true
+  id: MedievalSpawnNecroSenderPreset
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: medieval-necro-sender-name
+      description: medieval-necro-sender-desc
+      rules: medieval-necro-sender-rules
+      raffle:
+        settings: short
+    - type: GhostRoleMobSpawner
+      prototype: MedievalMobSkeletonNecroSender
+    - type: Sprite
+      sprite: Imperial/Other/ErtCall/imperial_jobs.rsi
+      layers:
+        - state: green
+        - sprite: Imperial/Other/ErtCall/imperial_jobs.rsi
+          state: cburn
+
+- type: entity
+  noSpawn: false
+  parent: MedievalMobSkeletonNecro
+  id: MedievalMobSkeletonNecroSender
+  name: CBURN Agent
+  components:
+    - type: Loadout
+      prototypes: [ MedievalNecroSender ]
+
+- type: startingGear
+  id: MedievalNecroSender
+  equipment:
+    shoes: MedievalClothingFeetNecromancerLight
+    head: MedievalClothingHeadNecro
+    #gloves: MedievalNecroGlovesLight
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth13Necro
+    back: ClothingBackpackSatchelNecro
+    #pocket1: BaseMagicNecroShop
+
+
+
+
+
+- type: entity
+  #noSpawn: true
+  id: MedievalSpawnNecroFighterPreset
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: medieval-necro-fighter-name
+      description: medieval-necro-fighter-desc
+      rules: medieval-necro-fighter-rules
+      raffle:
+        settings: short
+    - type: GhostRoleMobSpawner
+      prototype: MedievalMobSkeletonNecroFighter
+    - type: Sprite
+      sprite: Imperial/Other/ErtCall/imperial_jobs.rsi
+      layers:
+        - state: green
+        - sprite: Imperial/Other/ErtCall/imperial_jobs.rsi
+          state: cburn
+
+- type: entity
+  noSpawn: false
+  parent: MedievalMobSkeletonNecro
+  id: MedievalMobSkeletonNecroFighter
+  name: CBURN Agent
+  components:
+    - type: Loadout
+      prototypes: [ MedievalNecroFighter ]
+
+- type: startingGear
+  id: MedievalNecroFighter
+  equipment:
+    shoes: MedievalClothingFeetNecromancerLight
+    head: MedievalClothingHeadNecro
+    gloves: MedievalNecroGlovesLight
+    id: MedievalKeyChapel
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth13Necro
+    back: ClothingBackpackSatchelNecro
+  storage:
+    back:
+    - BaseMagicNecroShop
+
+
+
+
+
+- type: entity
+  #noSpawn: true
+  id: MedievalSpawnNecroLeaderPreset
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: medieval-necro-leader-name
+      description: medieval-necro-leader-desc
+      rules: medieval-necro-leader-rules
+      raffle:
+        settings: short
+    - type: GhostRoleMobSpawner
+      prototype: MedievalMobSkeletonNecroLeader
+    - type: Sprite
+      sprite: Imperial/Other/ErtCall/imperial_jobs.rsi
+      layers:
+        - state: green
+        - sprite: Imperial/Other/ErtCall/imperial_jobs.rsi
+          state: cburn
+
+- type: entity
+  noSpawn: false
+  parent: MedievalMobSkeletonNecro
+  id: MedievalMobSkeletonNecroLeader
+  name: CBURN Agent
+  components:
+  - type: Loadout
+    prototypes: [ MedievalNecroLeader ]
+  - type: Mana
+    maxManaRaceModifier: 3.9
+    regenRaceModifier: 3.9
+
+- type: startingGear
+  id: MedievalNecroLeader
+  equipment:
+    shoes: MedievalClothingFeetNecromancerLight
+    head: MedievalClothingHeadCrownKingNecro
+    mask: MedievalMaskFace
+    id: MedievalKeyChapel
+    gloves: MedievalNecroGlovesLight
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth13Necro
+    back: ClothingBackpackSatchelNecro
+  storage:
+    back:
+    - BaseMagicNecroShopLeader
+
+
+
+
+- type: entity
+  parent: BaseItem
+  id: BaseMagicNecroShop
+  name: syndicate uplink
+  description: Suspiciously looking old radio...
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/magic_book.rsi
+    state: icon
+  - type: Item
+    sprite: Imperial/Medieval/Misc/magic_book.rsi
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Store
+    categories:
+    - MedievalNecroWeapon
+    - MedievalNecroArmor
+    - MedievalNecroHeal
+    - MedievalNecroMagic
+    - MedievalNecroOther
+    currencyWhitelist:
+    - UnholyMedieval
+    preset: StorePresetMedievalNecro
+    balance:
+      UnholyMedieval: 140
+
+- type: entity
+  parent: BaseMagicNecroShop
+  id: BaseMagicNecroShopLeader
+  name: syndicate uplink
+  description: Suspiciously looking old radio...
+  suffix: Empty
+  components:
+  - type: Store
+    balance:
+      UnholyMedieval: 260
+
+- type: currency
+  id: UnholyMedieval
+  displayName: store-currency-display-unholy-medieval
+  canWithdraw: false
+
+- type: storeCategory
+  id: MedievalNecroMagic
+  name: medieval-category-necro-magic
+  priority: 0
+
+- type: storeCategory
+  id: MedievalNecroHeal
+  name: medieval-category-necro-heal
+  priority: 0
+
+- type: storeCategory
+  id: MedievalNecroWeapon
+  name: medieval-category-necro-weapon
+  priority: 0
+
+- type: storeCategory
+  id: MedievalNecroArmor
+  name: medieval-category-necro-armor
+  priority: 0
+
+- type: storeCategory
+  id: MedievalNecroOther
+  name: medieval-category-necro-other
+  priority: 0
+
+- type: listing
+  id: MagicNecroShopDrinkGlassWhite
+  productEntity: DrinkGlassWhite
+  cost:
+    UnholyMedieval: 3
+  categories:
+  - MedievalNecroHeal
+
+#- type: listing
+#  id: MagicNecroShopMedievalSpellbookNecro
+#  productEntity: MedievalSpellbookNecro
+#  cost:
+#    UnholyMedieval: 18
+#  categories:
+#  - MedievalNecroMagic
+
+#- type: listing
+#  id: MagicNecroShopMedievalSpellbookBlood1
+#  productEntity: MedievalSpellbookBlood1
+#  cost:
+#    UnholyMedieval: 8
+#  categories:
+#  - MedievalNecroMagic
+#
+#- type: listing
+#  id: MagicNecroShopMedievalSpellbookBlood2
+#  productEntity: MedievalSpellbookBlood2
+#  cost:
+#    UnholyMedieval: 17
+#  categories:
+#  - MedievalNecroMagic
+#
+#- type: listing
+#  id: MagicNecroShopMedievalSpellbookBlood3
+#  productEntity: MedievalSpellbookBlood3
+#  cost:
+#    UnholyMedieval: 31
+#  categories:
+#  - MedievalNecroMagic
+#
+#- type: listing
+#  id: MagicNecroShopMedievalSpellbookBarrier
+#  productEntity: MedievalSpellbookBarrier
+#  cost:
+#    UnholyMedieval: 8
+#  categories:
+#  - MedievalNecroMagic
+#
+#- type: listing
+#  id: MagicNecroShopMedievalSpellbookLight
+#  productEntity: MedievalSpellbookLight
+#  cost:
+#    UnholyMedieval: 4
+#  categories:
+#  - MedievalNecroMagic
+#
+#- type: listing
+#  id: MagicNecroShopMedievalSpellbookFlash1
+#  productEntity: MedievalSpellbookFlash1
+#  cost:
+#    UnholyMedieval: 12
+#  categories:
+#  - MedievalNecroMagic
+#
+#- type: listing
+#  id: MagicNecroShopMedievalSpellbookFireball1
+#  productEntity: MedievalSpellbookFireball1
+#  cost:
+#    UnholyMedieval: 15
+#  categories:
+#  - MedievalNecroMagic
+#
+#- type: listing
+#  id: MagicNecroShopMedievalSpellbookHeal1
+#  productEntity: MedievalSpellbookHeal1
+#  cost:
+#    UnholyMedieval: 14
+#  categories:
+#  - MedievalNecroMagic
+
+- type: listing
+  id: MagicNecroShopMedievalSpellBookRecodeNecro
+  productEntity: MedievalSpellBookRecodeNecro
+  cost:
+    UnholyMedieval: 75
+  categories:
+  - MedievalNecroMagic
+
+- type: listing
+  id: MagicNecroShopClothingBackpackSatchelNecroArmor
+  productEntity: ClothingBackpackSatchelNecroArmor
+  cost:
+    UnholyMedieval: 80
+  categories:
+  - MedievalNecroArmor
+
+- type: listing
+  id: MagicNecroShopMedievalClothingOuterArmorNecroLight
+  productEntity: MedievalClothingOuterArmorNecroLight
+  cost:
+    UnholyMedieval: 50
+  categories:
+  - MedievalNecroArmor
+
+- type: listing
+  id: MagicNecroShopMedievalQuiverNecro
+  productEntity: MedievalQuiverNecro
+  cost:
+    UnholyMedieval: 6
+  categories:
+  - MedievalNecroArmor
+
+- type: listing
+  id: MagicNecroShopMedievalAlchemicBelt
+  productEntity: MedievalAlchemicBelt
+  cost:
+    UnholyMedieval: 4
+  categories:
+  - MedievalNecroArmor
+
+- type: listing
+  id: MagicNecroShopMedievalWeaponBowNecro
+  productEntity: MedievalWeaponBowNecro
+  cost:
+    UnholyMedieval: 22
+  categories:
+  - MedievalNecroWeapon
+
+- type: listing
+  id: MagicNecroShopMedievalArrowNecro
+  productEntity: MedievalArrowNecro
+  cost:
+    UnholyMedieval: 1
+  categories:
+  - MedievalNecroWeapon
+
+- type: listing
+  id: MagicNecroShopMedievalIronHalberdNecro
+  productEntity: MedievalIronHalberdNecro
+  cost:
+    UnholyMedieval: 42
+  categories:
+  - MedievalNecroWeapon
+
+- type: listing
+  id: MagicNecroShopMedievalFalshionNecro
+  productEntity: MedievalFalshionNecro
+  cost:
+    UnholyMedieval: 15
+  categories:
+  - MedievalNecroWeapon
+
+- type: listing
+  id: MagicNecroShopMedievalMaceNecro
+  productEntity: MedievalMaceNecro
+  cost:
+    UnholyMedieval: 17
+  categories:
+  - MedievalNecroWeapon
+
+- type: listing
+  id: MagicNecroShopMedievalDaggerNecro
+  productEntity: MedievalDaggerNecro
+  cost:
+    UnholyMedieval: 7
+  categories:
+  - MedievalNecroWeapon
+
+- type: listing
+  id: MagicNecroShopMedievalIronShieldBuckler
+  productEntity: MedievalIronShieldBuckler
+  cost:
+    UnholyMedieval: 20
+  categories:
+  - MedievalNecroWeapon
+
+- type: listing
+  id: MagicNecroShopMedievalSpearNecro
+  productEntity: MedievalSpearNecro
+  cost:
+    UnholyMedieval: 27
+  categories:
+  - MedievalNecroWeapon
+
+- type: listing
+  id: MagicNecroShopMedievalGrenade
+  productEntity: MedievalGrenade
+  cost:
+    UnholyMedieval: 5
+  categories:
+  - MedievalNecroOther
+
+- type: listing
+  id: MagicNecroShopMedievalServerMap
+  productEntity: MedievalServerMap
+  cost:
+    UnholyMedieval: 2
+  categories:
+  - MedievalNecroOther
+
+- type: listing
+  id: MagicNecroShopMedievalKnut
+  productEntity: MedievalKnut
+  cost:
+    UnholyMedieval: 4
+  categories:
+  - MedievalNecroOther
+
+- type: listing
+  id: MagicNecroShopMedievalHandcuffs
+  productEntity: MedievalHandcuffs
+  cost:
+    UnholyMedieval: 3
+  categories:
+  - MedievalNecroOther
+
+- type: listing
+  id: MagicNecroShopMedaljonDef
+  productEntity: MedaljonDef
+  cost:
+    UnholyMedieval: 8
+  categories:
+  - MedievalNecroOther
+
+- type: listing
+  id: MagicNecroShopMedaljonExpl
+  productEntity: MedaljonExpl
+  cost:
+    UnholyMedieval: 6
+  categories:
+  - MedievalNecroOther
+
+- type: listing
+  id: MagicNecroShopMedaljonSpeed
+  productEntity: MedaljonSpeed
+  cost:
+    UnholyMedieval: 9
+  categories:
+  - MedievalNecroOther
+
+- type: listing
+  id: MagicNecroShopMedaljonMana
+  productEntity: MedaljonMana
+  cost:
+    UnholyMedieval: 12
+  categories:
+  - MedievalNecroOther
+
+- type: listing
+  id: MagicNecroShopMedaljonNoslip
+  productEntity: MedaljonNoslip
+  cost:
+    UnholyMedieval: 5
+  categories:
+  - MedievalNecroOther
+
+- type: entity
+  parent: ClothingBackpackSatchelNecro
+  id: ClothingBackpackSatchelNecroArmor
+  name: satchel
+  description: A trendy looking satchel.
+  components:
+    - type: StorageFill
+      contents:
+        - id: MedievalClothingOuterArmorNecro
+        - id: MedievalClothingFeetNecromancer
+        - id: MedievalNecroGloves
+
+- type: entity
+  #noSpawn: true
+  id: MedievalNecroGroupSpawn
+  name: necro group spawn point
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      sprite: Imperial/Other/ErtCall/imperial_jobs.rsi
+      layers:
+        #- state: black
+        - sprite: Imperial/Other/ErtCall/imperial_jobs.rsi
+          state: cburn
+    - type: MagicBarrierNecroSpawn

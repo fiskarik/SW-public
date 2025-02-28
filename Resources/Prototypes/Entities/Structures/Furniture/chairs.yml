@@ -125,7 +125,7 @@
   description: Apply butt.
   components:
   - type: Sprite
-    state: stool
+    state: wooden-tabouret # imperial medieval
   - type: Construction
     graph: Seat
     node: stool

@@ -331,7 +331,9 @@
           - SpookyFog
       range: 4
 
-- type: rules
-  id: OnMapGrid
-  rules:
-    - !type:OnMapGridRule
+# Imperial Medieval Start
+# - type: rules
+#   id: OnMapGrid
+#   rules:
+#     - !type:OnMapGridRule
+# Imperial Medieval End

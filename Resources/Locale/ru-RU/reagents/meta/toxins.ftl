@@ -22,7 +22,7 @@ reagent-desc-fluorosulfuric-acid = Чрезвычайно коррозийное
 reagent-name-sulfuric-acid = серная кислота
 reagent-desc-sulfuric-acid = Сильно коррозийная, маслянистая, бесцветная жидкость.
 
-reagent-name-unstable-mutagen = нестабильный мутаген
+reagent-name-unstable-mutagen = зелье
 reagent-desc-unstable-mutagen = Вызывает мутации при введении в живых людей или растения. Высокие дозы могут быть смертельными, особенно для людей.
 
 reagent-name-heartbreaker-toxin = токсин хартбрейкер

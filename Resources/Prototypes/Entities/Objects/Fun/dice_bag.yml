@@ -24,6 +24,10 @@
     whitelist:
       tags:
       - Dice
+  # Imperial Medieval Start
+  - type: StealTarget
+    stealGroup: MedievalGetDiceBag
+  # Imperial Medieval End
 
 - type: entity
   parent: DiceBag

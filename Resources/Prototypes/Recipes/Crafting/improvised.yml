@@ -10,8 +10,10 @@
     sprite: Objects/Weapons/Melee/baseball_bat.rsi
     state: icon
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Простыня-призрак # Imperial Recipes Locale
   id: ghost_sheet
   graph: GhostSheet
@@ -25,6 +27,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стяжки # Imperial Recipes Locale
   id: makeshifthandcuffs
   graph: makeshifthandcuffs
@@ -34,8 +37,10 @@
   description: Прочные одноразовые пластиковые кабельные стяжки. # Imperial Recipes Locale
   icon: { sprite: Objects/Misc/cablecuffs.rsi, state: cuff }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Шок-палка # Imperial Recipes Locale
   id: makeshiftstunprod
   graph: makeshiftstunprod
@@ -45,8 +50,10 @@
   description: Самодельная дубинка-шокер. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/stunprod.rsi, state: stunprod_off }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Намордник # Imperial Recipes Locale
   id: muzzle
   graph: Muzzle
@@ -60,6 +67,7 @@
     state: icon
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Импровизированная пневматическая пушка # Imperial Recipes Locale
   id: pneumaticcannon
   graph: PneumaticCannon
@@ -71,8 +79,10 @@
   icon:
     sprite: Objects/Weapons/Guns/Cannons/pneumatic_cannon.rsi
     state: icon
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Бинт # Imperial Recipes Locale
   id: gauze
   graph: Gauze
@@ -86,6 +96,7 @@
     state: gauze
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Повязка на глаза # Imperial Recipes Locale
   id: blindfold
   graph: Blindfold
@@ -112,6 +123,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Тряпочка # Imperial Recipes Locale
   id: rag
   graph: Rag
@@ -125,6 +137,7 @@
     state: rag
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Самодельный дробовик # Imperial Recipes Locale
   id: improvisedshotgun
   graph: ImprovisedShotgunGraph
@@ -136,8 +149,10 @@
   icon:
     sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun.rsi
     state: icon
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Самодельный патрон для дробовика # Imperial Recipes Locale
   id: ShellShotgunImprovised
   graph: ImprovisedShotgunShellGraph
@@ -151,6 +166,7 @@
     state: improvised
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Приклад # Imperial Recipes Locale
   id: riflestock
   graph: RifleStockGraph
@@ -162,8 +178,10 @@
   icon:
     sprite: Objects/Misc/rifle_stock.rsi
     state: icon
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Зажигательная бомба # Imperial Recipes Locale
   id: firebomb
   graph: FireBomb
@@ -175,6 +193,7 @@
   icon:
     sprite: Objects/Weapons/Bombs/ied.rsi
     state: icon
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
   name: Хлопковая ткань # Imperial Recipes Locale
@@ -203,6 +222,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Трубчатая бомба # Imperial Recipes Locale
   id: pipebomb
   graph: PipeBomb
@@ -214,8 +234,9 @@
   icon:
     sprite: Objects/Weapons/Bombs/pipebomb.rsi
     state: icon
-    
+
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Скалка # Imperial Recipes Locale
   id: rollingpin
   graph: WoodenRollingPin

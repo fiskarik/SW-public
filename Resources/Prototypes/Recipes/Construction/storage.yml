@@ -1,5 +1,6 @@
 #bureaucracy
 - type: construction
+  hide: true # imperial medieval craft disable
   id: FilingCabinet
   name: Картотечный шкаф # Imperial Recipes Locale
   description: Шкаф для хранения документов. # Imperial Recipes Locale
@@ -17,6 +18,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: TallCabinet
   name: Высокий шкаф # Imperial Recipes Locale
   description: Шкаф для хранения документов. # Imperial Recipes Locale
@@ -34,6 +36,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: ChestDrawer
   name: Комод # Imperial Recipes Locale
   description: Маленький шкафчик для хранения придметов. Теперь на колесиках! # Imperial Recipes Locale
@@ -52,6 +55,7 @@
 
 # ItemCabinets
 - type: construction
+  hide: true # imperial medieval craft disable
   id: ShowCase
   name: Витрина # Imperial Recipes Locale
   description: Прочная витрина для дорогого экспоната. # Imperial Recipes Locale
@@ -87,6 +91,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: ShelfMetal
   name: Металлическая полка # Imperial Recipes Locale
   description: Удобное место для размещения чего-либо. # Imperial Recipes Locale
@@ -103,6 +108,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: ShelfGlass
   name: Стеклянная полка # Imperial Recipes Locale
   description: Как обычная полка! Но хрупкая и без стенок. # Imperial Recipes Locale
@@ -123,6 +129,7 @@
   id: ShelfRWood
   name: Прочная деревянная полка # Imperial Recipes Locale
   description: Идеальное место для хранения всех ваших старинных пластинок. # Imperial Recipes Locale
+  hide: true # imperial medieval craft disable
   graph: Shelf
   startNode: start
   targetNode: ShelfRWood
@@ -136,6 +143,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: ShelfRMetal
   name: Прочная металлическая полка # Imperial Recipes Locale
   description: Красивая и прочная, сохранит вашу добычу. # Imperial Recipes Locale
@@ -152,6 +160,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: ShelfRGlass
   name: Прочная стеклянная полка # Imperial Recipes Locale
   description: Прозрачная, прочная полка с  блестящим пластиковым корпусом. Почему её не любят? # Imperial Recipes Locale
@@ -169,6 +178,7 @@
 
 # Departmental
 - type: construction
+  hide: true # imperial medieval craft disable
   id: ShelfBar
   name: Барная полка # Imperial Recipes Locale
   description: Удобное место для всей вашей дополнительной выпивки, специально предназначенное для хранения большего количества бутылок! # Imperial Recipes Locale
@@ -185,6 +195,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: ShelfKitchen
   name: Кулинарная полка # Imperial Recipes Locale
   description: Вмещает ваши ножи, специи и все остальное! # Imperial Recipes Locale
@@ -201,6 +212,7 @@
     - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: ShelfChemistry
   name: Химическая полка # Imperial Recipes Locale
   description: Идеально подходит для защиты самых важных химикатов от неуклюжих рук клоуна! # Imperial Recipes Locale

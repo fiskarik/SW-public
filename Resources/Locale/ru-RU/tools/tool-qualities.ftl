@@ -7,6 +7,9 @@ tool-quality-prying-tool-name = Лом
 tool-quality-screwing-name = Свинчивание
 tool-quality-screwing-tool-name = Отвертка
 
+tool-quality-robust-name = [color=#A60300]Робаст[/color]
+tool-quality-robust-tool-name = [color=#A60300]Силу Робаста[/color]
+
 tool-quality-cutting-name = Резка
 tool-quality-cutting-tool-name = Кусачки
 

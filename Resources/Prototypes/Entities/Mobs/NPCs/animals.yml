@@ -236,6 +236,8 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  - type: NocturnBadFood # imperial medieval
+    timesCanBeBiten: 2 # imperial medieval
 
 - type: entity
   parent: MobChicken
@@ -443,8 +445,10 @@
     name: ghost-role-information-mothroach-name
     description: ghost-role-information-mothroach-description
     rules: ghost-role-information-freeagent-rules
-    mindRoles:
-    - MindRoleGhostRoleFreeAgent
+    # Imperial Medieval Start
+    # mindRoles:
+    # - MindRoleGhostRoleFreeAgent
+    # Imperial Medieval End
   - type: Fixtures
     fixtures:
       fix1:
@@ -832,6 +836,8 @@
     spawned:
     - id: FoodMeat
       amount: 5
+    - id: MedievalLeather1 # imperial medieval
+      amount: 4 # imperial medieval
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -857,6 +863,8 @@
     guides:
     - Chef
     - FoodRecipes
+  - type: NocturnBadFood # imperial medieval
+    timesCanBeBiten: 4 # imperial medieval
 
 - type: entity
   name: crab
@@ -1000,15 +1008,17 @@
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
-  - type: Speech
-    speechSounds: Goat
-    speechVerb: Goat
-  - type: Vocal
-    sounds:
-      Female: Goat
-      Male: Goat
-      Unsexed: Goat
-  - type: BleatingAccent
+  # Imperial Medieval Start
+  # - type: Speech
+  #   speechSounds: Goat
+  #   speechVerb: Goat
+  # - type: Vocal
+  #   sounds:
+  #     Female: Goat
+  #     Male: Goat
+  #     Unsexed: Goat
+  # - type: BleatingAccent
+  # Imperial Medieval End
   - type: InteractionPopup
     successChance: 0.2
     interactSuccessString: petting-success-goat
@@ -1330,7 +1340,7 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
-  - type: IdExaminable
+  #- type: IdExaminable # Imperial Medieval
   - type: Tag
     tags:
     - VimPilot
@@ -1379,7 +1389,10 @@
         Burn: 3
     clumsySound:
       path: /Audio/Animals/monkey_scream.ogg
-
+  # Imperial Mobs Icon Status Fix Start
+  - type: StatusIcon
+    bounds: -0.5,-0.5,0.5,0.5
+  # Imperial Mobs Icon Status Fix End
 
 - type: entity
   name: monkey
@@ -1405,9 +1418,11 @@
     name: ghost-role-information-monkey-name
     description: ghost-role-information-monkey-description
     rules: ghost-role-information-syndicate-reinforcement-rules
-    mindRoles:
+    # # Imperial Medieval Start
+    # mindRoles:
     # This is for syndicate monkeys that randomly gain sentience, thus have no summoner to team with
-    - MindRoleGhostRoleSoloAntagonist
+    # - MindRoleGhostRoleSoloAntagonist
+    # Imperial Medieval End
     raffle:
       settings: default
   - type: GhostTakeoverAvailable
@@ -1558,6 +1573,10 @@
         Burn: 3
     clumsySound:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
+  # Imperial Medieval Start
+  #- type: CrewSkills #imperial skills
+  #  skillPoints: 6
+  # Imperial Medieval End
 
 - type: entity
   id: MobBaseSyndicateKobold
@@ -1567,7 +1586,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Critical
+      75: Critical # Imperial Medieval
       200: Dead
   - type: NpcFactionMember
     factions:
@@ -1615,8 +1634,10 @@
     name: ghost-role-information-mouse-name
     description: ghost-role-information-mouse-description
     rules: ghost-role-information-freeagent-rules
-    mindRoles:
-    - MindRoleGhostRoleFreeAgent
+    # Imperial Medieval Start
+    # mindRoles:
+    # - MindRoleGhostRoleFreeAgent
+    # Imperial Medieval End
   - type: GhostTakeoverAvailable
   - type: Speech
     speechSounds: Squeak
@@ -2335,7 +2356,7 @@
     generated:
       reagents:
       - ReagentId: Mechanotoxin
-        Quantity: 1
+        Quantity: 10 # Imperial Medieval
   - type: MeleeChemicalInjector
     transferAmount: 0.75
     solution: melee
@@ -2404,8 +2425,10 @@
     name: ghost-role-information-giant-spider-name
     description: ghost-role-information-giant-spider-description
     rules: ghost-role-information-giant-spider-rules
-    mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
+    # Imperial Medieval Start
+    # mindRoles:
+    # - MindRoleGhostRoleTeamAntagonist
+    # Imperial Medieval End
     raffle:
       settings: short
   - type: GhostTakeoverAvailable
@@ -2993,8 +3016,10 @@
     allowMovement: true
     description: ghost-role-information-SyndiCat-description
     rules: ghost-role-information-SyndiCat-rules
-    mindRoles:
-    - MindRoleGhostRoleTeamAntagonist
+    # Imperial Medieval Start
+    # mindRoles:
+    # - MindRoleGhostRoleTeamAntagonist
+    # Imperial Medieval End
     raffle:
       settings: default
   - type: GhostTakeoverAvailable
@@ -3108,6 +3133,8 @@
     thresholds:
       0: Alive
       25: Dead
+  - type: NocturnBadFood # imperial medieval
+    timesCanBeBiten: 2 # imperial medieval
 
 - type: entity
   name: sloth

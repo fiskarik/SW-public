@@ -2,7 +2,7 @@
 trait-blindness-desc = У вас ужасное зрение
 
 trait-poor-vision-name = Близорукость
-trait-poor-vision-desc = Ваши глаза уже не те, что были раньше, вам трудно видеть предметы вдали без корректирующих очков.
+trait-poor-vision-desc = Ваши глаза уже не те, что были раньше, вам трудно видеть предметы вдали без корректирующих очков, которые вы носите с собой.
 
 trait-narcolepsy-name = Нарколепсия
 trait-narcolepsy-desc = Вас одолевают приступы сонливости
@@ -22,7 +22,7 @@ trait-paracusia-name = Паракузия
 trait-paracusia-desc = Вы слышите звуки, которых на самом деле нет
 
 trait-unrevivable-name = Невозвратимый
-trait-unrevivable-desc = Вас невозможно оживить с помощью дефибриллятора.
+trait-unrevivable-desc = Вас невозможно оживить с помощью магического камня.
 
 trait-pirate-accent-name = Пиратский акцент
 trait-pirate-accent-desc = Вы не можете перестать говорить как пират!

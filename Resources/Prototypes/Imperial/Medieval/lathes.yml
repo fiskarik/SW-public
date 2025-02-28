@@ -1,0 +1,1251 @@
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: MedievalStoneWorkerPlace
+  noSpawn: true
+  name: MedievalStoneWorkerPlace
+  description: MedievalStoneWorkerPlace
+  components:
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/stone_worker_place.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Ore
+        - MedievalStone
+        - MedievalTopaz
+        - RawMaterial
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - MedievalStoneLoopHoleCraft
+      - MedievalStoneWallCraft
+      - MedievalWizardPlaceCraft
+      - MedievalFoundryCraft
+      - MedievalMortarCraft
+      - MedievalWaterCraft
+      - MedievalDecorTorchColoneCraft
+      - MedievalStoneWizardPlaceCraft
+      - MedievalDecorMogila1Craft
+      - MedievalDecorMogila2Craft
+      - MedievalDecorMogila3Craft
+
+- type: entity
+  noSpawn: true
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: MedievalStoneWizardPlace
+  name: MedievalStoneWizardPlace
+  description: MedievalStoneWizardPlace
+  components:
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/stone_wizard_place.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Ore
+        - MedievalStone
+        - MedievalTopaz
+        - RawMaterial
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - MedievalTopazOre
+      - MedievalFireSerdolickOre
+      - MedievalAdamOre
+
+- type: entity
+  noSpawn: true
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: MedievalWizardPlace
+  name: MedievalWizardPlace
+  description: MedievalWizardPlace
+  components:
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/wizard_place.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Ore
+        - MedievalStone
+        - MedievalTopaz
+        - MedievalFireSerdolick
+        - RawMaterial
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - MedievalRuneFireBall
+      - MedievalRuneHealing
+      - MedievalRuneArrow
+      - MedievalRuneLighting
+      - MedievalRuneFlash
+
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: MedievalWizardPotion
+  #noSpawn: true
+  name: MedievalWizardPotion
+  description: MedievalWizardPotion
+  noSpawn: true
+  components:
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/wizard_potion.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Ore
+        - MedievalStone
+        - MedievalTopaz
+        - MedievalFireSerdolick
+        - RawMaterial
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - RobustHarvestChemistryBottle
+      - MedievalBloodChemistryBottle
+      - MedievalHealthChemistryBottle
+      - MedievalMuteChemistryBottle
+      - MedievalBaffChemistryBottle
+      - MedievalSleepChemistryBottle
+      - MedievalMutagenChemistryBottle
+      - MedievalDrugChemistryBottle
+      - MedievalFireChemistryBottle
+      - FoodCondimentBottleEnzyme
+
+- type: entity
+  noSpawn: true
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: MedievalWizardGrass
+  name: MedievalWizardGrass
+  description: MedievalWizardGrass
+  components:
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/wizard_grass.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Ore
+        - MedievalStone
+        - MedievalTopaz
+        - MedievalFireSerdolick
+        - RawMaterial
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - MedievalAloeSeeds
+      - MedievalAmbrosiaVulgarisSeeds
+      - MedievalGalaxythistleSeeds
+      - MedievalCabbageSeeds
+      - MedievalCannabisSeeds
+      - MedievalNettleSeeds
+      - MedievalWatermelonSeeds
+      - MedievalRiceSeeds
+      - MedievalAppleSeeds
+      - MedievalGarlicSeeds
+      - MedievalPoppySeeds
+      - MedievalWheatSeeds
+      - MedievalSugarcaneSeeds
+      - MedievalTomatoSeeds
+      - MedievalOatSeeds
+      - MedievalTowercapSeeds
+      - MedievalLingzhiSeeds
+      - MedievalChanterelleSeeds
+
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: MedievalKeybench
+  name: MedievalKeybench
+  noSpawn: true
+  description: MedievalKeybench
+  components:
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/keybench.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - MedievalKeyWizard
+      - MedievalMaidKey
+      - MedievalKeyGuard
+      - MedievalKeyAlchem
+      - MedievalKeyKing
+      - MedievalLeatherKey
+      - MedievalFarmerKey
+      - MedievalGateKey
+      - MedievalBlacksmithKey
+      - MedievalWoodKey
+      - MedievalKeyChapel
+      - MedievalKeyTavern
+      - MedievalKeyCargo
+
+- type: entity
+  id: MedievalMortar
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  name: mortar
+  description: From BlenderTech. Will It Blend? Let's find out!
+  components:
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Transform
+    anchored: true
+  - type: ReagentGrinder
+  - type: ActivatableUI
+    key: enum.ReagentGrinderUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ReagentGrinderUiKey.Key:
+        type: ReagentGrinderBoundUserInterface
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ReagentGrinderVisualState.BeakerAttached:
+        grinder:
+          True: {state: "juicer1"}
+          False: {state: "juicer0"}
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.08,-0.35,0.15,0.25"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+  - type: Sprite
+    netsync: false
+    sprite: Imperial/Medieval/Lathe/mortar.rsi
+    drawdepth: SmallObjects
+    snapCardinals: true
+    layers:
+    - map: [ "grinder" ]
+      state: "juicer0"
+  #- type: UpgradePowerDraw
+  #  powerDrawMultiplier: 0.75
+  #  scaling: Exponential
+  - type: ItemSlots
+    slots:
+      beakerSlot:
+        whitelist:
+          components:
+          - FitsInDispenser
+  - type: Machine
+    board: ReagentGrinderMachineCircuitboard
+  - type: ContainerContainer
+    containers:
+      beakerSlot: !type:ContainerSlot
+      inputContainer: !type:Container
+      machine_board: !type:Container
+      machine_parts: !type:Container
+
+- type: entity
+  id: Medievalalchem_dispenser
+  name: alchemical dispenser
+  noSpawn: true
+  description: An medieval alchemick desktop.
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/alchem.rsi
+    netsync: false
+    snapCardinals: true
+    layers:
+    - state: mixer_empty
+    - state: mixer_screens
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  - type: Icon
+    sprite: Imperial/Medieval/Lathe/alchem.rsi
+    state: mixer_loaded
+  - type: ChemMaster
+    pillDosageLimit: 50
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: ActivatableUI
+    key: enum.ChemMasterUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ChemMasterUiKey.Key:
+        type: ChemMasterBoundUserInterface
+  - type: Appearance
+  - type: Machine
+    board: ChemMasterMachineCircuitboard
+  - type: ContainerContainer
+    containers:
+      beakerSlot: !type:ContainerSlot
+      outputSlot: !type:ContainerSlot
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: ItemSlots
+    slots:
+      beakerSlot:
+        whitelist:
+          components:
+          - FitsInDispenser
+      outputSlot:
+        whitelistFailPopup: chem-master-component-cannot-put-entity-message
+        whitelist:
+          tags:
+          - Bottle
+          - PillCanister
+  - type: SolutionContainerManager
+    solutions:
+      buffer: {}
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: PointLight
+    color: orange
+    energy: 2
+    radius: 2
+
+- type: entity
+  id: MedievalCampfire
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  name: campfire
+  description: It's fire.
+  components:
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Microwave
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.VisualState:
+        enum.MicrowaveVisualizerLayers.Base:
+          Idle: { state: "mw" }
+          Broken: { state: "mwb" }
+          Cooking: { state: "mw" }
+        enum.MicrowaveVisualizerLayers.BaseUnlit:
+          Idle: { state: "mw_unlit" }
+          Broken: { state: "mw_unlit" }
+          Cooking: { state: "mw_running_unlit" }
+      enum.PowerDeviceVisuals.Powered:
+        enum.MicrowaveVisualizerLayers.BaseUnlit:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ActivatableUI
+    key: enum.MicrowaveUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.MicrowaveUiKey.Key:
+        type: MicrowaveBoundUserInterface
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Sprite
+    netsync: false
+    sprite: Imperial/Medieval/Lathe/campfire.rsi
+    drawdepth: SmallObjects
+    snapCardinals: true
+    layers:
+    - state: mw0
+      map: ["enum.MicrowaveVisualizerLayers.Base"]
+    - state: mw_unlit
+      shader: unshaded
+      map: ["enum.MicrowaveVisualizerLayers.BaseUnlit"]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  #- type: UpgradePowerDraw
+  #  powerDrawMultiplier: 0.75
+  #  scaling: Exponential
+  - type: Machine
+    board: MicrowaveMachineCircuitboard
+  - type: ContainerContainer
+    containers:
+      microwave_entity_container: !type:Container
+      machine_board: !type:Container
+      machine_parts: !type:Container
+
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: MedievalAlcPlace
+  noSpawn: true
+  name: MedievalAlcPlace
+  description: It produces aroows and range weapon using steel leather and wood.
+  components:
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/wood_worker.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+        - MedievalLeather
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.LatheUiKey.Key:
+        type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - MedievalBarrelWine
+      - MedievalBarrelMead
+      - MedievalBarrelRedMead
+      - MedievalBarrelBeer
+      - MedievalBarrelRum
+      - MedievalBarrelVodka
+      - MedievalBarrelAle
+
+- type: entity
+  parent:
+  - BaseStructure
+  id: CP14BaseWorkbench
+  abstract: true
+  components:
+  - type: ActivatableUI
+    key: enum.CP14WorkbenchUiKey.Key
+  - type: Climbable
+  - type: Clickable
+  - type: TrashDefendArea
+  - type: CP14Workbench
+    craftSpeed: 0.6
+  - type: InteractionOutline
+  - type: PlaceableSurface
+  - type: UserInterface
+    interfaces:
+      enum.CP14WorkbenchUiKey.Key:
+        type: CP14WorkbenchBoundUserInterface
+  - type: Damageable
+    damageContainer: Inorganic
+
+- type: entity
+  parent: CP14BaseWorkbench
+  id: MedievalLeatherWorkingPlace
+  name: LeatherWorkingPlace
+  description: It produces armor and weapon using leather wood and steel.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/leather.rsi
+    state: icon
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepWood
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: CP14Workbench
+    craftSound: "/Audio/Imperial/Medieval/craft_cloth.ogg"
+    recipes:
+      - MedievalClothingHeadHelmetCap
+      - MedievalCoinBag
+      - MedievalClothingOuterArmorFur
+      - MedievalClothingOuterArmorStudded
+      - MedievalClothingOuterArmorLeather
+      - MedievalClothingOuterArmorLeatherLight
+      - MedievalClothingOuterArmorLeatherHeavy
+      - MedievalClothingBackpackSatchelLeather
+      - MedievalClothingBackpackSatchelLeather2
+      - MedievalClothingBackpackSatchelLeather3
+      - MedievalClothingBackpackLeather
+      - MedievalClothingBackpackSatchelTraveller
+      - MedievalClothingOuterApronChef
+      - MedievalQuiver
+      - MedievalQuiverSteel
+      - MedievalClothingMaskPlague
+      - MedievalRope
+      - MedievalRopeSpider
+      - MedievalRopeCloth
+      - MedievalWineskin
+      - MedievalBastShoes
+      - MedievalClothingHeadBag
+      - MedievalGag
+      - MedievaldDiceBag
+      - MedievalPlantBag
+      - MedievalOreBag
+      - MedievalAlchemicBelt
+      - MedievalClothingHeadHatCowboyBrown
+
+- type: entity
+  parent: CP14BaseWorkbench
+  id: MedievalWoodWorkerPlace
+  name: MedievalWoodWorkerPlace
+  description: It produces aroows and range weapon using steel leather and wood.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/wood_worker.rsi
+    state: icon
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: CP14Workbench
+    craftSound: "/Audio/Imperial/Medieval/craft_wood.ogg"
+    recipes:
+      - MedievalWeaponCrossbow
+      - MedievalWoodenSword
+      - MedievalBolt
+      - MedievalBoltSteel
+      - MedievalBoltPractice
+      - MedievalBow
+      - MedievalArrow
+      - MedievalArrowPractice
+      - MedievalArrowFire
+      - MedievalWoodenShield2
+      - MedievalWoodenShield
+      - MedievalWoodenShield3
+      - MedievalBanjoInstrument
+      - MedievalChest
+      - MedievalCrateCoffin
+      - MedievalBeaker
+      - MedievalPen
+      - MedievalTarget
+      - MedievalMopItem
+      - MedievalMopBucket
+      - MedievalKnut
+
+- type: entity
+  parent: CP14BaseWorkbench
+  id: MedievalFoundry
+  name: foundry
+  description: It produces sheets and ingots using ores.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/foundry.rsi
+    state: icon
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: CP14Workbench
+    craftSpeed: 1
+    craftSound: "/Audio/Imperial/Medieval/craft_foundry.ogg"
+    recipes:
+      - MedievalGlinaFormaReady
+      - FoodBowlBig
+      - SheetSteelMedieval
+      - SheetSteelMedieval10
+      - MedievalSteelIngot
+      - MedievalSteelIngot10
+      - MedievalGoldOre
+      - MedievalGoldOre10
+      - EbonitMedieval
+      - EbonitMedieval10
+      - ForstoneMedieval
+      - ForstoneMedieval10
+      - MaterialGunpowder
+      - MaterialGunpowder10
+      - MedievalCoal
+      - MedievalCoal10
+
+- type: entity
+  parent: CP14BaseWorkbench
+  id: MedievalWizardBlacksmith
+  name: MedievalWizardBlacksmith
+  description: MedievalWizardBlacksmith
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/wizard_blacksmith.rsi
+    state: icon
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: CP14Workbench
+    craftSound: "/Audio/Imperial/Medieval/craft_iron.ogg"
+    recipes:
+      - MedievalGlowStone
+      - MedievalCompactDefibrillator
+      - MedievalShoesSpeed
+      - MedaljonSpeed
+      - MedaljonMana
+      - MedaljonNoslip
+      - MedaljonFlashImmune
+      - MedaljonThieving
+      - MedaljonDef
+      - MedaljonExpl
+      - MedaljonDark
+      - MedievalHandheldHealthAnalyzer
+      - MedaljonAntiMana
+      - MedievalClothingEyesEyepatchHudBeer
+      - MedievalClothingEyesEyepatchHudMedical
+
+- type: entity
+  parent: CP14BaseWorkbench
+  id: MedievalBlacksmithArmor
+  name: BlackSmith
+  description: It produces armor and weapon using steel and wood.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/blacksmith.rsi
+    state: icon
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: CP14Workbench
+    craftSound: "/Audio/Imperial/Medieval/craft_iron.ogg"
+    recipes:
+      - MedievalGear
+      - MedievalChain
+      - MedievalLeatherBelt
+      - MedievalIronPlate
+      - MedievalIronPlateSmall
+      - MedievalRivets
+      - MedievalShoulder
+      - MedievalClothingHeadHelmetSalad
+      - MedievalClothingHeadHelmetSaladLight
+      - MedievalClothingHeadHelmetNormand
+      - MedievalClothingHeadHelmetNormandFree
+      - MedievalClothingHeadHelmetBacinet
+      - MedievalClothingHeadHelmetShapel
+      - MedievalClothingHeadHelmetCrusader
+      - MedievalIronGloves
+      - MedievalIronGlovesBrig
+      - MedievalIronGlovesBear
+      - MedievalClothingFeetSteel
+      - MedievalClothingOuterArmorChainMailLight
+      - MedievalClothingOuterArmorChainMail
+      - MedievalClothingOuterArmorIronCuirassLight
+      - MedievalClothingOuterArmorIronCuirass
+      - ClothingOuterArmorPodWars
+      - MedievalClothingOuterArmorIron
+      - MedievalClothingOuterArmorUpIron
+      - MedievalClothingHeadHelmetEbonit
+      - MedievalClothingHeadHelmetEbonit2
+      - MedievalClothingOuterArmorEbonit
+      - MedievalClothingOuterArmorEbonit2
+      - MedievalEbonitGloves
+      - MedievalEbonitGloves2
+      - MedievalClothingFeetEbonit
+      - MedievalClothingFeetEbonit2
+      - MedievalClothingHeadHelmetForstone
+      - MedievalClothingOuterArmorForstone
+      - MedievalForstoneGloves
+      - MedievalClothingFeetForstone
+      #- MedievalClothingOuterArmorUpIron2
+      - MedievalIronShield
+      - MedievalSpear
+      - MedievalSpearT3Steel
+      - MedievalDagger
+      - MedievalDaggerT3Steel
+      - MedievalFalshion
+      - MedievalFalshionT3Steel
+      - MedievalShortSword
+      - MedievalShortSwordSteel
+      - MedievalSaber
+      - MedievalSaberSteel
+      - MedievalMace
+      - MedievalMaceT3Steel
+      - MedievalPalice
+      - MedievalPaliceSteel
+      - MedievalIronHalberd
+      - MedievalIronHalberdT3Steel
+      - MedievalMaceT3Heavy
+      - MedievalMaceT3SteelHeavy
+      - MedievalIronSekir
+      - MedievalIronSekirSteel
+      - MedievalIronHammer
+      - MedievalIronHammerSteel
+      - MedievalLockpickPack
+      - MedievalLockpick
+      - MedievalShovel
+      - MedievalPickaxe
+      - MedievalPickaxeSteel
+      - MedievalRepairStone
+      - MedievalHoe
+      - MedievalScythe
+      - MedievalClippers
+      - MedievalHandcuffs
+      - MedievalFetter
+      - MedievalHatchet
+      - BarberScissors
+      - MedievalGrenade
+      - MedievalKeyStorage
+      - MedievalDoorKeyCheck
+      - MedievalPrisonGrilleCraft
+      - MedievalWeaponTurretNanoTrasenCraft
+
+- type: entity
+  parent: CP14BaseWorkbench
+  id: MedievalClothWorkingPlace
+  name: ClothWorkingPlace
+  description: It produces clothing using leather wood and steel.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Lathe/clothing_workspace.rsi
+    state: icon
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: CP14Workbench
+    craftSound: "/Audio/Imperial/Medieval/craft_cloth.ogg"
+    recipes:
+      - MedievalClothFromGrass
+      - MedievalPaper
+      - MedievalMaskFace
+      - MedievalClothingShoesLeather
+      - MedievalClothingShoesSpider
+      - MedievalClothingHeadHelmetHood
+      - MedievalClothingHeadHelmetHood3
+      - MedievalClothingHeadHatPlaguedoctor
+      - MedievalClothingHandsGlovesColorBlack
+      - MedievalClothingHandsGlovesColorBrown
+      - MedievalGlovesBlacksmith
+      - MedievalClothingUniformJumpsuitShitCloth2
+      - MedievalClothingUniformJumpsuitShitCloth3
+      - MedievalClothingUniformJumpsuitShitCloth4
+      - MedievalClothingUniformJumpsuitShitCloth8
+      - MedievalClothingUniformJumpsuitShitCloth10
+      - MedievalClothingUniformJumpsuitShitCloth11
+      - MedievalClothingUniformJumpsuitShitCloth12
+      - MedievalClothingUniformJumpsuitShitCloth14
+      - MedievalClothingUniformJumpsuitShitCloth15
+      - MedievalClothingUniformJumpsuitShitCloth17
+      - MedievalClothingUniformJumpsuitShitCloth18
+      - MedievalClothingUniformJumpsuitShitCloth19
+      - MedievalClothingUniformJumpsuitShitCloth21
+      - MedievalClothingUniformJumpsuitShitCloth22
+      - MedievalClothingUniformJumpsuitShitCloth32
+      - MedievalClothingUniformJumpsuitShitCloth33
+      - MedievalClothingUniformJumpsuitShitCloth34
+      - MedievalClothingUniformJumpsuitShitCloth35
+      - MedievalClothingUniformJumpsuitShitCloth36
+      - MedievalClothingUniformJumpsuitShitCloth37
+      - MedievalClothingUniformJumpsuitShitCloth38
+      - MedievalClothingUniformJumpsuitShitCloth39
+      - MedievalClothingUniformJumpsuitShitCloth40
+      - MedievalClothingUniformJumpsuitShitCloth41
+      - MedievalClothingUniformJumpsuitShitCloth42
+      - MedievalClothingUniformJumpsuitShitCloth43
+      - MedievalClothingUniformJumpsuitShitCloth44
+      - MedievalClothingUniformJumpsuitShitCloth45
+      - MedievalClothingUniformJumpsuitShitCloth46
+      - MedievalClothingUniformJumpsuitShitCloth47
+      - MedievalClothingUniformJumpsuitShitCloth48
+      - MedievalClothingUniformJumpsuitShitCloth49
+      - MedievalClothingUniformJumpsuitShitCloth50
+      - MedievalClothingUniformJumpsuitShitCloth51
+      - MedievalClothingUniformJumpsuitShitCloth52
+      - MedievalClothingUniformJumpsuitShitCloth53
+      - MedievalClothingUniformJumpsuitShitCloth54
+      - MedievalClothingUniformJumpsuitShitCloth55
+      - MedievalClothingUniformJumpsuitShitCloth56
+      - MedievalClothingUniformJumpsuitShitCloth57
+      - MedievalClothingUniformJumpsuitShitCloth58
+      - MedievalClothingUniformJumpsuitShitCloth59
+      - MedievalClothingUniformJumpsuitShitCloth60
+      - MedievalClothingUniformJumpsuitShitCloth61
+      - MedievalClothingUniformJumpsuitShitCloth62
+      - MedievalClothingUniformJumpsuitShitCloth63
+      - MedievalClothingUniformJumpsuitShitCloth64
+      - MedievalClothingUniformJumpskirtJanimaid
+      - MedievalClothingUniformJumpsuitFlannel
+      - MedievalClothingHeadFarmerHat
+      - MedievalClothingHeadArcherHat
+      - MedievalClothingHeadHelmetExecutor1
+      - ClothingMaskBandGreen
+      - ClothingMaskBandGold
+      - ClothingMaskBandBrown
+      - ClothingMaskBandRed
+      - ClothingMaskBandBlue
+      - ClothingMaskBandBlack
+      - CarpetBlackCraft
+      - CarpetPinkCraft
+      - CarpetBlueCraft
+      - CarpetGreenCraft
+      - CarpetOrangeCraft
+      #- CarpetSBlueCraft
+      - CarpetPurpleCraft
+      #- CarpetCraft
+      - CarpetWhiteCraft

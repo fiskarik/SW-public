@@ -29,13 +29,13 @@ public sealed partial class HTNComponent : NPCComponent
     /// How long to wait after having planned to try planning again.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField("planCooldown")]
-    public float PlanCooldown = 0.45f;
+    public float PlanCooldown = 3f; // Imperial Medieval
 
     /// <summary>
     /// How much longer until we can try re-planning. This will happen even during update in case something changed.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
-    public float PlanAccumulator = 0f;
+    public float PlanAccumulator = 0.5f; // imperial medieval
 
     [ViewVariables]
     public HTNPlanJob? PlanningJob = null;

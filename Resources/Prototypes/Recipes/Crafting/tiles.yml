@@ -1,17 +1,19 @@
 # These should be lathe recipes but lathe code sucks so hard rn so they'll be crafted by hand.
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стальная плитка # Imperial Recipes Locale
   id: TileSteel
   graph: TileSteel
   startNode: start
   targetNode: steeltile
-  category: construction-category-tiles 
+  category: construction-category-tiles
   description: Четыре стальные плитки покрытия станции. # Imperial Recipes Locale
   icon: { sprite: Objects/Tiles/tile.rsi, state: steel }
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Деревянный пол # Imperial Recipes Locale
   id: TileWood
   graph: TileWood
@@ -21,19 +23,21 @@
   description: Четыре плитки деревянного пола покрытия станции. # Imperial Recipes Locale
   icon: { sprite: Objects/Tiles/tile.rsi, state: wood }
   objectType: Item
-  
+
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Заполненная латунная пластина # Imperial Recipes Locale
   id: TileBrassFilled
   graph: TilesBrass
   startNode: start
   targetNode: filledPlate
-  category: construction-category-tiles 
+  category: construction-category-tiles
   description: Четыре куска латунного напольного покрытия станции, совместимого только с латунным покрытием. # Imperial Recipes Locale
   icon: { sprite: Objects/Tiles/tile.rsi, state: brass-filled }
   objectType: Item
-  
+
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Гладкая латунная пластина # Imperial Recipes Locale
   id: TileBrassReebe
   graph: TilesBrass
@@ -45,6 +49,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Белая плитка # Imperial Recipes Locale
   id: TileWhite
   graph: TileWhite
@@ -56,6 +61,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Тёмная плитка # Imperial Recipes Locale
   id: TileDark
   graph: TileDark
@@ -67,6 +73,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Пол из плоти # Imperial Recipes Locale
   id: TileFlesh
   graph: TileFlesh

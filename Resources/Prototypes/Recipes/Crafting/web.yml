@@ -1,6 +1,7 @@
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Пол из паутины # Imperial Recipes Locale
-  id: TileWeb 
+  id: TileWeb
   graph: WebObjects
   startNode: start
   targetNode: tile
@@ -79,6 +80,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Щит из паутины # Imperial Recipes Locale
   id: WebShield
   graph: WebObjects

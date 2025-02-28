@@ -55,11 +55,11 @@ marking-GauzeLizardFootRight = Бинт, Перевязь стопы (Правы
 marking-GauzeLizardFootLeft-gauze_lizard_foot_l = Бинт, Перевязь стопы (Левый)
 marking-GauzeLizardFootLeft = Бинт, Перевязь стопы (Левый)
 
-marking-GauzeLizardLefteyePatch-gauze_lizard_lefteye = Унатх, Перевязь глаза (Левый)
-marking-GauzeLizardLefteyePatch = Унатх, Перевязь глаза (Левый)
+marking-GauzeLizardLefteyePatch-gauze_lizard_lefteye = Ящер, Перевязь глаза (Левый)
+marking-GauzeLizardLefteyePatch = Ящер, Перевязь глаза (Левый)
 
-marking-GauzeLizardRighteyePatch-gauze_lizard_righteye = Унатх, Перевязь глаза (Правый)
-marking-GauzeLizardRighteyePatch = Унатх, Перевязь глаза (Правый)
+marking-GauzeLizardRighteyePatch-gauze_lizard_righteye = Ящер, Перевязь глаза (Правый)
+marking-GauzeLizardRighteyePatch = Ящер, Перевязь глаза (Правый)
 
 marking-GauzeMothStomach-gauze_moth_abdomen = Инсектоид, Бинт, Перевязь живота
 marking-GauzeMothStomach = Инсектоид, Бинт, Перевязь живота

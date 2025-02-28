@@ -1,0 +1,120 @@
+- type: department
+  id: Freelancer
+  name: department-freeelancer
+  description: department-freelancer-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalTraveller
+  - MedievalAvanturist
+  - MedievalBard
+  - MedievalBum
+  - MedievalInnkeeper
+  - MedievalInnkeeperN
+  - MedievalChaplain
+  - MedievalWanderMag
+
+- type: department
+  id: Legion
+  name: department-legion
+  description: department-legion-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalLegionRecruit
+  - MedievalLegionLegioner
+  - MedievalLegionGateman
+  - MedievalLegionOpcion
+  - MedievalLegionTribun
+  - MedievalLegionLegat
+  - MedievalLegionMag
+
+- type: department
+  id: Insurgency
+  name: department-insurgency
+  description: department-insurgency-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalInsurgencyRecruit
+  - MedievalInsurgencyInsurgencyer
+  - MedievalInsurgencyGateman
+  - MedievalInsurgencyOpcion
+  - MedievalInsurgencyTribun
+  - MedievalInsurgencyLegat
+  - MedievalInsurgencyMag
+
+- type: department
+  id: Band
+  name: department-band
+  description: department-band-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalBanditRecruit
+  - MedievalBanditRegular
+  - MedievalBanditVeteran
+  - MedievalBanditLeader
+
+- type: department
+  id: Collegium
+  name: department-collegium
+  description: department-collegium-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalCollegiumRecruit
+  - MedievalCollegiumCommon
+  - MedievalCollegiumLeader
+
+- type: department
+  id: Tribe
+  name: department-tribe
+  description: department-tribe-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalTribeRecruit
+  - MedievalTribeCommon
+  - MedievalTribeLeader
+
+- type: department
+  id: Merc
+  name: department-merc
+  description: department-merc-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalMerc
+  - MedievalMercLeader
+
+- type: department
+  id: Traders
+  name: department-traders
+  description: department-traders-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalTrader
+  - MedievalTraderN
+
+- type: department
+  id: Mine
+  name: department-Mine
+  description: department-Mine-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalMiner
+  - MedievalMinerLeader
+
+- type: department
+  id: Crafters
+  name: department-Crafters
+  description: department-Crafters-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalBlacksmith
+  - MedievalBlacksmithN
+  - MedievalBlacksmithYoung
+  - MedievalBlacksmithYoungN
+
+- type: department
+  id: Cult
+  name: department-Cult
+  description: department-Cult-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalCult
+  - MedievalCultLeader

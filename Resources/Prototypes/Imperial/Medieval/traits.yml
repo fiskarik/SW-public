@@ -1,0 +1,295 @@
+- type: traitCategory
+  id: MedievalSkills
+  name: trait-category-medieval-skills
+  maxTraitPoints: 1
+
+- type: trait
+  id: IncreasedMana
+  name: trait-medieval-skills-increased-mana
+  description: trait-medieval-skills-increased-mana-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: ManaTraitModifier
+      maxManaTraitModifier: 1.1
+
+- type: trait
+  id: IncreasedManaRegen
+  name: trait-medieval-skills-increased-mana-regen
+  description: trait-medieval-skills-increased-mana-regen-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: ManaTraitModifier
+      regenTraitModifier: 1.1
+
+- type: trait
+  id: MedievalHoly
+  name: trait-medieval-skills-holy
+  description: trait-medieval-skills-holy-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: BibleUser
+
+- type: trait
+  id: MedievalFood
+  name: trait-medieval-skills-food
+  description: trait-medieval-skills-food-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: Hunger
+      baseDecayRate: 0.3
+
+- type: trait
+  id: MedievalThirst
+  name: trait-medieval-skills-thirst
+  description: trait-medieval-skills-thirst-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: Thirst
+      baseDecayRate: 0.15
+
+- type: trait
+  id: MedievalEye
+  name: trait-medieval-skills-eye
+  description: trait-medieval-skills-eye-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: ContentEye
+      maxZoom: 1.045, 1.045
+      targetZoom: 1.045, 1.045
+
+- type: trait
+  id: MedievalPain
+  name: trait-medieval-skills-pain
+  description: trait-medieval-skills-pain-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: DamageForceSay
+      damageThreshold: 200
+    - type: EmoteOnDamage
+      emoteChance: 0
+
+- type: trait
+  id: MedievalStamina
+  name: trait-medieval-skills-stamina
+  description: trait-medieval-skills-stamina-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: Stamina
+      critThreshold: 120
+
+- type: trait
+  id: MedievalHack
+  name: trait-medieval-skills-hack
+  description: trait-medieval-skills-hack-desc
+  category: MedievalSkills
+  cost: 1
+  components:
+    - type: DoorHacker
+
+- type: trait
+  id: MedievalTribeAccent
+  name: trait-medieval-tribe-accent
+  description: trait-medieval-tribe-accent-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+    - type: GigaMonkeyAccent
+
+- type: trait
+  id: MedievalAlchemy
+  name: trait-medieval-skills-alchemy
+  description: trait-medieval-skills-alchemy-desc
+  category: MedievalSkills
+  cost: 1
+  components:
+    - type: MedievalPotionChecker
+
+- type: trait
+  id: MedievalMoneyChecker
+  name: trait-medieval-skills-trader
+  description: trait-medieval-skills-trader-desc
+  category: MedievalSkills
+  cost: 1
+  components:
+    - type: MedievalMoneyChecker
+
+- type: trait
+  id: MedievalDigget
+  name: trait-medieval-skills-digger
+  description: trait-medieval-skills-digger-desc
+  category: MedievalSkills
+  cost: 1
+  components:
+    - type: MedievalDigger
+
+- type: trait
+  id: MedievalMedievalMeleeRepairMan
+  name: trait-medieval-skills-repair-man
+  description: trait-medieval-skills-repair-man-desc
+  category: MedievalSkills
+  cost: 1
+  components:
+    - type: MedievalMeleeRepairMan
+
+- type: trait
+  id: MedievalMedievalClear
+  name: trait-medieval-skills-clear
+  description: trait-medieval-skills-clear-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: BadSmelClear
+
+- type: traitCategory
+  id: MedievalBody
+  name: trait-category-medieval-body
+  maxTraitPoints: 1
+
+- type: trait
+  id: MedievalThiev
+  name: trait-medieval-skills-thiev
+  description: trait-medieval-skills-thiev-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: StealChanceIncreaser
+
+- type: trait
+  id: MedievalMedievalDontSleep
+  name: trait-medieval-skills-dont-sleep
+  description: trait-medieval-skills-dont-sleep-desc
+  category: MedievalBody
+  cost: 1
+  components:
+    - type: NeedSleepClear
+
+- type: trait
+  id: MedievalMedievalMoreSleep
+  name: trait-medieval-skills-more-sleep
+  description: trait-medieval-skills-more-sleep-desc
+  category: MedievalBody
+  cost: -1
+  components:
+    - type: NeedNoSleep
+
+- type: trait
+  id: MedievalMedievalBadFighter
+  name: trait-medieval-skills-bad-fighter
+  description: trait-medieval-skills-bad-fighter-desc
+  category: MedievalBody
+  cost: -1
+  components:
+    - type: MeleeParryAble
+      parryModifier: 0.5
+
+- type: trait
+  id: MedievalCrafter
+  name: trait-medieval-skills-crafter
+  description: trait-medieval-skills-crafter-desc
+  category: MedievalSkills
+  cost: 1
+  components:
+    - type: CrafterTrait
+
+- type: traitCategory
+  id: MedievalReligion
+  name: trait-category-medieval-religion
+  maxTraitPoints: 1
+
+- type: trait
+  id: MedievalReligion1
+  name: trait-medieval-skills-religion1
+  description: trait-medieval-skills-religion1-desc
+  category: MedievalReligion
+  cost: 1
+  components:
+    - type: ReligionMember
+      religion: Аэриус
+
+- type: trait
+  id: MedievalReligion2
+  name: trait-medieval-skills-religion2
+  description: trait-medieval-skills-religion2-desc
+  category: MedievalReligion
+  cost: 1
+  components:
+    - type: ReligionMember
+      religion: Терра
+
+- type: trait
+  id: MedievalReligion3
+  name: trait-medieval-skills-religion3
+  description: trait-medieval-skills-religion3-desc
+  category: MedievalReligion
+  cost: 1
+  components:
+    - type: ReligionMember
+      religion: Пиркс
+
+- type: trait
+  id: MedievalReligion4
+  name: trait-medieval-skills-religion4
+  description: trait-medieval-skills-religion4-desc
+  category: MedievalReligion
+  cost: 1
+  components:
+    - type: ReligionMember
+      religion: Калинда
+
+- type: trait
+  id: MedievalReligion5
+  name: trait-medieval-skills-religion5
+  description: trait-medieval-skills-religion5-desc
+  category: MedievalReligion
+  cost: 1
+  components:
+    - type: ReligionMember
+      religion: Магнус
+
+- type: trait
+  id: MedievalReligion6
+  name: trait-medieval-skills-religion6
+  description: trait-medieval-skills-religion6-desc
+  category: MedievalReligion
+  cost: 1
+  components:
+    - type: ReligionMember
+      religion: Морбиус
+
+- type: trait
+  id: MedievalReligion7
+  name: trait-medieval-skills-religion7
+  description: trait-medieval-skills-religion7-desc
+  category: MedievalReligion
+  cost: 1
+  components:
+    - type: ReligionMember
+      religion: Тенебрис
+
+- type: trait
+  id: MedievalReligion8
+  name: trait-medieval-skills-religion8
+  description: trait-medieval-skills-religion8-desc
+  category: MedievalReligion
+  cost: 1
+  components:
+    - type: ReligionMember
+      religion: Валтор
+
+- type: trait
+  id: MedievalReligion9
+  name: trait-medieval-skills-religion9
+  description: trait-medieval-skills-religion9-desc
+  category: MedievalReligion
+  cost: 1
+  components:
+    - type: ReligionMember
+      religion: Нексар

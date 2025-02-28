@@ -7,7 +7,7 @@
     - to: armor
       steps:
       - material: Bones
-        amount: 6
+        amount: 16 # Imperial Medieval
         doAfter: 2
   - node: armor
     entity: ClothingOuterArmorBone
@@ -21,7 +21,7 @@
     - to: helmet
       steps:
       - material: Bones
-        amount: 4
+        amount: 8 # Imperial Medieval
         doAfter: 1
   - node: helmet
     entity: ClothingHeadHelmetBone

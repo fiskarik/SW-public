@@ -1,0 +1,3975 @@
+# MEDIEVAL TRAVELLER
+
+- type: roleLoadout
+  id: JobMedievalTraveller
+  groups:
+  - TravellerHead
+  - TravellerJumpsuit
+  - MedievalBackpack
+  #- SecurityOuterClothing
+  - MedievalShoes
+  #- SecurityPDA
+  - MedievalBelt
+  #- SurvivalSecurity
+  - MedievalTrinkets
+  #- GroupSpeciesBreathToolSecurity
+  - MedievalGloves
+
+- type: loadoutGroup
+  id: TravellerHead
+  name: loadout-group-traveller-head
+  minLimit: 0
+  loadouts:
+  - TravellerArcher
+  - TravellerFarmer
+  - TravellerHood
+  - ClothingHeadHatCowboyBrown
+  - InnkeeperMedievalClothingHeadCloth
+
+- type: loadout
+  id: TravellerArcher
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    head: MedievalClothingHeadArcherHat
+
+- type: loadout
+  id: TravellerFarmer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    head: ClothingHeadHatStrawHat
+
+- type: loadout
+  id: TravellerHood
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    head: MedievalClothingHeadHelmetHood
+
+- type: loadoutGroup
+  id: TravellerJumpsuit
+  name: loadout-group-traveller-jumpsuit
+  loadouts:
+  - TravellerDefault
+  - TravellerDefault2
+  - TravellerFine1
+  - TravellerFine2
+  - TravellerFine3
+  - TravellerFine4
+  - TravellerFine5
+  - TravellerFine6
+  - TravellerFine7
+  - TravellerFine8
+  - TravellerFine9
+  - TravellerFine10
+  - TravellerFine11
+  - TravellerFine12
+  - TravellerFine13
+  - TravellerFine14
+  - TravellerFine15
+  - TravellerBeaty1
+  - TravellerBeaty2
+  - TravellerBeaty3
+  - TravellerBeaty4
+  - TravellerBeaty5
+  - TravellerBeaty6
+  - TravellerBeaty7
+  - TravellerBeaty8
+  - TravellerBeaty9
+  - TravellerBeaty10
+  - TravellerBeaty11
+  - TravellerBeaty12
+  - TravellerBeaty13
+  - TravellerBeaty14
+  - TravellerBeaty15
+  - TravellerBeaty16
+  - TravellerBeaty17
+  - TravellerBeaty18
+  - TravellerBeaty19
+  - TravellerBeaty20
+  - TravellerBeaty21
+  - TravellerGold
+  - TravellerGold2
+  - TravellerGold3
+  - TravellerGold4
+
+
+- type: loadout
+  id: TravellerDefault
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth24
+
+- type: loadout
+  id: TravellerDefault2
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth3
+
+- type: loadout
+  id: TravellerFine1
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth21
+
+- type: loadout
+  id: TravellerFine2
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth2
+
+- type: loadout
+  id: TravellerFine3
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth10
+
+- type: loadout
+  id: TravellerFine4
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth20
+
+- type: loadout
+  id: TravellerFine5
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth8
+
+- type: loadout
+  id: TravellerFine6
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth11
+
+- type: loadout
+  id: TravellerFine7
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth33
+
+- type: loadout
+  id: TravellerFine8
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth37
+
+- type: loadout
+  id: TravellerFine9
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth38
+
+- type: loadout
+  id: TravellerFine10
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth39
+
+- type: loadout
+  id: TravellerFine11
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth48
+
+- type: loadout
+  id: TravellerFine12
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth45
+
+- type: loadout
+  id: TravellerFine13
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth60
+
+- type: loadout
+  id: TravellerFine14
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth62
+
+- type: loadout
+  id: TravellerFine15
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth63
+
+- type: loadout
+  id: TravellerBeaty1
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth19
+
+- type: loadout
+  id: TravellerBeaty2
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth15
+
+- type: loadout
+  id: TravellerBeaty3
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth18
+
+- type: loadout
+  id: TravellerBeaty4
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth35
+
+- type: loadout
+  id: TravellerBeaty5
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth36
+
+- type: loadout
+  id: TravellerBeaty6
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth40
+
+- type: loadout
+  id: TravellerBeaty7
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth41
+
+- type: loadout
+  id: TravellerBeaty8
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth42
+
+- type: loadout
+  id: TravellerBeaty9
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth43
+
+- type: loadout
+  id: TravellerBeaty10
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth44
+
+- type: loadout
+  id: TravellerBeaty11
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth46
+
+- type: loadout
+  id: TravellerBeaty12
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth47
+
+- type: loadout
+  id: TravellerBeaty13
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth49
+
+- type: loadout
+  id: TravellerBeaty14
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth50
+
+- type: loadout
+  id: TravellerBeaty15
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth51
+
+- type: loadout
+  id: TravellerBeaty16
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth52
+
+- type: loadout
+  id: TravellerBeaty17
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth53
+
+- type: loadout
+  id: TravellerBeaty18
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth54
+
+- type: loadout
+  id: TravellerBeaty19
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth55
+
+- type: loadout
+  id: TravellerBeaty20
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth56
+
+- type: loadout
+  id: TravellerBeaty21
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth61
+
+- type: loadout
+  id: TravellerGold
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer30hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth7
+
+- type: loadout
+  id: TravellerGold2
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer30hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth57
+
+- type: loadout
+  id: TravellerGold3
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer30hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth58
+
+- type: loadout
+  id: TravellerGold4
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer30hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth59
+
+- type: loadoutGroup
+  id: MedievalBackpack
+  name: loadout-group-medieval-backpack
+  loadouts:
+  - MedievalBackpackDefault
+  - MedievalBackpackUpgade
+  - MedievalBackpackUpgade2
+
+- type: loadout
+  id: MedievalBackpackDefault
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: TravellerTimer30hours
+  equipment:
+    back: MedievalClothingBackpackSatchelLeather
+
+- type: loadout
+  id: MedievalBackpackUpgade
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer4hours
+  equipment:
+    back: MedievalClothingBackpackSatchelLeather2
+
+- type: loadout
+  id: MedievalBackpackUpgade2
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer10hours
+  equipment:
+    back: MedievalClothingBackpackSatchelLeather3
+
+- type: loadoutGroup
+  id: MedievalShoes
+  name: loadout-group-medieval-shoes
+  loadouts:
+  - MedievalShoesSapogi
+  - MedievalClothingShoesLeather
+  - MedievalShoesSapogiHigh
+  - ClothingShoesBootsWork
+  - ClothingShoesBootsSalvage
+  - MedievalShoesSapogiRobin
+  - ClothingShoesCult
+  - ClothingShoesBootsCowboyBlack
+  - ClothingShoesBootsCowboyBrown
+  - MedievalShoesValenki
+  - MedievalBastShoes
+  - ClothingShoesBootsLaceup
+
+
+- type: loadout
+  id: MedievalShoesSapogi
+  equipment:
+    shoes: MedievalShoesSapogi
+
+- type: loadout
+  id: MedievalShoesSapogiHigh
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer10hours
+  equipment:
+    shoes: MedievalShoesSapogiHigh
+
+- type: loadout
+  id: MedievalShoesSapogiRobin
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer30hours
+  equipment:
+    shoes: MedievalShoesSapogiRobin
+
+- type: loadout
+  id: ClothingShoesBootsWork
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MercTimer10hours
+  equipment:
+    shoes: ClothingShoesBootsWork
+
+- type: loadout
+  id: ClothingShoesBootsSalvage
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TravellerTimer10hours
+  equipment:
+    shoes: ClothingShoesBootsSalvage
+
+- type: loadout
+  id: ClothingShoesCult
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CollegiumTimer10hours
+  equipment:
+    shoes: ClothingShoesCult
+
+- type: loadout
+  id: ClothingShoesBootsCowboyBlack
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BandTimer10hours
+  equipment:
+    shoes: ClothingShoesBootsCowboyBlack
+
+- type: loadout
+  id: ClothingShoesBootsCowboyBrown
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LegionTimer10hours
+  equipment:
+    shoes: ClothingShoesBootsCowboyBrown
+
+- type: loadout
+  id: MedievalShoesValenki
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: InsurgencyTimer10hours
+  equipment:
+    shoes: MedievalShoesValenki
+
+- type: loadout
+  id: MedievalBastShoes
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TribeTimer10hours
+  equipment:
+    shoes: MedievalBastShoes
+
+- type: loadout
+  id: ClothingShoesBootsLaceup
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TradersTimer10hours
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+
+- type: loadout
+  id: MedievalClothingShoesLeather
+  equipment:
+    shoes: MedievalClothingShoesLeather
+
+
+- type: loadoutGroup
+  id: MedievalBelt
+  name: loadout-group-medieval-belt
+  minLimit: 0
+  loadouts:
+  - MedievalCoinBag
+
+- type: loadout
+  id: MedievalCoinBag
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TradersTimer10hours
+  equipment:
+    belt: MedievalCoinBag
+
+- type: loadoutGroup
+  id: MedievalTrinkets
+  name: loadout-group-trinkets-mdv
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - MedievalServerMap
+  - MedievalRevent25
+  - MedievalDaggerT3
+  - MedievalHatchet
+  - MedievalWineskin
+  - MedievalBeaker
+  #- MedievalSpellbookLight
+  - MedievalBrutepack
+  - Ointment
+  - Gauze
+  - MedievalMaskFace
+  - MedievalPaper
+
+- type: loadoutGroup
+  id: MedievalTrinkets3
+  name: loadout-group-trinkets-mdv
+  minLimit: 0
+  maxLimit: 3
+  loadouts:
+  - MedievalServerMap
+  - MedievalRevent25
+  - MedievalDaggerT3
+  - MedievalHatchet
+  - MedievalWineskin
+  - MedievalBeaker
+  #- MedievalSpellbookLight
+  - MedievalBrutepack
+  - Ointment
+  - Gauze
+  - MedievalMaskFace
+  - MedievalPaper
+
+- type: loadout
+  id: MedievalRevent25
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MercTimer10hours
+  storage:
+    back:
+    - MedievalRevent25
+
+- type: loadout
+  id: MedievalServerMap
+  storage:
+    back:
+    - MedievalServerMap
+
+- type: loadout
+  id: MedievalDaggerT3
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LegionAndInsurgencyTimer5hours
+  storage:
+    back:
+    - MedievalDaggerT3
+
+- type: loadout
+  id: MedievalWineskin
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TribeTimer10hours
+  storage:
+    back:
+    - MedievalWineskin
+
+- type: loadout
+  id: MedievalHatchet
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BumTimer10hours
+  storage:
+    back:
+    - MedievalHatchet
+
+- type: loadout
+  id: MedievalBeaker
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: InnkeeperTimer10hours
+  storage:
+    back:
+    - MedievalBeaker
+
+- type: loadout
+  id: MedievalSpellbookLight
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CollegiumTimer30hours
+  storage:
+    back:
+    - MedievalSpellbookLight
+
+- type: loadout
+  id: MedievalMaskFace
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BandTimer10hours
+  equipment:
+    mask: MedievalMaskFace
+
+- type: loadout
+  id: MedievalPaper
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ChaplainTimer4hours
+  storage:
+    back:
+    - MedievalPaper
+
+- type: loadout
+  id: Ointment
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer10hours
+  storage:
+    back:
+    - Ointment
+
+- type: loadout
+  id: Gauze
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer10hours
+  storage:
+    back:
+    - Gauze
+
+- type: loadout
+  id: MedievalBrutepack
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer10hours
+  storage:
+    back:
+    - MedievalBrutepack
+
+- type: loadoutGroup
+  id: MedievalGloves
+  minLimit: 0
+  name: loadout-group-medieval-gloves
+  loadouts:
+  - ClothingHandsGlovesColorBlack
+  - MedievalClothingHandsGlovesColorBlack
+  - ClothingHandsGlovesColorLightBrown
+  - MedievalClothingHandsGlovesColorLightBrown
+  - ClothingHandsGlovesColorBrown
+  - MedievalClothingHandsGlovesColorBrown
+  - MedievalGlovesBlacksmith
+
+- type: loadoutGroup
+  id: MedievalCollegiumHead
+  minLimit: 1
+  name: loadout-group-medieval-head-collegium
+  loadouts:
+  - WitchersPurpleHat
+  - MedievalClothingHeadHelmetCharmerLight
+
+- type: loadout
+  id: WitchersPurpleHat
+  equipment:
+    head: WitchersPurpleHat
+
+- type: loadout
+  id: MedievalClothingHeadHelmetCharmerLight
+  equipment:
+    head: MedievalClothingHeadHelmetCharmerLight
+
+- type: loadoutGroup
+  id: MedievalGlovesWithIron
+  minLimit: 0
+  name: loadout-group-medieval-gloves
+  loadouts:
+  - ClothingHandsGlovesColorBlack
+  - MedievalClothingHandsGlovesColorBlack
+  - ClothingHandsGlovesColorLightBrown
+  - MedievalClothingHandsGlovesColorLightBrown
+  - ClothingHandsGlovesColorBrown
+  - MedievalClothingHandsGlovesColorBrown
+  - MedievalGlovesBlacksmith
+  - MedievalIronGlovesBrig
+  - MedievalIronGloves
+  - MedievalIronGlovesBear
+
+- type: loadout
+  id: ClothingHandsGlovesColorBlack
+  equipment:
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: loadout
+  id: ClothingHandsGlovesColorLightBrown
+  equipment:
+    gloves: ClothingHandsGlovesColorLightBrown
+
+- type: loadout
+  id: ClothingHandsGlovesColorBrown
+  equipment:
+    gloves: ClothingHandsGlovesColorBrown
+
+- type: loadout
+  id: MedievalClothingHandsGlovesColorBlack
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer4hours
+  equipment:
+    gloves: MedievalClothingHandsGlovesColorBlack
+
+- type: loadout
+  id: MedievalClothingHandsGlovesColorLightBrown
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer4hours
+  equipment:
+    gloves: MedievalClothingHandsGlovesColorLightBrown
+
+- type: loadout
+  id: MedievalClothingHandsGlovesColorBrown
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer4hours
+  equipment:
+    gloves: MedievalClothingHandsGlovesColorBrown
+
+- type: loadout
+  id: MedievalGlovesBlacksmith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CraftersTimer10hours
+  equipment:
+    gloves: MedievalGlovesBlacksmith
+
+- type: loadout
+  id: MedievalIronGloves
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer10hours
+  equipment:
+    gloves: MedievalIronGloves
+
+- type: loadout
+  id: MedievalIronGlovesBrig
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer10hours
+  equipment:
+    gloves: MedievalIronGlovesBrig
+
+- type: loadout
+  id: MedievalIronGlovesBear
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MedievalTimer10hours
+  equipment:
+    gloves: MedievalIronGlovesBear
+
+    #shoes: АЙДИ_ОБУВЬ
+    #outerClothing: АЙДИ_БРОНЬ
+    #jumpsuit: АЙДИ_КОМБЕЗ
+    #back: АЙДИ_РЮКЗАК
+    #pocket1: АЙДИ_КАРМАН_1
+    #pocket2: АЙДИ_КАРМАН_2
+    #belt: АЙДИ_ПОЯС
+    #neck: АЙДИ_ГАЛСТУК/ПЛАЩ
+    #mask: АЙДИ_МАСКА
+    #gloves: АЙДИ_ПЕРЧАТКИ
+    #head: АЙДИ_ШЛЕМ
+    #eyes: АЙДИ_ОЧКИ
+    #ears: АЙДИ_НАУШНИКИ
+
+
+
+- type: playTimeTracker
+  id: JobMedievalTraveller
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalTraveller
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: traveller
+  jobName: job-name-traveller
+
+- type: job
+  id: MedievalTraveller
+  name: job-name-traveller
+  description: job-description-traveller
+  playTimeTracker: JobMedievalTraveller
+  startingGear: MedievalTravellerGear
+  icon: "JobIconMedievalTraveller"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "вольные"
+    - type: MedievalJobSpawn
+      spawnType: Default
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+
+- type: startingGear
+  id: MedievalTravellerGear
+  equipment:
+  #  ears: ClothingHeadsetSecurity
+    pocket1: MedievalRevent10
+    pocket2: MedievalRevent10
+  #storage:
+  #  back:
+  #  - Flash
+  #  - MagazinePistol
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# MEDIEVAL AVANTURIST
+
+- type: startingGear
+  id: MedievalAvanturistGear
+  equipment:
+    pocket1: MedievalRevent25
+    pocket2: MedievalRevent10
+
+- type: playTimeTracker
+  id: JobMedievalAvanturist
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalAvanturist
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: avanturist
+  jobName: job-name-avanturist
+
+- type: job
+  id: MedievalAvanturist
+  sponsorsOnly: true
+  name: job-name-avanturist
+  description: job-description-avanturist
+  playTimeTracker: JobMedievalAvanturist
+  startingGear: MedievalAvanturistGear
+  icon: "JobIconMedievalAvanturist"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "вольные"
+    - type: MedievalJobSpawn
+      spawnType: Default
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+
+- type: roleLoadout
+  id: JobMedievalAvanturist
+  groups:
+  - TravellerHead
+  - TravellerJumpsuit
+  - MedievalBackpack
+  #- SecurityOuterClothing
+  - MedievalShoes
+  #- SecurityPDA
+  - MedievalBelt
+  #- SurvivalSecurity
+  - MedievalTrinkets3
+  #- GroupSpeciesBreathToolSecurity
+  - MedievalGloves
+
+# MEDIEVAL BARD
+
+- type: startingGear
+  id: MedievalBardGear
+  equipment:
+    pocket1: MedievalRevent10
+
+- type: playTimeTracker
+  id: JobMedievalBard
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalBard
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: bard
+  jobName: job-name-bard
+
+- type: job
+  id: MedievalBard
+  name: job-name-bard
+  description: job-description-bard
+  playTimeTracker: JobMedievalBard
+  startingGear: MedievalBardGear
+  icon: "JobIconMedievalBard"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "вольные"
+    - type: MedievalJobSpawn
+      spawnType: Default
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+
+- type: roleLoadout
+  id: JobMedievalBard
+  groups:
+  - BardHead
+  - BardJumpsuit
+  - MedievalBackpack
+  #- SecurityOuterClothing
+  - MedievalShoes
+  #- SecurityPDA
+  - MedievalBelt
+  #- SurvivalSecurity
+  - MedievalTrinkets
+  - MedievalMusic
+  #- GroupSpeciesBreathToolSecurity
+  - MedievalGloves
+
+- type: loadoutGroup
+  id: BardHead
+  name: loadout-group-traveller-head
+  minLimit: 0
+  loadouts:
+  - ClothingHeadHatCowboyBrown
+  - TravellerArcher
+  - ClothingOfficerHeadMinuteman
+  - ClothingHeadHatCowboyBlack
+  - MedievalClothingHeadHelmetJester
+  - ClothingHeadHatTophat
+  - ClothingHeadFlowerCentComGold
+  - ClothingHeadHatAnimalMonkey
+
+  #- TravellerHood
+
+- type: loadout
+  id: ClothingHeadHatCowboyBrown
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer4hours
+  equipment:
+    head: ClothingHeadHatCowboyBrown
+
+- type: loadout
+  id: ClothingOfficerHeadMinuteman
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer4hours
+  equipment:
+    head: ClothingOfficerHeadMinuteman
+
+- type: loadout
+  id: MedievalClothingHeadHelmetJester
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer4hours
+  equipment:
+    head: MedievalClothingHeadHelmetJester
+
+- type: loadout
+  id: ClothingHeadHatCowboyBlack
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer4hours
+  equipment:
+    head: ClothingHeadHatCowboyBlack
+
+- type: loadout
+  id: ClothingHeadHatTophat
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer10hours
+  equipment:
+    head: ClothingHeadHatTophat
+
+- type: loadout
+  id: ClothingHeadFlowerCentComGold
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer10hours
+  equipment:
+    head: ClothingHeadFlowerCentComGold
+
+- type: loadout
+  id: ClothingHeadHatAnimalMonkey
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BumTimer30hours
+  equipment:
+    head: ClothingHeadHatAnimalMonkey
+
+- type: loadoutGroup
+  id: BardJumpsuit
+  name: loadout-group-traveller-jumpsuit
+  loadouts:
+  - BardDefault
+  - BardBeaty1
+  - BardBeaty2
+  - BardReallyGood
+  - BardGor1
+  - BardGor2
+
+- type: loadout
+  id: BardDefault
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: BardTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth4
+
+- type: loadout
+  id: BardBeaty1
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer4hours
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCossack
+
+- type: loadout
+  id: BardBeaty2
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth25
+
+- type: loadout
+  id: BardReallyGood
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth18
+
+- type: loadout
+  id: BardGor1
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer30hours
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtJanimaidmini
+
+- type: loadout
+  id: BardGor2
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BardTimer30hours
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtJanimaid
+
+- type: loadoutGroup
+  id: MedievalMusic
+  name: loadout-group-music-mdv
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - MedievalMusicInstrument1
+  - MedievalMusicInstrument2
+  - MedievalMusicInstrument3
+  - MedievalMusicInstrument4
+  - MedievalMusicInstrument5
+  - MedievalMusicInstrument6
+  - MedievalMusicInstrument7
+
+- type: loadout
+  id: MedievalMusicInstrument1
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: BardTimer30hours
+  storage:
+    back:
+    - MedievalBanjoInstrument
+
+- type: loadout
+  id: MedievalMusicInstrument2
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: BardTimer30hours
+  storage:
+    back:
+    - TromboneInstrument
+
+- type: loadout
+  id: MedievalMusicInstrument3
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: BardTimer30hours
+  storage:
+    back:
+    - FluteInstrument
+
+- type: loadout
+  id: MedievalMusicInstrument4
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: BardTimer30hours
+  storage:
+    back:
+    - TrumpetInstrument
+
+- type: loadout
+  id: MedievalMusicInstrument5
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: BardTimer30hours
+  storage:
+    back:
+    - MusicBoxInstrument
+
+- type: loadout
+  id: MedievalMusicInstrument6
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: BardTimer30hours
+  storage:
+    back:
+    - BagpipeInstrument
+
+- type: loadout
+  id: MedievalMusicInstrument7
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: BardTimer30hours
+  storage:
+    back:
+    - HarmonicaInstrument
+
+
+
+# MEDIEVAL BOMZH (BUM)
+
+- type: startingGear
+  id: MedievalBumGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth9
+
+- type: playTimeTracker
+  id: JobMedievalBum
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalBum
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: bum
+  jobName: job-name-bum
+
+- type: job
+  id: MedievalBum
+  name: job-name-bum
+  description: job-description-bum
+  playTimeTracker: JobMedievalBum
+  startingGear: MedievalBumGear
+  icon: "JobIconMedievalBum"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "вольные"
+    - type: MedievalJobSpawn
+      spawnType: Default
+    - type: BadSmell
+      growTemp: 1
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjectiveBum
+
+# MEDIEVAL INNKEEPER
+
+- type: startingGear
+  id: MedievalInnkeeperGear
+  equipment:
+    pocket1: MedievalRevent25
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth12
+    id: MedievalKeyTavern
+
+- type: playTimeTracker
+  id: JobMedievalInnkeeper
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalInnkeeper
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: innkeeper
+  jobName: job-name-innkeeper
+
+- type: job
+  id: MedievalInnkeeper
+  name: job-name-innkeeper
+  description: job-description-innkeeper
+  playTimeTracker: JobMedievalInnkeeper
+  startingGear: MedievalInnkeeperGear
+  icon: "JobIconMedievalInnkeeper"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "вольные"
+    - type: MedievalJobSpawn
+      spawnType: LegionTrader
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+
+- type: roleLoadout
+  id: JobMedievalInnkeeper
+  groups:
+  - InnkeeperHead
+  #- BardJumpsuit
+  - MedievalBackpack
+  #- SecurityOuterClothing
+  - MedievalShoes
+  #- SecurityPDA
+  - MedievalBelt
+  - InnkeeperFartuk
+  #- SurvivalSecurity
+  - MedievalTrinkets
+  #- MedievalMusic
+  #- GroupSpeciesBreathToolSecurity
+  - MedievalGloves
+
+- type: loadoutGroup
+  id: InnkeeperHead
+  name: loadout-group-traveller-head
+  minLimit: 0
+  loadouts:
+  - ClothingHeadHatCowboyBrown
+  - InnkeeperMedievalClothingHeadCloth
+  #- ClothingOfficerHeadMinuteman
+  #- ClothingHeadHatCowboyBlack
+  #- MedievalClothingHeadHelmetJester
+  #- ClothingHeadHatTophat
+  #- ClothingHeadFlowerCentComGold
+  #- ClothingHeadHatAnimalMonkey
+
+- type: loadoutGroup
+  id: InnkeeperFartuk
+  name: loadout-group-traveller-fartuk
+  minLimit: 0
+  loadouts:
+  - InnkeeperFartukLeather
+
+- type: loadout
+  id: InnkeeperFartukLeather
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: InnkeeperTimer4hours
+  equipment:
+    outerClothing: MedievalClothingOuterApronChef
+
+- type: loadout
+  id: InnkeeperMedievalClothingHeadCloth
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: InnkeeperTimer4hours
+  equipment:
+    outerClothing: MedievalClothingHeadCloth
+
+# MEDIEVAL INNKEEPERN
+
+- type: startingGear
+  id: MedievalInnkeeperNGear
+  equipment:
+    pocket1: MedievalRevent25
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth12
+    id: MedievalKeyTavern
+
+- type: playTimeTracker
+  id: JobMedievalInnkeeperN
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalInnkeeperN
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: innkeeper
+  jobName: job-name-innkeeperN
+
+- type: job
+  id: MedievalInnkeeperN
+  name: job-name-innkeeperN
+  description: job-description-innkeeperN
+  playTimeTracker: JobMedievalInnkeeperN
+  startingGear: MedievalInnkeeperNGear
+  icon: "JobIconMedievalInnkeeperN"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "вольные"
+    - type: MedievalJobSpawn
+      spawnType: InsurgencyTrader
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+
+- type: roleLoadout
+  id: JobMedievalInnkeeperN
+  groups:
+  - InnkeeperHead
+  #- BardJumpsuit
+  - MedievalBackpack
+  #- SecurityOuterClothing
+  - MedievalShoes
+  #- SecurityPDA
+  - MedievalBelt
+  - InnkeeperFartuk
+  #- SurvivalSecurity
+  - MedievalTrinkets
+  #- MedievalMusic
+  #- GroupSpeciesBreathToolSecurity
+  - MedievalGloves
+
+# MEDIEVAL CHAPLAIN
+
+- type: startingGear
+  id: MedievalChaplainGear
+  equipment:
+    pocket1: MedievalRevent10
+    #belt: Bible
+
+- type: playTimeTracker
+  id: JobMedievalChaplain
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalChaplain
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: chaplain
+  jobName: job-name-chaplain-medieval
+
+- type: job
+  id: MedievalChaplain
+  name: job-name-chaplain-medieval
+  description: job-description-chaplain-medieval
+  playTimeTracker: JobMedievalChaplain
+  startingGear: MedievalChaplainGear
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Drou
+      inverted: true
+  icon: "JobIconMedievalChaplain"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: BibleUser #Lets them heal with bibles
+    - type: AddActionOnSpawn
+      actions:
+        - MedievalActionDivineTouchBeginner
+    - type: Friends
+      faction: "вольные"
+    - type: MedievalJobSpawn
+      spawnType: Default
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+
+- type: roleLoadout
+  id: JobMedievalChaplain
+  groups:
+  - ChaplainHeadMedieval
+  - ChaplainOuterMedieval
+  - ChaplainJumpsuitMedieval
+  - MedievalBackpack
+  - MedievalBiblie
+  - MedievalChaplainNeck
+  #- SecurityOuterClothing
+  - MedievalShoes
+  #- SecurityPDA
+  #- MedievalBelt
+  - ChaplainMaskMedieval
+  #- SurvivalSecurity
+  - MedievalTrinkets
+  #- MedievalMusic
+  #- GroupSpeciesBreathToolSecurity
+  - MedievalGloves
+
+- type: loadoutGroup
+  id: ChaplainJumpsuitMedieval
+  name: loadout-group-traveller-jumpsuit
+  loadouts:
+  - ChaplainDefaultMedieval
+  - ChaplainBeaty1
+  #- ChaplainBeaty2
+  #- BardReallyGood
+  #- BardGor1
+  #- BardGor2
+
+- type: loadout
+  id: ChaplainDefaultMedieval
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: BardTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth22
+
+- type: loadout
+  id: ChaplainBeaty1
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ChaplainTimer4hours
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMonasticRobeDark
+
+- type: loadoutGroup
+  id: MedievalBiblie
+  name: loadout-group-traveller-bible
+  loadouts:
+  - BibleDefault
+  - BibleUnholy
+  #- ChaplainBeaty2
+  #- BardReallyGood
+  #- BardGor1
+  #- BardGor2
+
+- type: loadout
+  id: BibleDefault
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: BardTimer4hours
+  equipment:
+    belt: Bible
+
+- type: loadout
+  id: BibleUnholy
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ChaplainTimer30hours
+  equipment:
+    belt: BibleNecronomicon
+
+- type: loadoutGroup
+  id: ChaplainHeadMedieval
+  name: loadout-group-traveller-head
+  minLimit: 0
+  loadouts:
+  - ChaplainClothingHeadHatHoodNunHood
+  - ChaplainClothingHeadHatPlaguedoctor
+
+- type: loadout
+  id: ChaplainClothingHeadHatPlaguedoctor
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ChaplainTimer10hours
+  equipment:
+    head: ClothingHeadHatPlaguedoctor
+
+- type: loadout
+  id: ChaplainClothingHeadHatHoodNunHood
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ChaplainTimer4hours
+  equipment:
+    head: ClothingHeadHatHoodNunHood
+
+- type: loadoutGroup
+  id: ChaplainMaskMedieval
+  name: loadout-group-traveller-mask
+  minLimit: 0
+  loadouts:
+  - ChaplainMedievalClothingMaskPlague
+
+- type: loadout
+  id: ChaplainMedievalClothingMaskPlague
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ChaplainTimer10hours
+  equipment:
+    head: MedievalClothingMaskPlague
+
+- type: loadoutGroup
+  id: MedievalChaplainNeck
+  name: loadout-group-traveller-epitrahal
+  minLimit: 0
+  loadouts:
+  - ChaplainMedievalClothingNeckStoleChaplain
+
+- type: loadout
+  id: ChaplainMedievalClothingNeckStoleChaplain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ChaplainTimer10hours
+  equipment:
+    head: ClothingNeckStoleChaplain
+
+- type: loadoutGroup
+  id: ChaplainOuterMedieval
+  name: loadout-group-traveller-outer
+  minLimit: 0
+  loadouts:
+  - MedievalClothingOuterHoodieChaplain
+  - MedievalClothingOuterNunRobe
+  - MedievalClothingOuterPlagueSuit
+
+- type: loadout
+  id: MedievalClothingOuterHoodieChaplain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ChaplainTimer4hours
+  equipment:
+    outerClothing: ClothingOuterHoodieChaplain
+
+- type: loadout
+  id: MedievalClothingOuterNunRobe
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ChaplainTimer4hours
+  equipment:
+    outerClothing: ClothingOuterNunRobe
+
+- type: loadout
+  id: MedievalClothingOuterPlagueSuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ChaplainTimer10hours
+  equipment:
+    outerClothing: ClothingOuterPlagueSuit
+
+# MEDIEVAL WANDERMAG
+
+- type: startingGear
+  id: MedievalWanderMagGear
+  equipment:
+    pocket1: MedievalRevent25
+    #belt: Bible
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth23
+    #back: MedievalClothingBackpackSatchelLeather
+  storage:
+    back:
+    - MedievalSpellBookRecodeWandermag
+
+- type: playTimeTracker
+  id: JobMedievalWanderMag
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalWanderMag
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: wandernag
+  jobName: job-name-wanderMag-medieval
+
+- type: job
+  id: MedievalWanderMag
+  sponsorsOnly: true
+  name: job-name-wanderMag-medieval
+  description: job-description-wanderMag-medieval
+  playTimeTracker: JobMedievalWanderMag
+  startingGear: MedievalWanderMagGear
+  icon: "JobIconMedievalWanderMag"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Mana
+      maxMana: 140
+      regen: 0.4
+    - type: Friends
+      faction: "вольные"
+    - type: MedievalJobSpawn
+      spawnType: Default
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Orc
+      inverted: true
+
+- type: roleLoadout
+  id: JobMedievalWanderMag
+  groups:
+  - TravellerHead
+  #- ChaplainOuterMedieval
+  #- ChaplainJumpsuitMedieval
+  - MedievalBackpack
+  #- MedievalBiblie
+  #- MedievalChaplainNeck
+  #- SecurityOuterClothing
+  - MedievalShoes
+  #- SecurityPDA
+  #- MedievalBelt
+  #- ChaplainMaskMedieval
+  #- SurvivalSecurity
+  #- MedievalTrinkets
+  #- MedievalMusic
+  #- GroupSpeciesBreathToolSecurity
+  - MedievalGloves
+
+# MEDIEVAL LEGION RECRUIT
+
+- type: startingGear
+  id: MedievalLegionRecruitGear
+  equipment:
+    pocket1: MedievalRevent25
+    #belt: Bible
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth26
+    head: MedievalClothingHeadHelmetLegionRecruit
+    neck: MedievalClothingNeckCloakClanEagle
+    id: MedievalLeatherKey
+
+- type: playTimeTracker
+  id: JobMedievalLegionRecruit
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalLegionRecruit
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: legion_recruit
+  jobName: job-name-legionRecruit-medieval
+
+- type: job
+  id: MedievalLegionRecruit
+  name: job-name-legionRecruit-medieval
+  description: job-description-legionRecruit-medieval
+  playTimeTracker: JobMedievalLegionRecruit
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      inverted: true
+    #- !type:OverallPlaytimeRequirement
+    #  time: 6000 #Imperial role timers
+  startingGear: MedievalLegionRecruitGear
+  icon: "JobIconMedievalLegionRecruit"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "легион"
+    - type: MedievalJobSpawn
+      spawnType: Legion
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+    - type: MedievalPasportPerson
+      personJob: "[color=cyan]рекрут легиона[/color]"
+      pasport: MedievalPasportLegion
+
+- type: roleLoadout
+  id: JobMedievalLegionRecruit
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  #- MedievalBeltLegion
+  - MedievalTrinkets
+  - MedievalGloves
+
+- type: loadoutGroup
+  id: MedievalBeltLegion
+  name: loadout-group-medieval-weaapons-legion
+  loadouts:
+  - LegionMedievalFalshionT3Legion
+  - LegionMedievalFalshionT3LegionGold
+
+- type: loadout
+  id: LegionMedievalFalshionT3Legion
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: TradersTimer10hours
+  equipment:
+    belt: MedievalFalshionT3Legion
+
+- type: loadout
+  id: LegionMedievalFalshionT3LegionGold
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: LegionTimer30hours
+  equipment:
+    belt: MedievalFalshionT3LegionGold
+
+# MEDIEVAL LEGION LEGIONER
+
+- type: startingGear
+  id: MedievalLegionLegionerGear
+  equipment:
+    pocket1: MedievalRevent25
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth26
+    head: MedievalClothingHeadHelmetLegionLegioner
+    neck: MedievalClothingNeckCloakClanEagle
+    id: MedievalLeatherKey
+
+- type: playTimeTracker
+  id: JobMedievalLegionLegioner
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalLegionLegioner
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: legion_common
+  jobName: job-name-legionLegioner-medieval
+
+- type: job
+  id: MedievalLegionLegioner
+  name: job-name-legionLegioner-medieval
+  description: job-description-legionLegioner-medieval
+  playTimeTracker: JobMedievalLegionLegioner
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      inverted: true
+    #- !type:DepartmentTimeRequirement
+    #  department: Legion
+    #  time: 7200 # Imperial medieval role timers (2 hours)
+  startingGear: MedievalLegionLegionerGear
+  icon: "JobIconMedievalLegionLegioner"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "легион"
+    - type: MedievalJobSpawn
+      spawnType: Legion
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+    - type: MedievalPasportPerson
+      personJob: "[color=cyan]легионер легиона[/color]"
+      pasport: MedievalPasportLegion
+
+- type: roleLoadout
+  id: JobMedievalLegionLegioner
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBeltLegion
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL LEGION Gateman
+
+- type: playTimeTracker
+  id: JobMedievalLegionGateman
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalLegionGateman
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: legion_gateman
+  jobName: job-name-legionGateman-medieval
+
+- type: job
+  id: MedievalLegionGateman
+  name: job-name-legionGateman-medieval
+  description: job-description-legionGateman-medieval
+  playTimeTracker: JobMedievalLegionGateman
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      inverted: true
+    #- !type:DepartmentTimeRequirement
+    #  department: Legion
+    #  time: 7200 # Imperial medieval role timers (2 hours)
+  startingGear: MedievalLegionLegionerGear
+  icon: "JobIconMedievalLegionGateman"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "легион"
+    - type: MedievalJobSpawn
+      spawnType: Legion
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+    - type: MedievalPasportPerson
+      personJob: "[color=cyan]вратничий легиона[/color]"
+      pasport: MedievalPasportLegion
+
+- type: roleLoadout
+  id: JobMedievalLegionGateman
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBeltLegion
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL LEGION OPCION
+
+- type: startingGear
+  id: MedievalLegionOpcionGear
+  equipment:
+    pocket1: MedievalRevent25
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth26
+    head: MedievalClothingHeadHelmetLegionOpcionWeak
+    neck: MedievalClothingNeckCloakClanEagle
+    id: MedievalLeatherKey
+
+- type: playTimeTracker
+  id: JobMedievalLegionOpcion
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalLegionOpcion
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: legion_veteran
+  jobName: job-name-legionOpcion-medieval
+
+- type: job
+  id: MedievalLegionOpcion
+  sponsorsOnly: true
+  name: job-name-legionOpcion-medieval
+  description: job-description-legionOpcion-medieval
+  playTimeTracker: JobMedievalLegionOpcion
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Legion
+  #    time: 36000 # Imperial medieval role timers (10 hours)
+  startingGear: MedievalLegionOpcionGear
+  icon: "JobIconMedievalLegionOpcion"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "легион"
+    - type: MedievalJobSpawn
+      spawnType: Legion
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    - type: MedievalPasportPerson
+      personJob: "[color=cyan]опцион легиона[/color]"
+      pasport: MedievalPasportLegion
+
+- type: roleLoadout
+  id: JobMedievalLegionOpcion
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBeltLegion
+  - MedievalTrinkets3
+  - MedievalGlovesWithIron
+
+# MEDIEVAL LEGION TRIBUN
+
+- type: startingGear
+  id: MedievalLegionTribunGear
+  equipment:
+    pocket1: MedievalRevent25
+    pocket2: MedievalKeyCargo
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth26
+    head: MedievalClothingHeadHelmetLegionOpcion
+    neck: MedievalClothingNeckCloakClanEagle
+    id: MedievalLeatherKey
+
+- type: playTimeTracker
+  id: JobMedievalLegionTribun
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalLegionTribun
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: legion_tribun
+  jobName: job-name-legionTribun-medieval
+
+- type: job
+  id: MedievalLegionTribun
+  name: job-name-legionTribun-medieval
+  description: job-description-legionTribun-medieval
+  playTimeTracker: JobMedievalLegionTribun
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Legion
+  #    time: 36000 # Imperial medieval role timers (10 hours)
+  startingGear: MedievalLegionTribunGear
+  icon: "JobIconMedievalLegionTribun"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "легион"
+    - type: MedievalJobSpawn
+      spawnType: Legion
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    - type: MedievalPasportPerson
+      personJob: "[color=cyan]трибун легиона[/color]"
+      pasport: MedievalPasportLegion
+
+- type: roleLoadout
+  id: JobMedievalLegionTribun
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBeltLegion
+  - MedievalTrinkets
+  - MedievalGlovesWithIron
+
+# MEDIEVAL LEGION LEGAT
+
+- type: startingGear
+  id: MedievalLegionLegatGear
+  equipment:
+    pocket1: MedievalRevent25
+    pocket2: MedievalKeyCargo
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth26
+    head: MedievalClothingHeadHelmetLegionLegat
+    neck: MedievalClothingNeckCloakClanEagle
+    shoes: MedievalClothingFeetSteel
+    id: MedievalLeatherKey
+
+- type: playTimeTracker
+  id: JobMedievalLegionLegat
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalLegionLegat
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: legion_leader
+  jobName: job-name-legionLegat-medieval
+
+- type: job
+  id: MedievalLegionLegat
+  name: job-name-legionLegat-medieval
+  description: job-description-legionLegat-medieval
+  playTimeTracker: JobMedievalLegionLegat
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Legion
+  #    time: 72000 # Imperial medieval role timers (20 hours)
+  startingGear: MedievalLegionLegatGear
+  icon: "JobIconMedievalLegionLegat"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "легион"
+    - type: MedievalJobSpawn
+      spawnType: Legion
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    - type: MedievalPasportPerson
+      personJob: "[color=cyan]легат легиона[/color]"
+      pasport: MedievalPasportLegion
+    - type: CloackMessage
+      action: CloackMessageActionLegion
+      faction: "leg"
+
+- type: roleLoadout
+  id: JobMedievalLegionLegat
+  groups:
+  - MedievalBackpack
+  #- MedievalShoes
+  - MedievalBeltLegion
+  - MedievalTrinkets
+  - MedievalGlovesWithIron
+
+# MEDIEVAL LegionMAG
+
+- type: startingGear
+  id: MedievalLegionMagGear
+  equipment:
+    pocket1: MedievalRevent25
+    pocket2: MedievalKeyCargo
+    #back: MedievalClothingBackpackSatchelLeather
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth26
+    head: MedievalClothingHeadHelmetCharmerLegion
+    outerClothing: MedievalClothingOuterArmorCharmerLightLegion
+    neck: MedievalClothingNeckCloakClanEagle
+    id: MedievalLeatherKey
+  storage:
+    back:
+    - MedievalSpellBookRecodeFactionLegion
+
+- type: playTimeTracker
+  id: JobMedievalLegionMag
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalLegionMag
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: legion_mag
+  jobName: job-name-legionMag-medieval
+
+- type: job
+  id: MedievalLegionMag
+  name: job-name-legionMag-medieval
+  description: job-description-legionMag-medieval
+  playTimeTracker: JobMedievalLegionMag
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      - Orc
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Legion
+  #    time: 72000 # Imperial medieval role timers (20 hours)
+  startingGear: MedievalLegionMagGear
+  icon: "JobIconMedievalLegionMag"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Mana
+      maxMana: 140
+      regen: 0.4
+    - type: Friends
+      faction: "легион"
+    - type: MedievalJobSpawn
+      spawnType: Legion
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    - type: MedievalPasportPerson
+      personJob: "[color=cyan]маг легиона[/color]"
+      pasport: MedievalPasportLegion
+
+- type: roleLoadout
+  id: JobMedievalLegionMag
+  groups:
+  #- TravellerHead
+  #- ChaplainOuterMedieval
+  #- ChaplainJumpsuitMedieval
+  - MedievalBackpack
+  #- MedievalBiblie
+  #- MedievalChaplainNeck
+  #- SecurityOuterClothing
+  - MedievalShoes
+  #- SecurityPDA
+  #- MedievalBelt
+  #- ChaplainMaskMedieval
+  #- SurvivalSecurity
+  #- MedievalTrinkets
+  #- MedievalMusic
+  #- GroupSpeciesBreathToolSecurity
+  - MedievalGloves
+
+# MEDIEVAL Insurgency RECRUIT
+
+- type: startingGear
+  id: MedievalInsurgencyRecruitGear
+  equipment:
+    pocket1: MedievalRevent25
+    #belt: Bible
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth20
+    head: MedievalClothingHeadHelmetFox1
+    neck: MedievalClothingNeckCloakClanFox
+    id: MedievalKeyGuard
+
+- type: playTimeTracker
+  id: JobMedievalInsurgencyRecruit
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalInsurgencyRecruit
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: ins_recruit
+  jobName: job-name-InsurgencyRecruit-medieval
+
+- type: job
+  id: MedievalInsurgencyRecruit
+  name: job-name-InsurgencyRecruit-medieval
+  description: job-description-InsurgencyRecruit-medieval
+  playTimeTracker: JobMedievalInsurgencyRecruit
+  #requirements:
+  #  - !type:OverallPlaytimeRequirement
+  #    time: 6000 #Imperial role timers
+  startingGear: MedievalInsurgencyRecruitGear
+  icon: "JobIconMedievalInsurgencyRecruit"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "мятежники"
+    - type: MedievalJobSpawn
+      spawnType: Insurgency
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+    - type: MedievalPasportPerson
+      personJob: "[color=red]фелаг мятежников[/color]"
+      pasport: MedievalPasportInsurgency
+
+- type: roleLoadout
+  id: JobMedievalInsurgencyRecruit
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  #- MedievalBeltInsurgency
+  - MedievalTrinkets
+  - MedievalGloves
+
+- type: loadoutGroup
+  id: MedievalBeltInsurgency
+  name: loadout-group-medieval-weaapons-legion
+  loadouts:
+  - InsurgencyMedievalFalshionT3Insurgency
+  - InsurgencyMedievalFalshionT3InsurgencyGold
+
+- type: loadout
+  id: InsurgencyMedievalFalshionT3Insurgency
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: TradersTimer10hours
+  equipment:
+    belt: MedievalFalshionT3Fox
+
+- type: loadout
+  id: InsurgencyMedievalFalshionT3InsurgencyGold
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: InsurgencyTimer30hours
+  equipment:
+    belt: MedievalFalshionT3FoxGold
+
+# MEDIEVAL Insurgency InsurgencyER
+
+- type: startingGear
+  id: MedievalInsurgencyInsurgencyerGear
+  equipment:
+    pocket1: MedievalRevent25
+    jumpsuit: ClothingUniformJumpsuitCasualRed
+    head: MedievalClothingHeadHelmetFox2
+    neck: MedievalClothingNeckCloakClanFox
+    id: MedievalKeyGuard
+
+- type: playTimeTracker
+  id: JobMedievalInsurgencyInsurgencyer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalInsurgencyInsurgencyer
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: ins_common
+  jobName: job-name-InsurgencyInsurgencyer-medieval
+
+- type: job
+  id: MedievalInsurgencyInsurgencyer
+  name: job-name-InsurgencyInsurgencyer-medieval
+  description: job-description-InsurgencyInsurgencyer-medieval
+  playTimeTracker: JobMedievalInsurgencyInsurgencyer
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Insurgency
+  #    time: 7200 # Imperial medieval role timers (2 hours)
+  startingGear: MedievalInsurgencyInsurgencyerGear
+  icon: "JobIconMedievalInsurgencyInsurgencyer"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "мятежники"
+    - type: MedievalJobSpawn
+      spawnType: Insurgency
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+    - type: MedievalPasportPerson
+      personJob: "[color=red]дружинник мятежников[/color]"
+      pasport: MedievalPasportInsurgency
+
+- type: roleLoadout
+  id: JobMedievalInsurgencyInsurgencyer
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBeltInsurgency
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL Insurgency Gateman
+
+- type: playTimeTracker
+  id: JobMedievalInsurgencyGateman
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalInsurgencyGateman
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: ins_gateman
+  jobName: job-name-insurgencyGateman-medieval
+
+- type: job
+  id: MedievalInsurgencyGateman
+  name: job-name-insurgencyGateman-medieval
+  description: job-description-insurgencyGateman-medieval
+  playTimeTracker: JobMedievalInsurgencyGateman
+  #requirements:
+    #- !type:DepartmentTimeRequirement
+    #  department: Insurgency
+    #  time: 7200 # Imperial medieval role timers (2 hours)
+  startingGear: MedievalInsurgencyInsurgencyerGear
+  icon: "JobIconMedievalInsurgencyGateman"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "мятежники"
+    - type: MedievalJobSpawn
+      spawnType: Insurgency
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+    - type: MedievalPasportPerson
+      personJob: "[color=red]вратничий мятежников[/color]"
+      pasport: MedievalPasportInsurgency
+
+- type: roleLoadout
+  id: JobMedievalInsurgencyGateman
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBeltInsurgency
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL Insurgency OPCION
+
+- type: startingGear
+  id: MedievalInsurgencyOpcionGear
+  equipment:
+    pocket1: MedievalRevent25
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth5
+    head: MedievalClothingHeadHelmetFox2_5
+    neck: MedievalClothingNeckCloakClanFox
+    id: MedievalKeyGuard
+
+- type: playTimeTracker
+  id: JobMedievalInsurgencyOpcion
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalInsurgencyOpcion
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: ins_veteran
+  jobName: job-name-InsurgencyOpcion-medieval
+
+- type: job
+  id: MedievalInsurgencyOpcion
+  sponsorsOnly: true
+  name: job-name-InsurgencyOpcion-medieval
+  description: job-description-InsurgencyOpcion-medieval
+  playTimeTracker: JobMedievalInsurgencyOpcion
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Insurgency
+  #    time: 36000 # Imperial medieval role timers (10 hours)
+  startingGear: MedievalInsurgencyOpcionGear
+  icon: "JobIconMedievalInsurgencyOpcion"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "мятежники"
+    - type: MedievalJobSpawn
+      spawnType: Insurgency
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    - type: MedievalPasportPerson
+      personJob: "[color=red]варяг мятежников[/color]"
+      pasport: MedievalPasportInsurgency
+
+- type: roleLoadout
+  id: JobMedievalInsurgencyOpcion
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBeltInsurgency
+  - MedievalTrinkets3
+  - MedievalGlovesWithIron
+
+# MEDIEVAL Insurgency TRIBUN
+
+- type: startingGear
+  id: MedievalInsurgencyTribunGear
+  equipment:
+    pocket1: MedievalRevent25
+    pocket2: MedievalGuardKey
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth5
+    head: MedievalClothingHeadHelmetFox3
+    neck: MedievalClothingNeckCloakClanFox
+    id: MedievalKeyGuard
+- type: playTimeTracker
+  id: JobMedievalInsurgencyTribun
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalInsurgencyTribun
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: ins_tribun
+  jobName: job-name-InsurgencyTribun-medieval
+
+- type: job
+  id: MedievalInsurgencyTribun
+  name: job-name-InsurgencyTribun-medieval
+  description: job-description-InsurgencyTribun-medieval
+  playTimeTracker: JobMedievalInsurgencyTribun
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Insurgency
+  #    time: 36000 # Imperial medieval role timers (10 hours)
+  startingGear: MedievalInsurgencyTribunGear
+  icon: "JobIconMedievalInsurgencyTribun"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "мятежники"
+    - type: MedievalJobSpawn
+      spawnType: Insurgency
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    - type: MedievalPasportPerson
+      personJob: "[color=red]форинг мятежников[/color]"
+      pasport: MedievalPasportInsurgency
+
+- type: roleLoadout
+  id: JobMedievalInsurgencyTribun
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBeltInsurgency
+  - MedievalTrinkets
+  - MedievalGlovesWithIron
+
+# MEDIEVAL Insurgency LEGAT
+
+- type: startingGear
+  id: MedievalInsurgencyLegatGear
+  equipment:
+    pocket1: MedievalRevent25
+    pocket2: MedievalGuardKey
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth5
+    head: MedievalClothingHeadHelmetFox4
+    neck: MedievalClothingNeckCloakClanFox
+    id: MedievalKeyGuard
+    shoes: MedievalClothingFeetSteel
+
+- type: playTimeTracker
+  id: JobMedievalInsurgencyLegat
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalInsurgencyLegat
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: ins_leader
+  jobName: job-name-InsurgencyLegat-medieval
+
+- type: job
+  id: MedievalInsurgencyLegat
+  name: job-name-InsurgencyLegat-medieval
+  description: job-description-InsurgencyLegat-medieval
+  playTimeTracker: JobMedievalInsurgencyLegat
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Insurgency
+  #    time: 72000 # Imperial medieval role timers (20 hours)
+  startingGear: MedievalInsurgencyLegatGear
+  icon: "JobIconMedievalInsurgencyLegat"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "мятежники"
+    - type: MedievalJobSpawn
+      spawnType: Insurgency
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    - type: MedievalPasportPerson
+      personJob: "[color=red]ярл мятежников[/color]"
+      pasport: MedievalPasportInsurgency
+    - type: CloackMessage
+      action: CloackMessageActionIns
+      faction: "ins"
+
+- type: roleLoadout
+  id: JobMedievalInsurgencyLegat
+  groups:
+  - MedievalBackpack
+  #- MedievalShoes
+  - MedievalBeltInsurgency
+  - MedievalTrinkets
+  - MedievalGlovesWithIron
+
+# MEDIEVAL InsurgencyMAG
+
+- type: startingGear
+  id: MedievalInsurgencyMagGear
+  equipment:
+    pocket1: MedievalRevent25
+    pocket2: MedievalGuardKey
+    #back: MedievalClothingBackpackSatchelLeather
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth5
+    head: MedievalClothingHeadHelmetCharmerIns
+    outerClothing: MedievalClothingOuterArmorCharmerLightIns
+    neck: MedievalClothingNeckCloakClanFox
+    id: MedievalKeyGuard
+  storage:
+    back:
+    - MedievalSpellBookRecodeFactionInsurgency
+
+- type: playTimeTracker
+  id: JobMedievalInsurgencyMag
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalInsurgencyMag
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: ins_mag
+  jobName: job-name-InsurgencyMag-medieval
+
+- type: job
+  id: MedievalInsurgencyMag
+  name: job-name-InsurgencyMag-medieval
+  description: job-description-InsurgencyMag-medieval
+  playTimeTracker: JobMedievalInsurgencyMag
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Orc
+      inverted: true
+  #  - !type:OverallPlaytimeRequirement
+  #    time: 36000 #Imperial role timers
+  startingGear: MedievalInsurgencyMagGear
+  icon: "JobIconMedievalInsurgencyMag"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Mana
+      maxMana: 140
+      regen: 0.4
+    - type: Friends
+      faction: "мятежники"
+    - type: MedievalJobSpawn
+      spawnType: Insurgency
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    - type: MedievalPasportPerson
+      personJob: "[color=red]маг мятежников[/color]"
+      pasport: MedievalPasportInsurgency
+
+- type: roleLoadout
+  id: JobMedievalInsurgencyMag
+  groups:
+  #- TravellerHead
+  #- ChaplainOuterMedieval
+  #- ChaplainJumpsuitMedieval
+  - MedievalBackpack
+  #- MedievalBiblie
+  #- MedievalChaplainNeck
+  #- SecurityOuterClothing
+  - MedievalShoes
+  #- SecurityPDA
+  #- MedievalBelt
+  #- ChaplainMaskMedieval
+  #- SurvivalSecurity
+  #- MedievalTrinkets
+  #- MedievalMusic
+  #- GroupSpeciesBreathToolSecurity
+  - MedievalGloves
+
+# MEDIEVAL BANDIT RECRUIT
+
+- type: startingGear
+  id: MedievalBanditRecruitGear
+  equipment:
+    pocket1: MedievalRevent25
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
+    mask: MedievalMaskFace
+    head: MedievalClothingHeadHelmetHood
+    neck: MedievalClothingNeckCloakClanWolf
+    id: MedievalKeyAlchem
+
+- type: playTimeTracker
+  id: JobMedievalBanditRecruit
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalBanditRecruit
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: band_recruit
+  jobName: job-name-banditRecruit-medieval
+
+- type: job
+  id: MedievalBanditRecruit
+  name: job-name-banditRecruit-medieval
+  description: job-description-banditRecruit-medieval
+  playTimeTracker: JobMedievalBanditRecruit
+  #requirements:
+  #  - !type:OverallPlaytimeRequirement
+  #    time: 6000 #Imperial role timers
+  startingGear: MedievalBanditRecruitGear
+  icon: "JobIconMedievalBanditRecruit"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "банда"
+    - type: MedievalJobSpawn
+      spawnType: Band
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+    #- type: MedievalPasportPerson
+    #  personJob: "[color=gray]Молодняк банды[/color]"
+    #  pasport: MedievalPasportBand
+
+- type: roleLoadout
+  id: JobMedievalBanditRecruit
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBelt
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL BANDIT REGULAR
+
+- type: startingGear
+  id: MedievalBanditRegularGear
+  equipment:
+    pocket1: MedievalRevent25
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
+    mask: MedievalMaskFace
+    head: MedievalClothingHeadHelmetBand1
+    neck: MedievalClothingNeckCloakClanWolf
+    id: MedievalKeyAlchem
+
+- type: playTimeTracker
+  id: JobMedievalBanditRegular
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalBanditRegular
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: band_common
+  jobName: job-name-banditRegular-medieval
+
+- type: job
+  id: MedievalBanditRegular
+  name: job-name-banditRegular-medieval
+  description: job-description-banditRegular-medieval
+  playTimeTracker: JobMedievalBanditRegular
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Band
+  #    time: 3600 #Imperial role timers
+  startingGear: MedievalBanditRegularGear
+  icon: "JobIconMedievalBanditRegular"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "банда"
+    - type: MedievalJobSpawn
+      spawnType: Band
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    #- type: MedievalPasportPerson
+    #  personJob: "[color=gray]Бывалый разбойник банды[/color]"
+    #  pasport: MedievalPasportBand
+
+- type: roleLoadout
+  id: JobMedievalBanditRegular
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBelt
+  - MedievalTrinkets
+  - MedievalGloves
+
+
+# MEDIEVAL BANDIT VETERAN
+
+- type: startingGear
+  id: MedievalBanditVeteranGear
+  equipment:
+    pocket1: MedievalRevent50
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
+    mask: MedievalMaskFace
+    head: MedievalClothingHeadHelmetBand2
+    neck: MedievalClothingNeckCloakClanWolf
+    id: MedievalKeyAlchem
+
+- type: playTimeTracker
+  id: JobMedievalBanditVeteran
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalBanditVeteran
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: band_veteran
+  jobName: job-name-banditVeteran-medieval
+
+- type: job
+  id: MedievalBanditVeteran
+  sponsorsOnly: true
+  name: job-name-banditVeteran-medieval
+  description: job-description-banditVeteran-medieval
+  playTimeTracker: JobMedievalBanditVeteran
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Band
+  #    time: 7200 #Imperial role timers
+  startingGear: MedievalBanditVeteranGear
+  icon: "JobIconMedievalBanditVeteran"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "банда"
+    - type: MedievalJobSpawn
+      spawnType: Band
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    #- type: MedievalPasportPerson
+    #  personJob: "[color=gray]Ветеран банды[/color]"
+    #  pasport: MedievalPasportBand
+
+- type: roleLoadout
+  id: JobMedievalBanditVeteran
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBelt
+  - MedievalTrinkets3
+  - MedievalGlovesWithIron
+
+# MEDIEVAL BANDIT LEADER
+
+- type: startingGear
+  id: MedievalBanditLeaderGear
+  equipment:
+    eyes: ClothingEyesEyepatch
+    pocket1: MedievalRevent50
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
+    mask: MedievalMaskFace
+    head: MedievalClothingHeadHelmetBand3
+    neck: MedievalClothingNeckCloakClanWolf
+    id: MedievalKeyAlchem
+
+- type: playTimeTracker
+  id: JobMedievalBanditLeader
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalBanditLeader
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: band_leader
+  jobName: job-name-banditLeader-medieval
+
+- type: job
+  id: MedievalBanditLeader
+  name: job-name-banditLeader-medieval
+  description: job-description-banditLeader-medieval
+  playTimeTracker: JobMedievalBanditLeader
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Band
+  #    time: 7200 #Imperial role timers
+  startingGear: MedievalBanditLeaderGear
+  icon: "JobIconMedievalBanditLeader"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "банда"
+    - type: MedievalJobSpawn
+      spawnType: Band
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective5001000
+    #- type: MedievalPasportPerson
+    #  personJob: "[color=gray]Главарь банды[/color]"
+    #  pasport: MedievalPasportBand
+    - type: CloackMessage
+      action: CloackMessageActionBand
+      faction: "band"
+
+- type: roleLoadout
+  id: JobMedievalBanditLeader
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBelt
+  - MedievalTrinkets3
+  - MedievalGlovesWithIron
+
+# MEDIEVAL MERC REGULAR
+
+- type: startingGear
+  id: MedievalMercGear
+  equipment:
+    pocket1: MedievalRevent25
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth1
+    #mask: MedievalMaskFace
+    head: MedievalClothingHeadHelmetHoodHelmet
+    neck: MedievalClothingNeckCloakClanMerc
+    id: MedievalFarmerKey
+
+- type: playTimeTracker
+  id: JobMedievalMerc
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalMerc
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: merc_common
+  jobName: job-name-merc-medieval
+
+- type: job
+  id: MedievalMerc
+  name: job-name-merc-medieval
+  description: job-description-merc-medieval
+  playTimeTracker: JobMedievalMerc
+  #requirements:
+  #  - !type:OverallPlaytimeRequirement
+  #    time: 6000 #Imperial role timers
+  startingGear: MedievalMercGear
+  icon: "JobIconMedievalMerc"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "наемники"
+    - type: MedievalJobSpawn
+      spawnType: Merc
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    - type: MedievalPasportPerson
+      personJob: "[color=yellow]наемник[/color]"
+      pasport: MedievalPasportMerc
+
+- type: roleLoadout
+  id: JobMedievalMerc
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBelt
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL MercLeader REGULAR
+
+- type: startingGear
+  id: MedievalMercLeaderGear
+  equipment:
+    pocket1: MedievalRevent50
+    #pocket2: MedievalStampMedievalMercs
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth14
+    mask: MedievalMaskFace
+    head: MedievalClothingHeadHelmetShapel
+    neck: MedievalClothingNeckCloakClanMerc
+    id: MedievalFarmerKey
+
+- type: playTimeTracker
+  id: JobMedievalMercLeader
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalMercLeader
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: merc_leader
+  jobName: job-name-MercLeader-medieval
+
+- type: job
+  id: MedievalMercLeader
+  name: job-name-MercLeader-medieval
+  description: job-description-MercLeader-medieval
+  playTimeTracker: JobMedievalMercLeader
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Merc
+  #    time: 2000 #Imperial role timers
+  startingGear: MedievalMercLeaderGear
+  icon: "JobIconMedievalMercLeader"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "наемники"
+    - type: MedievalJobSpawn
+      spawnType: Merc
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective5001000
+    - type: MedievalPasportPerson
+      personJob: "[color=yellow]лидер наемников[/color]"
+      pasport: MedievalPasportMerc
+    - type: CloackMessage
+      action: CloackMessageActionMerc
+      faction: "merc"
+
+- type: roleLoadout
+  id: JobMedievalMercLeader
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBelt
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL COLLEGIUM RECRUIT
+
+- type: startingGear
+  id: MedievalCollegiumRecruitGear
+  equipment:
+    pocket1: MedievalRevent25
+    #belt: Bible
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth23
+    back: ClothingBackpackSatchelCharmerLight
+    id: MedievalKeyWizard
+    neck: MedievalClothingNeckCloakClanWiz
+    shoes: MedievalShoesChamber
+    head: MedievalClothingHeadHelmetCharmerWeak
+    outerClothing: MedievalClothingOuterArmorCharmerWeak
+  storage:
+    back:
+    - MedievalSpellBookRecodeCollegiumWeak
+
+- type: playTimeTracker
+  id: JobMedievalCollegiumRecruit
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalCollegiumRecruit
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: collegium_recruit
+  jobName: job-name-collegiumRecruit-medieval
+
+- type: job
+  id: MedievalCollegiumRecruit
+  name: job-name-collegiumRecruit-medieval
+  description: job-description-collegiumRecruit-medieval
+  playTimeTracker: JobMedievalCollegiumRecruit
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Orc
+      inverted: true
+  #  - !type:OverallPlaytimeRequirement
+  #    time: 6000 #Imperial role timers
+  startingGear: MedievalCollegiumRecruitGear
+  icon: "JobIconMedievalCollegiumRecruit"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Mana
+      maxMana: 120
+      regen: 0.325
+    - type: Friends
+      faction: "коллегия"
+    - type: MedievalJobSpawn
+      spawnType: Collegium
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+    - type: MedievalPasportPerson
+      personJob: "[color=purple]послушник коллегии[/color]"
+      pasport: MedievalPasportCollegium
+
+- type: roleLoadout
+  id: JobMedievalCollegiumRecruit
+  groups:
+  #- TravellerHead
+  #- MedievalShoes
+  #- MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL COLLEGIUM COMMON
+
+- type: startingGear
+  id: MedievalCollegiumCommonGear
+  equipment:
+    pocket1: MedievalRevent25
+    #belt: Bible
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth23
+    back: ClothingBackpackSatchelCharmerLight
+    id: MedievalKeyWizard
+    neck: MedievalClothingNeckCloakClanWiz
+    outerClothing: MedievalClothingOuterArmorCharmerLight
+    #head: MedievalClothingHeadHelmetCharmerLight
+    shoes: MedievalShoesChamber
+  storage:
+    back:
+    - MedievalSpellBookRecodeCollegiumMedium
+
+- type: playTimeTracker
+  id: JobMedievalCollegiumCommon
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalCollegiumCommon
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: collegium_common
+  jobName: job-name-collegiumCommon-medieval
+
+- type: job
+  id: MedievalCollegiumCommon
+  name: job-name-collegiumCommon-medieval
+  description: job-description-collegiumCommon-medieval
+  playTimeTracker: JobMedievalCollegiumCommon
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Orc
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Collegium
+  #    time: 21600 #Imperial role timers
+  startingGear: MedievalCollegiumCommonGear
+  icon: "JobIconMedievalCollegiumCommon"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Mana
+      maxMana: 150
+      regen: 0.475
+    - type: Friends
+      faction: "коллегия"
+    - type: MedievalJobSpawn
+      spawnType: Collegium
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective300500
+    - type: MedievalPasportPerson
+      personJob: "[color=purple]маг коллегии[/color]"
+      pasport: MedievalPasportCollegium
+
+- type: roleLoadout
+  id: JobMedievalCollegiumCommon
+  groups:
+  #- TravellerHead
+  #- MedievalShoes
+  #- MedievalTrinkets
+  - MedievalGloves
+  - MedievalCollegiumHead
+
+# MEDIEVAL COLLEGIUM Leader
+
+- type: startingGear
+  id: MedievalCollegiumLeaderGear
+  equipment:
+    pocket1: MedievalRevent25
+    #belt: Bible
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth23
+    back: ClothingBackpackSatchelCharmer
+    id: MedievalKeyWizard
+    neck: MedievalClothingNeckCloakClanWiz
+    outerClothing: MedievalClothingOuterArmorCharmer
+    head: MedievalClothingHeadHelmetCharmer
+    shoes: MedievalShoesChamber
+  storage:
+    back:
+    - MedievalSpellBookRecodeCollegiumStrong
+
+- type: playTimeTracker
+  id: JobMedievalCollegiumLeader
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalCollegiumLeader
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: collegium_leader
+  jobName: job-name-collegiumLeader-medieval
+
+- type: job
+  id: MedievalCollegiumLeader
+  name: job-name-collegiumLeader-medieval
+  description: job-description-collegiumLeader-medieval
+  playTimeTracker: JobMedievalCollegiumLeader
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      - Orc
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Collegium
+  #    time: 43200 #Imperial role timers
+  startingGear: MedievalCollegiumLeaderGear
+  icon: "JobIconMedievalCollegiumLeader"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Mana
+      maxMana: 180
+      regen: 0.5
+    - type: Friends
+      faction: "коллегия"
+    - type: MedievalJobSpawn
+      spawnType: Collegium
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective5001000
+    - type: MedievalPasportPerson
+      personJob: "[color=purple]архимаг коллегии[/color]"
+      pasport: MedievalPasportCollegium
+    - type: CloackMessage
+      action: CloackMessageActionCollegium
+      faction: "collegium"
+
+- type: roleLoadout
+  id: JobMedievalCollegiumLeader
+  groups:
+  #- TravellerHead
+  #- MedievalShoes
+  #- MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL Tribe RECRUIT
+
+- type: startingGear
+  id: MedievalTribeRecruitGear
+  equipment:
+    #pocket1: MedievalRevent25
+    #belt: Bible
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth29
+    back: MedievalClothingBackpackSatchelLeather
+    id: MedievalBlacksmithKey
+    neck: MedievalClothingNeckCloakClanTribe
+    #shoes: MedievalShoesChamber
+    outerClothing: MedievalClothingOuterArmorFur
+    head: MedievalClothingHeadHelmetTribe1
+
+- type: playTimeTracker
+  id: JobMedievalTribeRecruit
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalTribeRecruit
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: tribe_recruit
+  jobName: job-name-TribeRecruit-medieval
+
+- type: job
+  id: MedievalTribeRecruit
+  name: job-name-TribeRecruit-medieval
+  description: job-description-TribeRecruit-medieval
+  playTimeTracker: JobMedievalTribeRecruit
+  #requirements:
+  #  - !type:OverallPlaytimeRequirement
+  #    time: 6000 #Imperial role timers
+  startingGear: MedievalTribeRecruitGear
+  icon: "JobIconMedievalTribeRecruit"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: GigaMonkeyAccent
+    - type: Friends
+      faction: "племя"
+    - type: MedievalJobSpawn
+      spawnType: Tribe
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjectiveTribe
+
+# MEDIEVAL Tribe COMMON
+
+- type: startingGear
+  id: MedievalTribeCommonGear
+  equipment:
+    pocket1: MedievalRevent25
+    #belt: Bible
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth30
+    back: MedievalClothingBackpackSatchelLeather2
+    id: MedievalBlacksmithKey
+    neck: MedievalClothingNeckCloakClanTribe
+    #outerClothing: MedievalClothingOuterArmorStudded
+    head: MedievalClothingHeadHelmetTribe2
+    #shoes: MedievalBastShoes
+  storage:
+    back:
+    - MedievalSpellBookRecodeFactionTribe
+
+- type: playTimeTracker
+  id: JobMedievalTribeCommon
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalTribeCommon
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: tribe_common
+  jobName: job-name-TribeCommon-medieval
+
+- type: job
+  id: MedievalTribeCommon
+  name: job-name-TribeCommon-medieval
+  description: job-description-TribeCommon-medieval
+  playTimeTracker: JobMedievalTribeCommon
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Orc
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Tribe
+  #    time: 14400 #Imperial role timers
+  startingGear: MedievalTribeCommonGear
+  icon: "JobIconMedievalTribeCommon"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Mana
+      maxMana: 180
+      regen: 0.65
+    - type: GigaMonkeyAccent
+    - type: Friends
+      faction: "племя"
+    - type: MedievalJobSpawn
+      spawnType: Tribe
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjectiveTribe
+
+# MEDIEVAL Tribe Leader
+
+- type: startingGear
+  id: MedievalTribeLeaderGear
+  equipment:
+    pocket1: MedievalRevent25
+    #belt: Bible
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth31
+    back: MedievalClothingBackpackSatchelLeather2
+    id: MedievalBlacksmithKey
+    neck: MedievalClothingNeckCloakClanTribe
+    #outerClothing: MedievalClothingOuterArmorStudded
+    head: MedievalClothingHeadHelmetTribe3
+    #shoes: MedievalBastShoes
+
+- type: playTimeTracker
+  id: JobMedievalTribeLeader
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalTribeLeader
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: tribe_leader
+  jobName: job-name-TribeLeader-medieval
+
+- type: job
+  id: MedievalTribeLeader
+  name: job-name-TribeLeader-medieval
+  description: job-description-TribeLeader-medieval
+  playTimeTracker: JobMedievalTribeLeader
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Tribe
+  #    time: 28800 #Imperial role timers
+  startingGear: MedievalTribeLeaderGear
+  icon: "JobIconMedievalTribeLeader"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: "племя"
+    - type: MedievalJobSpawn
+      spawnType: Tribe
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjectiveTribe
+
+# MEDIEVAL Trader
+
+- type: startingGear
+  id: MedievalTraderGear
+  equipment:
+    pocket1: MedievalRevent50
+    pocket2: MedievalRevent10
+    belt: MedievalCoinBag
+
+- type: playTimeTracker
+  id: JobMedievalTrader
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalTrader
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: trader
+  jobName: job-name-trader
+
+- type: job
+  id: MedievalTrader
+  name: job-name-trader
+  description: job-description-trader
+  playTimeTracker: JobMedievalTrader
+  startingGear: MedievalTraderGear
+  icon: "JobIconMedievalTrader"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Access
+      tags:
+      - ImperialLibrary
+    - type: Friends
+      faction: "вольные"
+    - type: MedievalJobSpawn
+      spawnType: LegionTrader
+    - type: MedievalTradeCurse
+    - type: MedievalMoneyChecker
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective5001000
+    - type: SpawnOnAction
+      actionId: ActionSpellwardSpawnTradeLegion
+      prototype: MedievalShopHoleLockedLegion
+
+- type: entity
+  id: ActionSpellwardSpawnTradeLegion
+  name: Spawn TP
+  description: Spawn urist
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    icon: { sprite: Imperial/Medieval/Misc/mdv_shop.rsi, state: shop}
+    useDelay: 3000
+    event: !type:SpawnOnActionEvent
+    itemIconStyle: BigAction
+
+- type: roleLoadout
+  id: JobMedievalTrader
+  groups:
+  - TraderHead
+  - TraderJumpsuit
+  - MedievalBackpack
+  - MedievalShoes
+  #- SecurityPDA
+  #- MedievalBelt
+  - MedievalTrinkets
+  - MedievalGloves
+
+- type: loadoutGroup
+  id: TraderJumpsuit
+  name: loadout-group-traveller-jumpsuit
+  loadouts:
+  - TraderDefault
+  - TraderBeaty1
+  - TraderBeaty2
+  - TraderBeaty3
+  - TravellerBeaty3
+  - TravellerBeaty4
+  - TravellerBeaty6
+  - TravellerBeaty7
+  - TravellerBeaty8
+  - TravellerBeaty10
+  - TravellerBeaty12
+
+- type: loadout
+  id: TraderDefault
+  #effects:
+  #- !type:GroupLoadoutEffect
+  #  proto: TraderTimer4hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth17
+
+- type: loadout
+  id: TraderBeaty1
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TradersTimer5hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth27
+
+- type: loadout
+  id: TraderBeaty3
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TradersTimer5hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth34
+
+- type: loadout
+  id: TraderBeaty2
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TradersTimer10hours
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth28
+
+# MEDIEVAL Trader
+
+- type: startingGear
+  id: MedievalTraderNGear
+  equipment:
+    pocket1: MedievalRevent50
+    pocket2: MedievalRevent10
+    belt: MedievalCoinBag
+
+- type: playTimeTracker
+  id: JobMedievalTraderN
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalTraderN
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: trader
+  jobName: job-name-traderN
+
+- type: job
+  id: MedievalTraderN
+  name: job-name-traderN
+  description: job-description-traderN
+  playTimeTracker: JobMedievalTraderN
+  startingGear: MedievalTraderNGear
+  icon: "JobIconMedievalTraderN"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Access
+      tags:
+      - ImperialLibrary
+    - type: Friends
+      faction: "вольные"
+    - type: MedievalJobSpawn
+      spawnType: InsurgencyTrader
+    - type: MedievalTradeCurse
+    - type: MedievalMoneyChecker
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective5001000
+    - type: SpawnOnAction
+      actionId: ActionSpellwardSpawnTradeIns
+      prototype: MedievalShopHoleLockedIns
+
+- type: entity
+  id: ActionSpellwardSpawnTradeIns
+  name: Spawn TP
+  description: Spawn urist
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    icon: { sprite: Imperial/Medieval/Misc/mdv_shop.rsi, state: shop}
+    useDelay: 3000
+    event: !type:SpawnOnActionEvent
+    itemIconStyle: BigAction
+
+- type: roleLoadout
+  id: JobMedievalTraderN
+  groups:
+  - TraderHead
+  - TraderJumpsuit
+  - MedievalBackpack
+  - MedievalShoes
+  #- SecurityPDA
+  #- MedievalBelt
+  - MedievalTrinkets
+  - MedievalGloves
+
+- type: loadoutGroup
+  id: TraderHead
+  name: loadout-group-traveller-head
+  minLimit: 0
+  loadouts:
+  - TraderMedievalClothingHeadCloth
+  - ClothingHeadHatCowboyBrown
+
+- type: loadout
+  id: TraderMedievalClothingHeadCloth
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: TradersTimer5hours
+  equipment:
+    outerClothing: MedievalClothingHeadCloth
+
+# MEDIEVAL Miner REGULAR
+
+- type: startingGear
+  id: MedievalMinerGear
+  equipment:
+    pocket1: MedievalRevent25
+    pocket2: MedievalPickaxe
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth62
+    #mask: MedievalMaskFace
+    #head: MedievalClothingHeadHelmetHoodHelmet
+    neck: MedievalClothingNeckCloakClanMine
+    id: MedievalWoodKey
+
+- type: playTimeTracker
+  id: JobMedievalMiner
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalMiner
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: miner
+  jobName: job-name-miner-medieval
+
+- type: job
+  id: MedievalMiner
+  name: job-name-miner-medieval
+  description: job-description-miner-medieval
+  playTimeTracker: JobMedievalMiner
+  #requirements:
+  #  - !type:OverallPlaytimeRequirement
+  #    time: 6000 #Imperial role timers
+  startingGear: MedievalMinerGear
+  icon: "JobIconMedievalMiner"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: MedievalDigger
+    - type: Friends
+      faction: "шахтеры"
+    - type: MedievalJobSpawn
+      spawnType: Mine
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective400800
+    - type: MedievalPasportPerson
+      personJob: "[color=green]шахтер[/color]"
+      pasport: MedievalPasportMine
+
+- type: roleLoadout
+  id: JobMedievalMiner
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBelt
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL MinerLeader REGULAR
+
+- type: startingGear
+  id: MedievalMinerLeaderGear
+  equipment:
+    pocket1: MedievalRevent50
+    pocket2: MedievalPickaxe
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth46
+    mask: MedievalMaskFace
+    #head: MedievalClothingHeadHelmetShapel
+    neck: MedievalClothingNeckCloakClanMine
+    id: MedievalWoodKey
+
+- type: playTimeTracker
+  id: JobMedievalMinerLeader
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalMinerLeader
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: miner_leader
+  jobName: job-name-minerLeader-medieval
+
+- type: job
+  id: MedievalMinerLeader
+  name: job-name-minerLeader-medieval
+  description: job-descriptionminerLeader-medieval
+  playTimeTracker: JobMedievalMinerLeader
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Mine
+  #    time: 2000 #Imperial role timers
+  startingGear: MedievalMinerLeaderGear
+  icon: "JobIconMedievalMinerLeader"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: MedievalDigger
+    - type: Friends
+      faction: "шахтеры"
+    - type: MedievalJobSpawn
+      spawnType: Mine
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective5001000
+    - type: MedievalPasportPerson
+      personJob: "[color=green]старший шахтер[/color]"
+      pasport: MedievalPasportMine
+    - type: CloackMessage
+      action: CloackMessageActionMine
+      faction: "mine"
+
+- type: roleLoadout
+  id: JobMedievalMinerLeader
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalBelt
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL Blacksmith
+
+- type: startingGear
+  id: MedievalBlacksmithGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth43
+    pocket1: MedievalRevent50
+    pocket2: MedievalRevent10
+    neck: MedievalClothingNeckCloakClanEagle
+    id: MedievalLeatherKey
+
+- type: playTimeTracker
+  id: JobMedievalBlacksmith
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalBlacksmith
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: blacksmithleg
+  jobName: job-name-blacksmith
+
+- type: job
+  id: MedievalBlacksmith
+  name: job-name-blacksmith
+  description: job-description-blacksmith
+  playTimeTracker: JobMedievalBlacksmith
+  startingGear: MedievalBlacksmithGear
+  icon: "JobIconMedievalBlacksmith"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: CrafterTrait
+    - type: Friends
+      faction: "легион"
+    - type: MedievalJobSpawn
+      spawnType: LegionBlacksmith
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective5001000
+    - type: MedievalPasportPerson
+      personJob: "[color=cyan]кузнец легиона[/color]"
+      pasport: MedievalPasportLegion
+
+
+- type: roleLoadout
+  id: JobMedievalBlacksmith
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalTrinkets
+  - MedievalGloves
+
+
+# MEDIEVAL BlacksmithN
+
+- type: startingGear
+  id: MedievalBlacksmithNGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth43
+    pocket1: MedievalRevent50
+    pocket2: MedievalRevent10
+    neck: MedievalClothingNeckCloakClanFox
+    id: MedievalKeyGuard
+
+- type: playTimeTracker
+  id: JobMedievalBlacksmithN
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalBlacksmithN
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: blacksmithins
+  jobName: job-name-blacksmithN
+
+- type: job
+  id: MedievalBlacksmithN
+  name: job-name-blacksmithN
+  description: job-description-blacksmithN
+  playTimeTracker: JobMedievalBlacksmithN
+  startingGear: MedievalBlacksmithNGear
+  icon: "JobIconMedievalBlacksmithN"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: CrafterTrait
+    - type: Friends
+      faction: "мятежники"
+    - type: MedievalJobSpawn
+      spawnType: InsurgencyBlacksmith
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective5001000
+    - type: MedievalPasportPerson
+      personJob: "[color=red]кузнец мятежников[/color]"
+      pasport: MedievalPasportInsurgency
+
+- type: roleLoadout
+  id: JobMedievalBlacksmithN
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL BlacksmithYoung
+
+- type: startingGear
+  id: MedievalBlacksmithYoungGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth14
+    pocket1: MedievalRevent50
+    pocket2: MedievalRevent10
+    id: MedievalLeatherKey
+    neck: MedievalClothingNeckCloakClanEagle
+
+- type: playTimeTracker
+  id: JobMedievalBlacksmithYoung
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalBlacksmithYoung
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: studentleg
+  jobName: job-name-blacksmithyoung
+
+- type: job
+  id: MedievalBlacksmithYoung
+  name: job-name-blacksmithyoung
+  description: job-description-blacksmithyoung
+  playTimeTracker: JobMedievalBlacksmithYoung
+  startingGear: MedievalBlacksmithYoungGear
+  icon: "JobIconMedievalBlacksmithYoung"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: CrafterTrait
+    - type: Friends
+      faction: "легион"
+    - type: MedievalJobSpawn
+      spawnType: LegionBlacksmith
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective5001000
+    - type: MedievalPasportPerson
+      personJob: "[color=cyan]подмастерье кузнеца легиона[/color]"
+      pasport: MedievalPasportLegion
+
+- type: roleLoadout
+  id: JobMedievalBlacksmithYoung
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalTrinkets
+  - MedievalGloves
+
+# MEDIEVAL BlacksmithYoungN
+
+- type: startingGear
+  id: MedievalBlacksmithYoungNGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth14
+    pocket1: MedievalRevent50
+    pocket2: MedievalRevent10
+    neck: MedievalClothingNeckCloakClanFox
+    id: MedievalKeyGuard
+
+- type: playTimeTracker
+  id: JobMedievalBlacksmithYoungN
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalBlacksmithYoungN
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: studentins
+  jobName: job-name-blacksmithyoungN
+
+- type: job
+  id: MedievalBlacksmithYoungN
+  name: job-name-blacksmithyoungN
+  description: job-description-blacksmithyoungN
+  playTimeTracker: JobMedievalBlacksmithYoungN
+  startingGear: MedievalBlacksmithYoungNGear
+  icon: "JobIconMedievalBlacksmithYoungN"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: CrafterTrait
+    - type: Friends
+      faction: "мятежники"
+    - type: MedievalJobSpawn
+      spawnType: InsurgencyBlacksmith
+    - type: GiveItemObjective
+    - type: MoneyCollector
+      objectivePrototype: MedievalGetMoneyObjective5001000
+    - type: MedievalPasportPerson
+      personJob: "[color=red]подмастерье кузнеца мятежников[/color]"
+      pasport: MedievalPasportInsurgency
+
+- type: roleLoadout
+  id: JobMedievalBlacksmithYoungN
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  - MedievalTrinkets
+  - MedievalGloves
+
+
+# MEDIEVAL Cult REGULAR
+
+- type: startingGear
+  id: MedievalCultGear
+  equipment:
+    #pocket1: MedievalBookCultGuide
+    #pocket2: MedievalPickaxe
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth65
+    belt: MedievalDaggerCult
+    head: MedievalClothingHeadHelmetCult
+    gloves: MedievalGlovesCult
+    outerClothing: MedievalClothingOuterArmorCult
+    neck: MedievalClothingNeckCloakClanCult
+    id: MedievalKeyKing
+    shoes: MedievalClothingShoesCult
+    back: MedievalClothingBackpackSatchelLeather
+  storage:
+    back:
+    - MedievalCultBrushMelok
+    - MedievalBookCultGuide
+
+- type: playTimeTracker
+  id: JobMedievalCult
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalCult
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: cult
+  jobName: job-name-cult-medieval
+
+- type: job
+  id: MedievalCult
+  name: job-name-cult-medieval
+  description: job-description-cult-medieval
+  playTimeTracker: JobMedievalCult
+  #requirements:
+  #  - !type:OverallPlaytimeRequirement
+  #    time: 6000 #Imperial role timers
+  startingGear: MedievalCultGear
+  icon: "JobIconMedievalCult"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: CultMember
+    - type: Friends
+      faction: "культ"
+    - type: MedievalJobSpawn
+      spawnType: Cult
+    - type: MedievalPasportPerson
+      personJob: "[color=red]культист[/color]"
+      pasport: no
+
+# MEDIEVAL CultLeader
+
+- type: startingGear
+  id: MedievalCultLeaderGear
+  equipment:
+    #pocket1:
+    #pocket2: MedievalPickaxe
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth65
+    belt: MedievalDaggerCultLeader
+    back: MedievalClothingBackpackSatchelLeather
+    head: MedievalClothingHeadHelmetCult
+    gloves: MedievalGlovesCult
+    outerClothing: MedievalClothingOuterArmorCultLeader
+    neck: MedievalClothingNeckCloakClanCult
+    id: MedievalKeyKing
+    shoes: MedievalClothingShoesCult
+  storage:
+    back:
+    - MedievalCultBrushMelok
+    - MedievalSpellBookRecodeNecro
+    - MedievalBookCultGuide
+
+- type: playTimeTracker
+  id: JobMedievalCultLeader
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalCultLeader
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: cultlead
+  jobName: job-name-cultLeader-medieval
+
+- type: job
+  id: MedievalCultLeader
+  name: job-name-cultLeader-medieval
+  description: job-descriptioncultLeader-medieval
+  playTimeTracker: JobMedievalCultLeader
+  requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Skeleton
+      inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Cult
+  #    time: 2000 #Imperial role timers
+  startingGear: MedievalCultLeaderGear
+  icon: "JobIconMedievalCultLeader"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: CultMember
+    - type: Friends
+      faction: "культ"
+    - type: MedievalJobSpawn
+      spawnType: Cult
+    - type: MedievalPasportPerson
+      personJob: "[color=red]проповедник культа[/color]"
+      pasport: no
+    - type: CloackMessage
+      action: CloackMessageActionIns
+      faction: "cult"

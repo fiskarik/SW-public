@@ -103,7 +103,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      RawIron: 100
+      RawIron: 250 # imperial medieval
   - type: Extractable
     grindableSolutionName: ironore
   - type: SolutionContainerManager
@@ -114,6 +114,10 @@
           Quantity: 10
   - type: Item
     heldPrefix: iron
+  # Imperial Medieval Start
+  - type: TrashClear
+    safe: true
+  # Imperial Medieval End
 
 - type: entity
   id: SteelOre1

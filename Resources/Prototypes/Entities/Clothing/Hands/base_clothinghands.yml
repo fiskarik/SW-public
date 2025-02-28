@@ -7,10 +7,16 @@
     state: icon
   - type: Clothing
     slots: [gloves]
+    equipDelay: 0.01 # imperial medieval
+    unequipDelay: 0.01 # imperial medieval
+    equipSound: # imperial medieval
+      path: /Audio/Imperial/Medieval/gloves_equip.ogg # imperial medieval
+    unequipSound: # imperial medieval
+      path: /Audio/Imperial/Medieval/gloves_unequip.ogg # imperial medieval
   - type: Food
     requiresSpecialDigestion: true
   - type: Item
-    size: Small
+    size: Normal # imperial medieval
     storedRotation: -90
   - type: SolutionContainerManager
     solutions:

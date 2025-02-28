@@ -8,6 +8,8 @@
     - outerClothing
   - type: Sprite
     state: icon
+  - type: HeldSpeedModifier # imperial medieval
+  - type: AllowSuitStorage # imperial medieval
 
 - type: entity
   abstract: true

@@ -11,8 +11,8 @@
             - !type:SnapToGrid
               southRotation: true
           steps:
-            - material: Steel
-              amount: 15
+            - material: MedievalIronIngot # Imperial Medieval
+              amount: 3 # Imperial Medieval
               doAfter: 2
     - node: MeatSpike
       entity: KitchenSpike
@@ -20,8 +20,8 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 15
+              prototype: MedievalIronIngot # Imperial Medieval
+              amount: 3 # Imperial Medieval
           steps:
             - tool: Screwing
               doAfter: 1

@@ -1,0 +1,1 @@
+surgery-pacified-message = Я не могу причинить никому вред.

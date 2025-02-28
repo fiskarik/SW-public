@@ -73,16 +73,18 @@ public abstract partial class SharedPuddleSystem : EntitySystem
 
     private void OnGetFootstepSound(Entity<PuddleComponent> entity, ref GetFootstepSoundEvent args)
     {
-        if (!_solutionContainerSystem.ResolveSolution(entity.Owner, entity.Comp.SolutionName, ref entity.Comp.Solution,
-                out var solution))
-            return;
+        // Imperial Medieval Start
+        // if (!_solutionContainerSystem.ResolveSolution(entity.Owner, entity.Comp.SolutionName, ref entity.Comp.Solution,
+        //         out var solution))
+        //     return;
 
-        var reagentId = solution.GetPrimaryReagentId();
-        if (!string.IsNullOrWhiteSpace(reagentId?.Prototype)
-            && _prototypeManager.TryIndex(reagentId.Value.Prototype, out ReagentPrototype? proto))
-        {
-            args.Sound = proto.FootstepSound;
-        }
+        // var reagentId = solution.GetPrimaryReagentId();
+        // if (!string.IsNullOrWhiteSpace(reagentId?.Prototype)
+        //     && _prototypeManager.TryIndex(reagentId.Value.Prototype, out ReagentPrototype? proto))
+        // {
+        //     args.Sound = proto.FootstepSound;
+        // }
+        // Imperial Medieval End
     }
 
     private void HandlePuddleExamined(Entity<PuddleComponent> entity, ref ExaminedEvent args)

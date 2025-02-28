@@ -72,7 +72,7 @@ public sealed class DamageExamineSystem : EntitySystem
 
         foreach (var damage in damageSpecifier.DamageDict)
         {
-            if (damage.Value != FixedPoint2.Zero)
+            if (damage.Value != FixedPoint2.Zero && damage.Key != "ParryAble") // Imperial Medieval
             {
                 msg.PushNewline();
                 msg.AddMarkupOrThrow(Loc.GetString("damage-value", ("type", _prototype.Index<DamageTypePrototype>(damage.Key).LocalizedName), ("amount", damage.Value)));

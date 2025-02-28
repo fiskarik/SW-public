@@ -1,11 +1,11 @@
-ent-PlayerSiliconBase = { "" }
+ent-SwarmerBase = { "" }
     .desc = { "" }
     .suffix = { "" }
 ent-Drone = drone
-    .desc = { ent-PlayerSiliconBase.desc }
+    .desc = { ent-SwarmerBase.desc }
     .suffix = { "" }
 ent-Onestar = onestar mecha
-    .desc = { ent-PlayerSiliconBase.desc }
+    .desc = { ent-SwarmerBase.desc }
     .suffix = { "" }
 
 ent-PlayerBorgGeneric = Киборг

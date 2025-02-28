@@ -1,0 +1,12 @@
+ent-SwarmerBuilderDeconstructionAction = Разборка
+    .desc = Разберите структуры на энергоматериалы.
+    .suffix = { "Свармер" }
+ent-SwarmerBuilderWallAction = Замена структуры
+    .desc = Действие, заменяющее любую стену или окно на свармерскую стену. Вперед, перестраивать станцию!
+    .suffix = { "Свармер" }
+ent-SwarmerBuilderTileAction = Замена тайлов
+    .desc = Заменяет тайлы вокруг вас.
+    .suffix = { "Свармер" }
+ent-SwarmerBuilderHoloBarrierAction = Установка атмос-проектора
+    .desc = Устанавливает временный атмос барьер, который поможет избежать разгерметизации.
+    .suffix = { "Свармер" }

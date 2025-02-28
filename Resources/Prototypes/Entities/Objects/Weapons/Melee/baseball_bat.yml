@@ -11,16 +11,18 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 10
-        Structural: 5
+        Blunt: 8.5 # imperial medieval
+        Structural: 2 # imperial medieval
     soundHit:
       collection: MetalThud
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 5
-        Structural: 10
+        Blunt: 7 # imperial medieval
+        Structural: 8 # imperial medieval
+  - type: StaminaDamageOnHit
+    damage: 12
   - type: Item
     size: Normal
   - type: Tool
@@ -42,6 +44,12 @@
   - type: Tag
     tags:
     - BaseballBat
+  # Imperial Medieval Start
+  - type: MeleeThrowOnHit
+    lifetime: 0.4
+    minLifetime: 0.05
+    speed: 2.1
+  # Imperial Medieval End
 
 - type: entity
   name: incomplete baseball bat

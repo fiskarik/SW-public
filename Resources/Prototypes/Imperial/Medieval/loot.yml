@@ -1,0 +1,1950 @@
+#MedievalChestWithLoot
+- type: entity
+  parent: BaseStructure
+  id: MedievalCrateGeneric
+  noSpawn: true
+  name: crate
+  description: A large container for items.
+  components:
+  - type: Icon
+    sprite: Structures/Storage/Crates/generic.rsi
+    state: icon
+  - type: Sprite
+    noRot: true
+    sprite: Structures/Storage/Crates/generic.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Clickable
+  - type: Transform
+    anchored: false
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.29"
+        density: 50
+        mask:
+        - SmallMobMask #this is MONKEY
+        layer:
+        - MachineLayer
+  - type: EntityStorage
+  - type: PlaceableSurface
+    isPlaceable: false # defaults to closed.
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateDoorOpen: open
+    stateDoorClosed: closed
+  #- type: PaperLabel
+  #  labelSlot:
+  #    insertVerbText: Attach Label
+  #    ejectVerbText: Remove Label
+  #    whitelist:
+  #      components:
+  #      - Paper
+  - type: ContainerContainer
+    containers:
+      entity_storage: !type:Container
+      paper_label: !type:ContainerSlot
+  - type: ItemSlots
+  - type: StaticPrice
+    price: 50
+  - type: Construction
+    graph: CrateGenericSteel
+    node: crategenericsteel
+    containers:
+      - entity_storage
+  - type: TimedDespawn
+    lifetime: 600
+
+- type: entity
+  name: Empty Crate Spawner
+  id: MedievalChestWithLootSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Structures/Storage/Crates/generic.rsi
+          state: icon
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeCircle
+            radius: 0.4
+          layer:
+          - DoorPassable
+          hard: false
+          mask: # imperial medieval start
+          - MedievalSpawnerLayer # imperial medieval end
+    - type: Physics
+      bodyType: Static
+    - type: MedievalMobSpawner
+      barrierAddicted: false
+      maxCoolDown: 600
+      chance: 0.5
+      spawnedEntity: MedievalChestWithLoot
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalChestWithLoot
+    #  - MedievalChestWithLoot
+    #  - MedievalChestWithLoot
+    #  - MedievalChestWithLoot
+    #  - MedievalChestWithLoot
+    #  - MedievalChestWithLoot
+    #  - MedievalChestWithLoot
+    #  - MedievalChestWithLoot
+    #  - MedievalChestWithLoot
+    #  - MedievalChestWithLoot2
+    #  chance: 0.4
+    #  intervalSeconds: 900
+    #  minimumEntitiesSpawned: 1
+    #  maximumEntitiesSpawned: 10000
+
+- type: entity
+  name: Empty Crate Spawner
+  id: MedievalChestWithLootSpawner2
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Structures/Storage/Crates/generic.rsi
+          state: icon
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeCircle
+            radius: 0.4
+          layer:
+          - DoorPassable
+          hard: false
+          mask: # imperial medieval start
+          - MedievalSpawnerLayer # imperial medieval end
+    - type: Physics
+      bodyType: Static
+    - type: MedievalMobSpawner
+      barrierAddicted: false
+      maxCoolDown: 600
+      chance: 0.5
+      spawnedEntity: MedievalChestWithLoot2
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalChestWithLoot
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot3
+    #  chance: 0.3
+    #  intervalSeconds: 900
+    #  minimumEntitiesSpawned: 1
+    #  maximumEntitiesSpawned: 10000
+
+- type: entity
+  name: Empty Crate Spawner
+  id: MedievalChestWithLootSpawner3
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Structures/Storage/Crates/generic.rsi
+          state: icon
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeCircle
+            radius: 0.4
+          layer:
+          - DoorPassable
+          hard: false
+          mask: # imperial medieval start
+          - MedievalSpawnerLayer # imperial medieval end
+    - type: Physics
+      bodyType: Static
+    - type: MedievalMobSpawner
+      barrierAddicted: false
+      maxCoolDown: 600
+      chance: 0.45
+      spawnedEntity: MedievalChestWithLoot3
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot2
+    #  - MedievalChestWithLoot3
+    #  - MedievalChestWithLoot3
+    #  - MedievalChestWithLoot3
+    #  - MedievalChestWithLoot3
+    #  #- MedievalChestWithLoot4
+    #  chance: 0.3
+    #  intervalSeconds: 900
+    #  minimumEntitiesSpawned: 1
+    #  maximumEntitiesSpawned: 10000
+
+- type: entity
+  name: Empty Crate Spawner
+  id: MedievalChestWithLootSpawner4
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Structures/Storage/Crates/generic.rsi
+          state: icon
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeCircle
+            radius: 0.4
+          layer:
+          - DoorPassable
+          hard: false
+          mask: # imperial medieval start
+          - MedievalSpawnerLayer # imperial medieval end
+    - type: Physics
+      bodyType: Static
+    - type: MedievalMobSpawner
+      barrierAddicted: false
+      maxCoolDown: 600
+      chance: 0.6
+      spawnedEntity: MedievalChestWithLoot4
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalChestWithLoot
+    #  #- MedievalChestWithLoot3
+    #  #- MedievalChestWithLoot3
+    #  - MedievalChestWithLoot4
+    #  - MedievalChestWithLoot4
+    #  - MedievalChestWithLoot4
+    #  - MedievalChestWithLoot4
+    #  - MedievalChestWithLoot4
+    #  chance: 0.4
+    #  intervalSeconds: 900
+    #  minimumEntitiesSpawned: 1
+    #  maximumEntitiesSpawned: 10000
+
+
+- type: entity
+  parent: MedievalCrateGeneric
+  id: MedievalChestWithLoot
+  name: MedievalChestWithLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/chest.rsi
+    layers:
+    - state: base
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Icon
+    sprite: Imperial/Medieval/Decor/chest.rsi
+    state: base
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.29"
+        density: 135
+        mask:
+        - LargeMobMask
+        layer:
+        - LargeMobLayer
+  - type: TimedDespawn
+    lifetime: 600
+  #- type: SpawnOnDespawn
+  #  prototype: MedievalChestWithLoot
+  - type: StorageFill
+    contents:
+      - id: MedievalScrollBarrierWeak
+        prob: 0.2
+      - id: MedievalScrollBarrierNormal
+        prob: 0.01
+      - id: MedievalClothingUniformJumpsuitShitCloth24
+        prob: 0.02
+      - id: MedievalLockpickPack
+        prob: 0.005
+      - id: MedievalLockpick
+        prob: 0.05
+      - id: MedievalCoinBag
+        prob: 0.04
+      - id: MedievalGlowStone
+        prob: 0.04
+      - id: MedievalClothingUniformJumpsuitFlannel
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth16
+        prob: 0.02
+      - id: MedievalWoodenSword
+        prob: 0.04
+      - id: MedievalClothingOuterPlagueSuit
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth9
+        prob: 0.05
+      - id: MedievalMopItem
+        prob: 0.05
+      - id: MedievalClothingHeadFarmerHat
+        prob: 0.035
+      - id: MedievalShoesSapogi
+        prob: 0.035
+      - id: MedievalBastShoes
+        prob: 0.04
+      - id: MedievalClothingHeadHelmetCap
+        prob: 0.07
+      - id: MedievalClothingOuterApronChef
+        prob: 0.03
+      - id: MedievalBeaker
+        prob: 0.09
+      - id: MedievalClothingOuterArmorFur
+        prob: 0.075
+      - id: MedievalPaper
+        prob: 0.22
+      - id: MedievalPen
+        prob: 0.1
+      - id: MedievalRepairStone
+        prob: 0.05
+      - id: MedievalDrugChemistryBottle
+        prob: 0.04
+      - id: MedievalBrutepack
+        prob: 0.25
+      - id: DrinkGlassWhite
+        prob: 0.02
+      - id: MedievalLootGoblin
+        prob: 0.02
+      - id: FoodBreadPlain
+        prob: 0.002
+      - id: MedievalCoal
+        prob: 0.02
+      - id: MedievalClothingHeadHelmetHood
+        prob: 0.02
+      - id: FoodCheese
+        prob: 0.005
+      - id: FoodBreadMeat
+        prob: 0.005
+      - id: FoodPieMeat
+        prob: 0.005
+      - id: FoodCarrot
+        prob: 0.005
+      - id: FoodOnion
+        prob: 0.005
+      - id: FoodBakedCookie
+        prob: 0.005
+      - id: FoodMeatSpiderlegCooked
+        prob: 0.0075
+      - id: FoodCorn
+        prob: 0.005
+      - id: FoodTomato
+        prob: 0.002
+      - id: MedievalClothingUniformJumpsuitShitCloth5
+        prob: 0.03
+      - id: FoodButter
+        prob: 0.005
+      - id: FoodSoupBeetRed
+        prob: 0.008
+      - id: FoodApple
+        prob: 0.002
+      - id: ClothingHandsGlovesColorBlack
+        prob: 0.04
+      - id: MedievalClothingHandsGlovesColorBrown
+        prob: 0.04
+      - id: MedievalGlovesBlacksmith
+        prob: 0.02
+      - id: ClothingHandsGlovesColorGray
+        prob: 0.04
+      - id: ClothingHandsGlovesColorLightBrown
+        prob: 0.04
+      - id: ClothingShoesWizard
+        prob: 0.04
+      - id: MedievalClothingUniformJumpsuitShitCloth17
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth12
+        prob: 0.035
+      - id: MedievalClothingUniformJumpsuitShitCloth1
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth33
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth34
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth35
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth36
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth37
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth38
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth39
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth40
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth41
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth42
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth43
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth44
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth45
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth46
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth47
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth48
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth49
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth50
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth51
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth52
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth53
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth54
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth55
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth56
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth57
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth58
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth59
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth60
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth61
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth62
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth63
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth64
+        prob: 0.02
+      - id: MedievalShoesValenki
+        prob: 0.02
+      - id: MedievalWineskin
+        prob: 0.02
+      - id: MedievalHolySalt
+        prob: 0.1
+      - id: MedievalClothingHeadBag
+        prob: 0.05
+      - id: MedievalClothingBackpackBox
+        prob: 0.09
+      - id: MedievalClothingShoesLeather
+        prob: 0.05
+      - id: MedievalClothingHeadHatPlaguedoctor
+        prob: 0.05
+      - id: MedievalClothingMaskPlague
+        prob: 0.05
+      - id: MedievalMaceT3
+        prob: 0.05
+      - id: MedievalHatchet
+        prob: 0.05
+      - id: MedievalMaskFace
+        prob: 0.11
+      - id: MedievalClothingOuterArmorLeatherLight
+        prob: 0.035
+      - id: MedievalClothingOuterArmorChainMailLight
+        prob: 0.015
+      - id: MedievalClothingOuterArmorChainMail
+        prob: 0.015
+      - id: MedievalClothingOuterArmorLeather
+        prob: 0.06
+      - id: MedievalScythe
+        prob: 0.1
+      - id: MedievalDaggerT3
+        prob: 0.24
+      - id: MedievalFalshionT3
+        prob: 0.04
+      - id: MedievalShortSword
+        prob: 0.04
+      - id: MedievalSaber
+        prob: 0.04
+      - id: MedievalPalice
+        prob: 0.04
+      - id: MedievalMaceT3HeavyBone
+        prob: 0.04
+      - id: MedievalBanjoInstrument
+        prob: 0.1
+      - id: MedievalShovel
+        prob: 0.03
+      #- id: MedievalWrench
+      #  prob: 0.03
+      - id: MedievalClothingHeadHelmetSalad
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetSaladLight
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetBacinet
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetNormand
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetNormandFree
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetNazal
+        prob: 0.025
+      - id: MedievalArrowIronPhysics
+        prob: 0.4
+      - id: MedievalBolt
+        prob: 0.25
+      - id: MedievalClothingOuterArmorStudded
+        prob: 0.1
+      - id: MedievalClothingBackpackSatchelLeather
+        prob: 0.017
+      - id: MedievalClothingBackpackSatchelLeather2
+        prob: 0.017
+      - id: MedievalClothingBackpackSatchelLeather3
+        prob: 0.017
+      - id: MedievalClothingBackpackLeather
+        prob: 0.07
+      - id: BowImprovised
+        prob: 0.05
+      - id: MedievalClothingHeadHelmetCrusader
+        prob: 0.03
+      - id: MedievalClothingHeadHelmetShapel
+        prob: 0.05
+      - id: MedievalRadChemistryBottle
+        prob: 0.005
+      - id: MedievalGigaHealChemistryBottle
+        prob: 0.008
+      - id: MedievalMutagenChemistryBottle
+        prob: 0.005
+      - id: MedievalBloodChemistryBottle
+        prob: 0.014
+      - id: MedievalHealthChemistryBottle
+        prob: 0.025
+      - id: MedievalGeneticChemistryBottle
+        prob: 0.005
+      - id: MedievalFireChemistryBottle
+        prob: 0.01
+      - id: MedievalLootAnt
+        prob: 0.2
+      - id: MedievalLeather1
+        prob: 0.2
+      - id: MedievalSpiderHair
+        prob: 0.2
+      - id: MedievalRope
+        prob: 0.2
+      - id: MedievalClothingHeadArcherHat
+        prob: 0.1
+      - id: MedievalClippers
+        prob: 0.035
+      - id: MedievalHoe
+        prob: 0.025
+      - id: MedievalQuiver
+        prob: 0.055
+      - id: MedievalQuiverSteel
+        prob: 0.055
+      - id: MedievalPickaxe
+        prob: 0.072
+      - id: MedievalKeyStorage
+        prob: 0.07
+      - id: MedievalClothingUniformJumpsuitShitCloth19
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth14
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth18
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth7
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth25
+        prob: 0.05
+      - id: MedievalGag
+        prob: 0.072
+      - id: MedievalFetter
+        prob: 0.1
+      - id: MedievalHandcuffs
+        prob: 0.12
+      - id: MedievalClothingHeadHelmetJester
+        prob: 0.03
+      - id: MedievalClothingOuterArmorLeatherHeavy
+        prob: 0.01
+      - id: MedievalClothingUniformJumpsuitShitCloth15
+        prob: 0.01
+      - id: MedievalClothingUniformJumpsuitShitCloth33
+        prob: 0.01
+      - id: MedievalClothingUniformJumpsuitShitCloth35
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth36
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth37
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth38
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth39
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth40
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth41
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth42
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth43
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth44
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth45
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth46
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth47
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth48
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth49
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth50
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth51
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth52
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth53
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth54
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth55
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth56
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth57
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth58
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth59
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth60
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth61
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth62
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth63
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth64
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth34
+        prob: 0.05
+      - id: MedievalWoodenShield
+        prob: 0.07
+      - id: MedievalWoodenShieldKnight
+        prob: 0.07
+      - id: MedievalWoodenShieldBuckler
+        prob: 0.06
+      - id: MedievalClothingUniformJumpsuitShitCloth23
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth22
+        prob: 0.03
+      - id: ClothingNeckShawlRed
+        prob: 0.03
+      - id: MedievalClothingHeadHelmetExecutor2
+        prob: 0.02
+      - id: ClothingMaskBear
+        prob: 0.02
+      - id: ClothingShoesBootsCowboyBrown
+        prob: 0.02
+      - id: ClothingEyesEyepatch
+        prob: 0.02
+      - id: ClothingShoesBootsSalvage
+        prob: 0.03
+      - id: ClothingMaskFox
+        prob: 0.02
+      - id: ClothingMaskBat
+        prob: 0.02
+      - id: ClothingMaskRat
+        prob: 0.02
+      - id: ClothingMaskRaven
+        prob: 0.02
+      - id: ClothingMaskJackal
+        prob: 0.02
+      - id: ClothingMaskBee
+        prob: 0.02
+      - id: ClothingShoesBootsCowboyFancy
+        prob: 0.05
+      - id: ClothingShoesBootsCowboyBlack
+        prob: 0.03
+      - id: ClothingOuterHoodieChaplain
+        prob: 0.035
+      - id: ClothingShoesBootsCowboyWhite
+        prob: 0.03
+      - id: MedievalClothingHeadHelmetExecutor1
+        prob: 0.03
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent5
+        prob: 0.3
+      - id: MedievalRevent10
+        prob: 0.085
+
+- type: entity
+  parent: MedievalCrateGeneric
+  id: MedievalChestWithLoot2
+  name: MedievalChestWithLoot2
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/chest2.rsi
+    layers:
+    - state: base
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Icon
+    sprite: Imperial/Medieval/Decor/chest2.rsi
+    state: base
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.29"
+        density: 135
+        mask:
+        - LargeMobMask
+        layer:
+        - LargeMobLayer
+  - type: TimedDespawn
+    lifetime: 600
+  #- type: SpawnOnDespawn
+  #  prototype: MedievalChestWithLoot2
+  - type: StorageFill
+    contents:
+      - id: MedievalScrollBarrierWeak
+        prob: 0.4
+      - id: MedievalScrollBarrierWeak
+        prob: 0.4
+      - id: MedievalScrollBarrierWeak
+        prob: 0.3
+      - id: MedievalScrollBarrierNormal
+        prob: 0.6
+      - id: MedievalClothingUniformJumpsuitShitCloth24
+        prob: 0.02
+      - id: MedievalCoinBag
+        prob: 0.04
+      - id: MedievalGlowStone
+        prob: 0.04
+      - id: MedievalClothingUniformJumpsuitFlannel
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth16
+        prob: 0.02
+      - id: MedievalWoodenSword
+        prob: 0.04
+      - id: MedievalClothingOuterPlagueSuit
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth9
+        prob: 0.05
+      - id: MedievalMopItem
+        prob: 0.05
+      - id: MedievalClothingHeadFarmerHat
+        prob: 0.035
+      - id: MedievalShoesSapogi
+        prob: 0.035
+      - id: MedievalBastShoes
+        prob: 0.04
+      - id: MedievalClothingHeadHelmetCap
+        prob: 0.07
+      - id: MedievalClothingOuterApronChef
+        prob: 0.03
+      - id: MedievalBeaker
+        prob: 0.09
+      - id: MedievalClothingOuterArmorFur
+        prob: 0.075
+      - id: MedievalPaper
+        prob: 0.22
+      - id: MedievalRepairStone
+        prob: 0.05
+      - id: MedievalPen
+        prob: 0.1
+      - id: MedievalDrugChemistryBottle
+        prob: 0.04
+      - id: MedievalBrutepack
+        prob: 0.25
+      - id: DrinkGlassWhite
+        prob: 0.12
+      - id: MedievalLootGoblin
+        prob: 0.02
+      - id: FoodBreadPlain
+        prob: 0.002
+      - id: MedievalCoal
+        prob: 0.02
+      - id: MedievalClothingHeadHelmetHood
+        prob: 0.02
+      - id: FoodCheese
+        prob: 0.005
+      - id: FoodBreadMeat
+        prob: 0.005
+      - id: FoodPieMeat
+        prob: 0.005
+      - id: FoodCarrot
+        prob: 0.005
+      - id: FoodOnion
+        prob: 0.005
+      - id: FoodBakedCookie
+        prob: 0.005
+      - id: FoodMeatSpiderlegCooked
+        prob: 0.0075
+      - id: FoodCorn
+        prob: 0.005
+      - id: FoodTomato
+        prob: 0.002
+      - id: MedievalClothingUniformJumpsuitShitCloth5
+        prob: 0.03
+      - id: FoodButter
+        prob: 0.005
+      - id: FoodSoupBeetRed
+        prob: 0.008
+      - id: FoodApple
+        prob: 0.002
+      - id: ClothingHandsGlovesColorBlack
+        prob: 0.04
+      - id: MedievalClothingHandsGlovesColorBrown
+        prob: 0.04
+      - id: MedievalGlovesBlacksmith
+        prob: 0.02
+      - id: ClothingHandsGlovesColorGray
+        prob: 0.04
+      - id: ClothingHandsGlovesColorLightBrown
+        prob: 0.04
+      - id: ClothingShoesWizard
+        prob: 0.04
+      - id: MedievalClothingUniformJumpsuitShitCloth17
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth12
+        prob: 0.035
+      - id: MedievalClothingUniformJumpsuitShitCloth1
+        prob: 0.05
+      - id: MedievalShoesValenki
+        prob: 0.02
+      - id: MedievalWineskin
+        prob: 0.02
+      - id: MedievalHolySalt
+        prob: 0.1
+      - id: MedievalClothingHeadBag
+        prob: 0.05
+      - id: MedievalClothingBackpackBox
+        prob: 0.09
+      - id: MedievalClothingShoesLeather
+        prob: 0.05
+      - id: MedievalClothingHeadHatPlaguedoctor
+        prob: 0.05
+      - id: MedievalClothingMaskPlague
+        prob: 0.05
+      - id: MedievalMaceT3
+        prob: 0.05
+      - id: MedievalHatchet
+        prob: 0.05
+      - id: MedievalMaskFace
+        prob: 0.11
+      - id: MedievalClothingOuterArmorLeatherLight
+        prob: 0.035
+      - id: MedievalClothingOuterArmorChainMailLight
+        prob: 0.015
+      - id: MedievalClothingOuterArmorChainMail
+        prob: 0.015
+      - id: MedievalClothingOuterArmorLeather
+        prob: 0.08
+      - id: MedievalScythe
+        prob: 0.1
+      - id: MedievalDaggerT3
+        prob: 0.24
+      - id: MedievalFalshionT3
+        prob: 0.04
+      - id: MedievalShortSword
+        prob: 0.04
+      - id: MedievalSaber
+        prob: 0.04
+      - id: MedievalPalice
+        prob: 0.04
+      - id: MedievalMaceT3HeavyBone
+        prob: 0.04
+      - id: MedievalBanjoInstrument
+        prob: 0.1
+      - id: MedievalShovel
+        prob: 0.03
+      #- id: MedievalWrench
+      #  prob: 0.03
+      - id: MedievalClothingHeadHelmetSalad
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetSaladLight
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetBacinet
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetNormand
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetNormandFree
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetNazal
+        prob: 0.025
+      - id: MedievalArrowIronPhysics
+        prob: 0.4
+      - id: MedievalBolt
+        prob: 0.25
+      - id: MedievalClothingOuterArmorStudded
+        prob: 0.1
+      - id: MedievalClothingBackpackSatchelLeather
+        prob: 0.017
+      - id: MedievalClothingBackpackSatchelLeather2
+        prob: 0.017
+      - id: MedievalClothingBackpackSatchelLeather3
+        prob: 0.017
+      - id: MedievalClothingBackpackLeather
+        prob: 0.07
+      - id: BowImprovised
+        prob: 0.05
+      - id: MedievalClothingHeadHelmetCrusader
+        prob: 0.03
+      - id: MedievalClothingHeadHelmetShapel
+        prob: 0.05
+      - id: MedievalRadChemistryBottle
+        prob: 0.005
+      - id: MedievalGigaHealChemistryBottle
+        prob: 0.008
+      - id: MedievalMutagenChemistryBottle
+        prob: 0.005
+      - id: MedievalBloodChemistryBottle
+        prob: 0.014
+      - id: MedievalHealthChemistryBottle
+        prob: 0.025
+      - id: MedievalGeneticChemistryBottle
+        prob: 0.005
+      - id: MedievalFireChemistryBottle
+        prob: 0.01
+      - id: MedievalLootAnt
+        prob: 0.2
+      - id: MedievalLeather1
+        prob: 0.2
+      - id: MedievalSpiderHair
+        prob: 0.2
+      - id: MedievalRope
+        prob: 0.2
+      - id: MedievalClothingHeadArcherHat
+        prob: 0.1
+      - id: MedievalClippers
+        prob: 0.035
+      - id: MedievalHoe
+        prob: 0.025
+      - id: MedievalQuiver
+        prob: 0.055
+      - id: MedievalQuiverSteel
+        prob: 0.055
+      - id: MedievalPickaxe
+        prob: 0.072
+      - id: MedievalKeyStorage
+        prob: 0.07
+      - id: MedievalClothingUniformJumpsuitShitCloth19
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth14
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth18
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth33
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth34
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth35
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth36
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth37
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth38
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth39
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth40
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth41
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth42
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth43
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth44
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth45
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth46
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth47
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth48
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth49
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth50
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth51
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth52
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth53
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth54
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth55
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth56
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth57
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth58
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth59
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth60
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth61
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth62
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth63
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth64
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth7
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth25
+        prob: 0.05
+      - id: MedievalGag
+        prob: 0.072
+      - id: MedievalFetter
+        prob: 0.1
+      - id: MedievalHandcuffs
+        prob: 0.12
+      - id: MedievalClothingHeadHelmetJester
+        prob: 0.03
+      - id: MedievalClothingOuterArmorLeatherHeavy
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth15
+        prob: 0.03
+      - id: MedievalWoodenShield
+        prob: 0.08
+      - id: MedievalWoodenShieldKnight
+        prob: 0.08
+      - id: MedievalWoodenShieldBuckler
+        prob: 0.08
+      - id: MedievalClothingUniformJumpsuitShitCloth23
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth22
+        prob: 0.03
+      - id: ClothingNeckShawlRed
+        prob: 0.03
+      - id: MedievalClothingHeadHelmetExecutor2
+        prob: 0.02
+      - id: ClothingMaskBear
+        prob: 0.02
+      - id: ClothingShoesBootsCowboyBrown
+        prob: 0.02
+      - id: ClothingEyesEyepatch
+        prob: 0.02
+      - id: ClothingShoesBootsSalvage
+        prob: 0.03
+      - id: ClothingMaskFox
+        prob: 0.02
+      - id: ClothingMaskBat
+        prob: 0.02
+      - id: ClothingMaskRat
+        prob: 0.02
+      - id: ClothingMaskRaven
+        prob: 0.02
+      - id: ClothingMaskJackal
+        prob: 0.02
+      - id: ClothingMaskBee
+        prob: 0.02
+      - id: ClothingShoesBootsCowboyFancy
+        prob: 0.05
+      - id: ClothingShoesBootsCowboyBlack
+        prob: 0.03
+      - id: ClothingOuterHoodieChaplain
+        prob: 0.035
+      - id: ClothingShoesBootsCowboyWhite
+        prob: 0.03
+      - id: MedievalClothingHeadHelmetExecutor1
+        prob: 0.03
+      - id: MedievalIronGloves
+        prob: 0.05
+      - id: MedievalIronGlovesBear
+        prob: 0.05
+      - id: MedievalIronGlovesBrig
+        prob: 0.05
+      - id: MedievalClothingFeetSteel
+        prob: 0.046
+      - id: MedievalHandheldGPSBasic
+        prob: 0.08
+      - id: MedievalSleepChemistryBottle
+        prob: 0.009
+      - id: MedievalBaffChemistryBottle
+        prob: 0.003
+      - id: MedievalMuteChemistryBottle
+        prob: 0.003
+      - id: MedievalClothingOuterArmorIronCuirass
+        prob: 0.0008
+      - id: MedievalClothingOuterArmorIronCuirassLight
+        prob: 0.0015
+      - id: MedievalSpearT3
+        prob: 0.07
+      - id: MedievalLockpickPack
+        prob: 0.015
+      - id: MedievalLockpick
+        prob: 0.09
+      - id: MedievalIronIngot
+        prob: 0.4
+      - id: MedievalHandheldHealthAnalyzer
+        prob: 0.07
+      - id: MedievalIronHammer
+        prob: 0.05
+      - id: MedievalIronHalberdT3
+        prob: 0.05
+      - id: MedievalGrenade
+        prob: 0.08
+      - id: MedievalGrenade
+        prob: 0.08
+      - id: MedievalGrenade
+        prob: 0.08
+      - id: MedievalClothingBackpackSatchelTraveller
+        prob: 0.06
+      - id: MedievalAlchemicBelt
+        prob: 0.07
+      - id: MedievalSpellbookLight
+        prob: 0.005
+      - id: MedievalSpellbookSmoke
+        prob: 0.005
+      - id: MedievalSpellbookFlash1
+        prob: 0.005
+      - id: MedievalSpellbookArrow1
+        prob: 0.005
+      - id: MedievalSpellbookBoost1
+        prob: 0.004
+      - id: MedievalGeigerCounter
+        prob: 0.05
+      - id: MedievalClothingOuterArmorIron
+        prob: 0.001
+      - id: ClothingOuterArmorPodWars
+        prob: 0.001
+      - id: MedievalAdam
+        prob: 0.3
+      - id: MedievalEssence
+        prob: 0.1
+      - id: MedievalFireSerdolick
+        prob: 0.3
+      - id: MedievalTopaz
+        prob: 0.3
+      - id: MedievalGear
+        prob: 0.2
+      - id: MedievalEbonitOre
+        prob: 0.1
+      - id: MedievalForstoneOre
+        prob: 0.1
+      - id: ClothingHeadHatPumpkin
+        prob: 0.07
+      - id: MedievalKnut
+        prob: 0.09
+      - id: MedaljonDark
+        prob: 0.03
+      - id: MedaljonExpl
+        prob: 0.02
+      - id: MedaljonNoslip
+        prob: 0.02
+      - id: MedaljonFlashImmune
+        prob: 0.07
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent5
+        prob: 0.1
+      - id: MedievalRevent5
+        prob: 0.1
+      - id: MedievalRevent5
+        prob: 0.1
+      - id: MedievalRevent5
+        prob: 0.1
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+
+- type: entity
+  parent: MedievalCrateGeneric
+  id: MedievalChestWithLoot3
+  name: MedievalChestWithLoot3
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/chest3.rsi
+    layers:
+    - state: base
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Icon
+    sprite: Imperial/Medieval/Decor/chest3.rsi
+    state: base
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.29"
+        density: 135
+        mask:
+        - LargeMobMask
+        layer:
+        - LargeMobLayer
+  - type: TimedDespawn
+    lifetime: 600
+  #- type: SpawnOnDespawn
+  #  prototype: MedievalChestWithLoot3
+  - type: StorageFill
+    contents:
+      - id: MedievalScrollBarrierWeak
+        prob: 0.5
+      - id: MedievalScrollBarrierWeak
+        prob: 0.5
+      - id: MedievalScrollBarrierWeak
+        prob: 0.2
+      - id: MedievalScrollBarrierWeak
+        prob: 0.04
+      - id: MedievalScrollBarrierWeak
+        prob: 0.04
+      - id: MedievalScrollBarrierNormal
+        prob: 0.01
+      - id: MedievalScrollBarrierNormal
+        prob: 0.1
+      - id: MedievalScrollBarrierNormal
+        prob: 0.3
+      - id: MedievalScrollBarrierGood
+        prob: 0.1
+      - id: MedievalScrollBarrierDebug
+        prob: 0.015
+      - id: MedievalClothingUniformJumpsuitShitCloth24
+        prob: 0.02
+      - id: MedievalCoinBag
+        prob: 0.04
+      - id: MedievalGlowStone
+        prob: 0.04
+      - id: MedievalClothingUniformJumpsuitFlannel
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth16
+        prob: 0.02
+      - id: MedievalWoodenSword
+        prob: 0.04
+      - id: MedievalClothingOuterPlagueSuit
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth9
+        prob: 0.05
+      - id: MedievalMopItem
+        prob: 0.05
+      - id: MedievalClothingHeadFarmerHat
+        prob: 0.035
+      - id: MedievalShoesSapogi
+        prob: 0.035
+      - id: MedievalBastShoes
+        prob: 0.04
+      - id: MedievalClothingHeadHelmetCap
+        prob: 0.07
+      - id: MedievalClothingOuterApronChef
+        prob: 0.03
+      - id: MedievalBeaker
+        prob: 0.09
+      - id: MedievalClothingOuterArmorFur
+        prob: 0.075
+      - id: MedievalPaper
+        prob: 0.22
+      - id: MedievalRepairStone
+        prob: 0.05
+      - id: MedievalPen
+        prob: 0.1
+      - id: MedievalDrugChemistryBottle
+        prob: 0.04
+      - id: MedievalBrutepack
+        prob: 0.25
+      - id: DrinkGlassWhite
+        prob: 0.02
+      - id: MedievalLootGoblin
+        prob: 0.02
+      - id: FoodBreadPlain
+        prob: 0.002
+      - id: MedievalCoal
+        prob: 0.02
+      - id: MedievalClothingHeadHelmetHood
+        prob: 0.02
+      - id: FoodCheese
+        prob: 0.005
+      - id: FoodBreadMeat
+        prob: 0.005
+      - id: FoodPieMeat
+        prob: 0.005
+      - id: FoodCarrot
+        prob: 0.005
+      - id: FoodOnion
+        prob: 0.005
+      - id: FoodBakedCookie
+        prob: 0.005
+      - id: FoodMeatSpiderlegCooked
+        prob: 0.0075
+      - id: FoodCorn
+        prob: 0.005
+      - id: FoodTomato
+        prob: 0.002
+      - id: MedievalClothingUniformJumpsuitShitCloth5
+        prob: 0.03
+      - id: FoodButter
+        prob: 0.005
+      - id: FoodSoupBeetRed
+        prob: 0.008
+      - id: FoodApple
+        prob: 0.002
+      - id: ClothingHandsGlovesColorBlack
+        prob: 0.04
+      - id: MedievalClothingHandsGlovesColorBrown
+        prob: 0.04
+      - id: MedievalGlovesBlacksmith
+        prob: 0.02
+      - id: ClothingHandsGlovesColorGray
+        prob: 0.04
+      - id: ClothingHandsGlovesColorLightBrown
+        prob: 0.04
+      - id: ClothingShoesWizard
+        prob: 0.04
+      - id: MedievalClothingUniformJumpsuitShitCloth17
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth12
+        prob: 0.035
+      - id: MedievalClothingUniformJumpsuitShitCloth1
+        prob: 0.05
+      - id: MedievalShoesValenki
+        prob: 0.02
+      - id: MedievalWineskin
+        prob: 0.02
+      - id: MedievalHolySalt
+        prob: 0.1
+      - id: MedievalClothingHeadBag
+        prob: 0.05
+      - id: MedievalClothingBackpackBox
+        prob: 0.09
+      - id: MedievalClothingShoesLeather
+        prob: 0.05
+      - id: MedievalClothingHeadHatPlaguedoctor
+        prob: 0.05
+      - id: MedievalClothingMaskPlague
+        prob: 0.05
+      - id: MedievalMaceT3
+        prob: 0.05
+      - id: MedievalHatchet
+        prob: 0.05
+      - id: MedievalMaskFace
+        prob: 0.11
+      - id: MedievalClothingOuterArmorLeatherLight
+        prob: 0.035
+      - id: MedievalClothingOuterArmorChainMailLight
+        prob: 0.015
+      - id: MedievalClothingOuterArmorChainMail
+        prob: 0.015
+      - id: MedievalClothingOuterArmorLeather
+        prob: 0.09
+      - id: MedievalScythe
+        prob: 0.1
+      - id: MedievalDaggerT3
+        prob: 0.24
+      - id: MedievalFalshionT3
+        prob: 0.04
+      - id: MedievalShortSword
+        prob: 0.04
+      - id: MedievalSaber
+        prob: 0.04
+      - id: MedievalPalice
+        prob: 0.04
+      - id: MedievalMaceT3HeavyBone
+        prob: 0.04
+      - id: MedievalBanjoInstrument
+        prob: 0.1
+      - id: MedievalShovel
+        prob: 0.03
+      #- id: MedievalWrench
+      #  prob: 0.03
+      - id: MedievalClothingHeadHelmetSalad
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetSaladLight
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetBacinet
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetNormand
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetNormandFree
+        prob: 0.025
+      - id: MedievalClothingHeadHelmetNazal
+        prob: 0.025
+      - id: MedievalArrowIronPhysics
+        prob: 0.4
+      - id: MedievalBolt
+        prob: 0.25
+      - id: MedievalClothingOuterArmorStudded
+        prob: 0.1
+      - id: MedievalClothingBackpackSatchelLeather
+        prob: 0.017
+      - id: MedievalClothingBackpackSatchelLeather2
+        prob: 0.017
+      - id: MedievalClothingBackpackSatchelLeather3
+        prob: 0.017
+      - id: MedievalClothingBackpackLeather
+        prob: 0.07
+      - id: BowImprovised
+        prob: 0.05
+      - id: MedievalClothingHeadHelmetCrusader
+        prob: 0.03
+      - id: MedievalClothingHeadHelmetShapel
+        prob: 0.05
+      - id: MedievalRadChemistryBottle
+        prob: 0.005
+      - id: MedievalGigaHealChemistryBottle
+        prob: 0.008
+      - id: MedievalMutagenChemistryBottle
+        prob: 0.005
+      - id: MedievalBloodChemistryBottle
+        prob: 0.014
+      - id: MedievalHealthChemistryBottle
+        prob: 0.205
+      - id: MedievalGeneticChemistryBottle
+        prob: 0.005
+      - id: MedievalFireChemistryBottle
+        prob: 0.01
+      - id: MedievalLootAnt
+        prob: 0.2
+      - id: MedievalLeather1
+        prob: 0.2
+      - id: MedievalSpiderHair
+        prob: 0.2
+      - id: MedievalRope
+        prob: 0.2
+      - id: MedievalClothingHeadArcherHat
+        prob: 0.1
+      - id: MedievalClippers
+        prob: 0.035
+      - id: MedievalHoe
+        prob: 0.025
+      - id: MedievalQuiver
+        prob: 0.055
+      - id: MedievalQuiverSteel
+        prob: 0.055
+      - id: MedievalPickaxe
+        prob: 0.072
+      - id: MedievalKeyStorage
+        prob: 0.07
+      - id: MedievalClothingUniformJumpsuitShitCloth19
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth14
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth18
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth7
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth25
+        prob: 0.05
+      - id: MedievalGag
+        prob: 0.072
+      - id: MedievalFetter
+        prob: 0.1
+      - id: MedievalHandcuffs
+        prob: 0.12
+      - id: MedievalClothingHeadHelmetJester
+        prob: 0.03
+      - id: MedievalClothingOuterArmorLeatherHeavy
+        prob: 0.025
+      - id: MedievalClothingUniformJumpsuitShitCloth15
+        prob: 0.03
+      - id: MedievalWoodenShield
+        prob: 0.08
+      - id: MedievalWoodenShieldKnight
+        prob: 0.08
+      - id: MedievalWoodenShieldBuckler
+        prob: 0.08
+      - id: MedievalClothingUniformJumpsuitShitCloth23
+        prob: 0.05
+      - id: MedievalClothingUniformJumpsuitShitCloth22
+        prob: 0.03
+      - id: ClothingNeckShawlRed
+        prob: 0.03
+      - id: MedievalClothingHeadHelmetExecutor2
+        prob: 0.02
+      - id: ClothingMaskBear
+        prob: 0.02
+      - id: ClothingShoesBootsCowboyBrown
+        prob: 0.02
+      - id: ClothingEyesEyepatch
+        prob: 0.02
+      - id: ClothingShoesBootsSalvage
+        prob: 0.03
+      - id: ClothingMaskFox
+        prob: 0.02
+      - id: ClothingMaskBat
+        prob: 0.02
+      - id: ClothingMaskRat
+        prob: 0.02
+      - id: ClothingMaskRaven
+        prob: 0.02
+      - id: ClothingMaskJackal
+        prob: 0.02
+      - id: ClothingMaskBee
+        prob: 0.02
+      - id: ClothingShoesBootsCowboyFancy
+        prob: 0.05
+      - id: ClothingShoesBootsCowboyBlack
+        prob: 0.03
+      - id: ClothingOuterHoodieChaplain
+        prob: 0.035
+      - id: ClothingShoesBootsCowboyWhite
+        prob: 0.03
+      - id: MedievalClothingHeadHelmetExecutor1
+        prob: 0.03
+      - id: MedievalIronGloves
+        prob: 0.05
+      - id: MedievalIronGlovesBear
+        prob: 0.05
+      - id: MedievalIronGlovesBrig
+        prob: 0.05
+      - id: MedievalClothingFeetSteel
+        prob: 0.046
+      - id: MedievalHandheldGPSBasic
+        prob: 0.08
+      - id: MedievalSleepChemistryBottle
+        prob: 0.009
+      - id: MedievalBaffChemistryBottle
+        prob: 0.003
+      - id: MedievalMuteChemistryBottle
+        prob: 0.003
+      - id: MedievalClothingOuterArmorIronCuirass
+        prob: 0.0008
+      - id: MedievalClothingOuterArmorIronCuirassLight
+        prob: 0.0015
+      - id: MedievalSpearT3
+        prob: 0.07
+      - id: MedievalLockpickPack
+        prob: 0.04
+      - id: MedievalLockpick
+        prob: 0.15
+      - id: MedievalIronIngot
+        prob: 0.4
+      - id: MedievalHandheldHealthAnalyzer
+        prob: 0.07
+      - id: MedievalIronHammer
+        prob: 0.05
+      - id: MedievalIronHalberdT3
+        prob: 0.05
+      - id: MedievalGrenade
+        prob: 0.1
+      - id: MedievalClothingBackpackSatchelTraveller
+        prob: 0.06
+      - id: MedievalAlchemicBelt
+        prob: 0.07
+      - id: MedievalSpellbookLight
+        prob: 0.007
+      - id: MedievalSpellbookSmoke
+        prob: 0.007
+      - id: MedievalSpellbookFlash1
+        prob: 0.005
+      - id: MedievalSpellbookArrow1
+        prob: 0.005
+      - id: MedievalSpellbookBoost1
+        prob: 0.006
+      - id: MedievalGeigerCounter
+        prob: 0.05
+      - id: MedievalClothingOuterArmorIron
+        prob: 0.01
+      - id: ClothingOuterArmorPodWars
+        prob: 0.01
+      - id: MedievalAdam
+        prob: 0.3
+      - id: MedievalEssence
+        prob: 0.1
+      - id: MedievalFireSerdolick
+        prob: 0.3
+      - id: MedievalTopaz
+        prob: 0.3
+      - id: MedievalGear
+        prob: 0.2
+      - id: ClothingHeadHatPumpkin
+        prob: 0.07
+      - id: MedievalKnut
+        prob: 0.09
+      - id: MedaljonDark
+        prob: 0.07
+      - id: MedaljonExpl
+        prob: 0.03
+      - id: MedaljonNoslip
+        prob: 0.03
+      - id: MedaljonFlashImmune
+        prob: 0.09
+      - id: MedievalIngotGold
+        prob: 0.7
+      - id: MedievalIngotGold
+        prob: 0.7
+      - id: MedievalIngotGold
+        prob: 0.7
+      - id: MedievalIngotGold
+        prob: 0.7
+      - id: MedievalIngotGold
+        prob: 0.7
+      - id: MedaljonSpeed
+        prob: 0.08
+      - id: MedaljonMana
+        prob: 0.08
+      - id: MedaljonDef
+        prob: 0.09
+      #- id: MedaljonThieving
+      #  prob: 0.15
+      - id: MedievalSpellbookArrow1
+        prob: 0.05
+      - id: MedievalSpellbookBarrier
+        prob: 0.04
+      - id: MedievalSpellbookBlood1
+        prob: 0.04
+      - id: MedievalSpellbookHeal1
+        prob: 0.02
+      - id: MedievalSpellbookFireball1
+        prob: 0.02
+      - id: MedievalSpellbookDisabler1
+        prob: 0.02
+      - id: MedievalSpellbookBlink
+        prob: 0.08
+      - id: MedievalShoesSpeed
+        prob: 0.09
+      - id: MedievalArrowFire
+        prob: 0.7
+      - id: MedievalArrowFire
+        prob: 0.7
+      - id: MedievalArrowFire
+        prob: 0.7
+      - id: MedievalArrowFire
+        prob: 0.7
+      - id: MedievalArrowFire
+        prob: 0.7
+      - id: MedievalArrowFire
+        prob: 0.7
+      - id: MedievalArrowFire
+        prob: 0.7
+      - id: MedievalArrowFire
+        prob: 0.7
+      - id: ClothingHeadHelmetBone
+        prob: 0.5
+      - id: ClothingOuterArmorBone
+        prob: 0.1
+      - id: MedievalIronShieldBuckler
+        prob: 0.08
+      - id: MedievalClothingOuterArmorUpIron
+        prob: 0.012
+      - id: MedievalClothingOuterArmorUpIron2
+        prob: 0.012
+      - id: MedievalClothingHeadCrownKing
+        prob: 0.01
+      - id: MedievalEbonitOre
+        prob: 0.7
+      - id: MedievalEbonitOre
+        prob: 0.7
+      - id: MedievalEbonitOre
+        prob: 0.7
+      - id: MedievalEbonitOre
+        prob: 0.7
+      - id: MedievalForstoneOre
+        prob: 0.7
+      - id: MedievalForstoneOre
+        prob: 0.7
+      - id: MedievalForstoneOre
+        prob: 0.7
+      - id: MedievalForstoneOre
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: MedievalSteelIngot
+        prob: 0.7
+      - id: ClothingEyesEyepatchHudBeer
+        prob: 0.45
+      - id: ClothingEyesEyepatchHudMedical
+        prob: 0.25
+      - id: MedievalWeaponCrossbow
+        prob: 0.35
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent5
+        prob: 0.1
+      - id: MedievalRevent5
+        prob: 0.1
+      - id: MedievalRevent5
+        prob: 0.1
+      - id: MedievalRevent5
+        prob: 0.1
+      - id: MedievalRevent10
+        prob: 0.1
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+      - id: MedievalRevent10
+        prob: 0.2
+
+- type: entity
+  parent: MedievalCrateGeneric
+  id: MedievalChestWithLoot4
+  name: MedievalChestWithLoot4
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/chest4.rsi
+    layers:
+    - state: base
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Icon
+    sprite: Imperial/Medieval/Decor/chest4.rsi
+    state: base
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.29"
+        density: 135
+        mask:
+        - LargeMobMask
+        layer:
+        - LargeMobLayer
+  - type: TimedDespawn
+    lifetime: 600
+  #- type: SpawnOnDespawn
+  #  prototype: MedievalChestWithLoot4
+  - type: StorageFill
+    contents:
+      - id: MedievalScrollBarrierWeak
+        prob: 0.15
+      - id: MedievalClothingUniformJumpsuitShitCloth24
+        prob: 0.02
+      - id: MedievalCoinBag
+        prob: 0.04
+      - id: MedievalGlowStone
+        prob: 0.04
+      - id: MedievalClothingUniformJumpsuitFlannel
+        prob: 0.02
+      - id: MedievalClothingUniformJumpsuitShitCloth16
+        prob: 0.02
+      - id: MedievalWoodenSword
+        prob: 0.04
+      - id: MedievalClothingOuterPlagueSuit
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth9
+        prob: 0.05
+      - id: MedievalMopItem
+        prob: 0.05
+      - id: MedievalClothingHeadFarmerHat
+        prob: 0.035
+      - id: MedievalShoesSapogi
+        prob: 0.035
+      - id: MedievalBastShoes
+        prob: 0.04
+      - id: MedievalClothingHeadHelmetCap
+        prob: 0.07
+      - id: MedievalClothingOuterApronChef
+        prob: 0.03
+      - id: MedievalBeaker
+        prob: 0.09
+      - id: MedievalClothingOuterArmorFur
+        prob: 0.075
+      - id: MedievalPaper
+        prob: 0.22
+      - id: MedievalRepairStone
+        prob: 0.05
+      - id: MedievalPen
+        prob: 0.1
+      - id: MedievalDrugChemistryBottle
+        prob: 0.04
+      - id: MedievalBrutepack
+        prob: 0.7
+      - id: DrinkGlassWhite
+        prob: 0.02
+      - id: MedievalLootGoblin
+        prob: 0.02
+      - id: FoodBreadPlain
+        prob: 0.002
+      - id: MedievalCoal
+        prob: 0.02
+      - id: MedievalClothingHeadHelmetHood
+        prob: 0.02
+      - id: FoodCheese
+        prob: 0.005
+      - id: FoodBreadMeat
+        prob: 0.005
+      - id: FoodPieMeat
+        prob: 0.005
+      - id: FoodCarrot
+        prob: 0.005
+      - id: FoodOnion
+        prob: 0.005
+      - id: FoodBakedCookie
+        prob: 0.005
+      - id: FoodMeatSpiderlegCooked
+        prob: 0.0075
+      - id: FoodCorn
+        prob: 0.005
+      - id: FoodTomato
+        prob: 0.002
+      - id: MedievalClothingUniformJumpsuitShitCloth5
+        prob: 0.03
+      - id: FoodButter
+        prob: 0.005
+      - id: FoodSoupBeetRed
+        prob: 0.008
+      - id: FoodApple
+        prob: 0.002
+      - id: ClothingHandsGlovesColorBlack
+        prob: 0.04
+      - id: MedievalClothingHandsGlovesColorBrown
+        prob: 0.04
+      - id: MedievalGlovesBlacksmith
+        prob: 0.02
+      - id: ClothingHandsGlovesColorGray
+        prob: 0.04
+      - id: ClothingHandsGlovesColorLightBrown
+        prob: 0.04
+      - id: ClothingShoesWizard
+        prob: 0.04
+      - id: MedievalClothingUniformJumpsuitShitCloth17
+        prob: 0.03
+      - id: MedievalClothingUniformJumpsuitShitCloth12
+        prob: 0.035
+      - id: MedievalClothingUniformJumpsuitShitCloth1
+        prob: 0.05
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent
+        prob: 0.1
+      - id: MedievalRevent5
+        prob: 0.06
+      - id: MedievalRevent5
+        prob: 0.06

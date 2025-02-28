@@ -156,6 +156,8 @@
   equipment:
     back: ClothingBackpackSatchelHolding
     id: AdminPDA
+    head: ClothingHeadHatHolyWatermelon  # imperial medieval start
+    mask: ClothingKrilSmall
   storage:
     back:
     - GasAnalyzer
@@ -163,6 +165,25 @@
     - AccessConfiguratorUniversal
     - Multitool
     - HandheldHealthAnalyzerUnpowered # Imperial Space
+    # Imperial Medieval Start
+    - MedievalClothingHeadCrownKing
+    - MedievalClothingHeadCrownKingNecro
+    - MedievalClothingHeadHelmetShapel
+    - MedievalClothingHeadHelmetGoblinSlayer
+    - MedievalClothingHeadHelmetHood
+    - MedievalClothingHeadHelmetExecutor2
+    - ClothingKrilBig
+    - MedievalMaskVendigo
+    - ClothingMaskJoy
+    - MedievalClothingHeadHelmetCrusader
+    - ClothingHeadHatSpecialOfficer
+    - ClothingHeadHatDogEars
+    - ClothingHeadHatSombrero
+    - ClothingHeadHatStrawHat
+    - ClothingHeadPaperSackSmile
+    - ClothingHeadHatUshanka
+    # Imperial Medieval End
+# imperial medieval end
 
 #Gladiator with spear
 - type: startingGear

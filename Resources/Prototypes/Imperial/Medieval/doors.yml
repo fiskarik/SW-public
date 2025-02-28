@@ -1,0 +1,697 @@
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockChapelLocked
+  components:
+  - type: AccessReader
+    access: [["Chapel"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockBarLocked
+  components:
+  - type: AccessReader
+    access: [["Bar"]]
+  - type: TrashDefendArea
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockServiceCaptainLocked
+  components:
+  - type: AccessReader
+    access: [["Captain"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockChemistryLocked
+  components:
+  - type: AccessReader
+    access: [["Chemistry"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockSecurityLocked
+  components:
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockAtmosLocked
+  components:
+  - type: AccessReader
+    access: [["Atmospherics"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockMaintenanceLocked
+  components:
+  - type: AccessReader
+    access: [["Maintenance"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockHydroponicsLocked
+  components:
+  - type: AccessReader
+    access: [["Hydroponics"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockJanitorLocked
+  components:
+  - type: AccessReader
+    access: [["Janitor"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockChiefEngineerLocked
+  components:
+  - type: AccessReader
+    access: [["ChiefEngineer"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockEngineeringLocked
+  components:
+  - type: AccessReader
+    access: [["Engineering"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockMedicalLocked
+  components:
+  - type: AccessReader
+    access: [["Medical"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockScienceLocked
+  components:
+  - type: AccessReader
+    access: [["Research"]]
+
+- type: entity
+  parent: MedievalAirlock
+  id: MedievalAirlockCargoLocked
+  components:
+  - type: AccessReader
+    access: [["Cargo"]]
+
+- type: entity
+  id: MedievalAirlock
+  parent: BaseStructure
+  placement:
+    mode: SnapgridCenter
+  name: airlock
+  description: It opens, it closes, and maybe crushes you.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    netsync: false
+    sprite: Imperial/Medieval/Walls/medieval_door.rsi
+    snapCardinals: true
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: ExplosionResistance
+    damageCoefficient: 3
+  - type: Door
+    performCollisionCheck: false
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0.2
+    closeTimeTwo: 0.6
+    openTimeOne: 0.6
+    openTimeTwo: 0.2
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+    openSound:
+      path: /Audio/Imperial/Medieval/derevyannuyu-dver-zakryili.ogg
+    closeSound:
+      path: /Audio/Imperial/Medieval/otkryili-steklyannuyu-dver.ogg
+    denySound:
+      path: /Audio/Imperial/Medieval/lyazg-visyaschego-zamka-na-zakryitoy-dveri.ogg
+  - type: Appearance
+  - type: Airtight
+    fixVacuum: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound: /Audio/Imperial/Medieval/zvuk-vyibivaniya-dveri-24274.ogg
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: Occluder
+  - type: Construction
+    graph: MedievalAirlock
+    node: medievalairlock
+  - type: DoorHackable
+    minNumber: 0
+    maxNumber: 6
+    numberCount: 3
+
+- type: construction
+  id: MedievalAirlock
+  name: деревянная дверь
+  description: Простая деревянная дверь.
+  graph: MedievalAirlock
+  startNode: start
+  targetNode: medievalairlock
+  category: construction-category-furniture
+  icon:
+    sprite: Imperial/Medieval/Walls/medieval_door.rsi
+    state: closed
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: MedievalAirlock
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: medievalairlock
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: WoodPlank
+              amount: 24
+              doAfter: 25
+    - node: medievalairlock
+      entity: MedievalAirlock
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank
+              amount: 10
+          steps:
+            - tool: MedievalBlacksmithing
+              doAfter: 150
+
+- type: entity
+  id: MedievalAirlockGrille
+  parent: BaseStructure
+  name: airlock
+  description: It opens, it closes, and maybe crushes you.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    netsync: false
+    sprite: Imperial/Medieval/Walls/medieval_door_grille.rsi
+    snapCardinals: true
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: Door
+    pryTime: 4
+    performCollisionCheck: false
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0.2
+    closeTimeTwo: 0.6
+    openTimeOne: 0.6
+    openTimeTwo: 0.2
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+    openSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+    closeSound:
+      path: /Audio/Effects/stonedoor_openclose.ogg
+    denySound:
+      path: /Audio/Imperial/Medieval/lyazg-visyaschego-zamka-na-zakryitoy-dveri.ogg
+  - type: Appearance
+  - type: Airtight
+    fixVacuum: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound: /Audio/Imperial/Medieval/zvuk-vyibivaniya-dveri-24274.ogg
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: DoorHackable
+    minNumber: 0
+    maxNumber: 8
+    numberCount: 4
+  #- type: Occluder
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleChapelLocked
+  components:
+  - type: AccessReader
+    access: [["Chapel"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleBarLocked
+  components:
+  - type: AccessReader
+    access: [["Bar"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleServiceCaptainLocked
+  components:
+  - type: AccessReader
+    access: [["Captain"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleChemistryLocked
+  components:
+  - type: AccessReader
+    access: [["Chemistry"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleSecurityLocked
+  components:
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleAtmosLocked
+  components:
+  - type: AccessReader
+    access: [["Atmospherics"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleMaintenanceLocked
+  components:
+  - type: AccessReader
+    access: [["Maintenance"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleHydroponicsLocked
+  components:
+  - type: AccessReader
+    access: [["Hydroponics"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleJanitorLocked
+  components:
+  - type: AccessReader
+    access: [["Janitor"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleChiefEngineerLocked
+  components:
+  - type: AccessReader
+    access: [["ChiefEngineer"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleEngineeringLocked
+  components:
+  - type: AccessReader
+    access: [["Engineering"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleMedicalLocked
+  components:
+  - type: AccessReader
+    access: [["Medical"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleScienceLocked
+  components:
+  - type: AccessReader
+    access: [["Research"]]
+
+- type: entity
+  parent: MedievalAirlockGrille
+  id: MedievalAirlockGrilleCargoLocked
+  components:
+  - type: AccessReader
+    access: [["Cargo"]]
+
+- type: entity
+  id: MedievalAirlockReinforced
+  parent: BaseStructure
+  name: airlock
+  description: It opens, it closes, and maybe crushes you.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    netsync: false
+    sprite: Imperial/Medieval/Walls/medieval_reinforced_door.rsi
+    snapCardinals: true
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: Door
+    performCollisionCheck: false
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0.2
+    closeTimeTwo: 0.6
+    openTimeOne: 0.6
+    openTimeTwo: 0.2
+    pryTime: 11
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+    openSound:
+      path: /Audio/Imperial/Medieval/derevyannuyu-dver-zakryili.ogg
+    closeSound:
+      path: /Audio/Imperial/Medieval/otkryili-steklyannuyu-dver.ogg
+    denySound:
+      path: /Audio/Imperial/Medieval/lyazg-visyaschego-zamka-na-zakryitoy-dveri.ogg
+  - type: Appearance
+  - type: Airtight
+    fixVacuum: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound: /Audio/Imperial/Medieval/zvuk-vyibivaniya-dveri-24274.ogg
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: Occluder
+  - type: DoorHackable
+    minNumber: 0
+    maxNumber: 9
+    numberCount: 9
+  - type: MedievalMeleeBadTarget
+    breakMultiplier: 4
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedChapelLocked
+  components:
+  - type: AccessReader
+    access: [["Chapel"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedBarLocked
+  components:
+  - type: AccessReader
+    access: [["Bar"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedServiceCaptainLocked
+  components:
+  - type: AccessReader
+    access: [["Captain"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedChemistryLocked
+  components:
+  - type: AccessReader
+    access: [["Chemistry"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedSecurityLocked
+  components:
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedAtmosLocked
+  components:
+  - type: AccessReader
+    access: [["Atmospherics"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedMaintenanceLocked
+  components:
+  - type: AccessReader
+    access: [["Maintenance"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedHydroponicsLocked
+  components:
+  - type: AccessReader
+    access: [["Hydroponics"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedJanitorLocked
+  components:
+  - type: AccessReader
+    access: [["Janitor"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedChiefEngineerLocked
+  components:
+  - type: AccessReader
+    access: [["ChiefEngineer"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedEngineeringLocked
+  components:
+  - type: AccessReader
+    access: [["Engineering"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedMedicalLocked
+  components:
+  - type: AccessReader
+    access: [["Medical"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedScienceLocked
+  components:
+  - type: AccessReader
+    access: [["Research"]]
+
+- type: entity
+  parent: MedievalAirlockReinforced
+  id: MedievalAirlockReinforcedCargoLocked
+  components:
+  - type: AccessReader
+    access: [["Cargo"]]
+
+- type: entity
+  id: MedievalAirlockKey
+  parent: BaseStructure
+  placement:
+    mode: SnapgridCenter
+  name: airlock
+  description: It opens, it closes, and maybe crushes you.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    netsync: false
+    sprite: Imperial/Medieval/Walls/medieval_door.rsi
+    snapCardinals: true
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: ExplosionResistance
+    damageCoefficient: 3
+  - type: Door
+    performCollisionCheck: false
+    bumpOpen: false
+    clickOpen: true
+    canCrush: false
+    closeTimeOne: 0.2
+    closeTimeTwo: 0.6
+    openTimeOne: 0.6
+    openTimeTwo: 0.2
+    openingAnimationTime: 1.2
+    closingAnimationTime: 1.2
+    openSound:
+      path: /Audio/Imperial/Medieval/derevyannuyu-dver-zakryili.ogg
+    closeSound:
+      path: /Audio/Imperial/Medieval/otkryili-steklyannuyu-dver.ogg
+    denySound:
+      path: /Audio/Imperial/Medieval/lyazg-visyaschego-zamka-na-zakryitoy-dveri.ogg
+  - type: Appearance
+  - type: Airtight
+    fixVacuum: true
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound: /Audio/Imperial/Medieval/zvuk-vyibivaniya-dveri-24274.ogg
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: Occluder
+  - type: Construction
+    graph: MedievalAirlockKey
+    node: medievalairlockKey
+  - type: CustomDoorKeyDoor
+  - type: AccessReader
+    access: [["SyndicateAgent"]]
+  - type: DoorHackable
+    minNumber: 0
+    maxNumber: 6
+    numberCount: 3
+
+- type: construction
+  id: MedievalAirlockKey
+  name: деревянная дверь с замком
+  description: Для открытия изготовьте ключ. Кликните первый раз ключом по самодельной двери (если к двери не привязано другого ключа), чтобы привязать этот ключ к двери. Дальнейшие клики ключом по двери будут открывать/закрывать ее. Чтобы создать дубликат ключа - возьмите новый ключ и кликните им по тому, чей доступ хотите скопировать. Один ключ может быть привязан максимум к одной двери.
+  graph: MedievalAirlockKey
+  startNode: start
+  targetNode: medievalairlock
+  category: construction-category-furniture
+  icon:
+    sprite: Imperial/Medieval/Walls/medieval_door.rsi
+    state: closed
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: MedievalAirlockKey
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: medievalairlock
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+            - material: WoodPlank
+              amount: 24
+              doAfter: 25
+    - node: medievalairlock
+      entity: MedievalAirlockKey
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank
+              amount: 10
+          steps:
+            - tool: MedievalBlacksmithing
+              doAfter: 150
+
+- type: entity
+  name: gol
+  parent: BaseItem
+  id: MedievalDoorKeyCheck
+  description: gol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/respawn_key.rsi
+    state: gray
+  - type: CustomDoorKey
+  - type: Tag
+    tags:
+    - MedievalKey

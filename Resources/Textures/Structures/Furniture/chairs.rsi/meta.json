@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/11402f6ae62facc2e8bcfa1f8ef5353b26663278, meat.png is CC0-1.0 by EmoGarbage404 (github) for Space Station 14. chair.png and its derrivatives taken from shiptest at commit https://github.com/shiptest-ss13/Shiptest/pull/2160/commits/16072ef7c87d12da16bb2c03137fcd19a00ccf77, ",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/11402f6ae62facc2e8bcfa1f8ef5353b26663278, meat.png is CC0-1.0 by EmoGarbage404 (github) for Space Station 14. chair.png and its derrivatives taken from shiptest at commit https://github.com/shiptest-ss13/Shiptest/pull/2160/commits/16072ef7c87d12da16bb2c03137fcd19a00ccf77, wooden-bench and wooden-tabouret drawed by pyrolizz from Discord for Imperial Space",
   "size": {
     "x": 32,
     "y": 32
@@ -73,6 +73,10 @@
     },
     {
       "name": "wooden-bench",
+      "directions": 4
+    },
+    {
+      "name": "wooden-tabouret",
       "directions": 4
     },
     {

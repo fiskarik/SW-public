@@ -1,0 +1,353 @@
+- type: entity
+  parent: BaseStructure
+  id: MedievalShopHoleIns
+  name: MedievalShopHole
+  description: Suspiciously looking old radio...
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_shop.rsi
+    layers:
+    - state: ins
+    netsync: false
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    singleUser: true
+    key: enum.StoreUiKey.Key
+  - type: Store
+    categories:
+    - MedievalInsWeapon
+    - MedievalInsArmor
+    currencyWhitelist:
+    - MedalIns
+    balance:
+      MedalIns: 0
+  - type: ActivatableUIRequiresAccess
+  - type: AccessReader
+    access: [["Medical"]]
+
+- type: storeCategory
+  id: MedievalInsWeapon
+  name: medieval-category-weapon
+  priority: 0
+
+- type: storeCategory
+  id: MedievalInsArmor
+  name: medieval-category-armor
+  priority: 1
+
+- type: currency
+  id: MedalIns
+  displayName: store-currency-display-medal
+  cash:
+    1: MedievalMedalIns
+  canWithdraw: true
+
+- type: entity
+  name: MedievalMedalIns
+  parent: BaseItem
+  id: MedievalMedalIns
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    layers:
+    - state: medal_ins
+      map: ["base"]
+  - type: Tag
+    tags:
+    - RawMaterial
+    - MedievalMedalIns
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedalIns: 1
+  - type: Stack
+    stackType: MedalIns
+    count: 1
+  - type: Currency
+    price:
+      MedalIns: 1
+
+- type: material
+  id: MedalIns
+  stackEntity: MedievalMedalIns
+  name: materials-medal
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: medal_ins }
+  color: "#d9d9d9"
+  price: 1
+
+- type: stack
+  id: MedalIns
+  name: MedalIns
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: medal_ins }
+  spawn: MedievalMedalIns
+  maxCount: 100
+
+- type: Tag
+  id: MedalIns
+
+- type: listing
+  id: MdvInsMedievalMaceT3
+  productEntity: MedievalMaceT3
+  cost:
+    MedalIns: 1
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalSpearT3
+  productEntity: MedievalSpearT3
+  cost:
+    MedalIns: 2
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalIronHammer
+  productEntity: MedievalIronHammer
+  cost:
+    MedalIns: 3
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalWoodenShieldBuckler
+  productEntity: MedievalWoodenShieldBuckler
+  cost:
+    MedalIns: 1
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalWoodenShield
+  productEntity: MedievalWoodenShield
+  cost:
+    MedalIns: 2
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalWoodenShieldKnight
+  productEntity: MedievalWoodenShieldKnight
+  cost:
+    MedalIns: 3
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalMaceT3Steel
+  productEntity: MedievalMaceT3Steel
+  cost:
+    MedalIns: 6
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalSpearT3Steel
+  productEntity: MedievalSpearT3Steel
+  cost:
+    MedalIns: 6
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalIronHammerSteel
+  productEntity: MedievalIronHammerSteel
+  cost:
+    MedalIns: 8
+  categories:
+  - MedievalInsWeapon
+
+
+
+
+
+
+
+- type: listing
+  id: MdvInsMedievalPalice
+  productEntity: MedievalPalice
+  cost:
+    MedalIns: 1
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalPaliceSteel
+  productEntity: MedievalPaliceSteel
+  cost:
+    MedalIns: 6
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalFalshionT3Fox
+  productEntity: MedievalFalshionT3Fox
+  cost:
+    MedalIns: 1
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalFalshionT3FoxSteel
+  productEntity: MedievalFalshionT3FoxSteel
+  cost:
+    MedalIns: 7
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalIronSekir
+  productEntity: MedievalIronSekir
+  cost:
+    MedalIns: 3
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalIronSekirSteel
+  productEntity: MedievalIronSekirSteel
+  cost:
+    MedalIns: 9
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalHandcuffs
+  productEntity: MedievalHandcuffs
+  cost:
+    MedalIns: 1
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalKnut
+  productEntity: MedievalKnut
+  cost:
+    MedalIns: 1
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalClothingOuterArmorLeather
+  productEntity: MedievalClothingOuterArmorLeather
+  cost:
+    MedalIns: 1
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalClothingOuterArmorLeatherLight
+  productEntity: MedievalClothingOuterArmorLeatherLight
+  cost:
+    MedalIns: 2
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalClothingOuterArmorChainMail
+  productEntity: MedievalClothingOuterArmorChainMail
+  cost:
+    MedalIns: 4
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalClothingOuterArmorChainMailLight
+  productEntity: MedievalClothingOuterArmorChainMailLight
+  cost:
+    MedalIns: 2
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalClothingOuterArmorIronCuirassLight
+  productEntity: MedievalClothingOuterArmorIronCuirassLight
+  cost:
+    MedalIns: 5
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsClothingOuterArmorPodWars
+  productEntity: ClothingOuterArmorPodWars
+  cost:
+    MedalIns: 15
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalClothingOuterArmorIronCuirass
+  productEntity: MedievalClothingOuterArmorIronCuirass
+  cost:
+    MedalIns: 12
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalClothingOuterArmorIron
+  productEntity: MedievalClothingOuterArmorIron
+  cost:
+    MedalIns: 26
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalClothingOuterArmorUpIron
+  productEntity: MedievalClothingOuterArmorUpIron
+  cost:
+    MedalIns: 36
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalIronGloves
+  productEntity: MedievalIronGloves
+  cost:
+    MedalIns: 3
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalIronGloves2
+  productEntity: MedievalIronGlovesBrig
+  cost:
+    MedalIns: 3
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalIronGloves3
+  productEntity: MedievalIronGlovesBear
+  cost:
+    MedalIns: 3
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalClothingFeetSteel
+  productEntity: MedievalClothingFeetSteel
+  cost:
+    MedalIns: 3
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalClothingBackpackLeather
+  productEntity: MedievalClothingBackpackLeather
+  cost:
+    MedalIns: 5
+  categories:
+  - MedievalInsArmor
+
+- type: listing
+  id: MdvInsMedievalClothingBackpackSatchelTraveller
+  productEntity: MedievalClothingBackpackSatchelTraveller
+  cost:
+    MedalIns: 10
+  categories:
+  - MedievalInsArmor

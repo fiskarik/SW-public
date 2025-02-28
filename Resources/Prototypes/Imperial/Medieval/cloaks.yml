@@ -1,0 +1,331 @@
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakInvis
+  name: MedievalClothingNeckCloakInvis
+  description: MedievalClothingNeckCloakInvis
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/stealth.rsi
+  - type: Insulated
+  - type: ToggleableClothing
+    clothingPrototype: MedievalClothingHeadHelmetHoodInvis
+    requiredSlot:
+    - neck
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: AddAccentClothing
+    accent: Stealth
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorBlack
+  name: black cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/black.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorBlue
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/blue.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorGreen
+  name: green cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/green.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorLightBlue
+  name: light blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/light_blue.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorRed
+  name: red cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/red.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorWhite
+  name: white cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/white.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorYellow
+  name: yellow cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/yellow.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorHell
+  name: hell cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/orange.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorBlackShort
+  name: black cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/Short/black.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorBlueShort
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/Short/blue.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorGreenShort
+  name: green cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/Short/green.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorLightBlueShort
+  name: light blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/Short/light_blue.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorRedShort
+  name: red cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/Short/red.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorWhiteShort
+  name: white cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/Short/white.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorYellowShort
+  name: yellow cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/Short/yellow.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakColorHellShort
+  name: hell cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/Short/orange.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakClanTribe
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/clan_tribe.rsi
+  - type: Insulated
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalClothingNeckCloakClanTribe # imperial medieval
+  - type: Clothing
+    equipSound:
+      path: /Audio/Imperial/Medieval/cloak_equip.ogg
+      volume: -100
+    unequipSound:
+      path: /Audio/Imperial/Medieval/cloak_unequip.ogg
+      volume: -100
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakClanEagle
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/clan_eagle.rsi
+  - type: Insulated
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalClothingNeckCloakClanEagle # imperial medieval
+  - type: CloackReciever
+    faction: "leg"
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakClanCult
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/clan_cult.rsi
+  - type: Insulated
+  - type: CloackReciever
+    faction: "cult"
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakClanMine
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/clan_mine.rsi
+  - type: Insulated
+  - type: CloackReciever
+    faction: "mine"
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakClanFlame
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/clan_flame.rsi
+  - type: Insulated
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakClanWolf
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/clan_wolf.rsi
+  - type: Insulated
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalClothingNeckCloakClanWolf # imperial medieval
+  - type: CloackReciever
+    faction: "band"
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakClanFox
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/clan_fox.rsi
+  - type: Insulated
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalClothingNeckCloakClanFox # imperial medieval
+  - type: CloackReciever
+    faction: "ins"
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakClanMerc
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/clan_merc.rsi
+  - type: Insulated
+  - type: CloackReciever
+    faction: "merc"
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakClanWiz
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/clan_wiz.rsi
+  - type: Insulated
+  - type: CloackReciever
+    faction: "collegium"
+
+- type: entity
+  parent: ClothingNeckBase
+  id: MedievalClothingNeckCloakGoblin
+  name: blue cloak
+  description: A cloak to distinguish allies.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Cloaks/goblin.rsi
+  - type: Insulated
+  - type: Construction
+    graph: MedievalLootGoblin
+    node: start
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalClothingNeckCloakGoblin # imperial medieval
+
+- type: entity
+  parent: BaseMedievalGetItemObjective
+  id: MedievalGetMedievalClothingNeckCloakGoblin
+  components:
+  - type: StealCondition
+    stealGroup: MedievalGetMedievalClothingNeckCloakGoblin
+    descriptionText: Эти чертовы гоблины... Ненавижу их! Хочу сделать себе ожерелье из их ушей.
+    descriptionMultiplyText: Эти чертовы гоблины... Ненавижу их! Хочу сделать себе ожерелье из их ушей.
+  - type: Objective
+    difficulty: 2
+
+- type: stealTargetGroup
+  id: MedievalGetMedievalClothingNeckCloakGoblin
+  name: ожерелье из ушей гоблинов
+  sprite:
+    sprite: Imperial/Medieval/Clothing/Cloaks/goblin.rsi
+    state: icon

@@ -17,6 +17,8 @@
   - type: Appearance
   - type: BurnStateVisuals
     unlitIcon: unlit-icon
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetSmokingPipe # imperial medieval
 
 - type: entity
   id: SmokingPipeFilledTobacco

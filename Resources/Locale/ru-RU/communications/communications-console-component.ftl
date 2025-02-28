@@ -1,6 +1,6 @@
 # User interface
 comms-console-menu-title = Консоль связи
-comms-console-menu-announcement-placeholder = Объявление
+comms-console-menu-announcement-placeholder = ""
 comms-console-menu-announcement-button = Сделать объявление
 comms-console-menu-broadcast-button = Транслировать
 comms-console-menu-call-shuttle = Вызвать эвакуационный шаттл

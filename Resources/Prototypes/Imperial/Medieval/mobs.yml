@@ -1,0 +1,3001 @@
+- type: entity
+  id: MedievalHorse
+  parent: SimpleMobBaseNoFood
+  name: horse
+  description: Brrr
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Mobs/horse.rsi
+    layers:
+    - state: vehicle
+    netsync: false
+    noRot: true
+  - type: Strap
+    buckleOffset: "0, 0"
+    maxBuckleDistance: 1
+  - type: MovementSpeedModifier
+    acceleration: 1
+    friction: 1
+    baseWalkSpeed: 4.5
+    baseSprintSpeed: 6
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: ReplacementAccent
+    accent: xeno
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 5
+      types:
+        ParryAble: 1
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      480: Dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 2
+    - id: MedievalLeather1
+      amount: 4
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      30: 1
+      70: 0.8
+      100: 0.7
+      150: 0.5
+      175: 0.25
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-horse-name
+    description: ghost-role-information-horse-description
+    rules: Ведите себя как лошадь. Слушайте людей.
+  - type: Hunger # probably should be prototyped
+    thresholds:
+      Overfed: 200
+      Okay: 150
+      Peckish: 100
+      Starving: 50
+      Dead: 0
+    baseDecayRate: 0.1
+  - type: Thirst
+    thresholds:
+      OverHydrated: 600
+      Okay: 450
+      Thirsty: 300
+      Parched: 150
+      Dead: 0
+    baseDecayRate: 0.1
+  - type: Bloodstream
+    bloodMaxVolume: 140
+  - type: NocturnBadFood
+
+- type: entity
+  abstract: true
+  name: no food
+  parent: SimpleMobBase
+  id: SimpleMobBaseNoFood
+  description: goool
+  components:
+  - type: Thirst
+    baseDecayRate: 0
+  - type: Hunger
+    baseDecayRate: 0
+  - type: NPCRetaliation
+    attackMemoryLength: 100
+
+- type: entity
+  name: fox
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobFox
+  description: They're a fox.
+  components:
+  - type: TimedDespawn
+    lifetime: 360
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/fox.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: fox
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: fox
+      Dead:
+        Base: fox_dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 3
+    - id: MedievalLeather1
+      amount: 2
+  - type: ReplacementAccent
+    accent: xeno
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 5
+      types:
+        ParryAble: 1
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      35: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      15: 0.8
+      25: 0.5
+  - type: Bloodstream
+    bloodMaxVolume: 30
+  - type: NocturnBadFood
+    timesCanBeBiten: 2
+
+- type: entity
+  name: fox
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobAnt
+  description: They're a fox.
+  components:
+  - type: TimedDespawn
+    lifetime: 180
+  - type: Sprite
+    scale: 1.2, 1.2
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/ant.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: ant
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: ant
+      Dead:
+        Base: ant_dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootAnt
+      amount: 1
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: ReplacementAccent
+    accent: xeno
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 1.5
+      types:
+        ParryAble: 1
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      6: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      25: 0.8
+      35: 0.5
+
+
+- type: entity
+  name: fox
+  parent: MedievalMobFox
+  id: MedievalMobFoxGhost
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-fox-name
+    description: ghost-role-information-fox-description
+    rules: Вы - лиса. Охотьтесь на мелкую живность, исследуйте мир. Вам НЕ запрещается быть мирным.
+
+- type: entity
+  name: wolf
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobWolf
+  description: They're a wolf.
+  components:
+  - type: TimedDespawn
+    lifetime: 360
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/wolf.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: wolf
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: wolf
+      Dead:
+        Base: wolf_dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 4
+    - id: MedievalLeather1
+      amount: 3
+    - id: MedievalLootWolf
+      amount: 1
+  - type: Bloodstream
+    bloodMaxVolume: 40
+  - type: ReplacementAccent
+    accent: dog
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 5.4
+      types:
+        ParryAble: 1
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      54: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.0
+    baseSprintSpeed : 3.75
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      25: 0.8
+      35: 0.7
+      45: 0.6
+      60: 0.5
+  - type: Strap
+    buckleOffset: "0, 0"
+    maxBuckleDistance: 1
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Vocal
+    sounds:
+      Unsexed: MedievalBear
+  - type: NocturnBadFood
+    timesCanBeBiten: 3
+
+- type: entity
+  name: wolf
+  parent: MedievalMobWolf
+  id: MedievalMobWolfGhost
+  description: They're a wolf.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-wolf-name
+    description: ghost-role-information-wolf-description
+    rules: Вы - волк. Охотьтесь на живность, исследуйте мир. Вам запрещается быть мирным.
+
+- type: entity
+  name: rabbit
+  parent: MobMouse
+  id: MedievalMobRabbit
+  description: They're a rabbit.
+  components:
+  - type: TimedDespawn
+    lifetime: 360
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/rabbit.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: rabbit
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: rabbit
+      Dead:
+        Base: rabbit_dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 1
+    - id: MedievalLeather1
+      amount: 1
+      prob: 0.5
+  - type: Bloodstream
+    bloodMaxVolume: 10
+  - type: ReplacementAccent
+    accent: cat
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 2
+      types:
+        ParryAble: 1
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      14: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4.0
+    baseSprintSpeed : 5.8
+  - type: NocturnBadFood
+    timesCanBeBiten: 1
+
+- type: entity
+  name: rabbit
+  parent: MedievalMobRabbit
+  id: MedievalMobRabbitGhost
+  description: They're a rabbit.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-rabbit-name
+    description: ghost-role-information-rabbit-description
+    rules: Вы - заяц. Исследуйте мир. Опасайтесь стать стейком.
+
+- type: entity
+  name: rabbit
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobGolemLarge
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 780
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/golem_large.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: golem
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.85
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    range: 3
+    attackRate: 0.5
+    animation: WeaponArcFist
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    damage:
+      groups:
+        Brute: 78
+      types:
+        ParryAble: 1
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      960: Dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 960
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SteelOre1:
+            min: 9
+            max: 30
+          MedievalTopaz:
+            min: 4
+            max: 8
+          MedievalFireSerdolick:
+            min: 4
+            max: 8
+          MedievalAdam:
+            min: 4
+            max: 8
+          MedievalMobGolemGhost:
+            amount: 3
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 2.5
+  - type: PointLight
+    color: red
+    energy: 4
+    radius: 6.5
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      300: 0.8
+      450: 0.7
+      650: 0.6
+      850: 0.5
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Imperial/Medieval/footstep_golem.ogg
+      params:
+        variation: 0.125
+
+- type: entity
+  name: golem
+  parent: MedievalMobGolemLarge
+  id: MedievalMobGolemLargeGhost
+  description: They're a rabbit.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-large-golem-name
+    description: ghost-role-information-large-golem-description
+    rules: Вы - древний голем. Люди - зло.
+
+- type: entity
+  name: golem
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobGolem
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 360
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/golem.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: golem
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.36
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    range: 1.85
+    attackRate: 0.35
+    hidden: true
+    angle: 0
+    animation: WeaponArcFist
+    soundHit:
+     collection: AlienClaw
+    damage:
+      groups:
+        Brute: 10
+      types:
+        ParryAble: 1
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SteelOre1:
+            min: 4
+            max: 7
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 3.8
+  - type: PointLight
+    color: red
+    energy: 3
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      75: 0.8
+      150: 0.7
+      200: 0.6
+      225: 0.5
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Imperial/Medieval/footstep_golem.ogg
+      params:
+        variation: 0.125
+
+- type: entity
+  name: rabbit
+  parent: MedievalMobGolem
+  id: MedievalMobGolemGhost
+  description: They're a golem.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-large-golem-name
+    description: ghost-role-information-large-golem-description
+    rules: Вы - древний голем. Люди - зло.
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+
+- type: entity
+  name: bear
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobBear
+  description: They're a bear.
+  components:
+  - type: TimedDespawn
+    lifetime: 600
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/brown_bear.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: bear
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: bear
+      Dead:
+        Base: bear_dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 8
+    - id: MedievalLeather1
+      amount: 8
+    - id: MedievalLootBear
+      amount: 1
+  - type: Bloodstream
+    bloodMaxVolume: 200
+  - type: ReplacementAccent
+    accent: agressive
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 16
+      types:
+        ParryAble: 1
+    range: 1.6
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      180: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      25: 0.8
+      50: 0.7
+      120: 0.6
+      150: 0.5
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.4
+    baseSprintSpeed : 3.4
+  - type: Strap
+    buckleOffset: "0, 0"
+    maxBuckleDistance: 1
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Vocal
+    sounds:
+      Unsexed: MedievalBear
+  - type: NocturnBadFood
+    timesCanBeBiten: 8
+  - type: MeleeThrowOnHit
+    lifetime: 0.8
+    minLifetime: 0.05
+    speed: 5
+
+- type: entity
+  name: bear
+  parent: MedievalMobBear
+  id: MedievalMobBearGhost
+  description: They're a bear.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-bear-name
+    description: ghost-role-information-bear-description
+    rules: Вы - медведь. Охотьтесь, исследуйте мир. Вам запрещается быть мирным.
+
+- type: entity
+  name: hog
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobHog
+  description: They're a hog.
+  components:
+  - type: TimedDespawn
+    lifetime: 360
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/hog.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: bear
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: bear
+      Dead:
+        Base: bear_dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 3
+    - id: MedievalLeather1
+      amount: 5
+    - id: MedievalLootHog
+      amount: 1
+  - type: Bloodstream
+    bloodMaxVolume: 140
+  - type: ReplacementAccent
+    accent: agressive
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 9.5
+      types:
+        ParryAble: 1
+    range: 1.6
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      110: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      25: 0.8
+      40: 0.7
+      80: 0.6
+      110: 0.5
+  - type: Strap
+    buckleOffset: "0, 0"
+    maxBuckleDistance: 1
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: NocturnBadFood
+    timesCanBeBiten: 4
+
+- type: entity
+  name: hog
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobAngryGhost
+  description: They're a hog.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Ghosts/ghost_human.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: animated
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: animated
+      Dead:
+        Base: animated
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: ReplacementAccent
+    accent: agressive
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Radiation: 19
+        ParryAble: 1
+    range: 1.6
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      355: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      1: 25
+      10: 25
+      20: 25
+      30: 25
+      220: 23
+      300: 20
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Stealth
+  - type: StealthOnMove
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 350
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalEssence:
+            min: 3
+            max: 5
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 0.4
+    baseSprintSpeed : 0.4
+  - type: WarpPoint
+    follow: true
+    location: Medieval boss ghost
+
+- type: entity
+  name: hog
+  parent: MedievalMobHog
+  id: MedievalMobHogGhost
+  description: They're a hog.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-hog-name
+    description: ghost-role-information-hog-description
+    rules: Вы - кабан. Охотьтесь, исследуйте мир. Вам НЕ запрещается быть мирным.
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+
+- type: entity
+  name: monkey
+  id: MedievalMobGoblin
+  parent: [SimpleMobBaseNoFood, StripableInventoryBase]
+  description: uga buga
+  components:
+  - type: CombatMode
+    disarm: null
+  - type: Inventory
+    templateId: goblin
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      2: 1
+      15: 0.85
+      28: 0.7
+      40: 0.6
+      430: 0.5
+  - type: InventorySlots
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: ComplexInteraction
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: monkey
+      sprite: Imperial/Medieval/Mobs/goblin.rsi
+  - type: Hands
+  - type: Body
+    prototype: Reptilian
+    requiredLegs: 2
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: monkey
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: Appearance
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Monkey_burning
+  - type: Puller
+    needsHands: true
+  - type: CanHostGuardian
+  - type: Thieving
+    stripTimeReduction: 3
+    stealthy: true
+  - type: Stripping
+  - type: MobsterAccent
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-goblin-name
+    description: ghost-role-information-goblin-description
+    rules: Утащите как можно больше в логово. Действуйте в группах. Если вы ушли из логова - [color=red]атакуйте только в крайнем случае[/color], берите в [color=red]плен[/color], требуйте выкуп. Не нападайте на базы фракций в одиночку.
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      60: Critical
+      140: Dead
+  #- type: InventorySlots
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootGoblin
+      amount: 1
+    - id: MedievalLeather1
+      amount: 1
+  - type: Access
+    tags:
+    - Maintenance
+  - type: Speech
+    speechSounds: Goblin
+  - type: MedievalMobTrigger
+    fixtureId: "medieval-spawner"
+  - type: Mana
+    maxMana: 35
+    regen: 0.2
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+      - CanPilot
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.62
+    baseSprintSpeed : 3.62
+  - type: IgnitPocketFlames
+  - type: MeleeParryAble
+  - type: NocturnBadFood
+    timesCanBeBiten: 2
+  - type: RandomSteal # imperial medieval
+  - type: StealChanceIncreaser
+    bonus: 45
+
+- type: entity
+  parent: MobChicken
+  id: MedievalMobChicken
+  name: MedievalMobChicken
+  description: MedievalMobChicken
+  components:
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 2
+    - id: MedievalLeather1
+      amount: 1
+  - type: NocturnBadFood
+    timesCanBeBiten: 2
+
+- type: entity
+  parent: MobCow
+  id: MedievalMobCow
+  name: MedievalMobCow
+  description: MedievalMobCow
+  components:
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 3
+    - id: MedievalLeather1
+      amount: 4
+  - type: NocturnBadFood
+    timesCanBeBiten: 2
+
+- type: entity
+  name: kobold
+  id: MedievalMobKobold
+  parent: SimpleMobBaseNoFood
+  description: uga buga
+  components:
+  - type: CombatMode
+    disarm: null
+  - type: Inventory
+    templateId: goblin
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: monkey
+      sprite: Imperial/Medieval/Mobs/cobold.rsi
+  - type: Hands
+  - type: ComplexInteraction
+  - type: Body
+    prototype: Reptilian
+    requiredLegs: 2
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: monkey
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: Appearance
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Monkey_burning
+  - type: Puller
+    needsHands: true
+  - type: CanHostGuardian
+  - type: Stripping
+  - type: MobsterAccent
+  - type: MovementSpeedModifier
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-cobold-name
+    description: ghost-role-information-cobold-description
+    rules: Вы - фамильяр. Служите тому, кто вас призвал.
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      85: Critical
+      180: Dead
+  - type: InventorySlots
+  - type: Thieving
+    stripTimeReduction: 1.5
+    stealthy: true
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Alerts
+  - type: Familiar
+  - type: NocturnBadFood
+    timesCanBeBiten: 2
+
+- type: entity
+  name: rabbit
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobDruid
+  description: They're a golem.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/druid.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: golem
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.85
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    range: 2.85
+    attackRate: 0.5
+    animation: WeaponArcFist
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    damage:
+      groups:
+        Brute: 78
+      types:
+        ParryAble: 1
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      450: Dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 450
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MedievalAdam:
+            min: 1
+            max: 4
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 1.8
+    baseSprintSpeed : 1.8
+  - type: PointLight
+    color: green
+    energy: 1
+    radius: 4.5
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      100: 0.8
+      250: 0.7
+      300: 0.6
+      350: 0.5
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-druid-name
+    description: ghost-role-information-druid-description
+    rules: Вы - энт. Вас разозлили люди, ломающие лес. Отомстите им
+
+- type: entity
+  name: bat
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobFire
+  description: Some cultures find them terrifying, others crunchy on the teeth.
+  components:
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 6
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: bat
+      sprite: Imperial/Medieval/Mobs/fire.rsi
+  - type: Physics
+  - type: Speech
+    speechSounds: Squeak
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 10
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: bat
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: InteractionPopup
+    successChance: 0.2
+    interactSuccessString: petting-success-soft-floofy
+    interactFailureString: petting-failure-bat
+    interactSuccessSound:
+      path: /Audio/Animals/fox_squeak.ogg
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: ReplacementAccent
+    accent: mouse
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+        path: /Audio/Effects/bite.ogg
+        angle: 0
+        animation: WeaponArcBite
+        damage:
+        types:
+          Burn: 7
+          ParryAble: 1
+  - type: NoSlip
+  - type: Puller
+    needsHands: true
+  - type: Alerts
+  - type: Familiar
+  - type: PointLight
+    color: Orange
+    radius: 8
+    energy: 8
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-fire-name
+    description: ghost-role-information-fire-description
+    rules: Вы - фамильяр. Служите тому, кто вас призвал.
+  - type: Item
+  - type: IgniteOnMeleeHit
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+
+- type: entity
+  name: rabbit
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobSpiderKing
+  description: They're a golem.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/spider_king.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: king
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.85
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    range: 2.65
+    attackRate: 0.85
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    damage:
+      groups:
+        Brute: 48
+      types:
+        ParryAble: 1
+        Caustic: 10
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      700: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 2.8
+  - type: PointLight
+    color: green
+    energy: 0.11
+    radius: 4.5
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      300: 0.8
+      40: 0.7
+      500: 0.6
+      600: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: king
+      Dead:
+        Base: dead_king
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatXeno
+      amount: 5
+    - id: MedievalSpiderHair
+      min: 4
+      max: 6
+    - id: FoodMeatSpiderLeg
+      amount: 4
+  - type: IgnoreSpiderWeb
+
+- type: entity
+  name: rabbit
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobSpider
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 360
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/spider.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: midwife
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    range: 1.55
+    attackRate: 1
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    damage:
+      groups:
+        Brute: 7
+      types:
+        ParryAble: 1
+        Caustic: 4
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      140: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4.1
+    baseSprintSpeed : 4.1
+  - type: PointLight
+    color: green
+    energy: 0.06
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      70: 0.8
+      120: 0.7
+      140: 0.6
+      175: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: midwife
+      Dead:
+        Base: midwife_dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatXeno
+      amount: 2
+    - id: FoodMeatSpiderLeg
+      amount: 2
+    - id: MedievalSpiderHair
+      amount: 1
+  - type: IgnoreSpiderWeb
+
+
+
+- type: entity
+  name: MedievalMobSpiderCave
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobSpiderCave
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 360
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/cave_spider.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    range: 1.55
+    attackRate: 1.6
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    damage:
+      groups:
+        Brute: 2
+      types:
+        ParryAble: 1
+        Caustic: 1
+        Bloodloss: 3
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      48: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.8
+    baseSprintSpeed : 3.8
+  - type: PointLight
+    color: green
+    energy: 1.2
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      20: 0.8
+      30: 0.7
+      40: 0.6
+      55: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootEgg
+      amount: 1
+    - id: MedievalSpiderHair
+      amount: 1
+  - type: IgnoreSpiderWeb
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Imperial/Medieval/spider_stepsound.ogg
+      params:
+        variation: 0.125
+
+
+- type: entity
+  name: fox
+  parent: MedievalMobSpiderCave
+  id: MedievalMobSpiderCaveGhost
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-spider-cave-name
+    description: ghost-role-information-spider-cave-description
+    rules: Вы - пещерный паук. Охраняйте пещеру, не покидая ее.
+
+
+
+- type: entity
+  name: MedievalMobSkeletWeak
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobSkeletWeak
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 240
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/skelet_weak.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Imperial/Medieval/skelet_atack.ogg
+    animation: WeaponArcFist
+    range: 1.55
+    attackRate: 1
+    hidden: true
+    angle: 0
+    damage:
+      types:
+        ParryAble: 1
+        Radiation: 0.2
+        Blunt: 4
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+      - MedievalMob
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      35: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.6
+    baseSprintSpeed : 3.6
+  - type: PointLight
+    color: red
+    energy: 0.6
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      14: 0.8
+      22: 0.7
+      30: 0.6
+      44: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootWeak
+      amount: 1
+  - type: IgnoreSpiderWeb
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Speech
+  - type: Advertise
+    pack: MedievalSkeletAdvertise
+    minimumWait: 9
+    maximumWait: 28
+
+- type: localizedDataset
+  id: MedievalSkeletAdvertise
+  values:
+    prefix: skelet-medieval-
+    count: 80
+
+- type: entity
+  name: fox
+  parent: MedievalMobSkeletWeak
+  id: MedievalMobSkeletWeakGhost
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-skelet-name
+    description: ghost-role-information-skelet-description
+    rules: Вы - скелет. Смерть жалким человечкам. Аве некромантам и чернокнижникам.
+
+- type: entity
+  name: fox
+  parent: MedievalMobSkeletWeak
+  id: MedievalMobSkeletWeakGhostResp
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: Перерождение
+    description: Путь к респавну
+    rules: Перетащите себя на люк, чтобы начать путь. Как дойдете до конца - подойдите к святой гранате. Вас возродит автоматически.
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 1.65
+    baseSprintSpeed : 1.65
+  - type: HellRespawnAble
+  - type: TimedDespawn
+    lifetime: 78000
+  - type: TDMNaming
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Imperial/Medieval/skelet_atack.ogg
+    animation: WeaponArcFist
+    range: 1.55
+    attackRate: 1
+    hidden: true
+    angle: 0
+    damage:
+      types:
+        ParryAble: 1
+        Radiation: 0.1
+  - type: StaminaDamageOnHit
+    damage: 45
+
+- type: entity
+  name: MedievalMobSkeletMeat
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobSkeletMeat
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 240
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/skelet_meat.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Imperial/Medieval/skelet_atack.ogg
+    animation: WeaponArcFist
+    range: 1.55
+    attackRate: 1
+    hidden: true
+    angle: 0
+    damage:
+      types:
+        ParryAble: 1
+        Radiation: 1
+        Blunt: 7
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+      - MedievalMob
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.7
+    baseSprintSpeed : 3.7
+  - type: PointLight
+    color: red
+    energy: 0.6
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      20: 0.8
+      30: 0.7
+      40: 0.6
+      55: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootMeat
+      amount: 1
+  - type: IgnoreSpiderWeb
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Speech
+  - type: Advertise
+    pack: MedievalSkeletAdvertise
+    minimumWait: 9
+    maximumWait: 28
+
+- type: entity
+  name: fox
+  parent: MedievalMobSkeletMeat
+  id: MedievalMobSkeletMeatGhost
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-skelet-name
+    description: ghost-role-information-skelet-description
+    rules: Вы - скелет. Смерть жалким человечкам. Аве некромантам и чернокнижникам.
+
+- type: entity
+  name: MedievalMobSkeletFighter
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobSkeletFighter
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 540
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/skelet_fighter.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Imperial/Medieval/skelet_atack.ogg
+    animation: WeaponArcFist
+    range: 1.55
+    attackRate: 1
+    hidden: true
+    angle: 0
+    damage:
+      groups:
+        Brute: 8.5
+      types:
+        ParryAble: 1
+        Radiation: 1.5
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+      - MedievalMob
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.9
+    baseSprintSpeed : 3.9
+  - type: PointLight
+    color: red
+    energy: 0.6
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      45: 0.8
+      60: 0.7
+      85: 0.6
+      100: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootFighter
+      amount: 1
+  - type: IgnoreSpiderWeb
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Speech
+  - type: Advertise
+    pack: MedievalSkeletAdvertise
+    minimumWait: 9
+    maximumWait: 28
+
+- type: entity
+  name: fox
+  parent: MedievalMobSkeletFighter
+  id: MedievalMobSkeletFighterGhost
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-skelet-name
+    description: ghost-role-information-skelet-description
+    rules: Вы - скелет. Смерть жалким человечкам. Аве некромантам и чернокнижникам.
+
+- type: entity
+  name: MedievalMobSkeletLegion
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobSkeletLegion
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 600
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/skelet_legion.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Imperial/Medieval/skelet_atack.ogg
+    animation: WeaponArcFist
+    range: 1.55
+    attackRate: 1
+    hidden: true
+    angle: 0
+    damage:
+      groups:
+        Brute: 13
+      types:
+        ParryAble: 1
+        Radiation: 3
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+      - MedievalMob
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      155: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4.1
+    baseSprintSpeed : 4.1
+  - type: PointLight
+    color: red
+    energy: 0.6
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      65: 0.8
+      110: 0.7
+      135: 0.6
+      160: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootLegion
+      amount: 1
+  - type: IgnoreSpiderWeb
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Speech
+  - type: Advertise
+    pack: MedievalSkeletAdvertise
+    minimumWait: 9
+    maximumWait: 28
+
+- type: entity
+  name: fox
+  parent: MedievalMobSkeletLegion
+  id: MedievalMobSkeletLegionGhost
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-skelet-name
+    description: ghost-role-information-skelet-description
+    rules: Вы - скелет. Смерть жалким человечкам. Аве некромантам и чернокнижникам.
+
+
+- type: entity
+  name: MedievalMobHunter
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobHunter
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 780
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/hunter.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    animation: WeaponArcBite
+    range: 1.4
+    attackRate: 0.55
+    hidden: true
+    angle: 0
+    soundHit:
+        path: /Audio/Imperial/Medieval/hunter_atack.ogg
+    damage:
+      groups:
+        Brute: 6
+        Airloss: 2
+      types:
+        ParryAble: 1
+        Bloodloss: 3
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      75: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 3.2
+  - type: PointLight
+    color: red
+    energy: 0.1
+    radius: 1.3
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      15: 0.8
+      30: 0.7
+      50: 0.6
+      65: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootHunter
+      amount: 1
+  - type: IgnoreSpiderWeb
+  - type: StaminaDamageOnHit
+    damage: 17
+  - type: Stealth
+    minVisibility: -0.2
+  - type: StealthOnMove
+    movementVisibilityRate: -0.2
+    passiveVisibilityRate: 0.2
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Imperial/Medieval/footstep_hunter.ogg
+      params:
+        variation: 0.125
+
+- type: entity
+  name: fox
+  parent: MedievalMobHunter
+  id: MedievalMobHunterGhost
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-hunter-name
+    description: ghost-role-information-hunter-description
+    rules: Вы - хантер. Выжидайте, охотьтесь, нападайте, выживайте.
+
+- type: entity
+  name: MedievalMobDevilMouse
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobDevilMouse
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 600
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/devil_mouse.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.15
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    range: 1.35
+    attackRate: 1
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    damage:
+      groups:
+        Airloss: 8
+      types:
+        ParryAble: 1
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      10: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4
+    baseSprintSpeed : 7
+  - type: PointLight
+    color: red
+    energy: 0.03
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      1: 1
+      2: 0.8
+      3: 0.7
+      4: 0.6
+      5: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootDevilMouse
+      amount: 1
+  - type: IgnoreSpiderWeb
+  - type: StaminaDamageOnHit
+    damage: 7
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: NocturnBadFood
+    timesCanBeBiten: 1
+
+- type: entity
+  name: fox
+  parent: MedievalMobDevilMouse
+  id: MedievalMobDevilMouseGhost
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-devil-mouse-name
+    description: ghost-role-information-devil-mouse-description
+    rules: Вы - дьявольская мышь. Раздражайте всех своим присутствием, веселитесь. Вы наносите урон удушьем.
+
+- type: entity
+  name: MedievalMobCrab
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobCrab
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 360
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/crab_mdv.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    animation: WeaponArcFist
+    range: 1.55
+    attackRate: 0.7
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    damage:
+      groups:
+        Brute: 2
+        Airloss: 4
+      types:
+        ParryAble: 1
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+      - MedievalMob
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      23: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.6
+    baseSprintSpeed : 3.6
+  - type: PointLight
+    color: red
+    energy: 0.03
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      15: 0.8
+      20: 0.7
+      30: 0.6
+      45: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootCrab
+      amount: 1
+  - type: IgnoreSpiderWeb
+  - type: StaminaDamageOnHit
+    damage: 6.8
+  - type: NocturnBadFood
+    timesCanBeBiten: 2
+
+- type: entity
+  name: fox
+  parent: MedievalMobCrab
+  id: MedievalMobCrabGhost
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-crab-name
+    description: ghost-role-information-crab-description
+    rules: Вы - озерный краб. Нападайте на людей, которые хотят занять ваше болото!
+
+- type: entity
+  name: MedievalMobCrabDevil
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobCrabDevil
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 360
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/crab_devil.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    animation: WeaponArcFist
+    range: 1.75
+    attackRate: 0.75
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    damage:
+      groups:
+        Brute: 2.6
+      types:
+        ParryAble: 1
+        Bloodloss: 4.5
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+      - MedievalMob
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      42: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.75
+    baseSprintSpeed : 3.75
+  - type: PointLight
+    color: red
+    energy: 0.5
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      35: 0.8
+      50: 0.7
+      80: 0.6
+      105: 0.5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootCrabDevil
+      amount: 1
+  - type: IgnoreSpiderWeb
+  - type: StaminaDamageOnHit
+    damage: 8
+  - type: NocturnBadFood
+    timesCanBeBiten: 2
+
+- type: entity
+  name: fox
+  parent: MedievalMobCrabDevil
+  id: MedievalMobCrabDevilGhost
+  description: They're a fox.
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-crab-devil-name
+    description: ghost-role-information-crab-devil-description
+    rules: Вы - дьявольский озерный краб. Нападайте на людей, которые хотят занять ваше болото!
+
+- type: entity
+  name: vengido
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobVendigo
+  description: They're a Vegnida.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/vendigo.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vendigo
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: vendigo
+      Dead:
+        Base: vendigo_dead
+  - type: Bloodstream
+    bloodMaxVolume: 900
+  - type: MeleeWeapon
+    range: 2.25
+    attackRate: 1
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 45
+      types:
+        ParryAble: 1
+        Structural: 160
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+      - Vendigo
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1410: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5.0
+    baseSprintSpeed : 2.5
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      100: 1
+      450: 0.95
+      650: 0.9
+      850: 0.85
+      900: 0.7
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Vocal
+    sounds:
+      Unsexed: MedievalVendigo
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Imperial/Medieval/vendigo_stepsound.ogg
+      params:
+        variation: 0.125
+  - type: StaminaDamageOnHit
+    damage: 500
+  - type: Stamina
+    excess: 10000
+#  - type: CustomStealth
+
+
+- type: emoteSounds
+  id: MedievalVendigo
+  sound:
+    path: /Audio/Imperial/Medieval/vendigo_scream.ogg
+    params:
+      variation: 0.125
+
+- type: entity
+  name: rabbit
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobSkeletArcher
+  description: They're a golem.
+  components:
+  - type: Temperature
+    heatDamageThreshold: 325
+    coldDamageThreshold: 260
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 1 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat: 1
+  - type: TimedDespawn
+    lifetime: 180
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/skelet_bow.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Dead
+  - type: Damageable
+    damageModifierSet: MedievalRespawn
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.05
+    baseSprintSpeed : 3.05
+  - type: PointLight
+    color: red
+    energy: 2
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      1: 1
+      10: 0.8
+      15: 0.7
+      20: 0.6
+  - type: IgnoreSpiderWeb
+  - type: Thirst
+    baseDecayRate: 0
+  - type: Hunger
+    baseDecayRate: 0
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2
+    rechargeSound:
+      path: /Audio/Weapons/Guns/Misc/arrow_nock.ogg
+  - type: BasicEntityAmmoProvider
+    proto: MedievalArrow
+    capacity: 1
+    count: 1
+  - type: Gun
+    projectileSpeed: 8
+    fireRate: 0.3
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Items/bow_pull.ogg
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootWeak
+      amount: 1
+    - id: MedievalRevent5
+      amount: 1
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Speech
+  - type: Advertise
+    pack: MedievalSkeletAdvertise
+    minimumWait: 9
+    maximumWait: 28
+
+- type: entity
+  name: rabbit
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobSkeletCrossbow
+  description: They're a golem.
+  components:
+  - type: Temperature
+    heatDamageThreshold: 325
+    coldDamageThreshold: 260
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 1 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat: 1
+  - type: TimedDespawn
+    lifetime: 210
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/skelet_crossbow.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      55: Dead
+  - type: Damageable
+    damageModifierSet: MedievalRespawn
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.25
+    baseSprintSpeed : 2.25
+  - type: PointLight
+    color: red
+    energy: 2
+    radius: 1.5
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      13: 0.8
+      28: 0.7
+      41: 0.6
+  - type: IgnoreSpiderWeb
+  - type: Thirst
+    baseDecayRate: 0
+  - type: Hunger
+    baseDecayRate: 0
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 4.2
+    rechargeSound:
+      path: /Audio/Weapons/Guns/Misc/arrow_nock.ogg
+  - type: BasicEntityAmmoProvider
+    proto: MedievalBoltWeak
+    capacity: 1
+    count: 1
+  - type: Gun
+    projectileSpeed: 14.2
+    fireRate: 0.12
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Items/bow_pull.ogg
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootFighter
+      amount: 1
+    - id: MedievalRevent10
+      amount: 1
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Speech
+  - type: Advertise
+    pack: MedievalSkeletAdvertise
+    minimumWait: 9
+    maximumWait: 28
+
+- type: entity
+  name: MedievalMobSkeletDark
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobSkeletDark
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 780
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/skelet_dark.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Imperial/Medieval/skelet_atack.ogg
+    animation: WeaponArcFist
+    range: 1.65
+    attackRate: 1
+    hidden: true
+    angle: 0
+    damage:
+      groups:
+        Brute: 23
+      types:
+        ParryAble: 1
+        Radiation: 4
+  - type: Puller
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+      - MedievalMob
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      355: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4.5
+    baseSprintSpeed : 4.5
+  - type: PointLight
+    color: red
+    energy: 6
+    radius: 6
+    castShadows: false
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1
+      200: 0.7
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootLegion
+      amount: 1
+  - type: IgnoreSpiderWeb
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Speech
+  - type: Advertise
+    pack: MedievalSkeletAdvertise
+    minimumWait: 9
+    maximumWait: 28

@@ -49,4 +49,9 @@ public sealed partial class EmoteOnDamageComponent : Component
     /// </summary>
     [DataField("emoteCooldown"), ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan EmoteCooldown = TimeSpan.FromSeconds(2);
+
+    // Imperial Medieval Start
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float MinimumDamage = 5f;
+    // Imperial Medieval End
 }

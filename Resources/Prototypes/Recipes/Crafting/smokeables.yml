@@ -1,5 +1,6 @@
 - type: construction
   name: Косяк # Imperial Recipes Locale
+  hide: true # imperial medieval craft disable
   id: smokeableJoint
   graph: smokeableJoint
   startNode: start
@@ -11,6 +12,7 @@
 
 - type: construction
   name: Радужный косяк # Imperial Recipes Locale
+  hide: true # imperial medieval craft disable
   id: smokeableJointRainbow
   graph: smokeableJointRainbow
   startNode: start
@@ -30,7 +32,7 @@
   description: Самокрутка из высушенного растения, завернутого в высушенный табачный лист. # Imperial Recipes Locale
   icon: { sprite: Objects/Consumable/Smokeables/Cannabis/blunt.rsi, state: unlit-icon }
   objectType: Item
-  
+
 - type: construction
   name: Радужный блант # Imperial Recipes Locale
   id: smokeableBluntRainbow
@@ -43,6 +45,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Сигарета # Imperial Recipes Locale
   id: smokeableCigarette
   graph: smokeableCigarette
@@ -66,7 +69,7 @@
   icon: { sprite: Objects/Misc/reagent_fillings.rsi, state: powderpile }
 #    color: darkgreen
   objectType: Item
-  
+
 - type: construction
   name: Радужный измельчённый канабис # Imperial Recipes Locale
   id: smokeableGroundCannabisRainbow

@@ -1,0 +1,24 @@
+## knife
+#  - type: MeleeThrowOnHit
+#    lifetime: 0.27
+#    minLifetime: 0.05
+#    speed: 0.7
+#
+## sword
+#  - type: MeleeThrowOnHit
+#    lifetime: 0.33
+#    minLifetime: 0.05
+#    speed: 1.7
+#
+## heavy 1handed
+#  - type: MeleeThrowOnHit
+#    lifetime: 0.4
+#    minLifetime: 0.05
+#    speed: 2.1
+#
+## heavy 2handed
+#  - type: MeleeThrowOnHit
+#    lifetime: 0.6
+#    minLifetime: 0.05
+#    speed: 3
+#

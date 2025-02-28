@@ -66,6 +66,7 @@
   - type: PointLight
     radius: 6
     enabled: false
+  - type: MedievalBoo # imperial medieval
 
 # proto for player ghosts specifically
 - type: entity

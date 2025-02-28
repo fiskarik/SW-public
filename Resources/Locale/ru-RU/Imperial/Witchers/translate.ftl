@@ -43,8 +43,8 @@ ent-WitcherPurpleDress = Платье пурпурной ведьмы
 ent-WitchersPurpleGloves = Перчатки пурпурной ведьмы
     .desc = Красивые перчатки пурпурной ведьмы.
 
-ent-WitchersPurpleHat = Шляпа ведьмы
-    .desc = Пурпурная шляпа ведьмы.
+ent-WitchersPurpleHat = шляпа волшебника
+    .desc = Пурпурная шляпа.
 
 ent-WitcherRedDress = Платье алой ведьмы
     .desc = Красивое длинное платье алой ведьмы.

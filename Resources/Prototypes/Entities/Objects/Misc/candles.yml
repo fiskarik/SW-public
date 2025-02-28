@@ -59,6 +59,11 @@
         behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
+    # Imperial Medieval Start
+    - type: IgnitionSource
+      temperature: 400
+      ignited: true
+    # Imperial Medieval End
 
 - type: entity
   name: red candle
@@ -286,8 +291,13 @@
         shader: unshaded
   - type: PointLight
     color: "#e39c40"
-    radius: 2.5
+    radius: 3.5 # imperial medieval
     power: 10
+  # Imperial Medieval Start
+  - type: IgnitionSource
+    temperature: 400
+    ignited: true
+  # Imperial Medieval End
 
 - type: entity
   name: magic red candle

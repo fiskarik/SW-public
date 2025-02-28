@@ -1,0 +1,79 @@
+- type: rules
+  id: NearLegion
+  rules:
+    - !type:NearbyComponentsRule
+      components:
+        - type: MedievalAmbientLegion
+      range: 8
+      anchored: false
+      #count: 2
+
+- type: rules
+  id: NearInsurgency
+  rules:
+    - !type:NearbyComponentsRule
+      components:
+        - type: MedievalAmbientInsurgency
+      range: 8
+      anchored: false
+      #count: 2
+
+- type: rules
+  id: NearSands
+  rules:
+    - !type:NearbyComponentsRule
+      components:
+        - type: MedievalAmbientSands
+      range: 8
+      anchored: false
+      #count: 2
+
+- type: rules
+  id: NearTribe
+  rules:
+    - !type:NearbyComponentsRule
+      components:
+        - type: MedievalAmbientTribe
+      range: 8
+      anchored: false
+      #count: 2
+
+- type: rules
+  id: NearGoblin
+  rules:
+    - !type:NearbyComponentsRule
+      components:
+        - type: MedievalAmbientGoblin
+      range: 8
+      anchored: false
+      #count: 2
+
+- type: rules
+  id: NearDark
+  rules:
+    - !type:NearbyComponentsRule
+      components:
+        - type: MedievalAmbientDark
+      range: 8
+      anchored: false
+      #count: 2
+
+- type: rules
+  id: NearMage
+  rules:
+    - !type:NearbyComponentsRule
+      components:
+        - type: MedievalAmbientMage
+      range: 8
+      anchored: false
+      #count: 2
+
+- type: rules
+  id: NearHell
+  rules:
+    - !type:NearbyComponentsRule
+      components:
+        - type: MedievalAmbientHell
+      range: 8
+      anchored: false
+      #count: 2

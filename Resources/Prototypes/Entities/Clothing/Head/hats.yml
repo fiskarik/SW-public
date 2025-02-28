@@ -24,6 +24,7 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
+    - ReticenceBeret # Imperial Mech
 
 - type: entity
   parent: ClothingHeadBase
@@ -41,6 +42,7 @@
     tags:
     - ClothMade
     - WhitelistChameleon
+    - ReticenceBeret # Imperial Mech
 
 - type: entity
   parent: ClothingHeadBase
@@ -805,6 +807,11 @@
     modifiers:
       coefficients:
         Caustic: 0.95
+  # Imperial Medieval Start
+  - type: Currency
+    price:
+      Revent: 85
+  # imperial medieval
 
 - type: entity
   parent: [ClothingHeadBase, BaseSyndicateContraband]
@@ -1028,6 +1035,8 @@
     - type: AddAccentClothing
       accent: ReplacementAccent
       replacement: cowboy
+    - type: StealTarget # imperial medieval
+      stealGroup: MedievalGetClothingHeadHatCowboyBrown # imperial medieval
 
 - type: entity
   parent: ClothingHeadHatCowboyBrown

@@ -1,4 +1,5 @@
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Серая кепка # Imperial Recipes Locale
   id: BladedFlatcapGrey
   graph: BladedFlatcapGrey
@@ -10,6 +11,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Коричневая кепка # Imperial Recipes Locale
   id: BladedFlatcapBrown
   graph: BladedFlatcapBrown
@@ -21,6 +23,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Заточка # Imperial Recipes Locale
   id: Shiv
   graph: Shiv
@@ -30,8 +33,10 @@
   description: Осколок стекла, обернутый куском ткани. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/shiv.rsi, state: icon }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Усиленная заточка # Imperial Recipes Locale
   id: ReinforcedShiv
   graph: ReinforcedShiv
@@ -41,8 +46,10 @@
   description: Осколок бронестекла, обернутый куском ткани. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/reinforced_shiv.rsi, state: icon }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Плазменная заточка # Imperial Recipes Locale
   id: PlasmaShiv
   graph: PlasmaShiv
@@ -52,8 +59,10 @@
   description: Осколок плазменного стекла, обернутый куском ткани. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/plasma_shiv.rsi, state: icon }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Урановая заточка # Imperial Recipes Locale
   id: UraniumShiv
   graph: UraniumShiv
@@ -63,8 +72,10 @@
   description: Осколок уранового стекла, обернутый куском ткани. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/uranium_shiv.rsi, state: icon }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Копьё # Imperial Recipes Locale
   id: Spear
   graph: Spear
@@ -74,8 +85,10 @@
   description: Грубое копьё на тот случай, если вам нужно проделать в ком-то дырку. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/spear.rsi, state: spear }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Усиленное копьё # Imperial Recipes Locale
   id: SpearReinforced
   graph: SpearReinforced
@@ -85,8 +98,10 @@
   description: Грубое усиленное копьё на тот случай, если вам нужно проделать в ком-то дырку. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/reinforced_spear.rsi, state: spear }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Плазменное копьё # Imperial Recipes Locale
   id: SpearPlasma
   graph: SpearPlasma
@@ -96,8 +111,10 @@
   description: Грубое плазменное копье на тот случай, если вам нужно продырявить кого-нибудь. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/plasma_spear.rsi, state: spear }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Урановое копье # Imperial Recipes Locale
   id: SpearUranium
   graph: SpearUranium
@@ -107,8 +124,10 @@
   description: Грубое урановое копье на тот случай, если вам нужно продырявить кого-нибудь. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/uranium_spear.rsi, state: spear }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Бола # Imperial Recipes Locale
   id: Bola
   graph: Bola
@@ -118,8 +137,10 @@
   description: Скрепленные с металлом кабельные стяжки. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Throwable/bola.rsi, state: icon }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Деревянный баклер # Imperial Recipes Locale
   id: WoodenBuckler
   graph: WoodenBuckler
@@ -129,8 +150,10 @@
   description: Небольшой круглый деревянный самодельный щит. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: buckler-icon }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Самодельный щит # Imperial Recipes Locale
   id: MakeshiftShield
   graph: MakeshiftShield
@@ -140,8 +163,10 @@
   description: Ветхий на вид щит, мало на что пригодный. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: makeshift-icon }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стрела из осколка стекла # Imperial Recipes Locale
   id: ImprovisedArrow
   graph: ImprovisedArrow
@@ -151,8 +176,10 @@
   description: Стрела с наконечником из осколков стекла, предназначенная для использования с луком. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стрела из осколка плазменного стекла # Imperial Recipes Locale
   id: ImprovisedArrowPlasma
   graph: ImprovisedArrowPlasma
@@ -164,6 +191,7 @@
   objectType: Item
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Стрела из осколка уранового стекла # Imperial Recipes Locale
   id: ImprovisedArrowUranium
   graph: ImprovisedArrowUranium
@@ -173,8 +201,9 @@
   description: Стрела с наконечником из осколков уранового стекла, предназначенная для использования с луком. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
-  
+
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Лук # Imperial Recipes Locale
   id: ImprovisedBow
   graph: ImprovisedBow
@@ -184,6 +213,7 @@
   description: Некачественный лук, сделанный из дерева и ткани. Это немного, но работа выполнялась на протяжении тысячелетий. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: unwielded }
   objectType: Item
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
   name: Копьё из костей # Imperial Recipes Locale
@@ -195,3 +225,4 @@
   description: Копьё из костей на тот случай, если вам нужно продырявить кого-нибудь. # Imperial Recipes Locale
   icon: { sprite: Objects/Weapons/Melee/bone_spear.rsi, state: spear }
   objectType: Item
+  blockForPacifist: true #Imperial pacified

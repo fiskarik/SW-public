@@ -138,4 +138,6 @@
       components:
         - Produce
         - Seed
+      tags: # imperial medieval
+        - AlchemicIngredient # imperial medieval
   - type: Dumpable

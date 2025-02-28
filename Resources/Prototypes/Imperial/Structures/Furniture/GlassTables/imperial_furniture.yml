@@ -1,4 +1,5 @@
 - type: construction
+  hide: true # imperial medieval craft disable
   name: стол из уранового стекла
   id: TableUraniumGlass
   graph: Table
@@ -16,6 +17,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: стол из уранового бронестекла
   id: TableUraniumGlassReinforced
   graph: Table
@@ -33,6 +35,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: стол из плазменного бронестекла
   id: TablePlasmaGlassReinforced
   graph: Table

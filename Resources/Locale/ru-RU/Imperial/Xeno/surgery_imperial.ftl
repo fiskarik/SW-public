@@ -69,6 +69,13 @@ ent-ClothingHeadHatSurgeon = шапочка хирурга
 job-name-surgeon = Хирург
 job-description-surgeon = Лечит внутренние травмы.
 
+ent-LockerSurgeon = шкаф хирурга
+    .desc = { ent-LockerMedical.desc }
+
+ent-LockerSurgeonFilled = шкаф хирурга
+    .suffix = Хирург, Заполненный
+    .desc = { ent-LockerMedical.desc }
+
 reagent-name-humanisine = гуманизин
 reagent-desc-humanisine = Go back, i want to be monke!
 

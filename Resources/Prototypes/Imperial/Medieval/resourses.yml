@@ -1,0 +1,1405 @@
+- type: entity
+  name: MedievalLeather
+  parent: BaseItem
+  id: MedievalLeather1
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/materials.rsi
+    state: leather
+  - type: Tag
+    tags:
+    - RawMaterial
+    - MedievalLeather
+    - Sheet
+  - type: Material
+  - type: Stack
+    stackType: MedievalLeather1
+    count: 1
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalLeather1: 100
+  - type: Currency
+    price:
+      Revent: 2
+
+- type: entity
+  name: MedievalStone
+  parent: BaseItem
+  id: MedievalStone
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: stone
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - MedievalStone
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalStone: 100
+  - type: Stack
+    stackType: MedievalStone
+    count: 1
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 9
+
+- type: entity
+  name: MedievalTopaz
+  parent: BaseItem
+  id: MedievalTopaz
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: topaz
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - MedievalTopaz
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalTopaz: 100
+  - type: Stack
+    stackType: MedievalTopaz
+    count: 1
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 6
+  - type: Currency
+    price:
+      Revent: 10
+
+- type: entity
+  name: MedievalTopazOre
+  parent: BaseItem
+  id: MedievalTopazOre
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: topaz_ore
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - MedievalTopaz
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalTopazOre: 100
+  - type: Stack
+    stackType: MedievalTopazOre
+    count: 1
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 2
+
+- type: entity
+  name: MedievalRope
+  parent: BaseItem
+  id: MedievalRope
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: rope
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    #- Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalRope: 100
+  - type: Stack
+    stackType: MedievalRope
+    count: 1
+  - type: Currency
+    price:
+      Revent: 4
+
+- type: entity
+  name: MedievalRope10
+  parent: MedievalRope
+  id: MedievalRope10
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalRope
+    count: 10
+
+- type: entity
+  name: MedievalIronIngot
+  parent: BaseItem
+  id: MedievalIronIngot
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: iron_ingot
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalIronIngot: 100
+  - type: Stack
+    stackType: MedievalIronIngot
+    count: 1
+  #- type: Currency
+  #  price:
+  #    Revent: 3
+
+- type: entity
+  name: MedievalIronIngot10
+  parent: MedievalIronIngot
+  id: MedievalIronIngot10
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalIronIngot
+    count: 10
+
+- type: entity
+  name: MedievalSteelIngot
+  parent: BaseItem
+  id: MedievalSteelIngot
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: steel_ingot
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalSteelIngot: 100
+  - type: Stack
+    stackType: MedievalSteelIngot
+    count: 1
+  #- type: Currency
+  #  price:
+  #    Revent: 6
+
+- type: entity
+  name: MedievalSteelIngot10
+  parent: MedievalSteelIngot
+  id: MedievalSteelIngot10
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalSteelIngot
+    count: 10
+
+- type: entity
+  name: MedievalSpiderHair
+  parent: BaseItem
+  id: MedievalSpiderHair
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: spider_hair
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalSpiderHair: 100
+  - type: Stack
+    stackType: MedievalSpiderHair
+    count: 1
+  - type: Currency
+    price:
+      Revent: 4
+
+- type: entity
+  name: MedievalSpiderHair10
+  parent: MedievalSpiderHair
+  id: MedievalSpiderHair10
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalSpiderHair
+    count: 10
+
+- type: entity
+  name: MedievalCoal
+  parent: BaseItem
+  id: MedievalCoal
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: coal
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalCoal: 100
+  - type: Stack
+    stackType: MedievalCoal
+    count: 1
+
+- type: entity
+  name: MedievalCoal30
+  parent: MedievalCoal
+  id: MedievalCoal30
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalCoal
+    count: 30
+
+- type: entity
+  name: MedievalCoal10
+  parent: MedievalCoal
+  id: MedievalCoal10
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalCoal
+    count: 10
+
+- type: entity
+  name: MedievalGear
+  parent: BaseItem
+  id: MedievalGear
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: gear
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    #- Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalGear: 100
+  - type: Stack
+    stackType: MedievalGear
+    count: 1
+  #- type: Currency
+  #  price:
+  #    Revent: 5
+
+- type: entity
+  name: MedievalGear30
+  parent: MedievalGear
+  id: MedievalGear30
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalGear
+    count: 30
+
+- type: entity
+  name: MedievalEssence
+  parent: BaseItem
+  id: MedievalEssence
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: essence
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    #- Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalEssence: 100
+  - type: Stack
+    stackType: MedievalEssence
+    count: 1
+  - type: Currency
+    price:
+      Revent: 20
+
+- type: entity
+  name: MedievalEssence30
+  parent: MedievalEssence
+  id: MedievalEssence30
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalEssence
+    count: 30
+
+- type: entity
+  name: MedievalTopazOre30
+  parent: MedievalTopazOre
+  id: MedievalTopazOre30
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalTopazOre
+    count: 30
+
+- type: entity
+  name: MedievalLeather
+  parent: BaseItem
+  id: MedievalLeather10
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/materials.rsi
+    state: leather
+  - type: Tag
+    tags:
+    - RawMaterial
+    - MedievalLeather
+    - Sheet
+  - type: Material
+    materials:
+      MedievalLeather1: 100
+  - type: Stack
+    stackType: MedievalLeather1
+    count: 10
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalLeather1: 100
+  - type: Currency
+    price:
+      Revent: 2
+
+- type: material
+  id: MedievalLeather1
+  stackEntity: MedievalLeather1
+  name: materials-leather
+  icon: { sprite: Imperial/Medieval/Materials/materials.rsi, state: leather }
+  color: "#55d9d9"
+  price: 0.1
+
+- type: stack
+  name: materials-leather
+  id: MedievalLeather1
+  icon: { sprite: Imperial/Medieval/Materials/materials.rsi, state: leather }
+  spawn: MedievalLeather1
+  maxCount: 30
+
+- type: ore
+  id: OreStoneMedieval
+  oreEntity: MedievalStone
+  minOreYield: 2
+  maxOreYield: 4
+
+- type: ore
+  id: OreMedievalCoal
+  oreEntity: MedievalCoal
+  minOreYield: 1
+  maxOreYield: 3
+
+- type: ore
+  id: OreTopazMedieval
+  oreEntity: MedievalTopazOre
+  minOreYield: 1
+  maxOreYield: 3
+
+- type: ore
+  id: OreFireSerdolickMedieval
+  oreEntity: MedievalFireSerdolickOre
+  minOreYield: 1
+  maxOreYield: 3
+
+- type: ore
+  id: OreGoldMedieval
+  oreEntity: MedievalGoldOre
+  minOreYield: 1
+  maxOreYield: 2
+
+- type: ore
+  id: OreAdamMedieval
+  oreEntity: MedievalAdamOre
+  minOreYield: 1
+  maxOreYield: 3
+
+- type: ore
+  id: OreSteelMedieval
+  oreEntity: SteelOre1
+  minOreYield: 1
+  maxOreYield: 3
+
+#- type: weightedRandomOre
+#  id: MedievalRandom
+#  weights:
+#    OreSteelMedieval: 4
+#    OreStoneMedieval: 9
+#    OreTopazMedieval: 0.25
+#    OreFireSerdolickMedieval: 0.25
+#    OreGoldMedieval: 0.23
+#    OreAdamMedieval: 0.28
+#    OreMedievalCoal: 3
+
+- type: material
+  id: MedievalStone
+  stackEntity: MedievalStone
+  name: materials-stone
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: stone }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  name: materials-stone
+  id: MedievalStone
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: stone }
+  spawn: MedievalStone
+  maxCount: 30
+
+- type: material
+  id: MedievalTopaz
+  stackEntity: MedievalTopaz
+  name: materials-topaz
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: topaz }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalTopaz
+  name: materials-topaz
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: topaz }
+  spawn: MedievalTopaz
+  maxCount: 30
+
+- type: material
+  id: MedievalTopazOre
+  stackEntity: MedievalTopazOre
+  name: materials-topaz-ore
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: topaz_ore }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalTopazOre
+  name: materials-topaz-ore
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: topaz_ore }
+  spawn: MedievalTopazOre
+  maxCount: 30
+
+- type: material
+  id: MedievalRope
+  stackEntity: MedievalRope
+  name: materials-rope
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: rope }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalRope
+  name: materials-rope
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: rope }
+  spawn: MedievalRope
+  maxCount: 30
+
+- type: material
+  id: MedievalIronIngot
+  stackEntity: MedievalIronIngot
+  name: materials-medieval-steel
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: iron_ingot }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalIronIngot
+  name: materials-medieval-steel
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: iron_ingot }
+  spawn: MedievalIronIngot
+  maxCount: 30
+
+- type: material
+  id: MedievalSpiderHair
+  stackEntity: MedievalSpiderHair
+  name: materials-medieval-spider-hair
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: spider_hair }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalSpiderHair
+  name: materials-medieval-spider-hair
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: spider_hair }
+  spawn: MedievalSpiderHair
+  maxCount: 30
+
+- type: material
+  id: MedievalCoal
+  stackEntity: MedievalCoal
+  name: materials-medieval-coal
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: coal }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalCoal
+  name: materials-medieval-coal
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: coal }
+  spawn: MedievalCoal
+  maxCount: 30
+
+- type: material
+  id: MedievalSteelIngot
+  stackEntity: MedievalSteelIngot
+  name: materials-medieval-steel-top
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: steel_ingot }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalSteelIngot
+  name: materials-medieval-steel-top
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: steel_ingot }
+  spawn: MedievalSteelIngot
+  maxCount: 30
+
+- type: material
+  id: MedievalGear
+  stackEntity: MedievalGear
+  name: materials-gear
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: gear }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalGear
+  name: materials-gear
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: gear }
+  spawn: MedievalGear
+  maxCount: 30
+
+- type: material
+  id: MedievalEssence
+  stackEntity: MedievalEssence
+  name: materials-essence
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: essence }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalEssence
+  name: materials-essence
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: essence }
+  spawn: MedievalEssence
+  maxCount: 30
+
+- type: material
+  id: MedievalFireSerdolickOre
+  stackEntity: MedievalFireSerdolickOre
+  name: materials-serdolick-ore
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: serdolick_ore }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalFireSerdolickOre
+  name: materials-serdolick-ore
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: serdolick_ore }
+  spawn: MedievalFireSerdolickOre
+  maxCount: 30
+
+- type: material
+  id: MedievalGoldOre
+  stackEntity: MedievalGoldOre
+  name: materials-gold-ore
+  icon: { sprite: Imperial/Medieval/Materials/ore.rsi, state: gold }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalGoldOre
+  name: materials-gold-ore
+  icon: { sprite: Imperial/Medieval/Materials/ore.rsi, state: gold }
+  spawn: MedievalGoldOre
+  maxCount: 30
+
+- type: material
+  id: MedievalAdamOre
+  stackEntity: MedievalAdamOre
+  name: materials-adam-ore
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: adam_ore }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalAdamOre
+  name: materials-adam-ore
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: adam_ore }
+  spawn: MedievalAdamOre
+  maxCount: 30
+
+- type: material
+  id: MedievalAdam
+  stackEntity: MedievalAdam
+  name: materials-adam
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: adam }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalAdam
+  name: materials-adam
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: adam }
+  spawn: MedievalAdam
+  maxCount: 30
+
+#- type: material
+#  id: MedievalGold
+#  stackEntity: MedievalGold
+#  name: materials-gold
+#  icon: { sprite: Imperial/Medieval/Materials/ingots.rsi, state: gold }
+#  color: "#d9d9d9"
+#  price: 0.1
+
+- type: stack
+  id: MedievalGold
+  name: materials-gold
+  icon: { sprite: Imperial/Medieval/Materials/ingots.rsi, state: gold }
+  spawn: MedievalIngotGold
+  maxCount: 30
+
+- type: material
+  id: MedievalFireSerdolick
+  stackEntity: MedievalFireSerdolick
+  name: materials-serdolick
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: serdolick }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalFireSerdolick
+  name: materials-serdolick
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: serdolick }
+  spawn: MedievalFireSerdolick
+  maxCount: 30
+
+- type: entity
+  name: MedievalFireSerdolickOre
+  parent: BaseItem
+  id: MedievalFireSerdolickOre
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: serdolick_ore
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - MedievalFireSerdolickOre
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalFireSerdolickOre: 100
+  - type: Stack
+    stackType: MedievalFireSerdolickOre
+    count: 1
+
+- type: entity
+  name: MedievalGoldOre
+  parent: BaseItem
+  id: MedievalGoldOre
+  description: furry :)
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Imperial/Medieval/Materials/ore.rsi
+    state: gold
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - MedievalGoldOre
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalGoldOre: 100
+  - type: Stack
+    stackType: MedievalGoldOre
+    count: 1
+  - type: Currency
+    price:
+      Revent: 7
+
+- type: entity
+  name: MedievalAdamOre
+  parent: BaseItem
+  id: MedievalAdamOre
+  description: furry :)
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: adam_ore
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - MedievalAdamOre
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalAdamOre: 100
+  - type: Stack
+    stackType: MedievalAdamOre
+    count: 1
+
+- type: entity
+  name: MedievalFireSerdolick
+  parent: BaseItem
+  id: MedievalFireSerdolick
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: serdolick
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - MedievalFireSerdolick
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalFireSerdolick: 100
+  - type: Stack
+    stackType: MedievalFireSerdolick
+    count: 1
+  - type: Currency
+    price:
+      Revent: 10
+
+- type: entity
+  name: MedievalIngotGold
+  parent: BaseItem
+  id: MedievalIngotGold
+  description: MedievalIngotGold
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Imperial/Medieval/Materials/ingots.rsi
+    state: gold
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    #- Ore
+  - type: Material
+  #- type: PhysicalComposition
+  #  materialComposition:
+  #    MedievalGold: 100
+  - type: Stack
+    stackType: MedievalGold
+    count: 1
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 6
+  - type: Currency
+    price:
+      Revent: 30
+
+- type: entity
+  name: MedievalIngotGold10
+  parent: MedievalIngotGold
+  id: MedievalIngotGold10
+  description: MedievalIngotGold
+  components:
+  - type: Stack
+    stackType: MedievalGold
+    count: 1
+
+- type: entity
+  name: MedievalAdam
+  parent: BaseItem
+  id: MedievalAdam
+  description: MedievalAdam
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: adam
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalAdam: 100
+  - type: Stack
+    stackType: MedievalAdam
+    count: 1
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+  - type: Currency
+    price:
+      Revent: 10
+
+- type: material
+  id: MedievalEbonitIngot
+  stackEntity: MedievalEbonitIngot
+  name: materials-ebonit
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: ebonit_ingot }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalEbonitIngot
+  name: materials-ebonit
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: ebonit_ingot }
+  spawn: MedievalEbonitIngot
+  maxCount: 30
+
+- type: entity
+  name: MedievalEbonitIngot
+  parent: BaseItem
+  id: MedievalEbonitIngot
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: ebonit_ingot
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    #- Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalEbonitIngot: 100
+  - type: Stack
+    stackType: MedievalEbonitIngot
+    count: 1
+  - type: Currency
+    price:
+      Revent: 4
+
+- type: entity
+  name: MedievalEbonitIngot10
+  parent: MedievalEbonitIngot
+  id: MedievalEbonitIngot10
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalEbonitIngot
+    count: 10
+
+- type: material
+  id: MedievalEbonitOre
+  stackEntity: MedievalEbonitOre
+  name: materials-ebonit-ore
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: ebonit_ore }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalEbonitOre
+  name: materials-ebonit-ore
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: ebonit_ore }
+  spawn: MedievalEbonitOre
+  maxCount: 30
+
+- type: entity
+  name: MedievalEbonitOre
+  parent: BaseItem
+  id: MedievalEbonitOre
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: ebonit_ore
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalEbonitOre: 100
+  - type: Stack
+    stackType: MedievalEbonitOre
+    count: 1
+  - type: Currency
+    price:
+      Revent: 4
+
+- type: entity
+  name: MedievalEbonitOre10
+  parent: MedievalEbonitOre
+  id: MedievalEbonitOre10
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalEbonitOre
+    count: 10
+
+- type: stack
+  id: MedievalChain
+  name: materials-chain
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: chain }
+  spawn: MedievalChain
+  maxCount: 30
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalChain
+  description: lol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: chain
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Stack
+    stackType: MedievalChain
+    count: 1
+
+- type: stack
+  id: MedievalLeatherBelt
+  name: materials-leather-belt
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: leather_belt }
+  spawn: MedievalLeatherBelt
+  maxCount: 30
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalLeatherBelt
+  description: lol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: leather_belt
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Stack
+    stackType: MedievalLeatherBelt
+    count: 1
+
+- type: stack
+  id: MedievalIronPlate
+  name: materials-iron-plate
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: plate }
+  spawn: MedievalIronPlate
+  maxCount: 30
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalIronPlate
+  description: lol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: plate
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Stack
+    stackType: MedievalIronPlate
+    count: 1
+
+- type: stack
+  id: MedievalIronPlateSmall
+  name: materials-iron-plate-small
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: plate_small }
+  spawn: MedievalIronPlateSmall
+  maxCount: 30
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalIronPlateSmall
+  description: lol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: plate_small
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Stack
+    stackType: MedievalIronPlateSmall
+    count: 1
+
+- type: stack
+  id: MedievalRivets
+  name: materials-rivets
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: rivets }
+  spawn: MedievalRivets
+  maxCount: 30
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalRivets
+  description: lol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: rivets
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Stack
+    stackType: MedievalRivets
+    count: 1
+
+- type: stack
+  id: MedievalShoulder
+  name: materials-shoulder
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: shoulder }
+  spawn: MedievalShoulder
+  maxCount: 10
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalShoulder
+  description: lol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: shoulder
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Stack
+    stackType: MedievalShoulder
+    count: 1
+
+- type: stack
+  id: MedievalGlina
+  name: materials-glina
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: glina }
+  spawn: MedievalGlina
+  maxCount: 30
+
+- type: material
+  id: MedievalGlina
+  stackEntity: MedievalGlina
+  name: materials-glina
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: glina }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalGlina
+  description: lol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: glina
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - Ore
+  - type: Stack
+    stackType: MedievalGlina
+    count: 1
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalGoldOre: 100
+
+- type: stack
+  id: MedievalGlinaForma
+  name: materials-glinaforma
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: glina_forma }
+  spawn: MedievalGlinaForma
+  maxCount: 30
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalGlinaForma
+  description: lol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: glina_forma
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Stack
+    stackType: MedievalGlinaForma
+    count: 1
+  - type: Construction
+    graph: MedievalGlina
+    node: ground
+
+- type: construction
+  name: глиняная формочка
+  id: MedievalGlina
+  graph: MedievalGlina
+  startNode: start
+  targetNode: MedievalGlina
+  category: construction-category-misc
+  description: "Формочка для переплавки слитков"
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: glina_forma }
+  objectType: Item
+
+- type: constructionGraph
+  id: MedievalGlina
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MedievalGlina
+          steps:
+            - material: MedievalGlina
+              amount: 2
+              doAfter: 3
+    - node: MedievalGlina
+      entity: MedievalGlinaForma
+
+- type: stack
+  id: MedievalGlinaFormaReady
+  name: materials-glinaformaready
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: glina_forma_ready }
+  spawn: MedievalGlinaFormaReady
+  maxCount: 100
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalGlinaFormaReady
+  description: lol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: glina_forma_ready
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Stack
+    stackType: MedievalGlinaFormaReady
+    count: 10
+
+- type: stack
+  id: MedievalGlinaFormaBowl
+  name: Глиняная миска
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: bowl }
+  spawn: MedievalGlinaFormaBowl
+  maxCount: 1
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalGlinaFormaBowl
+  description: lol
+  components:
+  - type: Stack
+    stackType: MedievalGlinaFormaBowl
+    count: 1
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: bowl
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Construction
+    graph: MedievalGlinaBowl
+    node: MedievalGlinaBowl
+
+- type: construction
+  name: глиняная миска
+  id: MedievalGlinaBowl
+  graph: MedievalGlinaBowl
+  startNode: start
+  targetNode: MedievalGlinaBowl
+  category: construction-category-misc
+  description: "Необожженная глиняная миска"
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: bowl }
+  objectType: Item
+
+- type: constructionGraph
+  id: MedievalGlinaBowl
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MedievalGlinaBowl
+          steps:
+            - material: MedievalGlina
+              amount: 2
+              doAfter: 15
+    - node: MedievalGlinaBowl
+      entity: MedievalGlinaFormaBowl
+
+- type: material
+  id: MedievalForstoneIngot
+  stackEntity: MedievalForstoneIngot
+  name: materials-forstone
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: forstone_ingot }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalForstoneIngot
+  name: materials-forstone
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: forstone_ingot }
+  spawn: MedievalForstoneIngot
+  maxCount: 30
+
+- type: entity
+  name: MedievalForstoneIngot
+  parent: BaseItem
+  id: MedievalForstoneIngot
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: forstone_ingot
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    #- Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalForstoneIngot: 100
+  - type: Stack
+    stackType: MedievalForstoneIngot
+    count: 1
+  - type: Currency
+    price:
+      Revent: 4
+
+- type: entity
+  name: MedievalForstoneIngot10
+  parent: MedievalForstoneIngot
+  id: MedievalForstoneIngot10
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalForstoneIngot
+    count: 10
+
+- type: material
+  id: MedievalForstoneOre
+  stackEntity: MedievalForstoneOre
+  name: materials-forstone-ore
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: forstone_ore }
+  color: "#d9d9d9"
+  price: 0.1
+
+- type: stack
+  id: MedievalForstoneOre
+  name: materials-forstone-ore
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: forstone_ore }
+  spawn: MedievalForstoneOre
+  maxCount: 30
+
+- type: entity
+  name: MedievalForstoneOre
+  parent: BaseItem
+  id: MedievalForstoneOre
+  description: furry :)
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: forstone_ore
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+    - Ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MedievalForstoneOre: 100
+  - type: Stack
+    stackType: MedievalForstoneOre
+    count: 1
+  - type: Currency
+    price:
+      Revent: 4
+
+- type: entity
+  name: MedievalForstoneOre10
+  parent: MedievalForstoneOre
+  id: MedievalForstoneOre10
+  description: furry :)
+  components:
+  - type: Stack
+    stackType: MedievalForstoneOre
+    count: 10
+
+- type: stack
+  id: MedievalGrass
+  name: materials-grass
+  icon: { sprite: Imperial/Medieval/Materials/mdv.rsi, state: grass }
+  spawn: MedievalGrass
+  maxCount: 30
+
+- type: entity
+  name: none
+  parent: BaseItem
+  id: MedievalGrass
+  description: lol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Materials/mdv.rsi
+    state: grass
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Sheet
+  - type: Stack
+    stackType: MedievalGrass
+    count: 1

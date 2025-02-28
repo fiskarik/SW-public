@@ -201,8 +201,8 @@
       Dead:
         Base: hivelord_dead
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.5
-    baseSprintSpeed : 4.0
+    baseWalkSpeed : 2.5 # imperial medieval
+    baseSprintSpeed : 3.3 # imperial medieval
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -267,7 +267,7 @@
     animation: WeaponArcPunch
     damage:
       types:
-        Slash: 7
+        Slash: 5 # imperial medieval
   - type: Ammo
     muzzleFlash: null
   - type: Destructible
@@ -319,6 +319,11 @@
     stage: 1
   - type: StaticPrice
     price: 5000
+  # Imperial Medieval Start
+  - type: Currency
+    price:
+      Revent: 22
+  # Imperial Medieval End
 
 - type: entity
   id: FoodHivelordRemainsInert

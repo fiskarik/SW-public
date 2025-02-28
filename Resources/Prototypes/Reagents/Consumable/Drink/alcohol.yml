@@ -181,11 +181,29 @@
           type: Dwarf
         damage:
           types:
-            Poison: 0.2
+            Poison: 0.01 # imperial medieval
+      - !type:HealthChange # imperial medieval start
+        conditions:
+        - !type:ReagentThreshold
+          min: 6
+        - !type:OrganType
+          type: Elf
+        damage:
+          types:
+            Poison: 1
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
-          min: 15
+          min: 6
+        - !type:OrganType
+          type: DarkElf
+        damage:
+          types:
+            Poison: 1 # imperial medieval end
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 1 # imperial medieval
         - !type:OrganType
           type: Dwarf
         damage:

@@ -1,0 +1,119 @@
+# TODO: Add descriptions (many)
+# TODO BODY: Part damage
+- type: entity
+  id: PartDarkElf
+  parent: [BaseItem, BasePart]
+  name: "DarkElf body part"
+  abstract: true
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  id: TorsoDarkElf
+  name: "DarkElf torso"
+  parent: [PartDarkElf, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: "torso_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
+
+- type: entity
+  id: HeadDarkElf
+  name: "DarkElf head"
+  parent: [PartDarkElf, BaseHead]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: "head_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  id: LeftArmDarkElf
+  name: "left DarkElf arm"
+  parent: [PartDarkElf, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmDarkElf
+  name: "right DarkElf arm"
+  parent: [PartDarkElf, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandDarkElf
+  name: "left DarkElf hand"
+  parent: [PartDarkElf, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandDarkElf
+  name: "right DarkElf hand"
+  parent: [PartDarkElf, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: "r_hand"
+
+- type: entity
+  id: LeftLegDarkElf
+  name: "left DarkElf leg"
+  parent: [PartDarkElf, BaseLeftLeg]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: "l_leg"
+
+- type: entity
+  id: RightLegDarkElf
+  name: "right DarkElf leg"
+  parent: [PartDarkElf, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: "r_leg"
+
+- type: entity
+  id: LeftFootDarkElf
+  name: "left DarkElf foot"
+  parent: [PartDarkElf, BaseLeftFoot]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootDarkElf
+  name: "right DarkElf foot"
+  parent: [PartDarkElf, BaseRightFoot]
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Species/DarkElf/parts.rsi
+    state: "r_foot"

@@ -26,6 +26,11 @@ public sealed class EmoteOnDamageSystem : EntitySystem
         if (!args.DamageIncreased)
             return;
 
+        // Imperial Medieval Start
+        if (args.DamageDelta != null && args.DamageDelta.GetTotal() < emoteOnDamage.MinimumDamage)
+            return;
+        // Imperial Medieval End
+
         if (emoteOnDamage.LastEmoteTime + emoteOnDamage.EmoteCooldown > _gameTiming.CurTime)
             return;
 

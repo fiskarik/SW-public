@@ -52,11 +52,12 @@
 - type: damageModifierSet
   id: PerforatedMetallic
   coefficients:
-    Blunt: 2
+    Blunt: 1 # imperial medieval
     Piercing: 0.2
     Shock: 0.6
   flatReductions:
     Piercing: 10
+    Blunt: 4 # imperial medieval
 
 # for fragile electronics like consoles or shuttle engines.
 - type: damageModifierSet
@@ -203,8 +204,7 @@
   id: Zombie #Blunt resistant and immune to biological threats, but can be hacked apart and burned
   coefficients:
     Blunt: 0.6
-    Piercing: 0.8
-    Cold: 0.3
+    Piercing: 0.65 # imperial medieval
     Heat: 1.25
     Poison: 0.0
     Radiation: 0.0
@@ -214,16 +214,16 @@
   id: Skeleton
   coefficients:
     Blunt: 1.1
-    Slash: 0.8
-    Piercing: 0.6
+    Slash: 1.1 # imperial medieval
+    Piercing: 1.1 # imperial medieval
     Cold: 0.0
     Poison: 0.0
-    Radiation: 0.0
+    Radiation: 0.5 # imperial medieval
     Asphyxiation: 0.0
     Bloodloss: 0.0
     Cellular: 0.0
   flatReductions:
-    Blunt: 5
+    Slash: 0 # imperial medieval
 
 # hurt a lot by blunt, immune to a good amount of other stuff because they're a cookie
 - type: damageModifierSet

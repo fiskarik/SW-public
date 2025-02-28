@@ -40,9 +40,9 @@
             - material: WoodPlank
               amount: 8
               doAfter: 3
-            - material: Cable
-              amount: 2
-              doAfter: 1
+            #- material: Cable # Imperial Medieval
+            #  amount: 2  # Imperial Medieval
+            #  doAfter: 1 # Imperial Medieval
         - to: ShelfRMetal
           completed:
             - !type:SnapToGrid
@@ -160,9 +160,9 @@
             - !type:SpawnPrototype
                 prototype: MaterialWoodPlank1
                 amount: 8
-            - !type:SpawnPrototype
-                prototype: CableApcStack1
-                amount: 2
+            #- !type:SpawnPrototype # Imperial Medieval
+            #    prototype: CableApcStack1 # Imperial Medieval
+            #    amount: 2 # Imperial Medieval
           steps:
             - tool: Screwing
               doAfter: 5

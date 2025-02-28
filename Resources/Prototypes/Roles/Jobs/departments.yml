@@ -3,6 +3,7 @@
   name: department-Cargo
   description: department-Cargo-description
   color: "#A46106"
+  editorHidden: true # Imperial Medieval
   roles:
   - CargoTechnician
   - Quartermaster
@@ -13,6 +14,7 @@
   name: department-Civilian
   description: department-Civilian-description
   color: "#9FED58"
+  editorHidden: true # Imperial Medieval
   weight: -10
   roles:
   - Bartender
@@ -56,6 +58,7 @@
   name: department-Command
   description: department-Command-description
   color: "#334E6D"
+  editorHidden: true # Imperial Medieval
   roles:
   - Captain
   - ChiefEngineer
@@ -82,6 +85,7 @@
   name: department-Engineering
   description: department-Engineering-description
   color: "#EFB341"
+  editorHidden: true # Imperial Medieval
   roles:
   - AtmosphericTechnician
   - ChiefEngineer
@@ -94,6 +98,7 @@
   name: department-Medical
   description: department-Medical-description
   color: "#52B4E9"
+  editorHidden: true # Imperial Medieval
   roles:
   - Chemist
   - ChiefMedicalOfficer
@@ -109,6 +114,7 @@
   description: department-Security-description
   color: "#DE3A3A"
   weight: 20
+  editorHidden: true # Imperial Medieval
   roles:
   - HeadOfSecurity
   - SecurityCadet
@@ -123,6 +129,7 @@
   name: department-Science
   description: department-Science-description
   color: "#D381C9"
+  editorHidden: true # Imperial Medieval
   roles:
   - ResearchDirector
   - Scientist
@@ -134,6 +141,7 @@
   name: department-Silicon
   description: department-Silicon-description
   color: "#D381C9"
+  editorHidden: true # Imperial Medieval
   roles:
   - Borg
   - StationAi
@@ -144,6 +152,7 @@
   description: department-Specific-description
   color: "#9FED58"
   weight: 10
+  editorHidden: true # Imperial Medieval
   roles:
   - Boxer
   - Reporter

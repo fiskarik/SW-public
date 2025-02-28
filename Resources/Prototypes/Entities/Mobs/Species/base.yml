@@ -81,8 +81,19 @@
     species: Human
   - type: SlowOnDamage
     speedModifierThresholds:
-      60: 0.7
-      80: 0.5
+      # Imperial Medieval Start
+      # 60: 0.7
+      # 80: 0.5
+      10: 0.95
+      20: 0.9
+      30: 0.83
+      40: 0.75
+      50: 0.7
+      60: 0.63
+      70: 0.58
+      80: 0.53
+      90: 0.4
+      # imperial Medieval End
   - type: Fixtures
     fixtures: # TODO: This needs a second fixture just for mob collisions.
       fix1:
@@ -95,6 +106,17 @@
         - MobMask
         layer:
         - MobLayer
+      # Imperial Medieval Start
+      medieval-spawner:
+        shape: !type:PhysShapeCircle
+          radius: 0.4
+        layer: []
+        #layer:
+        #- DoorPassable
+        mask:
+        - MedievalSpawnerLayer
+        hard: false
+      # Imperial Medieval End
   - type: FloorOcclusion
   - type: RangedDamageSound
     soundGroups:
@@ -140,7 +162,7 @@
     prototype: Human
     requiredLegs: 2
   - type: Identity
-  - type: IdExaminable
+  #- type: IdExaminable # Imperial Medieval
   - type: Hands
   - type: ComplexInteraction
   - type: Internals
@@ -212,6 +234,35 @@
     - DoorBumpOpener
     - AnomalyHost
   - type: InjectNeed # imperial hardsuit injection
+  # Imperial Medieval Start
+  - type: MedievalMobTrigger
+    fixtureId: "medieval-spawner"
+  - type: Mana
+    maxMana: 100
+    regen: 0.25
+  - type: SSDFree
+  - type: MedievalIronHitSound
+  - type: IgnitPocketFlames
+  - type: EmoteOnDamage
+    emotes:
+    - Scream
+    emoteChance: 0.3
+    withChat: true
+    emoteCooldown: 3.5
+  - type: MedievalSpikeTarget
+  - type: BadSmellFeel
+  - type: BadSmell
+  - type: MeleeParryAble
+  - type: NeedSleep
+    emotes:
+    - Yawn
+  - type: ReligionMember
+  - type: NocturnBadFood
+    timesCanBeBiten: 6
+    bloodMultiplier: 1
+    fresh: true
+  - type: RandomSteal
+# Imperial Medieval End
 
 - type: entity
   save: false

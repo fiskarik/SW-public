@@ -1,0 +1,3 @@
+ent-MechEquipmentSHHQuietusCarbine = Т.С.С. Карабин «Тихий час»
+    .suffix = Механоид
+    .desc = ...

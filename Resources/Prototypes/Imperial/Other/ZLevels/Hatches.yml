@@ -1,0 +1,62 @@
+#BASE
+- type: entity
+  id: Ladder
+  suffix: Ladder
+  parent: BaseLadder
+
+- type: entity
+  id: LadderWithLight
+  suffix: Ladder, Light
+  parent: BaseLadderWithLight
+
+- type: entity
+  id: LadderWithDayTimeLight
+  suffix: Ladder, DayTime
+  parent: [BaseLadder, BaseLadderWithDayTimeLight]
+
+#WITH DOOR
+- type: entity
+  id: LadderWithDoor
+  suffix: Ladder, Door
+  parent: BaseLadderWithDoor
+
+- type: entity
+  id: LadderWithDoorLight
+  suffix: Ladder, Door, Light
+  parent: [BaseLadderWithDoor, BaseLadderWithLight]
+
+- type: entity
+  id: LadderWithDoorDayTimeLight
+  suffix: Ladder, Door, DayTime
+  parent: [BaseLadderWithDoor, BaseLadderWithDayTimeLight]
+
+#WITH LOCK
+- type: entity
+  id: LadderWithLock
+  suffix: Ladder, Door, Lock
+  parent: BaseLadderWithLock
+
+- type: entity
+  id: LadderWithLockLight
+  suffix: Ladder, Door, Lock, Light
+  parent: [BaseLadderWithLock, BaseLadderWithLight]
+
+- type: entity
+  id: LadderWithLockDayTimeLight
+  suffix: Ladder, Door, Lock, DayTime
+  parent: [BaseLadderWithLock, BaseLadderWithDayTimeLight]
+
+- type: entity
+  id: LadderWithAccess
+  suffix: Ladder, Door, Lock, Access
+  parent: [BaseLadderWithLock, BaseLadderWithAccess]
+
+- type: entity
+  id: LadderWithAccessLight
+  suffix: Ladder, Door, Lock, Light, Access
+  parent: [BaseLadderWithLock, BaseLadderWithLight, BaseLadderWithAccess]
+
+- type: entity
+  id: LadderWithAccessDayTimeLight
+  suffix: Ladder, Door, Lock, DayTime, Access
+  parent: [BaseLadderWithLock, BaseLadderWithDayTimeLight, BaseLadderWithAccess]

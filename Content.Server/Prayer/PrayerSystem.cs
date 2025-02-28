@@ -10,6 +10,7 @@ using Content.Shared.Prayer;
 using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
+using Content.Shared.Religion.Components; // imperial medieval
 
 namespace Content.Server.Prayer;
 /// <summary>
@@ -104,7 +105,14 @@ public sealed class PrayerSystem : EntitySystem
 
         _popupSystem.PopupEntity(Loc.GetString(comp.SentMessage), sender.AttachedEntity.Value, sender, PopupType.Medium);
 
-        _chatManager.SendAdminAnnouncement($"{Loc.GetString(comp.NotificationPrefix)} <{sender.Name}>: {message}");
+        // Imperial Medieval Start
+        var religionName = "NONE";
+        if (TryComp<ReligionMemberComponent>(sender.AttachedEntity, out var religion))
+            religionName = religion.Religion;
+        // _chatManager.SendAdminAnnouncement($"{Loc.GetString(comp.NotificationPrefix)} <{sender.Name}>: {message}");
+        _chatManager.SendAdminAnnouncement($"{Loc.GetString(comp.NotificationPrefix, ("religion", religionName))} <{sender.Name}>: {message}");
+        // Imperial Medieval End
+
         _adminLogger.Add(LogType.AdminMessage, LogImpact.Low, $"{ToPrettyString(sender.AttachedEntity.Value):player} sent prayer ({Loc.GetString(comp.NotificationPrefix)}): {message}");
     }
 }

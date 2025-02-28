@@ -1,4 +1,5 @@
 ﻿- type: construction
+  hide: true # imperial medieval craft disable
   name: Плюшевый ревенант # Imperial Recipes Locale
   id: PlushieGhostRevenant
   graph: PlushieGhostRevenant
@@ -12,6 +13,7 @@
     state: icon
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Игрушечный Иан # Imperial Recipes Locale
   id: ClothingOuterSuitIan
   graph: ClothingOuterSuitIan

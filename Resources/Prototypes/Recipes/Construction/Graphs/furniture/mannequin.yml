@@ -11,10 +11,10 @@
             - !type:SnapToGrid { }
           steps:
             - material: WoodPlank
-              amount: 5
-            - material: MetalRod
-              amount: 2
-              doAfter: 2
+              amount: 8 # Imperial Medieval
+            #- material: MetalRod imperial disable start
+            #  amount: 2
+            #  doAfter: 2 imperial disable end
     - node: mannequin
       entity: Mannequin
       edges:
@@ -24,9 +24,9 @@
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank
               amount: 5
-            - !type:SpawnPrototype
-              prototype: PartRodMetal
-              amount: 2
+            #- !type:SpawnPrototype imperial disable start
+            #  prototype: PartRodMetal
+            #  amount: 2  imperial disable end
           steps:
             - tool: Screwing
               doAfter: 3

@@ -28,11 +28,13 @@
         !type:DamageTrigger
         damage: 50
       behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetSteel1:
-            min: 2
-            max: 4
+      # Imperial Medieval Start
+      #- !type:SpawnEntitiesBehavior
+      #  spawn: # imperial medieval
+      #    SheetSteel1: # imperial medieval
+      #      min: 2 # imperial medieval
+      #      max: 4
+      # Imperial Medieval End
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 

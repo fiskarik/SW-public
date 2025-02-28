@@ -1,0 +1,1410 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorFur
+  name: fur armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/fur_armor.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/fur_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.6
+        Cold: 0.4
+        Stamina: 0.95 ## Stamina resistance
+  - type: Item
+    size: Small
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorStudded
+  name: studded armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: QuestItem
+    contractName: "сыромятная или легкая броня"
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/studder_armor.rsi
+  - type: Clothing
+    equipDelay: 2
+    unequipDelay: 2
+    sprite: Imperial/Medieval/Clothing/Armor/studder_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.78
+        Heat: 0.7
+        Cold: 0.5
+        Stamina: 0.9 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorLivsey
+  name: studded armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/livsey.rsi
+  - type: Clothing
+    equipDelay: 2
+    unequipDelay: 2
+    sprite: Imperial/Medieval/Clothing/Armor/livsey.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.78
+        Heat: 0.7
+        Cold: 0.7
+        Stamina: 0.9 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorShipCap
+  name: studded armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/ship_cap.rsi
+  - type: Clothing
+    equipDelay: 2
+    unequipDelay: 2
+    sprite: Imperial/Medieval/Clothing/Armor/ship_cap.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.78
+        Heat: 0.7
+        Cold: 0.7
+        Stamina: 0.9 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorLeather
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: QuestItem
+    contractName: "сыромятная или легкая броня"
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor.rsi
+  - type: Clothing
+    equipDelay: 2.4
+    unequipDelay: 2.4
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.7
+        Piercing: 0.75
+        Heat: 0.65
+        Cold: 0.6
+        Stamina: 0.78 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorLeather2
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor2.rsi
+  - type: Clothing
+    equipDelay: 2.4
+    unequipDelay: 2.4
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor2.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.7
+        Piercing: 0.75
+        Heat: 0.65
+        Cold: 0.6
+        Stamina: 0.78 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorLeatherLight
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: QuestItem
+    contractName: "любая кожаная кираса"
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor_light.rsi
+  - type: Clothing
+    equipDelay: 2.4
+    unequipDelay: 2.4
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor_light.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.65
+        Piercing: 0.71
+        Heat: 0.62
+        Cold: 0.55
+        Stamina: 0.8 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorChainMail
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/chainmail_armor.rsi
+  - type: Clothing
+    equipDelay: 3.5
+    unequipDelay: 2.4
+    sprite: Imperial/Medieval/Clothing/Armor/chainmail_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.83
+        Slash: 0.6
+        Piercing: 0.75
+        Heat: 0.78
+        Cold: 0.8
+        Stamina: 0.7 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: MedievalIronHitSound
+    effectSoundOnHit: "/Audio/Imperial/Medieval/chainmail_hit.ogg"
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorChainMailLight
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/chainmail_armor_light.rsi
+  - type: Clothing
+    equipDelay: 3.5
+    unequipDelay: 2.4
+    sprite: Imperial/Medieval/Clothing/Armor/chainmail_armor_light.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.88
+        Slash: 0.65
+        Piercing: 0.8
+        Heat: 0.8
+        Cold: 0.85
+        Stamina: 0.75 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.92
+  - type: MedievalIronHitSound
+    effectSoundOnHit: "/Audio/Imperial/Medieval/chainmail_hit.ogg"
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorLeatherHeavy
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: QuestItem
+    contractName: "любая кожаная кираса"
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor_heavy.rsi
+  - type: Clothing
+    equipDelay: 3
+    unequipDelay: 3
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor_heavy.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.5
+        Cold: 0.44
+        Stamina: 0.7 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.78
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorIronCuirass
+  name: iron armor cuirass
+  description: An armored iron plate to protect against melee weapons.
+  components:
+  - type: QuestItem
+    contractName: "любая железная кираса"
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/iron_armor_cuirass.rsi
+  - type: Clothing
+    equipDelay: 4.6
+    unequipDelay: 4.6
+    sprite: Imperial/Medieval/Clothing/Armor/iron_armor_cuirass.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.5
+        Piercing: 0.52
+        Heat: 0.55
+        Cold: 0.7
+        Stamina: 0.5 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.92
+    sprintModifier: 0.92
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: MedievalIronHitSound
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorIronCuirassLight
+  name: iron armor cuirass
+  description: An armored iron plate to protect against melee weapons.
+  components:
+  - type: QuestItem
+    contractName: "любая железная кираса"
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/iron_armor_cuirass_light.rsi
+  - type: Clothing
+    equipDelay: 2.6
+    unequipDelay: 2.6
+    sprite: Imperial/Medieval/Clothing/Armor/iron_armor_cuirass_light.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.68
+        Slash: 0.65
+        Piercing: 0.58
+        Heat: 0.7
+        Cold: 0.7
+        Stamina: 0.75 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.94
+    sprintModifier: 0.94
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: MedievalIronHitSound
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorIron
+  name: iron armor
+  description: An armor with iron plates to protect against melee weapons.
+  components:
+  - type: QuestItem
+    contractName: "любая пластинчатая или прочная железная броня"
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/iron_armor.rsi
+  - type: Clothing
+    equipDelay: 8
+    unequipDelay: 8
+    sprite: Imperial/Medieval/Clothing/Armor/iron_armor.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.3
+        Piercing: 0.36
+        Heat: 0.45
+        Cold: 0.7
+        Stamina: 0.45 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: Item
+    size: Huge
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: MedievalIronHitSound
+    effectSoundOnHit: "/Audio/Imperial/Medieval/chainmail_hit.ogg"
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorUpIron
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: QuestItem
+    contractName: "латная броня"
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/up_iron_armor.rsi
+  - type: Clothing
+    equipDelay: 20
+    unequipDelay: 20
+    sprite: Imperial/Medieval/Clothing/Armor/up_iron_armor.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.28
+        Slash: 0.25
+        Piercing: 0.3
+        Heat: 0.25
+        Cold: 0.6
+        Stamina: 0.25 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.74
+    sprintModifier: 0.74
+  - type: Item
+    size: Huge
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: MedievalIronHitSound
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalClothingOuterArmorUpIron # imperial medieval
+
+- type: entity
+  parent: MedievalClothingOuterArmorUpIron
+  id: MedievalClothingOuterArmorUpIron2
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/up_iron_armor2.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/up_iron_armor2.rsi
+  - type: MedievalIronHitSound
+
+- type: entity
+  parent: MedievalClothingOuterArmorUpIron
+  id: MedievalClothingOuterArmorUpIron3
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/up_iron_armor3.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/up_iron_armor3.rsi
+  - type: MedievalIronHitSound
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MedievalIronGloves
+  name: IronGloves
+  description: gloves
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/iron_gloves.rsi
+  - type: Clothing
+    equipDelay: 1.5
+    unequipDelay: 1.5
+    sprite: Imperial/Medieval/Clothing/Gloves/iron_gloves.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+  - type: Fiber
+    fiberMaterial: fibers-nanomachines
+  - type: FingerprintMask
+  - type: MeleeWeapon
+    attackRate: 1.1
+    damage:
+      types:
+        Blunt: 7.5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Cold: 0.95
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalIronGloves # imperial medieval
+
+- type: entity
+  parent: MedievalIronGloves
+  id: MedievalIronGlovesBrig
+  name: IronGloves
+  description: gloves
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/iron_gloves_brig.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/iron_gloves_brig.rsi
+
+- type: entity
+  parent: MedievalIronGloves
+  id: MedievalIronGlovesBear
+  name: IronGloves
+  description: gloves
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/iron_gloves_bear.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/iron_gloves_bear.rsi
+
+- type: entity
+  parent: ClothingOuterPlagueSuit
+  id: MedievalClothingOuterPlagueSuit
+  name: MedievalClothingOuterPlagueSuit
+  description: MedievalClothingOuterPlagueSuit
+ #components:
+ #- type: Tag
+ #  tags:
+ #  - Sterile
+
+- type: entity
+  parent: ClothingUniformJumpskirtJanimaidmini
+  id: MedievalClothingUniformJumpskirtJanimaid
+  name: MedievalClothingUniformJumpskirtJanimaid
+  description: MedievalClothingUniformJumpskirtJanimaid
+
+- type: entity
+  parent: ClothingMaskGas
+  id: MedievalMaskFace
+  name: medievalMaskFace
+  description: edievalMaskFace
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Mask/bandit.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Mask/bandit.rsi
+  - type: Construction
+    node: MedievalMaskFace
+    graph: MedievalMaskFace
+
+- type: construction
+  name: тканевая маска
+  id: MedievalMaskFace
+  graph: MedievalMaskFace
+  startNode: start
+  targetNode: MedievalMaskFace
+  category: construction-category-weapons
+  description: Да ты, блин, прямо настоящий бандит!
+  icon: { sprite: Imperial/Medieval/Clothing/Mask/bandit.rsi, state: icon }
+  objectType: Item
+  blockForPacifist: true #Imperial pacified
+
+- type: constructionGraph
+  id: MedievalMaskFace
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MedievalMaskFace
+          steps:
+            - material: Cloth
+              amount: 6
+              doAfter: 2
+    - node: MedievalMaskFace
+      entity: MedievalMaskFace
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: MedievalAlchemicBelt
+  name: MedievalAlchemicBelt
+  description: MedievalAlchemicBelt
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Belt/alchemic.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Belt/alchemic.rsi
+    equipDelay: 1.5
+    unequipDelay: 1
+  - type: Storage
+    grid:
+    - 0,0,2,3
+    whitelist:
+      tags:
+        - MedievalRune
+        - Bottle
+        - MagicScroll
+  - type: Appearance
+  - type: Item
+    size: Large
+  - type: ExplosionResistance
+    worn: false # only apply to the clothing itself and items inside, not the wearer
+    examine: explosion-resistance-contents-coefficient-value
+    damageCoefficient: 0.025
+
+- type: entity
+  parent: Clothing
+  id: MedievalClothingFeetSteel
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/steel.rsi
+    state: icon
+  - type: Clothing
+    equipDelay: 2
+    unequipDelay: 2
+    slots: [feet]
+    sprite: Imperial/Medieval/Clothing/Shoes/steel.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: ClothingSpeedModifier
+    walkModifier: 0.99
+    sprintModifier: 0.99
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: MedievalFootstepSteel
+      params:
+        variation: 0.05
+        volume: -6
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalClothingFeetSteel # imperial medieval
+
+- type: entity
+  parent: Clothing
+  id: MedievalClothingFeetNecromancer
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/necro.rsi
+    state: icon
+  - type: Clothing
+    slots: [feet]
+    sprite: Imperial/Medieval/Clothing/Shoes/necro.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+    equipDelay: 2
+    unequipDelay: 2
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: ClothingSpeedModifier
+    walkModifier: 0.99
+    sprintModifier: 0.99
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: MedievalFootstepSteel
+      params:
+        variation: 0.05
+        volume: -6
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MedievalNecroGloves
+  name: IronGloves
+  description: gloves
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/necro_gloves.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/necro_gloves.rsi
+  - type: MeleeWeapon
+    attackRate: 1.8
+    damage:
+      types:
+        Caustic: 12
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MedievalNecroGlovesLight
+  name: IronGloves
+  description: gloves
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/necro_gloves_light.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/necro_gloves_light.rsi
+  - type: MeleeWeapon
+    attackRate: 1.1
+    damage:
+      types:
+        Caustic: 7
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MedievalGlovesBlacksmith
+  name: IronGloves
+  description: gloves
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/blacksmith_gloves.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/blacksmith_gloves.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorNecro
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/necro_iron_armor.rsi
+  - type: Clothing
+    equipDelay: 20
+    unequipDelay: 20
+    sprite: Imperial/Medieval/Clothing/Armor/necro_iron_armor.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.38
+        Slash: 0.38
+        Piercing: 0.38
+        Heat: 0.38
+        Cold: 0.7
+        Stamina: 0.3 ## Stamina resistance
+  - type: Item
+    size: Large
+  - type: ExplosionResistance
+    damageCoefficient: 0.65
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+  - type: MedievalIronHitSound
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorNecroLight
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/necro_iron_armor_light.rsi
+  - type: Clothing
+    equipDelay: 8
+    unequipDelay: 8
+    sprite: Imperial/Medieval/Clothing/Armor/necro_iron_armor_light.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.44
+        Piercing: 0.7
+        Heat: 0.5
+        Cold: 0.7
+        Stamina: 0.5 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+  - type: MedievalIronHitSound
+
+- type: entity
+  parent: Clothing
+  id: MedievalClothingFeetNecromancerLight
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/necro_light.rsi
+    state: icon
+  - type: Clothing
+    slots: [feet]
+    sprite: Imperial/Medieval/Clothing/Shoes/necro_light.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+    equipDelay: 2
+    unequipDelay: 2
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: ClothingSpeedModifier
+    walkModifier: 0.99
+    sprintModifier: 0.99
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorCharmer
+  name: MedievalClothingOuterArmorCharmer
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor.rsi
+  - type: Clothing
+    equipDelay: 6
+    unequipDelay: 6
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.6
+        Piercing: 0.75
+        Heat: 0.45
+        Cold: 0.55
+        Bloodloss: 0.55
+        Stamina: 0.5 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: ManaRegen
+    regen: 2.2
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorCharmerLight
+  name: MedievalClothingOuterArmorCharmerLight
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_light.rsi
+  - type: Clothing
+    equipDelay: 4
+    unequipDelay: 4
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_light.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.78
+        Slash: 0.68
+        Piercing: 0.9
+        Heat: 0.7
+        Cold: 0.7
+        Bloodloss: 0.65
+        Stamina: 0.7 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: ManaRegen
+    regen: 1.2
+
+- type: entity
+  parent: MedievalClothingOuterArmorCharmerLight
+  id: MedievalClothingOuterArmorCharmerLightLegion
+  name: cloth
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_legion.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_legion.rsi
+
+- type: entity
+  parent: MedievalClothingOuterArmorCharmerLight
+  id: MedievalClothingOuterArmorCharmerLightIns
+  name: cloth
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_ins.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_ins.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorCharmerWeak
+  name: MedievalClothingOuterArmorCharmerWeak
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_weak.rsi
+  - type: Clothing
+    equipDelay: 3
+    unequipDelay: 3
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_weak.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.8
+        Piercing: 0.95
+        Heat: 0.75
+        Cold: 0.75
+        Bloodloss: 0.75
+        Stamina: 0.7 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: ManaRegen
+    regen: 0.7
+
+- type: entity
+  parent: ClothingOuterArmorPodWars
+  id: MedievalClothingOuterArmorGoblinSlayer
+  name: ironclad II armor
+  description: A repurposed suit of ironclad II armor, a relic of the pod wars.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/goblin_slayer_armor.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/goblin_slayer_armor.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorForstone
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/forstone_armor.rsi
+  - type: Clothing
+    equipDelay: 11
+    unequipDelay: 11
+    sprite: Imperial/Medieval/Clothing/Armor/forstone_armor.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.32
+        Slash: 0.35
+        Piercing: 0.30
+        Heat: 0.38
+        Cold: 0.6
+        Stamina: 0.4 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.98
+    sprintModifier: 0.98
+  - type: Item
+    size: Huge
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: MedievalIronHitSound
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalClothingOuterArmorUpIron # imperial medieval
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorEbonit
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/ebonit_armor.rsi
+  - type: Clothing
+    equipDelay: 20
+    unequipDelay: 20
+    sprite: Imperial/Medieval/Clothing/Armor/ebonit_armor.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_armor_eqiped.ogg
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.19
+        Slash: 0.18
+        Piercing: 0.2
+        Heat: 0.18
+        Cold: 0.32
+        Stamina: 0.15 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.72
+    sprintModifier: 0.72
+  - type: Item
+    size: Huge
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: MedievalIronHitSound
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalClothingOuterArmorUpIron # imperial medieval
+
+- type: entity
+  parent: MedievalClothingOuterArmorEbonit
+  id: MedievalClothingOuterArmorEbonit2
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/ebonit_armor2.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/ebonit_armor2.rsi
+
+- type: entity
+  parent: Clothing
+  id: MedievalClothingFeetEbonit
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/ebonit.rsi
+    state: icon
+  - type: Clothing
+    equipDelay: 3
+    unequipDelay: 3
+    slots: [feet]
+    sprite: Imperial/Medieval/Clothing/Shoes/ebonit.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 0.99
+    sprintModifier: 0.99
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: MedievalFootstepSteel
+      params:
+        variation: 0.05
+        volume: -6
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalClothingFeetSteel # imperial medieval
+
+- type: entity
+  parent: MedievalClothingFeetEbonit
+  id: MedievalClothingFeetEbonit2
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/ebonit2.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shoes/ebonit2.rsi
+
+- type: entity
+  parent: MedievalClothingFeetEbonit
+  id: MedievalClothingFeetForstone
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/forstone.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shoes/forstone.rsi
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MedievalEbonitGloves
+  name: IronGloves
+  description: gloves
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/ebonit_gloves.rsi
+  - type: Clothing
+    equipDelay: 1.5
+    unequipDelay: 1.5
+    sprite: Imperial/Medieval/Clothing/Gloves/ebonit_gloves.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/iron_shoes_eqiped.ogg
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 10
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.84
+        Slash: 0.84
+        Piercing: 0.84
+        Heat: 0.84
+        Cold: 0.95
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetMedievalIronGloves # imperial medieval
+
+- type: entity
+  parent: MedievalEbonitGloves
+  id: MedievalEbonitGloves2
+  name: IronGloves
+  description: gloves
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 10
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/ebonit_gloves2.rsi
+  - type: Clothing
+    equipDelay: 1.5
+    unequipDelay: 1.5
+    sprite: Imperial/Medieval/Clothing/Gloves/ebonit_gloves2.rsi
+
+- type: entity
+  parent: MedievalEbonitGloves
+  id: MedievalForstoneGloves
+  name: IronGloves
+  description: gloves
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/forstone_gloves.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/forstone_gloves.rsi

@@ -1,0 +1,209 @@
+- type: entity
+  name: Exception Spawner
+  id: SpawnMedievalMobRabbitLess
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobCow
+      - MedievalMobChicken
+      - MedievalMobChicken
+      - MedievalMobChicken
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobHogGhost
+      - MedievalMobHogGhost
+      - MedievalMobHogGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobBearGhost
+      - MedievalBossSummonAnt
+      - MedievalBossSummonAnt
+      - MedievalBossSummonMedievalMobGolemLarge
+      - MedievalBossSummonMedievalMobSpiderKing
+      - MedievalDruidTree
+      - MedievalMobAngryGhost
+      - MedievalMobAngryGhost
+      chance: 0.5
+
+- type: entity
+  name: Exception Spawner
+  id: SpawnMedievalMobRabbitDef
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobCow
+      - MedievalMobChicken
+      - MedievalMobChicken
+      - MedievalMobChicken
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobHogGhost
+      - MedievalMobHogGhost
+      - MedievalMobHogGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobBearGhost
+      - MedievalBossSummonAnt
+      - MedievalBossSummonAnt
+      - MedievalBossSummonMedievalMobGolemLarge
+      - MedievalBossSummonMedievalMobSpiderKing
+      - MedievalDruidTree
+      - MedievalMobAngryGhost
+      - MedievalMobAngryGhost
+      chance: 0.1
+
+- type: entity
+  name: Exception Spawner
+  id: SpawnMedievalMobRabbitLarge
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobRabbitGhost
+      - MedievalMobCow
+      - MedievalMobChicken
+      - MedievalMobChicken
+      - MedievalMobChicken
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobWolfGhost
+      - MedievalMobHogGhost
+      - MedievalMobHogGhost
+      - MedievalMobHogGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobFoxGhost
+      - MedievalMobBearGhost
+      - MedievalBossSummonAnt
+      - MedievalBossSummonAnt
+      - MedievalBossSummonMedievalMobGolemLarge
+      - MedievalBossSummonMedievalMobSpiderKing
+      - MedievalDruidTree
+      - MedievalMobAngryGhost
+      - MedievalMobAngryGhost
+      chance: 0.03

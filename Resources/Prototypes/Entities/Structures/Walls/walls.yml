@@ -29,7 +29,7 @@
     key: walls
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
+    damageModifierSet: MedievalStructuralMetallic # imperial medieval
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -50,12 +50,17 @@
   - type: RadiationBlocker
     resistance: 2
   - type: BlockWeather
+  - type: MedievalMeleeBadTarget # imperial medieval
+    safeToHitGroup: structure # imperial medieval
 
 - type: entity
   parent: BaseWall
   id: WallBrick
   name: brick wall
   components:
+  - type: Tag
+    tags:
+      - Wall
   - type: Sprite
     sprite: Structures/Walls/brick.rsi
   - type: Icon
@@ -543,7 +548,6 @@
   - type: Tag
     tags:
     - Wall
-    - Diagonal    
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/plastitanium_diagonal.rsi
@@ -634,6 +638,13 @@
     price: 250
   - type: RadiationBlocker
     resistance: 5
+  # Imperial swarmer start
+  - type: Tag
+    tags:
+    - Wall
+    - SwarmerDeconstructionBlacklist
+   # Imperial swarmer end
+
 
 - type: entity
   parent: WallReinforced
@@ -685,9 +696,6 @@
     snap:
     - Wall
   components:
-  - type: Tag
-    tags:
-    - Diagonal
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/reinforced_diagonal.rsi
@@ -755,13 +763,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 2300 # imperial medieval start
       behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          Girder:
-            min: 1
-            max: 1
+      #- !type:SpawnEntitiesBehavior
+      #  spawn:
+      #    Girder:
+      #      min: 1
+      #      max: 1 # imperial medieval end
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: IconSmooth
@@ -830,7 +838,9 @@
   - type: Tag
     tags:
     - Wall
-    - Diagonal
+    # Imperial swarmer start
+    - SwarmerDeconstructionBlacklist
+    # Imperial swarmer end
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/shuttle_diagonal.rsi
@@ -954,6 +964,12 @@
           5: { state: shuttle_construct-5, visible: true}
   - type: Reflect
     reflectProb: 1
+  # Imperial swarmer start
+  - type: Tag
+    tags:
+      - Wall
+      - SwarmerDeconstructionBlacklist
+  # Imperial swarmer end
 
 - type: entity
   parent: BaseWall
@@ -1249,13 +1265,16 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 3600 # imperial medieval
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
     base: necropolis
+  - type: Damageable # imperial medieval
+    damageContainer: StructuralInorganic # imperial medieval
+    damageModifierSet: MedievalStructuralMetallic # imperial medieval
 
 - type: entity
   parent: BaseWall
@@ -1307,7 +1326,6 @@
   - type: Icon
     sprite: Structures/Walls/mining_diagonal.rsi
     state: state0
-
 
 # Vault Walls
 
@@ -1431,12 +1449,12 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 3150 # imperial medieval
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: IconSmooth
-    key: cobblebricks
+    key: walls # imperial medieval
     base: cobblebrick
 
 - type: entity
@@ -1449,7 +1467,7 @@
   - type: Icon
     sprite: Structures/Walls/cobblebrick_basalt.rsi
   - type: IconSmooth
-    key: cobblebricks
+    key: walls # imperial medieval
     base: cobblebrick
 
 - type: entity
@@ -1463,7 +1481,7 @@
   - type: Icon
     sprite: Structures/Walls/cobblebrick_snow.rsi
   - type: IconSmooth
-    key: cobblebricks
+    key: walls # imperial medieval
     base: cobblebrick
 
 - type: entity
@@ -1476,7 +1494,7 @@
   - type: Icon
     sprite: Structures/Walls/cobblebrick_asteroid.rsi
   - type: IconSmooth
-    key: cobblebricks
+    key: walls # imperial medieval
     base: cobblebrick
 
 - type: entity
@@ -1489,7 +1507,7 @@
   - type: Icon
     sprite: Structures/Walls/cobblebrick_sand.rsi
   - type: IconSmooth
-    key: cobblebricks
+    key: walls # imperial medieval
     base: cobblebrick
 
 - type: entity
@@ -1502,7 +1520,7 @@
   - type: Icon
     sprite: Structures/Walls/cobblebrick_chromite.rsi
   - type: IconSmooth
-    key: cobblebricks
+    key: walls # imperial medieval
     base: cobblebrick
 
 - type: entity
@@ -1515,5 +1533,5 @@
   - type: Icon
     sprite: Structures/Walls/cobblebrick_andesite.rsi
   - type: IconSmooth
-    key: cobblebricks
+    key: walls # imperial medieval
     base: cobblebrick

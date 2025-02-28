@@ -47,6 +47,17 @@
     guides:
     - Chef
     - FoodRecipes
+  - type: MeleeWeapon # imperial medieval start
+    range: 1
+    resetOnHandSelected: false
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Slash: 8
+  - type: MeleeThrowOnHit
+    lifetime: 0.27
+    minLifetime: 0.05
+    speed: 0.7 # imperial medieval end
 
 - type: entity
   name: butcher's cleaver

@@ -1,0 +1,243 @@
+- type: rules
+  id: OnMapGrid
+  rules:
+    - !type:OnMapGridRule
+
+#- type: ambientMusic
+#  id: MedievalDefault
+#  sound:
+#    params:
+#      volume: -12
+#    collection: AmbienceMedievalDefault
+#  rules: OnMapGrid
+#  fadeIn: true
+#  interruptable: true
+#  priority: 1
+
+- type: soundCollection
+  id: AmbienceMedievalDefault
+  files:
+    - /Audio/Imperial/Medieval/Locations/Adventurer_s-fate.ogg
+
+- type: soundCollection
+  id: AmbienceMedievalLegion
+  files:
+    - /Audio/Imperial/Medieval/Locations/Adventurer_s-fate.ogg
+    - /Audio/Imperial/Medieval/Locations/Provincefield.ogg
+    - /Audio/Imperial/Medieval/Locations/VastnessFields.ogg
+    - /Audio/Imperial/Medieval/Locations/Ontheedgeoftheforest.ogg
+
+- type: soundCollection
+  id: AmbienceMedievalInsurgency
+  files:
+    - /Audio/Imperial/Medieval/Locations/Severefrost.ogg
+    - /Audio/Imperial/Medieval/Locations/LegionsAdrift.ogg
+    - /Audio/Imperial/Medieval/Locations/Freedom-fantasy.ogg
+
+- type: soundCollection
+  id: AmbienceMedievalSands
+  files:
+    - /Audio/Imperial/Medieval/Locations/Thoughtsofamummy.ogg
+    - /Audio/Imperial/Medieval/Locations/Sandwalk.ogg
+
+- type: soundCollection
+  id: AmbienceMedievalTribe
+  files:
+    - /Audio/Imperial/Medieval/Locations/Crab-Lagoon.ogg
+
+- type: soundCollection
+  id: AmbienceMedievalGoblin
+  files:
+    - /Audio/Imperial/Medieval/Locations/Gremlin.ogg
+
+- type: soundCollection
+  id: AmbienceMedievalDark
+  files:
+    - /Audio/Imperial/Medieval/Locations/Dark-times-ahead.ogg
+
+- type: soundCollection
+  id: AmbienceMedievalMage
+  files:
+    - /Audio/Imperial/Medieval/Locations/TheBoard.ogg
+
+- type: soundCollection
+  id: AmbienceMedievalHell
+  files:
+    - /Audio/Imperial/Medieval/Locations/Laststandofspellward.ogg
+    - /Audio/Imperial/Medieval/Locations/Laststandofspellward2.ogg
+
+
+
+- type: ambientMusic
+  id: MedievalLegion
+  sound:
+    params:
+      volume: -10
+    collection: AmbienceMedievalLegion
+  rules: NearLegion
+  priority: 4
+  fadeIn: true
+  interruptable: true
+
+- type: ambientMusic
+  id: MedievalInsurgency
+  sound:
+    params:
+      volume: -10
+    collection: AmbienceMedievalInsurgency
+  rules: NearInsurgency
+  priority: 4
+  fadeIn: true
+  interruptable: true
+
+- type: ambientMusic
+  id: MedievalSands
+  sound:
+    params:
+      volume: -10
+    collection: AmbienceMedievalSands
+  rules: NearSands
+  priority: 5
+  fadeIn: true
+  interruptable: true
+
+- type: ambientMusic
+  id: MedievalTribe
+  sound:
+    params:
+      volume: -10
+    collection: AmbienceMedievalTribe
+  rules: NearTribe
+  priority: 4
+  fadeIn: true
+  interruptable: true
+
+- type: ambientMusic
+  id: MedievalGoblin
+  sound:
+    params:
+      volume: -10
+    collection: AmbienceMedievalGoblin
+  rules: NearGoblin
+  priority: 3
+  fadeIn: true
+  interruptable: true
+
+- type: ambientMusic
+  id: MedievalDark
+  sound:
+    params:
+      volume: -10
+    collection: AmbienceMedievalDark
+  rules: NearDark
+  priority: 2
+  fadeIn: true
+
+- type: ambientMusic
+  id: MedievalMage
+  sound:
+    params:
+      volume: -10
+    collection: AmbienceMedievalMage
+  rules: NearMage
+  priority: 3
+  fadeIn: true
+  interruptable: true
+
+- type: ambientMusic
+  id: MedievalHell
+  sound:
+    params:
+      volume: -10
+    collection: AmbienceMedievalHell
+  rules: NearHell
+  priority: 4
+  fadeIn: true
+
+- type: entity
+  name: MedievalAmbientLegion
+  id: MedievalAmbientLegion
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Imperial/Medieval/Markers/cross.rsi
+          state: def
+    - type: MedievalAmbientLegion
+
+- type: entity
+  name: MedievalAmbientInsurgency
+  id: MedievalAmbientInsurgency
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Imperial/Medieval/Markers/cross.rsi
+          state: def
+    - type: MedievalAmbientInsurgency
+
+- type: entity
+  name: MedievalAmbientSands
+  id: MedievalAmbientSands
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Imperial/Medieval/Markers/cross.rsi
+          state: def
+    - type: MedievalAmbientSands
+
+- type: entity
+  name: MedievalAmbientTribe
+  id: MedievalAmbientTribe
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Imperial/Medieval/Markers/cross.rsi
+          state: def
+    - type: MedievalAmbientTribe
+
+- type: entity
+  name: MedievalAmbientGoblin
+  id: MedievalAmbientGoblin
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Imperial/Medieval/Markers/cross.rsi
+          state: def
+    - type: MedievalAmbientGoblin
+
+- type: entity
+  name: MedievalAmbientDark
+  id: MedievalAmbientDark
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Imperial/Medieval/Markers/cross.rsi
+          state: def
+    - type: MedievalAmbientDark
+
+- type: entity
+  name: MedievalAmbientMage
+  id: MedievalAmbientMage
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Imperial/Medieval/Markers/cross.rsi
+          state: def
+    - type: MedievalAmbientMage
+
+- type: entity
+  name: MedievalAmbientHell
+  id: MedievalAmbientHell
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Imperial/Medieval/Markers/cross.rsi
+          state: def
+    - type: MedievalAmbientHell

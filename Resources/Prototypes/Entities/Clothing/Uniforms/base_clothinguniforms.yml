@@ -7,8 +7,14 @@
     state: icon
   - type: Clothing
     slots: [innerclothing]
+  # Imperial Medieval Start
+    equipDelay: 0.01
+    unequipDelay: 0.01
     equipSound:
-      path: /Audio/Items/jumpsuit_equip.ogg
+      path: /Audio/Imperial/Medieval/clothing_equip.ogg
+    unequipSound:
+      path: /Audio/Imperial/Medieval/clothing_unequip.ogg
+  # Imperial Medieval End
   - type: Butcherable
     butcheringType: Knife
     spawned:
@@ -43,7 +49,7 @@
   parent: UnsensoredClothingUniformBase
   id: ClothingUniformBase
   components:
-  - type: SuitSensor
+  #- type: SuitSensor Imperial Medieval
   - type: DeviceNetwork
     deviceNetId: Wireless
     transmitFrequencyId: SuitSensor

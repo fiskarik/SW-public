@@ -1,5 +1,6 @@
 # SURVEILLANCE
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Камера видеонаблюдения # Imperial Recipes Locale
   id: camera
   graph: SurveillanceCamera
@@ -14,6 +15,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Телеэкран # Imperial Recipes Locale
   id: WallmountTelescreen
   graph: WallmountTelescreen
@@ -29,6 +31,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Карта станции # Imperial Recipes Locale
   id: StationMap
   graph: StationMap
@@ -48,6 +51,7 @@
 
 # POWER
 - type: construction
+  hide: true # imperial medieval craft disable
   name: ЛКП # Imperial Recipes Locale
   id: APC
   graph: APC
@@ -63,6 +67,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Солнечная панель # Imperial Recipes Locale
   id: SolarPanel
   graph: SolarPanel
@@ -96,6 +101,7 @@
   canBuildInImpassable: false
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Настенная подстанция # Imperial Recipes Locale
   id: WallmountSubstation
   graph: WallmountSubstation
@@ -111,6 +117,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Настенный генератор # Imperial Recipes Locale
   id: WallmountGenerator
   graph: WallmountGenerator
@@ -126,6 +133,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: ВСУ шаттла # Imperial Recipes Locale
   id: WallmountGeneratorAPU
   graph: WallmountGenerator
@@ -142,6 +150,7 @@
 
 # DISPOSALS
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Утилизационный блок # Imperial Recipes Locale
   description: Пневматическая установка для утилизации отходов. # Imperial Recipes Locale
   id: DisposalUnit
@@ -154,8 +163,10 @@
   icon:
     sprite: Structures/Piping/disposal.rsi
     state: "disposal"
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Почтовый блок # Imperial Recipes Locale
   description: Пневматическая установка для доставки почты. # Imperial Recipes Locale
   id: MailingUnit
@@ -168,8 +179,10 @@
   icon:
     sprite: Structures/Piping/disposal.rsi
     state: "mailing"
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Утилизационная труба # Imperial Recipes Locale
   id: DisposalPipe
   description: Большой сегмент трубы, используемый при создании системы утилизации. # Imperial Recipes Locale
@@ -182,8 +195,10 @@
   icon:
     sprite: Structures/Piping/disposal.rsi
     state: conpipe-s
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Маркировщик утилизационной трубы # Imperial Recipes Locale
   description: Труба, маркирующая объекты для отправки адресату. # Imperial Recipes Locale
   id: DisposalTagger
@@ -196,8 +211,10 @@
   icon:
     sprite: Structures/Piping/disposal.rsi
     state: conpipe-tagger
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Ствол утилизационной трубы # Imperial Recipes Locale
   description: Труба, используемая в качестве точки входа в систему утилизации. # Imperial Recipes Locale
   id: DisposalTrunk
@@ -210,8 +227,10 @@
   icon:
     sprite: Structures/Piping/disposal.rsi
     state: conpipe-t
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Маршрутизатор утилизационной трубы # Imperial Recipes Locale
   description: Трехсторонний маршрутизатор. Объекты с совпадающими маркерами уходят в сторону с помощью настраиваемых фильтров. # Imperial Recipes Locale
   id: DisposalRouter
@@ -225,6 +244,7 @@
     sprite: Structures/Piping/disposal.rsi
     state: conpipe-j1s
   mirror: DisposalRouterFlipped
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
   hide: true
@@ -241,8 +261,10 @@
     sprite: Structures/Piping/disposal.rsi
     state: conpipe-j2s
   mirror: DisposalRouter
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Утилизационный сигнальный маршрутизатор # Imperial Recipes Locale
   description: Трехсторонний маршрутизатор, управляемый сигналом. # Imperial Recipes Locale
   id: DisposalSignalRouter
@@ -256,6 +278,7 @@
     sprite: Structures/Piping/disposal.rsi
     state: signal-router-free
   mirror: DisposalSignalRouterFlipped
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
   hide: true
@@ -272,8 +295,10 @@
     sprite: Structures/Piping/disposal.rsi
     state: signal-router-flipped-free
   mirror: DisposalSignalRouter
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Развязка утилизационной трубы # Imperial Recipes Locale
   description: Трехсторонняя развязка. Стрелка указывает на место выхода объектов. # Imperial Recipes Locale
   id: DisposalJunction
@@ -287,6 +312,7 @@
     sprite: Structures/Piping/disposal.rsi
     state: conpipe-j1
   mirror: DisposalJunctionFlipped
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
   hide: true
@@ -303,8 +329,10 @@
     sprite: Structures/Piping/disposal.rsi
     state: conpipe-j2
   mirror: DisposalJunction
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Альтернативная развязка утилизационной трубы # Imperial Recipes Locale
   description: Трехсторонняя развязка с альтернативным местом выхода. # Imperial Recipes Locale
   id: DisposalYJunction
@@ -317,8 +345,10 @@
   icon:
     sprite: Structures/Piping/disposal.rsi
     state: conpipe-y
+  blockForPacifist: true #Imperial pacified
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Изгиб утилизационной трубы # Imperial Recipes Locale
   description: Труба, согнутая под прямым углом. # Imperial Recipes Locale
   id: DisposalBend
@@ -331,9 +361,11 @@
   icon:
     sprite: Structures/Piping/disposal.rsi
     state: conpipe-c
+  blockForPacifist: true #Imperial pacified
 
 # ATMOS
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Воздушная сигнализация # Imperial Recipes Locale
   id: AirAlarmFixture
   graph: AirAlarm
@@ -352,6 +384,7 @@
   - !type:WallmountCondition {}
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Пожарная сигнализация # Imperial Recipes Locale
   id: FireAlarm
   graph: FireAlarm
@@ -370,6 +403,7 @@
   - !type:WallmountCondition {}
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Сенсор воздуха # Imperial Recipes Locale
   id: AirSensor
   graph: AirSensor
@@ -386,6 +420,7 @@
 
 - type: construction
   name: Датчик газовых труб # Imperial Recipes Locale
+  hide: true # imperial medieval craft disable
   id: GasPipeSensor
   graph: GasPipeSensor
   startNode: start
@@ -401,6 +436,7 @@
 
 # ATMOS PIPES
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Газовая труба половинчатая # Imperial Recipes Locale
   id: GasPipeHalf
   description: Половина трубы. # Imperial Recipes Locale
@@ -415,6 +451,7 @@
     state: pipeHalf
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Газовая труба # Imperial Recipes Locale
   id: GasPipeStraight
   description: Прямой сегмент трубы. # Imperial Recipes Locale
@@ -429,6 +466,7 @@
     state: pipeStraight
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Газовая труба изогнутая # Imperial Recipes Locale
   id: GasPipeBend
   description: Труба, согнутая под прямым углом. # Imperial Recipes Locale
@@ -443,6 +481,7 @@
     state: pipeBend
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Газовая Т-образная труба # Imperial Recipes Locale
   id: GasPipeTJunction
   description: Т-образный сегмент трубы # Imperial Recipes Locale
@@ -457,6 +496,7 @@
     state: pipeTJunction
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Газовая четверная труба # Imperial Recipes Locale
   id: GasPipeFourway
   description: Сегмент трубы с четыремя соединениями. # Imperial Recipes Locale
@@ -472,6 +512,7 @@
 
 # ATMOS UNARY
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Вентиляция # Imperial Recipes Locale
   description: Имеет клапан и прикрепленный к нему насос. # Imperial Recipes Locale
   id: GasVentPump
@@ -493,6 +534,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Пассивная вентиляция # Imperial Recipes Locale
   description: Это открытая вентиляция. # Imperial Recipes Locale
   id: GasPassiveVent
@@ -514,6 +556,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Скруббер  # Imperial Recipes Locale
   description: Он же вытяжка. Имеет клапан и прикреплённый к нему насос. # Imperial Recipes Locale
   id: GasVentScrubber
@@ -535,6 +578,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Инжектор # Imperial Recipes Locale
   description: Он же форсунка. Имеет клапан и прикреплённый к нему насос. # Imperial Recipes Locale
   id: GasOutletInjector
@@ -557,6 +601,7 @@
 
 # ATMOS BINARY
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Газовый насос # Imperial Recipes Locale
   id: GasPressurePump
   description: Насос, перемещающий газ под определённым давлением. # Imperial Recipes Locale
@@ -578,6 +623,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Объёмный газовый насос # Imperial Recipes Locale
   description: Насос, перемещающий газ с определённым объёмом. # Imperial Recipes Locale
   id: GasVolumePump
@@ -599,6 +645,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: GasPassiveGate
   name: Пассивный клапан # Imperial Recipes Locale
   description: Односторонний воздушный клапан, не требующий питания. # Imperial Recipes Locale
@@ -620,6 +667,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: GasValve
   name: Ручной клапан # Imperial Recipes Locale
   description: Труба с клапаном, которым можно перекрыть поток проходящего по ней газа. # Imperial Recipes Locale
@@ -641,6 +689,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: SignalControlledValve
   name: Сигнальный клапан # Imperial Recipes Locale
   description: Труба с клапаном, который можно контролировать при помощи сигналов. # Imperial Recipes Locale
@@ -662,6 +711,7 @@
   - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: GasPort
   name: Соединительный порт # Imperial Recipes Locale
   description: Для подключения портативных устройств, связанных с управлением атмосферой. # Imperial Recipes Locale
@@ -683,6 +733,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: GasDualPortVentPump
   name: Двухпортовая вентиляция # Imperial Recipes Locale
   description: Имеет клапан и прикреплённый к нему насос. Один вход для закачивания воздуха, другой - для откачивания. # Imperial Recipes Locale
@@ -702,6 +753,7 @@
     state: vent_off
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: HeatExchanger
   name: Радиатор # Imperial Recipes Locale
   description: Переносит тепло между трубой и окружающей средой. # Imperial Recipes Locale
@@ -716,6 +768,7 @@
     state: heStraight
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: HeatExchangerBend
   name: radiator bend
   description: Transfers heat between the pipe and its surroundings.
@@ -731,6 +784,7 @@
 
 # ATMOS TRINARY
 - type: construction
+  hide: true # imperial medieval craft disable
   id: GasFilter
   name: Газовый фильтр # Imperial Recipes Locale
   description: Очень полезен для фильтрации газов. # Imperial Recipes Locale
@@ -766,6 +820,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: GasMixer
   name: Газовый смеситель # Imperial Recipes Locale
   description: Очень полезен для смешивания газов. # Imperial Recipes Locale
@@ -801,6 +856,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: PressureControlledValve
   name: Пневматический клапан # Imperial Recipes Locale
   description: Клапан, регулируемый давлением. # Imperial Recipes Locale
@@ -818,6 +874,7 @@
 
 # INTERCOM
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Интерком # Imperial Recipes Locale
   id: IntercomAssesmbly
   graph: Intercom
@@ -837,6 +894,7 @@
 
 # TIMERS
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Сигнальный таймер # Imperial Recipes Locale
   id: SignalTimer
   graph: Timer
@@ -854,6 +912,7 @@
   - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Сигнальный таймер с экраном # Imperial Recipes Locale
   id: ScreenTimer
   graph: Timer
@@ -872,6 +931,7 @@
   - !type:WallmountCondition
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Бриг-таймер # Imperial Recipes Locale
   id: BrigTimer
   graph: Timer

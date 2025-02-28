@@ -42,6 +42,8 @@
       MagicMedievalVodka: 1000
       MagicMedievalDarkness: 1000
       ArchmagePoints: 100
+  - type: TrashClear
+    safe: true
 
 - type: entity
   parent: MedievalSpellBookBase

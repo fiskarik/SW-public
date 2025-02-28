@@ -1,0 +1,3463 @@
+- type: entity
+  id: MedievalCharmerFireball1
+  parent: BaseItem
+  name: MedievalCharmerFireball1
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 4
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1
+  - type: Battery
+    maxCharge: 201
+    startingCharge: 201
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileFireball1
+    fireCost: 200
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/fireball.rsi
+    state: 1
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileFireball1
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: fireball
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 1.1
+    intensitySlope: 8
+    totalIntensity: 36
+    maxTileBreak: 0
+  - type: IgniteOnCollide
+    fireStacks: 2
+
+- type: entity
+  id: MedievalCharmerFireball2
+  parent: BaseItem
+  name: MedievalCharmerFireball2
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 7.5
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1.5
+  - type: Battery
+    maxCharge: 201
+    startingCharge: 201
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileFireball2
+    fireCost: 200
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/fireball.rsi
+    state: 2
+  - type: Tag
+    tags:
+      - Taser
+
+
+- type: entity
+  id: MedievalProjectileFireball2
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: fireball
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 2.1
+    intensitySlope: 6
+    totalIntensity: 90
+    maxTileBreak: 0
+  - type: SingularityDistortion
+    falloffPower: 3.5
+    intensity: 4
+  - type: IgniteOnCollide
+    fireStacks: 3
+
+- type: entity
+  id: MedievalCharmerFireball3
+  parent: BaseItem
+  name: MedievalCharmerFireball3
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 13
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 2.5
+  - type: Battery
+    maxCharge: 201
+    startingCharge: 201
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileFireball3
+    fireCost: 200
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/fireball.rsi
+    state: 3
+  - type: Tag
+    tags:
+      - Taser
+
+
+- type: entity
+  id: MedievalProjectileFireball3
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: fireball
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 5
+    intensitySlope: 5
+    totalIntensity: 210
+    maxTileBreak: 0
+  - type: SingularityDistortion
+    falloffPower: 1.5
+    intensity: 100
+  - type: IgniteOnCollide
+    fireStacks: 5
+
+- type: entity
+  id: MedievalCharmerDisabler1
+  parent: BaseItem
+  name: MedievalCharmerDisabler1
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1
+  - type: Battery
+    maxCharge: 101
+    startingCharge: 101
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileDisabler1
+    fireCost: 23
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/disabler.rsi
+    state: 1
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileDisabler1
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 26
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 1
+
+- type: entity
+  id: MedievalCharmerDisabler2
+  parent: BaseItem
+  name: MedievalCharmerDisabler2
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 8
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1.4
+  - type: Battery
+    maxCharge: 121
+    startingCharge: 121
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileDisabler2
+    fireCost: 20
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/disabler.rsi
+    state: 2
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileDisabler2
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 34
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 1
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 1
+  - type: SingularityDistortion
+    falloffPower: 3.5
+    intensity: 4
+
+
+- type: entity
+  id: MedievalCharmerDisabler3
+  parent: BaseItem
+  name: MedievalCharmerDisabler3
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 25
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 2
+  - type: Battery
+    maxCharge: 251
+    startingCharge: 251
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileDisabler3
+    fireCost: 33
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/disabler.rsi
+    state: 3
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileDisabler3
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 96
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 3
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 1
+  - type: SingularityDistortion
+    falloffPower: 1.5
+    intensity: 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- type: entity
+  id: MedievalCharmerArrow1
+  parent: BaseItem
+  name: MedievalCharmerArrow1
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1
+  - type: Battery
+    maxCharge: 101
+    startingCharge: 101
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileArrow1
+    fireCost: 50
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    state: 1
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileArrow1
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 1
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 15
+
+- type: entity
+  id: MedievalCharmerArrow2
+  parent: BaseItem
+  name: MedievalCharmerArrow2
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 8
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1.4
+  - type: Battery
+    maxCharge: 121
+    startingCharge: 121
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileArrow2
+    fireCost: 30
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    state: 2
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileArrow2
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 3
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 1
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 20
+
+
+- type: entity
+  id: MedievalCharmerArrow3
+  parent: BaseItem
+  name: MedievalCharmerArrow3
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 25
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 2
+  - type: Battery
+    maxCharge: 251
+    startingCharge: 251
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileArrow3
+    fireCost: 33
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    state: 3
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileArrow3
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 9
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 5
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 29
+
+
+
+
+
+
+
+
+- type: entity
+  id: MedievalCharmerBlood1
+  parent: BaseItem
+  name: MedievalCharmerBlood1
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1
+  - type: Battery
+    maxCharge: 101
+    startingCharge: 101
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileBlood1
+    fireCost: 50
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+    state: 1
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileBlood1
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 15
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Bloodloss: 8
+
+- type: entity
+  id: MedievalCharmerBlood2
+  parent: BaseItem
+  name: MedievalCharmerBlood2
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 8
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1.4
+  - type: Battery
+    maxCharge: 101
+    startingCharge: 101
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileBlood2
+    fireCost: 30
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+    state: 2
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileBlood2
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 22
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 3
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Bloodloss: 13
+
+- type: entity
+  id: MedievalCharmerBlood3
+  parent: BaseItem
+  name: MedievalCharmerBlood3
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 25
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 2
+  - type: Battery
+    maxCharge: 191
+    startingCharge: 191
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileBlood3
+    fireCost: 41
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+    state: 3
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileBlood3
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 35
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 5
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Bloodloss: 17
+
+
+
+
+
+
+
+
+
+
+- type: entity
+  id: MedievalCharmerFlash1
+  parent: BaseItem
+  name: MedievalCharmerFlash1
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 3
+  - type: Battery
+    maxCharge: 71
+    startingCharge: 71
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileFlash1
+    fireCost: 30
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+    state: 1
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileFlash1
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 16
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 1
+  - type: FlashOnTrigger
+    range: 2
+    duration: 4.2
+
+- type: entity
+  id: MedievalCharmerFlash2
+  parent: BaseItem
+  name: MedievalCharmerFlash2
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 8
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 5
+  - type: Battery
+    maxCharge: 101
+    startingCharge: 101
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileFlash2
+    fireCost: 30
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+    state: 2
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileFlash2
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 24
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 1
+  - type: SingularityDistortion
+    falloffPower: 3.5
+    intensity: 4
+  - type: FlashOnTrigger
+    range: 4
+    duration: 7
+
+
+
+- type: entity
+  id: MedievalCharmerFlash3
+  parent: BaseItem
+  name: MedievalCharmerFlash3
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 25
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 7
+  - type: Battery
+    maxCharge: 101
+    startingCharge: 101
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileFlash3
+    fireCost: 30
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+    state: 3
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileFlash3
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 46
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 1
+  - type: SingularityDistortion
+    falloffPower: 1.5
+    intensity: 100
+  - type: FlashOnTrigger
+    range: 6
+    duration: 11
+
+
+
+
+
+
+
+
+
+
+
+
+- type: entity
+  id: MedievalCharmerHeal1
+  parent: BaseItem
+  name: MedievalCharmerHeal1
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1
+  - type: Battery
+    maxCharge: 71
+    startingCharge: 71
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileHeal1
+    fireCost: 50
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    state: 1
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileHeal1
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 1
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      groups:
+        Brute: -25
+        Burn: -25
+        Airloss: -25
+        Toxin: -25
+      types:
+        Bloodloss: -15
+        Cellular: -10
+    ignoreResistances: true
+
+- type: entity
+  id: MedievalCharmerHeal2
+  parent: BaseItem
+  name: MedievalCharmerHeal2
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 8
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 2
+  - type: Battery
+    maxCharge: 101
+    startingCharge: 101
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileHeal2
+    fireCost: 50
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    state: 2
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileHeal2
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 2
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      groups:
+        Brute: -60
+        Burn: -60
+        Airloss: -60
+        Toxin: -60
+      types:
+        Cellular: -25
+        Bloodloss: -60
+    ignoreResistances: true
+  - type: SingularityDistortion
+    falloffPower: 3.5
+    intensity: 4
+
+
+
+- type: entity
+  id: MedievalCharmerHeal3
+  parent: BaseItem
+  name: MedievalCharmerHeal3
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 25
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 3
+  - type: Battery
+    maxCharge: 101
+    startingCharge: 101
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileHeal3
+    fireCost: 30
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    state: 3
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileHeal3
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 4
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      groups:
+        Brute: -150
+        Burn: -150
+        Airloss: -600
+        Toxin: -600
+      types:
+        Cellular: -200
+        Bloodloss: -300
+    ignoreResistances: true
+  - type: SingularityDistortion
+    falloffPower: 1.5
+    intensity: 100
+
+
+
+
+
+
+
+
+- type: entity
+  id: MedievalCharmerIcePulse1
+  parent: BaseItem
+  name: MedievalCharmerIcePulse1
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1.5
+  - type: Battery
+    maxCharge: 71
+    startingCharge: 71
+  - type: Appearance
+  - type: HitscanBatteryAmmoProvider
+    proto: MedievalIcePulse1
+    fireCost: 23
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/ice_pulse.rsi
+    state: 1
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalCharmerIcePulse2
+  parent: BaseItem
+  name: MedievalCharmerIcePulse2
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 8
+    fireRate: 2
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 3.8
+  - type: Battery
+    maxCharge: 141
+    startingCharge: 141
+  - type: Appearance
+  - type: HitscanBatteryAmmoProvider
+    proto: MedievalIcePulse2
+    fireCost: 31
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/ice_pulse.rsi
+    state: 2
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalCharmerIcePulse3
+  parent: BaseItem
+  name: MedievalCharmerIcePulse3
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 25
+    fireRate: 3
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 4.5
+  - type: Battery
+    maxCharge: 181
+    startingCharge: 181
+  - type: Appearance
+  - type: HitscanBatteryAmmoProvider
+    proto: MedievalIcePulse3
+    fireCost: 20
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/ice_pulse.rsi
+    state: 3
+  - type: Tag
+    tags:
+      - Taser
+
+- type: hitscan
+  id: MedievalIcePulse1
+  damage:
+    types:
+      Cold: 9
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_blue
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_blue
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_blue
+
+
+- type: hitscan
+  id: MedievalIcePulse2
+  damage:
+    types:
+      Cold: 13
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_blue
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_blue
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_blue
+
+- type: hitscan
+  id: MedievalIcePulse3
+  damage:
+    types:
+      Cold: 17
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_blue
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_blue
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_blue
+
+
+
+
+
+
+
+
+- type: entity
+  id: MedievalCharmerEMP1
+  parent: BaseItem
+  name: MedievalCharmerEMP1
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1
+  - type: Battery
+    maxCharge: 71
+    startingCharge: 71
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileEMP1
+    fireCost: 70
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/emp.rsi
+    state: 1
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileEMP1
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/emp.rsi
+    layers:
+    - state: 1
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 1
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      groups:
+        Brute: 1
+  - type: EmpOnTrigger
+    range: 1.5
+    energyConsumption: 60
+
+- type: entity
+  id: MedievalCharmerEMP2
+  parent: BaseItem
+  name: MedievalCharmerEMP2
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 8
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 6
+  - type: Battery
+    maxCharge: 101
+    startingCharge: 101
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileEMP2
+    fireCost: 100
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/emp.rsi
+    state: 2
+  - type: Tag
+    tags:
+      - Taser
+
+
+- type: entity
+  id: MedievalProjectileEMP2
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/emp.rsi
+    layers:
+    - state: 2
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 2
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      groups:
+        Brute: 1
+  - type: EmpOnTrigger
+    range: 2.7
+    energyConsumption: 160
+
+
+- type: entity
+  id: MedievalCharmerEMP3
+  parent: BaseItem
+  name: MedievalCharmerEMP3
+  components:
+  - type: Item
+    size: Ginormous
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 25
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 10
+  - type: Battery
+    maxCharge: 101
+    startingCharge: 101
+  - type: Appearance
+  - type: ProjectileBatteryAmmoProvider
+    proto: MedievalProjectileEMP3
+    fireCost: 100
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/emp.rsi
+    state: 3
+  - type: Tag
+    tags:
+      - Taser
+
+- type: entity
+  id: MedievalProjectileEMP3
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/emp.rsi
+    layers:
+    - state: 3
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 4
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 0
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      groups:
+        Brute: 1
+  - type: EmpOnTrigger
+    range: 5
+    energyConsumption: 1060
+
+- type: entity
+  id: MedievalSpellbookFireball1
+  name: fireball spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/fireball.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionFireball1: -1
+
+
+- type: entity
+  id: MedievalActionFireball1
+  name: action-name-spell-fireball
+  description: action-description-spell-fireball
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    components:
+    useDelay: 180
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/fireball.rsi
+      state: 1
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileFireball1
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-fireball1
+      manaCost: 55
+      preventCollide: true
+
+
+- type: entity
+  id: MedievalSpellbookFireball2
+  name: fireball spellbook 2
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/fireball.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionFireball2: -1
+
+
+- type: entity
+  id: MedievalActionFireball2
+  name: action-name-spell-fireball2
+  description: action-description-spell-fireball2
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 150
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/fireball.rsi
+      state: 2
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileFireball2
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-fireball1
+      manaCost: 72
+    preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookFireball3
+  name: fireball spellbook 3
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/fireball.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionFireball3: -1
+
+
+- type: entity
+  id: MedievalActionFireball3
+  name: action-name-spell-fireball3
+  description: action-description-spell-fireball3
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 120
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/fireball.rsi
+      state: 3
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileFireball3
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-fireball1
+      manaCost: 95
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookDisabler1
+  name: disabler spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/disabler.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionDisabler1: -1
+
+
+- type: entity
+  id: MedievalActionDisabler1
+  name: action-name-spell-disabler
+  description: action-description-spell-disabler
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 5.4
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/disabler.rsi
+      state: 1
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileDisabler1
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-disabler1
+      manaCost: 18
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookDisabler2
+  name: disabler spellbook 2
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/disabler.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionDisabler2: -1
+
+
+- type: entity
+  id: MedievalActionDisabler2
+  name: action-name-spell-disabler2
+  description: action-description-spell-disabler2
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 4.9
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/disabler.rsi
+      state: 2
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileDisabler2
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-disabler1
+      manaCost: 26
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookDisabler3
+  name: disabler spellbook 3
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/disabler.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionDisabler3: -1
+
+
+- type: entity
+  id: MedievalActionDisabler3
+  name: action-name-spell-disabler3
+  description: action-description-spell-disabler3
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 4.7
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/disabler.rsi
+      state: 3
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileDisabler3
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-disabler1
+      manaCost: 33
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookArrow1
+  name: arrow spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionArrow1: -1
+
+
+- type: entity
+  id: MedievalActionArrow1
+  name: action-name-spell-arrow
+  description: action-description-spell-arrow
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 6
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+      state: 1
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileArrow1
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-arrow1
+      manaCost: 15
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookArrow2
+  name: arrow spellbook 2
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionArrow2: -1
+
+
+- type: entity
+  id: MedievalActionArrow2
+  name: action-name-spell-arrow2
+  description: action-description-spell-arrow2
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 4
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+      state: 2
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileArrow2
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-arrow1
+      manaCost: 22
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookArrow3
+  name: arrow spellbook 3
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionArrow3: -1
+
+
+- type: entity
+  id: MedievalActionArrow3
+  name: action-name-spell-arrow3
+  description: action-description-spell-arrow3
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 3
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+      state: 3
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileArrow3
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-arrow1
+      manaCost: 28
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookBlood1
+  name: blood spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionBlood1: -1
+
+
+- type: entity
+  id: MedievalActionBlood1
+  name: action-name-spell-blood
+  description: action-description-spell-blood
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 7
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+      state: 1
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileBlood1
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-blood1
+      manaCost: 15
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookBlood2
+  name: blood spellbook 2
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionBlood2: -1
+
+
+- type: entity
+  id: MedievalActionBlood2
+  name: action-name-spell-blood2
+  description: action-description-spell-blood2
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 5
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+      state: 2
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileBlood2
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-blood1
+      manaCost: 22
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookBlood3
+  name: blood spellbook 3
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionBlood3: -1
+
+
+- type: entity
+  id: MedievalActionBlood3
+  name: action-name-spell-blood3
+  description: action-description-spell-blood3
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 4
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/blood.rsi
+      state: 3
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileBlood3
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-blood1
+      manaCost: 28
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookFlash1
+  name: flash spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionFlash1: -1
+
+
+- type: entity
+  id: MedievalActionFlash1
+  name: action-name-spell-flash
+  description: action-description-spell-flash
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 16
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+      state: 1
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileFlash1
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-flash1
+      manaCost: 15
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookFlash2
+  name: flash spellbook 2
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionFlash2: -1
+
+
+- type: entity
+  id: MedievalActionFlash2
+  name: action-name-spell-flash2
+  description: action-description-spell-flash2
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 12
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+      state: 2
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileFlash2
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-flash1
+      manaCost: 22
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookFlash3
+  name: flash spellbook 3
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionFlash3: -1
+
+
+- type: entity
+  id: MedievalActionFlash3
+  name: action-name-spell-flash3
+  description: action-description-spell-flash3
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 11
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/flash.rsi
+      state: 3
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileFlash3
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-flash1
+      manaCost: 28
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookHeal1
+  name: heal spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionHeal1: -1
+
+
+- type: entity
+  id: MedievalActionHeal1
+  name: action-name-spell-heal
+  description: action-description-spell-heal
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 29
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+      state: 1
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileHeal1
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-heal1
+      manaCost: 17
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookHeal2
+  name: heal spellbook 2
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionHeal2: -1
+
+
+- type: entity
+  id: MedievalActionHeal2
+  name: action-name-spell-heal2
+  description: action-description-spell-heal2
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 24
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+      state: 2
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileHeal2
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-heal1
+      manaCost: 25
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookHeal3
+  name: heal spellbook 3
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionHeal3: -1
+
+
+- type: entity
+  id: MedievalActionHeal3
+  name: action-name-spell-heal3
+  description: action-description-spell-heal3
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 22
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+      state: 3
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileHeal3
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-heal1
+      manaCost: 31
+      preventCollide: true
+
+- type: entity
+  id: MedievalProjectilePolyboltSkelet
+  parent: ProjectilePolyboltBase
+  name: monkey polybolt
+  description: Nooo, I don't wanna be monkey!
+  noSpawn: true
+  components:
+  - type: PolymorphOnCollide
+    polymorph: MedievalSkelet
+    whitelist:
+      components:
+      - Body
+  - type: TimedDespawn
+    lifetime: 0.1
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+
+- type: polymorph
+  id: MedievalSkelet
+  configuration:
+    entity: MedievalMobSkeletonNecro
+    inventory: Transfer
+    revertOnCrit: false
+    revertOnDeath: false
+    transferHumanoidAppearance: false
+    transferName: false
+    transferDamage: false
+    forced: true
+    delay: 1
+
+- type: entity
+  id: MedievalSpellbookNecro
+  name: necro spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/necro.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionNecro: -1
+
+
+- type: entity
+  id: MedievalActionNecro
+  name: action-name-spell-necro
+  description: action-description-spell-necro
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 25
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/necro.rsi
+      state: 1
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectilePolyboltSkelet
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-necro1
+      manaCost: 40
+      preventCollide: true
+
+- type: entity
+  parent: Puddle
+  id: MedievalBeakerCharmerSmoke
+  components:
+  - type: TimedDespawn
+    lifetime: 8
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 300
+        reagents:
+        - ReagentId: Potassium
+          Quantity: 20
+        - ReagentId: Sugar
+          Quantity: 20
+        - ReagentId: Phosphorus
+          Quantity: 20
+
+- type: entity
+  parent: Puddle
+  id: MedievalBeakerCharmerSmoke2
+  components:
+  - type: TimedDespawn
+    lifetime: 8
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 300
+        reagents:
+        - ReagentId: Potassium
+          Quantity: 35
+        - ReagentId: Sugar
+          Quantity: 35
+        - ReagentId: Phosphorus
+          Quantity: 35
+
+- type: entity
+  parent: Puddle
+  id: MedievalBeakerCharmerSmoke3
+  components:
+  - type: TimedDespawn
+    lifetime: 8
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 300
+        reagents:
+        - ReagentId: Potassium
+          Quantity: 82
+        - ReagentId: Sugar
+          Quantity: 82
+        - ReagentId: Phosphorus
+          Quantity: 82
+
+- type: entity
+  id: MedievalSpellbookSmoke
+  name: smoke spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/smoke.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionSmoke: -1
+
+
+- type: entity
+  id: MedievalActionSmoke
+  name: action-name-spell-smoke
+  description: action-description-spell-smoke
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 90
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/smoke.rsi
+      state: 1
+    event: !type:InstantSpawnSpellEvent
+      prototype: MedievalBeakerCharmerSmoke
+      posData: !type:TargetCasterPos
+      speech: medieval-cahrm-speech-smoke
+      manaCost: 12
+
+
+- type: entity
+  id: MedievalSpellbookSmoke2
+  name: smoke spellbook 2
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/smoke.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionSmoke2: -1
+
+
+- type: entity
+  id: MedievalActionSmoke2
+  name: action-name-spell-smoke2
+  description: action-description-spell-smoke2
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 75
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/smoke.rsi
+      state: 2
+    event: !type:InstantSpawnSpellEvent
+      prototype: MedievalBeakerCharmerSmoke2
+      posData: !type:TargetCasterPos
+      speech: medieval-cahrm-speech-smoke
+      manaCost: 18
+
+- type: entity
+  id: MedievalSpellbookSmoke3
+  name: smoke spellbook 3
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/smoke.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionSmoke3: -1
+
+
+- type: entity
+  id: MedievalActionSmoke3
+  name: action-name-spell-smoke3
+  description: action-description-spell-smoke3
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 60
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/smoke.rsi
+      state: 3
+    event: !type:InstantSpawnSpellEvent
+      prototype: MedievalBeakerCharmerSmoke3
+      posData: !type:TargetCasterPos
+      speech: medieval-cahrm-speech-smoke
+      manaCost: 22
+
+- type: entity
+  id: MedievalSpellbookBlink
+  name: blink spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/blink.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalBlink: -1
+
+
+- type: entity
+  id: MedievalBlink
+  name: action-name-medieval-spell-blink
+  description: action-description-medieval-spell-blink
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 10
+    range: 7
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    repeat: true
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/blink.rsi
+      state: blink
+    event: !type:TeleportSpellEvent
+      speech: medieval-cahrm-speech-blink
+      manaCost: 35
+
+- type: entity
+  id: MedievalSpellbookBarrier
+  name: barrier spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/barrier.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionBarrier: -1
+
+
+- type: entity
+  id: MedievalActionBarrier
+  name: action-name-spell-barrier
+  description: action-description-spell-barrier
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 10
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/barrier.rsi
+      state: 1
+    event: !type:InstantSpawnSpellEvent
+      manaCost: 28
+      prototype: MedievalCrystalIceCharm1Spawner
+      posData: !type:TargetInFront
+      speech: medieval-cahrm-speech-barrier
+
+- type: entity
+  id: MedievalSpellbookBarrier2
+  name: barrier spellbook 2
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/barrier.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionBarrier2: -1
+
+
+- type: entity
+  id: MedievalActionBarrier2
+  name: action-name-spell-barrier2
+  description: action-description-spell-barrier2
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 10
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/barrier.rsi
+      state: 2
+    event: !type:InstantSpawnSpellEvent
+      prototype: MedievalCrystalIceCharm2Spawner
+      posData: !type:TargetInFront
+      speech: medieval-cahrm-speech-barrier
+      manaCost: 40
+
+- type: entity
+  id: MedievalSpellbookBarrier3
+  name: barrier spellbook 3
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/barrier.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionBarrier3: -1
+
+- type: entity
+  id: MedievalActionBarrier3
+  name: action-name-spell-barrier3
+  description: action-description-spell-barrier3
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 10
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/barrier.rsi
+      state: 3
+    event: !type:InstantSpawnSpellEvent
+      prototype: MedievalCrystalIceCharm3Spawner
+      posData: !type:TargetInFront
+      speech: medieval-cahrm-speech-barrier
+      manaCost: 55
+
+- type: entity
+  parent: CrystalCyan
+  id: MedievalCrystalIce
+
+- type: entity
+  parent: MedievalCrystalIce
+  id: MedievalCrystalIceCharm1
+  components:
+  - type: TimedDespawn
+    lifetime: 8
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+
+- type: entity
+  parent: MedievalCrystalIce
+  id: MedievalCrystalIceCharm2
+  components:
+  - type: TimedDespawn
+    lifetime: 20
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+
+- type: entity
+  parent: MedievalCrystalIce
+  id: MedievalCrystalIceCharm3
+  components:
+  - type: TimedDespawn
+    lifetime: 40
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+
+- type: entity
+  parent: PonderingOrb
+  id: MedievalPonderingOrbCharm
+  components:
+  - type: TimedDespawn
+    lifetime: 120
+  - type: PointLight
+    color: cyan
+    energy: 2
+    radius: 3.8
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+      - ForceableFollow
+
+- type: entity
+  id: MedievalSpellbookLight
+  name: light spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/light.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionLight: -1
+
+
+- type: entity
+  id: MedievalActionLight
+  name: action-name-spell-light
+  description: action-description-spell-light
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 80
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/light.rsi
+      state: light
+    event: !type:InstantSpawnSpellEvent
+      prototype: MedievalPonderingOrbCharm
+      posData: !type:TargetInFrontSingle
+      speech: medieval-cahrm-speech-light
+      manaCost: 10
+
+- type: entity
+  id: MedievalSleepProjectile1
+  name: pellet (.50 tranquilizer)
+  noSpawn: true
+  parent: BaseBulletTrigger
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/sleep.rsi
+    state: bullet
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 150
+        reagents:
+        - ReagentId: Nocturine
+          Quantity: 6
+        - ReagentId: SpaceDrugs
+          Quantity: 15
+  - type: RefillableSolution
+    solution: ammo
+  - type: DrainableSolution
+    solution: ammo
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 105
+    solution: ammo
+    blockSlots: NONE #tranquillizer darts shouldn't be blocked by a mask
+  - type: InjectableSolution
+    solution: ammo
+
+- type: entity
+  id: MedievalSleepProjectile2
+  name: pellet (.50 tranquilizer)
+  noSpawn: true
+  parent: BaseBulletTrigger
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/sleep.rsi
+    state: bullet
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 150
+        reagents:
+        - ReagentId: Nocturine
+          Quantity: 15
+        - ReagentId: SpaceDrugs
+          Quantity: 30
+  - type: RefillableSolution
+    solution: ammo
+  - type: DrainableSolution
+    solution: ammo
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 105
+    solution: ammo
+    blockSlots: NONE #tranquillizer darts shouldn't be blocked by a mask
+  - type: InjectableSolution
+    solution: ammo
+  - type: SingularityDistortion
+    falloffPower: 3.5
+    intensity: 4
+
+- type: entity
+  id: MedievalSleepProjectile3
+  name: pellet (.50 tranquilizer)
+  noSpawn: true
+  parent: BaseBulletTrigger
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/sleep.rsi
+    state: bullet
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 150
+        reagents:
+        - ReagentId: Nocturine
+          Quantity: 25
+        - ReagentId: SpaceDrugs
+          Quantity: 50
+  - type: RefillableSolution
+    solution: ammo
+  - type: DrainableSolution
+    solution: ammo
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 105
+    solution: ammo
+    blockSlots: NONE #tranquillizer darts shouldn't be blocked by a mask
+  - type: InjectableSolution
+    solution: ammo
+  - type: SingularityDistortion
+    falloffPower: 3.5
+    intensity: 4
+
+- type: entity
+  id: MedievalSpellbookSleep1
+  name: blood spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/sleep.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionSleep1: -1
+
+
+- type: entity
+  id: MedievalActionSleep1
+  name: action-name-spell-sleep
+  description: action-description-spell-sleep
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 280
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/sleep.rsi
+      state: 1
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalSleepProjectile1
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-sleep
+      manaCost: 26
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookSleep2
+  name: blood spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/sleep.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionSleep2: -1
+
+
+- type: entity
+  id: MedievalActionSleep2
+  name: action-name-spell-sleep2
+  description: action-description-spell-sleep2
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 280
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/sleep.rsi
+      state: 2
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalSleepProjectile2
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-sleep
+      manaCost: 48
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookSleep3
+  name: blood spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/sleep.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionSleep3: -1
+
+
+- type: entity
+  id: MedievalActionSleep3
+  name: action-name-spell-sleep3
+  description: action-description-spell-sleep3
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 280
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/sleep.rsi
+      state: 3
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalSleepProjectile3
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-sleep
+      manaCost: 60
+      preventCollide: true
+
+- type: entity
+  id: MedievalBoostProjectile1
+  name: pellet (.50 tranquilizer)
+  noSpawn: true
+  parent: BaseBulletTrigger
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/boost.rsi
+    state: bullet
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 150
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 6
+        - ReagentId: SpaceDrugs
+          Quantity: 4
+  - type: RefillableSolution
+    solution: ammo
+  - type: DrainableSolution
+    solution: ammo
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 105
+    solution: ammo
+    blockSlots: NONE #tranquillizer darts shouldn't be blocked by a mask
+  - type: InjectableSolution
+    solution: ammo
+
+- type: entity
+  id: MedievalBoostProjectile2
+  name: pellet (.50 tranquilizer)
+  noSpawn: true
+  parent: BaseBulletTrigger
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/boost.rsi
+    state: bullet
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 150
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 14
+        - ReagentId: SpaceDrugs
+          Quantity: 10
+  - type: RefillableSolution
+    solution: ammo
+  - type: DrainableSolution
+    solution: ammo
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 105
+    solution: ammo
+    blockSlots: NONE #tranquillizer darts shouldn't be blocked by a mask
+  - type: InjectableSolution
+    solution: ammo
+  - type: SingularityDistortion
+    falloffPower: 3.5
+    intensity: 4
+
+- type: entity
+  id: MedievalBoostProjectile3
+  name: pellet (.50 tranquilizer)
+  noSpawn: true
+  parent: BaseBulletTrigger
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/boost.rsi
+    state: bullet
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 150
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 24
+        - ReagentId: SpaceDrugs
+          Quantity: 18
+  - type: RefillableSolution
+    solution: ammo
+  - type: DrainableSolution
+    solution: ammo
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 105
+    solution: ammo
+    blockSlots: NONE #tranquillizer darts shouldn't be blocked by a mask
+  - type: InjectableSolution
+    solution: ammo
+  - type: SingularityDistortion
+    falloffPower: 3.5
+    intensity: 4
+
+- type: entity
+  id: MedievalSpellbookBoost1
+  name: blood spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/boost.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionBoost1: -1
+
+
+- type: entity
+  id: MedievalActionBoost1
+  name: action-name-spell-boost
+  description: action-description-spell-boost
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 270
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/boost.rsi
+      state: 1
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalBoostProjectile1
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-boost
+      manaCost: 24
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookBoost2
+  name: blood spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/boost.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionBoost2: -1
+
+
+- type: entity
+  id: MedievalActionBoost2
+  name: action-name-spell-boost2
+  description: action-description-spell-boost2
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 225
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/boost.rsi
+      state: 2
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalBoostProjectile2
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-boost
+      manaCost: 36
+      preventCollide: true
+
+- type: entity
+  id: MedievalSpellbookBoost3
+  name: blood spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/boost.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalActionBoost3: -1
+
+
+- type: entity
+  id: MedievalActionBoost3
+  name: action-name-spell-boost3
+  description: action-description-spell-boost3
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 200
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/boost.rsi
+      state: 3
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalBoostProjectile3
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-boost
+      manaCost: 48
+      preventCollide: true
+
+#- type: entity
+#  save: false
+#  name: Urist electro
+#  parent: [BaseMobHuman, BaseMob]
+#  id: MobHumanElectroTest
+#  components:
+#  - type: FootPrints
+#  - type: PowerSupplier
+#    supplyRate: 5000
+#  - type: Clickable
+#  - type: InteractionOutline
+#  - type: Transform
+#    anchored: false
+#  - type: Appearance
+#  - type: Battery
+#    maxCharge: 500000000
+#    startingCharge: 500000000
+#  - type: NodeContainer
+#    examinable: false
+#    nodes:
+#      input:
+#        !type:CableDeviceNode
+#        nodeGroupID: MVPower
+#      output:
+#        !type:CableDeviceNode
+#        nodeGroupID: Apc
+#  - type: Apc
+#    voltage: Apc
+#  - type: PowerProvider
+#    voltage: Apc
+#  - type: BatteryCharger
+#    voltage: Medium
+#  - type: ExtensionCableProvider
+##    receptionRange: 7
+#  - type: PowerNetworkBattery
+#    maxSupply: 10000
+#    maxChargeRate: 5000
+#    supplyRampTolerance: 1000
+#    supplyRampRate: 500
+#  - type: StationInfiniteBatteryTarget
+#  - type: UserInterface
+#    interfaces:
+#    - key: enum.ApcUiKey.Key
+#      type: ApcBoundUserInterface
+#  - type: Physics
+#    bodyType: Dynamic
+#  - type: Anchorable
+#  - type: Damageable
+#  - type: Fixtures
+#    fixtures:
+#      fix1:
+#        shape:
+#          !type:PhysShapeCircle
+#          radius: 0.45
+#        density: 50
+#        mask:
+#        - MobMask
+#        layer:
+#        - MobLayer
+#  - type: Pullable
+#
+
+- type: entity
+  name: random book spawner fire
+  id: MedievalSpellSpawnerFire
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi
+          state: nanotrasen
+    - type: RandomSpawner
+      prototypes:
+        - MedievalSpellBookRecodeCollegiumWeakFire
+      offset: 0.0
+
+- type: entity
+  name: random book spawner fire
+  id: MedievalSpellSpawnerWater
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi
+          state: nanotrasen
+    - type: RandomSpawner
+      prototypes:
+        - MedievalSpellBookRecodeCollegiumWeakWater
+      offset: 0.0
+
+- type: entity
+  name: random book spawner fire
+  id: MedievalSpellSpawnerHoly
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi
+          state: nanotrasen
+    - type: RandomSpawner
+      prototypes:
+        - MedievalSpellBookRecodeCollegiumWeakHoly
+      offset: 0.0
+
+- type: entity
+  id: MedievalSpellbookArrowRespawn
+  name: arrow spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 1
+    spellActions:
+      MedievalActionArrowRespawn: -1
+
+
+- type: entity
+  id: MedievalActionArrowRespawn
+  name: action-name-spell-arrow-respawn
+  description: action-description-spell-arrow
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 4
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+      state: 2
+    event: !type:ProjectileSpellEvent
+      prototype: MedievalProjectileArrowRespawn
+      posData: !type:TargetCasterPos
+        width: 0
+      speech: medieval-cahrm-speech-arrow1
+      manaCost: 15
+      preventCollide: true
+
+- type: entity
+  id: MedievalProjectileArrowRespawn
+  name: fireball
+  description: You better GITTAH WEIGH.
+  parent: BulletRocket
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/arrow.rsi
+    layers:
+    - state: proto
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 9
+  - type: Explosive
+    explosionType: Cryo
+    maxIntensity: 1
+    intensitySlope: 1
+    totalIntensity: 5
+    maxTileBreak: 0
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+
+- type: entity
+  id: MedievalSelfHealCommon
+  components:
+  - type: Transform
+    anchored: false
+  - type: Marker
+  - type: MedievalSelfHeal
+    healingMultiplier: 1.3
+  - type: Sprite
+    drawdepth: Overdoors
+    sprite: Markers/cross.rsi
+
+- type: entity
+  id: MedievalSelfHealSoul
+  components:
+  - type: Transform
+    anchored: false
+  - type: Marker
+  - type: MedievalSelfHeal
+    healingMultiplier: 3
+  - type: Sprite
+    drawdepth: Overdoors
+    sprite: Markers/cross.rsi
+
+- type: entity
+  id: MedievalSpellbookSelfHealCommon
+  name: blink spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalSelfHealCommonAction: -1
+
+
+- type: entity
+  id: MedievalSelfHealCommonAction
+  name: action-name-medieval-spell-self-heal
+  description: action-description-medieval-spell-self-heal
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 90
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+      state: 3
+    event: !type:InstantSpawnSpellEvent
+      prototype: MedievalSelfHealCommon
+      posData: !type:TargetCasterPos
+      speech: medieval-cahrm-speech-self-heal
+      manaCost: 50
+
+- type: entity
+  id: MedievalSpellbookSelfHealSoul
+  name: blink spellbook
+  parent: BaseSpellbook
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+    layers:
+    - state: book
+  - type: Spellbook
+    learnOnce: true
+    learnPermanently: true
+    learnTime: 3
+    spellActions:
+      MedievalSelfHealSoulAction: -1
+
+
+- type: entity
+  id: MedievalSelfHealSoulAction
+  name: action-name-medieval-spell-self-heal
+  description: action-description-medieval-spell-self-heal
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 30
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+    icon:
+      sprite: Imperial/Medieval/Gun/Charmer/heal.rsi
+      state: 3
+    event: !type:InstantSpawnSpellEvent
+      prototype: MedievalSelfHealSoul
+      posData: !type:TargetCasterPos
+      speech: medieval-cahrm-speech-self-heal
+      manaCost: 50

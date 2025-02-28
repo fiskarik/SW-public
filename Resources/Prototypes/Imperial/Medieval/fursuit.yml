@@ -1,0 +1,1797 @@
+- type: entity
+  parent: Clothing
+  id: ClothingHandsFurSuitBlack
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: Clothing
+    slots: [gloves]
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: IdentityBlocker
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05
+    sprintModifier: 1.05
+  - type: MeleeWeapon
+    attackRate: 0.5
+    range: 1.4
+    damage:
+      types:
+        Slash: 9
+        Piercing: 5
+    animation: WeaponArcClaw
+    soundHit:
+     collection: AlienClaw
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: NoSlip
+  - type: StaminaDamageOnHit
+    damage: 17
+  - type: Sharp
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+
+
+- type: entity
+  parent: Clothing
+  id: ClothingArmorFurSuitBlack
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: Clothing
+    slots: [outerClothing]
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: IdentityBlocker
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05
+    sprintModifier: 1.05
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: NoSlip
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+
+- type: entity
+  parent: Clothing
+  id: ClothingFeetFurSuitBlack
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: Clothing
+    slots: [feet]
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: IdentityBlocker
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05
+    sprintModifier: 1.05
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: NoSlip
+
+- type: entity
+  parent: Clothing
+  id: ClothingHeadFurSuitBlack
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: Clothing
+    slots: [head]
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: IdentityBlocker
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05
+    sprintModifier: 1.05
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: NoSlip
+  - type: Tag
+    tags:
+    - HidesHair
+
+- type: entity
+  parent: Clothing
+  id: ClothingMaskFurSuitBlack
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: Clothing
+    slots: [mask]
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: IdentityBlocker
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05
+    sprintModifier: 1.05
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: NoSlip
+  - type: Tag
+    tags:
+    - HidesHair
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Imperial/Medieval/voi-dalekii-sobachii.ogg
+      params:
+        variation: 0.125
+        volume: 5
+    range: 165
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Imperial/Medieval/voi-dalekii-sobachii.ogg
+      params:
+        variation: 0.125
+        volume: 5
+    range: 165
+  - type: UseDelay
+    delay: 2.5
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Imperial/Medieval/voi-dalekii-sobachii.ogg
+      params:
+        variation: 0.125
+        volume: 5
+    range: 165
+
+- type: entity
+  parent: Clothing
+  id: ClothingNeckFurSuitBlack
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: Clothing
+    slots: [neck]
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: IdentityBlocker
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05
+    sprintModifier: 1.05
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/black.rsi
+    state: icon
+  - type: NoSlip
+
+- type: entity
+  parent: ClothingHandsFurSuitBlack
+  id: ClothingHandsFurSuitBlackUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingArmorFurSuitBlack
+  id: ClothingArmorFurSuitBlackUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingFeetFurSuitBlack
+  id: ClothingFeetFurSuitBlackUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadFurSuitBlack
+  id: ClothingHeadFurSuitBlackUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingMaskFurSuitBlack
+  id: ClothingMaskFurSuitBlackUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingNeckFurSuitBlack
+  id: ClothingNeckFurSuitBlackUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHandsFurSuitBlack
+  id: ClothingHandsFurSuitDPurple
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingArmorFurSuitBlack
+  id: ClothingArmorFurSuitDPurple
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingFeetFurSuitBlack
+  id: ClothingFeetFurSuitDPurple
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHeadFurSuitBlack
+  id: ClothingHeadFurSuitDPurple
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingMaskFurSuitBlack
+  id: ClothingMaskFurSuitDPurple
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingNeckFurSuitBlack
+  id: ClothingNeckFurSuitDPurple
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkpurple.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHandsFurSuitDPurple
+  id: ClothingHandsFurSuitDPurpleUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingArmorFurSuitDPurple
+  id: ClothingArmorFurSuitDPurpleUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingFeetFurSuitDPurple
+  id: ClothingFeetFurSuitDPurpleUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadFurSuitDPurple
+  id: ClothingHeadFurSuitDPurpleUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingMaskFurSuitDPurple
+  id: ClothingMaskFurSuitDPurpleUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingNeckFurSuitDPurple
+  id: ClothingNeckFurSuitDPurpleUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+
+- type: entity
+  parent: ClothingHandsFurSuitBlack
+  id: ClothingHandsFurSuitRed
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingArmorFurSuitBlack
+  id: ClothingArmorFurSuitRed
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingFeetFurSuitBlack
+  id: ClothingFeetFurSuitRed
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHeadFurSuitBlack
+  id: ClothingHeadFurSuitRed
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingMaskFurSuitBlack
+  id: ClothingMaskFurSuitRed
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingNeckFurSuitBlack
+  id: ClothingNeckFurSuitRed
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/red.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHandsFurSuitRed
+  id: ClothingHandsFurSuitRedUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingArmorFurSuitRed
+  id: ClothingArmorFurSuitRedUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingFeetFurSuitRed
+  id: ClothingFeetFurSuitRedUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadFurSuitRed
+  id: ClothingHeadFurSuitRedUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingMaskFurSuitRed
+  id: ClothingMaskFurSuitRedUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingNeckFurSuitRed
+  id: ClothingNeckFurSuitRedUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+
+- type: entity
+  parent: ClothingHandsFurSuitBlack
+  id: ClothingHandsFurSuitWhite
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingArmorFurSuitBlack
+  id: ClothingArmorFurSuitWhite
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingFeetFurSuitBlack
+  id: ClothingFeetFurSuitWhite
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHeadFurSuitBlack
+  id: ClothingHeadFurSuitWhite
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingMaskFurSuitBlack
+  id: ClothingMaskFurSuitWhite
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingNeckFurSuitBlack
+  id: ClothingNeckFurSuitWhite
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHandsFurSuitWhite
+  id: ClothingHandsFurSuitWhiteUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingArmorFurSuitWhite
+  id: ClothingArmorFurSuitWhiteUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingFeetFurSuitWhite
+  id: ClothingFeetFurSuitWhiteUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadFurSuitWhite
+  id: ClothingHeadFurSuitWhiteUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingMaskFurSuitWhite
+  id: ClothingMaskFurSuitWhiteUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingNeckFurSuitWhite
+  id: ClothingNeckFurSuitWhiteUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+
+
+- type: entity
+  parent: ClothingHandsFurSuitBlack
+  id: ClothingHandsFurSuitBrown
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingArmorFurSuitBlack
+  id: ClothingArmorFurSuitBrown
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingFeetFurSuitBlack
+  id: ClothingFeetFurSuitBrown
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHeadFurSuitBlack
+  id: ClothingHeadFurSuitBrown
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingMaskFurSuitBlack
+  id: ClothingMaskFurSuitBrown
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingNeckFurSuitBlack
+  id: ClothingNeckFurSuitBrown
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/brown.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHandsFurSuitBrown
+  id: ClothingHandsFurSuitBrownUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingArmorFurSuitBrown
+  id: ClothingArmorFurSuitBrownUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingFeetFurSuitBrown
+  id: ClothingFeetFurSuitBrownUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadFurSuitBrown
+  id: ClothingHeadFurSuitBrownUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingMaskFurSuitBrown
+  id: ClothingMaskFurSuitBrownUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingNeckFurSuitBrown
+  id: ClothingNeckFurSuitBrownUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+
+
+
+- type: entity
+  parent: ClothingHandsFurSuitBlack
+  id: ClothingHandsFurSuitBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingArmorFurSuitBlack
+  id: ClothingArmorFurSuitBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingFeetFurSuitBlack
+  id: ClothingFeetFurSuitBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHeadFurSuitBlack
+  id: ClothingHeadFurSuitBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingMaskFurSuitBlack
+  id: ClothingMaskFurSuitBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingNeckFurSuitBlack
+  id: ClothingNeckFurSuitBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/blue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHandsFurSuitBlue
+  id: ClothingHandsFurSuitBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingArmorFurSuitBlue
+  id: ClothingArmorFurSuitBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingFeetFurSuitBlue
+  id: ClothingFeetFurSuitBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadFurSuitBlue
+  id: ClothingHeadFurSuitBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingMaskFurSuitBlue
+  id: ClothingMaskFurSuitBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingNeckFurSuitBlue
+  id: ClothingNeckFurSuitBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+
+- type: entity
+  parent: ClothingHandsFurSuitBlack
+  id: ClothingHandsFurSuitDBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingArmorFurSuitBlack
+  id: ClothingArmorFurSuitDBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingFeetFurSuitBlack
+  id: ClothingFeetFurSuitDBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHeadFurSuitBlack
+  id: ClothingHeadFurSuitDBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingMaskFurSuitBlack
+  id: ClothingMaskFurSuitDBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingNeckFurSuitBlack
+  id: ClothingNeckFurSuitDBlue
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/darkblue.rsi
+    state: icon
+
+- type: entity
+  parent: ClothingHandsFurSuitDBlue
+  id: ClothingHandsFurSuitDBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingArmorFurSuitDBlue
+  id: ClothingArmorFurSuitDBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingFeetFurSuitDBlue
+  id: ClothingFeetFurSuitDBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadFurSuitDBlue
+  id: ClothingHeadFurSuitDBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingMaskFurSuitDBlue
+  id: ClothingMaskFurSuitDBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingNeckFurSuitDBlue
+  id: ClothingNeckFurSuitDBlueUnrem
+  noSpawn: true
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Unremoveable
+
+- type: entity
+  parent: Clothing
+  id: ClothingHandsFurSuitWhiteLight
+  components:
+  #- type: QualityOfItem
+  #  qualityWeights:
+  #    0: 0
+  #    1: 0
+  #    2: 0
+  #    3: 100
+  #    4: 0
+  #    5: 0
+  #    6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+  - type: Clothing
+    slots: [gloves]
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+  - type: Insulated
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.98
+        Slash: 0.98
+        Piercing: 0.98
+  - type: ExplosionResistance
+    damageCoefficient: 0.98
+  - type: ClothingSpeedModifier
+    walkModifier: 1.02
+    sprintModifier: 1.02
+  - type: MeleeWeapon
+    attackRate: 0.8
+    damage:
+      types:
+        Slash: 4
+        Piercing: 2
+    animation: WeaponArcClaw
+    soundHit:
+     collection: AlienClaw
+  - type: Icon
+    sprite: Imperial/Medieval/Clothing/Werewolf/white.rsi
+    state: icon
+  - type: StaminaDamageOnHit
+    damage: 6
+  - type: Sharp

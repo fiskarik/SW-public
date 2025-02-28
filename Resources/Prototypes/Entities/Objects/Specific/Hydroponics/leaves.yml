@@ -6,6 +6,8 @@
   id: LeavesCannabis
   description: "Recently legalized in most galaxies."
   components:
+  - type: QuestItem # imperial medieval
+    contractName: "конопля" # imperial medieval
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/cannabis.rsi
   - type: Produce
@@ -17,7 +19,8 @@
         reagents:
         - ReagentId: THC
           Quantity: 15
-
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetLeavesCannabis # imperial medieval
 
 - type: entity
   name: dried cannabis leaves
@@ -65,7 +68,7 @@
       - Smokable
   - type: Item
     size: Tiny
-    
+
 - type: entity
   name: rainbow cannabis leaves
   parent: LeavesCannabis
@@ -200,10 +203,14 @@
   id: LeavesTobacco
   description: "Dry them out to make some smokes."
   components:
+  - type: QuestItem # imperial medieval
+    contractName: "табак" # imperial medieval
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/tobacco.rsi
   - type: Produce
     seedId: tobacco
+  - type: StealTarget # imperial medieval
+    stealGroup: MedievalGetLeavesTobacco # imperial medieval
 
 - type: entity
   name: dried tobacco leaves

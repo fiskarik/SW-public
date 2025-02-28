@@ -1,0 +1,308 @@
+- type: loadoutEffectGroup
+  id: TravellerTimer4hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalTraveller
+      time: 144 # 00 RETURN AFTER STRESSTEST
+
+- type: loadoutEffectGroup
+  id: TravellerTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalTraveller
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: BardTimer4hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalBard
+      time: 144 # 00 RETURN AFTER STRESSTEST
+
+- type: loadoutEffectGroup
+  id: BardTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalBard
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: BardTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalBard
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: BumTimer4hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalBum
+      time: 144 # 00 RETURN AFTER STRESSTEST
+
+- type: loadoutEffectGroup
+  id: BumTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalBum
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: BumTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalBum
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: InnkeeperTimer4hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalInnkeeper
+      time: 144 # 00 RETURN AFTER STRESSTEST
+
+- type: loadoutEffectGroup
+  id: InnkeeperTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalInnkeeper
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: InnkeeperTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalInnkeeper
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: ChaplainTimer4hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalChaplain
+      time: 144 # 00 RETURN AFTER STRESSTEST
+
+- type: loadoutEffectGroup
+  id: ChaplainTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalChaplain
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: ChaplainTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalChaplain
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: LegionAndInsurgencyTimer5hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Legion
+      time: 18 # 00 RETURN AFTER STRESSTEST0
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Insurgency
+      time: 18 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: TravellerTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMedievalTraveller
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: LegionTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Legion
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: LegionTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Legion
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: InsurgencyTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Insurgency
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: InsurgencyTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Insurgency
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: BandTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Band
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: BandTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Band
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: CollegiumTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Collegium
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: CollegiumTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Collegium
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: TribeTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Tribe
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: TribeTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Tribe
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: MercTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Merc
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: CraftersTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Crafters
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: MercTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Merc
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: TradersTimer5hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Traders
+      time: 18 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: TradersTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Traders
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: TradersTimer30hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Traders
+      time: 108 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: MedievalTimer10hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 36 # 00 RETURN AFTER STRESSTEST0
+
+- type: loadoutEffectGroup
+  id: MedievalTimer4hours
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:OverallPlaytimeRequirement
+      time: 144 # 00 RETURN AFTER STRESSTEST

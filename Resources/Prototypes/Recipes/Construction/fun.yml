@@ -1,4 +1,5 @@
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Бананиумовый клаксон # Imperial Recipes Locale
   id: HornBananium
   graph: BananiumHorn

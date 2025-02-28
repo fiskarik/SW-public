@@ -37,6 +37,7 @@
               max: 3
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: золотой туалет
   id: GoldToilet
   graph: GoldToiletGraph

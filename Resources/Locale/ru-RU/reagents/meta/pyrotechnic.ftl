@@ -4,7 +4,7 @@ reagent-desc-thermite = Смесь, которая становится край
 reagent-name-napalm = напалм
 reagent-desc-napalm = Немножко огнеопасен.
 
-reagent-name-phlogiston = флогистон
+reagent-name-phlogiston = зелье
 reagent-desc-phlogiston = Подожжёт и заставит вас гореть.
 
 reagent-name-chlorine-trifluoride = CLF3
