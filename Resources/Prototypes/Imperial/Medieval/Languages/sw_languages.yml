@@ -1,0 +1,16 @@
+- type: language
+  id: Goblin
+  roundstart: false
+  priority: 2
+  parent: BaseVocalLanguage
+  speech: !type:Generic
+    obfuscateSyllables: true
+    replacement:
+    - бу
+    - шу
+    - му
+    - на
+    - ту
+    - та
+    - ба
+    - ша

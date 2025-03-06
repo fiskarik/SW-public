@@ -1096,6 +1096,10 @@
   - type: TakeName
   #- type: IdentityFaction
   #  faction: "гоблины"
+  - type: LanguageSpeaker
+    languages:
+      Goblin: Speak
+      Common: Understand
 
 - type: entity
   parent: MobChicken
