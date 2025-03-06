@@ -20,22 +20,6 @@
     - state: welded
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 425
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          path: /Audio/Imperial/Medieval/ES_Wood_Break_8_-_SFX_Producer.ogg
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          MaterialWoodPlank1:
-            min: 2
-            max: 4
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
   - type: InteractionOutline
   - type: Physics
     bodyType: Static
@@ -76,8 +60,8 @@
   - type: StaticPrice
     price: 50
   - type: Construction
-    graph: CrateGenericSteel
-    node: crategenericsteel
+    graph: CrateLivestock
+    node: cratelivestock
     containers:
       - entity_storage
   - type: TimedDespawn
