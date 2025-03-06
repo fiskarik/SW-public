@@ -140,37 +140,80 @@
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
-    - !type:TileNotBlocked
+  - !type:TileNotBlocked ""
 
 - type: constructionGraph
   id: MedievalCampfireCraft
   start: start
   graph:
-    - node: start
-      actions:
-        - !type:DestroyEntity {}
-      edges:
-        - to: MedievalCampfireCraft
-          completed:
-            - !type:SnapToGrid { }
-          steps:
-            - material: WoodPlank
-              amount: 18
-              doAfter: 3
-    - node: MedievalCampfireCraft
-      entity: MedievalCampfireCraft
-      edges:
-        - to: start
-          completed:
-            - !type:SpawnPrototype
-              prototype: MaterialWoodPlank
-              amount: 12
-          steps:
-            - tool: Prying
-              doAfter: 1
-
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: MedievalCampfireCraft
+      completed:
+      - !type:SnapToGrid {}
+      steps:
+      - material: WoodPlank
+        amount: 18
+        doAfter: 3
+  - node: MedievalCampfireCraft
+    entity: MedievalCampfireCraft
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: MaterialWoodPlank
+        amount: 12
+      steps:
+      - tool: Prying
+        doAfter: 1
   #- type: Damageable
   #- type: Anchorable
+
+- type: construction
+  id: MedievalhydroponicsSoilCraft
+  name: заготовка грядки
+  description: Подходит, чтобы начать фермеское дело.
+  graph: MedievalhydroponicsSoilCraft
+  startNode: start
+  targetNode: MedievalhydroponicsSoilCraft
+  category: construction-category-furniture
+  icon:
+    sprite: Imperial/Medieval/CraftBosses/dirt.rsi
+    state: icon
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked ""
+
+- type: constructionGraph
+  id: MedievalhydroponicsSoilCraft
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: MedievalhydroponicsSoilCraft
+      completed:
+      - !type:SnapToGrid {}
+      steps:
+      - material: MedievalGlina
+        amount: 5
+        doAfter: 3
+  - node: MedievalhydroponicsSoilCraft
+    entity: MedievalhydroponicsSoilCraft
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: MedievalGlina
+        amount: 5
+      steps:
+      - tool: Prying
+        doAfter: 1
 
 - type: entity
   name: MedievalClothWorkingPlaceCraft
@@ -295,6 +338,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/CraftBosses/dirt.rsi
     state: icon
+  - type: Construction
+    graph: MedievalhydroponicsSoilCraft
+    node: MedievalhydroponicsSoilCraft
   #- type: Damageable
   #- type: Anchorable
 
@@ -1017,12 +1063,11 @@
   components:
   - type: Destructible
     thresholds:
-    - trigger:
-        !type:DamageTrigger
+    - trigger: !type:DamageTrigger
         damage: 300
       behaviors:
       - !type:DoActsBehavior
-        acts: ["Destruction"]
+        acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         offset: 0
         spawn:
@@ -1041,8 +1086,7 @@
   - type: Fixtures
     fixtures:
       fix1:
-        shape:
-          !type:PhysShapeCircle
+        shape: !type:PhysShapeCircle
           radius: 0.9
         density: 50
         mask:
@@ -1053,7 +1097,6 @@
     follow: true
     location: Medieval boss golem
 
-
 - type: entity
   name: ab
   description: ab
@@ -1062,12 +1105,11 @@
   components:
   - type: Destructible
     thresholds:
-    - trigger:
-        !type:DamageTrigger
+    - trigger: !type:DamageTrigger
         damage: 300
       behaviors:
       - !type:DoActsBehavior
-        acts: ["Destruction"]
+        acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         offset: 0
         spawn:
@@ -1086,8 +1128,7 @@
   - type: Fixtures
     fixtures:
       fix1:
-        shape:
-          !type:PhysShapeCircle
+        shape: !type:PhysShapeCircle
           radius: 0.9
         density: 50
         mask:
@@ -1106,12 +1147,11 @@
   components:
   - type: Destructible
     thresholds:
-    - trigger:
-        !type:DamageTrigger
+    - trigger: !type:DamageTrigger
         damage: 300
       behaviors:
       - !type:DoActsBehavior
-        acts: ["Destruction"]
+        acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         offset: 0
         spawn:
@@ -1130,8 +1170,7 @@
   - type: Fixtures
     fixtures:
       fix1:
-        shape:
-          !type:PhysShapeCircle
+        shape: !type:PhysShapeCircle
           radius: 0.9
         density: 50
         mask:
