@@ -1,6 +1,6 @@
 - type: department
   id: Freelancer
-  name: department-freeelancer
+  name: department-freelancer
   description: department-freelancer-description
   color: "#CCCCCC"
   roles:
