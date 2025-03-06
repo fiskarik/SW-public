@@ -4922,3 +4922,6 @@ ent-MedievalCommsCrystallColl = кристалл связи коллегии
 ent-MedievalCommsCrystallLeg = кристалл связи легиона
     .desc = Кристалл связи позволяет получать сообщения лидера фракции даже с другого конца острова.
     .suffix = { "Средневековье" }
+ent-MedievalLateMobSpawnerMedievalMobSpiderStrongCave = замедленный спавнер кошмарного паука
+ent-MedievalTimedSpawnerMedievalMobSpiderStrongCave = Периодический спавнер кошмарный пещерный паук
+    .suffix = { "Средневековье, спавнер" }

@@ -66,7 +66,7 @@
 
 - type: entity
   id: MedievalLateMobSpawnerMedievalMobSpiderStrongCave
-  name: Замедленный спавнер кошмарного паука
+  name: late mob spawn cave strong spider
   parent: MedievalLateMobSpawnerBase
   components:
   - type: SlowMobSpawn
