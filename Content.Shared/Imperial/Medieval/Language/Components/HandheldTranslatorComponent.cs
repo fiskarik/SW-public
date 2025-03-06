@@ -3,7 +3,7 @@ using Content.Shared.Whitelist;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared.ADT.Language;
+namespace Content.Shared.Imperial.Medieval.Language;
 
 /// <summary>
 /// Компонент, дающий знание языков, когда находится в руках и активен

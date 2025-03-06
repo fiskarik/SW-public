@@ -1,13 +1,13 @@
 using System.Linq;
 using System.Text;
-using Content.Shared.ADT.Language;
+using Content.Shared.Imperial.Medieval.Language;
 using Robust.Shared.Random;
 using Robust.Shared.Prototypes;
 using Content.Server.GameTicking.Events;
 using Content.Server.Chat.Systems;
 using Content.Server.Mind;
 
-namespace Content.Server.ADT.Language;
+namespace Content.Server.Imperial.Medieval.Language;
 
 public sealed partial class LanguageSystem : SharedLanguageSystem
 {

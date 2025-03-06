@@ -1,6 +1,6 @@
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
-using Content.Shared.ADT.Language;
+using Content.Shared.Imperial.Medieval.Language;
 using Content.Shared.Chat;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Speech;
@@ -10,7 +10,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
-namespace Content.Server.ADT.Language;
+namespace Content.Server.Imperial.Medieval.Language;
 
 /// <summary>
 /// Язык, который выглядит для незнающих как эмоут

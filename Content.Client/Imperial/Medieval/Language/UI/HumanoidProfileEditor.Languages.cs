@@ -1,6 +1,6 @@
 using System.Linq;
 using Content.Client.Imperial.Medieval.Language.UI;
-using Content.Shared.ADT.Language;
+using Content.Shared.Imperial.Medieval.Language;
 using Content.Shared.Humanoid.Prototypes;
 using Robust.Client.UserInterface.Controls;
 

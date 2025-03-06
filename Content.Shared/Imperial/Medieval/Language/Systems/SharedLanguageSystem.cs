@@ -9,7 +9,7 @@ using Content.Shared.Hands.EntitySystems;
 using System.Linq;
 using Content.Shared.Implants.Components;
 
-namespace Content.Shared.ADT.Language;
+namespace Content.Shared.Imperial.Medieval.Language;
 
 public abstract partial class SharedLanguageSystem : EntitySystem
 {

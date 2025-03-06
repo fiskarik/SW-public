@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Text.RegularExpressions;
-using Content.Shared.ADT.Language;
+using Content.Shared.Imperial.Medieval.Language;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;

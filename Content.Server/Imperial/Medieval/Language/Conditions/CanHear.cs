@@ -1,9 +1,9 @@
 using System.Diagnostics.CodeAnalysis;
-using Content.Server.ADT.Chat;
-using Content.Shared.ADT.Language;
+using Content.Server.Imperial.Medieval.Chat;
+using Content.Shared.Imperial.Medieval.Language;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.ADT.Language;
+namespace Content.Server.Imperial.Medieval.Language;
 
 /// <summary>
 /// Сообщение не увидят глухие персонажи

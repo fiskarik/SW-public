@@ -1,4 +1,4 @@
-namespace Content.Shared.ADT.Language;
+namespace Content.Shared.Imperial.Medieval.Language;
 
 /// <summary>
 /// Получает все языки сущности, на которую вызывается

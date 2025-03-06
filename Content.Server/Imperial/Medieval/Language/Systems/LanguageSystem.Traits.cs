@@ -1,10 +1,10 @@
-using Content.Server.ADT.Chat;
+using Content.Server.Imperial.Medieval.Chat;
 using Content.Server.Radio;
-using Content.Shared.ADT.Language;
+using Content.Shared.Imperial.Medieval.Language;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Popups;
 
-namespace Content.Server.ADT.Language;
+namespace Content.Server.Imperial.Medieval.Language;
 
 public sealed partial class LanguageSystem
 {

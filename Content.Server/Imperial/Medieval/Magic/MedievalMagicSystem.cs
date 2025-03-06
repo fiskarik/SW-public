@@ -6,7 +6,7 @@ using Content.Server.Imperial.Medieval.Magic.MedievalHomingProjectile;
 using Content.Server.Imperial.MouseInput;
 using Content.Server.Imperial.TargetOverlay;
 using Content.Server.Weapons.Ranged.Systems;
-using Content.Shared.ADT.Language;
+using Content.Shared.Imperial.Medieval.Language;
 using Content.Shared.Damage;
 using Content.Shared.Imperial.Medieval.Magic;
 using Content.Shared.Tag;

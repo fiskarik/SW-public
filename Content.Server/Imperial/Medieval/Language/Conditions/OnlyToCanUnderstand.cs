@@ -1,7 +1,7 @@
-using Content.Shared.ADT.Language;
+using Content.Shared.Imperial.Medieval.Language;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.ADT.Language;
+namespace Content.Server.Imperial.Medieval.Language;
 
 /// <summary>
 /// Сообщение увидят ТОЛЬКО те, кто владеет языком. Полезно для языков наподобие локального коллективного разума.

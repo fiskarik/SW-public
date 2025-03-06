@@ -2,7 +2,7 @@ using Content.Shared.Implants.Components;
 using Robust.Shared.Containers;
 using Content.Shared.Implants;
 
-namespace Content.Shared.ADT.Language;
+namespace Content.Shared.Imperial.Medieval.Language;
 
 public abstract partial class SharedLanguageSystem
 {

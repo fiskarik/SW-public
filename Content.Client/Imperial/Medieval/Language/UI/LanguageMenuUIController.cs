@@ -1,5 +1,5 @@
 using Content.Client.Gameplay;
-using Content.Shared.ADT.Language;
+using Content.Shared.Imperial.Medieval.Language;
 using Robust.Client.UserInterface.Controllers;
 using Robust.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Controls;
@@ -11,7 +11,7 @@ namespace Content.Client.Imperial.Medieval.Language.UI;
 
 public sealed class LanguageMenuUIController : UIController, IOnStateEntered<GameplayState>, IOnStateExited<GameplayState>
 {
-    public LanguageMenuWindow? _menu;
+    private LanguageMenuWindow? _menu;
     private MenuButton? LanguagesButton => UIManager.GetActiveUIWidgetOrNull<Content.Client.UserInterface.Systems.MenuBar.Widgets.GameTopMenuBar>()?.LanguagesButton;
 
     [Dependency] private readonly IPlayerManager _player = default!;

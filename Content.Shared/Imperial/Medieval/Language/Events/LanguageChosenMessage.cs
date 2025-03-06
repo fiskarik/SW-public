@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.ADT.Language;
+namespace Content.Shared.Imperial.Medieval.Language;
 
 /// <summary>
 /// Отправляется клиентом при выборе языка в меню

@@ -2,7 +2,7 @@ using System.Linq;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 
-namespace Content.Shared.ADT.Language;
+namespace Content.Shared.Imperial.Medieval.Language;
 
 [Prototype("language")]
 public sealed class LanguagePrototype : IPrototype, IInheritingPrototype

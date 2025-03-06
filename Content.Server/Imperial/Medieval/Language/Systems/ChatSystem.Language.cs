@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Shared.ADT.Language;
+using Content.Shared.Imperial.Medieval.Language;
 using Content.Shared.Chat;
 using Content.Shared.Ghost;
 using Robust.Shared.Player;

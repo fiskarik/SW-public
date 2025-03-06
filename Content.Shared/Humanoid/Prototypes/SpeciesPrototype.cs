@@ -1,4 +1,4 @@
-using Content.Shared.ADT.Language;
+using Content.Shared.Imperial.Medieval.Language;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 

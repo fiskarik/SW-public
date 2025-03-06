@@ -1,7 +1,7 @@
 using Content.Shared.Speech;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared.ADT.Language;
+namespace Content.Shared.Imperial.Medieval.Language;
 
 [ImplicitDataDefinitionForInheritors]
 public partial interface ILanguageCondition

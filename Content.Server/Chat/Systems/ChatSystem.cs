@@ -34,8 +34,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
-using Content.Shared.ADT.Language;  // ADT Languages
-using Content.Server.ADT.Language;  // ADT Languages
+using Content.Shared.Imperial.Medieval.Language;
+using Content.Server.Imperial.Medieval.Language;
 using Content.Shared.Interaction;
 using Content.Server.Imperial.Sponsors;
 
@@ -65,7 +65,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly ReplacementAccentSystem _wordreplacement = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
-    [Dependency] private readonly LanguageSystem _language = default!;  // ADT Languages
+    [Dependency] private readonly LanguageSystem _language = default!;  // imperial medieval Languages
     [Dependency] private readonly SponsorsManager _sponsorsManager = default!;
 
     public const int VoiceRange = 10; // how far voice goes in world units
@@ -154,9 +154,9 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool checkRadioPrefix = true,
         bool ignoreActionBlocker = false,
         Color? color = null,                // Impreial Medieval Magic
-        LanguagePrototype? language = null) // ADT Languages
+        LanguagePrototype? language = null) // imperial medieval Languages
     {
-        TrySendInGameICMessage(source, message, desiredType, hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal, hideLog, shell, player, nameOverride, checkRadioPrefix, ignoreActionBlocker, color, language);  // ADT Languages
+        TrySendInGameICMessage(source, message, desiredType, hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal, hideLog, shell, player, nameOverride, checkRadioPrefix, ignoreActionBlocker, color, language);  // imperial medieval Languages
     }
 
     /// <summary>
@@ -182,7 +182,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool checkRadioPrefix = true,
         bool ignoreActionBlocker = false,
         Color? color = null,                // Impreial Medieval Magic
-        LanguagePrototype? language = null  // ADT Languages
+        LanguagePrototype? language = null  // imperial medieval Languages
         )
     {
         if (HasComp<GhostComponent>(source))
@@ -245,7 +245,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             return;
 
         // This message may have a radio prefix, and should then be whispered to the resolved radio channel
-        if (checkRadioPrefix && (language ?? _language.GetCurrentLanguage(source)).LanguageType is Generic gen) // ADT Tweaked
+        if (checkRadioPrefix && (language ?? _language.GetCurrentLanguage(source)).LanguageType is Generic gen) // imperial medieval Tweaked
         {
             if (TryProccessRadioMessage(source, message, out var modMessage, out var channel)) // Accent fix
             {
@@ -258,13 +258,13 @@ public sealed partial class ChatSystem : SharedChatSystem
         switch (desiredType)
         {
             case InGameICChatType.Speak:
-                SendEntitySpeak(source, message, range, nameOverride, hideLog, ignoreActionBlocker, color, language);  // ADT Languages
+                SendEntitySpeak(source, message, range, nameOverride, hideLog, ignoreActionBlocker, color, language);  // imperial medieval Languages
                 break;
             case InGameICChatType.Whisper:
-                SendEntityWhisper(source, message, range, null, nameOverride, hideLog, ignoreActionBlocker, color, language);  // ADT Languages
+                SendEntityWhisper(source, message, range, null, nameOverride, hideLog, ignoreActionBlocker, color, language);  // imperial medieval Languages
                 break;
             case InGameICChatType.Emote:
-                SendEntityEmote(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);     // ADT Languages
+                SendEntityEmote(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);     // imperial medieval Languages
                 break;
         }
     }
@@ -428,19 +428,19 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool hideLog = false,
         bool ignoreActionBlocker = false,
         Color? color = null, // Impreial Medieval Magic
-        LanguagePrototype? language = null  // ADT Languages
+        LanguagePrototype? language = null  // imperial medieval languages
         )
     {
-        // if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)    // ADT Commented
+        // if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)    // imperial medieval Commented
         //     return;
 
-        //var message = TransformSpeech(source, originalMessage);   // ADT Commented
+        //var message = TransformSpeech(source, originalMessage);   // imperial medieval Commented
         var message = originalMessage;
 
         if (message.Length == 0)
             return;
 
-        // ADT Languages start
+        // imperial medieval Languages start
         if (language == null)
             language = _language.GetCurrentLanguage(source);
 
@@ -452,7 +452,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                     return;
             }
         }
-        // ADT Languages end
+        // imperial medieval Languages end
 
         var speech = GetSpeechVerb(source, message);
 
@@ -472,7 +472,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                 speech = proto;
         }
 
-        // ADT Languages start
+        // imperial medieval Languages start
         bool shouldPunctuate = _configurationManager.GetCVar(CCVars.ChatPunctuation);
         // Capitalizing the word I only happens in English, so we check language here
         bool shouldCapitalizeTheWordI = (!CultureInfo.CurrentCulture.IsNeutralCulture && CultureInfo.CurrentCulture.Parent.Name == "en")
@@ -483,35 +483,35 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (!success)
             return;
 
-        // ADT - Вырезал старую часть начиная с GetLanguageColoredMessages, заканчивая SendInVoiceRange, так как вся логика теперь находится в языках
+        // imperial medieval - Вырезал старую часть начиная с GetLanguageColoredMessages, заканчивая SendInVoiceRange, так как вся логика теперь находится в языках
 
         if (language.LanguageType.RaiseEvent)
         {
-            var ev = new EntitySpokeEvent(source, resultMessage, language, null, null);  // ADT message => resultMessage
+            var ev = new EntitySpokeEvent(source, resultMessage, language, null, null);  // imperial medieval message => resultMessage
             RaiseLocalEvent(source, ev, true);
         }
-        // ADT Languages end
+        // imperial medieval Languages end
 
         // To avoid logging any messages sent by entities that are not players, like vendors, cloning, etc.
         // Also doesn't log if hideLog is true.
         if (!HasComp<ActorComponent>(source) || hideLog)
             return;
 
-        if (originalMessage == message)
+        if (originalMessage == resultMessage)   // imperial medieval languages: message -> resultMessage
         {
             if (name != Name(source))
-                _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Say from {ToPrettyString(source):user} as {name}: {originalMessage}.");
+                _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Say from {ToPrettyString(source):user} as {name}: {originalMessage}. Language: {language.LocalizedName} ({language.ID})");  // imperial medieval languages logging
             else
-                _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Say from {ToPrettyString(source):user}: {originalMessage}.");
+                _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Say from {ToPrettyString(source):user}: {originalMessage}. Language: {language.LocalizedName} ({language.ID})");    // imperial medieval languages logging
         }
         else
         {
             if (name != Name(source))
                 _adminLogger.Add(LogType.Chat, LogImpact.Low,
-                    $"Say from {ToPrettyString(source):user} as {name}, original: {originalMessage}, transformed: {message}.");
+                    $"Say from {ToPrettyString(source):user} as {name}, original: {originalMessage}, transformed: {resultMessage}. Language: {language.LocalizedName} ({language.ID})");    // imperial medieval languages logging
             else
                 _adminLogger.Add(LogType.Chat, LogImpact.Low,
-                    $"Say from {ToPrettyString(source):user}, original: {originalMessage}, transformed: {message}.");
+                    $"Say from {ToPrettyString(source):user}, original: {originalMessage}, transformed: {resultMessage}. Language: {language.LocalizedName} ({language.ID})");  // imperial medieval languages logging
         }
     }
 
@@ -524,10 +524,10 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool hideLog = false,
         bool ignoreActionBlocker = false,
         Color? color = null, // Impreial Medieval Magic
-        LanguagePrototype? language = null  // ADT Languages
+        LanguagePrototype? language = null  // imperial medieval Languages
         )
     {
-        // if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)    // ADT Commented
+        // if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)    // imperial medieval Commented
         //     return;
 
         //var message = TransformSpeech(source, FormattedMessage.RemoveMarkupOrThrow(originalMessage));
@@ -537,7 +537,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         var obfuscatedMessage = ObfuscateMessageReadability(message, 0.2f);
 
-        // ADT Languages start
+        // imperial medieval Languages start
         if (language == null)
             language = _language.GetCurrentLanguage(source);
 
@@ -549,7 +549,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                     return;
             }
         }
-        // ADT Languages end
+        // imperial medieval Languages end
 
         // get the entity's name by visual identity (if no override provided).
         string nameIdentity = FormattedMessage.EscapeText(nameOverride ?? Identity.Name(source, EntityManager));
@@ -565,7 +565,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             RaiseLocalEvent(source, nameEv);
             name = nameEv.VoiceName;
         }
-        // ADT Languages start
+        // imperial medieval Languages start
 
         bool shouldPunctuate = _configurationManager.GetCVar(CCVars.ChatPunctuation);
         // Capitalizing the word I only happens in English, so we check language here
@@ -578,31 +578,31 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (!success)
             return;
 
-        // ADT - Вырезал старую часть, связанную с построением сообщений и их отправкой. Всё теперь в языках
-        // ADT Languages end
+        // imperial medieval - Вырезал старую часть, связанную с построением сообщений и их отправкой. Всё теперь в языках
+        // imperial medieval Languages end
 
-        if (language.LanguageType.RaiseEvent)   // ADT Tweaked
+        if (language.LanguageType.RaiseEvent)   // imperial medieval languages
         {
             var ev = new EntitySpokeEvent(source, resultMessage, language, channel, resultObfMessage, true);
             RaiseLocalEvent(source, ev, true);
         }
 
         if (!hideLog)
-            if (originalMessage == message)
+            if (originalMessage == resultMessage) // imperial medieval languages: message -> resultMessage
             {
                 if (name != Name(source))
-                    _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Whisper from {ToPrettyString(source):user} as {name}: {originalMessage}.");
+                    _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Whisper from {ToPrettyString(source):user} as {name}: {originalMessage}. Language: {language.LocalizedName} ({language.ID})");  // imperial medieval languages logging
                 else
-                    _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Whisper from {ToPrettyString(source):user}: {originalMessage}.");
+                    _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Whisper from {ToPrettyString(source):user}: {originalMessage}. Language: {language.LocalizedName} ({language.ID})");    // imperial medieval languages logging
             }
             else
             {
                 if (name != Name(source))
                     _adminLogger.Add(LogType.Chat, LogImpact.Low,
-                    $"Whisper from {ToPrettyString(source):user} as {name}, original: {originalMessage}, transformed: {message}.");
+                    $"Whisper from {ToPrettyString(source):user} as {name}, original: {originalMessage}, transformed: {resultMessage}. Language: {language.LocalizedName} ({language.ID})");    // imperial medieval languages logging
                 else
                     _adminLogger.Add(LogType.Chat, LogImpact.Low,
-                    $"Whisper from {ToPrettyString(source):user}, original: {originalMessage}, transformed: {message}.");
+                    $"Whisper from {ToPrettyString(source):user}, original: {originalMessage}, transformed: {resultMessage}. Language: {language.LocalizedName} ({language.ID})");  // imperial medieval languages logging
             }
     }
 
@@ -632,7 +632,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         if (checkEmote)
             TryEmoteChatInput(source, action);
-        SendInVoiceRange(ChatChannel.Emotes, action, wrappedMessage, wrappedMessage, source, range, author, ignoreLanguage: true);  // ADT Languages
+        SendInVoiceRange(ChatChannel.Emotes, action, wrappedMessage, wrappedMessage, source, range, author, ignoreLanguage: true);  // imperial medieval languages
         if (!hideLog)
             if (name != Name(source))
                 _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Emote from {ToPrettyString(source):user} as {name}: {action}");
@@ -666,7 +666,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             ("entityName", name),
             ("message", FormattedMessage.EscapeText(message)));
 
-        SendInVoiceRange(ChatChannel.LOOC, message, wrappedMessage, wrappedMessage, source, hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal, player.UserId, ignoreLanguage: true); // ADT Languages
+        SendInVoiceRange(ChatChannel.LOOC, message, wrappedMessage, wrappedMessage, source, hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal, player.UserId, ignoreLanguage: true); // imperial medieval Languages
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"LOOC from {player:Player}: {message}");
     }
 
@@ -747,9 +747,9 @@ public sealed partial class ChatSystem : SharedChatSystem
     /// <summary>
     ///     Sends a chat message to the given players in range of the source entity.
     /// </summary>
-    public void SendInVoiceRange(ChatChannel channel, string message, string wrappedMessage, string wrappedLanguageMessage, EntityUid source, ChatTransmitRange range, NetUserId? author = null, ProtoId<LanguagePrototype>? language = null, bool ignoreLanguage = false)  // ADT Languages
+    public void SendInVoiceRange(ChatChannel channel, string message, string wrappedMessage, string wrappedLanguageMessage, EntityUid source, ChatTransmitRange range, NetUserId? author = null, ProtoId<LanguagePrototype>? language = null, bool ignoreLanguage = false)  // imperial medieval Languages
     {
-        // ADT Languages start
+        // imperial medieval Languages start
         var lang = language != null ? _prototypeManager.Index(language.Value) : _language.GetCurrentLanguage(source);
 
         foreach (var (session, data) in GetRecipients(source, VoiceRange))
@@ -784,7 +784,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             else
                 _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
         }
-        // ADT Languages end
+        // imperial medieval Languages end
 
         _replay.RecordServerMessage(new ChatMessage(channel, message, wrappedMessage, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
     }
@@ -882,21 +882,21 @@ public sealed partial class ChatSystem : SharedChatSystem
     }
 
     [ValidatePrototypeId<ReplacementAccentPrototype>]
-    public static readonly string[] ChatSanitize_Accent = { "chatsanitize", "adt_chatsanitize" }; // ADT-Tweak
+    public static readonly string[] ChatSanitize_Accent = { "chatsanitize", "imperial medieval_chatsanitize" }; // imperial medieval-Tweak
 
     public string SanitizeMessageReplaceWords(string message)
     {
         if (string.IsNullOrEmpty(message)) return message;
 
         var msg = message;
-        // ADT-Tweak-start: теперь можно обрабатывать сразу несколько прототипов списка общих акцентов.
+        // imperial medieval-Tweak-start: теперь можно обрабатывать сразу несколько прототипов списка общих акцентов.
         foreach (var accent in ChatSanitize_Accent)
         {
             msg = _wordreplacement.ApplyReplacements(msg, accent);
         }
         // ... ... ^_^
         // msg = _wordreplacement.ApplyReplacements(msg, ChatSanitize_Accent);
-        // ADT-Tweak-end
+        // imperial medieval-Tweak-end
         return msg;
     }
 

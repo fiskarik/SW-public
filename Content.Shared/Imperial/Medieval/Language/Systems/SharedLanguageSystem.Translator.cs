@@ -3,7 +3,7 @@ using Content.Shared.Examine;
 using Content.Shared.Hands.Components;
 using Content.Shared.Toggleable;
 
-namespace Content.Shared.ADT.Language;
+namespace Content.Shared.Imperial.Medieval.Language;
 
 public abstract partial class SharedLanguageSystem
 {

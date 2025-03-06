@@ -1,4 +1,4 @@
-namespace Content.Server.ADT.Language;
+namespace Content.Server.Imperial.Medieval.Language;
 
 /// <summary>
 /// При добавлении удаляет все языки сущности, добавляет язык жестов и добавляет <see cref="DeafComponent"/>

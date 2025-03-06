@@ -2,7 +2,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.ADT.Language;
+namespace Content.Shared.Imperial.Medieval.Language;
 
 /// <summary>
 /// Данный компонент позволяет сущности понимать и говорить на языках
