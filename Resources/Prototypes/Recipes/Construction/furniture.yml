@@ -429,6 +429,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Чёрный причудливый стол # Imperial Recipes Locale
   id: TableFancyBlack
   graph: Table
@@ -446,6 +447,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Синий причудливый стол # Imperial Recipes Locale
   id: TableFancyBlue
   graph: Table
@@ -463,6 +465,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Голубой причудливый стол # Imperial Recipes Locale
   id: TableFancyCyan
   graph: Table
@@ -480,6 +483,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Зелёный причудливый стол # Imperial Recipes Locale
   id: TableFancyGreen
   graph: Table
@@ -497,6 +501,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Оранжевый причудливый стол # Imperial Recipes Locale
   id: TableFancyOrange
   graph: Table
@@ -514,6 +519,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Фиолетовый причудливый стол # Imperial Recipes Locale
   id: TableFancyPurple
   graph: Table
@@ -531,6 +537,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Розовый причудливый стол # Imperial Recipes Locale
   id: TableFancyPink
   graph: Table
@@ -548,6 +555,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Красный причудливый стол # Imperial Recipes Locale
   id: TableFancyRed
   graph: Table
@@ -565,6 +573,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   name: Белый причудливый стол # Imperial Recipes Locale
   id: TableFancyWhite
   graph: Table
@@ -746,6 +755,7 @@
     - !type:TileNotBlocked
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: Curtains
   name: Шторы # Imperial Recipes Locale
   description: Содержат менее 1 процента ртути. # Imperial Recipes Locale
@@ -761,6 +771,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: CurtainsBlack
   name: Чёрные шторы # Imperial Recipes Locale
   description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
@@ -776,6 +787,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: Синие шторы
   name: Синие шторы # Imperial Recipes Locale
   description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
@@ -791,6 +803,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: CurtainsCyan
   name: Голубые шторы # Imperial Recipes Locale
   description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
@@ -806,6 +819,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: CurtainsGreen
   name: Зелёные шторы # Imperial Recipes Locale
   description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
@@ -821,6 +835,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: CurtainsOrange
   name: Оранжевые шторы # Imperial Recipes Locale
   description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
@@ -836,6 +851,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: CurtainsPink
   name: Розовые шторы # Imperial Recipes Locale
   description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
@@ -851,6 +867,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: CurtainsPurple
   name: Фиолетовые шторы # Imperial Recipes Locale
   description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
@@ -866,6 +883,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: CurtainsRed
   name: Красные шторы # Imperial Recipes Locale
   description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
@@ -881,6 +899,7 @@
   canBuildInImpassable: true
 
 - type: construction
+  hide: true # imperial medieval craft disable
   id: CurtainsWhite
   name: Белые шторы # Imperial Recipes Locale
   description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
