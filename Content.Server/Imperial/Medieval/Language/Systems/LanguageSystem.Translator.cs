@@ -16,8 +16,6 @@ public sealed partial class LanguageSystem
 
     private void InitializeTranslator()
     {
-        base.Initialize();
-
         SubscribeLocalEvent<HandheldTranslatorComponent, ActivateInWorldEvent>(OnTranslatorActivateInWorld);
         SubscribeLocalEvent<HandheldTranslatorComponent, UseInHandEvent>(OnTranslatorUseInHand);
 

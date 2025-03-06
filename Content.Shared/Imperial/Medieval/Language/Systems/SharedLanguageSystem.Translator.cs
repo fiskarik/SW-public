@@ -11,8 +11,6 @@ public abstract partial class SharedLanguageSystem
 
     private void InitializeTranslator()
     {
-        base.Initialize();
-
         SubscribeLocalEvent<HandheldTranslatorComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<HandheldTranslatorComponent, GetLanguagesEvent>(OnTranslatorGetLanguages);
         SubscribeLocalEvent<HandsComponent, GetLanguagesEvent>(OnGetLanguages);
