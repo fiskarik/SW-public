@@ -107,7 +107,7 @@ public sealed partial class Generic : ILanguageType
         name = FormattedMessage.EscapeText(name);
 
         // Build messages
-        var wrappedMessage = Loc.GetString(verb.Bold && Font == null ? "chat-manager-entity-say-bold-wrap-message" : "chat-manager-entity-say-wrap-message",
+        var wrappedMessage = Loc.GetString(verb.Bold && Font == null ? "chat-manager-entity-lang-say-bold-wrap-message" : "chat-manager-entity-lang-say-wrap-message",
             ("entityName", name),
             ("verb", Loc.GetString(random.Pick(verbStrings))),
             ("fontType", font),
@@ -116,7 +116,7 @@ public sealed partial class Generic : ILanguageType
             ("defaultSize", verb.FontSize),
             ("message", coloredMessage));
 
-        var wrappedLanguageMessage = Loc.GetString(verb.Bold && Font == null ? "chat-manager-entity-say-bold-wrap-message" : "chat-manager-entity-say-wrap-message",
+        var wrappedLanguageMessage = Loc.GetString(verb.Bold && Font == null ? "chat-manager-entity-lang-say-bold-wrap-message" : "chat-manager-entity-lang-say-wrap-message",
             ("entityName", name),
             ("verb", Loc.GetString(random.Pick(verbStrings))),
             ("fontType", font),
@@ -164,7 +164,7 @@ public sealed partial class Generic : ILanguageType
 
         name = FormattedMessage.EscapeText(name);
 
-        var wrappedMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
+        var wrappedMessage = Loc.GetString("chat-manager-entity-lang-whisper-wrap-message",
             ("entityName", name),
             ("fontType", Font ?? "NotoSansDisplayItalic"),
             ("fontSize", FontSize ?? 11),
@@ -172,7 +172,7 @@ public sealed partial class Generic : ILanguageType
             ("defaultSize", 11),
             ("message", accentMessage));
 
-        var wrappedobfuscatedMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
+        var wrappedobfuscatedMessage = Loc.GetString("chat-manager-entity-lang-whisper-wrap-message",
             ("entityName", nameIdentity),
             ("fontType", Font ?? "NotoSansDisplayItalic"),
             ("fontSize", FontSize ?? 11),
@@ -180,28 +180,28 @@ public sealed partial class Generic : ILanguageType
             ("defaultSize", 11),
             ("message", obfuscatedMessage));
 
-        var wrappedUnknownMessage = Loc.GetString("chat-manager-entity-whisper-unknown-wrap-message",
+        var wrappedUnknownMessage = Loc.GetString("chat-manager-entity-lang-whisper-unknown-wrap-message",
             ("fontType", Font ?? "NotoSansDisplayItalic"),
             ("fontSize", FontSize ?? 11),
             ("defaultFont", "NotoSansDisplayItalic"),
             ("defaultSize", 11),
             ("message", obfuscatedMessage));
 
-        var wrappedLanguageMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
+        var wrappedLanguageMessage = Loc.GetString("chat-manager-entity-lang-whisper-wrap-message",
             ("fontType", Font ?? "NotoSansDisplayItalic"),
             ("fontSize", FontSize ?? 11),
             ("defaultFont", "NotoSansDisplayItalic"),
             ("defaultSize", 11),
             ("entityName", name), ("message", languageMessage));
 
-        var wrappedobfuscatedLanguageMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
+        var wrappedobfuscatedLanguageMessage = Loc.GetString("chat-manager-entity-lang-whisper-wrap-message",
             ("fontType", Font ?? "NotoSansDisplayItalic"),
             ("fontSize", FontSize ?? 11),
             ("defaultFont", "NotoSansDisplayItalic"),
             ("defaultSize", 11),
             ("entityName", nameIdentity), ("message", obfuscatedLanguageMessage));
 
-        var wrappedUnknownLanguageMessage = Loc.GetString("chat-manager-entity-whisper-unknown-wrap-message",
+        var wrappedUnknownLanguageMessage = Loc.GetString("chat-manager-entity-lang-whisper-unknown-wrap-message",
             ("fontType", Font ?? "NotoSansDisplayItalic"),
             ("fontSize", FontSize ?? 11),
             ("defaultFont", "NotoSansDisplayItalic"),

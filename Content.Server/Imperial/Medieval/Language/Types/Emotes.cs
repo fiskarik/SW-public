@@ -100,7 +100,7 @@ public sealed partial class Emotes : ILanguageType
         name = FormattedMessage.EscapeText(name);
 
         // Build messages
-        var wrappedMessage = Loc.GetString(verb.Bold ? "chat-manager-entity-say-bold-wrap-message" : "chat-manager-entity-say-wrap-message",
+        var wrappedMessage = Loc.GetString(verb.Bold ? "chat-manager-entity-lang-say-bold-wrap-message" : "chat-manager-entity-lang-say-wrap-message",
             ("entityName", name),
             ("verb", Loc.GetString(random.Pick(verbStrings))),
             ("fontType", font),
@@ -183,7 +183,7 @@ public sealed partial class Emotes : ILanguageType
         string font = Font != null && Font != "" ? Font : verb.FontId;
 
         name = FormattedMessage.EscapeText(name);
-        var wrappedMessage = Loc.GetString(verb.Bold ? "chat-manager-entity-say-bold-wrap-message" : "chat-manager-entity-say-wrap-message",
+        var wrappedMessage = Loc.GetString(verb.Bold ? "chat-manager-entity-lang-say-bold-wrap-message" : "chat-manager-entity-lang-say-wrap-message",
             ("entityName", name),
             ("verb", Loc.GetString(random.Pick(verbStrings))),
             ("fontType", font),
