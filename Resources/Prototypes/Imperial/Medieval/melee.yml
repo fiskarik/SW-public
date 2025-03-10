@@ -852,8 +852,6 @@
   name: MedievalPickaxe
   description: MedievalPickaxe
   components:
-  - type: Item
-    size: Large
   - type: EmitSoundOnLand
     sound:
       collection: MedievalIronDrop
@@ -896,8 +894,6 @@
   name: MedievalPickaxe
   description: MedievalPickaxe
   components:
-  - type: Item
-    size: Large
   - type: EmitSoundOnLand
     sound:
       collection: MedievalIronDrop
