@@ -1,0 +1,40 @@
+- type: medievalFaction
+  id: Voluntary
+  name: вольные
+  showKnown: false
+
+- type: medievalFaction
+  id: Legion
+  name: легион
+  knownFactions:
+    Insurgency: "[color=red]Чертов предатель, сбежал(а) из легиона![/color]"
+
+- type: medievalFaction
+  id: Insurgency
+  name: мятежники
+  knownFactions:
+    Legion: "[color=red]Бывший сослуживец, грязный легионер![/color]"
+
+- type: medievalFaction
+  id: Bandit
+  name: банда
+
+- type: medievalFaction
+  id: Merc
+  name: наёмники
+
+- type: medievalFaction
+  id: Collegium
+  name: коллегия
+
+- type: medievalFaction
+  id: Tribe
+  name: племя
+
+- type: medievalFaction
+  id: Miner
+  name: шахтёры
+
+- type: medievalFaction
+  id: Cult
+  name: культ

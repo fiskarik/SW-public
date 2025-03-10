@@ -1,0 +1,19 @@
+using Robust.Shared.Prototypes;
+
+namespace Content.Shared.Friends.Prototypes;
+
+[Prototype]
+public sealed class MedievalFactionPrototype : IPrototype
+{
+    [IdDataField]
+    public string ID { get; private set; } = default!;
+
+    [DataField(required: true)]
+    public string Name = default!;
+
+    [DataField]
+    public bool ShowKnown = true;
+
+    [DataField]
+    public Dictionary<ProtoId<MedievalFactionPrototype>, string> KnownFactions = new();
+}
