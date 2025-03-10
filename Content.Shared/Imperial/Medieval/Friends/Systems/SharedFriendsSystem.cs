@@ -18,7 +18,7 @@ public abstract class SharedFriendsSystem : EntitySystem
     {
         if (!TryComp<FriendsComponent>(args.Examiner, out var me) || uid == args.Examiner)
             return;
-        if (!Identity.Entity(uid, EntityManager).Equals(Name(uid)))
+        if (!Identity.Name(uid, EntityManager).Equals(Name(uid)))
             return;
 
         string job = comp.MemberData.Job;
