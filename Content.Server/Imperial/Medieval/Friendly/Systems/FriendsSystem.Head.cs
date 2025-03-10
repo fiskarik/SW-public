@@ -5,6 +5,7 @@ using Content.Shared.Friends.Prototypes;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Friends;
+
 public sealed partial class FriendsSystem
 {
     private void InitializeHead()
