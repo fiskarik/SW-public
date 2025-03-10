@@ -118,3 +118,18 @@
   roles:
   - MedievalCult
   - MedievalCultLeader
+
+- type: department 
+  id: FactionLeaders
+  name: department-FactionLeaders
+  description: department-FactionLeaders-description
+  color: "#CCCCCC"
+  roles:
+  - MedievalLegionLegat
+  - MedievalInsurgencyLegat
+  - MedievalBanditLeader
+  - MedievalCollegiumLeader
+  - MedievalTribeLeader
+  - MedievalMercLeader
+  - MedievalMinerLeader
+  - MedievalCultLeader
