@@ -906,9 +906,9 @@
 
 - type: entity
   parent: Pen
-  id: MedievalPenFeather
-  name: MedievalPenFeather
-  description: MedievalPenFeather
+  id: MedievalPen
+  name: MedievalPen
+  description: MedievalPen
   components:
   - type: Sprite
     sprite: Imperial/Medieval/Misc/medieval_paper.rsi
