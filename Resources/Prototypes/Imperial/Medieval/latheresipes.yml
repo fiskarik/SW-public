@@ -228,12 +228,12 @@
     MedievalEbonitIngot: 12
   result: MedievalClothingOuterArmorEbonit2
 
-- type: CP14Recipe
-  id: MedievalClothingOuterArmorUpIron2
-  craftTime: 26
-  stacks:
-    MedievalSteelIngot: 52
-  result: MedievalClothingOuterArmorUpIron2
+#- type: CP14Recipe
+#  id: MedievalClothingOuterArmorUpIron2
+#  craftTime: 26
+#  stacks:
+#    MedievalSteelIngot: 52
+#  result: MedievalClothingOuterArmorUpIron2
 
 - type: CP14Recipe
   id: MedievalDoorLock
