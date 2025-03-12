@@ -74,9 +74,9 @@
   description: 
   components:
   - type: Sprite
-    sprite: Imperial/Medieval/Clothing/Head/meow.rsi
+    sprite: Imperial/Medieval/Clothing/Head/wreath.rsi
   - type: Clothing
-    sprite: Imperial/Medieval/Clothing/Head/meow.rsi
+    sprite: Imperial/Medieval/Clothing/Head/wreath.rsi
   - type: Item
     size: Normal
 
@@ -88,9 +88,9 @@
   description: 
   components:
   - type: Sprite
-    sprite: Imperial/Medieval/Clothing/Head/wanderhat.rsi
+    sprite: Imperial/Medieval/Clothing/Head/wanderehat.rsi
   - type: Clothing
-    sprite: Imperial/Medieval/Clothing/Head/wanderhat.rsi
+    sprite: Imperial/Medieval/Clothing/Head/wanderehat.rsi
   - type: Item
     size: Normal
 
