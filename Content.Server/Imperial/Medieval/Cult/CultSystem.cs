@@ -24,6 +24,10 @@ using Content.Shared.Random.Helpers;
 using Content.Server.Administration;
 using Content.Shared.Alert;
 using Content.Shared.Inventory;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs;
+using Content.Server.SSDFree;
+using Content.Server.SSDFree.Components;
 
 namespace Content.Server.Cult
 {
@@ -43,6 +47,7 @@ namespace Content.Server.Cult
         [Dependency] private readonly MetaDataSystem _metaData = default!;
         [Dependency] private readonly AlertsSystem _alertsSystem = default!;
         [Dependency] private readonly InventorySystem _inventorySystem = default!;
+        [Dependency] private readonly SSDFreeSystem _ssdFreeSystem = default!;
 
         private const float DefaultReloadTimeSeconds = 10f;
 
@@ -307,7 +312,9 @@ namespace Content.Server.Cult
                     {
                         foreach (var center in EntityManager.EntityQuery<CultRitualCenterComponent>())
                         {
+                            var isDead = false;
                             var victim = GetVictim(center.Owner);
+                            if (TryComp<MobThresholdsComponent>(victim, out var thresholdsComponent) && thresholdsComponent.CurrentThresholdState == MobState.Dead) isDead = true;
                             if (victim != center.Owner)
                             {
                                 if (TryComp<BloodstreamComponent>(victim, out var blood))
@@ -320,7 +327,8 @@ namespace Content.Server.Cult
                                         var axform = Transform(altar.Owner);
                                         var acoords = axform.Coordinates;
                                         Spawn("MedievalCultCrystallRed", acoords);
-                                        Spawn("MedievalCultCrystallRed", acoords);
+                                        if (!isDead) Spawn("MedievalCultCrystallRed", acoords);
+                                        if (isDead && TryComp<SSDFreeComponent>(victim, out var ssdfreeComp) && _playerManager.TryGetSessionByEntity(victim, out var session)) _ssdFreeSystem.GoToSSD(victim, session.UserId, false, ssdfreeComp);
                                     }
                                     _audioSystem.PlayPvs(comp.SuccesSound, uid);
 
@@ -411,7 +419,7 @@ namespace Content.Server.Cult
                 case "swordshield":
                     if (IsCultistsEnough(uid, 3) && CheckCrystals(uid, comp, 1, 2))
                     {
-                        Spawn("MedievalClothingOuterArmorCultUp", coords);
+                        Spawn("MedievalClothin%uterArmorCultUp", coords);
                         Spawn("ShockWaveEffect", coords);
                         _audioSystem.PlayPvs(comp.SuccesSound, uid);
                         _chat.TrySendInGameICMessage(uid, "Ритуал призыва защитной робы выполнен успешно", InGameICChatType.Speak, false);
