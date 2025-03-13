@@ -1,0 +1,52 @@
+<PanelContainer
+    xmlns="https://spacestation14.io"
+    xmlns:cc="clr-namespace:Content.Client.Administration.UI.CustomControls"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client">
+    <PanelContainer.PanelOverride>
+        <gfx:StyleBoxFlat BackgroundColor="#16161a"/>
+    </PanelContainer.PanelOverride>
+    <BoxContainer Name="Box"
+                  Margin="4"
+                  VerticalExpand="True"
+                  Orientation="Vertical"
+                  Access="Public">
+        <BoxContainer Name="GroupBox"
+                      Orientation="Horizontal"
+                      VerticalAlignment="Top"
+                      SetHeight="50">
+            <PanelContainer Name="GroupNamePanel"
+                            HorizontalAlignment="Left"
+                            Margin="5 5"
+                            VerticalExpand="True">
+                <RichTextLabel Name="GroupNameText"
+                               Text="Без группы"
+                               HorizontalExpand="True"
+                               Margin="15 0"
+                               VerticalExpand="True"
+                               HorizontalAlignment="Center"/>
+            </PanelContainer>
+            <PanelContainer Name="ObjectivePanel"
+                            HorizontalAlignment="Left"
+                            Margin="5 10"
+                            VerticalExpand="True">
+                <PanelContainer.PanelOverride>
+                    <gfx:StyleBoxFlat BackgroundColor="#474747"/>
+                </PanelContainer.PanelOverride>
+                <RichTextLabel Name="Objective"
+                               Text=""
+                               HorizontalExpand="True"
+                               VerticalExpand="True"
+                               Margin="15 0"
+                               HorizontalAlignment="Center"/>
+            </PanelContainer>
+            <Button Name="SetObjectiveButton"
+                    ModulateSelfOverride="#00000000"
+                    Margin="10"
+                    VerticalExpand="True">
+                <RichTextLabel Name="SetObjectiveButtonText"
+                               Text="Назначить задачу"
+                               VerticalExpand="True"/>
+            </Button>
+        </BoxContainer>
+    </BoxContainer>
+</PanelContainer>

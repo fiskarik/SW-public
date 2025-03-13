@@ -2,68 +2,108 @@
     xmlns="https://spacestation14.io"
     xmlns:cc="clr-namespace:Content.Client.Administration.UI.CustomControls"
     xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:friends="clr-namespace:Content.Client.Imperial.Medieval.Friends.UI"
     HorizontalExpand="True"
-    MinHeight="45"
-    SetHeight="45"
-    Margin="2 4">
-    <BoxContainer Name="Main" Orientation="Horizontal">
-        <PanelContainer MinSize="2 5" VerticalExpand="True" Margin="4" >
-            <PanelContainer.PanelOverride>
-                <gfx:StyleBoxFlat BackgroundColor="#45372a" />
-            </PanelContainer.PanelOverride>
-        </PanelContainer>
-        <BoxContainer HorizontalExpand="True" SizeFlagsStretchRatio="2">
-            <RichTextLabel Name="NameLabel" HorizontalAlignment="Center"/>
-        </BoxContainer>
-        <PanelContainer MinSize="2 5" VerticalExpand="True" Margin="4" >
-            <PanelContainer.PanelOverride>
-                <gfx:StyleBoxFlat BackgroundColor="#45372a" />
-            </PanelContainer.PanelOverride>
-        </PanelContainer>
-        <BoxContainer HorizontalExpand="True" SizeFlagsStretchRatio="1">
-            <RichTextLabel Name="JobLabel" HorizontalAlignment="Center"/>
-        </BoxContainer>
-        <PanelContainer MinSize="2 5" VerticalExpand="True" Margin="4" >
-            <PanelContainer.PanelOverride>
-                <gfx:StyleBoxFlat BackgroundColor="#45372a" />
-            </PanelContainer.PanelOverride>
-        </PanelContainer>
-        <PanelContainer HorizontalExpand="True" SizeFlagsStretchRatio="3">
-            <PanelContainer.PanelOverride>
-                <gfx:StyleBoxFlat BackgroundColor="#33271d" />
-            </PanelContainer.PanelOverride>
-            <BoxContainer HorizontalExpand="True" SizeFlagsStretchRatio="3">
-                <LineEdit Name="ObjectiveEdit" HorizontalExpand="True" ModulateSelfOverride="#00000000" />
+    MinHeight="50"
+    SetHeight="50"
+    Margin="4 4">
+    <PanelContainer StyleClasses="windowPanel"
+                    HorizontalExpand="True"
+                    VerticalExpand="True"
+                    VerticalAlignment="Center">
+        <BoxContainer Name="Main"
+                      Orientation="Horizontal"
+                      HorizontalExpand="True"
+                      VerticalExpand="True"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Center"
+                      Margin="5 10">
+            <BoxContainer Orientation="Horizontal"
+                          Margin="4 0"
+                          HorizontalExpand="True"
+                          SizeFlagsStretchRatio="3">
+                <RichTextLabel Name="Name"
+                               Text="Тест тестович"
+                               HorizontalAlignment="Left"/>
             </BoxContainer>
-        </PanelContainer>
-        <PanelContainer MinSize="2 5" VerticalExpand="True" Margin="4" >
-            <PanelContainer.PanelOverride>
-                <gfx:StyleBoxFlat BackgroundColor="#45372a" />
-            </PanelContainer.PanelOverride>
-        </PanelContainer>
-        <PanelContainer HorizontalExpand="True" SizeFlagsStretchRatio="1">
-            <PanelContainer.PanelOverride>
-                <gfx:StyleBoxFlat BackgroundColor="#33271d" />
-            </PanelContainer.PanelOverride>
-            <BoxContainer HorizontalExpand="True" SizeFlagsStretchRatio="1">
-                <LineEdit Name="GroupEdit" HorizontalExpand="True" ModulateSelfOverride="#00000000" />
+            <BoxContainer Name="GroupInfo"
+                          Margin="4 0"
+                          HorizontalExpand="True"
+                          VerticalExpand="True"
+                          VerticalAlignment="Center"
+                          SizeFlagsStretchRatio="4">
+                <BoxContainer Orientation="Horizontal"
+                              HorizontalExpand="True"
+                              VerticalExpand="True"
+                              VerticalAlignment="Center">
+                    <friends:ColoredOptionButton Name="GroupSelector"
+                                                 HorizontalExpand="True"
+                                                 StyleClasses="ButtonSquare"
+                                                 OptionStyleClasses="ButtonSquare"
+                                                 ModulateSelfOverride="#00000000"
+                                                 VerticalExpand="True"
+                                                 Margin="0"
+                                                 HideTriangle="True"
+                                                 HorizontalAlignment="Center"
+                                                 VerticalAlignment="Center">
+                        <BoxContainer VerticalExpand="True"
+                                HorizontalExpand="True">
+                            <PanelContainer VerticalExpand="True"
+                                    HorizontalExpand="True"
+                                    Margin="-7.5 -4">
+                                <PanelContainer.PanelOverride>
+                                    <gfx:StyleBoxFlat BackgroundColor="#1f1f24"/>
+                                </PanelContainer.PanelOverride>
+                                <RichTextLabel
+                                    Text="Назначить группу"
+                                    HorizontalExpand="True"
+                                    VerticalExpand="True"
+                                    Margin="0 0"
+                                    HorizontalAlignment="Center"/>
+                            </PanelContainer>
+                        </BoxContainer>
+                    </friends:ColoredOptionButton>
+                    <Button Name="GroupRemoveButton"
+                            HorizontalExpand="True"
+                            StyleClasses="ButtonSquare"
+                            Margin="-1"
+                            Visible="False">
+                        <BoxContainer Orientation="Horizontal">
+                            <TextureRect TextureScale="0.5 0.5"
+                                         Margin="1"
+                                         Stretch="KeepAspectCentered"
+                                         TexturePath="/Textures/Interface/Nano/cross.svg.png"
+                                         HorizontalAlignment="Left"/>
+                            <RichTextLabel Name="GroupRemoveButtonText"
+                                           Text=""
+                                           HorizontalExpand="True"
+                                           VerticalExpand="True"
+                                           Margin="4 0"
+                                           HorizontalAlignment="Right"/>
+                        </BoxContainer>
+                    </Button>
+                    <PanelContainer VerticalExpand="True"
+                                    Margin="10 0">
+                        <PanelContainer.PanelOverride>
+                            <gfx:StyleBoxFlat BackgroundColor="#474747"/>
+                        </PanelContainer.PanelOverride>
+                        <RichTextLabel Name="Objective"
+                                       Text="Test test"
+                                       HorizontalExpand="True"
+                                       VerticalExpand="True"
+                                       Margin="4 4"
+                                       Visible="True"/>
+                    </PanelContainer>
+                </BoxContainer>
             </BoxContainer>
-        </PanelContainer>
-        <PanelContainer MinSize="2 5" VerticalExpand="True" Margin="4" >
-            <PanelContainer.PanelOverride>
-                <gfx:StyleBoxFlat BackgroundColor="#45372a" />
-            </PanelContainer.PanelOverride>
-        </PanelContainer>
-        <TextureButton Name="RemoveButton"
-            TexturePath="/Textures/Interface/Nano/cross.svg.png"
-            MinSize="45 45" SetSize="45 45"
-            ModulateSelfOverride="Red"
-            ToolTip="Исключить участника из фракции."/>
-        <PanelContainer MinSize="2 5" VerticalExpand="True" Margin="4" >
-            <PanelContainer.PanelOverride>
-                <gfx:StyleBoxFlat BackgroundColor="#45372a" />
-            </PanelContainer.PanelOverride>
-        </PanelContainer>
-    </BoxContainer>
+        </BoxContainer>
+        <BoxContainer Margin="4 0"
+                      HorizontalAlignment="Right">
+            <Button Name="RemoveButton"
+                    ModulateSelfOverride="#00000000">
+                <RichTextLabel Text="Уволить"
+                               HorizontalAlignment="Left"/>
+            </Button>
+        </BoxContainer>
+    </PanelContainer>
 </Control>

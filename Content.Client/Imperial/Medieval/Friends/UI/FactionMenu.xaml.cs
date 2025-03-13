@@ -18,9 +18,6 @@ public sealed partial class FactionMenu : DefaultWindow
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
-        HeaderClass = "windowHeaderWood";
-        TitleClass = "windowTitleAlert";
-        GetChild(0).SetOnlyStyleClass("windowPanelWood");
     }
 
     public void Populate(Dictionary<NetEntity, FactionMemberData> data)
@@ -29,11 +26,23 @@ public sealed partial class FactionMenu : DefaultWindow
 
         foreach (var item in data)
         {
+            var group = item.Value.Group;
             var entry = new FactionMenuEntry(item.Key, item.Value);
-            entry.ObjectiveSet += (ent, obj) => ObjectiveSet?.Invoke(ent, obj);
-            entry.GroupSet += (ent, group) => GroupSet?.Invoke(ent, group);
-            entry.RemoveButtonPressed += args => RemoveButtonPressed?.Invoke(args);
-            Members.AddChild(entry);
+            EnsureContainer(group).AddChild(entry);
         }
+    }
+
+    private BoxContainer EnsureContainer(FactionMemberGroup group)
+    {
+        foreach (var item in Members.Children)
+        {
+            if (item is not FactionGroupPanel panel)
+                continue;
+            if (panel.Group == group)
+                return panel.Box;
+        }
+        var newPanel = new FactionGroupPanel(group);
+        Members.AddChild(newPanel);
+        return newPanel.Box;
     }
 }

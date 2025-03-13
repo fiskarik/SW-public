@@ -10,7 +10,6 @@ public sealed class FactionMenuUiController : UIController
     [Dependency] private readonly IEntityManager _entityManager = default!;
 
     private FactionMenu? _menu;
-    private FactionRemoveConfirmationMenu? _confirm;
 
     public void ToggleMenu(Dictionary<NetEntity, FactionMemberData> data)
     {
@@ -45,9 +44,6 @@ public sealed class FactionMenuUiController : UIController
 
     private void OpenConfirmationMenu(NetEntity ent)
     {
-        _confirm?.Dispose();
-        _confirm = new FactionRemoveConfirmationMenu(ent);
-        _confirm.OnConfirm += args => _entityManager.RaisePredictiveEvent(new RemoveFactionMemberMessage(ent));
     }
     private void ObjectiveSet(NetEntity ent, string obj)
     {
