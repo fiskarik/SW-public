@@ -7,18 +7,29 @@ public sealed class FactionMemberData
 {
     public string Name = "";
     public string Job = "";
-    public string Objective = "";
-    public string Group = "";
+    public string JobPrefix = "";
+    public FactionMemberGroup Group = FactionMemberGroup.None;
 
-    public FactionMemberData(string name, string job, string objective, string group)
+    public FactionMemberData(string name, string job, string jobPrefix, FactionMemberGroup group)
     {
         Name = name;
         Job = job;
-        Objective = objective;
+        JobPrefix = jobPrefix;
         Group = group;
     }
 
     public FactionMemberData()
     {
     }
+}
+
+[Serializable, NetSerializable]
+public enum FactionMemberGroup : byte
+{
+    None,
+    Alpha,
+    Bravo,
+    Delta,
+    Gamma,
+    Omega
 }

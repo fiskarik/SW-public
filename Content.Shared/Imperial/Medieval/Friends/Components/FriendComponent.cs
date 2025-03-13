@@ -1,18 +1,35 @@
 using Content.Shared.Friends.Prototypes;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 
-namespace Content.Shared.Friends.Components
+namespace Content.Shared.Friends.Components;
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+public sealed partial class FriendsComponent : Component
 {
-    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-    public sealed partial class FriendsComponent : Component
-    {
 
-        [DataField]
-        [AutoNetworkedField]
-        public ProtoId<MedievalFactionPrototype> Faction { get; set; } = string.Empty;
+    [DataField]
+    [AutoNetworkedField]
+    public ProtoId<MedievalFactionPrototype> Faction { get; set; } = string.Empty;
 
-        [AutoNetworkedField]
-        public FactionMemberData MemberData = new();
-    }
+    [AutoNetworkedField]
+    public EntityUid? FactionMenuActionEntity;
+
+    [DataField]
+    public EntProtoId FactionMenuAction = "BaseFactionMenuAction";
+
+    [DataField]
+    public int Priority = 1;
+
+    [DataField]
+    [AutoNetworkedField]
+    public FactionMenuAccess MenuAccess = FactionMenuAccess.None;
+}
+
+[Serializable, NetSerializable]
+public enum FactionMenuAccess : byte
+{
+    None,
+    Group,
+    Full
 }

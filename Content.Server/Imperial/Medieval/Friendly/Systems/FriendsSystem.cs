@@ -19,7 +19,7 @@ public sealed partial class FriendsSystem : SharedFriendsSystem
     public override void Initialize()
     {
         base.Initialize();
-        InitializeHead();
+        InitializeMenu();
 
         SubscribeLocalEvent<CloackMessageComponent, ComponentStartup>(OnStart);
         SubscribeLocalEvent<CloackMessageComponent, CloackMessageActionEvent>(OnCloackMessageAction);

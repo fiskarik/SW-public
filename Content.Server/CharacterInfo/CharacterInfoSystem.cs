@@ -1,11 +1,14 @@
-﻿using Content.Server.Mind;
+﻿using Content.Server.Friends;
+using Content.Server.Mind;
 using Content.Server.Roles;
 using Content.Server.Roles.Jobs;
 using Content.Shared.CharacterInfo;
+using Content.Shared.Friends;
 using Content.Shared.Friends.Components;
 using Content.Shared.Objectives;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Objectives.Systems;
+using Robust.Shared.Utility;
 
 namespace Content.Server.CharacterInfo;
 
@@ -15,6 +18,7 @@ public sealed class CharacterInfoSystem : EntitySystem
     [Dependency] private readonly MindSystem _minds = default!;
     [Dependency] private readonly RoleSystem _roles = default!;
     [Dependency] private readonly SharedObjectivesSystem _objectives = default!;
+    [Dependency] private readonly FriendsSystem _friends = default!;
 
     public override void Initialize()
     {
@@ -61,8 +65,15 @@ public sealed class CharacterInfoSystem : EntitySystem
         List<string> faction = new();
         if (TryComp<FriendsComponent>(entity, out var friend))
         {
-            faction.Add(friend.MemberData.Objective != "" ? $"Ваша текущая задача: {friend.MemberData.Objective}" : "Вам ещё не назначили задачу.");
-            faction.Add(friend.MemberData.Group != "" ? $"Вы находитесь в группе {friend.MemberData.Group}" : "Вас ещё не определили в группу.");
+            if (!_friends.TryGetFactionDataContainer(out var container))
+                return;
+
+            var data = container.Value.Comp.CachedMembers.GetValueOrDefault(friend.Faction)?.GetOrNew(GetNetEntity(entity));
+
+            if (_friends.TryGetFactionGroupObjective(friend.Faction, data?.Group ?? FactionMemberGroup.None, out var objective))
+                faction.Add(objective != "" ? $"Ваша текущая задача: {objective}" : "Вам ещё не назначили задачу.");
+
+            faction.Add(data?.Group != FactionMemberGroup.None ? $"Вы находитесь в группе {data?.Group}" : "Вас ещё не определили в группу.");
         }
         // Imperial medieval faction menu end
 
