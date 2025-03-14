@@ -15,5 +15,8 @@ public sealed class MedievalFactionPrototype : IPrototype
     public bool ShowKnown = true;
 
     [DataField]
+    public bool AllowHeadhunt = true;
+
+    [DataField]
     public Dictionary<ProtoId<MedievalFactionPrototype>, string> KnownFactions = new();
 }

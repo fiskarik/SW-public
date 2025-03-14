@@ -82,6 +82,7 @@ public sealed partial class FactionMenu : DefaultWindow
         Members.DisposeAllChildren();
         Faction = proto;
         _localData = data;
+        Headhunt.Visible = IoCManager.Resolve<IPrototypeManager>().Index(proto).AllowHeadhunt;
 
         foreach (var item in data)
         {
