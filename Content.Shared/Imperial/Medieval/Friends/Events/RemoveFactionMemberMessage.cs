@@ -9,9 +9,11 @@ namespace Content.Shared.Friends;
 public sealed partial class RemoveFactionMemberMessage : EntityEventArgs
 {
     public NetEntity Ent;
+    public bool Headhunt;
 
-    public RemoveFactionMemberMessage(NetEntity ent)
+    public RemoveFactionMemberMessage(NetEntity ent, bool headhunt)
     {
         Ent = ent;
+        Headhunt = headhunt;
     }
 }

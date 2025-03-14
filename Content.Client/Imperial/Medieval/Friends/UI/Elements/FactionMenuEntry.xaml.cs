@@ -6,9 +6,11 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 
-namespace Content.Client.Imperial.Medieval.Friends.UI;
+namespace Content.Client.Imperial.Medieval.Friends.UI.Elements;
 
-
+/// <summary>
+/// Панель, содержащая всю необходимую информацию о члене фракции
+/// </summary>
 [GenerateTypedNameReferences]
 public sealed partial class FactionMenuEntry : Control
 {
@@ -21,6 +23,7 @@ public sealed partial class FactionMenuEntry : Control
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
 
+        NameLabel.SetMessage($"{data.JobPrefix} {data.Name}");
         if (data.Group == FactionMemberGroup.None)
         {
             for (var i = 0; i < FriendsSystem.FactionGroups.Count; i++)
@@ -29,14 +32,19 @@ public sealed partial class FactionMenuEntry : Control
                 GroupSelector.AddItem(item.Item2, item.Item1, i);
             }
             GroupSelector.Select(0);
+            Objective.Visible = false;
             GroupSelector.OnItemSelected += args => GroupSet?.Invoke(ent, FriendsSystem.FactionGroups.ElementAt(args.Id).Key);
         }
         else
         {
+            // Переключение видимости элементов
             GroupRemoveButton.Visible = true;
             GroupSelector.Visible = false;
-            Objective.Text = objective;
             Objective.Visible = objective != string.Empty;
+
+            Objective.Text = objective;
+
+            // Кнопка исключения из группы
             GroupRemoveButtonText.Text = FriendsSystem.FactionGroups[data.Group].Item2;
             GroupRemoveButton.ModulateSelfOverride = FriendsSystem.FactionGroups[data.Group].Item1;
             GroupRemoveButton.OnPressed += args => GroupSet?.Invoke(ent, FactionMemberGroup.None);

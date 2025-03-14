@@ -23,7 +23,7 @@ public sealed class FactionMenuUiController : UIController
 
             _menu.ObjectiveSet += ObjectiveSet;
             _menu.GroupSet += GroupSet;
-            _menu.RemoveButtonPressed += OpenConfirmationMenu;
+            _menu.FirePressed += Fire;
 
             _menu.OpenCentered();
         }
@@ -31,7 +31,7 @@ public sealed class FactionMenuUiController : UIController
         {
             _menu.ObjectiveSet -= ObjectiveSet;
             _menu.GroupSet -= GroupSet;
-            _menu.RemoveButtonPressed -= OpenConfirmationMenu;
+            _menu.FirePressed -= Fire;
 
             _menu.Dispose();
             _menu = null;
@@ -43,8 +43,9 @@ public sealed class FactionMenuUiController : UIController
         _menu?.Populate(proto, data);
     }
 
-    private void OpenConfirmationMenu(NetEntity ent)
+    private void Fire(NetEntity ent)
     {
+        // todo
     }
 
     private void ObjectiveSet(FactionMemberGroup group, string obj)

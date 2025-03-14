@@ -5,8 +5,12 @@ using Robust.Client.Graphics;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 
-namespace Content.Client.Imperial.Medieval.Friends.UI;
+namespace Content.Client.Imperial.Medieval.Friends.UI.Elements;
 
+/// <summary>
+/// Панель для отображения членов фракции по группам.
+/// Позволяет редактировать их задачу
+/// </summary>
 [GenerateTypedNameReferences]
 public sealed partial class FactionGroupPanel : PanelContainer
 {
@@ -23,6 +27,9 @@ public sealed partial class FactionGroupPanel : PanelContainer
         if (group != FactionMemberGroup.None)
             GroupNameText.Text = FriendsSystem.FactionGroups[group].Item2;
 
+        SetObjectiveButton.Visible = group != FactionMemberGroup.None;
+        ObjectivePanel.Visible = group != FactionMemberGroup.None;
+
         if (groupObjective == string.Empty)
         {
             ObjectivePanel.Visible = false;
@@ -33,5 +40,19 @@ public sealed partial class FactionGroupPanel : PanelContainer
             Objective.Text = groupObjective;
             SetObjectiveButtonText.Text = "Изменить";
         }
+
+        SetObjectiveButton.OnPressed += args =>
+        {
+            SetObjectiveButton.Visible = false;
+            ObjectiveEdit.Visible = true;
+            ObjectiveEdit.Text = groupObjective;
+        };
+
+        ObjectiveEdit.OnTextChanged += args =>
+        {
+            ObjectiveEditTip.Visible = args.Text == string.Empty;
+        };
+
+        ObjectiveEdit.OnTextEntered += args => ObjectiveSet?.Invoke(group, args.Text);
     }
 }
