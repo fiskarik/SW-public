@@ -2552,7 +2552,7 @@
   #    6: 0
   - type: MeleeThrowOnHit
     distance: 6
-    stunTime: 1
+    stunTime: 2
     speed: 4.4
   - type: StaminaDamageOnHit
     damage: 18 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
