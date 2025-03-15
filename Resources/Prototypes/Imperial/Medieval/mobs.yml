@@ -10,9 +10,9 @@
     - state: vehicle
     netsync: false
     noRot: true
-  - type: Strap
-    buckleOffset: "0, 0"
-    maxBuckleDistance: 1
+  #- type: Strap
+  #  buckleOffset: "0, 0"
+  #  maxBuckleDistance: 1
   - type: MovementSpeedModifier
     acceleration: 1
     friction: 1
@@ -284,7 +284,7 @@
     makeSentient: true
     name: ghost-role-information-fox-name
     description: ghost-role-information-fox-description
-    rules: Вы - лиса. Охотьтесь на мелкую живность, исследуйте мир. Вам НЕ запрещается быть мирным.
+    rules: Вы - лиса. Охотьтесь на мелкую живность, исследуйте мир.
 
 - type: entity
   name: wolf
@@ -361,9 +361,9 @@
       35: 0.7
       45: 0.6
       60: 0.5
-  - type: Strap
-    buckleOffset: "0, 0"
-    maxBuckleDistance: 1
+  #- type: Strap
+  #  buckleOffset: "0, 0"
+  #  maxBuckleDistance: 1
   - type: NpcFactionMember
     factions:
     - Xeno
@@ -400,7 +400,7 @@
     makeSentient: true
     name: ghost-role-information-wolf-name
     description: ghost-role-information-wolf-description
-    rules: Вы - волк. Охотьтесь на живность, исследуйте мир. Вам запрещается быть мирным.
+    rules: Вы - волк. Охотьтесь на живность, исследуйте мир.
 
 - type: entity
   name: rabbit
@@ -473,10 +473,10 @@
     timesCanBeBiten: 1
   - type: LanguageSpeaker
     languages:
-      Common: Understand
+      #Common: Understand
       #Goblin: Speak
-      #Ancient: Speak
-      #Tribe: Speak
+      #Ancient: Understand
+      Tribe: Understand
       #Orc: Speak
       #Cursed: Speak
       #Growling: Speak
@@ -795,9 +795,9 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.4
     baseSprintSpeed: 3.4
-  - type: Strap
-    buckleOffset: "0, 0"
-    maxBuckleDistance: 1
+  #- type: Strap
+  #  buckleOffset: "0, 0"
+  #  maxBuckleDistance: 1
   - type: NpcFactionMember
     factions:
     - Xeno
@@ -817,8 +817,8 @@
     speed: 5
   - type: LanguageSpeaker
     languages:
-      Common: Understand
-      #Goblin: Speak
+      #Common: Understand
+      Goblin: Understand
       #Ancient: Speak
       #Tribe: Speak
       #Orc: Speak
@@ -838,7 +838,7 @@
     makeSentient: true
     name: ghost-role-information-bear-name
     description: ghost-role-information-bear-description
-    rules: Вы - медведь. Охотьтесь, исследуйте мир. Вам запрещается быть мирным.
+    rules: Вы - медведь. Охотьтесь, исследуйте мир.
 
 - type: entity
   name: hog
@@ -913,9 +913,9 @@
       40: 0.7
       80: 0.6
       110: 0.5
-  - type: Strap
-    buckleOffset: "0, 0"
-    maxBuckleDistance: 1
+  #- type: Strap
+  #  buckleOffset: "0, 0"
+  #  maxBuckleDistance: 1
   - type: NpcFactionMember
     factions:
     - Xeno
@@ -928,8 +928,8 @@
     timesCanBeBiten: 4
   - type: LanguageSpeaker
     languages:
-      Common: Understand
-      #Goblin: Speak
+      #Common: Understand
+      Goblin: Understand
       #Ancient: Speak
       #Tribe: Speak
       #Orc: Speak
@@ -1053,7 +1053,7 @@
     makeSentient: true
     name: ghost-role-information-hog-name
     description: ghost-role-information-hog-description
-    rules: Вы - кабан. Охотьтесь, исследуйте мир. Вам НЕ запрещается быть мирным.
+    rules: Вы - кабан. Охотьтесь, исследуйте мир.
   - type: MobMover
   - type: HTN
     rootTask:
@@ -1762,7 +1762,7 @@
         variation: 0.125
   - type: LanguageSpeaker
     languages:
-      Common: Understand
+      #Common: Understand
       #Goblin: Speak
       #Ancient: Speak
       #Tribe: Speak
