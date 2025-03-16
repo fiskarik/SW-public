@@ -253,7 +253,6 @@
     - Spear
   - type: MeleeThrowOnHit
     distance: 4
-    stunTime: 0.5
     speed: 2
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -307,7 +306,6 @@
     - Spear
   - type: MeleeThrowOnHit
     distance: 4
-    stunTime: 0.5
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -458,7 +456,6 @@
     slope: 1
   - type: MeleeThrowOnHit
     distance: 2
-    stunTime: 1
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -519,7 +516,6 @@
     slope: 1
   - type: MeleeThrowOnHit
     distance: 5
-    stunTime: 0.5
     speed: 3
   - type: StaminaDamageOnHit
     damage: 8 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -573,7 +569,6 @@
     size: Huge
   - type: MeleeThrowOnHit
     distance: 5
-    stunTime: 0.5
     speed: 3
   - type: StaminaDamageOnHit
     damage: 8 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -637,7 +632,7 @@
   #    6: 0
   - type: MeleeThrowOnHit
     distance: 6
-    stunTime: 2
+    speed: 3
   - type: StaminaDamageOnHit
     damage: 18 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
   - type: Meltable
@@ -945,8 +940,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 1
-    stunTime: 0.3
+    distance: 0.3
     speed: 0.7
   - type: Item
     size: Small
@@ -1519,7 +1513,6 @@
         friction: 0.2
   - type: MeleeThrowOnHit
     distance: 4
-    stunTime: 0.5
     speed: 2
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1581,7 +1574,6 @@
     quickEquip: false
   - type: MeleeThrowOnHit
     distance: 2
-    stunTime: 0.5
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 6 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1643,7 +1635,6 @@
     quickEquip: false
   - type: MeleeThrowOnHit
     distance: 2
-    stunTime: 0.5
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 7 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1721,7 +1712,6 @@
   #    6: 0
   - type: MeleeThrowOnHit
     distance: 5
-    stunTime: 0.5
     speed: 3
   - type: StaminaDamageOnHit
     damage: 8 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1799,7 +1789,6 @@
   #    6: 0
   - type: MeleeThrowOnHit
     distance: 5
-    stunTime: 0.5
     speed: 3
   - type: StaminaDamageOnHit
     damage: 7 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1872,7 +1861,6 @@
   #    6: 0
   - type: MeleeThrowOnHit
     distance: 5
-    stunTime: 0.5
     speed: 3
   - type: Meltable
     resourceCount: 7
@@ -2284,7 +2272,6 @@
         friction: 0.2
   - type: MeleeThrowOnHit
     distance: 4
-    stunTime: 0.5
     speed: 2
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2346,7 +2333,6 @@
     quickEquip: false
   - type: MeleeThrowOnHit
     distance: 2
-    stunTime: 0.5
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2408,7 +2394,6 @@
     quickEquip: false
   - type: MeleeThrowOnHit
     distance: 2
-    stunTime: 0.5
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 6 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2486,7 +2471,6 @@
   #    6: 0
   - type: MeleeThrowOnHit
     distance: 5
-    stunTime: 0.5
     speed: 3
   - type: StaminaDamageOnHit
     damage: 8 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2552,7 +2536,6 @@
   #    6: 0
   - type: MeleeThrowOnHit
     distance: 6
-    stunTime: 2
     speed: 4.4
   - type: StaminaDamageOnHit
     damage: 18 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2750,7 +2733,6 @@
   #    6: 0
   - type: MeleeThrowOnHit
     distance: 5
-    stunTime: 0.5
     speed: 4
   - type: StaminaDamageOnHit
     damage: 35 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -3425,7 +3407,6 @@
     quickEquip: false
   - type: MeleeThrowOnHit
     distance: 2
-    stunTime: 0.3
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 6 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -3495,7 +3476,6 @@
     quickEquip: false
   - type: MeleeThrowOnHit
     distance: 2
-    stunTime: 0.3
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 6 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -3549,7 +3529,6 @@
     quickEquip: false
   - type: MeleeThrowOnHit
     distance: 2
-    stunTime: 0.3
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 7 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
