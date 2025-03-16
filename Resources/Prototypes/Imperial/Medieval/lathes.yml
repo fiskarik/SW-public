@@ -1164,6 +1164,8 @@
     - MedievalClothingOuterArmorNorthern
     - MedievalNorthernGloves
     - MedievalClothingFeetNorthern
+    - MedievalPickaxeForStone
+    - MedievalPickaxeEbonit
 
 - type: entity
   parent: CP14BaseWorkbench
