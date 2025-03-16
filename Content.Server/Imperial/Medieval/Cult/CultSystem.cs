@@ -821,7 +821,7 @@ namespace Content.Server.Cult
                 if (rune.Bloody)
                 {
                     EnsureComp<TimedDespawnComponent>(rune.Owner, out var desp);
-                    desp.Lifetime = 0.1f;
+                    desp.Lifetime = 0.01f;
                 }
             }
 
