@@ -313,6 +313,12 @@ public abstract partial class SharedDoorSystem : EntitySystem
     {
         if (!Resolve(uid, ref door))
             return false;
+        if (TryComp<DoorBoltComponent>(uid, out var bolt) && bolt.BoltsDown) // imperial medieval start
+        {
+            if (_net.IsServer)
+                Audio.PlayPvs(door.DenySound, uid, AudioParams.Default.WithVolume(-3));
+            return false;
+        } // imperial medieval end
 
         if (!CanOpen(uid, door, user, quiet))
             return false;
