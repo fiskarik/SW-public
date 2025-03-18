@@ -123,7 +123,6 @@ namespace Content.Server.Cult
 
         private void OnMeleeHit(EntityUid uid, CultRitualMeleeComponent component, MeleeHitEvent args)
         {
-            if (!CheckCultWearing(args.User)) return;
             if (!HasComp<CultMemberComponent>(args.User)) return;
             foreach (var entity in args.HitEntities)
             {
@@ -132,6 +131,11 @@ namespace Content.Server.Cult
                 if (!TryComp<CultTeleportComponent>(from, out var teleport) || !teleport.Enabled) continue;
                 if (from != args.User)
                 {
+                    if (!CheckCultWearing(args.User))
+                    {
+                        _chat.TrySendInGameICMessage(args.User, "Нужны святые одеяния...", InGameICChatType.Whisper, false);
+                        return;
+                    }
                     var xform = Transform(from);
                     var coords = xform.Coordinates;
                     foreach (var target in _lookup.GetEntitiesInRange(coords, 2.5f))
@@ -299,7 +303,6 @@ namespace Content.Server.Cult
         }
         public void OnActivated(EntityUid uid, CultCheckPictureComponent comp, ActivateInWorldEvent args)
         {
-            if (!CheckCultWearing(args.User)) return;
             var xform = Transform(uid);
             var coords = xform.Coordinates;
             string figure = GetRuneFigure();
@@ -307,6 +310,23 @@ namespace Content.Server.Cult
             if (!TryComp<CultMemberComponent>(args.User, out var cultistritualist)) return;
 
             EnsureComp<SpeechComponent>(uid);
+            if (!CheckCultWearing(args.User))
+            {
+                _chat.TrySendInGameICMessage(uid, "Нужны святые одеяния... без них не провести ритуал", InGameICChatType.Whisper, false);
+                foreach (var rune in EntityManager.EntityQuery<CultBloodPaintComponent>())
+                {
+                    if (rune.Bloody)
+                    {
+                        EnsureComp<TimedDespawnComponent>(rune.Owner, out var desp);
+                        desp.Lifetime = 0.01f;
+                    }
+                }
+                return;
+            }
+
+
+
+
             switch (figure)
             {
                 case "christ":
