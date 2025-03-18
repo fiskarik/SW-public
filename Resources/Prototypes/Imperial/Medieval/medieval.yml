@@ -2772,6 +2772,21 @@
 #    state: egg
 
 - type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootNastyGrowth
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: flower
+  - type: Currency
+    price:
+      Revent: 20
+  - type: Item
+    size: Normal
+
+- type: entity
   name: multitool
   parent: BaseItem
   id: MedievalMultitool

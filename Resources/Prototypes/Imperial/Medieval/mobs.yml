@@ -3072,3 +3072,88 @@
     pack: MedievalSkeletAdvertise
     minimumWait: 9
     maximumWait: 28
+
+- type: entity
+  name: nasty growth
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobNastyGrowth
+  description: They're a golem.
+  components:
+  - type: TimedDespawn
+    lifetime: 180
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/nasty_growth.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: base
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: Puller
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      125: Dead
+  - type: Damageable
+    damageModifierSet: MedievalRespawn
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.05
+    baseSprintSpeed: 2.05
+  - type: NpcFactionMember
+    factions:
+    - Xeno
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      1: 1
+      50: 0.5
+      90: 0.9
+  - type: IgnoreSpiderWeb
+  - type: Thirst
+    baseDecayRate: 0
+  - type: Hunger
+    baseDecayRate: 0
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 1
+  - type: BasicEntityAmmoProvider
+    proto: MedievalAmmoSpike
+    capacity: 1
+    count: 1
+  - type: Gun
+    projectileSpeed: 8
+    fireRate: 0.8
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootNastyGrowth
+      amount: 1
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+
