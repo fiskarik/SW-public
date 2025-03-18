@@ -307,6 +307,22 @@
   result: MedievalSpearT3
 
 - type: CP14Recipe
+  id: MedievalSpearSulica
+  craftTime: 11
+  stacks:
+    MedievalIronIngot: 12
+    WoodPlank: 6
+  result: MedievalSpearSulica
+
+- type: CP14Recipe
+  id: MedievalSpearPilum
+  craftTime: 11
+  stacks:
+    MedievalIronIngot: 12
+    WoodPlank: 6
+  result: MedievalSpearPilum
+
+- type: CP14Recipe
   id: MedievalSpearT3Steel
   craftTime: 11
   stacks:
@@ -2221,7 +2237,7 @@
     MedievalSteelIngot: 8
     MedievalEbonitIngot: 5
   result: MedievalPickaxeEbonit
-  
+
 - type: CP14Recipe
   id: MedievalPickaxeForStone
   craftTime: 5
