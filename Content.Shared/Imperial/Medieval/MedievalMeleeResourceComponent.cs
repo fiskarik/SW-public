@@ -1,14 +1,15 @@
 using Content.Shared.Damage;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Prototypes;
+using Robust.Shared.GameStates;
 
-namespace Content.Server.MedievalMeleeResource.Components;
+namespace Content.Shared.MedievalMeleeResource.Components;
 
 
-[RegisterComponent]
+[RegisterComponent, AutoGenerateComponentState, NetworkedComponent]
 public sealed partial class MedievalMeleeResourceComponent : Component
 {
-    [DataField]
+    [DataField, AutoNetworkedField]
     public float Resource = 100f;
 
     [DataField]
@@ -17,7 +18,7 @@ public sealed partial class MedievalMeleeResourceComponent : Component
     [DataField]
     public float ResourceWaste = 0.35f;
 
-    [DataField]
+    [DataField, AutoNetworkedField]
     public string DamageState = "Full";
 
     [DataField(customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>)), ViewVariables(VVAccess.ReadOnly)]
