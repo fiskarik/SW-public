@@ -181,6 +181,9 @@
   - type: Key
     accesses:
     - MedievalKey
+  - type: Tag
+    tags:
+    - MedievalKey
 
 - type: entity
   parent: MedievalKeyStandard

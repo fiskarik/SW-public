@@ -5032,3 +5032,6 @@ ent-MedievalClothingNeckCloakCivGreen = плащ шахтеров
 ent-MedievalClothingNeckCloakCivBlue = плащ легиона
     .desc = Необходим для опознания свой/чужой
     .suffix = { "Средневековье, одежда" }
+ent-MedievalClothingOuterArmorBrigantin = кираса бригантины
+    .desc = Нагрудник из пластин, наклепанных на кожаную основу.
+    .suffix = { "Средневековье, одежда" }
