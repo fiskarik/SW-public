@@ -6,8 +6,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: leather
-  - type: PresetIdCard
-    job: LeatherKey
+  - type: Key
+    accesses:
+    - Atmospherics
 
 - type: entity
   parent: MedievalKeyStandard
@@ -17,8 +18,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: gate
-  - type: PresetIdCard
-    job: GuardKey
+  - type: Key
+    accesses:
+    - Security
 
 - type: entity
   parent: MedievalKeyStandard
@@ -28,8 +30,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: unknown
-  - type: PresetIdCard
-    job: UnknownKey
+  - type: Key
+    accesses:
+    - Maintenance
 
 - type: entity
   parent: MedievalKeyStandard
@@ -39,8 +42,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: farmer
-  - type: PresetIdCard
-    job: FarmerKey
+  - type: Key
+    accesses:
+    - Hydroponics
 
 - type: entity
   parent: MedievalKeyStandard
@@ -50,8 +54,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: gate
-  - type: PresetIdCard
-    job: GateKey
+  - type: Key
+    accesses:
+    - Medical
 
 - type: entity
   parent: MedievalKeyStandard
@@ -61,8 +66,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: blacksmith
-  - type: PresetIdCard
-    job: BlacksmithKey
+  - type: Key
+    accesses:
+    - Engineering
 
 - type: entity
   parent: MedievalKeyStandard
@@ -72,8 +78,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: wood
-  - type: PresetIdCard
-    job: WoodKey
+  - type: Key
+    accesses:
+    - ChiefEngineer
 
 - type: entity
   parent: MedievalKeyStandard
@@ -83,8 +90,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: maid
-  - type: PresetIdCard
-    job: MaidKey
+  - type: Key
+    accesses:
+    - Janitor
 
 - type: entity
   parent: MedievalKeyStandard
@@ -94,8 +102,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: secure
-  - type: PresetIdCard
-    job: GateKey
+  - type: Key
+    accesses:
+    - Medical
 
 - type: entity
   parent: MedievalKeyStandard
@@ -105,8 +114,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: chapel
-  - type: PresetIdCard
-    job: ChapelKey
+  - type: Key
+    accesses:
+    - Chapel
 
 - type: entity
   parent: MedievalKeyStandard
@@ -116,8 +126,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: alchem
-  - type: PresetIdCard
-    job: AlchemKey
+  - type: Key
+    accesses:
+    - Chemistry
 
 - type: entity
   parent: MedievalKeyStandard
@@ -127,8 +138,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: tavern
-  - type: PresetIdCard
-    job: TavernaKey
+  - type: Key
+    accesses:
+    - Bar
 
 - type: entity
   parent: MedievalKeyStandard
@@ -138,8 +150,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: king
-  - type: PresetIdCard
-    job: KingKey
+  - type: Key
+    accesses:
+    - Captain
 
 - type: entity
   parent: MedievalKeyStandard
@@ -149,8 +162,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: wizard
-  - type: PresetIdCard
-    job: WizardKey
+  - type: Key
+    accesses:
+    - Research
 
 - type: entity
   parent: Clothing
@@ -164,7 +178,9 @@
     - idcard
   - type: Item
     size: Tiny
-  - type: Access
+  - type: Key
+    accesses:
+    - MedievalKey
   - type: Tag
     tags:
     - MedievalKey
@@ -177,8 +193,9 @@
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: storage
-  - type: PresetIdCard
-    job: StorageKey
+  - type: Key
+    accesses:
+    - Cargo
 
 - type: job
   id: TavernaKey

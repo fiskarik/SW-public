@@ -73,8 +73,8 @@ namespace Content.Server.Cult
         private bool CheckCultWearing(EntityUid uid)
         {
             if (!HasComp<CultMemberComponent>(uid) || !TryComp<InventoryComponent>(uid, out var inventoryComponent)) return false;
-            var check1 = _inventorySystem.TryGetSlotEntity(uid, "outerclothing", out var slot1, inventoryComponent);
-            var check2 = _inventorySystem.TryGetSlotEntity(uid, "helmet", out var slot2, inventoryComponent);
+            var check1 = _inventorySystem.TryGetSlotEntity(uid, "outerClothing", out var slot1, inventoryComponent);
+            var check2 = _inventorySystem.TryGetSlotEntity(uid, "head", out var slot2, inventoryComponent);
             if (!check1 || !check2 || !HasComp<CultClothingComponent>(slot1) || !HasComp<CultClothingComponent>(slot2)) return false;
             return true;
         }

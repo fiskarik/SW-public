@@ -277,7 +277,7 @@
   stacks:
     MedievalRivets: 1
     MedievalSteelIngot: 2
-    MedievalEbonitIngot: 2
+    MedievalForstoneIngot: 2
   result: MedievalForstoneGloves
 
 - type: CP14Recipe
@@ -286,7 +286,7 @@
   stacks:
     MedievalRivets: 1
     MedievalSteelIngot: 2
-    MedievalEbonitIngot: 2
+    MedievalForstoneIngot: 2
   result: MedievalEbonitGloves
 
 - type: CP14Recipe
@@ -2221,7 +2221,7 @@
     MedievalSteelIngot: 8
     MedievalEbonitIngot: 5
   result: MedievalPickaxeEbonit
-  
+
 - type: CP14Recipe
   id: MedievalPickaxeForStone
   craftTime: 5

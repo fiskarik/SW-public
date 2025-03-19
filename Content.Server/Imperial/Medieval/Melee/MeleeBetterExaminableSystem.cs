@@ -4,7 +4,7 @@ using Content.Shared.MedievalMeleeResource.Components;
 using Content.Shared.MeleeParry.Components;
 using Robust.Shared.Maths;
 using Content.Server.MedievalPotionChecker.Components;
-using Content.Server.MedievalMeleeResource.Components;
+using Content.Shared.MedievalMeleeResource.Components;
 
 namespace Content.Server.MeleeBetterExaminable
 {

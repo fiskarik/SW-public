@@ -252,7 +252,7 @@
     tags:
     - Spear
   - type: MeleeThrowOnHit
-    distance: 4
+    distance: 1
     speed: 2
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -305,7 +305,7 @@
     tags:
     - Spear
   - type: MeleeThrowOnHit
-    distance: 4
+    distance: 1
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -455,7 +455,7 @@
     intensity: 1
     slope: 1
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -515,7 +515,7 @@
     intensity: 1
     slope: 1
   - type: MeleeThrowOnHit
-    distance: 5
+    distance: 3
     speed: 3
   - type: StaminaDamageOnHit
     damage: 8 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -568,7 +568,7 @@
   - type: Item
     size: Huge
   - type: MeleeThrowOnHit
-    distance: 5
+    distance: 3
     speed: 3
   - type: StaminaDamageOnHit
     damage: 8 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -631,8 +631,8 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 6
-    speed: 3
+    distance: 5
+    speed: 4
   - type: StaminaDamageOnHit
     damage: 18 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
   - type: Meltable
@@ -730,7 +730,7 @@
     - belt
     quickEquip: false
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 0.7
     speed: 1.2
   - type: StaminaDamageOnHit
     damage: 2 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -789,7 +789,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 3
+    distance: 1.6
     speed: 1.7
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -866,7 +866,7 @@
     safeToHitGroup: ore
     resourceWaste: 0.1
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1.2
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 6 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -907,7 +907,7 @@
     safeToHitGroup: ore
     resourceWaste: 0.1
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1.4
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 7 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1363,7 +1363,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1
     speed: 1.7
   - type: StaminaDamageOnHit
     damage: 4 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1512,7 +1512,7 @@
         restitution: 0.3
         friction: 0.2
   - type: MeleeThrowOnHit
-    distance: 4
+    distance: 1
     speed: 2
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1573,7 +1573,7 @@
     - belt
     quickEquip: false
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1.3
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 6 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1634,7 +1634,7 @@
     - belt
     quickEquip: false
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1.3
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 7 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1711,7 +1711,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 5
+    distance: 3.5
     speed: 3
   - type: StaminaDamageOnHit
     damage: 8 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1788,7 +1788,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 5
+    distance: 2.5
     speed: 3
   - type: StaminaDamageOnHit
     damage: 7 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -1860,7 +1860,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 5
+    distance: 2.5
     speed: 3
   - type: Meltable
     resourceCount: 7
@@ -1929,7 +1929,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1
     speed: 1.7
   - type: StaminaDamageOnHit
     damage: 6 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2058,7 +2058,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1
     speed: 1.7
   - type: StaminaDamageOnHit
     damage: 4 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2129,7 +2129,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1
     speed: 1.7
   - type: StaminaDamageOnHit
     damage: 4 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2271,7 +2271,7 @@
         restitution: 0.3
         friction: 0.2
   - type: MeleeThrowOnHit
-    distance: 4
+    distance: 1
     speed: 2
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2332,7 +2332,7 @@
     - belt
     quickEquip: false
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1.3
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2393,7 +2393,7 @@
     - belt
     quickEquip: false
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1.8
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 6 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2470,7 +2470,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 5
+    distance: 4
     speed: 3
   - type: StaminaDamageOnHit
     damage: 8 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2601,7 +2601,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1
     speed: 1.7
   - type: StaminaDamageOnHit
     damage: 11 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -2733,7 +2733,7 @@
   #    6: 0
   - type: MeleeThrowOnHit
     distance: 5
-    speed: 4
+    speed: 9
   - type: StaminaDamageOnHit
     damage: 35 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
 
@@ -2778,8 +2778,8 @@
   #  quickEquip: false
   - type: DisarmMalus
   - type: MeleeThrowOnHit
-    distance: 2
-    speed: 3
+    distance: 7
+    speed: 5
   - type: StaminaDamageOnHit
     damage: 55 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
   - type: Meltable
@@ -2982,7 +2982,7 @@
   #    5: 0
   #    6: 0
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1.15
     speed: 1.7
   - type: StaminaDamageOnHit
     damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -3406,7 +3406,7 @@
     - belt
     quickEquip: false
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1.6
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 6 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -3475,7 +3475,7 @@
     - belt
     quickEquip: false
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1.65
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 6 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
@@ -3623,6 +3623,7 @@
       walkModifier: 0.98
       sprintModifier: 0.98
       mirrorClothingModifier: false
+
 - type: entity
   name: pickaxe
   parent: BaseItem
@@ -3667,7 +3668,7 @@
     safeToHitGroup: ore
     resourceWaste: 0.05
   - type: MeleeThrowOnHit
-    distance: 3
+    distance: 1.8
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 10
@@ -3679,7 +3680,7 @@
     sprite: Imperial/Medieval/Melee/ebonit_pickaxe.rsi
     storedRotation: -45
   - type: UseDelay
-  
+
 - type: entity
   name: pickaxe
   parent: BaseItem
@@ -3724,7 +3725,7 @@
     safeToHitGroup: ore
     resourceWaste: 0.05
   - type: MeleeThrowOnHit
-    distance: 2
+    distance: 1.3
     speed: 2.1
   - type: StaminaDamageOnHit
     damage: 8
