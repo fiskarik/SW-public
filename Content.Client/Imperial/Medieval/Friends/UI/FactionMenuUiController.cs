@@ -1,6 +1,8 @@
 using Content.Shared.Friends;
+using Content.Shared.Friends.Components;
 using Content.Shared.Friends.Prototypes;
 using JetBrains.Annotations;
+using Robust.Client.Player;
 using Robust.Client.UserInterface.Controllers;
 using Robust.Shared.Prototypes;
 
@@ -23,7 +25,8 @@ public sealed class FactionMenuUiController : UIController
 
             _menu.ObjectiveSet += ObjectiveSet;
             _menu.GroupSet += GroupSet;
-            _menu.FirePressed += Fire;
+            _menu.FirePressed += args => Fire(args, false);
+            _menu.HeadhuntPressed += args => Fire(args, true);
 
             _menu.OpenCentered();
         }
@@ -31,7 +34,8 @@ public sealed class FactionMenuUiController : UIController
         {
             _menu.ObjectiveSet -= ObjectiveSet;
             _menu.GroupSet -= GroupSet;
-            _menu.FirePressed -= Fire;
+            _menu.FirePressed -= args => Fire(args, false);
+            _menu.FirePressed -= args => Fire(args, true);
 
             _menu.Dispose();
             _menu = null;
@@ -43,9 +47,11 @@ public sealed class FactionMenuUiController : UIController
         _menu?.Populate(proto, data);
     }
 
-    private void Fire(int ent)
+    private void Fire(int ent, bool headhunt = false)
     {
-        // todo
+        var playerMan = IoCManager.Resolve<IPlayerManager>();
+        if (_entityManager.TryGetComponent<FriendsComponent>(playerMan.LocalEntity, out var friends))
+            _entityManager.RaisePredictiveEvent(new RemoveFactionMemberMessage(ent, friends.MemberID, headhunt));
     }
 
     private void ObjectiveSet(FactionMemberGroup group, string obj)
