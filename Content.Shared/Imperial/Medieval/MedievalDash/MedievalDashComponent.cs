@@ -1,3 +1,4 @@
+using Content.Shared.Imperial.EntityLayer;
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Imperial.Dash;
@@ -22,7 +23,13 @@ public sealed partial class MedievalDashComponent : Component
     /// Dash reload time
     /// </summary>
     [DataField]
-    public TimeSpan DashReloadTime = TimeSpan.FromSeconds(1f);
+    public TimeSpan AdditionalDashReloadTime = TimeSpan.Zero;
+
+    /// <summary>
+    /// Z-level of dashed entities
+    /// </summary>
+    [DataField]
+    public EntityLayerGroups DashLayer = EntityLayerGroups.Dash;
 
 
     [ViewVariables, NonSerialized]

@@ -26,9 +26,6 @@ public sealed partial class MedievalDashSystem : EntitySystem
     [Dependency] private readonly SharedPhysicsSystem _physicsSystem = default!;
 
 
-    private Dictionary<EntityUid, TimeSpan> _dashedEntities = new();
-
-
     public override void Initialize()
     {
         base.Initialize();
@@ -36,31 +33,21 @@ public sealed partial class MedievalDashSystem : EntitySystem
         CommandBinds.Builder
             .Bind(ContentKeyFunctions.MedievalDash, new PointerInputCmdHandler(DashButtonPressed))
             .Register<MedievalDashSystem>();
-
-        SubscribeLocalEvent<RoundEndMessageEvent>(OnRoundEnd);
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        foreach (var (performer, dashTime) in _dashedEntities.ToDictionary())
+        var enumerator = EntityQueryEnumerator<MedievalDashComponent>();
+
+        while (enumerator.MoveNext(out var uid, out var component))
         {
-            if (_timing.CurTime < dashTime) continue;
+            if (_timing.CurTime < component.NextDash) continue;
 
-            RemComp<PhaseSpaceShadowComponent>(performer);
-
-            _dashedEntities.Remove(performer);
+            RemComp<PhaseSpaceShadowComponent>(uid);
         }
     }
-
-    public override void Shutdown()
-    {
-        base.Shutdown();
-
-        Cleanup();
-    }
-
 
     private bool DashButtonPressed(ICommonSession? playerSession, EntityCoordinates coordinates, EntityUid entity)
     {
@@ -70,6 +57,7 @@ public sealed partial class MedievalDashSystem : EntitySystem
         if (!TryComp<PhysicsComponent>(player, out var physicsComponent)) return false;
         if (!TryComp<InputMoverComponent>(player, out var inputMoverComponent)) return false;
 
+        if (_timing.CurTime < component.NextDash && _timing.IsFirstTimePredicted) return false;
         if (physicsComponent.LinearVelocity == Vector2.Zero) return false;
         if ((inputMoverComponent.HeldMoveButtons & MoveButtons.AnyDirection) == 0) return false;
 
@@ -79,7 +67,7 @@ public sealed partial class MedievalDashSystem : EntitySystem
         var forceDirection = targetRotation - Angle.FromDegrees(45);
 
         var impulse = forceDirection.RotateVec(force);
-        var dashTime = TimeSpan.FromSeconds(component.Force / 990 / physicsComponent.Mass) + _timing.CurTime;
+        var dashTime = TimeSpan.FromSeconds(component.Force / 990 / physicsComponent.Mass);
 
         if (!_staminaSystem.TryTakeStamina(player, component.StaminaDamage)) return false;
 
@@ -90,23 +78,8 @@ public sealed partial class MedievalDashSystem : EntitySystem
         shadowComponent.ShadowUpdateRate = TimeSpan.FromSeconds(0);
         shadowComponent.PositionUpdateRate = TimeSpan.FromSeconds(0);
 
-        if (!_dashedEntities.TryAdd(player, dashTime))
-            _dashedEntities[player] = dashTime;
+        component.NextDash = dashTime + component.AdditionalDashReloadTime + _timing.CurTime;
 
         return false;
     }
-
-    private void OnRoundEnd(RoundEndMessageEvent args)
-    {
-        Cleanup();
-    }
-
-    #region Helpers
-
-    private void Cleanup()
-    {
-        _dashedEntities = new();
-    }
-
-    #endregion
 }
