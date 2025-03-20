@@ -136,6 +136,12 @@ namespace Content.Shared.Input
 
         #endregion
 
+        #region Medieval
+
+        public static readonly BoundKeyFunction MedievalDash = "MedievalDash";
+
+        #endregion
+
         // Imperial Options End
     }
 }

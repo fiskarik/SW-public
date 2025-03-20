@@ -137,6 +137,9 @@ public sealed partial class ImperialOptionsMenuTab : Control
         AddButton(ContentKeyFunctions.ImperialMinigameRight);
         AddButton(ContentKeyFunctions.ImperialMinigameDown);
 
+        AddSubHeader("ui-options-imperial-controls-medieval");
+        AddButton(ContentKeyFunctions.MedievalDash);
+
         foreach (var control in _keyControls.Values)
         {
             UpdateKeyControl(control);

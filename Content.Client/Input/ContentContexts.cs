@@ -93,6 +93,8 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.ImperialMinigameLeft);
             human.AddFunction(ContentKeyFunctions.ImperialMinigameRight);
             human.AddFunction(ContentKeyFunctions.ImperialMinigameDown);
+
+            human.AddFunction(ContentKeyFunctions.MedievalDash);
             // Imperial Options End
 
             // actions should be common (for ghosts, mobs, etc)

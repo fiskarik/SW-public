@@ -12,6 +12,11 @@ public enum EntityLayerGroups
     None = 0,
     PhaseSpace = 1 << 0,
 
-    All = PhaseSpace,
-    AllWithOverworld = All | 1 << 31 // 1 << 31 is 2,147,483,647 - max int value. (Maybe use uint or ulong?)
+
+    Dash = 1 << 10,
+
+    Overworld = 1 << 31,
+
+    All = PhaseSpace | Dash,
+    AllWithOverworld = All | Overworld
 }
