@@ -38,14 +38,19 @@ public sealed partial class MedievalDashSystem : EntitySystem
     {
         base.Update(frameTime);
 
+        if (_net.IsClient) return;
+
         var enumerator = EntityQueryEnumerator<MedievalDashComponent, EntityLayerComponent>();
 
         while (enumerator.MoveNext(out var uid, out var component, out var entityLayerComponent))
         {
             if (_timing.CurTime < component.NextDash) continue;
+            if (!component.IsDashing) return;
 
             RemComp<PhaseSpaceShadowComponent>(uid);
             entityLayerComponent.CollideLayers = component.CachedLayers;
+
+            component.IsDashing = false;
         }
     }
 
@@ -73,14 +78,15 @@ public sealed partial class MedievalDashSystem : EntitySystem
 
         _physicsSystem.ApplyLinearImpulse(player, impulse);
 
-        var shadowComponent = EnsureComp<PhaseSpaceShadowComponent>(player);
         var entityLayerComponent = EnsureComp<EntityLayerComponent>(player);
+        var shadowComponent = EnsureComp<PhaseSpaceShadowComponent>(player);
 
-        shadowComponent.ShadowUpdateRate = TimeSpan.FromSeconds(0);
-        shadowComponent.PositionUpdateRate = TimeSpan.FromSeconds(0);
+        shadowComponent.ShadowUpdateRate = TimeSpan.Zero;
+        shadowComponent.PositionUpdateRate = TimeSpan.Zero;
 
         component.CachedLayers = entityLayerComponent.CollideLayers.ToHashSet();
         component.NextDash = dashTime + component.AdditionalDashReloadTime + _timing.CurTime;
+        component.IsDashing = true;
 
         entityLayerComponent.CollideLayers = new() { component.DashLayer };
 

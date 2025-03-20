@@ -36,5 +36,8 @@ public sealed partial class MedievalDashComponent : Component
     public TimeSpan NextDash = TimeSpan.Zero;
 
     [ViewVariables]
+    public bool IsDashing = false;
+
+    [ViewVariables]
     public HashSet<EntityLayerGroups> CachedLayers = new();
 }
