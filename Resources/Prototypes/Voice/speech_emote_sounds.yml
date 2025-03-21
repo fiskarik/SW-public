@@ -40,6 +40,7 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
+# imperial medieval "emotions" start
     Dreaminess:
       collection: MaleDreaminess
     Questioning: 
@@ -54,7 +55,8 @@
       collection: MalePainScreams
     PassiveScream:
       collection: MalePassiveScream
-
+# imperial medieval "emotions" end
+  
 - type: emoteSounds
   id: FemaleHuman
   params:
@@ -96,6 +98,7 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
+# imperial medieval "emotions" start
     Dreaminess:
       collection: FemaleDreaminess
     Questioning: 
@@ -110,6 +113,7 @@
       collection: FemalePainScreams
     PassiveScream:
       collection: FemalePassiveScream
+# imperial medieval "emotions" end
 
 - type: emoteSounds
   id: MaleReptilian
@@ -134,6 +138,7 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: DeathGasp
+# imperial medieval "emotions" start
     Dreaminess:
       collection: MaleDreaminess
     Questioning: 
@@ -148,6 +153,7 @@
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     PassiveScream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
+# imperial medieval "emotions" end
 
 - type: emoteSounds
   id: FemaleReptilian
@@ -172,6 +178,7 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
+# imperial medieval "emotions" start
     Dreaminess:
       collection: FemaleDreaminess
     Questioning: 
@@ -186,6 +193,7 @@
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     PassiveScream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
+# imperial medieval "emotions" end
 
 - type: emoteSounds
   id: MaleSlime
@@ -377,6 +385,7 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
+# imperial medieval "emotions" start
     Dreaminess:
       collection: MaleDreaminess
     Questioning: 
@@ -393,7 +402,7 @@
       collection: MalePassiveScream
   params:
     variation: 0.125
-    pitch: 0.75
+# imperial medieval "emotions" end
 
 - type: emoteSounds
   id: FemaleDwarf
@@ -434,6 +443,7 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
+# imperial medieval "emotions" start
     Dreaminess:
       collection: FemaleDreaminess
     Questioning: 
@@ -450,7 +460,7 @@
       collection: FemalePassiveScream
   params:
     variation: 0.125
-    pitch: 0.75
+# imperial medieval "emotions" end
 
 - type: emoteSounds
   id: UnisexMoth
