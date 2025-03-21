@@ -48,13 +48,13 @@ public sealed partial class MedievalDashSystem : EntitySystem
             if (!component.IsDashing) continue;
 
             component.IsDashing = false;
+            entityLayerComponent.CollideLayers = component.CachedLayers;
+
+            Dirty(uid, entityLayerComponent);
 
             if (_net.IsClient) return;
 
             RemComp<PhaseSpaceShadowComponent>(uid);
-            entityLayerComponent.CollideLayers = component.CachedLayers;
-
-            Dirty(uid, component);
         }
     }
 
@@ -66,6 +66,7 @@ public sealed partial class MedievalDashSystem : EntitySystem
         if (!TryComp<PhysicsComponent>(player, out var physicsComponent)) return false;
         if (!TryComp<InputMoverComponent>(player, out var inputMoverComponent)) return false;
 
+        if (!component.RequiredBodyStatus.Contains(physicsComponent.BodyStatus)) return false;
         if ((inputMoverComponent.HeldMoveButtons & MoveButtons.AnyDirection) == 0) return false;
 
         if (physicsComponent.LinearVelocity == Vector2.Zero) return false;
@@ -99,11 +100,11 @@ public sealed partial class MedievalDashSystem : EntitySystem
         component.DashButtonPressedTick = _timing.CurTick;
 
         component.IsDashing = true;
-        component.CachedLayers = entityLayerComponent.CollideLayers.ToHashSet();
+        component.CachedLayers = entityLayerComponent.CollideMasks.ToHashSet();
 
         entityLayerComponent.CollideLayers = new() { component.DashLayer };
 
-        Dirty(player, component);
+        Dirty(player, entityLayerComponent);
 
         return false;
     }
