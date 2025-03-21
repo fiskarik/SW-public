@@ -110,7 +110,7 @@
   id: MdvLegionMedievalSpearpPilum
   productEntity: MedievalSpearPilum
   cost:
-    MedalLegion: 3
+    MedalLegion: 2
   categories:
   - MedievalLegionWeapon
 
