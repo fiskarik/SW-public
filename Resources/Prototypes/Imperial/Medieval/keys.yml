@@ -188,7 +188,7 @@
     - Bar
   - type: Tag
     tags:
-    - TavernKey
+    - MedievalKey
 
 - type: entity
   parent: MedievalKeyBase
@@ -225,6 +225,7 @@
   id: MedievalKeyStandard
   name: key
   description: key
+  noSpawn: true
   components:
   - type: Key
     accesses:
@@ -232,9 +233,6 @@
   - type: Tag
     tags:
     - MedievalKey
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: medieval_key
 
 - type: entity
   parent: MedievalKeyBase
@@ -448,6 +446,10 @@
         - WizardKey
   - type: ItemMapper
     mapLayers:
+      medieval_key:
+        whitelist:
+          tags:
+          - MedievalKey
       bandits:
         whitelist:
           tags:
