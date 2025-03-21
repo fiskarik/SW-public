@@ -245,7 +245,7 @@
   - type: IgnitPocketFlames
   - type: EmoteOnDamage
     emotes:
-    - Scream
+    - PainScream
     emoteChance: 0.3
     withChat: true
     emoteCooldown: 3.5
