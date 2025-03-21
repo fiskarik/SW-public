@@ -286,7 +286,7 @@
   stacks:
     MedievalRivets: 1
     MedievalSteelIngot: 2
-    MedievalForstoneIngot: 2
+    MedievalEbonitIngot: 2
   result: MedievalEbonitGloves
 
 - type: CP14Recipe
@@ -305,6 +305,22 @@
     MedievalIronIngot: 14
     WoodPlank: 8
   result: MedievalSpearT3
+
+- type: CP14Recipe
+  id: MedievalSpearSulica
+  craftTime: 11
+  stacks:
+    MedievalIronIngot: 12
+    WoodPlank: 6
+  result: MedievalSpearSulica
+
+- type: CP14Recipe
+  id: MedievalSpearPilum
+  craftTime: 11
+  stacks:
+    MedievalIronIngot: 12
+    WoodPlank: 6
+  result: MedievalSpearPilum
 
 - type: CP14Recipe
   id: MedievalSpearT3Steel
@@ -965,7 +981,7 @@
   stacks:
     MedievalRivets: 1
     MedievalSteelIngot: 2
-    MedievalEbonitIngot: 2
+    MedievalForstoneIngot: 2
   result: MedievalClothingFeetForstone
 
 - type: CP14Recipe

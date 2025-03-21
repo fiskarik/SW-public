@@ -107,6 +107,14 @@
   - MedievalLegionWeapon
 
 - type: listing
+  id: MdvLegionMedievalSpearpPilum
+  productEntity: MedievalSpearPilum
+  cost:
+    MedalLegion: 3
+  categories:
+  - MedievalLegionWeapon
+
+- type: listing
   id: MdvLegionMedievalIronHammer
   productEntity: MedievalIronHammer
   cost:

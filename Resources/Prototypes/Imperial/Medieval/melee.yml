@@ -3737,3 +3737,111 @@
     sprite: Imperial/Medieval/Melee/forstone_pickaxe.rsi
     storedRotation: -45
   - type: UseDelay
+
+- type: entity
+  name: Pilum
+  parent: BaseItem
+  id: MedievalSpearPilum
+  description: Just a spear
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/pilum.rsi
+    state: spear
+  - type: Sharp
+  - type: MeleeWeapon
+    wideAnimationRotation: -140
+    attackRate: 0.65
+    damage:
+      types:
+        Piercing: 10
+    angle: 0
+    animation: WeaponArcThrust
+  - type: Item
+    size: Huge
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 38
+  - type: EmbeddableProjectile
+    offset: 0.15,0.15
+  - type: ThrowingAngle
+    angle: 225
+  - type: Tag
+    tags:
+    - Spear
+  - type: LandAtCursor
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+            - -0.40,-0.30
+            - -0.30,-0.40
+            - 0.40,0.30
+            - 0.30,0.40
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: StaminaDamageOnHit
+    damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
+
+- type: entity
+  name: Sulica
+  parent: BaseItem
+  id: MedievalSpearSulica
+  description: Just a spear
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/sulica.rsi
+    state: spear
+  - type: Sharp
+  - type: MeleeWeapon
+    wideAnimationRotation: -140
+    attackRate: 0.65
+    damage:
+      types:
+        Piercing: 10
+    angle: 0
+    animation: WeaponArcThrust
+  - type: Item
+    size: Huge
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 38
+  - type: EmbeddableProjectile
+    offset: 0.15,0.15
+  - type: ThrowingAngle
+    angle: 225
+  - type: Tag
+    tags:
+    - Spear
+  - type: LandAtCursor
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          vertices:
+            - -0.40,-0.30
+            - -0.30,-0.40
+            - 0.40,0.30
+            - 0.30,0.40
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+  - type: StaminaDamageOnHit
+    damage: 5 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer

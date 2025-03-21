@@ -41,6 +41,8 @@
   - type: CameraRecoil
   - type: MindContainer
   - type: MovementSpeedModifier
+  - type: MedievalSprint # Imperial Medieval Sprint
+  - type: MedievalDash # Imperial Medieval Dash
   - type: RequireProjectileTarget
     active: False
 
