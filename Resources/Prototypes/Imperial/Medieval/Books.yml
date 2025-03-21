@@ -1,5 +1,56 @@
 - type: entity
   parent: BookBase
+  id: BookMedievalGods
+  name: some
+  description: There are endless illegible notes scribbled in the margins. Most of the text is covered in handwritten question marks.
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+    - state: cover_old
+      color: "#4d2e0d"
+    - state: decor_bottom
+      color: "#4d2e0d"
+    - state: icon_eye
+  - type: Paper
+    content: book-text-medieval-gods
+
+- type: entity
+  parent: BookBase
+  id: BookMedievalGodsCursed
+  name: some
+  description: There are endless illegible notes scribbled in the margins. Most of the text is covered in handwritten question marks.
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+    - state: cover_old
+      color: "#4d2e0d"
+    - state: decor_bottom
+      color: "#4d2e0d"
+    - state: icon_eye
+  - type: Paper
+    content: book-text-medieval-gods-cursed
+
+- type: entity
+  parent: BookBase
+  id: BookMedievalReventStory
+  name: some
+  description: There are endless illegible notes scribbled in the margins. Most of the text is covered in handwritten question marks.
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+    - state: cover_old
+      color: "#4d2e0d"
+    - state: decor_bottom
+      color: "#4d2e0d"
+    - state: icon_eye
+  - type: Paper
+    content: book-text-medieval-revent-story
+
+- type: entity
+  parent: BookBase
   id: BookMedievalBarrier
   name: some
   description: There are endless illegible notes scribbled in the margins. Most of the text is covered in handwritten question marks.
@@ -174,7 +225,7 @@
     children:
     - !type:GroupSelector
       rolls: !type:RangeNumberSelector
-        range: 0, 4
+        range: 0, 5
       children:
       - id: BookMedievalCreationFive
       - id: BookMedievalCreationFour
@@ -186,6 +237,21 @@
       - id: BookMedievalFractions
       - id: BookMedievalThreats
       - id: BookMedievalBarrier
+      - id: BookMedievalreventStory
+      - id: BookMedievalGods
+      - id: BookMedievalCreationFive
+      - id: BookMedievalCreationFour
+      - id: BookMedievalCreationThree
+      - id: BookMedievalCreationTwo
+      - id: BookMedievalCreationOne
+      - id: BookMedievalStory
+      - id: BookMedievalMagicTypes
+      - id: BookMedievalFractions
+      - id: BookMedievalThreats
+      - id: BookMedievalBarrier
+      - id: BookMedievalreventStory
+      - id: BookMedievalGods
+      - id: BookMedievalGodsCursed
 
 - type: entity
   id: BookshelfFilledMedieval
