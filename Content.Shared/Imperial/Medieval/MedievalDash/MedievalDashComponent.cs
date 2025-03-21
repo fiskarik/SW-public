@@ -11,19 +11,19 @@ public sealed partial class MedievalDashComponent : Component
     /// Force of dash
     /// </summary>
     [DataField]
-    public float Force = 1000.0f;
+    public float Force = 5000.0f;
 
     /// <summary>
     /// Stamina damage on dash
     /// </summary>
     [DataField]
-    public float StaminaDamage = 26f;
+    public float StaminaDamage = 20f;
 
     /// <summary>
     /// Dash reload time
     /// </summary>
     [DataField]
-    public TimeSpan AdditionalDashReloadTime = TimeSpan.Zero;
+    public TimeSpan AdditionalDashReloadTime = TimeSpan.FromSeconds(3f);
 
     /// <summary>
     /// Z-level of dashed entities

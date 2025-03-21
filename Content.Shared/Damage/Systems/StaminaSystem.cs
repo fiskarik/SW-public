@@ -277,7 +277,7 @@ public sealed partial class StaminaSystem : EntitySystem
         if (oldDamage < slowdownThreshold &&
             component.StaminaDamage > slowdownThreshold)
         {
-            _stunSystem.TrySlowdown(uid, TimeSpan.FromSeconds(3), true, 0.8f, 0.8f);
+            //_stunSystem.TrySlowdown(uid, TimeSpan.FromSeconds(3), true, 0.8f, 0.8f); imperial medieval
         }
 
         SetStaminaAlert(uid, component);

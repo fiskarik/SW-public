@@ -13,6 +13,7 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
+using Content.Shared.Throwing;
 
 namespace Content.Shared.Imperial.Dash;
 
@@ -61,6 +62,7 @@ public sealed partial class MedievalDashSystem : EntitySystem
         if (!TryComp<MedievalDashComponent>(player, out var component)) return false;
         if (!TryComp<PhysicsComponent>(player, out var physicsComponent)) return false;
         if (!TryComp<InputMoverComponent>(player, out var inputMoverComponent)) return false;
+        if (TryComp<ThrownItemComponent>(player, out var thrown)) return false;
 
         if (_timing.CurTime < component.NextDash && _timing.IsFirstTimePredicted) return false;
         if (physicsComponent.LinearVelocity == Vector2.Zero) return false;
