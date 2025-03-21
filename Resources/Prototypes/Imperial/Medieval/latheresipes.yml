@@ -277,7 +277,7 @@
   stacks:
     MedievalRivets: 1
     MedievalSteelIngot: 2
-    MedievalEbonitIngot: 2
+    MedievalForstoneIngot: 2
   result: MedievalForstoneGloves
 
 - type: CP14Recipe
@@ -981,7 +981,7 @@
   stacks:
     MedievalRivets: 1
     MedievalSteelIngot: 2
-    MedievalEbonitIngot: 2
+    MedievalForstoneIngot: 2
   result: MedievalClothingFeetForstone
 
 - type: CP14Recipe

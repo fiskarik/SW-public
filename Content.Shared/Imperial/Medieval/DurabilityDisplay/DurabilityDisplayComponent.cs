@@ -16,4 +16,7 @@ public sealed partial class DurabilityDisplayComponent : Component
     }
     [ViewVariables(VVAccess.ReadWrite), DataField(required: true), AutoNetworkedField]
     public Durability Dub = Durability.Full;
+
+    [DataField]
+    public string Dur = "";
 }

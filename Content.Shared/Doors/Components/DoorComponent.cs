@@ -61,7 +61,7 @@ public sealed partial class DoorComponent : Component
     public TimeSpan DenyDuration = TimeSpan.FromSeconds(0.45f);
 
     [DataField]
-    public TimeSpan EmagDuration = TimeSpan.FromSeconds(0.8f);
+    public TimeSpan EmagDuration = TimeSpan.FromSeconds(0.1f); // imperial medieval
 
     /// <summary>
     ///     When the door is active, this is the time when the state will next update.
