@@ -70,4 +70,5 @@
 - type: soundCollection
   id: Vomit
   files:
-  - /Audio/Effects/Fluids/splat.ogg
+  - /Audio/Imperial/Medieval/Emotes/Vomit/Male/mvomit_1.ogg
+  - /Audio/Imperial/Medieval/Emotes/Vomit/Male/mvomit_2.ogg
