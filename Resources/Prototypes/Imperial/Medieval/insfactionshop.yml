@@ -29,6 +29,7 @@
   - type: AccessReader
     access: [["Medical"]]
 
+
 - type: storeCategory
   id: MedievalInsWeapon
   name: medieval-category-weapon
@@ -103,6 +104,14 @@
   productEntity: MedievalSpearT3
   cost:
     MedalIns: 2
+  categories:
+  - MedievalInsWeapon
+
+- type: listing
+  id: MdvInsMedievalSpearSulica
+  productEntity: MedievalSpearSulica
+  cost:
+    MedalIns: 3
   categories:
   - MedievalInsWeapon
 
