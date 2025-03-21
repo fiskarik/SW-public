@@ -55,6 +55,15 @@ public sealed partial class FriendsSystem
         RefreshFactionMenu(comp.Faction);
     }
 
+    private void OnFriendsTerminating(EntityUid uid, FriendsComponent comp, EntityTerminatingEvent args)
+    {
+        if (!TryGetFactionMemberData(comp.MemberID, out var data))
+            return;
+
+        data.Dead = true;
+        RefreshFactionMenu(comp.Faction);
+    }
+
     private void OnSetObjective(SetFactionMemberObjectiveMessage args)
     {
         if (!TryGetFactionDataContainer(out var ent))
@@ -89,17 +98,21 @@ public sealed partial class FriendsSystem
     private void OnMemberRemoved(RemoveFactionMemberMessage args)
     {
         if (!GetFactionMemberById(args.Ent, out var uid))
+        {
+            if (!TryGetFactionMemberData(args.Ent, out var data) || !TryGetFactionDataContainer(out var cont))
+                return;
+            var fact = data.Faction;
+            cont.Value.Comp.CachedMembers.GetOrNew(data.Faction).Remove(args.Ent);
+            RefreshFactionMenu(fact);
+
             return;
-        if (!uid.Value.IsValid())
-            return;
-        if (!TryComp<FriendsComponent>(uid, out var comp))
-            return;
+        }
         if (!TryGetFactionMemberData(args.Performer, out var headData))
             return;
 
         if (args.Headhunt)
         {
-            if (_mind.TryGetMind(uid.Value, out var mindId, out _) && _job.MindTryGetJob(mindId, out var job))
+            if (TryComp<FriendsComponent>(uid, out var comp) && _mind.TryGetMind(uid.Value, out var mindId, out _) && _job.MindTryGetJob(mindId, out var job))
                 AddWanted(uid.Value, job.ID, headData.Name, comp.Faction);
         }
 
@@ -146,6 +159,8 @@ public sealed partial class FriendsSystem
         data.Group = FactionMemberGroup.None;
         data.Job = job;
         data.JobPrefix = jobPrefix;
+        data.Faction = faction;
+        comp.Faction = faction;
 
         container.Value.Comp.CachedMembers.GetOrNew(oldFaction).Remove(comp.MemberID);
         container.Value.Comp.CachedMembers.GetOrNew(faction).Add(comp.MemberID, data);

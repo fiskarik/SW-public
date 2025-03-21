@@ -29,6 +29,12 @@ public sealed partial class FactionMenuEntry : Control
         NameLabel.SetMessage($"{data.JobPrefix} {data.Name}");
         RemoveButton.Visible = access == FactionMenuAccess.Full && ent != self;
 
+        if (data.Dead)
+        {
+            MainPanel.BackgroundPanelColor = Color.FromHex("#291e1e");
+            FireText.SetMessage("Вычеркнуть");
+        }
+
         if (data.Group == FactionMemberGroup.None)
         {
             for (var i = 0; i < FriendsSystem.GroupColors.Count; i++)
@@ -63,6 +69,7 @@ public sealed partial class FactionMenuEntry : Control
                 case FactionMenuAccess.Full:
                     {
                         GroupRemoveButton.Visible = true;
+                        GroupRemoveCross.Visible = !data.Dead;
                         RemoveLeaderCross.Visible = data.Leader;
                         SetLeaderButton.Visible = ent != self;
                         LeaderPanel.Visible = ent != self;

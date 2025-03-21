@@ -9,6 +9,8 @@ public sealed class FactionMemberData
     public string Job = "";
     public string JobPrefix = "";
     public bool Leader = false;
+    public bool Dead = false;
+    public string Faction = "";
     public FactionMemberGroup Group = FactionMemberGroup.None;
 
     public FactionMemberData(string name, string job, string jobPrefix, FactionMemberGroup group)

@@ -8,7 +8,8 @@
     MinHeight="50"
     SetHeight="50"
     Margin="4 4">
-    <imp:BorderedPanelContainer ModulateSelfOverride="White"
+    <imp:BorderedPanelContainer Name="MainPanel"
+                    ModulateSelfOverride="White"
                     BackgroundPanelColor="#25252A"
                     HorizontalExpand="True"
                     VerticalExpand="True"
@@ -136,8 +137,9 @@
                       HorizontalAlignment="Right">
             <Button Name="RemoveButton"
                     ModulateSelfOverride="#00000000">
-                <RichTextLabel Text="Уволить"
-                               HorizontalAlignment="Left"/>
+                <RichTextLabel  Name="FireText"
+                                Text="Уволить"
+                                HorizontalAlignment="Left"/>
             </Button>
         </BoxContainer>
     </imp:BorderedPanelContainer>
