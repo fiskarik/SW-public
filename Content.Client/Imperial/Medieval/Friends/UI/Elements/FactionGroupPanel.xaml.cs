@@ -25,10 +25,10 @@ public sealed partial class FactionGroupPanel : BorderedPanelContainer
     {
         RobustXamlLoader.Load(this);
 
-        GroupNamePanel.PanelOverride = new StyleBoxFlat(FriendsSystem.FactionGroups[group].Item1);
+        GroupNamePanel.PanelOverride = new StyleBoxFlat(FriendsSystem.GroupColors[group]);
         Group = group;
         if (group != FactionMemberGroup.None)
-            GroupNameText.Text = FriendsSystem.FactionGroups[group].Item2;
+            GroupNameText.Text = Loc.GetString($"group-{group}");
 
         SetObjectiveButton.Visible = group != FactionMemberGroup.None;
         ObjectivePanel.Visible = group != FactionMemberGroup.None;
@@ -51,7 +51,7 @@ public sealed partial class FactionGroupPanel : BorderedPanelContainer
         {
             SetObjectiveButton.Visible = false;
             ObjectiveEditPanel.Visible = true;
-            ObjectiveEdit.Text = groupObjective;
+            ObjectiveEdit.SetText(groupObjective.Substring(0, 32), true);
         };
 
         ObjectiveEdit.OnTextChanged += args =>
@@ -61,6 +61,5 @@ public sealed partial class FactionGroupPanel : BorderedPanelContainer
                 ObjectiveEdit.SetText(args.Text.Substring(0, 32));
         };
 
-        ObjectiveEdit.OnTextEntered += args => ObjectiveSet?.Invoke(group, args.Text);
     }
 }
