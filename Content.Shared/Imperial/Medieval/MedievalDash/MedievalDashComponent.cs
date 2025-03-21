@@ -1,5 +1,6 @@
 using Content.Shared.Imperial.EntityLayer;
 using Robust.Shared.GameStates;
+using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
 
 namespace Content.Shared.Imperial.Dash;
@@ -31,6 +32,12 @@ public sealed partial class MedievalDashComponent : Component
     /// </summary>
     [DataField]
     public EntityLayerGroups DashLayer = EntityLayerGroups.Dash;
+
+    /// <summary>
+    /// Required body status for dash
+    /// </summary>
+    [DataField]
+    public HashSet<BodyStatus> RequiredBodyStatus = new() { BodyStatus.OnGround };
 
 
     [ViewVariables]
