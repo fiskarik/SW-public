@@ -12,13 +12,13 @@ public sealed partial class MedievalDashComponent : Component
     /// Force of dash
     /// </summary>
     [DataField]
-    public float Force = 760.0f;
+    public float Force = 775.0f;
 
     /// <summary>
     /// Stamina damage on dash
     /// </summary>
     [DataField]
-    public float StaminaDamage = 26f;
+    public float StaminaDamage = 23f;
 
     /// <summary>
     /// Dash reload time
