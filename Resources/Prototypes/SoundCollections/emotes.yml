@@ -94,7 +94,7 @@
 - type: soundCollection
   id: FemaleCry
   files:
-# imperial medieval "emotions" end
+# imperial medieval "emotions" start
     - /Audio/Imperial/Medieval/Emotes/Cry/Female/fpassive_whiner_1.ogg
     - /Audio/Imperial/Medieval/Emotes/Cry/Female/fpassive_whiner_2.ogg
     - /Audio/Imperial/Medieval/Emotes/Cry/Female/fpassive_whiner_3.ogg
