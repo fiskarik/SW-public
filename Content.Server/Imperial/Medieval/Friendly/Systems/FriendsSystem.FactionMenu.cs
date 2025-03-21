@@ -25,6 +25,7 @@ public sealed partial class FriendsSystem
     private void InitializeMenu()
     {
         SubscribeLocalEvent<FriendsComponent, MapInitEvent>(OnFriendsInit);
+        SubscribeLocalEvent<FriendsComponent, EntityTerminatingEvent>(OnFriendsTerminating);
 
         SubscribeNetworkEvent<SetFactionMemberObjectiveMessage>(OnSetObjective);
         SubscribeNetworkEvent<SetFactionMemberGroupMessage>(OnSetGroup);
@@ -51,7 +52,8 @@ public sealed partial class FriendsSystem
         };
         container.Value.Comp.CachedMembers.GetOrNew(comp.Faction).Add(comp.MemberID, data);
 
-        _action.AddAction(uid, ref comp.FactionMenuActionEntity, comp.FactionMenuAction);
+        if (comp.Faction != "Voluntary")
+            _action.AddAction(uid, ref comp.FactionMenuActionEntity, comp.FactionMenuAction);
 
         Dirty(uid, comp);
         RefreshFactionMenu(comp.Faction);
