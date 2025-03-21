@@ -18,7 +18,7 @@ public sealed partial class MedievalDashComponent : Component
     /// Stamina damage on dash
     /// </summary>
     [DataField]
-    public float StaminaDamage = 23f;
+    public float StaminaDamage = 20f;
 
     /// <summary>
     /// Dash reload time
