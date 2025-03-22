@@ -44,14 +44,8 @@
     - BorgChassis
   chatMessages: ["chat-emote-msg-Hmmm"]
   chatTriggers:
-    - Хммм
     - хммм
-    - Хммм.
-    - хммм.
-    - Хмммм
     - хмммм
-    - Хмммм.
-    - хмммм.
     
 - type: emote
   id: Questioning
@@ -66,10 +60,8 @@
     - BorgChassis
   chatMessages: ["chat-emote-msg-Hmm"]
   chatTriggers:
-    - Хмм?
-    - Хм?
-    - Хм
-    - хм
+    - хмм?
+    - хм?
     - хм
     - хмм
     
@@ -86,10 +78,7 @@
     - BorgChassis
   chatMessages: ["chat-emote-msg-warcry"]
   chatTriggers:
-    - ААА
-    - ВАГХ
-    - УРА
-    - ааа
+    - ааааа
     - вагх
     - ура
     
@@ -135,18 +124,9 @@
     - BorgChassis
   chatMessages: ["chat-emote-msg-charge"]
   chatTriggers:
-    - charge.
     - charge
-    - Charge
-    - Charge.
-    - Чардж
     - чардж
-    - Чардж.
-    - чардж.
     - вперед
-    - Вперед
-    - вперед.
-    - Вперед.
     
 - type: soundCollection
   id: MaleCharge
