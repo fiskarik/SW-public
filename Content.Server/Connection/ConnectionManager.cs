@@ -374,7 +374,7 @@ namespace Content.Server.Connection
         }
 
         //Imperial sponsors start
-        private bool HavePriorityJoin(NetUserId user)
+        public bool HavePriorityJoin(NetUserId user)
         {
             return _sponsorsManager.TryGetInfo(user, out var sponsorInfo) && sponsorInfo.HavePriorityJoin;
         }
