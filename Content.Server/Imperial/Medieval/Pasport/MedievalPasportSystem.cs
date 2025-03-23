@@ -9,6 +9,7 @@ using Content.Shared.Item;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid;
+using Content.Shared.Friends;
 
 namespace Content.Server.MedievalPasport
 {
@@ -95,6 +96,9 @@ namespace Content.Server.MedievalPasport
             }
             pasport.PersonJob = comp.PersonJob;
             _metaData.SetEntityName(comp.PasportEntity.Value, "волшебное удостоверение " + pasport.PersonName);
+
+            var ev = new StartupFactionDataEvent(comp.PersonJob, comp.JobPrefix);
+            RaiseLocalEvent(uid, ev);
         }
 
     }

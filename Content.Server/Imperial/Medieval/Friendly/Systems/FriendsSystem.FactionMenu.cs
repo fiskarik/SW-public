@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.GameTicking;
+using Content.Server.MedievalPasport;
 using Content.Server.MedievalPasport.Components;
 using Content.Server.Mind;
 using Content.Server.Roles.Jobs;
@@ -24,7 +25,7 @@ public sealed partial class FriendsSystem
 
     private void InitializeMenu()
     {
-        SubscribeLocalEvent<FriendsComponent, MapInitEvent>(OnFriendsInit);
+        SubscribeLocalEvent<FriendsComponent, StartupFactionDataEvent>(OnFriendsInit);
         SubscribeLocalEvent<FriendsComponent, EntityTerminatingEvent>(OnFriendsTerminating);
 
         SubscribeNetworkEvent<SetFactionMemberObjectiveMessage>(OnSetObjective);
@@ -35,7 +36,7 @@ public sealed partial class FriendsSystem
         SubscribeLocalEvent<RoundStartedEvent>(OnRoundStartedMenu);
     }
 
-    private void OnFriendsInit(EntityUid uid, FriendsComponent comp, MapInitEvent args)
+    private void OnFriendsInit(EntityUid uid, FriendsComponent comp, StartupFactionDataEvent args)
     {
         if (!TryGetFactionDataContainer(out var container))
             return;
@@ -46,8 +47,8 @@ public sealed partial class FriendsSystem
         var data = new FactionMemberData()
         {
             Name = Name(uid),
-            Job = CompOrNull<MedievalPasportPersonComponent>(uid)?.PersonJob ?? "Нет должности",
-            JobPrefix = CompOrNull<MedievalPasportPersonComponent>(uid)?.JobPrefix ?? "",
+            Job = args.Job,
+            JobPrefix = args.JobPrefix,
             Faction = comp.Faction
         };
         container.Value.Comp.CachedMembers.GetOrNew(comp.Faction).Add(comp.MemberID, data);
