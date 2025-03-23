@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Server.DetailExaminable;
+using Content.Shared.DetailExaminable;
 using Content.Server.MedievalPasport.Components;
 using Content.Shared.Friends;
 using Content.Shared.Friends.Components;
