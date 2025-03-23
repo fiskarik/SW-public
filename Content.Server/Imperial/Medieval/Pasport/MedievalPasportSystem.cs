@@ -77,6 +77,9 @@ namespace Content.Server.MedievalPasport
 
         public void OnStart(EntityUid uid, MedievalPasportPersonComponent comp, ComponentStartup args)
         {
+            var ev = new StartupFactionDataEvent(comp.PersonJob, comp.JobPrefix);
+            RaiseLocalEvent(uid, ev);
+
             if (comp.Pasport == "no") return;
             var xform = Transform(comp.Owner);
             var coords = xform.Coordinates;
@@ -96,9 +99,6 @@ namespace Content.Server.MedievalPasport
             }
             pasport.PersonJob = comp.PersonJob;
             _metaData.SetEntityName(comp.PasportEntity.Value, "волшебное удостоверение " + pasport.PersonName);
-
-            var ev = new StartupFactionDataEvent(comp.PersonJob, comp.JobPrefix);
-            RaiseLocalEvent(uid, ev);
         }
 
     }
