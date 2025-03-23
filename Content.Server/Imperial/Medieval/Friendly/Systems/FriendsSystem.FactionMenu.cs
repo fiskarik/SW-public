@@ -118,7 +118,7 @@ public sealed partial class FriendsSystem
         if (args.Headhunt)
         {
             if (TryComp<FriendsComponent>(uid, out var comp) && _mind.TryGetMind(uid.Value, out var mindId, out _) && _job.MindTryGetJob(mindId, out var job))
-                AddWanted(uid.Value, job.ID, headData.Name, comp.Faction);
+                AddWanted(uid.Value, job.ID, headData.Name, args.Details, comp.Faction);
         }
 
         SetJob(uid.Value, "Voluntary", "Нет должности");
