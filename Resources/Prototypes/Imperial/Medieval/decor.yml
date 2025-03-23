@@ -912,7 +912,7 @@
         - MidImpassable
         - HighImpassable
         - BulletImpassable
-        
+
 - type: entity
   id: MedievalDecorHelpParent
   parent: MedievalBannerBase
@@ -947,7 +947,7 @@
         - MidImpassable
         - HighImpassable
         - BulletImpassable
-        
+
 - type: entity
   id: MedievalDecorMogila3
   parent: MedievalBannerBase
@@ -3188,7 +3188,7 @@
   - type: Sprite
     state: cactus5
 
- - type: entity
+- type: entity
   id: MedievalBaseTreeCactus
   description: Yep, it's a tree.
   abstract: true
@@ -4510,7 +4510,7 @@
         - MidImpassable
         - HighImpassable
         - BulletImpassable
-   
+
 - type: construction
   id: Mattress
   name: Спальник
