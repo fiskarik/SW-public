@@ -11,6 +11,8 @@ using Content.Server.Prayer;
 using Robust.Shared.Audio;
 using Content.Server.SpikeTrap.Components;
 using Content.Server.MagicBarrier.Components;
+using Content.Shared.Doors.Components;
+using Content.Server.Doors.Systems;
 
 namespace Content.Server.CustomDoorKey
 {
@@ -134,7 +136,10 @@ namespace Content.Server.CustomDoorKey
                     {
                         _prayerSystem.SendSubtleMessage(sender, sender, "Число " + number + ". Дверь успешно взломана", "Взлом успех");
                         _audio.PlayPvs(new SoundPathSpecifier(comp.EffectSoundOnOpen), door.Owner);
-                        _door.TryToggleDoor(door.Owner);
+                        //_door.TryToggleDoor(door.Owner);
+                        EnsureComp<DoorBoltComponent>(door.Owner, out var bolt);
+                        var doorEntity = new Entity<DoorBoltComponent>(door.Owner, bolt);
+                        _door.TrySetBoltDown(doorEntity, false);
                         door.LockPickProgress = 0;
                         if (TryComp<MedievalSpikeTargetComponent>(sender.AttachedEntity, out var player))
                         {

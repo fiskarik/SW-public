@@ -906,9 +906,9 @@
 
 - type: entity
   parent: Pen
-  id: MedievalPenFeather
-  name: MedievalPenFeather
-  description: MedievalPenFeather
+  id: MedievalPen
+  name: MedievalPen
+  description: MedievalPen
   components:
   - type: Sprite
     sprite: Imperial/Medieval/Misc/medieval_paper.rsi
@@ -988,7 +988,7 @@
   components:
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: MedievalDefault
     maxIntensity: 3
     intensitySlope: 1
     totalIntensity: 45
@@ -1006,6 +1006,8 @@
     initialBeepDelay: 0
     beepInterval: 6 # 2 beeps total (at 0 and 2)
     delay: 2.5
+  - type: SpawnOnTrigger
+    proto: MedievalExplosionEffect
 
 - type: entity
   parent: MopItem
@@ -2725,6 +2727,21 @@
 #  - type: Sprite
 #    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
 #    state: egg
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootNastyGrowth
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: flower
+  - type: Currency
+    price:
+      Revent: 20
+  - type: Item
+    size: Normal
 
 - type: entity
   name: multitool
@@ -6233,7 +6250,7 @@
       makeSentient: true
       name: Скелет защитник
       description: Защитите корован
-      rules: Вы - скелет защитник, приставленный к этому каравану в качестве охраны. С телегой что-то случилось, поэтому вы должны защищать груз любой ценой.
+      rules: Вы - скелет защитник, приставленный к этому каравану в качестве охраны. Если у телеги нет никого более 10-15 минут - вы можете отправляться на защиту некрополя. ВАЖНО!! [color=red]Вы не имеете право на РДМ кого-либо ВНЕ каравана и некрополя [/color]
     - type: Damageable
       damageContainer: Biological
       damageModifierSet: Skeleton
@@ -6606,6 +6623,54 @@
   id: SpellwardFont
   path: /Fonts/Imperial/Spellward/Monomakh-Regular.ttf
 
+- type: font
+  id: SpellwardBeeBoopFont
+  path: /Fonts/Imperial/BeeBopp/beebopptygra.ttf
+
+- type: font
+  id: SpellwardBlackCraftFont
+  path: /Fonts/Imperial/Blackcraft/Blackcraft.ttf
+
+- type: font
+  id: SpellwardChristmasFont
+  path: /Fonts/Imperial/Christmas/ChristmasScriptC.ttf
+
+- type: font
+  id: SpellwardDiabloFont
+  path: /Fonts/Imperial/DiabloFont/diablofont.otf
+
+- type: font
+  id: SpellwardGothicFont
+  path: /Fonts/Imperial/Gothic/DreiFraktur.ttf
+
+- type: font
+  id: SpellwardHoneyBeeGFont
+  path: /Fonts/Imperial/HoneyBeeG/mrhoneybeeg.ttf
+
+- type: font
+  id: SpellwardInsulaGFont
+  path: /Fonts/Imperial/InsulaG/mr_insulag.otf
+
+- type: font
+  id: SpellwardNeedleteethFont
+  path: /Fonts/Imperial/Needleteeth/NeedleteethSP.otf
+
+- type: font
+  id: SpellwardTabulaPeutingerianaFont
+  path: /Fonts/Imperial/TabulaPeutingeriana/TabulaPeutingeriana.ttf
+
+- type: font
+  id: SpellwardTabulaPeutingerianaFontSecond
+  path: /Fonts/Imperial/TabulaPeutingeriana/TabulaPeutingerianaCapitelBoldItalic.ttf #кто-то прошелся лицом по клавиатуре
+
+- type: font
+  id: SpellwardTanaUncialFont
+  path: /Fonts/Imperial/TanaUncial/TanaUncialSP.otf
+
+- type: font
+  id: SpellwardVezitsaFont
+  path: /Fonts/Imperial/Vezitsa/VezitsaCyrillic.ttf
+
 - type: entity
   name: gol
   parent: BaseItem
@@ -6687,3 +6752,108 @@
     collection: FootstepFloor
   itemDrop: FloorTileItemSteel
   heatCapacity: 10000
+
+- type: localizedDataset
+  id: PlushDog
+  values:
+    prefix: plush-dog-
+    count: 4
+
+- type: entity
+  parent: BaseFigurine
+  id: PlushieDog
+  name: PlushieDog
+  suffix: PlushieDog
+  description: PlushieDog
+  components:
+  - type: Item
+    size: Huge
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 100
+  - type: Tag
+    tags:
+      - Payload
+      - ClothMade
+  - type: Food
+    requiresSpecialDigestion: true
+    useSound:
+      collection: IanBark
+    delay: 5
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      collection: IanBark
+    damage:
+      types:
+        Blunt: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/plushdog.rsi
+    state: icon
+  - type: Speech
+    speechSounds: Dog
+  - type: SpeakOnTrigger
+    pack: PlushDog
+
+- type: explosion
+  id: MedievalDefault
+  damagePerIntensity:
+    types:
+      Heat: 5
+      Blunt: 5
+      Piercing: 5
+  tileBreakChance: [0, 0.5, 1]
+  tileBreakIntensity: [0, 10, 30]
+  tileBreakRerollReduction: 20
+  lightColor: Orange
+  texturePath: /Textures/Imperial/Medieval/Misc/fire.rsi
+  fireStates: 1
+
+- type: entity
+  id: MedievalExplosionEffect
+  components:
+  - type: TimedDespawn
+    lifetime: 3
+  - type: Sprite
+    scale: 1.8, 1.8
+    sprite: Imperial/Medieval/Effects/Explosions/common.rsi
+    state: explosion
+  - type: TriggerOnSpawn
+  - type: SpawnOnTrigger
+    proto: SmallExplosionShockWaveEffect
+
+- type: entity
+  id: SmallExplosionShockWaveEffect
+  components:
+  - type: ShockWave
+    speed: 2
+  - type: ShockWaveDistortion
+    speed: 2
+    thikness: 0.1
+    distortion: 0.05
+    maxDistance: 1.3
+    disappearDistancePercentage: 0
+  - type: TimedDespawn
+    lifetime: 0.2
+
+- type: explosion
+  id: MedievalDemolitionCharge
+  damagePerIntensity:
+    types:
+      Heat: 3
+      Blunt: 3
+      Piercing: 3
+      Structural: 50
+  tileBreakChance: [ 0, 0.5, 1 ]
+  tileBreakIntensity: [ 0, 10, 30 ]
+  tileBreakRerollReduction: 20
+  lightColor: Orange
+  texturePath: /Textures/Imperial/Medieval/Misc/fire.rsi
+  fireStates: 1
