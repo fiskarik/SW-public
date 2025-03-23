@@ -44,14 +44,8 @@
     - BorgChassis
   chatMessages: ["chat-emote-msg-Hmmm"]
   chatTriggers:
-    - Хммм
     - хммм
-    - Хммм.
-    - хммм.
-    - Хмммм
     - хмммм
-    - Хмммм.
-    - хмммм.
     
 - type: emote
   id: Questioning
@@ -66,10 +60,8 @@
     - BorgChassis
   chatMessages: ["chat-emote-msg-Hmm"]
   chatTriggers:
-    - Хмм?
-    - Хм?
-    - Хм
-    - хм
+    - хмм?
+    - хм?
     - хм
     - хмм
     
@@ -86,10 +78,7 @@
     - BorgChassis
   chatMessages: ["chat-emote-msg-warcry"]
   chatTriggers:
-    - ААА
-    - ВАГХ
-    - УРА
-    - ааа
+    - ааааа
     - вагх
     - ура
     
@@ -135,24 +124,14 @@
     - BorgChassis
   chatMessages: ["chat-emote-msg-charge"]
   chatTriggers:
-    - charge.
     - charge
-    - Charge
-    - Charge.
-    - Чардж
     - чардж
-    - Чардж.
-    - чардж.
     - вперед
-    - Вперед
-    - вперед.
-    - Вперед.
     
 - type: soundCollection
   id: MaleCharge
   files:
   - /Audio/Imperial/Medieval/Emotes/Warcry/Male/warcry_10.ogg
-  - /Audio/Imperial/Medieval/Emotes/Warcry/Male/warcry_1.ogg
   - /Audio/Imperial/Medieval/Emotes/Warcry/Male/warcry_2.ogg
   - /Audio/Imperial/Medieval/Emotes/Warcry/Male/warcry_3.ogg
   
@@ -260,9 +239,9 @@
 - type: soundCollection
   id: FemalePassiveScream
   files:
-    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Male/passive_1.ogg
-    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Male/passive_2.ogg
-    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Male/passive_3.ogg
-    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Male/passive_4.ogg
-    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Male/passive_5.ogg
-    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Male/passive_6.ogg
+    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Female/passive_1.ogg
+    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Female/passive_2.ogg
+    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Female/passive_3.ogg
+    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Female/passive_4.ogg
+    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Female/passive_5.ogg
+    - /Audio/Imperial/Medieval/Emotes/Scream/Passive/Female/passive_6.ogg
