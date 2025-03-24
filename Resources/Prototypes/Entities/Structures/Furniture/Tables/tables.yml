@@ -479,7 +479,7 @@
         acts: [ "Destruction" ]
       - !type:PlaySoundBehavior
         sound:
-          collection: WoodDestroy
+          collection: WoodDestroy #Imperial medieval
     - trigger:
         !type:DamageTrigger
         damage: 15
