@@ -13,7 +13,7 @@
     foldVerbText: fold-flip-verb
   - type: Sprite
     drawdepth: 3
-    sprite: Objects/Fun/Tabletop/Spacessonne/tiles.rsi
+    sprite: Objects/Fun/Tabletop/Carcassonne/tiles.rsi
     layers:
     - state: back
       map: [ "unfoldedLayer"]
