@@ -3652,6 +3652,58 @@
       mirrorClothingModifier: false
 
 - type: entity
+  name: wooden shield
+  parent: MedievalWoodenShieldKnight
+  id: MedievalWoodenShieldKnightCross
+  description: Wooden shield.
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Shields/cross_woodknight.rsi
+      state: shield
+    - type: Item
+      sprite: Imperial/Medieval/Shields/cross_woodknight.rsi
+      size: Normal
+
+- type: entity
+  name: wooden shield
+  parent: MedievalWoodenShield
+  id: MedievalWoodenShieldCross
+  description: Wooden shield.
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Shields/cross_wooden.rsi
+      state: shield
+    - type: Item
+      sprite: Imperial/Medieval/Shields/cross_wooden.rsi
+      size: Normal
+
+- type: entity
+  name: wooden shield
+  parent: MedievalWoodenShieldBuckler
+  id: MedievalWoodenShieldBucklerCross
+  description: Wooden shield.
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Shields/cross_buckler.rsi
+      state: shield
+    - type: Item
+      sprite: Imperial/Medieval/Shields/cross_buckler.rsi
+      size: Normal
+
+- type: entity
+  name: wooden shield
+  parent: MedievalWoodenShieldBucklerGoblin
+  id: MedievalWoodenShieldBucklerGoblinCross
+  description: Wooden shield.
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Shields/cross_bucklergoblin.rsi
+      state: shield
+    - type: Item
+      sprite: Imperial/Medieval/Shields/cross_bucklergoblin.rsi
+      size: Normal
+
+- type: entity
   name: pickaxe
   parent: BaseItem
   id: MedievalPickaxeEbonit
