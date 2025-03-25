@@ -988,7 +988,7 @@
   components:
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
+    explosionType: MedievalDefault
     maxIntensity: 3
     intensitySlope: 1
     totalIntensity: 45
@@ -1006,6 +1006,8 @@
     initialBeepDelay: 0
     beepInterval: 6 # 2 beeps total (at 0 and 2)
     delay: 2.5
+  - type: SpawnOnTrigger
+    proto: MedievalExplosionEffect
 
 - type: entity
   parent: MopItem
@@ -1041,6 +1043,19 @@
     stealGroup: MedievalGetMedaljonSpeed # imperial medieval
 
 - type: entity
+  parent: MedaljonSpeed
+  id: MedaljonSpeedSkin
+  name: MedaljonSpeedSkin
+  description: MedaljonSpeedSkin
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+
+- type: entity
   parent: ClothingNeckTieDet
   id: MedaljonMana
   name: MedaljonMana
@@ -1054,6 +1069,19 @@
     sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_speed.rsi
   - type: ManaRegen
     regen: 2
+
+- type: entity
+  parent: MedaljonMana
+  id: MedaljonManaSkin
+  name: MedaljonManaSkin
+  description: MedaljonManaSkin
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
 
 - type: entity
   parent: ClothingNeckTieDet
@@ -1071,6 +1099,19 @@
     sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_antimag.rsi
   - type: ManaRegen
     regen: -150
+
+- type: entity
+  parent: MedaljonAntiMana
+  id: MedaljonAntiManaSkin
+  name: MedaljonAntiManaSkin
+  description: MedaljonAntiManaSkin
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
 
 - type: entity
   parent: ClothingNeckTieDet
@@ -1107,6 +1148,19 @@
     stealGroup: MedievalGetMedaljonNoslip # imperial medieval
 
 - type: entity
+  parent: MedaljonNoslip
+  id: MedaljonNoslipSkin
+  name: MedaljonNoslip
+  description: MedaljonNoslip
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+
+- type: entity
   parent: ClothingNeckTieDet
   id: MedaljonThieving
   name: MedaljonThieving
@@ -1120,6 +1174,19 @@
     sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_thieving.rsi
   - type: AddAccentClothing
     accent: Thieving
+
+- type: entity
+  parent: ClothingNeckTieDet
+  id: MedaljonThievingSkin
+  name: MedaljonThieving
+  description: MedaljonThieving
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
 
 - type: entity
   parent: ClothingNeckTieDet
@@ -1150,6 +1217,19 @@
   #    6: 0
   - type: StealTarget # imperial medieval
     stealGroup: MedievalGetMedaljonDef # imperial medieval
+
+- type: entity
+  parent: MedaljonDef
+  id: MedaljonDefSkin
+  name: MedaljonDef
+  description: MedaljonDef
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
 
 - type: entity
   parent: ClothingNeckTieDet
@@ -1184,6 +1264,19 @@
     stealGroup: MedievalGetMedaljonExpl # imperial medieval
 
 - type: entity
+  parent: MedaljonExpl
+  id: MedaljonExplSkin
+  name: MedaljonExpl
+  description: MedaljonExpl
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+
+- type: entity
   parent: ClothingNeckTieDet
   id: MedaljonDark
   name: MedaljonDark
@@ -1212,6 +1305,19 @@
   #    6: 0
   - type: StealTarget # imperial medieval
     stealGroup: MedievalGetMedaljonDark # imperial medieval
+
+- type: entity
+  parent: MedaljonDark
+  id: MedaljonDarkSkin
+  name: MedaljonDark
+  description: MedaljonDark
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
 
 - type: entity
   parent: ChemistryEmptyBottle01
@@ -6263,7 +6369,7 @@
       makeSentient: true
       name: Скелет защитник
       description: Защитите корован
-      rules: Вы - скелет защитник, приставленный к этому каравану в качестве охраны. С телегой что-то случилось, поэтому вы должны защищать груз любой ценой.
+      rules: Вы - скелет защитник, приставленный к этому каравану в качестве охраны. Если у телеги нет никого более 10-15 минут - вы можете отправляться на защиту некрополя. ВАЖНО!! [color=red]Вы не имеете право на РДМ кого-либо ВНЕ каравана и некрополя [/color]
     - type: Damageable
       damageContainer: Biological
       damageModifierSet: Skeleton
@@ -6813,4 +6919,61 @@
   - type: Speech
     speechSounds: Dog
   - type: SpeakOnTrigger
-    pack: PlushDog MedievalLootShieldSlug
+    pack: PlushDog
+
+- type: explosion
+  id: MedievalDefault
+  damagePerIntensity:
+    types:
+      Heat: 5
+      Blunt: 5
+      Piercing: 5
+  tileBreakChance: [0, 0.5, 1]
+  tileBreakIntensity: [0, 10, 30]
+  tileBreakRerollReduction: 20
+  lightColor: Orange
+  texturePath: /Textures/Imperial/Medieval/Misc/fire.rsi
+  fireStates: 1
+
+- type: entity
+  id: MedievalExplosionEffect
+  components:
+  - type: TimedDespawn
+    lifetime: 3
+  - type: Sprite
+    scale: 1.8, 1.8
+    sprite: Imperial/Medieval/Effects/Explosions/common.rsi
+    state: explosion
+  - type: TriggerOnSpawn
+  - type: SpawnOnTrigger
+    proto: SmallExplosionShockWaveEffect
+
+- type: entity
+  id: SmallExplosionShockWaveEffect
+  components:
+  - type: ShockWave
+    speed: 2
+  - type: ShockWaveDistortion
+    speed: 2
+    thikness: 0.1
+    distortion: 0.05
+    maxDistance: 1.3
+    disappearDistancePercentage: 0
+  - type: TimedDespawn
+    lifetime: 0.2
+
+- type: explosion
+  id: MedievalDemolitionCharge
+  damagePerIntensity:
+    types:
+      Heat: 3
+      Blunt: 3
+      Piercing: 3
+      Structural: 50
+  tileBreakChance: [ 0, 0.5, 1 ]
+  tileBreakIntensity: [ 0, 10, 30 ]
+  tileBreakRerollReduction: 20
+  lightColor: Orange
+  texturePath: /Textures/Imperial/Medieval/Misc/fire.rsi
+  fireStates: 1
+

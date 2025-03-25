@@ -1,163 +1,7 @@
 - type: entity
-  parent: MedievalKeyStandard
-  id: MedievalLeatherKey
-  name: security key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: leather
-  - type: PresetIdCard
-    job: LeatherKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalGuardKey
-  name: security key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: gate
-  - type: PresetIdCard
-    job: GuardKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalUnknownKey
-  name: security key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: unknown
-  - type: PresetIdCard
-    job: UnknownKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalFarmerKey
-  name: security key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: farmer
-  - type: PresetIdCard
-    job: FarmerKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalGateKey
-  name: security key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: gate
-  - type: PresetIdCard
-    job: GateKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalBlacksmithKey
-  name: security key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: blacksmith
-  - type: PresetIdCard
-    job: BlacksmithKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalWoodKey
-  name: security key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: wood
-  - type: PresetIdCard
-    job: WoodKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalMaidKey
-  name: security key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: maid
-  - type: PresetIdCard
-    job: MaidKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalKeyGuard
-  name: security key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: secure
-  - type: PresetIdCard
-    job: GateKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalKeyChapel
-  name: chapel key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: chapel
-  - type: PresetIdCard
-    job: ChapelKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalKeyAlchem
-  name: alchem key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: alchem
-  - type: PresetIdCard
-    job: AlchemKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalKeyTavern
-  name: tavern key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: tavern
-  - type: PresetIdCard
-    job: TavernaKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalKeyKing
-  name: king key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: king
-  - type: PresetIdCard
-    job: KingKey
-
-- type: entity
-  parent: MedievalKeyStandard
-  id: MedievalKeyWizard
-  name: wizard key
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/keys.rsi
-    state: wizard
-  - type: PresetIdCard
-    job: WizardKey
-
-- type: entity
   parent: Clothing
-  id: MedievalKeyStandard
-  name: key
-  description: key
-  noSpawn: true
+  id: MedievalKeyBase
+  abstract: true
   components:
   - type: Clothing
     slots:
@@ -165,20 +9,246 @@
   - type: Item
     size: Tiny
   - type: Access
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalLeatherKey
+  name: legionnaire key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: leather
+  - type: Key
+    accesses:
+    - Atmospherics
+  - type: Tag
+    tags:
+    - LegionnaireKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalGuardKey
+  name: armory rebel key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: gate
+  - type: Key
+    accesses:
+    - Security
+  - type: Tag
+    tags:
+    - RebelKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalUnknownKey
+  name: unknown key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: unknown
+  - type: Key
+    accesses:
+    - Maintenance
   - type: Tag
     tags:
     - MedievalKey
 
 - type: entity
-  parent: MedievalKeyStandard
+  parent: MedievalKeyBase
+  id: MedievalFarmerKey
+  name: mercenary key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: farmer
+  - type: Key
+    accesses:
+    - Hydroponics
+  - type: Tag
+    tags:
+    - MercenaryKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalGateKey
+  name: gate key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: gate
+  - type: Key
+    accesses:
+    - Medical
+  - type: Tag
+    tags:
+    - RebelKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalBlacksmithKey
+  name: tribal key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: blacksmith
+  - type: Key
+    accesses:
+    - Engineering
+  - type: Tag
+    tags:
+    - TribalKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalWoodKey
+  name: miner key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: wood
+  - type: Key
+    accesses:
+    - ChiefEngineer
+  - type: Tag
+    tags:
+    - MinerKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalMaidKey
+  name: maid key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: maid
+  - type: Key
+    accesses:
+    - Janitor
+  - type: Tag
+    tags:
+    - MedievalKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalKeyGuard
+  name: rebel key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: secure
+  - type: Key
+    accesses:
+    - Medical
+  - type: Tag
+    tags:
+    - RebelKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalKeyChapel
+  name: chapel key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: chapel
+  - type: Key
+    accesses:
+    - Chapel
+  - type: Tag
+    tags:
+    - NecromancerKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalKeyAlchem
+  name: bandit key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: alchem
+  - type: Key
+    accesses:
+    - Chemistry
+  - type: Tag
+    tags:
+    - BanditKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalKeyTavern
+  name: tavern key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: tavern
+  - type: Key
+    accesses:
+    - Bar
+  - type: Tag
+    tags:
+    - MedievalKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalKeyKing
+  name: cult of truth key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: king
+  - type: Key
+    accesses:
+    - Captain
+  - type: Tag
+    tags:
+    - CultOfTruthKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalKeyWizard
+  name: wizard key
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/keys.rsi
+    state: wizard
+  - type: Key
+    accesses:
+    - Research
+  - type: Tag
+    tags:
+    - WizardKey
+
+- type: entity
+  parent: MedievalKeyBase
+  id: MedievalKeyStandard
+  name: key
+  description: key
+  noSpawn: true
+  components:
+  - type: Key
+    accesses:
+    - MedievalKey
+  - type: Tag
+    tags:
+    - MedievalKey
+
+- type: entity
+  parent: MedievalKeyBase
   id: MedievalKeyCargo
-  name: storage key
+  name: legion armoury key
   components:
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
     state: storage
-  - type: PresetIdCard
-    job: StorageKey
+  - type: Key
+    accesses:
+    - Cargo
+  - type: Tag
+    tags:
+    - LegionnaireKey
+
 
 - type: job
   id: TavernaKey
@@ -356,12 +426,68 @@
   components:
   - type: Sprite
     sprite: Imperial/Medieval/Misc/key_storage.rsi
+    state: base
   - type: Storage
+    maxItemSize: Small
     grid:
     - 0,0,6,1
     whitelist:
       tags:
         - MedievalKey
+        - LegionnaireKey
+        - RebelKey
+        - MercenaryKey
+        - TribalKey
+        - MinerKey
+        - NecromancerKey
+        - BanditKey
+        - TavernKey
+        - CultOfTruthKey
+        - WizardKey
+  - type: ItemMapper
+    mapLayers:
+      medieval_key:
+        whitelist:
+          tags:
+          - MedievalKey
+      bandits:
+        whitelist:
+          tags:
+          - BanditKey
+      fox:
+        whitelist:
+          tags:
+          - RebelKey
+      legion:
+        whitelist:
+          tags:
+          - LegionnaireKey
+      mage:
+        whitelist:
+          tags:
+          - WizardKey
+      mercenaries:
+        whitelist:
+          tags:
+          - MercenaryKey
+      necro:
+        whitelist:
+          tags:
+          - NecromancerKey
+      tribe:
+        whitelist:
+          tags:
+          - TribalKey
+      wood:
+        whitelist:
+          tags:
+            - MinerKey
+      king:
+        whitelist:
+          tags:
+            - CultOfTruthKey
+    sprite: Imperial/Medieval/Misc/key_storage.rsi
+  - type: Appearance
   - type: Item
     size: Normal
   - type: Clothing

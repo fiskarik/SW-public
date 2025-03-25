@@ -9,8 +9,8 @@ using Robust.Shared.Audio;
 using Content.Shared.Coordinates;
 using Robust.Shared.Player;
 using Robust.Server.Player;
-using Content.Server.MedievalMeleeResource.Components;
 using Content.Shared.Imperial.Medieval.MedievalItemRustComponent;
+using Content.Server.Cult.Components;
 
 namespace Content.Server.MedievalMeleeResource
 {
@@ -45,15 +45,20 @@ namespace Content.Server.MedievalMeleeResource
                 if (HasComp<MedievalMeleeRepairManComponent>(user))
                 {
                     resource.Resource += comp.Resource * 2;
+                    Dirty(resource.Owner, resource);
                 }
                 else
                 {
                     resource.Resource += comp.Resource;
                     resource.ResourceWaste *= 1.05f;
+                    Dirty(resource.Owner, resource);
                 }
 
                 if (resource.Resource > resource.MaxResource)
+                {
+                    Dirty(resource.Owner, resource);
                     resource.Resource = resource.MaxResource;
+                }
                 _audioSystem.PlayPvs(new SoundPathSpecifier(resource.EffectSoundOnRepair), target.Value);
                 CheckResource(target.Value, resource);
 
@@ -66,6 +71,7 @@ namespace Content.Server.MedievalMeleeResource
             if (TryComp<MedievalItemRustComponent>(uid, out var rustComponent))
             {
                 rustComponent.RustPercentage = 1.0f - component.Resource / component.MaxResource;
+                Dirty(component.Owner, component);
 
                 Dirty(uid, rustComponent);
             }
@@ -177,6 +183,7 @@ namespace Content.Server.MedievalMeleeResource
             if (TryComp<MeleeWeaponComponent>(uid, out var weapon) && !HasComp<ExaminerComponent>(uid))
             {
                 EnsureComp<MedievalMeleeResourceComponent>(uid);
+                EnsureComp<CultBloodMeleeComponent>(uid, out var blood);
             }
         }
         private void OnStart(EntityUid uid, MedievalMeleeResourceComponent component, ComponentStartup args)
@@ -215,6 +222,7 @@ namespace Content.Server.MedievalMeleeResource
                     component.Resource = 0f;
                 if (component.Resource > component.MaxResource)
                     component.Resource = component.MaxResource;
+                Dirty(component.Owner, component);
                 CheckResource(uid, component);
                 // Full
                 // AlmostFull

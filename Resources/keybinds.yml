@@ -615,4 +615,9 @@ binds:
   type: State
   key: Right
 
+# Medieval Dash
+- function: MedievalDash
+  type: State
+  key: Space
+
 # Imperial Options End

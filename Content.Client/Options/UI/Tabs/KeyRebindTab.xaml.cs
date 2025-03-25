@@ -46,7 +46,7 @@ namespace Content.Client.Options.UI.Tabs
         {
             if (_cfg.GetCVar(CCVars.ToggleWalk))
             {
-                ToggleFunctions.Add(EngineKeyFunctions.Walk);
+                ToggleFunctions.Remove(EngineKeyFunctions.Walk); // imperial medieval
             }
             else
             {
@@ -65,7 +65,7 @@ namespace Content.Client.Options.UI.Tabs
                 return;
             }
 
-            var bindingType = args.Pressed ? KeyBindingType.Toggle : KeyBindingType.State;
+            var bindingType = args.Pressed ? KeyBindingType.State : KeyBindingType.State; // imperial medieval
             for (var i = 0; i <= 1; i++)
             {
                 var binding = (i == 0 ? keyControl.BindButton1 : keyControl.BindButton2).Binding;
