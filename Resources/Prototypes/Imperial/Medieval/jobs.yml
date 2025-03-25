@@ -2218,10 +2218,10 @@
     - type: MedievalPasportPerson
       personJob: "[color=cyan]Легат легиона[/color]"
       pasport: MedievalPasportLegion
+      jobPrefix: "[ЛегЛ]"
     - type: CloackMessage
       action: CloackMessageActionLegion
       faction: "leg"
-      jobPrefix: "[ЛегЛ]"
 
 - type: roleLoadout
   id: JobMedievalLegionLegat
@@ -2692,10 +2692,10 @@
     - type: MedievalPasportPerson
       personJob: "[color=red]Ярл мятежников[/color]"
       pasport: MedievalPasportInsurgency
+      jobPrefix: "[ЯрлМ]"
     - type: CloackMessage
       action: CloackMessageActionIns
       faction: "ins"
-      jobPrefix: "[ЯрлМ]"
 
 - type: roleLoadout
   id: JobMedievalInsurgencyLegat
