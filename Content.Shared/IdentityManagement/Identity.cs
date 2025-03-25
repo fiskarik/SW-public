@@ -35,7 +35,7 @@ public static class Identity
 
         var identName = ent.GetComponent<MetaDataComponent>(ident.Value).EntityName;
 
-        if (ent.TryGetComponent<IndentityRequiresKnowledgeComponent>(uid, out var identReqTarget) && ent.TryGetComponent<IndentityRequiresKnowledgeComponent>(viewer, out var identReqViewer))
+        if (ent.TryGetComponent<IdentityRequiresKnowledgeComponent>(uid, out var identReqTarget) && ent.TryGetComponent<IdentityRequiresKnowledgeComponent>(viewer, out var identReqViewer))
         {
             if (identReqViewer.KnownIds.Contains(identReqTarget.Identifier))
                 return identName;

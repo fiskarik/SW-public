@@ -14,20 +14,20 @@ public sealed partial class MedievalIdentitySystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<IndentityRequiresKnowledgeComponent, ComponentInit>(OnComponentInit);
-        SubscribeLocalEvent<IndentityRequiresKnowledgeComponent, GetVerbsEvent<AlternativeVerb>>(OnGetVerbs);
+        SubscribeLocalEvent<IdentityRequiresKnowledgeComponent, ComponentInit>(OnComponentInit);
+        SubscribeLocalEvent<IdentityRequiresKnowledgeComponent, GetVerbsEvent<AlternativeVerb>>(OnGetVerbs);
     }
 
-    private void OnComponentInit(EntityUid uid, IndentityRequiresKnowledgeComponent component, ComponentInit args)
+    private void OnComponentInit(EntityUid uid, IdentityRequiresKnowledgeComponent component, ComponentInit args)
     {
         component.Identifier = _nextId;
         _nextId++;
         Dirty(uid, component);
     }
 
-    private void OnGetVerbs(EntityUid uid, IndentityRequiresKnowledgeComponent component, GetVerbsEvent<AlternativeVerb> args)
+    private void OnGetVerbs(EntityUid uid, IdentityRequiresKnowledgeComponent component, GetVerbsEvent<AlternativeVerb> args)
     {
-        if (!TryComp<IndentityRequiresKnowledgeComponent>(uid, out var comp))
+        if (!TryComp<IdentityRequiresKnowledgeComponent>(uid, out var comp))
             return;
         if (comp.KnownIds.Contains(component.Identifier))
             return;
