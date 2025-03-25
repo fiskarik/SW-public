@@ -55,7 +55,9 @@
 - type: medievalFaction
   id: Tribe
   name: племя
+  allowHeadhunt: false
 
 - type: medievalFaction
   id: Cult
   name: культ
+  allowHeadhunt: false
