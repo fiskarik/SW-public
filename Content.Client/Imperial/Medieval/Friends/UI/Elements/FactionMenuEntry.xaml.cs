@@ -20,6 +20,7 @@ public sealed partial class FactionMenuEntry : Control
     public Action<int, FactionMemberGroup>? GroupSet;
     public Action<int>? RemoveButtonPressed;
     public Action<int, bool>? SetLeaderPressed;
+    public bool Alive = true;
 
     public FactionMenuEntry(int ent, int self, FactionMemberData data, FactionMenuAccess access, string objective)
     {
@@ -28,9 +29,11 @@ public sealed partial class FactionMenuEntry : Control
 
         NameLabel.SetMessage($"{data.JobPrefix} {data.Name}");
         RemoveButton.Visible = access == FactionMenuAccess.Full && ent != self;
+        YouText.Visible = ent == self;
 
         if (data.Dead)
         {
+            Alive = false;
             MainPanel.BackgroundPanelColor = Color.FromHex("#291e1e");
             FireText.SetMessage("Вычеркнуть");
         }
@@ -74,7 +77,9 @@ public sealed partial class FactionMenuEntry : Control
                         RemoveLeaderCross.Visible = data.Leader;
                         SetLeaderButton.Visible = ent != self;
                         LeaderPanel.Visible = ent != self;
+                        LeaderPanel.BackgroundPanelColor = data.Leader ? Color.FromHex("#474747") : Color.FromHex("#2b2b2b");
                         SetLeaderButton.OnPressed += args => SetLeaderPressed?.Invoke(ent, !data.Leader);
+                        SetLeaderButton.ToolTip = data.Leader ? "Снять с поста" : "Назначить лидером";
                         break;
                     }
                 default:

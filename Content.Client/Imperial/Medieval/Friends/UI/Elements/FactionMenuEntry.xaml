@@ -133,8 +133,12 @@
                 </BoxContainer>
             </BoxContainer>
         </BoxContainer>
-        <BoxContainer Margin="4 0"
+        <BoxContainer Margin="8 0"
                       HorizontalAlignment="Right">
+            <RichTextLabel  Name="YouText"
+                            Text="[color=green]Это вы[/color]"
+                            Margin="10 0"
+                            Visible="False"/>
             <Button Name="RemoveButton"
                     ModulateSelfOverride="#00000000">
                 <RichTextLabel  Name="FireText"

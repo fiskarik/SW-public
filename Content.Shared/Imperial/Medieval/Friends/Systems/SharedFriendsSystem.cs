@@ -30,7 +30,7 @@ public abstract partial class SharedFriendsSystem : EntitySystem
         var otherFaction = _proto.Index(comp.Faction);
 
         if (myFaction == otherFaction && myFaction.ShowKnown)
-            args.PushMarkup("[color=green]Из моей фракции, это [/color] " + data.Job);
+            args.PushMarkup("[color=green]Из моей фракции, это [/color] " + data.Job.ToLower());
         else if (myFaction.KnownFactions.TryGetValue(comp.Faction, out var str))
             args.PushMarkup(str);
     }
