@@ -109,7 +109,8 @@ public sealed partial class FriendsSystem
 
         data.Group = args.Group;
         data.Leader = args.Group == FactionMemberGroup.None ? false : data.Leader;
-        comp.MenuAccess = args.Group == FactionMemberGroup.None ? FactionMenuAccess.None : FactionMenuAccess.Group;
+        if (comp.MenuAccess != FactionMenuAccess.Full)
+            comp.MenuAccess = args.Group == FactionMemberGroup.None ? FactionMenuAccess.None : FactionMenuAccess.Group;
 
         _audio.PlayGlobal(new SoundPathSpecifier("/Audio/Imperial/Medieval/faction_group_assigned.ogg"), uid.Value);
         _popup.PopupEntity("Вам была назначена новая группа.", uid.Value, uid.Value, Shared.Popups.PopupType.Medium);
@@ -184,9 +185,12 @@ public sealed partial class FriendsSystem
         data.JobPrefix = jobPrefix;
         data.Faction = faction;
         comp.Faction = faction;
+        if (Proto.TryIndex(oldFaction, out var factProto) && factProto.WantedText != null && !factProto.AllowHeadhunt)
+            comp.Wanted = new(oldFaction, factProto.WantedText);
 
         container.Value.Comp.CachedMembers.GetOrNew(oldFaction).Remove(comp.MemberID);
         container.Value.Comp.CachedMembers.GetOrNew(faction).Add(comp.MemberID, data);
+        Dirty(uid, comp);
         RefreshFactionMenu(faction);
         RefreshFactionMenu(oldFaction);
     }
