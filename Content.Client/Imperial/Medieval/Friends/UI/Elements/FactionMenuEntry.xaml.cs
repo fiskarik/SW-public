@@ -28,6 +28,7 @@ public sealed partial class FactionMenuEntry : Control
 
         NameLabel.SetMessage($"{data.JobPrefix} {data.Name}");
         RemoveButton.Visible = access == FactionMenuAccess.Full && ent != self;
+        YouText.Visible = ent == self;
 
         if (data.Dead)
         {
