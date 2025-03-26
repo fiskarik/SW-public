@@ -4387,7 +4387,7 @@
   name: job-name-villager-def-medieval
   description: job-description-villager-def-medieval
   playTimeTracker: JobMedievalVillagerDef
-  startingGear: MedievalVillagerGearDef
+  startingGear: MedievalVillagerDefGear
   icon: "JobIconMedievalVillagerDef"
   special:
   - !type:AddComponentSpecial
