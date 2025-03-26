@@ -59,9 +59,9 @@
             # Miner (9 total)
             MedievalMiner: [ 8, 8 ]
             MedievalMinerLeader: [ 1, 1 ]
-            # Village (13 total)
+            # Village (14 total)
             MedievalVillager: [ 10, 10 ]
-            MedievalVillagerDef: [ 2, 2 ]
+            MedievalVillagerDef: [ 3, 3 ]
             MedievalVillagerLeader: [ 1, 1 ]
             # Traders (8 total)
             MedievalTrader: [ 3, 3 ]
