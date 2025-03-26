@@ -28,18 +28,18 @@ public sealed partial class MedievalIdentitySystem : EntitySystem
 
     private void OnGetVerbs(EntityUid uid, IdentityRequiresKnowledgeComponent component, GetVerbsEvent<AlternativeVerb> args)
     {
-        if (!TryComp<IdentityRequiresKnowledgeComponent>(uid, out var comp))
+        if (!TryComp<IdentityRequiresKnowledgeComponent>(args.User, out var userComp))
             return;
-        if (comp.KnownIds.Contains(component.Identifier))
+        if (component.KnownIds.Contains(userComp.Identifier) || !userComp.HideUnknown)
             return;
 
         args.Verbs.Add(new AlternativeVerb()
         {
             Act = () =>
             {
-                _popup.PopupPredicted($"Вы представились {IdentityManagement.Identity.Name(uid, EntityManager, args.User)}.", uid, args.User);
-                _popup.PopupPredicted($"{Name(args.User)} представился вам.", args.User, uid);
-                component.KnownIds.Add(comp.Identifier);
+                _popup.PopupPredicted($"Вы представились {IdentityManagement.Identity.Name(uid, EntityManager, args.User)}.", null, uid, args.User);
+                _popup.PopupPredicted($"{Name(args.User)} представился вам.", null, args.User, uid);
+                component.KnownIds.Add(userComp.Identifier);
                 Dirty(uid, component);
             },
             Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Imperial/Medieval/date.rsi"), "date"),
