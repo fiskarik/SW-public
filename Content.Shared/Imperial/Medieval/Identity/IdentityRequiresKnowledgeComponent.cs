@@ -17,4 +17,14 @@ public sealed partial class IdentityRequiresKnowledgeComponent : Component
     /// </summary>
     [AutoNetworkedField]
     public List<int> KnownIds = new();
+
+    /// <summary>
+    /// Будет ли скрываться имя если не представляться. True по умолчанию.
+    /// </summary>
+    /// <remarks>
+    /// Полезно для мобов, которых знают все, но которые никого не знают.
+    /// </remarks>
+    [DataField]
+    [AutoNetworkedField]
+    public bool HideUnknown = true;
 }

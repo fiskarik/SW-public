@@ -37,7 +37,7 @@ public static class Identity
 
         if (ent.TryGetComponent<IdentityRequiresKnowledgeComponent>(uid, out var identReqTarget) && ent.TryGetComponent<IdentityRequiresKnowledgeComponent>(viewer, out var identReqViewer))
         {
-            if (identReqViewer.KnownIds.Contains(identReqTarget.Identifier))
+            if (identReqViewer.KnownIds.Contains(identReqTarget.Identifier) || identReqTarget.Identifier == identReqViewer.Identifier || !identReqTarget.HideUnknown)
                 return identName;
 
             if (!ent.TryGetComponent<HumanoidAppearanceComponent>(uid, out var humanoid))
