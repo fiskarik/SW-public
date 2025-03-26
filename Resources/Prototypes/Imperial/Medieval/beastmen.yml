@@ -121,6 +121,8 @@
     drawdepth: Mobs
     scale: 0.97, 1.03
   - type: Body
+    prototype: Beastmen
+    requiredLegs: 2
   - type: LanguageSpeaker
     languages:
       Common: Speak
@@ -132,8 +134,6 @@
       #Growling: Speak
       #Hissing: Speak
       #Elf: Speak
-    prototype: Beastmen
-    requiredLegs: 2
   - type: Butcherable
     butcheringType: Spike
     spawned:
