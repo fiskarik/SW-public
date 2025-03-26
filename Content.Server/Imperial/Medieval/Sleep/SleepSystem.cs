@@ -88,21 +88,61 @@ public sealed class SleepingSystem : EntitySystem
         }
     }
     #region addwords
-    public void AddWord(SleepingImperialComponent component, string word)
+    public void AddWord(string word, bool isall, SleepingImperialComponent? component = null)
     {
-        component.Words.Add(word);
+        var query = EntityQueryEnumerator<SleepingImperialComponent>();
+        if (isall)
+        {
+            while (query.MoveNext(out var _, out var comp))
+                comp.Words.Add(word);
+        }
+        else
+        {
+            if (component == null) return;
+            component.Words.Add(word);
+        }
     }
-    public void RemoveWord(SleepingImperialComponent component, string word)
+    public void RemoveWord(string word, bool isall, SleepingImperialComponent? component = null)
     {
-        component.Words.Remove(word);
+        var query = EntityQueryEnumerator<SleepingImperialComponent>();
+        if (isall)
+        {
+            while (query.MoveNext(out var _, out var comp))
+                comp.Words.Remove(word);
+        }
+        else
+        {
+            if (component == null) return;
+            component.Words.Remove(word);
+        }
     }
-    public void RemoveWord(SleepingImperialComponent component, int i)
+    public void RemoveWord(int i, bool isall, SleepingImperialComponent? component = null)
     {
-        component.Words.RemoveAt(i);
+        var query = EntityQueryEnumerator<SleepingImperialComponent>();
+        if (isall)
+        {
+            while (query.MoveNext(out var _, out var comp))
+                comp.Words.RemoveAt(i);
+        }
+        else
+        {
+            if (component == null) return;
+            component.Words.RemoveAt(i);
+        }
     }
-    public void ClearWords(SleepingImperialComponent component)
+    public void ClearWords(bool isall, SleepingImperialComponent? component = null)
     {
-        component.Words.Clear();
+        var query = EntityQueryEnumerator<SleepingImperialComponent>();
+        if (isall)
+        {
+            while (query.MoveNext(out var _, out var comp))
+                comp.Words.Clear();
+        }
+        else
+        {
+            if (component == null) return;
+            component.Words.Clear();
+        }
     }
     #endregion
 }
