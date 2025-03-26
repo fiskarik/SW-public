@@ -39,9 +39,9 @@
 - type: markingPoints
   id: MobHumanMarkingLimits
   points:
-    Special: # the cat ear joke
-      points: 0
-      required: false
+    #Special: # the cat ear joke
+    #  points: 0
+    #  required: false
     Hair:
       points: 1
       required: false
