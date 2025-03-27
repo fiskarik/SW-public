@@ -5152,3 +5152,6 @@ ent-OrganDionaNymphStomach = нимфа Дендрита
 ent-OrganDionaNymphLungs = нимфа Дендрита
     .desc = Милое существо.
 species-name-dendrit = Дендрит
+ent-MedievalMobWingedShadow = крылатая тень
+    .desc = Ходят слухи, что когда-то это существо было человеком...
+    .suffix = { "Средневековье, некромант" }
