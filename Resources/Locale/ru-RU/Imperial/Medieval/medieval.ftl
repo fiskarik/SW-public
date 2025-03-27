@@ -3596,6 +3596,9 @@ trait-medieval-skills-pain = Стойкий
 trait-medieval-skills-pain-desc = Вы не кричите от боли
 trait-medieval-skills-stamina = Выносливый
 trait-medieval-skills-stamina-desc = Стамина увеличина на 10%
+trait-medieval-skills-farmer = Фермер
+trait-medieval-skills-farmer-desc = Еда, приготовленная вами, лучше насыщает и на время увеличивает выносливость при употреблении
+
 job-description-wanderMag-medieval = Путник, обладающий магией
 job-name-wanderMag-medieval = Странствующий маг
 job-description-legionRecruit-medieval = Изучайте основы несения службы в легионе. Осознайте, какой стороной держать меч.

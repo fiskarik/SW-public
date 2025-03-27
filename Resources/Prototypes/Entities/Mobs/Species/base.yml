@@ -160,6 +160,7 @@
     - RadiationProtection
     - Drowsiness
     - Adrenaline
+    - MedievalFarmerBoost # Imperial medieval
   - type: Body
     prototype: Human
     requiredLegs: 2
