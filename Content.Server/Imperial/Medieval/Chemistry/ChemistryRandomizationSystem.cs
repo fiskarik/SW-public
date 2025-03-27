@@ -481,7 +481,7 @@ public sealed class ChemistryRandomizationSystem : EntitySystem // TODO: Maybe r
             newprototypes = $"{newprototypes}{Environment.NewLine}{ConvertMappingToString(mapping)}";
         }
         _uploadManager.SendGamePrototype(newprototypes); // Todo: stop using SendGamePrototype because unoptimized
-        Log.Debug(newprototypes);
+        // Log.Debug(newprototypes);
     }
     private string? ConvertMappingToString(MappingDataNode node)
     {

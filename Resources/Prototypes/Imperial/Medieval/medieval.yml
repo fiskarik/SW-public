@@ -7052,3 +7052,36 @@
       reagents:
       - ReagentId: MedievalMushroom3
         Quantity: 10
+
+- type: entity
+  name: MedievalTimedSpawnerMushrooms
+  id: MedievalTimedSpawnerMushrooms
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MedievalSpawnerMushroom
+    chance: 0.22
+    intervalSeconds: 180
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 2
+
+- type: entity
+  name: BlastDoor
+  id: MedievalSpawnerMushroom
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+  - type: RandomSpawner
+    prototypes:
+    - MedievalMushroom1
+    - MedievalMushroom2
+    - MedievalMushroom3
+    chance: 1
+    offset: 8
