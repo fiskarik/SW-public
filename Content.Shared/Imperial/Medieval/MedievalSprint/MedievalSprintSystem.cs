@@ -42,7 +42,7 @@ public sealed partial class MedievalSprintSystem : EntitySystem
 
             var stam = component.StaminaDamage;
             if (HasComp<FarmerBoostComponent>(uid))
-                stam *= 0.5f;
+                stam *= 0.7f;
 
             _staminaSystem.TryTakeStamina(uid, stam, ignoreResistances: true);
 
