@@ -3328,6 +3328,8 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  - type: StaminaDamageOnHit
+    damage: 17
   - type: LanguageSpeaker
     languages:
       #Common: Understand
@@ -3421,12 +3423,6 @@
   - type: IgnoreSpiderWeb
   - type: StaminaDamageOnHit
     damage: 17
-  - type: Stealth
-    maxVisibility: 1
-    minVisibility: -1
-  - type: StealthOnMove
-    movementVisibilityRate: 0.2
-    passiveVisibilityRate: -0.2
   - type: HTN
     rootTask:
       task: SimpleHostileCompound

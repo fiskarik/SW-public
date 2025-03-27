@@ -5155,3 +5155,4 @@ species-name-dendrit = Дендрит
 ent-MedievalMobWingedShadow = крылатая тень
     .desc = Ходят слухи, что когда-то это существо было человеком...
     .suffix = { "Средневековье, некромант" }
+species-Diona = Дендрит

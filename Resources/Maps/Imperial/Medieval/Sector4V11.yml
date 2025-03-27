@@ -90720,13 +90720,6 @@ entities:
     - type: Transform
       pos: 3.5,-78.5
       parent: 1
-- proto: AmbrosiaDeusSeeds
-  entities:
-  - uid: 4
-    components:
-    - type: Transform
-      pos: 32.564613,23.309252
-      parent: 1
 - proto: Barricade
   entities:
   - uid: 5
