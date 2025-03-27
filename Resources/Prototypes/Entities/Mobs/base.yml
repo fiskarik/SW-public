@@ -224,9 +224,12 @@
     damageRecovery:
       types:
         Asphyxiation: -1.0
+  # Imperial medieval start
   - type: CritEmotes
     emotes:
     - Cough
+    - Gasp
+  # Imperial medieval end
 
 # Used for mobs that have a bloodstream
 - type: entity
