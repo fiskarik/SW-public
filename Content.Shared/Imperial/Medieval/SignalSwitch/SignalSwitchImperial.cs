@@ -36,7 +36,7 @@ public sealed partial class SignalSwitchImperialComponent : Component
     [DataField("clickSound")]
     public SoundSpecifier ClickSound = new SoundPathSpecifier("/Audio/Machines/lightswitch.ogg");
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public TimeStamp Timing = TimeStamp.FromSeconds(3);
+    public TimeSpan Timing = TimeSpan.FromSeconds(3);
 }
 [Serializable, NetSerializable]
 public sealed partial class OnDoAfterSignalSwitchEvent : SimpleDoAfterEvent { }

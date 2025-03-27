@@ -38,7 +38,7 @@ public sealed class SignalSwitchImperialSystem : EntitySystem
         {
             MovementThreshold = 0.5f,
             BreakOnMove = true,
-            CancelDuplicate = false,
+            CancelDuplicate = true,
             DistanceThreshold = 2,
             BreakOnDamage = true,
             RequireCanInteract = false, // stuns itself
