@@ -280,6 +280,7 @@
       #Growling: Speak
       #Hissing: Speak
       #Elf: Speak
+  - type: SleepingImperial
 # Imperial Medieval End
 
 - type: entity
