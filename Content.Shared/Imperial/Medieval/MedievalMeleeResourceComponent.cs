@@ -23,10 +23,10 @@ public sealed partial class MedievalMeleeResourceComponent : Component
     public string DamageState = "Full";
 
     [DataField]
-    public SoundSpecifier? EffectSoundOnRepair;
+    public SoundSpecifier? EffectSoundOnRepair = new SoundPathSpecifier("/Audio/Imperial/Medieval/repair_stone_use.ogg");
 
     [DataField]
-    public SoundSpecifier? EffectSoundOnBreak;
+    public SoundSpecifier? EffectSoundOnBreak = new SoundPathSpecifier("/Audio/Imperial/Medieval/melee_break.ogg");
 
     [DataField]
     public string SafeToHitGroup = "all";
