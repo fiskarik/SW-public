@@ -3340,3 +3340,109 @@
       #Hissing: Speak
       #Elf: Speak
 
+- type: entity
+  name: MedievalMobWingedShadow
+  parent: SimpleMobBaseNoFood
+  id: MedievalMobWingedShadow
+  description: MedievalMobWingedShadow
+  components:
+  - type: TimedDespawn
+    lifetime: 780
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Medieval/Mobs/wingedshadow.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+    - state: unshaded
+      shader: unshaded
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Appearance
+  - type: Bloodstream
+    bloodMaxVolume: 0
+  - type: MeleeWeapon
+    animation: WeaponArcPunch
+    range: 1.4
+    attackRate: 0.35
+    hidden: true
+    angle: 0
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+    damage:
+      groups:
+        Airloss: 2
+      types:
+        Slash: 8.5
+        ParryAble: 1
+        Bloodloss: 3
+        Radiation: 3
+  - type: Puller
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - FootstepSound
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      125: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 3.2
+  - type: PointLight
+    color: red
+    energy: 0.2
+    radius: 1.3
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      10: 1.1
+      65: 1.2
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: IgnoreSpiderWeb
+  - type: StaminaDamageOnHit
+    damage: 17
+  - type: Stealth
+    maxVisibility: 1
+    minVisibility: -1
+  - type: StealthOnMove
+    movementVisibilityRate: 0.2
+    passiveVisibilityRate: -0.2
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Imperial/Medieval/0919132c658e1be.ogg
+      params:
+        variation: 0.125
+  - type: LanguageSpeaker
+    languages:
+      #Common: Understand
+      #Goblin: Speak
+      Ancient: Speak
+      #Tribe: Speak
+      #Orc: Speak
+      Cursed: Understand
+      #Growling: Speak
+      #Hissing: Speak
+      #Elf: Speak
