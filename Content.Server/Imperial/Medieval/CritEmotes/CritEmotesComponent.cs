@@ -9,5 +9,8 @@ public sealed partial class SoftCritEmotesComponent : Component
     [DataField]
     public ProtoId<EmotePrototype>[] Emotes = [];
 
+    [DataField]
+    public float MinDamage = 70f;
+
     public TimeSpan NextUpdate = TimeSpan.Zero;
 }

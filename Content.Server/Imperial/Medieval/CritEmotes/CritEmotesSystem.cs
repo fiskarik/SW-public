@@ -4,6 +4,7 @@ using Robust.Shared.Timing;
 using Content.Shared.Chat;
 using Content.Shared.Mobs.Components;
 using Robust.Shared.Random;
+using Content.Shared.Damage;
 
 namespace Content.Server.Body.Systems;
 
@@ -17,15 +18,15 @@ public sealed class CritEmotesSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<SoftCritEmotesComponent, MobStateComponent>();
-        while (query.MoveNext(out var uid, out var crit, out var mob))
+        var query = EntityQueryEnumerator<SoftCritEmotesComponent, MobStateComponent, DamageableComponent>();
+        while (query.MoveNext(out var uid, out var crit, out var mob, out var damageable))
         {
             if (_gameTiming.CurTime < crit.NextUpdate)
                 continue;
 
             crit.NextUpdate += TimeSpan.FromSeconds(_random.NextFloat(4f, 7f));
 
-            if (mob.CurrentState != Shared.Mobs.MobState.Critical)  // TODO софт крит вместо обычного
+            if (damageable.Damage.GetTotal() < crit.MinDamage || mob.CurrentState == Shared.Mobs.MobState.Dead)  // TODO софт крит вместо обычного
                 continue;
 
             _chat.TryEmoteWithChat(uid, _random.Pick(crit.Emotes), ChatTransmitRange.HideChat, ignoreActionBlocker: true);
