@@ -31,10 +31,10 @@ public sealed class SignalSwitchImperialSystem : EntitySystem
 
     private void OnActivated(EntityUid uid, SignalSwitchImperialComponent comp, ActivateInWorldEvent args)
     {
-        if (args.Handled || !args.Complex || args.Target == null)
+        if (args.Handled || !args.Complex || args.Target == null || HasComp<SignalSwitchImperialHelpComponent>(args.User))
             return;
 
-        var sdoAfter = new DoAfterArgs(EntityManager, args.User, comp.Timing, new OnDoAfterSignalSwitchEvent(), args.Target, target: uid)
+        var sdoAfter = new DoAfterArgs(EntityManager, args.User, comp.Timing, new OnDoAfterSignalSwitchEvent(), args.Target, target: args.User)
         {
             MovementThreshold = 0.5f,
             BreakOnMove = true,
@@ -47,7 +47,7 @@ public sealed class SignalSwitchImperialSystem : EntitySystem
         if (!_doAfter.TryStartDoAfter(sdoAfter))
             return;
 
-
+        EnsureComp<SignalSwitchImperialHelpComponent>(args.User);
         args.Handled = true;
     }
     private void OnDoAfter(EntityUid uid, SignalSwitchImperialComponent comp, OnDoAfterSignalSwitchEvent ev)
@@ -56,8 +56,9 @@ public sealed class SignalSwitchImperialSystem : EntitySystem
 
         if (ev.Cancelled || ev.Target == null) return;
 
+        RemComp<SignalSwitchImperialHelpComponent>(ev.User);
         comp.State = !comp.State;
-        _deviceLink.InvokePort(ev.Target.Value, comp.State ? comp.OnPort : comp.OffPort);
-        _deviceLink.SendSignal(ev.Target.Value, comp.StatusPort, comp.State);
+        _deviceLink.InvokePort(uid, comp.State ? comp.OnPort : comp.OffPort);
+        _deviceLink.SendSignal(uid, comp.StatusPort, comp.State);
     }
 }
