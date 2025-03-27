@@ -224,6 +224,9 @@
     damageRecovery:
       types:
         Asphyxiation: -1.0
+  - type: CritEmotes
+    emotes:
+    - Cough
 
 # Used for mobs that have a bloodstream
 - type: entity
