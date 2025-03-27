@@ -4848,3 +4848,8 @@
         - BulletImpassable
   - type: MedievalMeleeBadTarget # imperial medieval
     safeToHitGroup: tree # imperial medieval
+  - type: AmbientSound
+    volume: -16
+    range: 6.5
+    sound:
+      path: /Audio/Imperial/Medieval/clock_ticktack.ogg
