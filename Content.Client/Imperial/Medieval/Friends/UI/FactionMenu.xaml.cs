@@ -22,7 +22,7 @@ public sealed partial class FactionMenu : DefaultWindow
     public Action<FactionMemberGroup, string>? ObjectiveSet;
     public Action<int, FactionMemberGroup>? GroupSet;
     public Action<int>? FirePressed;
-    public Action<int>? HeadhuntPressed;
+    public Action<int, string>? HeadhuntPressed;
     public Action<int, bool>? SetLeaderPressed;
 
     public ProtoId<MedievalFactionPrototype> Faction = "";
@@ -82,7 +82,17 @@ public sealed partial class FactionMenu : DefaultWindow
         {
             if (!_fireSelected.HasValue)
                 return;
-            HeadhuntPressed?.Invoke(_fireSelected.Value);
+            Headhunt.Visible = false;
+            HeadhuntConfirmation.Visible = true;
+        };
+        HeadhuntConfirm.OnPressed += args =>
+        {
+            if (!_fireSelected.HasValue)
+                return;
+            HeadhuntPressed?.Invoke(_fireSelected.Value, HeadhuntDetails.Text);
+            HeadhuntDetails.Clear();
+            Headhunt.Visible = true;
+            HeadhuntConfirmation.Visible = false;
             Main.Visible = true;
             Confirmation.Visible = false;
             _fireSelected = null;
@@ -107,16 +117,30 @@ public sealed partial class FactionMenu : DefaultWindow
             entry.GroupSet += (ent, group) => GroupSet?.Invoke(ent, group);
             entry.RemoveButtonPressed += args =>
             {
+                if (item.Value.Dead)
+                {
+                    FirePressed?.Invoke(args);
+                    return;
+                }
+
                 _fireSelected = args;
                 ConfirmationLabel.SetMessage($"{item.Value.JobPrefix}{item.Value.Name} будет исключён из вашей фракции.");
                 Main.Visible = false;
                 Confirmation.Visible = true;
-                Headhunt.Visible = IoCManager.Resolve<IPrototypeManager>().Index(proto).AllowHeadhunt && !item.Value.Dead;
+                Headhunt.Visible = IoCManager.Resolve<IPrototypeManager>().Index(proto).AllowHeadhunt;
             };
             entry.SetLeaderPressed += (id, isLeader) => SetLeaderPressed?.Invoke(id, isLeader);
 
             var container = _jobMode ? EnsureJobContainer(item.Value.Job) : EnsureGroupContainer(group, objective ?? "", access, selfGroup);
             container.AddChild(entry);
+        }
+
+        foreach (var item in Members.Children)
+        {
+            if (item is FactionJobPanel job)
+                job.Update();
+            if (item is FactionGroupPanel group)
+                group.Update();
         }
     }
 

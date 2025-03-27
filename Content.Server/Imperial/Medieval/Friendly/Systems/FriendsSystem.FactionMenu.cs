@@ -1,15 +1,20 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.GameTicking;
+using Content.Server.MedievalPasport;
 using Content.Server.MedievalPasport.Components;
 using Content.Server.Mind;
+using Content.Server.Popups;
 using Content.Server.Roles.Jobs;
 using Content.Server.Station.Components;
 using Content.Shared.Friends;
 using Content.Shared.Friends.Components;
 using Content.Shared.Friends.Prototypes;
 using Content.Shared.GameTicking;
+using Content.Shared.Imperial.Medieval.Identity;
+using Robust.Server.Audio;
 using Robust.Server.Player;
+using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -19,12 +24,14 @@ public sealed partial class FriendsSystem
 {
     [Dependency] private readonly JobSystem _job = default!;
     [Dependency] private readonly MindSystem _mind = default!;
+    [Dependency] private readonly AudioSystem _audio = default!;
+    [Dependency] private readonly PopupSystem _popup = default!;
 
     private int _nextId = 1;
 
     private void InitializeMenu()
     {
-        SubscribeLocalEvent<FriendsComponent, MapInitEvent>(OnFriendsInit);
+        SubscribeLocalEvent<FriendsComponent, StartupFactionDataEvent>(OnFriendsInit);
         SubscribeLocalEvent<FriendsComponent, EntityTerminatingEvent>(OnFriendsTerminating);
 
         SubscribeNetworkEvent<SetFactionMemberObjectiveMessage>(OnSetObjective);
@@ -35,7 +42,7 @@ public sealed partial class FriendsSystem
         SubscribeLocalEvent<RoundStartedEvent>(OnRoundStartedMenu);
     }
 
-    private void OnFriendsInit(EntityUid uid, FriendsComponent comp, MapInitEvent args)
+    private void OnFriendsInit(EntityUid uid, FriendsComponent comp, StartupFactionDataEvent args)
     {
         if (!TryGetFactionDataContainer(out var container))
             return;
@@ -46,8 +53,8 @@ public sealed partial class FriendsSystem
         var data = new FactionMemberData()
         {
             Name = Name(uid),
-            Job = CompOrNull<MedievalPasportPersonComponent>(uid)?.PersonJob ?? "Нет должности",
-            JobPrefix = CompOrNull<MedievalPasportPersonComponent>(uid)?.JobPrefix ?? "",
+            Job = args.Job,
+            JobPrefix = args.JobPrefix,
             Faction = comp.Faction
         };
         container.Value.Comp.CachedMembers.GetOrNew(comp.Faction).Add(comp.MemberID, data);
@@ -57,6 +64,24 @@ public sealed partial class FriendsSystem
 
         Dirty(uid, comp);
         RefreshFactionMenu(comp.Faction);
+
+        if (!TryComp<IdentityRequiresKnowledgeComponent>(uid, out var selfIdent))
+            return;
+
+        foreach (var item in container.Value.Comp.CachedMembers.GetOrNew(comp.Faction))
+        {
+            if (!GetFactionMemberById(item.Key, out var ent))
+                continue;
+
+            if (!TryComp<IdentityRequiresKnowledgeComponent>(ent, out var ident))
+                continue;
+
+            ident.KnownIds.Add(selfIdent.Identifier);
+            selfIdent.KnownIds.Add(ident.Identifier);
+            Dirty(ent.Value, ident);
+        }
+
+        Dirty(uid, selfIdent);
     }
 
     private void OnFriendsTerminating(EntityUid uid, FriendsComponent comp, EntityTerminatingEvent args)
@@ -78,6 +103,15 @@ public sealed partial class FriendsSystem
         else
             dict.Add(args.Group, args.Objective);
 
+        foreach (var item in ent.Value.Comp.CachedMembers.GetOrNew(args.Faction).Where(x => x.Value.Group == args.Group))
+        {
+            if (GetFactionMemberById(item.Key, out var uid))
+            {
+                _audio.PlayGlobal(new SoundPathSpecifier("/Audio/Imperial/Medieval/faction_group_assigned.ogg"), uid.Value);
+                _popup.PopupEntity("Вам была назначена новая задача.", uid.Value, uid.Value, Shared.Popups.PopupType.Medium);
+            }
+        }
+
         RefreshFactionMenu(args.Faction);
     }
 
@@ -94,8 +128,13 @@ public sealed partial class FriendsSystem
 
         data.Group = args.Group;
         data.Leader = args.Group == FactionMemberGroup.None ? false : data.Leader;
-        comp.MenuAccess = args.Group == FactionMemberGroup.None ? FactionMenuAccess.None : FactionMenuAccess.Group;
+        if (comp.MenuAccess != FactionMenuAccess.Full)
+            comp.MenuAccess = args.Group == FactionMemberGroup.None ? FactionMenuAccess.None : FactionMenuAccess.Group;
 
+        _audio.PlayGlobal(new SoundPathSpecifier("/Audio/Imperial/Medieval/faction_group_assigned.ogg"), uid.Value);
+        _popup.PopupEntity("Вам была назначена новая группа.", uid.Value, uid.Value, Shared.Popups.PopupType.Medium);
+
+        Dirty(uid.Value, comp);
         RefreshFactionMenu(comp.Faction);
     }
 
@@ -117,7 +156,7 @@ public sealed partial class FriendsSystem
         if (args.Headhunt)
         {
             if (TryComp<FriendsComponent>(uid, out var comp) && _mind.TryGetMind(uid.Value, out var mindId, out _) && _job.MindTryGetJob(mindId, out var job))
-                AddWanted(uid.Value, job.ID, headData.Name, comp.Faction);
+                AddWanted(uid.Value, job.ID, headData.Name, args.Details, comp.Faction);
         }
 
         SetJob(uid.Value, "Voluntary", "Нет должности");
@@ -165,9 +204,12 @@ public sealed partial class FriendsSystem
         data.JobPrefix = jobPrefix;
         data.Faction = faction;
         comp.Faction = faction;
+        if (Proto.TryIndex(oldFaction, out var factProto) && factProto.WantedText != null && !factProto.AllowHeadhunt)
+            comp.Wanted = new(oldFaction, factProto.WantedText);
 
         container.Value.Comp.CachedMembers.GetOrNew(oldFaction).Remove(comp.MemberID);
         container.Value.Comp.CachedMembers.GetOrNew(faction).Add(comp.MemberID, data);
+        Dirty(uid, comp);
         RefreshFactionMenu(faction);
         RefreshFactionMenu(oldFaction);
     }
@@ -188,7 +230,7 @@ public sealed partial class FriendsSystem
             if (!GetFactionMemberById(y.Key, out var yEnt) || !TryComp<FriendsComponent>(yEnt, out var yFriends))
                 return -1;
 
-            return yFriends.Priority.CompareTo(yFriends.Priority);
+            return yFriends.Priority.CompareTo(xFriends.Priority);
         });
 
         var headQuery = EntityQueryEnumerator<FactionDataContainerComponent>();

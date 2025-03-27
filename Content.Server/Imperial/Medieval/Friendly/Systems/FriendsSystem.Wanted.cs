@@ -39,12 +39,17 @@ public sealed partial class FriendsSystem
         UpdateUi(uid);
     }
 
-    public void AddWanted(EntityUid uid, string job, string performer, ProtoId<MedievalFactionPrototype> proto)
+    public void AddWanted(EntityUid uid, string job, string performer, string details, ProtoId<MedievalFactionPrototype> proto)
     {
         if (!TryComp<FriendsComponent>(uid, out var friends))
             return;
         if (WantedList.ContainsKey(friends.MemberID))
             return;
+        if (Proto.TryIndex(proto, out var factProto) && factProto.WantedText != null)
+        {
+            friends.Wanted = new(proto, factProto.WantedText);
+            Dirty(uid, friends);
+        }
 
         var profile = BuildProfile(uid);
         if (profile == null)
@@ -54,7 +59,7 @@ public sealed partial class FriendsSystem
         if (TryComp<DetailExaminableComponent>(uid, out var detailExaminable))
             flavorText = detailExaminable.Content;
 
-        var wanted = new WantedData(profile, job, proto, performer, flavorText);
+        var wanted = new WantedData(profile, job, proto, performer, flavorText, details);
         WantedList.Add(friends.MemberID, wanted);
         UpdateUi();
 
@@ -107,6 +112,7 @@ public sealed partial class FriendsSystem
                 WithCharacterAppearance(hca).
                 WithSpecies(humanoid.Species).
                 WithSex(humanoid.Sex).
+                WithAge(humanoid.Age).
                 WithName(Name(uid));
     }
 
