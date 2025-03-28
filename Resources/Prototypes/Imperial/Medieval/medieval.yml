@@ -1161,6 +1161,19 @@
     stealGroup: MedievalGetMedaljonNoslip # imperial medieval
 
 - type: entity
+  parent: MedaljonFlashImmune
+  id: MedaljonFlashImmuneSkin
+  name: MedaljonFlashImmune
+  description: MedaljonFlashImmune
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_skin.rsi
+
+- type: entity
   parent: MedaljonNoslip
   id: MedaljonNoslipSkin
   name: MedaljonNoslip
@@ -1807,7 +1820,7 @@
   - /Audio/Imperial/Medieval/SteelStep/step4.ogg
   - /Audio/Imperial/Medieval/SteelStep/step5.ogg
   - /Audio/Imperial/Medieval/SteelStep/step6.ogg
-  
+
 - type: entity
   name: MedievalBrutepack
   description: A therapeutic gel pack and bandages designed to treat blunt-force trauma.
