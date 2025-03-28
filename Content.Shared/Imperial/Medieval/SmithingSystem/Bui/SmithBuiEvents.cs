@@ -10,24 +10,6 @@ public enum SmithHitState
     Missed
 }
 
-[Serializable, NetSerializable]
-public sealed class StartSmithGameEvent : BoundUserInterfaceState
-{
-    public SmithGameSettings GameSettings { get; }
-
-    public StartSmithGameEvent(SmithGameSettings gameSettings)
-    {
-        GameSettings = gameSettings;
-    }
-}
-
-[Serializable, NetSerializable]
-public sealed class SmithGameSettings
-{
-    public int Steps;
-    public double GoldTime;
-    public double NothingTime;
-}
 
 [Serializable, NetSerializable]
 public sealed class SmithHitMesage : BoundUserInterfaceMessage
