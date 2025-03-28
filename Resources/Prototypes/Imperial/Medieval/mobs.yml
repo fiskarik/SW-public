@@ -1158,6 +1158,12 @@
       Male: Goblins
       Female: Goblins
       Unsexed: Goblins
+  - type: SoftCritEmotes
+    minDamage: 45
+    emotes:
+    - PainScream
+    - Sigh
+    - Cough
   - type: MedievalMobTrigger
     fixtureId: "medieval-spawner"
   - type: Mana
