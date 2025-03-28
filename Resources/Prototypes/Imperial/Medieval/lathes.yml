@@ -1169,6 +1169,12 @@
     - MedievalDoorKeyCheck
     - MedievalPrisonGrilleCraft
     - MedievalWeaponTurretNanoTrasenCraft
+    - MedievalChemistryEmptyBottle01
+    - MedievalChemistryEmptyBottle02
+    - MedievalChemistryEmptyBottle03
+    - MedievalChemistryEmptyBottle04
+    - MedievalKotel
+    - Syringe
 
 - type: entity
   parent: CP14BaseWorkbench

@@ -924,3 +924,38 @@
     MedievalIronIngot: 1
     MedievalSteelIngot: 1
   result: WorkpieceSyringe
+
+- type: CP14Recipe
+  id: MedievalChemistryEmptyBottle01
+  craftTime: 3
+  stacks:
+    MedievalIronIngot: 2
+  result: WorkpieceMedievalChemistryEmptyBottle01
+
+- type: CP14Recipe
+  id: MedievalChemistryEmptyBottle02
+  craftTime: 3
+  stacks:
+    MedievalIronIngot: 2
+  result: WorkpieceMedievalChemistryEmptyBottle02
+
+- type: CP14Recipe
+  id: MedievalChemistryEmptyBottle03
+  craftTime: 3
+  stacks:
+    MedievalIronIngot: 2
+  result: WorkpieceMedievalChemistryEmptyBottle03
+
+- type: CP14Recipe
+  id: MedievalChemistryEmptyBottle04
+  craftTime: 3
+  stacks:
+    MedievalIronIngot: 2
+  result: WorkpieceMedievalChemistryEmptyBottle04
+
+- type: CP14Recipe
+  id: MedievalKotel
+  craftTime: 11
+  stacks:
+    MedievalIronIngot: 9
+  result: WorkpieceMedievalKotel
