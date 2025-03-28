@@ -58,7 +58,6 @@ public sealed partial class SmithingWindow : FancyWindow
             HitMissed?.Invoke();
 
             _points--;
-            PointsLabel.Text = _points.ToString();
         };
 
         StartGameButton.OnPressed += _ =>
@@ -91,8 +90,6 @@ public sealed partial class SmithingWindow : FancyWindow
                 _points++;
             }
 
-            PointsLabel.Text = _points.ToString();
-
             _completedSteps++;
 
             TargetHit?.Invoke(new SmithHitMesage(state, true));
@@ -109,7 +106,6 @@ public sealed partial class SmithingWindow : FancyWindow
 
                     TargetExpired?.Invoke();
 
-                    PointsLabel.Text = _points.ToString();
                     MainLayout.RemoveChild(button);
                 });
         };
@@ -134,6 +130,7 @@ public sealed partial class SmithingWindow : FancyWindow
         }
 
         StepsLabel.Text = $"{_completedSteps} / {_totalSteps}";
+        PointsLabel.Text = $"Очки: {_points}";
 
         if (_completedSteps >= _totalSteps)
         {

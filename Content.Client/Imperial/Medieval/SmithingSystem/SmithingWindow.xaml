@@ -6,7 +6,7 @@
     <BoxContainer Orientation="Vertical">
         <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
             <Label Name="StepsLabel" Align="Left" HorizontalExpand="True" Margin="5 0 0 0"/>
-            <Label Name="PointsLabel" Text="0" Align="Right" HorizontalExpand="True" Margin="0 0 5 0"></Label>
+            <Label Name="PointsLabel" Align="Right" HorizontalExpand="True" Margin="0 0 5 0"></Label>
         </BoxContainer>
 
         <LayoutContainer Margin="5" Name="MainLayout" HorizontalExpand="True" VerticalExpand="True">

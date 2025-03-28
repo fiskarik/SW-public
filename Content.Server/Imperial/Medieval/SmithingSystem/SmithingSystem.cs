@@ -21,8 +21,6 @@ public sealed partial class SmithingSystem : SharedSmithingSystem
         base.Initialize();
         InitializeBehaviors();
 
-        SubscribeLocalEvent<SmithingWorkpieceComponent, MapInitEvent>(OnWorkpieceInit);
-
         SubscribeLocalEvent<SmithingWorkplaceComponent, EntInsertedIntoContainerMessage>(OnEntInserted);
         SubscribeLocalEvent<SmithingWorkplaceComponent, EntRemovedFromContainerMessage>(OnSmithEntRemoved);
         SubscribeLocalEvent<SmithingWorkplaceComponent, InteractUsingEvent>(OnInteractUsingEvent);
@@ -57,12 +55,6 @@ public sealed partial class SmithingSystem : SharedSmithingSystem
         }
     }
 
-    private void OnWorkpieceInit(Entity<SmithingWorkpieceComponent> ent, ref MapInitEvent args)
-    {
-        var entityLoc = Loc.GetEntityData(ent.Comp.FinalProductEntity);
-        _metaDataSystem.SetEntityName(ent, $"Болванка {entityLoc.Name}");
-    }
-
     protected override void OnSmithHit(Entity<SmithingWorkplaceComponent> ent, ref SmithHitMesage args)
     {
         base.OnSmithHit(ent, ref args);
@@ -88,6 +80,7 @@ public sealed partial class SmithingSystem : SharedSmithingSystem
         }
 
         var score = ent.Comp.GameState.CalculateScore();
+        Log.Error(score.ToString());
         ent.Comp.GameState = null;
 
         _itemSlots.SetLock(ent, ent.Comp.WorkpieceSlot, false);
@@ -163,7 +156,6 @@ public sealed partial class SmithingSystem : SharedSmithingSystem
         {
             return;
         }
-
 
         _itemSlots.SetLock(ent, ent.Comp.WorkpieceSlot, true);
         _ui.OpenUi(ent.Owner, SmithUiKey.Key, args.User);
