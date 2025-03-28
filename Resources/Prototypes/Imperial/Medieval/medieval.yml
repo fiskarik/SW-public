@@ -6759,7 +6759,8 @@
   - type: RadiationBlocker
     resistance: 8
   - type: MedievalMeleeBadTarget
-    breakMultiplier: 9
+    breakMultiplier: 7.5
+  - type: DamageCheckable
 
 - type: entity
   id: MedievalGatesGear

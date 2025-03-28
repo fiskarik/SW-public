@@ -1,5 +1,5 @@
 ﻿using Content.Server.Quest.Components;
-using Content.Shared.Actions;
+using Content.Shared.Speech;
 using Content.Shared.Random.Helpers;
 using Robust.Shared.Random;
 using Content.Shared.Examine;
@@ -10,6 +10,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Audio;
 using Robust.Shared.Player;
+using Content.Server.Chat.Systems;
 
 namespace Content.Server.Quest;
 public partial class QuestSystem : EntitySystem
@@ -18,6 +19,7 @@ public partial class QuestSystem : EntitySystem
     [Dependency] private readonly SharedStackSystem _stack = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] protected readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly ChatSystem _chat = default!;
 
     public override void Initialize()
     {
@@ -112,6 +114,11 @@ public partial class QuestSystem : EntitySystem
     private void OnStartPallete(EntityUid uid, PalletContractComponent comp, ComponentStartup args)
     {
         comp.Reward = _random.Next(comp.MinReward, comp.MaxReward);
+        foreach (var spy in EntityManager.EntityQuery<PalletSpyComponent>())
+        {
+            EnsureComp<SpeechComponent>(spy.Owner);
+            _chat.TrySendInGameICMessage(spy.Owner, "Замечено прибытие ценного груза... его собираются доставить в " + comp.ContractPartner +"!!!", InGameICChatType.Speak, false);
+        }
     }
 
     private void OnStartPallete2(EntityUid uid, PalletStorageComponent comp, ComponentStartup args)
