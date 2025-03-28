@@ -1,6 +1,7 @@
 ﻿- type: entity
   id: SmithWorkplace
   parent: BaseStructure
+  name: наковальня
   components:
   - type: Sprite
     sprite: Imperial/Medieval/Lathe/blacksmith.rsi
@@ -50,7 +51,7 @@
 - type: entity
   id: SmithingGorn
   parent: BaseStructure
-  name: gorn
+  name: горн
   components:
   - type: SmithingFurnace
     meltingSlot:
