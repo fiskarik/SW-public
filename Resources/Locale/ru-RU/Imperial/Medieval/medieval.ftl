@@ -4478,6 +4478,7 @@ ent-MedievalAirlockKey = дверь с замком
 trait-medieval-skills-crafter = Ремесленник
 trait-medieval-skills-crafter-desc = Ваша скорость крафтов на верстаках увеличена в 4 раза.
 cp14-workbench-ui-title = Создание предметов
+cp14-smith-ui-title = Ковка
 cp14-workbench-craft = Создать
 cp14-workbench-recipe-list = Рецепт:
 cp14-workbench-no-resource = Не хватает ингредиентов!
