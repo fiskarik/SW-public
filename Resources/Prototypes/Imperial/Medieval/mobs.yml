@@ -1152,6 +1152,12 @@
     - Maintenance
   - type: Speech
     speechSounds: Goblin
+    allowedEmotes: ['Scream', 'Laugh', 'Cough', 'Sigh', 'Warcry', 'PainScream', 'PassiveScream']
+  - type: Vocal
+    sounds:
+      Male: Goblins
+      Female: Goblins
+      Unsexed: Goblins
   - type: MedievalMobTrigger
     fixtureId: "medieval-spawner"
   - type: Mana
