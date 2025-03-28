@@ -6759,7 +6759,7 @@
   - type: RadiationBlocker
     resistance: 8
   - type: MedievalMeleeBadTarget
-    breakMultiplier: 7.5
+    breakMultiplier: 8
   - type: DamageCheckable
 
 - type: entity
