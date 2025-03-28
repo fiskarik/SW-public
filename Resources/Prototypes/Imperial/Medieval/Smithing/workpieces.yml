@@ -5,7 +5,7 @@
   name: _
   components:
   - type: DeleteOnLowScoreOnSmithComplete
-    Threshold: -10
+    threshold: -10
   - type: SmithingWorkpiece
     steps: 20
     nothingTime: 1
@@ -37,7 +37,8 @@
   components:
   - type: UpgradeArmorOnSmithComplete
 
-- type: BaseWeaponWorkpiece
+- type: entity
+  id: BaseWeaponWorkpiece
   parent: BaseSmithWorkpiece
   abstract: true
   components:
