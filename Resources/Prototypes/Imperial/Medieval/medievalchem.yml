@@ -601,7 +601,7 @@
         amount: -0.25
 
 - type: reagent
-  id: medievalsmokeandexplosion
+  id: medievaladvancedsmokeandexplosion
   name: ""
   desc: ""
   physicalDesc: ""
@@ -1131,6 +1131,6 @@
   - type: Item
     size: Small
   - type: MedievalRandomChemistryRecipe
-    weights: 
+    weights:
       easy: 70
       medium: 30
