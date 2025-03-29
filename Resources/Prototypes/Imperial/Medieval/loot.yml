@@ -1184,16 +1184,6 @@
         prob: 0.06
       - id: MedievalAlchemicBelt
         prob: 0.07
-      - id: MedievalSpellbookLight
-        prob: 0.005
-      - id: MedievalSpellbookSmoke
-        prob: 0.005
-      - id: MedievalSpellbookFlash1
-        prob: 0.005
-      - id: MedievalSpellbookArrow1
-        prob: 0.005
-      - id: MedievalSpellbookBoost1
-        prob: 0.004
       - id: MedievalGeigerCounter
         prob: 0.05
       - id: MedievalClothingOuterArmorIron
@@ -1632,16 +1622,6 @@
         prob: 0.06
       - id: MedievalAlchemicBelt
         prob: 0.07
-      - id: MedievalSpellbookLight
-        prob: 0.007
-      - id: MedievalSpellbookSmoke
-        prob: 0.007
-      - id: MedievalSpellbookFlash1
-        prob: 0.005
-      - id: MedievalSpellbookArrow1
-        prob: 0.005
-      - id: MedievalSpellbookBoost1
-        prob: 0.006
       - id: MedievalGeigerCounter
         prob: 0.05
       - id: MedievalClothingOuterArmorIron
@@ -1688,20 +1668,6 @@
         prob: 0.09
       #- id: MedaljonThieving
       #  prob: 0.15
-      - id: MedievalSpellbookArrow1
-        prob: 0.05
-      - id: MedievalSpellbookBarrier
-        prob: 0.04
-      - id: MedievalSpellbookBlood1
-        prob: 0.04
-      - id: MedievalSpellbookHeal1
-        prob: 0.02
-      - id: MedievalSpellbookFireball1
-        prob: 0.02
-      - id: MedievalSpellbookDisabler1
-        prob: 0.02
-      - id: MedievalSpellbookBlink
-        prob: 0.08
       - id: MedievalShoesSpeed
         prob: 0.09
       - id: MedievalArrowFire
