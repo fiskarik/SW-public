@@ -38,7 +38,7 @@ public sealed partial class SmithingSystem
             armorComponent.Modifiers.Coefficients[key] /= modifier.Modifier;
         }
 
-        SetName(ent, modifier.Quality);
+        SetName(args.Item, modifier.Quality);
     }
 
     private void UpgradeWeapon(Entity<UpgradeWeaponOnSmithCompleteComponent> ent, ref SmithingApplyBehaviorsEvent args)
