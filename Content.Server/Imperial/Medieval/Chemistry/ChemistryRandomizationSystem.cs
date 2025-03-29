@@ -345,9 +345,9 @@ public sealed class ChemistryRandomizationSystem : EntitySystem // TODO: Maybe r
             args.Cancel();
             return;
         }
-        Log.Debug($"easy potion list {GetString(easyPotionRecipes)}");
-        Log.Debug($"medium potion list {GetString(mediumPotionRecipes)}");
-        Log.Debug($"hard potion list {GetString(hardPotionRecipes)}");
+        Log.Warning($"easy potion list {GetString(easyPotionRecipes)}");
+        Log.Warning($"medium potion list {GetString(mediumPotionRecipes)}");
+        Log.Warning($"hard potion list {GetString(hardPotionRecipes)}");
         //_prototype.LoadString
         var allSelectedPotions = new List<string>();
         allSelectedPotions.AddRange(easyPotions);
@@ -434,6 +434,7 @@ public sealed class ChemistryRandomizationSystem : EntitySystem // TODO: Maybe r
             mapping.Get<ValueDataNode>("name").Value = Loc.GetString("imperial-medieval-chemistry-basic-name");
             mapping.Get<ValueDataNode>("flavor").Value = _random.Pick(Flavors);
             mapping.Remove("showinbook");
+            mapping.Remove("nospawn");
             mapping["showinbook"] = new ValueDataNode("false");
             var result = ConvertMappingToString(mapping);
             if (result == null)
@@ -488,6 +489,7 @@ public sealed class ChemistryRandomizationSystem : EntitySystem // TODO: Maybe r
             mapping.Get<ValueDataNode>("id").Value = $"{id}clone";
             mapping.Remove("showinbook");
             mapping.Remove("nospawn");
+            mapping.Remove("abstract");
             mapping["showinbook"] = new ValueDataNode("false");
             mapping["nospawn"] = new ValueDataNode("true");
 
