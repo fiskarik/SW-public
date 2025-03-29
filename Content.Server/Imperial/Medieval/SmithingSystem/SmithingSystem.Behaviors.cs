@@ -88,6 +88,8 @@ public sealed partial class SmithingSystem
 
     private Dictionary<ItemQuality, string> _itemQualityDecorators = new()
     {
+        { ItemQuality.Worst, "---"},
+        { ItemQuality.ReallyBad, "--"},
         { ItemQuality.Bad, "-"},
         { ItemQuality.Default, string.Empty},
         { ItemQuality.Good, "+"},
