@@ -2075,6 +2075,14 @@
   - MedievalMisc
 
 - type: listing
+  id: MdvShopMedievalHammerBlacksmith
+  productEntity: MedievalHammerBlacksmith
+  cost:
+    Revent: 20
+  categories:
+  - MedievalMisc
+
+- type: listing
   id: MdvShopMedievalHolySalt
   productEntity: MedievalHolySalt
   cost:
