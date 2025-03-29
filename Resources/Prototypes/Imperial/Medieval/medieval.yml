@@ -6734,7 +6734,7 @@
     canPry: false
     crushDamage:
       types:
-        Blunt: 45 # yowch
+        Blunt: 85 # yowch
     bumpOpen: false
     clickOpen: false
     openSound:

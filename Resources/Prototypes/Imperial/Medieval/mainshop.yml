@@ -2837,7 +2837,7 @@
     key: enum.StoreUiKey.Key
   - type: Store
     categories:
-    - MedievalPalletLeg
+    - MedievalPalletIns
     currencyWhitelist:
     - Revent
     balance:
