@@ -645,7 +645,7 @@
   result: WorkpieceMedievalSaberSteel
 
 - type: CP14Recipe
-  id: MedievalMace
+  id: MedievalMaceT3
   craftTime: 10
   iconOverride: MedievalMaceT3
   stacks:
