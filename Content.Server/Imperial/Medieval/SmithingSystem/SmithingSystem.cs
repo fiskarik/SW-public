@@ -79,7 +79,10 @@ public sealed partial class SmithingSystem : SharedSmithingSystem
 
     private void OnBuiClosed(Entity<SmithingWorkplaceComponent> ent, ref BoundUIClosedEvent args)
     {
-        EndGame(ent);
+        if (ent.Comp.GameState is { Started: true })
+        {
+            EndGame(ent);
+        }
     }
 
     private void EndGame(Entity<SmithingWorkplaceComponent> ent)
