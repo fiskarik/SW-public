@@ -1,6 +1,8 @@
 ﻿using System.Linq;
 using Content.Server.Connection;
+using Content.Server.GameTicking;
 using Content.Shared.CCVar;
+using Content.Shared.GameTicking;
 using Content.Shared.Imperial.ICCVar;
 using Content.Shared.Imperial.Medieval.JoinQueue;
 using Prometheus;
@@ -17,7 +19,7 @@ namespace Content.Server.Imperial.Medieval.JoinQueue;
 /// Manages new player connections when the server is full and queues them up,
 /// granting access when a slot becomes free.
 /// </summary>
-public sealed class JoinQueueManager
+public sealed class JoinQueueManager : IPostInjectInit
 {
     private static readonly Gauge QueueCount = Metrics.CreateGauge(
         "join_queue_count",
@@ -43,6 +45,9 @@ public sealed class JoinQueueManager
     [Dependency] private readonly IConnectionManager _connection = default!;
     [Dependency] private readonly IConfigurationManager _configuration = default!;
     [Dependency] private readonly IServerNetManager _net = default!;
+    [Dependency] private readonly IEntityManager _entityManager = default!;
+
+    private GameTicker _gameTicker = default!;
 
     /// <summary>
     /// Queue of active player sessions.
@@ -60,6 +65,11 @@ public sealed class JoinQueueManager
     private int ActualPlayersCount => _player.PlayerCount - PlayerInQueueCount;
 
     private bool _enabled;
+
+    public void PostInject()
+    {
+        _gameTicker = _entityManager.System<GameTicker>();
+    }
 
     public void Initialize()
     {
@@ -94,11 +104,14 @@ public sealed class JoinQueueManager
         if (_connection is ConnectionManager connection)
             isPrivileged = connection.HavePriorityJoin(e.Session.UserId);
 
+        var wasInGame = _gameTicker.PlayerGameStatuses.TryGetValue(e.Session.UserId, out var status) &&
+                        status == PlayerGameStatus.JoinedGame;
+
         // Do not count current session in general online, because we are still deciding her fate
         var currentOnline = _player.PlayerCount - 1;
         var haveFreeSlot = currentOnline < _configuration.GetCVar(CCVars.SoftMaxPlayers);
 
-        if (isPrivileged || haveFreeSlot)
+        if (isPrivileged || haveFreeSlot || wasInGame)
         {
             SendToGame(e.Session);
 
