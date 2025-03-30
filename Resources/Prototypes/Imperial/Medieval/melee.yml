@@ -604,7 +604,7 @@
     attackRate: 0.15
     damage:
       types:
-        Blunt: 5
+        Blunt: 12
         Structural: 56
         ParryAble: 1
   - type: MedievalMeleeResource
@@ -615,14 +615,14 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 5
+        Blunt: 12
         Structural: 34
   - type: Item
     size: Huge
   - type: DamageOtherOnHit
     damage:
       types:
-        Blunt: 5
+        Blunt: 12
   - type: MeleeRequiresWield
   #- type: QualityOfItem
   #  qualityWeights:
@@ -2527,7 +2527,7 @@
     attackRate: 0.15
     damage:
       types:
-        Blunt: 7
+        Blunt: 14
         Structural: 98
         ParryAble: 1
   - type: MedievalMeleeResource
@@ -2538,14 +2538,14 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 7
+        Blunt: 14
         Structural: 79
   - type: Item
     size: Huge
   - type: DamageOtherOnHit
     damage:
       types:
-        Blunt: 7
+        Blunt: 14
   - type: MeleeRequiresWield
   #- type: QualityOfItem
   #  qualityWeights:
