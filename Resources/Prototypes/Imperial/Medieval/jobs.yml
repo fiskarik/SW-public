@@ -3079,6 +3079,7 @@
   special:
   - !type:AddComponentSpecial
     components:
+    - type: Mercenary
     - type: Friends
       faction: Merc
       factionMenuAction: MercFactionMenuAction
@@ -3145,6 +3146,7 @@
   special:
   - !type:AddComponentSpecial
     components:
+    - type: Mercenary
     - type: Friends
       faction: Merc
       factionMenuAction: MercFactionMenuAction
