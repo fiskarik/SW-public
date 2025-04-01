@@ -6801,7 +6801,7 @@
     breakMultiplier: 8
   - type: DamageCheckable
   - type: ExplosionResistance
-    damageCoefficient: 0.33
+    damageCoefficient: 3
 
 - type: entity
   id: MedievalGatesGear
