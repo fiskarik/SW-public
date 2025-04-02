@@ -1,9 +1,12 @@
 ﻿using System.Linq;
 using Content.Server.Hands.Systems;
 using Content.Shared.Hands;
+using Content.Shared.IdentityManagement;
 using Content.Shared.Imperial.Medieval.ItemShow;
 using Content.Shared.Interaction.Events;
+using Content.Shared.Popups;
 using Content.Shared.Throwing;
+using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
 namespace Content.Server.Imperial.Medieval.ItemShow;
@@ -12,6 +15,8 @@ public sealed class ItemDisplaySystem : EntitySystem
 {
     [Dependency] private readonly HandsSystem _handsSystem = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
+
+    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
 
     public override void Initialize()
     {
@@ -72,6 +77,14 @@ public sealed class ItemDisplaySystem : EntitySystem
 
         comp.ItemUid = itemUid.Value;
         comp.DespawnAt = _gameTiming.CurTime + comp.DespawnDelay;
+
+        var pvs = Filter.Pvs(player.Value).RemovePlayer(args.SenderSession);
+
+        var playerName = Identity.Entity(player.Value, EntityManager);
+        var pointedName = Identity.Entity(comp.ItemUid, EntityManager);
+
+        var loc = Loc.GetString("pointing-system-point-at-other-others", ("otherName", playerName), ("other", pointedName));
+        _popupSystem.PopupEntity(loc, player.Value, pvs, false);
 
         Dirty(player.Value, comp);
     }

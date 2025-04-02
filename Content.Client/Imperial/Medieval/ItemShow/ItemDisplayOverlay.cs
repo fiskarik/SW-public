@@ -3,7 +3,9 @@ using Content.Shared.Imperial.Medieval.ItemShow;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
+using Robust.Client.Utility;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 
 namespace Content.Client.Imperial.Medieval.ItemShow;
 
@@ -18,6 +20,7 @@ public sealed class ItemDisplayOverlay : Overlay
     private readonly SpriteSystem _spriteSystem;
 
     private ShaderInstance _shader;
+    private Texture _boubleTexture;
 
     public ItemDisplayOverlay()
     {
@@ -27,6 +30,9 @@ public sealed class ItemDisplayOverlay : Overlay
         _entityLookupSystem = _entityManager.System<EntityLookupSystem>();
 
         _shader = _prototypeManager.Index<ShaderPrototype>("unshaded").Instance();
+
+        var textureSpecifier =  new SpriteSpecifier.Texture(new ResPath("/Textures/Imperial/Medieval/Interface/ItemDisplay/bouble.png"));
+        _boubleTexture = _spriteSystem.Frame0(textureSpecifier);
     }
 
     protected override void Draw(in OverlayDrawArgs args)
@@ -56,14 +62,24 @@ public sealed class ItemDisplayOverlay : Overlay
             var aabb = _entityLookupSystem.GetWorldAABB(uid);
 
             var screenCoordinates = _eyeManager.WorldToScreen(aabb.Center +
-                                                              new Angle(-_eyeManager.CurrentEye.Rotation).RotateVec(
-                                                                  aabb.TopRight - aabb.Center));
+                                                              new Angle(-_eyeManager.CurrentEye.Rotation)
+                                                                  .RotateVec(aabb.TopRight - aabb.Center));
+
 
             _spriteSystem.ForceUpdate(itemShowComponent.ItemUid);
 
             args.ScreenHandle.UseShader(_shader);
 
-            args.ScreenHandle.DrawEntity(itemShowComponent.ItemUid, screenCoordinates, currentZoom, Angle.Zero, Angle.Zero, Direction.South);
+            var boubleOffset = new Vector2(0, -3) * currentZoom; // Смещение вверх на 5 пикселей с учетом зума
+            var adjustedScreenCoordinates = screenCoordinates + boubleOffset;
+
+            var textureSize = _boubleTexture.Size * 2 * currentZoom;
+            var dimensions = UIBox2.FromDimensions(adjustedScreenCoordinates - (textureSize / 2f), textureSize);
+
+            var itemOffset = new Vector2(2, 0) * currentZoom; // С
+
+            args.ScreenHandle.DrawTextureRect(_boubleTexture, dimensions);
+            args.ScreenHandle.DrawEntity(itemShowComponent.ItemUid, screenCoordinates + itemOffset, currentZoom, Angle.Zero, Angle.Zero, Direction.South);
 
             args.ScreenHandle.UseShader(null);
         }
