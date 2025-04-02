@@ -70,13 +70,13 @@ public sealed class ItemDisplayOverlay : Overlay
 
             args.ScreenHandle.UseShader(_shader);
 
-            var boubleOffset = new Vector2(0, -3) * currentZoom; // Смещение вверх на 5 пикселей с учетом зума
+            var boubleOffset = new Vector2(0, -3) * currentZoom;
             var adjustedScreenCoordinates = screenCoordinates + boubleOffset;
 
             var textureSize = _boubleTexture.Size * 2 * currentZoom;
             var dimensions = UIBox2.FromDimensions(adjustedScreenCoordinates - (textureSize / 2f), textureSize);
 
-            var itemOffset = new Vector2(2, 0) * currentZoom; // С
+            var itemOffset = new Vector2(2, 0) * currentZoom;
 
             args.ScreenHandle.DrawTextureRect(_boubleTexture, dimensions);
             args.ScreenHandle.DrawEntity(itemShowComponent.ItemUid, screenCoordinates + itemOffset, currentZoom, Angle.Zero, Angle.Zero, Direction.South);
