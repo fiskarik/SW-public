@@ -924,7 +924,7 @@
   description: MedievalKnut
   components:
   - type: StaminaDamageOnHit
-    damage: 14
+    damage: 8
   - type: MeleeWeapon
     attackRate: 1.1
     damage:
