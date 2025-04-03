@@ -1,7 +1,0 @@
-- type: entity
-  id: TestArmorMedieval
-  parent: ClothingOuterArmorBase
-  components:
-  - type: Tag
-    tags:
-    - goblin_armor
