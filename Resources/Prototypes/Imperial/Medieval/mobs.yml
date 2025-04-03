@@ -1193,6 +1193,7 @@
     languages:
       Goblin: Speak
       Common: Understand
+  - type: WhitelistClothing
 
 - type: entity
   parent: MobChicken

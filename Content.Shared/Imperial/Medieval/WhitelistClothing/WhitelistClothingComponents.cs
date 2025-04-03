@@ -4,7 +4,7 @@ namespace Content.Shared.Imperial.WhitelistClothing.Components;
 public sealed partial class WhitelistClothingComponent : Component
 {
     [DataField(required: true), ViewVariables(VVAccess.ReadWrite)]
-    public string Whitelist = "goblin_armor";
+    public string Whitelist = "GoblinArmor";
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public string Slot = "outerclothing";
 }
