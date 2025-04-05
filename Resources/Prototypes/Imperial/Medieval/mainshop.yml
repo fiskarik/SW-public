@@ -2262,6 +2262,14 @@
   categories:
   - MedievalMisc
 
+- type: listing
+  id: MdvPaperOnValuableCargo
+  productEntity: MedievalPaperOnValuableCargo
+  cost:
+    Revent: 220
+  categories:
+  - MedievalMisc
+
 #- type: listing
 #  id: qualityCartrigeTool01
 #  productEntity: qualityCartrigeTool01
@@ -2802,9 +2810,9 @@
     categories:
     - MedievalPalletLeg
     currencyWhitelist:
-    - Revent
+    - MedievalPaperOnValuableCargoCurrency
     balance:
-      Revent: 0
+     MedievalPaperOnValuableCargoCurrency: 0
   - type: TrashDefendArea
   - type: Transform
     anchored: true
@@ -2837,7 +2845,7 @@
   id: MedievalPalletContractIns
   productEntity: MedievalDecorStoragePalletIns
   cost:
-    Revent: 220
+    MedievalPaperOnValuableCargoCurrency: 1
   categories:
   - MedievalPalletLeg
 
@@ -2863,9 +2871,9 @@
     categories:
     - MedievalPalletIns
     currencyWhitelist:
-    - Revent
+    - MedievalPaperOnValuableCargoCurrency
     balance:
-      Revent: 0
+      MedievalPaperOnValuableCargoCurrency: 0
   - type: TrashDefendArea
   - type: Transform
     anchored: true
@@ -2898,6 +2906,6 @@
   id: MedievalPalletContractLeg
   productEntity: MedievalDecorStoragePallet
   cost:
-    Revent: 220
+   MedievalPaperOnValuableCargoCurrency: 1
   categories:
   - MedievalPalletIns

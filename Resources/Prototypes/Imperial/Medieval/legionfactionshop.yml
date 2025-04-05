@@ -21,6 +21,7 @@
     categories:
     - MedievalLegionWeapon
     - MedievalLegionArmor
+    - MedievalMiscLeg
     currencyWhitelist:
     - MedalLegion
     balance:
@@ -367,3 +368,16 @@
     MedalLegion: 10
   categories:
   - MedievalLegionArmor
+
+- type: storeCategory
+  id: MedievalMiscLeg
+  name: medieval-category-misc
+  priority: 2
+
+- type: listing
+  id: MdvLegionPaperOnValuableCargo
+  productEntity: MedievalPaperOnValuableCargo
+  cost:
+    MedalLegion: 6
+  categories:
+  - MedievalMiscLeg
