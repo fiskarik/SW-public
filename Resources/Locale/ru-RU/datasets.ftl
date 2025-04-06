@@ -9472,6 +9472,7 @@ names-last-female-dataset-168 = Найтшайд
 names-last-female-dataset-169 = Вейлкрофт
 names-last-female-dataset-170 = Гоулспит
 names-last-female-dataset-171 = Ротгар
+names-last-female-dataset-172 = Вальтеронд
 names-last-female-dataset-173 = Вальдмар
 names-last-female-dataset-174 = Остеркроу
 names-last-female-dataset-175 = Гленмор
