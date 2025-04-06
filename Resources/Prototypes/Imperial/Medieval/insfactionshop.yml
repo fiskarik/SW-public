@@ -21,7 +21,6 @@
     categories:
     - MedievalInsWeapon
     - MedievalInsArmor
-    - MedievalInsMisc
     currencyWhitelist:
     - MedalIns
     balance:
@@ -372,15 +371,3 @@
 
 
 
-- type: storeCategory
-  id: MedievalInsMisc
-  name: medieval-category-misc
-  priority: 2
-
-- type: listing
-  id: MdvInsPaperOnValuableCargo
-  productEntity: MedievalPaperOnValuableCargo
-  cost:
-    MedalIns: 6
-  categories:
-  - MedievalInsMisc

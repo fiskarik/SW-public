@@ -206,7 +206,7 @@
   - MedievalFood
 
 - type: listing
-  id: FoodCondimentBottleEnzyme
+  id: MdvFoodCondimentBottleEnzyme
   productEntity: FoodCondimentBottleEnzyme
   cost:
     Revent: 10
@@ -2262,14 +2262,6 @@
   categories:
   - MedievalMisc
 
-- type: listing
-  id: MdvPaperOnValuableCargo
-  productEntity: MedievalPaperOnValuableCargo
-  cost:
-    Revent: 220
-  categories:
-  - MedievalMisc
-
 #- type: listing
 #  id: qualityCartrigeTool01
 #  productEntity: qualityCartrigeTool01
@@ -2725,6 +2717,14 @@
   - MedievalQuestLegion
 
 - type: listing
+  id: MdvPaperOnValuableCargoLeg
+  productEntity: MedievalPaperOnValuableCargoLeg
+  cost:
+    Revent: 220
+  categories:
+  - MedievalQuestLegion
+
+- type: listing
   id: MedievalQuestContractInsWood
   productEntity: MedievalQuestContractInsWood
   cost:
@@ -2788,6 +2788,14 @@
   categories:
   - MedievalQuestIns
 
+- type: listing
+  id: MdvPaperOnValuableCargoIns
+  productEntity: MedievalPaperOnValuableCargoIns
+  cost:
+    Revent: 220
+  categories:
+  - MedievalQuestIns
+
 - type: entity
   id: MedievalShopHolePalletLeg
   name: MedievalShopHole
@@ -2810,9 +2818,9 @@
     categories:
     - MedievalPalletLeg
     currencyWhitelist:
-    - MedievalPaperOnValuableCargoCurrency
+    - MedievalPaperOnValuableCargoCurrencyLeg
     balance:
-     MedievalPaperOnValuableCargoCurrency: 0
+     MedievalPaperOnValuableCargoCurrencyLeg: 0
   - type: TrashDefendArea
   - type: Transform
     anchored: true
@@ -2845,9 +2853,9 @@
   id: MedievalPalletContractIns
   productEntity: MedievalDecorStoragePalletIns
   cost:
-    MedievalPaperOnValuableCargoCurrency: 1
+    MedievalPaperOnValuableCargoCurrencyIns: 1
   categories:
-  - MedievalPalletLeg
+  - MedievalPalletIns
 
 - type: entity
   id: MedievalShopHolePalletIns
@@ -2871,9 +2879,9 @@
     categories:
     - MedievalPalletIns
     currencyWhitelist:
-    - MedievalPaperOnValuableCargoCurrency
+    - MedievalPaperOnValuableCargoCurrencyIns
     balance:
-      MedievalPaperOnValuableCargoCurrency: 0
+      MedievalPaperOnValuableCargoCurrencyIns: 0
   - type: TrashDefendArea
   - type: Transform
     anchored: true
@@ -2906,6 +2914,6 @@
   id: MedievalPalletContractLeg
   productEntity: MedievalDecorStoragePallet
   cost:
-   MedievalPaperOnValuableCargoCurrency: 1
+   MedievalPaperOnValuableCargoCurrencyLeg: 1
   categories:
-  - MedievalPalletIns
+  - MedievalPalletLeg
