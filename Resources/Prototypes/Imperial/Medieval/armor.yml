@@ -613,6 +613,17 @@
     sprite: Imperial/Medieval/Clothing/Gloves/iron_gloves_brig.rsi
 
 - type: entity
+  parent: MedievalIronGlovesBrig
+  id: MedievalIronGlovesGoblinSlayer
+  name: IronGloves
+  description: gloves
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/gs_gloves.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/gs_gloves.rsi
+
+- type: entity
   parent: MedievalIronGloves
   id: MedievalIronGlovesBear
   name: IronGloves
@@ -1128,6 +1139,17 @@
     sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_legion.rsi
 
 - type: entity
+  parent: MedievalClothingOuterArmorCharmerLightLegion
+  id: MedievalClothingOuterAltArmorCharmerLightLegion
+  name: cloth
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/alt_charmer_armor_legion.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/alt_charmer_armor_legion.rsi
+
+- type: entity
   parent: MedievalClothingOuterArmorCharmerLight
   id: MedievalClothingOuterArmorCharmerLightIns
   name: cloth
@@ -1146,6 +1168,17 @@
     sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_ins.rsi
   - type: Clothing
     sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_ins.rsi
+
+- type: entity
+  parent: MedievalClothingOuterArmorCharmerLightIns
+  id: MedievalClothingOuterAltArmorCharmerLightIns
+  name: cloth
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/alt_charmer_armor_ins.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/alt_charmer_armor_ins.rsi
 
 - type: entity
   parent: MedievalClothingOuterArmorCharmerLightIns

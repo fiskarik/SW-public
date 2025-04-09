@@ -645,6 +645,17 @@
     sprite: Imperial/Medieval/Clothing/Head/charmer_legion.rsi
 
 - type: entity
+  parent: MedievalClothingHeadHelmetCharmerLegion
+  id: MedievalClothingHeadAltHelmetCharmerLegion
+  name: clooth
+  description: Medieval salad helmet
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Head/alt_charmer_legion.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Head/alt_charmer_legion.rsi
+
+- type: entity
   parent: MedievalClothingHeadHelmetCharmerLight
   id: MedievalClothingHeadHelmetCharmerIns
   name: clooth
@@ -654,6 +665,17 @@
     sprite: Imperial/Medieval/Clothing/Head/charmer_ins.rsi
   - type: Clothing
     sprite: Imperial/Medieval/Clothing/Head/charmer_ins.rsi
+
+- type: entity
+  parent: MedievalClothingHeadHelmetCharmerIns
+  id: MedievalClothingHeadAltHelmetCharmerIns
+  name: clooth
+  description: Medieval salad helmet
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Head/alt_charmer_ins.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Head/alt_charmer_ins.rsi
 
 - type: entity
   parent: MedievalClothingHeadHelmetCharmerIns
