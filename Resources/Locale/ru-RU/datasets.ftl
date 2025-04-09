@@ -3607,7 +3607,6 @@ names-last-dataset-139 = Скорнбейн
 names-last-dataset-140 = Вульфхарт
 names-last-dataset-141 = Горнкрест
 names-last-dataset-142 = Редклав
-names-last-dataset-142 = Кровошип
 names-last-dataset-143 = Арканис
 names-last-dataset-144 = Шэдоувейв
 names-last-dataset-145 = Рунегард
@@ -3936,6 +3935,7 @@ names-last-dataset-468 = Уайлдспайр
 names-last-dataset-469 = Фростфейн
 names-last-dataset-470 = Хартспайр
 names-last-dataset-471 = Штормфейн
+names-last-dataset-472 = Кровошип
 
 descriptions-cookie-fortune-dataset-1 = Конец близок... и это все твоя вина.
 descriptions-cookie-fortune-dataset-2 = Мы знаем, что вы сделали.
