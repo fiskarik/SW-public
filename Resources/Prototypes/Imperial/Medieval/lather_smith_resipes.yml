@@ -87,7 +87,7 @@
     MedievalRivets: 1
     WoodPlank: 4
     #MedievalRope: 1
-  result: WorkpieceMedievalCatapultAmmoBarrel
+  result: MedievalCatapultAmmoBarrel
 
 - type: CP14Recipe
   id: MedievalCatapultAmmoBarrelGunpowder
@@ -99,7 +99,7 @@
     MedievalRope: 1
   entities:
     MedievalCatapultAmmoBarrel: 1
-  result: WorkpieceMedievalCatapultAmmoBarrelGunpowder
+  result: MedievalCatapultAmmoBarrelGunpowder
 
 - type: CP14Recipe
   id: MedievalCatapultAmmoBarrelAp
