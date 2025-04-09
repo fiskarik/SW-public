@@ -1824,6 +1824,100 @@
   #- GroupSpeciesBreathToolSecurity
   - MedievalGloves
 
+# MEDIEVAL LegionJAILED
+
+- type: startingGear
+  id: MedievalLegionJailedGear
+  equipment:
+    pocket1: MedievalSecretLootBox
+    #belt: Bible
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth32
+    shoes: MedievalFetter
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalLegionJailed
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: legion_jailed
+  jobName: job-name-legionJailed-medieval
+
+- type: playTimeTracker
+  id: JobMedievalLegionJailed
+
+- type: job
+  id: MedievalLegionJailed
+  name: job-name-legionJailed-medieval
+  description: job-description-legionJailed-medieval
+  playTimeTracker: JobMedievalLegionJailed
+  requirements:
+  - !type:SpeciesRequirement
+    species:
+    - Skeleton
+    inverted: true
+  #- !type:OverallPlaytimeRequirement
+  #  time: 6000 #Imperial role timers
+  startingGear: MedievalLegionJailedGear
+  icon: "JobIconMedievalLegionJailed"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: MedievalJobSpawn
+      spawnType: Legion
+
+
+# MEDIEVAL LegionJAILER
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedievalLegionJailer
+  icon:
+    sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
+    state: legion_jailer
+  jobName: job-name-legionJailer-medieval
+
+- type: playTimeTracker
+  id: JobMedievalLegionJailer
+
+- type: job
+  id: MedievalLegionJailer
+  name: job-name-legionJailer-medieval
+  description: job-description-legionJailer-medieval
+  playTimeTracker: JobMedievalLegionJailer
+  requirements:
+  - !type:SpeciesRequirement
+    species:
+    - Skeleton
+    inverted: true
+  #  - !type:DepartmentTimeRequirement
+  #    department: Legion
+  #    time: 7200 # Imperial medieval role timers (2 hours)
+  startingGear: MedievalLegionLegionerGear
+  icon: "JobIconMedievalLegionJailer"
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Friends
+      faction: Legion
+      factionMenuAction: LegionFactionMenuAction
+    #- type: IdentityFaction
+    #  faction: Legion
+    - type: MedievalJobSpawn
+      spawnType: Legion
+    - type: MedievalPasportPerson
+      personJob: "[color=cyan]Тюремщик легиона[/color]"
+      pasport: MedievalPasportLegion
+      jobPrefix: "[ТюрЛ]"
+
+- type: roleLoadout
+  id: JobMedievalLegionJailer
+  groups:
+  - MedievalBackpack
+  - MedievalShoes
+  #- MedievalBeltLegion
+  - MedievalTrinkets
+  - MedievalGloves
+
 # MEDIEVAL LEGION RECRUIT
 
 - type: startingGear

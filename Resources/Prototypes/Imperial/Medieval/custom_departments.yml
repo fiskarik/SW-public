@@ -19,6 +19,8 @@
   description: department-legion-description
   color: "#CCCCCC"
   roles:
+  - MedievalLegionJailed
+  - MedievalLegionJailer
   - MedievalLegionRecruit
   - MedievalLegionLegioner
   - MedievalLegionGateman

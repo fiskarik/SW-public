@@ -153,6 +153,12 @@
         },
         {
             "name": "wandernag"
+        },
+        {
+            "name": "legion_jailer"
+        },
+        {
+            "name": "legion_jailed"
         }
     ]
 }

@@ -915,6 +915,19 @@
   - type: AntiSSDFreeArea
 
 - type: entity
+  name: MedievalJobSpawnerLegionJail
+  id: MedievalJobSpawnerLegionJail
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Imperial/Medieval/Markers/cross.rsi
+      state: def
+  - type: MedievalJobPoint
+    spawnType: LegionJail
+  - type: AntiSSDFreeArea
+
+- type: entity
   name: MedievalJobSpawnerMine
   id: MedievalJobSpawnerMine
   parent: MarkerBase
@@ -1752,7 +1765,7 @@
     #- FloraTreeLarge06
     chance: 1
     offset: 0
-    
+
 - type: entity
   name: MedievalSpawnerRandomTreeLifetime1200SnowConifer
   noSpawn: true
