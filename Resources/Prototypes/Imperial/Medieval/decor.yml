@@ -4948,7 +4948,7 @@
 
 - type: entity
   id: MedievalDecorShipSail
-  parent: MedievalBannerBase
+  parent: BaseStructure
   name: nanotrasen banner
   description: A banner displaying the Nanotrasen logo. It looks rather cheap.
   components:
