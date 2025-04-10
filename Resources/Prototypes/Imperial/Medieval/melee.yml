@@ -1228,6 +1228,19 @@
     - type: Meltable
       resourceCount: 7
 
+- type: entity
+  name: iron shield
+  parent: MedievalIronShieldBuckler
+  id: MedievalIronShieldBucklerGoblinSlayer
+  description: Iron shield.
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Shields/gs_buckler.rsi
+      state: shield
+    - type: Item
+      sprite: Imperial/Medieval/Shields/gs_buckler.rsi
+      size: Normal
+
 - type: damageModifierSet
   id: PassiveMedievalWoodenShieldBlock
   coefficients:
@@ -3086,6 +3099,20 @@
     damage: 4 #2 dagger, 5 spear, 4 sword, 5 mace, 8 halberd, 6 sekir, 18 hammer
   - type: Meltable
     resourceCount: 3
+
+- type: entity
+  name: short sword
+  parent: MedievalShortSword
+  id: MedievalShortSwordGoblinSlayer
+  description: MedievalShortSwordGoblinSlayer
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/gs_sword.rsi
+    size: Small
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Imperial/Medieval/Melee/gs_sword.rsi
 
 - type: entity
   name: dagger

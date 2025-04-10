@@ -3935,6 +3935,7 @@ names-last-dataset-468 = Уайлдспайр
 names-last-dataset-469 = Фростфейн
 names-last-dataset-470 = Хартспайр
 names-last-dataset-471 = Штормфейн
+names-last-dataset-472 = Кровошип
 
 descriptions-cookie-fortune-dataset-1 = Конец близок... и это все твоя вина.
 descriptions-cookie-fortune-dataset-2 = Мы знаем, что вы сделали.
