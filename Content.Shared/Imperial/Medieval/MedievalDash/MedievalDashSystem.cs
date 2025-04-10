@@ -76,7 +76,7 @@ public sealed partial class MedievalDashSystem : EntitySystem
 
         var targetRotation = physicsComponent.LinearVelocity.ToAngle();
 
-        var force = new Vector2(component.Force);
+        var force = new Vector2(component.Force * 2);
         var forceDirection = targetRotation - Angle.FromDegrees(45);
 
         var impulse = forceDirection.RotateVec(force);
