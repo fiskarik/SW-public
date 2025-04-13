@@ -116,11 +116,13 @@ namespace Content.Client.Lobby
 
             var character = (HumanoidCharacterProfile) _clientPreferences.Preferences!.SelectedCharacter;
 
+            // Imperial medieval start
             if (_characterBlockManager.IsCharacterBlocked(character))
             {
                 new CharacterBlockedGui().OpenCentered();
                 return;
             }
+            // Imperial medieval end
 
             new LateJoinGui().OpenCentered();
         }
