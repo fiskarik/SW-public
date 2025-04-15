@@ -50,7 +50,7 @@ public sealed class DarkMageSystem : EntitySystem
 
             if (!TryComp<MobStateComponent>(uid, out var mbst) || mbst.CurrentState != MobState.Alive)
             {
-                if (darkMageComponent.Target == null || darkMageComponent.Container == null) return;
+                if (darkMageComponent.Target == null || darkMageComponent.Container == null) continue;
 
                 _mindSystem.TransferTo(darkMageComponent.Mind, darkMageComponent.Target);
 
