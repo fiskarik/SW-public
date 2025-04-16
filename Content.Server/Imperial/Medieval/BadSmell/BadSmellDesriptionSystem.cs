@@ -46,7 +46,7 @@ namespace Content.Server.BadSmell
 
             //Подписываемся на добавление/удаление компонента, чтобы начать/остановить обработку
             SubscribeLocalEvent<BadSmellComponent, ComponentShutdown>(OnBadSmellRemoved);
-            SubscribeLocalEvent<ClothingComponent, CleaningActionEvent>(Cleaning);
+            SubscribeLocalEvent<ClothingComponent, InventoryRelayedEvent<CleaningActionEvent>>(Cleaning);
 
             //Пример: событие, которое может менять "грязность" (замените на актуальное событие вашей игры)
             //SubscribeLocalEvent<CleaningActionEvent>(OnCleaningAction);
@@ -58,9 +58,9 @@ namespace Content.Server.BadSmell
             _nextSoundPlayTime.Remove(uid);
             _alerts.ClearAlert(uid, component.SmellAlert); // Убираем алерт при удалении компонента
         }
-        private void Cleaning(EntityUid uid, ClothingComponent component, CleaningActionEvent args)
+        private void Cleaning(EntityUid uid, ClothingComponent component, ref InventoryRelayedEvent<CleaningActionEvent> args)
         {
-            args.CleaningAmount *= 0.75f;
+            args.Args.CleaningAmount *= 0.75f;
         }
 
 
@@ -139,9 +139,7 @@ namespace Content.Server.BadSmell
             {
                 var ev = new CleaningActionEvent(comp.WashTemp);
                 RaiseLocalEvent(uid, ev);
-                comp.SmellLevel -= ev.CleaningAmount;
-                if (comp.SmellLevel < clearvalue)
-                    comp.SmellLevel = clearvalue;
+                comp.SmellLevel = Math.Min(Math.Max(comp.SmellLevel - ev.CleaningAmount, clearvalue), comp.SmellLevel);
             }
             else
             {

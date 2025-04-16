@@ -3244,6 +3244,7 @@
     collection: BarestepWood
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.75
 
 - type: tile
   id: MedievalFloorWood2
@@ -3264,6 +3265,7 @@
     collection: BarestepWood
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.75
 
 - type: tile
   id: MedievalFloorWood3
@@ -3284,6 +3286,7 @@
     collection: BarestepWood
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.75
 
 - type: soundCollection
   id: FootstepMedievalStone
@@ -3312,6 +3315,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.5
 
 - type: tile
   id: MedievalFloorStone2
@@ -3330,6 +3334,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.5
 
 - type: tile
   id: MedievalFloorStone3
@@ -3348,6 +3353,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.5
 
 - type: tile
   id: MedievalFloorStone4
@@ -3366,6 +3372,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.5
 
 - type: tile
   id: MedievalFloorStone5
@@ -3384,6 +3391,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.5
 
 - type: tile
   id: MedievalFloorStone6
@@ -3402,6 +3410,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.5
 
 - type: tile
   id: MedievalFloorStone7
@@ -3420,6 +3429,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.5
 
 - type: tile
   id: MedievalFloorStone8
@@ -3438,6 +3448,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.5
 
 - type: tile
   id: MedievalFloorStone9
@@ -3456,6 +3467,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.5
 
 - type: tile
   id: MedievalFloorSandStone1
@@ -3474,6 +3486,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.6
 
 - type: tile
   id: MedievalFloorSandStone2
@@ -3492,6 +3505,7 @@
     collection: FootstepMedievalStone
   itemDrop: FloorTileItemWoodLarge
   heatCapacity: 99910000
+  badSmellMod: 0.6
 
 - type: entity
   parent: BaseItem
@@ -4129,6 +4143,7 @@
     collection: FootstepAsteroid
   heatCapacity: 999100000
   weather: true
+  badSmellMod: 2
 
 - type: tile
   editorHidden: false
@@ -4159,6 +4174,7 @@
     collection: FootstepAsteroid
   heatCapacity: 999100000
   weather: true
+  badSmellMod: 2
 
 - type: tile
   editorHidden: false
@@ -4190,6 +4206,7 @@
     collection: FootstepSnow #TODO
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.5
 
 - type: tile
   editorHidden: false
@@ -4221,6 +4238,7 @@
     collection: FootstepSnow #TODO
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.5
 
 - type: tile
   editorHidden: false
@@ -4252,6 +4270,7 @@
     collection: FootstepSnow #TODO
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.5
 
 - type: tile
   editorHidden: false
@@ -4283,6 +4302,7 @@
     collection: FootstepSnow #TODO
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.5
 
 - type: tile
   editorHidden: false
@@ -4314,6 +4334,7 @@
     collection: FootstepSnow #TODO
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.5
 
 - type: tile
   editorHidden: false
@@ -4345,6 +4366,7 @@
     collection: FootstepSnow #TODO
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.5
 
 - type: tile
   editorHidden: false
@@ -4376,6 +4398,7 @@
     collection: FootstepSnow #TODO
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.5
 
 - type: tile
   editorHidden: false
@@ -4407,6 +4430,7 @@
     collection: FootstepSnow #TODO
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.5
 
 - type: tile
   editorHidden: false
@@ -4438,6 +4462,7 @@
     collection: FootstepSnow #TODO
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.5
 
 - type: tile
   id: FloorAsteroidSand2
@@ -4464,6 +4489,7 @@
     collection: FootstepAsteroid
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.25
 
 - type: tile
   id: FloorAstroGrass
@@ -4496,6 +4522,7 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.25
 
 - type: tile
   id: FloorPlanetGrass
@@ -4528,6 +4555,7 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass2
@@ -4560,6 +4588,7 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass1
@@ -4592,6 +4621,7 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 0
 
 
 # AUTUMN
@@ -4628,6 +4658,7 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass2Autumn
@@ -4660,6 +4691,7 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.25
 
 - type: tile
   id: MedievalFloorPlanetGrass1Autumn
@@ -4692,6 +4724,7 @@
     collection: FootstepGrass
   heatCapacity: 99910000
   weather: true
+  badSmellMod: 1.25
 
 - type: entity
   id: MedievalTrapdoorNew
@@ -6910,6 +6943,7 @@
     collection: FootstepFloor
   itemDrop: FloorTileItemSteel
   heatCapacity: 10000
+  badSmellMod: 0.5
 
 - type: localizedDataset
   id: PlushDog
