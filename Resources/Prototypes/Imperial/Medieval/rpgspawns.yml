@@ -901,6 +901,7 @@
     spawnType: Default
   - type: AntiSSDFreeArea
 
+
 - type: entity
   name: MedievalJobSpawnerLegion
   id: MedievalJobSpawnerLegion
@@ -913,6 +914,33 @@
   - type: MedievalJobPoint
     spawnType: Legion
   - type: AntiSSDFreeArea
+
+- type: entity
+  name: MedievalJobSpawnerLegionJailed
+  id: MedievalJobSpawnerLegionJailed
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Imperial/Medieval/Markers/cross.rsi
+      state: def
+  - type: MedievalJobPoint
+    spawnType: LegionJailed
+  - type: AntiSSDFreeArea
+
+- type: entity
+  name: MedievalJobSpawnerLegionJailer
+  id: MedievalJobSpawnerLegionJailer
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Imperial/Medieval/Markers/cross.rsi
+      state: def
+  - type: MedievalJobPoint
+    spawnType: LegionJailer
+  - type: AntiSSDFreeArea
+
 
 - type: entity
   name: MedievalJobSpawnerMine
@@ -1752,7 +1780,7 @@
     #- FloraTreeLarge06
     chance: 1
     offset: 0
-    
+
 - type: entity
   name: MedievalSpawnerRandomTreeLifetime1200SnowConifer
   noSpawn: true

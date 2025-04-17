@@ -354,6 +354,75 @@
     normalState: 1
 
 - type: entity
+  name: LootBox
+  parent: BaseItem
+  id: MedievalSecretLootBox
+  description: GAMBLING IS MY LIFE
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/secretbox.rsi
+    size: Small
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Imperial/Medieval/Misc/secretbox.rsi
+  - type: SpawnItemsOnUse
+    items:
+    - id: MedievalSecretLootBoxSpawner
+
+- type: entity
+  name: Message
+  parent: MedievalPaper
+  id: MedievalJailPosxalka
+  description: Idk
+  components:
+    - type: Paper
+      content: >-
+       [italic]
+        Вам не повезло для вас ничего не осталось, простите.
+        С уважением: Ф.Б!
+
+- type: entity
+  id: MedievalSecretLootBoxSpawner
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 0.4
+  - type: Sprite
+    drawdepth: Effects
+    noRot: true
+    layers:
+      - shader: unshaded
+        map: ["enum.EffectLayers.Unshaded"]
+        sprite: Effects/emp.rsi
+        state: emp_disable
+  - type: EffectVisuals
+  - type: Tag
+    tags:
+      - HideContextMenu
+  - type: AnimationPlayer
+  - type: EntityTableSpawner
+    deleteSpawnerAfterSpawn: true
+    table: !type:NestedSelector
+      tableId: SecretLootBoxLootTable
+
+- type: entityTable
+  id: SecretLootBoxLootTable
+  table: !type:GroupSelector
+    children:
+    - id: MedievalDrugChemistryBottle
+    - id: FoodApple
+    - id: MedievalLockpick
+    - id: MedievalDaggerT3
+    - id: MedievalPickaxe
+    - id: FoodBreadPlain
+    - id: MedievalMaskFace
+    - id: FoodMeatLizardCooked
+    - id: FoodMeatCooked
+    - id: MedievalHatchet
+    - id: MedievalJailPosxalka
+
+- type: entity
   parent: BaseStructure
   id: MedievalStoneBrickWallLoopHole
   name: stone loophole
@@ -1453,6 +1522,12 @@
       uiWindowPos: 1,1
       strippingWindowPos: 2,2
       displayName: Suit
+    - name: gloves
+      slotTexture: gloves
+      slotFlags: GLOVES
+      uiWindowPos: 2,1
+      strippingWindowPos: 2,2
+      displayName: Gloves
     - name: mask
       slotTexture: mask
       slotFlags: MASK
@@ -7010,6 +7085,10 @@
   - type: CultBrush
 
 - type: font
+  id: Vinque
+  path: /Fonts/Imperial/Vinque/Vinque.otf
+
+- type: font
   id: SpellwardFont
   path: /Fonts/Imperial/Spellward/Monomakh-Regular.ttf
 
@@ -7475,7 +7554,6 @@
     1: MedievalPaperOnValuableCargoIns
   canWithdraw: true
 
-
 - type: entity
   id: MedievalPaperOnValuableCargoLeg
   name: church bell
@@ -7497,3 +7575,30 @@
   cash:
     1: MedievalPaperOnValuableCargoLeg
   canWithdraw: true
+
+- type: construction
+  name: Деревянная броня гоблинов
+  id: MedievalClothingOuterArmorGoblinWood
+  graph: MedievalClothingOuterArmorGoblinWood
+  startNode: start
+  targetNode: MedievalClothingOuterArmorGoblinWood
+  category: construction-category-misc
+  description: "Пик гоблинской моды"
+  icon: { sprite: Imperial/Medieval/Clothing/Armor/goblin_wood_armor.rsi, state: icon }
+  objectType: Item
+
+- type: constructionGraph
+  id: MedievalClothingOuterArmorGoblinWood
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MedievalClothingOuterArmorGoblinWood
+          steps:
+            - material: WoodPlank
+              amount: 24
+              doAfter: 6
+            - material: MedievalGrass
+              amount: 8
+    - node: MedievalClothingOuterArmorGoblinWood
+      entity: MedievalClothingOuterArmorGoblinWood
