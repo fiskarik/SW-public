@@ -2378,6 +2378,7 @@
       personJob: "[color=red]Алхимик легиона[/color]"
       pasport: MedievalPasportLegion
       jobPrefix: "[АлхимикЛ]"
+    - type: MedievalPotionChecker
 
 - type: roleLoadout
   id: JobMedievalLegionAlchemic
@@ -2929,6 +2930,7 @@
       personJob: "[color=red]Алхимик мятежников[/color]"
       pasport: MedievalPasportInsurgency
       jobPrefix: "[АлхимикМ]"
+    - type: MedievalPotionChecker
 
 - type: roleLoadout
   id: JobMedievalInsurgencyAlchemic
