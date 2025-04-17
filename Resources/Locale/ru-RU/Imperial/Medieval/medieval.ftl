@@ -5300,3 +5300,7 @@ ent-MedievalMobDarkMage = тёмный маг
 ent-MedievalDarkMageObject = внутреннее подсознание
 ent-MedievalDarkMageFlame = огонек
     .desc = Возможно, стоит задуматься, сменить ли позицию?
+job-description-LegionAlchemic-medieval = Создавайте зелья и другие алхимические вещи.
+job-name-LegionAlchemic-medieval = Алхимик легиона
+job-description-InsurgencyAlchemic-medieval = Создавайте зелья и другие алхимические вещи.
+job-name-InsurgencyAlchemic-medieval = Алхимик Мятежников
