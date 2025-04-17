@@ -1691,6 +1691,9 @@
   - type: Tag
     tags:
     - GoblinArmor
+  - type: Construction
+    graph: MedievalClothingOuterArmorGoblinWood
+    node: ground
 
 - type: entity
   parent: ClothingOuterBase
