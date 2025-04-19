@@ -6,5 +6,5 @@ namespace Content.Shared.Imperial.Medieval.AreaMarker;
 public sealed partial class AreaMarkerInvokerComponent : Component
 {
     [AutoNetworkedField, ViewVariables(VVAccess.ReadOnly)]
-    public EntityUid? LastAreaUid;
+    public string? LastArea;
 }

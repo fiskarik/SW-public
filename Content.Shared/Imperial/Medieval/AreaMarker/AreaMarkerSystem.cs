@@ -29,13 +29,12 @@ public sealed class AreaMarkerSystem : EntitySystem
             return;
         }
 
-        if (invokerComponent.LastAreaUid.HasValue &&
-            invokerComponent.LastAreaUid.Value == ent.Owner)
+        if (invokerComponent.LastArea == ent.Comp.AreaName)
         {
             return;
         }
 
-        invokerComponent.LastAreaUid = ent.Owner;
+        invokerComponent.LastArea = ent.Comp.AreaName;
         Dirty(args.OtherEntity, invokerComponent);
 
         if (!_netManager.IsClient ||
@@ -46,7 +45,7 @@ public sealed class AreaMarkerSystem : EntitySystem
             return;
         }
 
-        var message = Loc.GetString("wrapped-area-marker-message", ("area", ent.Comp.AreaName), ("fontSize", ent.Comp.FontSize));
+        var message = Loc.GetString("wrapped-area-marker-message", ("area", Loc.GetString(ent.Comp.AreaName)), ("fontSize", ent.Comp.FontSize));
 
         var ev = new AreaMarkerAnnounceEvent(message);
         RaiseLocalEvent(ref ev);
