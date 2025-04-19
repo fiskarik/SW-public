@@ -7,4 +7,11 @@ public sealed partial class WhitelistClothingComponent : Component
     public string Whitelist = "GoblinArmor";
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public string Slot = "outerclothing";
+    [DataField(required: true), ViewVariables(VVAccess.ReadWrite)]
+    public WhitelistState WhitelistState = WhitelistState.Humanoid;
+}
+public enum WhitelistState : byte
+{
+    Clothing,
+    Humanoid
 }
