@@ -1192,6 +1192,9 @@
     - type: Storage
       grid:
       - 0,0,2,2
+    - type: Construction
+      graph: MedievalMortarNew
+      node: ground
 
 - type: entity
   name: mortar tool
@@ -1207,3 +1210,6 @@
       size: Tiny
       sprite: Imperial/Medieval/Chem/mortartool.rsi
     - type: MortarTool
+    - type: Construction
+      graph: MedievalMortarTool
+      node: ground
