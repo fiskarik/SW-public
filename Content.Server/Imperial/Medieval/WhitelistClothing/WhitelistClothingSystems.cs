@@ -16,11 +16,11 @@ public sealed class WhitelistClothingSystems : EntitySystem
 
         SubscribeLocalEvent<DidEquipEvent>(OnEquipAttempt);
     }
-    private void OnEquipAttempt(ref DidEquipEvent args)
+    private void OnEquipAttempt(DidEquipEvent args)
     {
-        if (TryComp<WhitelistClothingComponent>(args.Equipee, out var component) && component.WhitelistState == WhitelistState.Humanoid && !_tagSystem.HasTag(args.Equipment, component.Whitelist) && args.Slot.Equals("outerclothing", StringComparison.CurrentCultureIgnoreCase))
+        if (TryComp<WhitelistClothingComponent>(args.Equipee, out var component) && component.WhitelistState == "humanoid" && !_tagSystem.HasTag(args.Equipment, component.Whitelist) && args.Slot.Equals("outerclothing", StringComparison.CurrentCultureIgnoreCase))
             _inventorySystem.TryUnequip(args.Equipee, args.Slot);
-        else if (TryComp<WhitelistClothingComponent>(args.Equipment, out var componentEquipment) && componentEquipment.WhitelistState == WhitelistState.Clothing && !HasComp<WhitelistClothingComponent>(args.Equipee))
+        else if (TryComp<WhitelistClothingComponent>(args.Equipment, out var componentEquipment) && componentEquipment.WhitelistState == "clothing" && !HasComp<WhitelistClothingComponent>(args.Equipee))
             _inventorySystem.TryUnequip(args.Equipee, args.Slot);
     }
 }
