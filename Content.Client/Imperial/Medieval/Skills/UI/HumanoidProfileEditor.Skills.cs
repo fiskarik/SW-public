@@ -65,12 +65,11 @@ public sealed partial class HumanoidProfileEditor
 
                 var sum = Profile.Skills.Values.Sum();
                 foreach (var item in _prototypeManager.EnumeratePrototypes<SkillPrototype>())
-                {
                     if (!Profile.Skills.ContainsKey(item.ID))
                         sum += 10;
-                }
 
-                entry.IncreaseButton.Disabled = sum >= SharedSkillsSystem.Points;
+                SkillsContainer.Children.OfType<SkillEntry>().ToList()
+                        .ForEach(x => entry.IncreaseButton.Disabled = sum >= SharedSkillsSystem.Points);
 
                 SkillPointsCountLabel.Text = $"{sum} / {SharedSkillsSystem.Points}";
                 SetDirty();
