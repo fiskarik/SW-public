@@ -84,10 +84,6 @@ public sealed partial class SkillsSystem
             Dirty(uid, pullable);
         }
 
-        _threshold.SetMobStateThreshold(uid,
-                                        _threshold.GetThresholdForState(uid, MobState.Alive) + proto.Modifiers["AliveHealthPerLevel"] * diff,
-                                        MobState.Alive);
-
         // _threshold.SetMobStateThreshold(uid,
         //                                 _threshold.GetThresholdForState(uid, MobState.Wounded) + proto.Modifiers["AliveHealthPerLevel"] * diff,
         //                                 MobState.Wounded);

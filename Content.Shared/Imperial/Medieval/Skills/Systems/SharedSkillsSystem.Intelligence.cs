@@ -31,9 +31,7 @@ public abstract partial class SharedSkillsSystem
 
     private void OnCanWrite(EntityUid uid, SkillsComponent comp, ref PaperWriteAttemptEvent args)
     {
-        var (_, level) = GetSkill(uid, IntelligenceId);
-
-        if (level > 5)
+        if (CanRead(uid))
             return;
 
         args.Cancelled = true;
@@ -75,7 +73,7 @@ public abstract partial class SharedSkillsSystem
     {
         var (_, level) = GetSkill(uid, IntelligenceId);
 
-        if (level > 5)
+        if (level < 5)
             return false;
 
         return true;
