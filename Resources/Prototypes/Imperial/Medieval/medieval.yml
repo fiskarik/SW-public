@@ -7686,25 +7686,25 @@
 
 - type: construction
   name: Пестик
-  id: MortarTool
-  graph: MortarTool
+  id: MedievalMortarTool
+  graph: MedievalMortarTool
   startNode: start
-  targetNode: MortarTool
+  targetNode: MedievalMortarTool
   category: construction-category-misc
   description: "Необходим для измельчения ингредиентов в ступке"
   icon: { sprite: Imperial/Medieval/Chem/mortartool.rsi, state: icon }
   objectType: Item
 
 - type: constructionGraph
-  id: MortarTool
+  id: MedievalMortarTool
   start: start
   graph:
     - node: start
       edges:
-        - to: MortarTool
+        - to: MedievalMortarTool
           steps:
             - material: MedievalGlina
               amount: 2
               doAfter: 4
-    - node: MortarTool
-      entity: MortarTool
+    - node: MedievalMortarTool
+      entity: MedievalMortarTool
