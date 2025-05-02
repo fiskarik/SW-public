@@ -8,6 +8,7 @@ using Content.Shared.Construction.Components;
 using Content.Shared.Construction.EntitySystems;
 using Content.Shared.Construction.Steps;
 using Content.Shared.DoAfter;
+using Content.Shared.Imperial.Medieval.Construction;
 using Content.Shared.Interaction;
 using Content.Shared.Prying.Systems;
 using Content.Shared.Radio.EntitySystems;
@@ -284,7 +285,12 @@ namespace Content.Server.Construction
                     {
                         var doAfterEv = new ConstructionInteractDoAfterEvent(EntityManager, interactUsing);
 
-                        var doAfterEventArgs = new DoAfterArgs(EntityManager, interactUsing.User, step.DoAfter, doAfterEv, uid, uid, interactUsing.Used)
+                        // Imperial Medieval Skills start
+                        var skillsEv = new GetConstructionSpeedModifiersEvent(1f);
+                        RaiseLocalEvent(interactUsing.User, ref skillsEv);
+                        // Imperial Medieval Skills end
+
+                        var doAfterEventArgs = new DoAfterArgs(EntityManager, interactUsing.User, step.DoAfter * Math.Max(skillsEv.Modifier, 0.15f), doAfterEv, uid, uid, interactUsing.Used)   // Imperial Medieval - modifier added
                         {
                             BreakOnDamage = false,
                             BreakOnMove = true,
@@ -361,11 +367,16 @@ namespace Content.Server.Construction
                     if (doAfterState == DoAfterState.Completed)
                         return  HandleResult.True;
 
+                    // Imperial Medieval Skills start
+                    var skillsEv = new GetConstructionSpeedModifiersEvent(1f);
+                    RaiseLocalEvent(interactUsing.User, ref skillsEv);
+                    // Imperial Medieval Skills end
+
                     var result  = _toolSystem.UseTool(
                         interactUsing.Used,
                         interactUsing.User,
                         uid,
-                        TimeSpan.FromSeconds(toolInsertStep.DoAfter),
+                        TimeSpan.FromSeconds(toolInsertStep.DoAfter * Math.Max(skillsEv.Modifier, 0.15f)),  // Imperial Medieval - modifier added
                         new [] { toolInsertStep.Tool },
                         new ConstructionInteractDoAfterEvent(EntityManager, interactUsing),
                         out var doAfter,
