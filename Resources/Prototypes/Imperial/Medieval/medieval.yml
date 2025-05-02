@@ -6435,11 +6435,33 @@
   armorFlatPrice: 1
 
 - type: entity
+  name: flinter
+  id: MedievalFlinter
+  parent: BaseItem
+  description: Boblay
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/flint.rsi
+    state: flint
+  - type: Igniter
+    igniteTime: 1
+    igniteChance: 0.5
+    flammableStacks: 0.5
+    igniteSound: /Audio/Imperial/Medieval/Misk/flinter_strike.ogg
+    effectPrototype: EffectSparks
+
+- type: entity
   name: torch
   parent: BaseItem
   id: MedievalTorch
   description: A torch fashioned from some wood.
   components:
+  - type: FlammableExpendableLight
+  - type: Flammable
+    firestackFade: 0
+    damage:
+      types:
+        Heat: 0
   - type: ExpendableLight
     spentName: expendable-light-burnt-torch-name
     despawnOnSpent: true

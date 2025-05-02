@@ -79,3 +79,11 @@
     - type: Tag
       tags:
       - Torch
+    # Imperial Medieval Start
+    - type: FlammableExpendableLight
+    - type: Flammable
+      firestackFade: 0
+      damage:
+        types:
+          Heat: 0
+    # Imperial Medieval End

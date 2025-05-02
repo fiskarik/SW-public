@@ -1173,6 +1173,7 @@
     radius: 18
     energy: 1.35
   - type: Anchorable
+  - type: AlwaysHot
   - type: AmbientSound
     volume: -15
     range: 1.5
