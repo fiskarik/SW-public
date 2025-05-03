@@ -75,7 +75,7 @@ public sealed partial class SkillsSystem
         if (TryComp<SoftCritEmotesComponent>(uid, out var crit))
         {
             crit.MinDamage += proto.Modifiers["AliveHealthPerLevel"] * diff;
-            crit.Emote = level > 16;
+            crit.Emote = level <= 16;
         }
 
         if (level > 16)
