@@ -22,6 +22,7 @@ public abstract partial class SharedSkillsSystem : EntitySystem
         InitializeAgility();
         InitializeEndurance();
         InitializeIntelligence();
+        InitializeVitality();
 
         InitializeDesc();
 
