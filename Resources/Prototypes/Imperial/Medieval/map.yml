@@ -22,6 +22,8 @@
             MedievalChaplain: [ 6, 6 ]
             MedievalWanderMag: [ 4, 4 ]
             # Legion (29 total)
+            MedievalLegionJailed: [ 5, 5 ]
+            JobIconMedievalLegionJailer: [ 1, 1 ]
             MedievalLegionRecruit: [ 7, 7 ]
             MedievalLegionLegioner: [ 11, 11 ]
             MedievalLegionOpcion: [ 4, 4 ]

@@ -6,6 +6,8 @@
     MedievalClothingOuterArmorIron: [ MedievalClothingOuterArmorPodWarsSkinWarhammer ]
     MedievalClothingOuterArmorUpIron: [ MedievalClothingOuterArmorPodWarsSkinWarhammerUp ]
     MedievalClothingHeadHelmetCrusader: [ MedievalClothingHeadHelmetCrusaderWarhammer, MedievalClothingHeadHelmetCrusaderWarhammer2 ]
+    MedievalClothingOuterArmorCharmerLightIns: [MedievalClothingOuterArmorCharmerLightInsBlood]
+    MedievalClothingHeadHelmetCharmerIns: [MedievalClothingHeadHelmetCharmerInsBlood]
 
 - type: customization
   id: eifall
@@ -29,14 +31,29 @@
     MedievalClothingHeadHelmetCollegiumPurpleHat: [ MedievalClothingHeadHelmeCollegiumWhitetHat ]
     MedievalShoesChamber: [ MedievalWhiteShoesCharmer ]
     ClothingBackpackSatchelCharmerLight: [ ClothingBackpackSatchelWhiteCharmerLight ]
-    ClothingOuterArmorPodWars: [ MedievalClothingOuterArmorGoblinSlayer ] 
+    ClothingOuterArmorPodWars: [ MedievalClothingOuterArmorGoblinSlayer ]
     MedievalClothingHeadHelmetHoodHelmet: [MedievalClothingHeadHelmetGoblinSlayer]
+    MedievalIronShieldBuckler: [MedievalIronShieldBucklerGoblinSlayer]
+    MedievalIronGloves: [MedievalIronGlovesGoblinSlayer]
+    Log: [MedievalClothingUniformJumpsuitShitCloth69, MedievalClothingUniformJumpsuitShitCloth67, MedievalClothingUniformJumpsuitShitCloth70, MedievalClothingHandsRoyalGloves, MedievalClothingNeckRoyalCloakAlt, MedievalClothingNeckRoyalCloak, ClothingBeltRoyalSheath, MedievalClothingRoyalBoots, MedievalClothingOuterRoyalCoat]
+    MedievalFalshionT3: [MedievalIronRoyalSword]
+    MedievalFalshionT3Steel: [MedievalSteelRoyalSword]
+    MedievalClothingOuterArmorCharmerLightIns: [MedievalClothingOuterAltArmorCharmerLightIns]
+    MedievalClothingHeadHelmetCharmerIns: [MedievalClothingHeadAltHelmetCharmerIns]
+    MedievalClothingOuterArmorCharmerLightLegion: [MedievalClothingOuterAltArmorCharmerLightLegion]
+    MedievalClothingHeadHelmetCharmerLegion: [MedievalClothingHeadAltHelmetCharmerLegion]
 
 - type: customization
   id: game123456
   holder: cc584a6a-cc13-4009-bd91-e5c2a74b15b3
   map:
     Log: [ MedaljonSandClock ]
+
+- type: customization
+  id: rustyrider
+  holder: c3aba6fd-f54b-4331-bd77-ffcd34dd40e0
+  map:
+    Log: [ MedievalClothingElectroMask, ClothingEyesElectroBlindfold ]
 
 - type: customization
   id: arelover
