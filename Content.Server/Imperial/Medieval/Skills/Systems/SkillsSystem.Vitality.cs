@@ -94,7 +94,7 @@ public sealed partial class SkillsSystem
         //                                 _threshold.GetThresholdForState(uid, MobState.Wounded) + proto.Modifiers["AliveHealthPerLevel"] * diff,
         //                                 MobState.Wounded);
 
-        // var toAdd = 0;
+        // var toAdd = 0f;
         // if (level >= 20)
         //     toAdd += proto.Modifiers["MaxHealthBonus"];
         // else if (oldLevel >= 20 && level < 20)
