@@ -31,8 +31,8 @@ public abstract partial class SharedSkillsSystem : EntitySystem
 
     private void OnModifyClothingSpeedMod(EntityUid uid, SkillsComponent comp, ref ModifyClothingMovespeedModifierEvent args)
     {
-        VitalityModifyClothingSpeedMod(uid, comp, ref args);
-        EnduranceModifyClothingSpeedMod(uid, comp, ref args);
+        //VitalityModifyClothingSpeedMod(uid, comp, ref args);
+        //EnduranceModifyClothingSpeedMod(uid, comp, ref args);
     }
 
     protected (SkillPrototype, int) GetSkill(EntityUid uid, string id)
