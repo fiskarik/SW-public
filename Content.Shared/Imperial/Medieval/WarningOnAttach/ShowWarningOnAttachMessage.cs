@@ -9,6 +9,6 @@ public sealed class ShowWarningOnAttachMessage : EntityEventArgs
 
     public ShowWarningOnAttachMessage(string message)
     {
-        Message = message;
+        Message = Loc.GetString(message);
     }
 }

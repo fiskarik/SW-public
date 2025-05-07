@@ -6778,6 +6778,8 @@
   parent: MedievalMobSkeletonNecro
   id: MedievalKaravanSkeleton
   components:
+    - type: WarningOnAttach
+      message: medieval-warning-cardef
     - type: NpcFactionMember
       factions:
         - Syndicate
