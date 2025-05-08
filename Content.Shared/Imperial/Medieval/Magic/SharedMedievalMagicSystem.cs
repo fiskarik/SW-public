@@ -4,6 +4,7 @@ using Content.Shared.DoAfter;
 using Content.Shared.Imperial.MouseInput.Events;
 using Content.Shared.Mind;
 using Content.Shared.Movement.Systems;
+using Prometheus;
 using Robust.Shared.Map;
 
 namespace Content.Shared.Imperial.Medieval.Magic;
@@ -16,6 +17,15 @@ public abstract partial class SharedMedievalMagicSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
     [Dependency] private readonly SharedMindSystem _mindSystem = default!;
 
+    private static readonly Gauge SpellCastedMetrics = Metrics.CreateGauge(
+        "imperial_medieval_spell_casted",
+        "Dictionary of casting spells"
+    );
+
+    private static readonly Gauge SpellSuccessCastedMetrics = Metrics.CreateGauge(
+        "imperial_medieval_spell_success_casted",
+        "Dictionary of casting spells"
+    );
 
     public override void Initialize()
     {
@@ -59,6 +69,7 @@ public abstract partial class SharedMedievalMagicSystem : EntitySystem
         Dirty(uid, casterComponent);
 
         _speedModifierSystem.RefreshMovementSpeedModifiers(uid);
+        SpellCastedMetrics.WithLabels(MetaData(GetEntity(spellData.Action)).EntityName).Inc();
 
         if (args.Cancelled)
         {
@@ -123,6 +134,9 @@ public abstract partial class SharedMedievalMagicSystem : EntitySystem
 
     protected void CastSpell(MedievalSpellDoAfterEvent args)
     {
+        var spellData = GetSpellData(args);
+        SpellCastedMetrics.WithLabels(MetaData(GetEntity(spellData.Action)).EntityName).Inc();
+
         switch (args)
         {
             case MedievalCastProjectileSpellDoAfterEvent projectileSpell:
