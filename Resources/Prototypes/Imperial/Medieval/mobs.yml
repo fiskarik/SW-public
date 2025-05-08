@@ -1128,6 +1128,8 @@
   - type: SSDFree
   - type: MobsterAccent
   - type: GhostTakeoverAvailable
+  - type: WarningOnAttach
+    message: medieval-warning-goblin
   - type: GhostRole
     makeSentient: true
     name: ghost-role-information-goblin-name
