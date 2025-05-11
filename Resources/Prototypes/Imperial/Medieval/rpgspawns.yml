@@ -216,8 +216,8 @@
     - MedievalLateMobSpawnerMedievalMobGoblin2
     chance: 0.6
     intervalSeconds: 1
-    minimumEntitiesSpawned: 15
-    maximumEntitiesSpawned: 100
+    minimumEntitiesSpawned: 255
+    maximumEntitiesSpawned: 500
 
 - type: entity
   id: MedievalLateMobSpawnerMedievalMobGoblin2
