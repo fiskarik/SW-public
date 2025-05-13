@@ -16,7 +16,7 @@ This repository is for accepting voluntary contributions in support of [Spellwar
 ## Spellward License ENG
 
 This repository is a global conversion mod for the game Space Station 14. Nearly all modifications made to the original game are protected by the [ICLA](https://wiki.imperialspace.net/icla) and [IELA](https://wiki.imperialspace.net/iela) licenses. Therefore, using this build to host servers without the copyright holder’s written permission is prohibited and monitored.
-This repository also includes original game code, which is licensed under the [MIT](https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT). License. In addition, it contains content licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+This repository also includes original game code, which is licensed under the [MIT](https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT) License. In addition, it contains content licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
 Assets have their license and the copyright in the metadata file. [Example](https://github.com/imperial-space/SW-public/blob/develop/Resources/Textures/Imperial/Medieval/Clothing/Armor/brigantin.rsi/meta.json).
 
 ## Building
