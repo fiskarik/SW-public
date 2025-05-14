@@ -1263,7 +1263,7 @@
     animation: WeaponArcPunch
     damage:
       groups:
-        Brute: 30
+        Brute: 12
       types:
         ParryAble: 1
         Structural: 150
