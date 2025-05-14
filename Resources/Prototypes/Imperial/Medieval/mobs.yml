@@ -1264,9 +1264,6 @@
     damage:
       groups:
         Brute: 12
-      types:
-        ParryAble: 1
-        Structural: 150
   - type: Thieving
     stripTimeReduction: 3
     stealthy: true
