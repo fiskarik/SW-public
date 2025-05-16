@@ -19,8 +19,9 @@ namespace Content.Client._RD.DeathScreen;
 
 public sealed class RDDeathScreenControl : RDControl
 {
-    private const float FadeDuration = 4f;
-    private const float DelayTime = 3f;
+    private const float FadeInDuration = 1f;
+    private const float FadeOutDuration = 9f;
+    private const float DelayTime = 2f;
 
     [Dependency] private readonly IResourceCache _resourceCache = default!;
 
@@ -30,9 +31,9 @@ public sealed class RDDeathScreenControl : RDControl
 
     private string _title = string.Empty;
     private string _reason = string.Empty;
-
     private float _elapsedTime;
-    private float _delayElapsedTime;
+
+    private AnimationPhase _phase = AnimationPhase.None;
 
     public RDDeathScreenControl()
     {
@@ -42,7 +43,7 @@ public sealed class RDDeathScreenControl : RDControl
 
         _label = new Label
         {
-            Text = "свинтус придет",
+            Text = _title,
             FontOverride = _resourceCache.GetFont("/Fonts/_RD/KosmoletFuturism.otf", 86),
             HorizontalAlignment = HAlignment.Center,
             VerticalAlignment = VAlignment.Center,
@@ -57,29 +58,63 @@ public sealed class RDDeathScreenControl : RDControl
         _title = ev.Title;
         _reason = ev.Reason;
 
-        _elapsedTime = 0;
-        _delayElapsedTime = 0;
+        _label.Text = _title;
+        _elapsedTime = 0f;
+        _phase = AnimationPhase.FadeIn;
     }
 
     protected override void FrameUpdate(FrameEventArgs args)
     {
         base.FrameUpdate(args);
-
-        if (_elapsedTime >= FadeDuration)
-        {
-            if (_delayElapsedTime < DelayTime)
-            {
-                _delayElapsedTime += args.DeltaSeconds;
-                return;
-            }
-
-            OnAnimationEnd?.Invoke();
-            return;
-        }
-
         _elapsedTime += args.DeltaSeconds;
 
-        _label.Modulate = Color.White.WithAlpha(MathHelper.Lerp(0f, 1f, _elapsedTime / FadeDuration));
-        BackgroundColor = Color.Black.WithAlpha( MathHelper.Lerp(0f, 1f, _elapsedTime / FadeDuration));
+        switch (_phase)
+        {
+            case AnimationPhase.FadeIn:
+            {
+                var alpha = MathHelper.Clamp(_elapsedTime / FadeInDuration, 0f, 1f);
+                BackgroundColor = Color.Red.WithAlpha(alpha);
+
+                if (_elapsedTime >= FadeInDuration)
+                {
+                    _elapsedTime = 0f;
+                    _phase = AnimationPhase.FadeOut;
+                }
+
+                break;
+            }
+
+            case AnimationPhase.FadeOut:
+            {
+                var alpha = MathHelper.Clamp(1f - _elapsedTime / FadeOutDuration, 0f, 1f);
+                BackgroundColor = Color.Red.WithAlpha(alpha);
+
+                if (_elapsedTime >= FadeOutDuration)
+                    _phase = AnimationPhase.Delay;
+                break;
+            }
+
+            case AnimationPhase.Delay:
+            {
+                BackgroundColor = Color.Red.WithAlpha(0);
+                if (_elapsedTime >= DelayTime)
+                    _phase = AnimationPhase.Done;
+
+                break;
+            }
+
+            case AnimationPhase.Done:
+                OnAnimationEnd?.Invoke();
+                break;
+        }
+    }
+
+    private enum AnimationPhase
+    {
+        None,
+        FadeIn,
+        Delay,
+        FadeOut,
+        Done
     }
 }
