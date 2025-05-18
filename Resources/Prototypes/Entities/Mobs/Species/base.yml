@@ -301,6 +301,8 @@
     - Gasp
     - PassiveScream
   - type: AreaMarkerInvoker
+  - type: ShieldOnStartup
+  - type: AntiStealAfk
 # Imperial Medieval End
 
 - type: entity
