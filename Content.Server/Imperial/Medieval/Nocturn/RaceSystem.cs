@@ -159,6 +159,17 @@ namespace Content.Server.Nocturn
 
                         _damageableSystem.TryChangeDamage(uid, comp.BloodLostDamage * 3f, true, false);
                     }
+
+                    if (comp.BloodLevel < 50f && comp.IsDisguised)
+                    {
+                        if (TryComp<HumanoidAppearanceComponent>(uid, out var appearance))
+                        {
+                            _popupSystem.PopupEntity(Loc.GetString("nocturn-disguise-low-blood"), uid, uid, PopupType.LargeCaution);
+
+                            _audio.PlayPvs(new SoundPathSpecifier(comp.EffectSoundOnDisguise), uid);
+                            RevertToOriginalForm(uid, comp, appearance);
+                        }
+                    }
                 }
             }
         }
@@ -348,6 +359,7 @@ namespace Content.Server.Nocturn
                 NeedHand = false
             };
 
+            _audio.PlayPvs(new SoundPathSpecifier(component.EffectSoundOnDisguise), uid);
             _doAfterSystem.TryStartDoAfter(doAfterArgs);
             args.Handled = true;
         }
@@ -368,10 +380,12 @@ namespace Content.Server.Nocturn
                     return;
                 }
 
+                _popupSystem.PopupEntity(Loc.GetString("nocturn-disguise-apply"), uid, uid);
                 ApplyDisguise(uid, component, appearance);
             }
             else
             {
+                _popupSystem.PopupEntity(Loc.GetString("nocturn-disguise-revert"), uid, uid);
                 RevertToOriginalForm(uid, component, appearance);
             }
         }
@@ -384,21 +398,15 @@ namespace Content.Server.Nocturn
 
             component.IsDisguised = true;
             Dirty(uid, appearance);
-
-            _audio.PlayPvs(new SoundPathSpecifier(component.EffectSoundOnDrink), uid);
-            _popupSystem.PopupEntity(Loc.GetString("nocturn-disguise-apply"), uid, uid);
         }
 
         private void RevertToOriginalForm(EntityUid uid, NocturnComponent component, HumanoidAppearanceComponent appearance)
         {
             appearance.Species = "Drou";
-            component.BloodDrainPerSecond = 0.15f;
+            component.BloodDrainPerSecond /= 2;
 
             component.IsDisguised = false;
             Dirty(uid, appearance);
-
-            _audio.PlayPvs(new SoundPathSpecifier(component.EffectSoundOnDrink), uid);
-            _popupSystem.PopupEntity(Loc.GetString("nocturn-disguise-revert"), uid, uid);
         }
 
         public void ShowEyes(EntityUid uid)

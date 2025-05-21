@@ -33,7 +33,7 @@
         sprite: /Textures/Imperial/Medieval/Vampire/actions.rsi
         state: disguise
       event: !type:NocturnDisguiseActionEvent
-      useDelay: 120
+      useDelay: 30
 
 - type: alert
   id: NocturnBlood
