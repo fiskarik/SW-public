@@ -58,6 +58,8 @@ namespace Content.Server.Nocturn
             SubscribeLocalEvent<NocturnComponent, NocturnDrinkActionEvent>(OnNocturnDrinkAction);
             SubscribeLocalEvent<ZveresScreamComponent, ZveresScreamActionEvent>(OnZveresScreamAction);
             SubscribeLocalEvent<NocturnComponent, NocturnDrinkDoAfterEvent>(OnNocturnDrinkDoAfter);
+            SubscribeLocalEvent<NocturnComponent, NocturnDisguiseActionEvent>(OnNocturnDisguiseAction);
+            SubscribeLocalEvent<NocturnComponent, NocturnDisguiseDoAfterEvent>(OnNocturnDisguiseDoAfter);
             SubscribeLocalEvent<NocturnComponent, ExaminedEvent>(OnExamine);
             SubscribeLocalEvent<ZveresScreamComponent, RefreshMovementSpeedModifiersEvent>(OnZveresMove);
         }
@@ -157,6 +159,17 @@ namespace Content.Server.Nocturn
 
                         _damageableSystem.TryChangeDamage(uid, comp.BloodLostDamage * 3f, true, false);
                     }
+
+                    if (comp.BloodLevel < 50f && comp.IsDisguised)
+                    {
+                        if (TryComp<HumanoidAppearanceComponent>(uid, out var appearance))
+                        {
+                            _popupSystem.PopupEntity(Loc.GetString("nocturn-disguise-low-blood"), uid, uid, PopupType.LargeCaution);
+
+                            _audio.PlayPvs(new SoundPathSpecifier(comp.EffectSoundOnDisguise), uid);
+                            RevertToOriginalForm(uid, comp, appearance);
+                        }
+                    }
                 }
             }
         }
@@ -176,6 +189,7 @@ namespace Content.Server.Nocturn
             }
 
             _action.AddAction(uid, "NocturnDrinkAction", uid);
+            _action.AddAction(uid, "NocturnDisguiseAction", uid);
         }
 
         public void OnZveresScreamAction(EntityUid uid, ZveresScreamComponent comp, ZveresScreamActionEvent args)
@@ -328,6 +342,71 @@ namespace Content.Server.Nocturn
                     }
                 }
             }
+        }
+
+        public void OnNocturnDisguiseAction(EntityUid uid, NocturnComponent component, NocturnDisguiseActionEvent args)
+        {
+            if (!CanBite(uid))
+            {
+                _popupSystem.PopupEntity(Loc.GetString("nocturn-disguise-obstacle"), uid, uid, PopupType.Large);
+                return;
+            }
+
+            var doAfterArgs = new DoAfterArgs(EntityManager, uid, 2.25f, new NocturnDisguiseDoAfterEvent(), uid)
+            {
+                BreakOnMove = false,
+                BreakOnDamage = false,
+                NeedHand = false
+            };
+
+            _audio.PlayPvs(new SoundPathSpecifier(component.EffectSoundOnDisguise), uid);
+            _doAfterSystem.TryStartDoAfter(doAfterArgs);
+            args.Handled = true;
+        }
+
+        private void OnNocturnDisguiseDoAfter(EntityUid uid, NocturnComponent component, NocturnDisguiseDoAfterEvent args)
+        {
+            if (args.Handled || args.Cancelled)
+                return;
+
+            if (!TryComp<HumanoidAppearanceComponent>(uid, out var appearance))
+                return;
+
+            if (!component.IsDisguised)
+            {
+                if (component.BloodLevel < 50)
+                {
+                    _popupSystem.PopupEntity(Loc.GetString("nocturn-disguise-low-blood"), uid, uid, PopupType.Large);
+                    return;
+                }
+
+                _popupSystem.PopupEntity(Loc.GetString("nocturn-disguise-apply"), uid, uid);
+                ApplyDisguise(uid, component, appearance);
+            }
+            else
+            {
+                _popupSystem.PopupEntity(Loc.GetString("nocturn-disguise-revert"), uid, uid);
+                RevertToOriginalForm(uid, component, appearance);
+            }
+        }
+
+        private void ApplyDisguise(EntityUid uid, NocturnComponent component, HumanoidAppearanceComponent appearance)
+        {
+            appearance.Species = "Human";
+            component.BloodDrainPerSecond *= 2;
+            component.BloodLevel -= 10;
+
+            component.IsDisguised = true;
+            Dirty(uid, appearance);
+        }
+
+        private void RevertToOriginalForm(EntityUid uid, NocturnComponent component, HumanoidAppearanceComponent appearance)
+        {
+            appearance.Species = "Drou";
+            component.BloodDrainPerSecond /= 2;
+
+            component.IsDisguised = false;
+            Dirty(uid, appearance);
         }
 
         public void ShowEyes(EntityUid uid)
