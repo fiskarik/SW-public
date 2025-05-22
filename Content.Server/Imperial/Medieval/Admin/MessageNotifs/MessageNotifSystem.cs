@@ -16,7 +16,7 @@ public sealed partial class MessageNotifSystem : EntitySystem
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IAdminManager _adminManager = default!;
-    private List<string> _cuts = new() { "слово" };
+    private List<string> _cuts = new() { };
     public override void Initialize()
     {
         base.Initialize();
