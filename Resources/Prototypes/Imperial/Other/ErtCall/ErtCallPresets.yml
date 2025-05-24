@@ -17,3 +17,8 @@
   id: ERT-Medium
   path: "Maps/Imperial/ErtCall/ERTmedium.yml"
   desc: "Вместительный корабль с медлабораторией и тюремной камерой. 1 лидер, 2 медика, 3 инженера, 5 бойцов."
+
+- type: ertCall
+  id: ERT-Cleaners
+  path: "Maps/Imperial/ErtCall/ERTcleaners.yml"
+  desc: "Небольшой корабль. В нем распологается 1 лидер-уборщик и 3 уборщика."

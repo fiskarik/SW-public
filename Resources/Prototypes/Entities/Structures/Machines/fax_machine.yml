@@ -87,6 +87,7 @@
   - type: FaxMachine
     name: "Central Command"
     notifyAdmins: true
+  - type: CentcomFax # Imperial "operational_ERT-cleaners"
 
 - type: entity
   parent: FaxMachineBase
