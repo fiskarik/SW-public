@@ -5,7 +5,6 @@ using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Popups;
 using Content.Server.Power.Components;
 using Content.Server.Tools;
-using Content.Server.Imperial.OperationalERTcleaners; // Imperial "operational_ERT-cleaners"
 using Content.Shared.UserInterface;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Containers.ItemSlots;
@@ -17,7 +16,6 @@ using Content.Shared.Fax;
 using Content.Shared.Fax.Systems;
 using Content.Shared.Fax.Components;
 using Content.Shared.Interaction;
-using Content.Shared.Imperial.OperationalERTcleaners; // Imperial "operational_ERT-cleaners"
 using Content.Shared.Labels.Components;
 using Content.Shared.Labels.EntitySystems;
 using Content.Shared.Mobs.Components;
@@ -556,18 +554,7 @@ public sealed class FaxSystem : EntitySystem
         _audioSystem.PlayPvs(component.SendSound, uid);
 
         UpdateUserInterface(uid, component);
-        // Imperial "operational_ERT-cleaners" Start
-        if (HasComp<CentcomFaxComponent>(uid))
-        {
-            var ev = new FaxCentcomReceivedEvent(
-                EntityManager.GetNetEntity(uid),
-                EntityManager.GetNetEntity(sendEntity.Value),
-                paper.Content ?? string.Empty
-            );
-            RaiseLocalEvent(uid, ev);
-        }
-        // Imperial "operational_ERT-cleaners" End
-        }
+    }
 
     /// <summary>
     ///     Accepts a new message and adds it to the queue to print

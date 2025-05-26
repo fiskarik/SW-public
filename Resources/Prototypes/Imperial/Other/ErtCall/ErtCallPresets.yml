@@ -21,4 +21,4 @@
 - type: ertCall
   id: ERT-Cleaners
   path: "Maps/Imperial/ErtCall/ERTcleaners.yml"
-  desc: "Небольшой корабль. В нем распологается 1 лидер-уборщик и 3 уборщика."
+  desc: "Небольшой корабль. 1 лидер-уборщик, 4 уборщик."

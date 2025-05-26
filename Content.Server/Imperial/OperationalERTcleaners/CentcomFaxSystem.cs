@@ -1,34 +1,49 @@
-using Content.Shared.Imperial.OperationalERTcleaners;
 using Content.Server.Administration.Logs;
+using Content.Shared.DeviceNetwork.Events;
 using Content.Shared.Database;
 using System.Text.RegularExpressions;
 using Robust.Shared.Console;
-using Robust.Server.Player;
+using Robust.Server.Console;
+using Content.Shared.Paper;
 
 namespace Content.Server.Imperial.OperationalERTcleaners;
 
 public sealed class CentcomFaxSystem : EntitySystem
 {
     [Dependency] private readonly IConsoleHost _consoleHost = default!;
+    [Dependency] private readonly IServerConsoleHost _host = default!;
     [Dependency] private readonly IAdminLogManager _adminLog = default!;
+
+    private readonly Regex _patternForm = new(
+        @"^ERT\-REQUEST\-(\d{2})\.(\d{2})\.(\d{4})$",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase);
+    private readonly ISawmill _logger = Logger.GetSawmill("CentcomFaxSystem");
+
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<CentcomFaxComponent, FaxCentcomReceivedEvent>(OnCentcomFaxReceived);
+        SubscribeLocalEvent<CentcomFaxComponent, DeviceNetworkPacketEvent>(OnCentcomFaxReceived);
     }
-    private void OnCentcomFaxReceived(EntityUid uid, CentcomFaxComponent component, FaxCentcomReceivedEvent args)
-    {
-        Log.Debug("[CentcomFax] Начата обработка документа...");
-        _adminLog.Add(LogType.Action, LogImpact.Medium, $"тест");
 
-        var cleanContent = args.Content
+    private void OnCentcomFaxReceived(EntityUid uid, CentcomFaxComponent component, DeviceNetworkPacketEvent args)
+    {
+        _logger.Info("СОБЫТИЕ ПОЛУЧЕНО!");
+        _adminLog.Add(LogType.Action, LogImpact.Medium, $"Тестовое сообщение в логах");
+        _consoleHost.ExecuteCommand("say Тестовая команда выполнена"); // test
+
+        var sendEntity = component.PaperSlot.Item;
+
+        if (!TryComp<PaperComponent>(sendEntity, out var paper))
+            return;
+
+        var cleanContent = ...
             .Replace(" ", "")
             .Replace("\n", "")
             .Replace("\r", "")
             .Trim()
             .ToUpperInvariant();
 
-        var match = PatternForm.Match(cleanContent);
+        var match = _patternForm.Match(cleanContent);
 
         var day = match.Groups[1].Value;
         var month = match.Groups[2].Value;
@@ -36,28 +51,21 @@ public sealed class CentcomFaxSystem : EntitySystem
 
         if (!match.Success)
         {
-            Log.Debug($"[CentcomFax] Неверный формат. Шаблон: {PatternForm}, Получено: {cleanContent}");
+            _logger.Info($"[CentcomFax] Неверный формат. Получено: {cleanContent}");
             return;
         }
 
         if (!IsValidDate(day, month, year, out var date))
         {
-            Log.Debug($"[CentcomFax] Некорректная дата в документе: {day}.{month}.{year}");
+            _logger.Info($"[CentcomFax] Некорректная дата в документе: {day}.{month}.{year}");
             return;
 
         }
 
-        Log.Debug("[CentcomFax] Пытаюсь выполнить команду: callert ERT-Cleaners");
-
-        if (_consoleHost == null)
-        {
-            Log.Error("[CentcomFax] ConsoleHost не инициализирован!");
-            return;
-        }
-
-        _consoleHost.ExecuteCommand(shell.Player, "callert ERT-Cleaners");
+        _consoleHost.ExecuteCommand("callert ERT-Cleaners");
+        _host.ExecuteCommand("callert ERT-Cleaners");   // test 2
         _adminLog.Add(LogType.Action, LogImpact.Medium, $"Вызван отряд быстрого реагирования (уборщики)");
-        Log.Debug("[CentcomFax] Команда успешно выполнена");
+        _logger.Info("[CentcomFax] Команда успешно выполнена");
 
     }
 
@@ -91,10 +99,6 @@ public sealed class CentcomFaxSystem : EntitySystem
             return false;
         }
     }
-
-    private static readonly Regex PatternForm = new(
-        @"^ERT\-REQUEST\-(\d{2})\.(\d{2})\.(\d{4})$",
-        RegexOptions.Compiled | RegexOptions.IgnoreCase);
 }
 
 
