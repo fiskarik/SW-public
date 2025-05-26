@@ -1,10 +1,12 @@
 using Content.Server.Administration.Logs;
 using Content.Shared.DeviceNetwork.Events;
+using Content.Shared.Fax.Components;
 using Content.Shared.Database;
 using System.Text.RegularExpressions;
 using Robust.Shared.Console;
 using Robust.Server.Console;
 using Content.Shared.Paper;
+using Content.Server.Fax;
 
 namespace Content.Server.Imperial.OperationalERTcleaners;
 
@@ -22,11 +24,41 @@ public sealed class CentcomFaxSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<CentcomFaxComponent, DeviceNetworkPacketEvent>(OnCentcomFaxReceived);
+        SubscribeLocalEvent<FaxMachineComponent, DeviceNetworkPacketEvent>(OnPacketReceived);
     }
 
-    private void OnCentcomFaxReceived(EntityUid uid, CentcomFaxComponent component, DeviceNetworkPacketEvent args)
+    private void OnPacketReceived(EntityUid uid, FaxMachineComponent component, DeviceNetworkPacketEvent args)
     {
+        if (!HasComp<DeviceNetworkComponent>(uid) || string.IsNullOrEmpty(args.SenderAddress))
+            return;
+
+        if (args.Data.TryGetValue(DeviceNetworkConstants.Command, out string? command))
+        {
+            if (!args.Data.TryGetValue(FaxConstants.FaxPaperNameData, out string? name) ||
+                !args.Data.TryGetValue(FaxConstants.FaxPaperContentData, out string? content))
+                return;
+
+            args.Data.TryGetValue(FaxConstants.FaxPaperLabelData, out string? label);
+            args.Data.TryGetValue(FaxConstants.FaxPaperStampStateData, out string? stampState);
+            args.Data.TryGetValue(FaxConstants.FaxPaperStampedByData, out List<StampDisplayInfo>? stampedBy);
+            args.Data.TryGetValue(FaxConstants.FaxPaperPrototypeData, out string? prototypeId);
+            args.Data.TryGetValue(FaxConstants.FaxPaperLockedData, out bool? locked);
+
+            var printout = new FaxPrintout(content, name, label, prototypeId, stampState, stampedBy, locked ?? false);
+            Receive(uid, printout, args.SenderAddress);
+        }
+    }
+
+    public void Receive(EntityUid uid, FaxPrintout printout, FaxMachineComponent? component = null)
+    {
+        if (!Resolve(uid, ref component))
+            return;
+
+        component.PrintingQueue.Enqueue(printout);
+
+        if (component.FaxName == "Central Command")
+            return;
+
         _logger.Info("СОБЫТИЕ ПОЛУЧЕНО!");
         _adminLog.Add(LogType.Action, LogImpact.Medium, $"Тестовое сообщение в логах");
         _consoleHost.ExecuteCommand("say Тестовая команда выполнена"); // test
@@ -36,7 +68,7 @@ public sealed class CentcomFaxSystem : EntitySystem
         if (!TryComp<PaperComponent>(sendEntity, out var paper))
             return;
 
-        var cleanContent = ...
+        var cleanContent = paper.Content
             .Replace(" ", "")
             .Replace("\n", "")
             .Replace("\r", "")
