@@ -1,135 +1,137 @@
 using Content.Server.Administration.Logs;
-using Content.Shared.DeviceNetwork.Events;
-using Content.Shared.Fax.Components;
-using Content.Shared.Database;
-using System.Text.RegularExpressions;
-using Robust.Shared.Console;
-using Robust.Server.Console;
-using Content.Shared.Paper;
+using Content.Server.Chat.Managers;
 using Content.Server.Fax;
+using Content.Shared.DeviceNetwork.Events;
+using Content.Shared.DeviceNetwork.Components;
+using Content.Shared.Database;
+using Content.Shared.Fax.Components;
+using Content.Shared.Paper;
+using Robust.Shared.Console;
+using System.Text.RegularExpressions;
 
 namespace Content.Server.Imperial.OperationalERTcleaners;
 
 public sealed class CentcomFaxSystem : EntitySystem
 {
     [Dependency] private readonly IConsoleHost _consoleHost = default!;
-    [Dependency] private readonly IServerConsoleHost _host = default!;
     [Dependency] private readonly IAdminLogManager _adminLog = default!;
+    [Dependency] private readonly IChatManager _chat = default!;
 
-    private readonly Regex _patternForm = new(
-        @"^ERT\-REQUEST\-(\d{2})\.(\d{2})\.(\d{4})$",
+    private readonly Regex _patternERTRequest1 = new(
+        @"ЗАПРОСНАВЫЗОВ",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase);
+    private readonly Regex _patternERTRequest2 = new(
+        @"ОБР-УБОРЩИКОВ",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase);
+    private readonly Regex _patternShape = new(
+        @"ФОРМА:NT\-([A-Z]{3})\-SOD-REQ",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase);
+    private readonly Regex _patternStationName = new(
+        @"СТАНЦИЯ:NT14\-([A-Z]{2})\-(\d{3})",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase);
+    private readonly Regex _patternDate = new(
+        @"ДАТА\:(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/([0-9]{4})",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase);
+    private readonly Regex _patternAccountablePerson = new(
+        @"ПОДОТЧЁТНОЕЛИЦО\:[а-яА-ЯёЁ\s-]+",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase);
+    private readonly Regex _patternrole = new(
+        @"ДОЛЖНОСТЬ\:[а-яА-ЯёЁ\s]+",
         RegexOptions.Compiled | RegexOptions.IgnoreCase);
     private readonly ISawmill _logger = Logger.GetSawmill("CentcomFaxSystem");
 
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<FaxMachineComponent, DeviceNetworkPacketEvent>(OnPacketReceived);
+        SubscribeLocalEvent<CentcomFaxComponent, DeviceNetworkPacketEvent>(OnPacketReceived);
     }
 
-    private void OnPacketReceived(EntityUid uid, FaxMachineComponent component, DeviceNetworkPacketEvent args)
+    private void OnPacketReceived(EntityUid uid, CentcomFaxComponent component, DeviceNetworkPacketEvent args)
     {
         if (!HasComp<DeviceNetworkComponent>(uid) || string.IsNullOrEmpty(args.SenderAddress))
             return;
 
-        if (args.Data.TryGetValue(DeviceNetworkConstants.Command, out string? command))
-        {
-            if (!args.Data.TryGetValue(FaxConstants.FaxPaperNameData, out string? name) ||
-                !args.Data.TryGetValue(FaxConstants.FaxPaperContentData, out string? content))
-                return;
+        if (!args.Data.TryGetValue(FaxConstants.FaxPaperNameData, out string? name) ||
+            !args.Data.TryGetValue(FaxConstants.FaxPaperContentData, out string? content))
+            return;
 
-            args.Data.TryGetValue(FaxConstants.FaxPaperLabelData, out string? label);
-            args.Data.TryGetValue(FaxConstants.FaxPaperStampStateData, out string? stampState);
-            args.Data.TryGetValue(FaxConstants.FaxPaperStampedByData, out List<StampDisplayInfo>? stampedBy);
-            args.Data.TryGetValue(FaxConstants.FaxPaperPrototypeData, out string? prototypeId);
-            args.Data.TryGetValue(FaxConstants.FaxPaperLockedData, out bool? locked);
+        args.Data.TryGetValue(FaxConstants.FaxPaperLabelData, out string? label);
+        args.Data.TryGetValue(FaxConstants.FaxPaperStampStateData, out string? stampState);
+        args.Data.TryGetValue(FaxConstants.FaxPaperStampedByData, out List<StampDisplayInfo>? stampedBy);
+        args.Data.TryGetValue(FaxConstants.FaxPaperPrototypeData, out string? prototypeId);
+        args.Data.TryGetValue(FaxConstants.FaxPaperLockedData, out bool? locked);
 
-            var printout = new FaxPrintout(content, name, label, prototypeId, stampState, stampedBy, locked ?? false);
-            Receive(uid, printout, args.SenderAddress);
-        }
+        var printout = new FaxPrintout(content, name, label, prototypeId, stampState, stampedBy, locked ?? false);
+
+        Receive(uid, printout, args.SenderAddress);
     }
 
-    public void Receive(EntityUid uid, FaxPrintout printout, FaxMachineComponent? component = null)
+    public void Receive(EntityUid uid, FaxPrintout printout, string? fromAddress = null, CentcomFaxComponent? component = null)
     {
         if (!Resolve(uid, ref component))
             return;
 
-        component.PrintingQueue.Enqueue(printout);
-
-        if (component.FaxName == "Central Command")
-            return;
-
         _logger.Info("СОБЫТИЕ ПОЛУЧЕНО!");
-        _adminLog.Add(LogType.Action, LogImpact.Medium, $"Тестовое сообщение в логах");
-        _consoleHost.ExecuteCommand("say Тестовая команда выполнена"); // test
+        _adminLog.Add(LogType.Action, LogImpact.Medium, $"Тестовое сообщение в логах"); // change!
+        _chat.SendAdminAnnouncement("этап 1"); // change!
 
-        var sendEntity = component.PaperSlot.Item;
-
-        if (!TryComp<PaperComponent>(sendEntity, out var paper))
-            return;
-
-        var cleanContent = paper.Content
+        var text = printout.Content
             .Replace(" ", "")
-            .Replace("\n", "")
-            .Replace("\r", "")
-            .Trim()
             .ToUpperInvariant();
 
-        var match = _patternForm.Match(cleanContent);
+        // вызов именно ОБР-уборщиков
+        var ERTRequest1 = _patternERTRequest1.Match(text);
+        if (!ERTRequest1.Success)
+            return;
+        var ERTRequest2 = _patternERTRequest2.Match(text);
+        if (!ERTRequest2.Success)
+            return;
 
-        var day = match.Groups[1].Value;
-        var month = match.Groups[2].Value;
-        var year = match.Groups[3].Value;
-
-        if (!match.Success)
+        // форма документа
+        var shape = _patternShape.Match(text);
+        if (!shape.Success)
         {
-            _logger.Info($"[CentcomFax] Неверный формат. Получено: {cleanContent}");
+            _logger.Info($"[CentcomFax] Неверная ФОРМА документа. Получено: {text}");
             return;
         }
 
-        if (!IsValidDate(day, month, year, out var date))
+        // Номер станции
+        var stationName = _patternStationName.Match(text);
+        if (!stationName.Success)
         {
-            _logger.Info($"[CentcomFax] Некорректная дата в документе: {day}.{month}.{year}");
+            _logger.Info($"[CentcomFax] Неверный формат СТАНЦИИ. Получено: {text}");
             return;
-
         }
 
+        // Дата
+        var date = _patternDate.Match(text);
+        if (!date.Success)
+        {
+            _logger.Info($"[CentcomFax] Неверный формат ДАТЫ. Получено: {text}");
+            return;
+        }
+
+        // Подотчётное лицо
+        var accountablePerson = _patternAccountablePerson.Match(text);
+        if (!accountablePerson.Success)
+        {
+            _logger.Info($"[CentcomFax] Неверное подотчетное лицо. Получено: {text}");
+            return;
+        }
+
+        // Должность
+        var role = _patternrole.Match(text);
+        if (!role.Success)
+        {
+            _logger.Info($"[CentcomFax] Неверная должность. Получено: {text}");
+            return;
+        }
+
+        // Если проверка успешная
         _consoleHost.ExecuteCommand("callert ERT-Cleaners");
-        _host.ExecuteCommand("callert ERT-Cleaners");   // test 2
-        _adminLog.Add(LogType.Action, LogImpact.Medium, $"Вызван отряд быстрого реагирования (уборщики)");
+        _adminLog.Add(LogType.Action, LogImpact.Medium, $"Вызван отряд быстрого реагирования (уборщики) от игрока ..."); // change!
         _logger.Info("[CentcomFax] Команда успешно выполнена");
-
-    }
-
-    private bool IsValidDate(string dayStr, string monthStr, string yearStr, out DateOnly date)
-    {
-        date = default;
-        if (!int.TryParse(dayStr, out var day) ||
-            !int.TryParse(monthStr, out var month) ||
-            !int.TryParse(yearStr, out var year))
-        {
-            return false;
-        }
-
-        try
-        {
-            date = new DateOnly(year, month, day);
-
-            var currentDate = DateOnly.FromDateTime(DateTime.UtcNow);
-
-            var maxDate = currentDate.AddYears(1000);
-
-            if (date > maxDate)
-            {
-                return false;
-            }
-
-            return true;
-        }
-        catch (ArgumentOutOfRangeException ex)
-        {
-            return false;
-        }
+        _chat.SendAdminAnnouncement("последний этап"); // change!
     }
 }
 
