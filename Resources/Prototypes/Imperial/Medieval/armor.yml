@@ -1721,6 +1721,17 @@
     sprite: Imperial/Medieval/Clothing/Head/dark_up_helmet.rsi
 
 - type: entity
+  parent: MedievalClothingHeadHelmetCrusader
+  id: MedievalClothingHeadHelmetCrusaderMorbius
+  name: cloth
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Head/morbius_up_helmet.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Head/morbius_up_helmet.rsi
+
+- type: entity
   parent: ClothingOuterBase
   id: MedievalClothingOuterArmorGoblinWood
   name: studded armor
@@ -1843,6 +1854,17 @@
     - GoblinArmor
   - type: MedievalIronHitSound
     effectSoundOnHit: "/Audio/Imperial/Medieval/chainmail_hit.ogg"
+
+- type: entity
+  parent: MedievalClothingOuterArmorUpIron
+  id: MedievalClothingOuterArmorUpIronMorbius
+  name: MedievalClothingOuterArmorUpIronMorbius
+  description: MedievalClothingOuterRoyalArmorUpIronMorbius
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/morbius_up_armor.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/morbius_up_armor.rsi
 
 - type: entity
   parent: MedievalClothingOuterArmorUpIron
