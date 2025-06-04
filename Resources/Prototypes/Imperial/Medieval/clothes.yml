@@ -1110,6 +1110,20 @@
   - type: Fiber
     fiberColor: fibers-purple
 
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: MedievalClothingHandsGlovesWhiteWizard
+  name: MedievalClothingHandsGlovesWhiteWizard
+  description: MedievalClothingHandsGlovesWhiteWizard
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/whitecharmer.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/whitecharmer.rsi
+  - type: Fiber
+    fiberColor: fibers-white
+
 - type: entity
   parent: MedievalShoesChamber
   id: MedievalWhiteShoesCharmerIns
