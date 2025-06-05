@@ -1,0 +1,20 @@
+- type: entity
+  parent: MobHuman
+  id: ERTWeakenedJunitorEVAPreset
+  name: ERT junitor
+  suffix: EVA, Weakened
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesLast
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertjanitoreva
+    - type: Loadout
+      prototypes: [ ERTCallWeakenedJanitorGearEVA ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: AutoImplant
+      implants:
+      - MindShieldImplant

@@ -1,0 +1,19 @@
+- type: entity
+  id: SpawnERTWeakenedJunitorEVAPreset
+  name: ghost role ERTWeakenedJunitor spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: ertcall-junitor-eva-name
+      description: ertcall-junitor-eva-desc
+      rules: ertcall-junitor-eva-rules
+      raffle:
+        settings: short
+    - type: GhostRoleMobSpawner
+      prototype: ERTWeakenedJunitorEVAPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertjanitoreva

@@ -51,6 +51,20 @@
     guides:
     - Janitorial
   - type: DnaSubstanceTrace
+    # Imperial "OperationalERT-Cleaners" Start
+  - type: SolutionDynamicColorOfStamp
+    checkValidRole: true
+    roleName: Janitor
+    falseStampedName: stamp-component-stamped-name-false-role-mop
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-mop
+    stampState: "paper_stamp-generic"
+    sound:
+      path: /Audio/Items/Stamp/thick_stamp_sub.ogg
+      params:
+        volume: -2
+        maxDistance: 5
+    # Imperial "OperationalERT-Cleaners" End
 
 - type: entity
   parent: BaseItem
@@ -111,6 +125,20 @@
         - Mop
         - MopAdv
     - type: DnaSubstanceTrace
+    # Imperial "OperationalERT-Cleaners" Start
+    - type: SolutionDynamicColorOfStamp
+      checkValidRole: true
+      roleName: Уборщик
+      falseStampedName: stamp-component-stamped-name-false-role-mop
+    - type: Stamp
+      stampedName: stamp-component-stamped-name-mop
+      stampState: "paper_stamp-generic"
+      sound:
+        path: /Audio/Items/Stamp/thick_stamp_sub.ogg
+        params:
+          volume: -2
+          maxDistance: 5
+    # Imperial "OperationalERT-Cleaners" End
 
 - type: entity
   name: wet floor sign

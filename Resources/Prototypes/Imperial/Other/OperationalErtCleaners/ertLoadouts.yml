@@ -1,0 +1,14 @@
+- type: startingGear
+  id: ERTCallWeakenedJanitorGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTJanitor
+    back: ClothingBackpackCallERTJanitorFilled
+    shoes: ClothingShoesGaloshes
+    mask: ClothingMaskGasERT
+    gloves: ClothingHandsGlovesColorBlack
+    outerClothing: ClothingOuterWeakenedHardsuitERTJanitor
+    suitstorage: OxygenTankFilled
+    id: ERTJanitorPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltJanitorFilled
+    pocket1: ERTUplinkJunitorWithoutWeapons
