@@ -3,7 +3,7 @@
   id: ClothingOuterArmorHeavyTDM
   name: heavy armor suit
   description: bla bla bla heavy weapons guy
-  suffix: {TDM, Unremoveable}
+  suffix: TDM, Unremoveable
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Armor/heavy.rsi
