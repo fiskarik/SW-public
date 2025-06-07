@@ -35,8 +35,6 @@ namespace Content.Server.Bed
             SubscribeLocalEvent<StasisBedComponent, UnstrappedEvent>(OnStasisUnstrapped);
             SubscribeLocalEvent<StasisBedComponent, PowerChangedEvent>(OnPowerChanged);
             SubscribeLocalEvent<StasisBedComponent, GotEmaggedEvent>(OnEmagged);
-            SubscribeLocalEvent<BloodRegenBedComponent, StrappedEvent>(OnBloodRegenStrapped);
-            SubscribeLocalEvent<BloodRegenBedComponent, UnstrappedEvent>(OnBloodRegenUnstrapped);
         }
 
         private void OnStrapped(Entity<HealOnBuckleComponent> bed, ref StrappedEvent args)
@@ -54,17 +52,6 @@ namespace Content.Server.Bed
             _actionsSystem.RemoveAction(args.Buckle, bed.Comp.SleepAction);
             _sleepingSystem.TryWaking(args.Buckle.Owner);
             RemComp<HealOnBuckleHealingComponent>(bed);
-        }
-        private void OnBloodRegenStrapped(EntityUid uid, BloodRegenBedComponent component, ref StrappedEvent args)
-        {
-            var effect = EnsureComp<BloodRegenEffectComponent>(args.Buckle);
-            effect.RegenerationRate = component.RegenerationRate;
-        }
-
-        private void OnBloodRegenUnstrapped(EntityUid uid, BloodRegenBedComponent component, ref UnstrappedEvent args)
-        {
-            // Удаляем компонент эффекта при отстегивании
-            RemComp<BloodRegenEffectComponent>(args.Buckle);
         }
 
         public override void Update(float frameTime)
