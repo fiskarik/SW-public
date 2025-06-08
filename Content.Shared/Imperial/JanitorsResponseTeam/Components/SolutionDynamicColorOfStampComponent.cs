@@ -19,11 +19,17 @@ public sealed partial class SolutionDynamicColorOfStampComponent : Component
     /// What role (profession) should be stamped
     /// </summary>
     [DataField]
-    public string RoleName = "";
+    public string RoleName = ""; //change it in the prototype
 
     /// <summary>
     /// False seal name
     /// </summary>
     [DataField]
-    public string FalseStampedName = "";
+    public string FalseStampedName = "stamp-component-stamped-name-default"; //change it in the prototype
+
+    /// <summary>
+    /// if the profession matches, then it prints like this:
+    /// </summary>
+    [DataField]
+    public string TrueStampedName = "stamp-component-stamped-name-default"; //change it in the prototype
 }

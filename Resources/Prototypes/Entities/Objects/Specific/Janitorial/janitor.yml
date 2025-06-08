@@ -50,21 +50,14 @@
   - type: GuideHelp
     guides:
     - Janitorial
-  - type: DnaSubstanceTrace
-    # Imperial "OperationalERT-Cleaners" Start
+  # Imperial "OperationalERTCleaners" Start
   - type: SolutionDynamicColorOfStamp
     checkValidRole: true
     roleName: Janitor
     falseStampedName: stamp-component-stamped-name-false-role-mop
+    trueStampedName: stamp-component-stamped-name-mop
   - type: Stamp
-    stampedName: stamp-component-stamped-name-mop
-    stampState: "paper_stamp-generic"
-    sound:
-      path: /Audio/Items/Stamp/thick_stamp_sub.ogg
-      params:
-        volume: -2
-        maxDistance: 5
-    # Imperial "OperationalERT-Cleaners" End
+  # Imperial "OperationalERTCleaners" End
 
 - type: entity
   parent: BaseItem
@@ -128,16 +121,10 @@
     # Imperial "OperationalERTCleaners" Start
     - type: SolutionDynamicColorOfStamp
       checkValidRole: true
-      roleName: Уборщик
+      roleName: Janitor
       falseStampedName: stamp-component-stamped-name-false-role-mop
+      trueStampedName: stamp-component-stamped-name-mop
     - type: Stamp
-      stampedName: stamp-component-stamped-name-mop
-      stampState: "paper_stamp-generic"
-      sound:
-        path: /Audio/Items/Stamp/thick_stamp_sub.ogg
-        params:
-          volume: -2
-          maxDistance: 5
     # Imperial "OperationalERTCleaners" End
 
 - type: entity

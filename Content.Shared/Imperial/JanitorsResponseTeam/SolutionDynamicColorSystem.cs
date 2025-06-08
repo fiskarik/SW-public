@@ -32,17 +32,22 @@ public sealed class SolutionDynamicColorOfStampSystem : EntitySystem
         }
 
         var stampComp = EnsureComp<StampComponent>(uid);
+        stampComp.StampedColor = colorSolution;
 
         if (comp.CheckValidRole && comp.RoleName != null)
         {
-            if (TryGetItemOwner(uid, out var user) && !IsUserDefiniteJob(user.Value, comp))
+            if (!TryGetItemOwner(uid, out var user))
+                return;
+
+            if (!IsUserDefiniteJob(user.Value, comp))
             {
                 stampComp.StampedName = comp.FalseStampedName;
             }
+            else
+            {
+                stampComp.StampedName = comp.TrueStampedName;
+            }
         }
-
-        stampComp.StampedColor = colorSolution;
-        Dirty(uid, stampComp);
     }
 
     private bool IsUserDefiniteJob(EntityUid user, SolutionDynamicColorOfStampComponent comp)
@@ -52,7 +57,7 @@ public sealed class SolutionDynamicColorOfStampSystem : EntitySystem
         if (string.IsNullOrEmpty(comp.FalseStampedName))
             return false;
 
-        if (!_mindSystem.TryGetMind(user, out var mindId, out var mind))
+        if (!_mindSystem.TryGetMind(user, out var mindId, out var _))
             return false;
 
         foreach (var role in _roleSystem.MindGetAllRoleInfo(mindId))
