@@ -359,9 +359,9 @@
   description: An armored vest with fur plates to protect against melee weapons.
   components:
   - type: Sprite
-    sprite: Imperial/Medieval/Clothing/Armor/blackhood.rsi
+    sprite: Imperial/Medieval/Clothing/Head/blackhood.rsi
   - type: Clothing
-    sprite: Imperial/Medieval/Clothing/Armor/blackhood.rsi
+    sprite: Imperial/Medieval/Clothing/Head/blackhood.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
   - type: HideLayerClothing
