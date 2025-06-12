@@ -342,6 +342,34 @@
     damageCoefficient: 0.78
 
 - type: entity
+  parent: MedievalClothingOuterArmorLeatherHeavy
+  id: MedievalClothingOuterBlackArmorLeather
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/blacksuit.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/blacksuit.rsi
+
+- type: entity
+  parent: MedievalClothingHeadHelmetShapel
+  id: MedievalClothingHelmetBlackLeather
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/blackhood.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/blackhood.rsi
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - HeadSide
+
+- type: entity
   parent: ClothingOuterBase
   id: MedievalClothingOuterArmorIronCuirass
   name: iron armor cuirass
