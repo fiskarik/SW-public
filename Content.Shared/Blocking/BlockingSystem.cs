@@ -176,7 +176,7 @@ public sealed partial class BlockingSystem : EntitySystem
             var playerTileRef = xform.Coordinates.GetTileRef();
             if (playerTileRef != null)
             {
-                var intersecting = _lookup.GetLocalEntitiesIntersecting(playerTileRef.Value, 0f);
+                var intersecting = _lookup.GetLocalEntitiesIntersecting(playerTileRef.Value); // 0f); Imperial Medieval Blocking Fix Edit
                 var mobQuery = GetEntityQuery<MobStateComponent>();
                 foreach (var uid in intersecting)
                 {

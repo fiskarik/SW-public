@@ -121,6 +121,7 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<PlayerRateLimitManager>().Initialize();
 
                 IoCManager.Resolve<Content.Server.Imperial.Sponsors.SponsorsManager>().Initialize(); //Imperial sponsors
+                IoCManager.Resolve<Content.Server.Imperial.PVS.AlwaysPvsSystem>().Initialize(); // Imperial AlwaysPvs
             }
         }
 

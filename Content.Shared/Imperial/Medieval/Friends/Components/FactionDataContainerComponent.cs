@@ -18,5 +18,6 @@ public sealed partial class FactionDataContainerComponent : Component
     /// </summary>
     [AutoNetworkedField]
     public Dictionary<ProtoId<MedievalFactionPrototype>, Dictionary<FactionMemberGroup, string>> Objectives = new();
+    public Dictionary<ProtoId<MedievalFactionPrototype>, Dictionary<FactionMemberGroup, List<EntityUid>>> Points = new();
 }
 
