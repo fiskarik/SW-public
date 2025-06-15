@@ -3,6 +3,8 @@ using Content.Shared.Mind;
 using Content.Shared.MouseRotator;
 using Content.Shared.Movement.Components;
 using Content.Shared.Popups;
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
 
@@ -15,6 +17,9 @@ public abstract class SharedCombatModeSystem : EntitySystem
     [Dependency] private   readonly SharedActionsSystem _actionsSystem = default!;
     [Dependency] private   readonly SharedPopupSystem _popup = default!;
     [Dependency] private   readonly SharedMindSystem  _mind = default!;
+    [Dependency] private   readonly IGameTiming _gameTiming = default!; // Imperial medieval edit
+    [Dependency] private   readonly SharedAudioSystem _audioSystem = default!; // Imperial medieval edit
+
 
     public override void Initialize()
     {
@@ -28,6 +33,7 @@ public abstract class SharedCombatModeSystem : EntitySystem
     private void OnMapInit(EntityUid uid, CombatModeComponent component, MapInitEvent args)
     {
         _actionsSystem.AddAction(uid, ref component.CombatToggleActionEntity, component.CombatToggleAction);
+        component.NextTimeAudioPlay = _gameTiming.CurTime; // Imperial medieval edit
         Dirty(uid, component);
     }
 
@@ -79,6 +85,16 @@ public abstract class SharedCombatModeSystem : EntitySystem
 
         component.IsInCombatMode = value;
         Dirty(entity, component);
+
+        // Imperial medieval edit start
+        if (component.NextTimeAudioPlay < _gameTiming.CurTime && _netMan.IsServer)
+        {
+            var sound = component.IsInCombatMode ? component.ActivationSound : component.DeactivationSound;
+            _audioSystem.PlayPvs(sound, entity, AudioParams.Default.WithMaxDistance(3));
+
+            component.NextTimeAudioPlay = _gameTiming.CurTime + component.AudioPlayCooldown;
+        }
+        // Imperial medieval edit end
 
         if (component.CombatToggleActionEntity != null)
             _actionsSystem.SetToggled(component.CombatToggleActionEntity, component.IsInCombatMode);

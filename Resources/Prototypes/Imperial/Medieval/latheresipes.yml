@@ -472,6 +472,14 @@
   result: MedievalClothingOuterArmorStudded
 
 - type: CP14Recipe
+  id: MedievalClothingOuterArmorGambeson
+  craftTime: 20
+  stacks:
+    MedievalRope: 1
+    Cloth: 3
+  result: MedievalClothingOuterArmorGambeson
+
+- type: CP14Recipe
   id: MedievalClothingOuterArmorFur
   craftTime: 15
   stacks:
@@ -1441,9 +1449,7 @@
   craftTime: 6
   stacks:
     MedievalLeather1: 6
-    MedievalLeatherBelt: 2
-    WoodPlank: 5
-    MedievalRope: 4
+    MedievalRope: 2
   result: MedievalClothingOuterArmorGoblinLeather
 
 - type: CP14Recipe

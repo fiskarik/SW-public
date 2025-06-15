@@ -5788,7 +5788,7 @@
   components:
   - type: StealCondition
     stealGroup: MedievalGetMedievalClothingOuterArmorUpIron
-    descriptionText: Блестящая латная броня. В ней я бы был  больше похож на настоящего рыцаря. Можно сделать такую из стали или с редким шансом найти в сокровищницах. (Подойдет любая тяжелая броян)
+    descriptionText: Блестящая латная броня. В ней я бы был  больше похож на настоящего рыцаря. Можно сделать такую из стали или с редким шансом найти в сокровищницах. (Подойдет любая тяжелая броня)
     descriptionMultiplyText: Блестящая латная броня. В ней я бы был  больше похож на настоящего рыцаря. Можно сделать такую из стали или с редким шансом найти в сокровищницах. (Подойдет любая тяжелая броян)
   - type: Objective
     difficulty: 2
@@ -6351,7 +6351,7 @@
   - type: Sprite
     sprite: Imperial/Medieval/Materials/mdv.rsi
     state: tochilo_mini
-  - type: MedievalMeleeRepair
+  - type: MedievalMeleeRepairItem
   - type: Item
     size: Tiny
 
@@ -7682,10 +7682,10 @@
         - to: MedievalClothingOuterArmorGoblinWood
           steps:
             - material: WoodPlank
-              amount: 24
+              amount: 8
               doAfter: 6
             - material: MedievalGrass
-              amount: 8
+              amount: 3
     - node: MedievalClothingOuterArmorGoblinWood
       entity: MedievalClothingOuterArmorGoblinWood
 
@@ -7738,3 +7738,71 @@
               doAfter: 4
     - node: MedievalMortarTool
       entity: MedievalMortarTool
+
+- type: entity
+  parent: BaseItem
+  id: AhrimanStaffMedieval
+  name: AhrimanStaffMedieval
+  description: AhrimanStaffMedieval
+  components:
+  - type: Item
+    sprite: Imperial/Medieval/Misc/ahrimanstaff.rsi
+    size: Large
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/ahrimanstaff.rsi
+    state: icon
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Effects/Lightning/lightningshock.ogg
+      params:
+        variation: 0.65
+        volume: -10
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/Lightning/lightningshock.ogg
+      params:
+        variation: 0.65
+        volume: -10
+  - type: UseDelay
+    delay: 2.0
+
+- type: hitscan
+  id: MedievalMagicBeam
+  damage:
+    types:
+      Heat: 4
+  muzzleFlash:
+    sprite: Imperial/Medieval/Magic/beam.rsi
+    state: muzzle_laser
+  travelFlash:
+    sprite: Imperial/Medieval/Magic/beam.rsi
+    state: beam
+  impactFlash:
+    sprite: Imperial/Medieval/Magic/beam.rsi
+    state: impact_laser
+
+- type: entity
+  parent: BaseStructureMedieval
+  id: MedievalSharpeningMachine
+  name: Sharpening machine
+  description: MedievalLoot
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Structures/sharpening_machine.rsi
+      state: icon
+    - type: InteractionOutline
+    - type: Damageable
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 125
+        behaviors:
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            MaterialWoodPlank1:
+              min: 3
+              max: 6
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - type: MedievalMeleeRepairStructure

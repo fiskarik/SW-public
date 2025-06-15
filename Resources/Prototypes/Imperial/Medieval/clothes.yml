@@ -871,6 +871,7 @@
       tags:
       - Bolt
       - Arrow
+      - ThrowingSpear
   - type: Appearance
   - type: Item
     size: Ginormous
@@ -892,6 +893,7 @@
       tags:
       - Bolt
       - Arrow
+      - ThrowingSpear
   - type: Appearance
   - type: Item
     size: Ginormous
@@ -913,6 +915,7 @@
       tags:
       - Bolt
       - Arrow
+      - ThrowingSpear
   - type: Appearance
   - type: Item
     size: Ginormous
@@ -1084,6 +1087,45 @@
     sprite: Imperial/Medieval/Clothing/Shoes/white_charmer.rsi
   - type: Clothing
     sprite: Imperial/Medieval/Clothing/Shoes/white_charmer.rsi
+
+- type: entity
+  parent: MedievalShoesChamber
+  id: MedievalShoesCharmerPurpleScar
+  name: MedievalShoesCharmerPurpleScar
+  description: MedievalShoesCharmerPurpleScar
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/charmerpurple.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shoes/charmerpurple.rsi
+
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: MedievalClothingHandsGlovesPurpleScar
+  name: MedievalClothingHandsGlovesPurpleScar
+  description: MedievalClothingHandsGlovesPurpleScar
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/charmerpurple.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/charmerpurple.rsi
+  - type: Fiber
+    fiberColor: fibers-purple
+
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: MedievalClothingHandsGlovesWhiteWizard
+  name: MedievalClothingHandsGlovesWhiteWizard
+  description: MedievalClothingHandsGlovesWhiteWizard
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/whitecharmer.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/whitecharmer.rsi
+  - type: Fiber
+    fiberColor: fibers-white
 
 - type: entity
   parent: MedievalShoesChamber
@@ -1601,7 +1643,7 @@
       eyes:
       - state: equipped-EYES
       - state: unshaded
-        shader: unshaded 
+        shader: unshaded
 
 - type: Tag
   id: MedievalIronRoyalSword
@@ -1654,6 +1696,17 @@
     sprite: Imperial/Medieval/Clothing/Shoes/royalboots.rsi
 
 - type: entity
+  parent: ClothingShoesBase
+  id: MedievalClothingBlackBoots
+  name: MedievalClothingBlackBoots
+  description: MedievalClothingBlackBoots
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/blackboots.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Shoes/blackboots.rsi
+
+- type: entity
   parent: MedievalClothingHandsGlovesCloth
   id: MedievalClothingHandsRoyalGloves
   name: Cloth Gloves
@@ -1668,6 +1721,20 @@
     sprite: Imperial/Medieval/Clothing/Gloves/royalgloves.rsi
 
 - type: entity
+  parent: MedievalClothingHandsGlovesCloth
+  id: MedievalClothingHandsBlackGloves
+  name: Cloth Gloves
+  description: Cloth Gloves
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/blackgloves.rsi
+    layers:
+    - state: icon
+  - type: Item
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/blackgloves.rsi
+
+- type: entity
   parent: ClothingOuterStorageBase
   id: MedievalClothingOuterRoyalCoat
   name: MedievalClothingOuterRoyalCoat
@@ -1677,3 +1744,14 @@
     sprite: Imperial/Medieval/Clothing/Coats/royalcoat.rsi
   - type: Clothing
     sprite: Imperial/Medieval/Clothing/Coats/royalcoat.rsi
+
+- type: entity
+  parent: ClothingEyesBase
+  id: MedievalClothingRoyalMask
+  name: MedievalClothingRoyalMask
+  description: MedievalClothingRoyalMask
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Mask/royalmask.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Mask/royalmask.rsi
