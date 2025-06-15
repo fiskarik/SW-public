@@ -301,6 +301,7 @@
     - Gasp
     - PassiveScream
   - type: AreaMarkerInvoker
+  - type: CombatStance
 # Imperial Medieval End
 
 - type: entity
