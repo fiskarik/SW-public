@@ -316,6 +316,8 @@
   - type: ShieldOnStartup
   - type: AntiStealAfk
   - type: CanSurrender
+  - type: RDDeathScreen
+  - type: CombatStance
 # Imperial Medieval End
 
 - type: entity

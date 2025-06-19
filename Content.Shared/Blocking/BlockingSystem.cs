@@ -37,6 +37,7 @@ public sealed partial class BlockingSystem : EntitySystem
     [Dependency] private readonly ExamineSystemShared _examine = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private readonly IEntitySystemManager _systems = default!; // Imperial Medieval CombatStance
 
     public override void Initialize()
     {
@@ -176,7 +177,7 @@ public sealed partial class BlockingSystem : EntitySystem
             var playerTileRef = xform.Coordinates.GetTileRef();
             if (playerTileRef != null)
             {
-                var intersecting = _lookup.GetLocalEntitiesIntersecting(playerTileRef.Value, 0f);
+                var intersecting = _lookup.GetLocalEntitiesIntersecting(playerTileRef.Value); // 0f); Imperial Medieval Blocking Fix Edit
                 var mobQuery = GetEntityQuery<MobStateComponent>();
                 foreach (var uid in intersecting)
                 {

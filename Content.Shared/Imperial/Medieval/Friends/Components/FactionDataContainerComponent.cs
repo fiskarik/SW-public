@@ -27,5 +27,8 @@ public sealed partial class FactionDataContainerComponent : Component
     [AutoNetworkedField]
     [ViewVariables(VVAccess.ReadOnly)]
     public Dictionary<ProtoId<MedievalFactionPrototype>, Dictionary<ProtoId<MedievalFactionPrototype>, ProtoId<FactionRelationsPrototype>>> Relations = new();
+
+    [ViewVariables(VVAccess.ReadOnly)]
+    public Dictionary<ProtoId<MedievalFactionPrototype>, Dictionary<FactionMemberGroup, List<EntityUid>>> Points = new();
 }
 

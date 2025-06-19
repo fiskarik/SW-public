@@ -4227,150 +4227,6 @@
     mask: ClothingKrilBig
     head: MedievalClothingHeadCrownKing
 
-- type: reagent
-  id: MedievalFlowerVetr
-  name: ent-MedievalFlowerVetr
-  group: Elements
-  desc: .
-  physicalDesc: reagent-physical-desc-dark-brown
-  flavor: bitter
-  color: "#BC8A00"
-  boilingPoint: 184.3
-  meltingPoint: 113.7
-
-- type: entity
-  name: gol
-  parent: BaseItem
-  id: MedievalFlowerVetr
-  description: gol
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/flowers.rsi
-    state: vetr
-  - type: MagicPotionsIngredient
-    ingredientType: Vetr
-  - type: Currency
-    price:
-      Revent: 5
-  - type: Tag
-    tags:
-    - AlchemicIngredient
-  - type: Item
-    size: Tiny
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: MedievalFlowerVetr
-        Quantity: 10
-
-- type: reagent
-  id: MedievalFlowerLipad
-  name: ent-MedievalFlowerLipad
-  group: Elements
-  desc: .
-  physicalDesc: reagent-physical-desc-dark-brown
-  flavor: bitter
-  color: "#BC8A00"
-  boilingPoint: 184.3
-  meltingPoint: 113.7
-
-- type: entity
-  name: gol
-  parent: BaseItem
-  id: MedievalFlowerLipad
-  description: gol
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/flowers.rsi
-    state: lipad
-  - type: MagicPotionsIngredient
-    ingredientType: Lipad
-  - type: Currency
-    price:
-      Revent: 5
-  - type: Tag
-    tags:
-    - AlchemicIngredient
-  - type: Item
-    size: Tiny
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: MedievalFlowerLipad
-        Quantity: 10
-
-- type: reagent
-  id: MedievalFlowerLava
-  name: ent-MedievalFlowerLava
-  group: Elements
-  desc: .
-  physicalDesc: reagent-physical-desc-dark-brown
-  flavor: bitter
-  color: "#BC8A00"
-  boilingPoint: 184.3
-  meltingPoint: 113.7
-
-- type: entity
-  name: gol
-  parent: BaseItem
-  id: MedievalFlowerLava
-  description: gol
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/flowers.rsi
-    state: lava
-  - type: MagicPotionsIngredient
-    ingredientType: Lava
-  - type: Currency
-    price:
-      Revent: 5
-  - type: Tag
-    tags:
-    - AlchemicIngredient
-  - type: Item
-    size: Tiny
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: MedievalFlowerLava
-        Quantity: 10
-
-- type: reagent
-  id: MedievalFlowerCryo
-  name: ent-MedievalFlowerCryo
-  group: Elements
-  desc: .
-  physicalDesc: reagent-physical-desc-dark-brown
-  flavor: bitter
-  color: "#BC8A00"
-  boilingPoint: 184.3
-  meltingPoint: 113.7
-
-- type: entity
-  name: gol
-  parent: BaseItem
-  id: MedievalFlowerCryo
-  description: gol
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Misc/flowers.rsi
-    state: cryo
-  - type: MagicPotionsIngredient
-    ingredientType: Cryo
-  - type: Currency
-    price:
-      Revent: 5
-  - type: Tag
-    tags:
-    - AlchemicIngredient
-  - type: Item
-    size: Tiny
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: MedievalFlowerCryo
-        Quantity: 10
-
 - type: hudTheme
   id: MedievalTheme
   name: ui-options-hud-theme-medieval
@@ -6351,7 +6207,7 @@
   - type: Sprite
     sprite: Imperial/Medieval/Materials/mdv.rsi
     state: tochilo_mini
-  - type: MedievalMeleeRepair
+  - type: MedievalMeleeRepairItem
   - type: Item
     size: Tiny
 
@@ -7357,107 +7213,28 @@
   - type: SpeakOnTrigger
     pack: PlushDog
 
-- type: reagent
-  id: MedievalMushroom1
-  name: ent-MedievalMushroom1
-  group: Elements
-  desc: .
-  physicalDesc: reagent-physical-desc-dark-brown
-  flavor: bitter
-  color: "#BC8A00"
-  boilingPoint: 184.3
-  meltingPoint: 113.7
-
-- type: entity
-  name: MedievalLoot
-  parent: BaseItem
-  id: MedievalMushroom1
-  description: MedievalLoot
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Chem/gribi.rsi
-    state: grib1
-  - type: Currency
-    price:
-      Revent: 8
-  - type: Item
-    size: Tiny
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: MedievalMushroom1
-        Quantity: 10
-  - type: Tag
-    tags:
-    - AlchemicIngredient
-
-- type: reagent
-  id: MedievalMushroom2
-  name: ent-MedievalMushroom2
-  group: Elements
-  desc: .
-  physicalDesc: reagent-physical-desc-dark-brown
-  flavor: bitter
-  color: "#BC8A00"
-  boilingPoint: 184.3
-  meltingPoint: 113.7
-
-- type: entity
-  name: MedievalLoot
-  parent: BaseItem
-  id: MedievalMushroom2
-  description: MedievalLoot
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Chem/gribi.rsi
-    state: grib2
-  - type: Currency
-    price:
-      Revent: 8
-  - type: Item
-    size: Tiny
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: MedievalMushroom2
-        Quantity: 10
-  - type: Tag
-    tags:
-    - AlchemicIngredient
-
-- type: reagent
-  id: MedievalMushroom3
-  name: ent-MedievalMushroom3
-  group: Elements
-  desc: .
-  physicalDesc: reagent-physical-desc-dark-brown
-  flavor: bitter
-  color: "#BC8A00"
-  boilingPoint: 184.3
-  meltingPoint: 113.7
-
-- type: entity
-  name: MedievalLoot
-  parent: BaseItem
-  id: MedievalMushroom3
-  description: MedievalLoot
-  components:
-  - type: Sprite
-    sprite: Imperial/Medieval/Chem/gribi.rsi
-    state: grib3
-  - type: Currency
-    price:
-      Revent: 8
-  - type: Item
-    size: Tiny
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: MedievalMushroom3
-        Quantity: 10
-  - type: Tag
-    tags:
-    - AlchemicIngredient
+# - type: entity
+#   name: MedievalLoot
+#   parent: BaseItem
+#   id: MedievalMushroom3
+#   description: MedievalLoot
+#   components:
+#   - type: Sprite
+#     sprite: Imperial/Medieval/Chem/gribi.rsi
+#     state: grib3
+#   - type: Currency
+#     price:
+#       Revent: 8
+#   - type: Item
+#     size: Tiny
+#   - type: Extractable
+#     juiceSolution:
+#       reagents:
+#       - ReagentId: MedievalMushroom3
+#         Quantity: 10
+#   - type: Tag
+#     tags:
+#     - AlchemicIngredient
 
 - type: entity
   name: MedievalTimedSpawnerMushrooms
@@ -7682,10 +7459,10 @@
         - to: MedievalClothingOuterArmorGoblinWood
           steps:
             - material: WoodPlank
-              amount: 24
+              amount: 8
               doAfter: 6
             - material: MedievalGrass
-              amount: 8
+              amount: 3
     - node: MedievalClothingOuterArmorGoblinWood
       entity: MedievalClothingOuterArmorGoblinWood
 
@@ -7738,3 +7515,71 @@
               doAfter: 4
     - node: MedievalMortarTool
       entity: MedievalMortarTool
+
+- type: entity
+  parent: BaseItem
+  id: AhrimanStaffMedieval
+  name: AhrimanStaffMedieval
+  description: AhrimanStaffMedieval
+  components:
+  - type: Item
+    sprite: Imperial/Medieval/Misc/ahrimanstaff.rsi
+    size: Large
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/ahrimanstaff.rsi
+    state: icon
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Effects/Lightning/lightningshock.ogg
+      params:
+        variation: 0.65
+        volume: -10
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/Lightning/lightningshock.ogg
+      params:
+        variation: 0.65
+        volume: -10
+  - type: UseDelay
+    delay: 2.0
+
+- type: hitscan
+  id: MedievalMagicBeam
+  damage:
+    types:
+      Heat: 4
+  muzzleFlash:
+    sprite: Imperial/Medieval/Magic/beam.rsi
+    state: muzzle_laser
+  travelFlash:
+    sprite: Imperial/Medieval/Magic/beam.rsi
+    state: beam
+  impactFlash:
+    sprite: Imperial/Medieval/Magic/beam.rsi
+    state: impact_laser
+
+- type: entity
+  parent: BaseStructureMedieval
+  id: MedievalSharpeningMachine
+  name: Sharpening machine
+  description: MedievalLoot
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Structures/sharpening_machine.rsi
+      state: icon
+    - type: InteractionOutline
+    - type: Damageable
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 125
+        behaviors:
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            MaterialWoodPlank1:
+              min: 3
+              max: 6
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - type: MedievalMeleeRepairStructure
