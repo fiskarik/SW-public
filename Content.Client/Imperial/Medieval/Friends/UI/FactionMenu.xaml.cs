@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using Content.Client.Friends;
 using Content.Client.Imperial.Medieval.Friends.UI.Elements;
 using Content.Shared.Friends;
@@ -25,6 +24,8 @@ public sealed partial class FactionMenu : DefaultWindow
     public Action<int, string>? HeadhuntPressed;
     public Action<int, bool>? SetLeaderPressed;
 
+    public Action<ProtoId<MedievalFactionPrototype>>? WarPressed;
+
     public MenuMode Mode = MenuMode.Job;
     public FactionMenuData Data = new();
 
@@ -40,6 +41,7 @@ public sealed partial class FactionMenu : DefaultWindow
 
         JobMode.Group = modeGroup;
         GroupMode.Group = modeGroup;
+        RelationsMode.Group = modeGroup;
 
         JobMode.OnToggled += args =>
         {
@@ -51,6 +53,12 @@ public sealed partial class FactionMenu : DefaultWindow
             Mode = MenuMode.Group;
             Populate(Data);
         };
+        RelationsMode.OnToggled += args =>
+        {
+            Mode = MenuMode.Relations;
+            PopulateRelations(Data);
+        };
+
         Cancel.OnPressed += args =>
         {
             Confirmation.Visible = false;
@@ -160,6 +168,26 @@ public sealed partial class FactionMenu : DefaultWindow
         newPanel.ObjectiveSet += (group, obj) => ObjectiveSet?.Invoke(group, obj);
         Members.AddChild(newPanel);
         return newPanel.Box;
+    }
+
+    public void PopulateRelations(FactionMenuData data)
+    {
+        Members.RemoveAllChildren();
+        Data = data;
+
+        if (Data.Relations.Count == 0)
+        {
+            Members.AddChild(new Label { Text = Loc.GetString("faction-menu-no-relations") });
+            return;
+        }
+
+        var panel = new FactionRelationsPanel(Data)
+        {
+            Margin = new(6)
+        };
+
+        panel.WarPressed += args => WarPressed?.Invoke(args);
+        Members.AddChild(panel);
     }
 
     public enum MenuMode
