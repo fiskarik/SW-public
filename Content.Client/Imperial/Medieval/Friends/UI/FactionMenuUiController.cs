@@ -61,8 +61,9 @@ public sealed class FactionMenuUiController : UIController
         if (_menu == null)
             return;
 
-        _entityManager.RaisePredictiveEvent(new SetFactionMemberObjectiveMessage(_menu.Faction, group, obj));
+        _entityManager.RaisePredictiveEvent(new SetFactionMemberObjectiveMessage(_menu.Data.Faction, group, obj));
     }
+
     private void GroupSet(int ent, FactionMemberGroup obj)
     {
         _entityManager.RaisePredictiveEvent(new SetFactionMemberGroupMessage(ent, obj));

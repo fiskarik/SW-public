@@ -43,7 +43,13 @@ public sealed partial class FriendsSystem : SharedFriendsSystem
 
         TryGetFactionMemberData(friends.MemberID, out var selfData);
 
-        _uiMan.GetUIController<FactionMenuUiController>().PopulateMenu(friends.Faction, val, friends.MenuAccess, selfData?.Group ?? FactionMemberGroup.None, friends.MemberID);
+        FactionMenuData menuData = new(friends.Faction, val,
+                                    comp.Relations,
+                                    friends.MenuAccess,
+                                    selfData?.Group ?? FactionMemberGroup.None,
+                                    friends.MemberID);
+
+        _uiMan.GetUIController<FactionMenuUiController>().PopulateMenu(menuData);
     }
 
     public override void OpenMenu(ProtoId<MedievalFactionPrototype> proto, Dictionary<int, FactionMemberData> data, FactionMenuAccess access)
@@ -59,7 +65,13 @@ public sealed partial class FriendsSystem : SharedFriendsSystem
 
             TryGetFactionMemberData(friends.MemberID, out var selfData);
 
-            _uiMan.GetUIController<FactionMenuUiController>().PopulateMenu(proto, val, access, selfData?.Group ?? FactionMemberGroup.None, friends.MemberID);
+            FactionMenuData menuData = new(friends.Faction, val,
+                                        container.Value.Comp.Relations,
+                                        friends.MenuAccess,
+                                        selfData?.Group ?? FactionMemberGroup.None,
+                                        friends.MemberID);
+
+            _uiMan.GetUIController<FactionMenuUiController>().PopulateMenu(menuData);
         }
     }
 }
