@@ -15,6 +15,10 @@
   knownFactions:
     Insurgency: "[color=red]Чертов предатель, сбежал(а) из легиона![/color]"
   wantedText: "[color=red]Дезертир![/color]"
+  defaultRelations:
+    Insurgency: War
+  blockedRelations:
+    - Insurgency
 
 - type: medievalFaction
   id: Insurgency
@@ -25,6 +29,10 @@
   knownFactions:
     Legion: "[color=red]Бывший сослуживец, грязный легионер![/color]"
   wantedText: "[color=red]Изменник![/color]"
+  defaultRelations:
+    Legion: War
+  blockedRelations:
+    - Legion
 
 - type: medievalFaction
   id: Bandit
@@ -69,3 +77,35 @@
   name: культ
   allowHeadhunt: false
   wantedText: "[color=red]Неверный![/color]"
+
+- type: factionRelations
+  id: Neutral
+  name: Нейтральные
+  color: "#aaaaaa"
+  icon:
+    sprite: Imperial/Medieval/Interface/faction_relations.rsi
+    state: neutral
+
+- type: factionRelations
+  id: War
+  name: Война
+  color: "#ff4a3d"
+  icon:
+    sprite: Imperial/Medieval/Interface/faction_relations.rsi
+    state: war
+
+- type: factionRelations
+  id: Union
+  name: Союз
+  color: "#7aee56"
+  icon:
+    sprite: Imperial/Medieval/Interface/faction_relations.rsi
+    state: union
+
+- type: factionRelations
+  id: Trading
+  color: "#eebe56"
+  name: Торговые
+  icon:
+    sprite: Imperial/Medieval/Interface/faction_relations.rsi
+    state: trading
