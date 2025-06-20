@@ -767,7 +767,7 @@
   name: reagent-name-tranexamic-acid
   group: Medicine
   desc: reagent-desc-tranexamic-acid
-  physicalDesc: reagent-physical-desc-
+  physicalDesc: reagent-physical-desc-viscous
   evaporationSpeed: 0.3 # imperial medieval
   absorbent: true # imperial medieval
   flavor: medicine
