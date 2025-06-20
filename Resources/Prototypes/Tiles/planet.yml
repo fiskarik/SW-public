@@ -149,9 +149,7 @@
   friction: 0.05
   heatCapacity: 99910000
   weather: true
-  mobFriction: 0.5
-  mobFrictionNoInput: 0.05
-  mobAcceleration: 2
+  mobAcceleration: 0.1
   indestructible: true
   badSmellMod: 0.75 # imperial medieval badsmell
 
