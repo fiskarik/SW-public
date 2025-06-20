@@ -1266,7 +1266,7 @@
     sprite: Imperial/Medieval/Clothing/Head/up_ironroyalhelm.rsi
 
 - type: entity
-  parent: MedievalClothingHeadHelmetCrusader
+  parent: MedievalClothingHeadBase
   id: MedievalClothingHeadRoyalHoop
   name: MedievalClothingHeadRoyalHoop
   description: MedievalClothingHeadRoyalHoop
@@ -1275,3 +1275,7 @@
     sprite: Imperial/Medieval/Clothing/Head/royalhoop.rsi
   - type: Clothing
     sprite: Imperial/Medieval/Clothing/Head/royalhoop.rsi
+    equipSound:
+      path: /Audio/Imperial/Medieval/iron_helmet_equiped.ogg
+  - type: Meltable
+    resourceCount: 2
