@@ -32,6 +32,9 @@
       },
       {
         "name": "tribe"
+      },
+      {
+        "name": "village"
       }
     ]
   }
