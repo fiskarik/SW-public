@@ -6,7 +6,6 @@ using Content.Shared.Imperial.Medieval.Grab.Components;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Controllers;
 using Robust.Shared.Physics.Systems;
-using Robust.Shared.Timing;
 
 //=========================================================================
 // GrabController.cs
@@ -20,16 +19,16 @@ namespace Content.Server.Imperial.Medieval.Grab.Controllers;
 
 public sealed class GrabController : VirtualController
 {
-    private const float TargetDistance = 0.6f;
-    private const float MaxSettleVelocity = 0.1f;
-    private const float MaxSettleDistance = 0.1f;
-    private const float ShutdownVelocity = 0.25f;
-    private const float ShutdownDistance = 1.0f;
-    private const float ShutdownMultiplier = 20.0f;
+    private const float TargetDistance = 0.45f;
+    private const float MaxSettleVelocity = 0.05f;
+    private const float MaxSettleDistance = 0.05f;
+    private const float ShutdownVelocity = 0.2f;
+    private const float ShutdownDistance = 0.8f;
+    private const float ShutdownMultiplier = 25.0f;
+    private const float ImpulseForce = 110f;
 
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
 
     private EntityQuery<TransformComponent> _xformQuery;
     private EntityQuery<GrabberComponent> _grabberQuery;
@@ -40,6 +39,7 @@ public sealed class GrabController : VirtualController
         UpdatesAfter.Add(typeof(MoverController));
         _xformQuery = GetEntityQuery<TransformComponent>();
         _grabberQuery = GetEntityQuery<GrabberComponent>();
+        SubscribeLocalEvent<ActiveGrabberComponent, MoveEvent>(OnGrabberMove);
         SubscribeLocalEvent<GrabMovingComponent, GrabStoppedEvent>(OnGrabStopped);
     }
 
@@ -53,14 +53,12 @@ public sealed class GrabController : VirtualController
             if (grabbable.Grabber is not { Valid: true } grabber)
                 continue;
 
-            if (!_grabberQuery.TryGetComponent(grabber, out var grabberComp))
+            if (!_grabberQuery.TryGetComponent(grabber, out _))
                 continue;
 
-            var moving = EnsureComp<GrabMovingComponent>(uid);
-            moving.LastUpdate = _timing.CurTime;
+            EnsureComp<GrabMovingComponent>(uid);
 
             var grabberXform = _xformQuery.GetComponent(grabber);
-
             var grabberPos = _xform.GetWorldPosition(grabberXform);
             var grabberRot = _xform.GetWorldRotation(grabberXform);
 
@@ -77,8 +75,7 @@ public sealed class GrabController : VirtualController
                 continue;
             }
 
-            var impulseMod = MathHelper.Lerp(60f, 15f, Math.Clamp((phys.Mass - 5f) / (70f - 5f), 0f, 1f));
-            var accel = diff.Normalized() * impulseMod;
+            var accel = diff.Normalized() * ImpulseForce;
 
             if (diffLength < ShutdownDistance && phys.LinearVelocity.Length() >= ShutdownVelocity)
             {
@@ -91,6 +88,37 @@ public sealed class GrabController : VirtualController
 
             _xform.SetWorldRotation(uid, grabberRot);
         }
+    }
+
+    private void OnGrabberMove(EntityUid uid, ActiveGrabberComponent component, ref MoveEvent args)
+    {
+        if (!_grabberQuery.TryComp(uid, out var grabber))
+            return;
+
+        if (grabber.GrabbedEntity is not { Valid: true } grabbable)
+        {
+            RemCompDeferred(uid, component);
+            return;
+        }
+
+        UpdateGrabbedRotation(uid, grabbable);
+
+        if (args.NewPosition.EntityId == args.OldPosition.EntityId &&
+            (args.NewPosition.Position - args.OldPosition.Position).LengthSquared() < 0.0025f)
+            return;
+
+        if (TryComp(uid, out PhysicsComponent? physics))
+            _physics.WakeBody(uid, body: physics);
+
+        RemCompDeferred<GrabMovingComponent>(grabbable);
+    }
+
+    private void UpdateGrabbedRotation(EntityUid grabber, EntityUid grabbed)
+    {
+        if (!_xformQuery.TryGetComponent(grabber, out var grabberXform))
+            return;
+
+        _xform.SetWorldRotation(grabbed, _xform.GetWorldRotation(grabberXform));
     }
 
     private void OnGrabStopped(EntityUid uid, GrabMovingComponent comp, ref GrabStoppedEvent args)

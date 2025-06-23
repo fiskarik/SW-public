@@ -8,9 +8,5 @@
 namespace Content.Server.Imperial.Medieval.Grab.Components;
 
 [RegisterComponent]
-public sealed partial class GrabMovingComponent : Component
-{
-    [ViewVariables]
-    public TimeSpan LastUpdate;
-}
+public sealed partial class GrabMovingComponent : Component;
 
