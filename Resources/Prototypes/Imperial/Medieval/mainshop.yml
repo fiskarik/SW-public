@@ -2864,7 +2864,7 @@
   id: MedievalPalletContractIns
   productEntity: MedievalDecorStoragePalletIns
   cost:
-    MedievalPaperOnValuableCargoCurrencyIns: 1
+    MedievalPaperOnValuableCargoCurrencyLeg: 1
   categories:
   - MedievalPalletLeg
 
@@ -2925,7 +2925,7 @@
   id: MedievalPalletContractLeg
   productEntity: MedievalDecorStoragePallet
   cost:
-   MedievalPaperOnValuableCargoCurrencyLeg: 1
+   MedievalPaperOnValuableCargoCurrencyIns: 1
   categories:
   - MedievalPalletIns
 
