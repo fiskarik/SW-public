@@ -21,8 +21,8 @@ public sealed partial class GrabberComponent : Component
     /// <summary>
     /// Range.
     /// </summary>
-    [DataField]
-    public float GrabRange = 1.5f;
+    [DataField, AutoNetworkedField, ViewVariables]
+    public float GrabRange = 1f;
 
     /// <summary>
     /// Applies movement modifier while grabbing.
