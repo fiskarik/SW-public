@@ -53,7 +53,28 @@
         "name": "slugbones"
     },
     {
-        "name": "flower"
+        "name": "bearskin"
+    },
+    {
+        "name": "goblin2"
+    },
+    {
+        "name": "hogskin"
+    },
+    {
+        "name": "hunter2"
+    },
+    {
+        "name": "rabbit"
+    },
+    {
+        "name": "skeletonjaw"
+    },
+    {
+        "name": "wolf2"
+    },
+    {
+        "name": "wolfskin"
     }
   ]
 }
