@@ -8,8 +8,6 @@ using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Imperial.Medieval.Grab.Components;
 using Content.Shared.Imperial.Medieval.Skills;
 using Content.Shared.Interaction;
-using Content.Shared.Interaction.Events;
-using Content.Shared.Inventory.Events;
 using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Item;
 using Content.Shared.Mobs;
@@ -81,14 +79,17 @@ public sealed class GrabSystem : EntitySystem
         SubscribeLocalEvent<GrabbableComponent, JointRemovedEvent>(OnJointRemoved);
         SubscribeLocalEvent<GrabbableComponent, EntGotInsertedIntoContainerMessage>(OnGrabbableContainerInsert);
         SubscribeLocalEvent<GrabbableComponent, BeingPulledAttemptEvent>(OnPulledAttempt);
+        SubscribeLocalEvent<GrabbableComponent, StartPullAttemptEvent>(OnPullAttempt);
         SubscribeLocalEvent<GrabbableComponent, GrabEscapeDoAfterEvent>(OnGrabEscapeDoAfter);
 
-        SubscribeLocalEvent<GrabbableComponent, DropAttemptEvent>(CheckAct);
-        SubscribeLocalEvent<GrabbableComponent, PickupAttemptEvent>(CheckAct);
-        SubscribeLocalEvent<GrabbableComponent, AttackAttemptEvent>(CheckAct);
-        SubscribeLocalEvent<GrabbableComponent, UseAttemptEvent>(CheckAct);
-        SubscribeLocalEvent<GrabbableComponent, IsEquippingAttemptEvent>(OnEquipAttempt);
-        SubscribeLocalEvent<GrabbableComponent, IsUnequippingAttemptEvent>(OnUnequipAttempt);
+        // Check balance, and if needed, enable blocker.
+        // SubscribeLocalEvent<GrabbableComponent, DropAttemptEvent>(CheckAct);
+        // SubscribeLocalEvent<GrabbableComponent, PickupAttemptEvent>(CheckAct);
+        // SubscribeLocalEvent<GrabbableComponent, AttackAttemptEvent>(CheckAct);
+        // SubscribeLocalEvent<GrabbableComponent, UseAttemptEvent>(CheckAct);
+        // SubscribeLocalEvent<GrabbableComponent, IsEquippingAttemptEvent>(OnEquipAttempt);
+        // SubscribeLocalEvent<GrabbableComponent, IsUnequippingAttemptEvent>(OnUnequipAttempt);
+
         SubscribeLocalEvent<GrabbableComponent, EscapeGrabbingAlertEvent>(OnEscapeGrabAlert);
 
         #endregion
@@ -172,6 +173,12 @@ public sealed class GrabSystem : EntitySystem
             args.Cancel();
     }
 
+    private void OnPullAttempt(EntityUid uid, GrabbableComponent component, StartPullAttemptEvent args)
+    {
+        if (IsGrabbed(uid, component))
+            args.Cancel();
+    }
+
     private void OnGrabEscapeDoAfter(EntityUid uid, GrabbableComponent comp, GrabEscapeDoAfterEvent args)
     {
         if (_net.IsClient)
@@ -202,7 +209,8 @@ public sealed class GrabSystem : EntitySystem
         }
     }
 
-    private void CheckAct(EntityUid uid, GrabbableComponent component, CancellableEntityEventArgs args)
+    // Check balance, and if needed, enable blocker.
+    /*private void CheckAct(EntityUid uid, GrabbableComponent component, CancellableEntityEventArgs args)
     {
         if (IsGrabbed(uid, component))
             args.Cancel();
@@ -218,7 +226,7 @@ public sealed class GrabSystem : EntitySystem
     {
         if (args.Unequipee == uid)
             CheckAct(uid, component, args);
-    }
+    }*/
 
     private void OnEscapeGrabAlert(EntityUid uid, GrabbableComponent component, EscapeGrabbingAlertEvent args)
     {
@@ -398,6 +406,9 @@ public sealed class GrabSystem : EntitySystem
 
     public bool CanGrab(EntityUid grabber, EntityUid grabbableUid, GrabberComponent? grabberComp = null)
     {
+        if (IsGrabbed(grabber))
+            return false;
+
         if (!Resolve(grabber, ref grabberComp, false))
             return false;
 
@@ -449,10 +460,10 @@ public sealed class GrabSystem : EntitySystem
 
         var doAfterArgs = new DoAfterArgs(new DoAfterArgs(EntityManager, grabberUid, TimeSpan.FromSeconds(1), new GrabDoAfterEvent(GetNetEntity(grabbable), chance), grabberUid, grabbable, grabberUid))
         {
-            BreakOnDamage = true,
-            BreakOnMove = true,
-            DistanceThreshold = 2f,
-
+            BreakOnMove = false,
+            BreakOnDamage = false,
+            BreakOnWeightlessMove = false,
+            DistanceThreshold = 1.6f
         };
 
         _doAfter.TryStartDoAfter(doAfterArgs);
@@ -526,19 +537,6 @@ public sealed class GrabSystem : EntitySystem
 
         if (!_timing.ApplyingState)
         {
-            if (TryComp<PhysicsComponent>(grabbableUid, out var physics))
-            {
-                var grabberPos = _transformSystem.GetWorldPosition(grabberUid);
-                var grabbedPos = _transformSystem.GetWorldPosition(grabbableUid);
-                var direction = grabberPos - grabbedPos;
-                var distance = direction.Length();
-                if (distance > 0.6f)
-                {
-                    var move = direction.Normalized() * (distance - 0.6f);
-                    _physics.SetLinearVelocity(grabbableUid, move, body: physics);
-                }
-            }
-
             var joint = _joints.CreateDistanceJoint(
                 grabbableUid,
                 grabberUid,
@@ -546,10 +544,10 @@ public sealed class GrabSystem : EntitySystem
                 grabberPhysics.LocalCenter,
                 id: grabbableComp.GrabJointId);
 
-            joint.CollideConnected = true;
-            joint.MaxLength = 0.65f;
-            joint.MinLength = 0.35f;
-            joint.Stiffness = 0;
+            joint.CollideConnected = false;
+            joint.MaxLength = joint.Length + 0.15f;
+            joint.MinLength = 0f;
+            joint.Stiffness = 0f;
         }
 
         var message = new GrabStartedEvent(grabberUid, grabbableUid);
@@ -564,8 +562,8 @@ public sealed class GrabSystem : EntitySystem
         Dirty(grabberUid, grabberComp);
         Dirty(grabbableUid, grabbableComp);
 
-        _popup.PopupEntity("grab-popup-success", grabbableUid, grabberUid);
-        _popup.PopupEntity("grabbed-popup", grabberUid, grabbableUid);
+        _popup.PopupEntity(Loc.GetString("grab-popup-success"), grabbableUid, grabberUid);
+        _popup.PopupEntity(Loc.GetString("grabbed-popup"), grabberUid, grabbableUid);
     }
 
     public bool TryStopGrab(EntityUid grabbableUid, GrabbableComponent grabbableComp, EntityUid? user = null)
@@ -602,6 +600,7 @@ public sealed class GrabSystem : EntitySystem
         var oldGrabber = grabbableComp.Grabber;
         grabbableComp.Grabber = null;
         grabbableComp.GrabJointId = null;
+        grabbableComp.DoAfterRaised = false;
         Dirty(grabbableUid, grabbableComp);
 
         if (oldGrabber != null && TryComp<GrabberComponent>(oldGrabber.Value, out var grabberComponent))

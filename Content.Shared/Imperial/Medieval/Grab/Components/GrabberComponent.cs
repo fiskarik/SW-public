@@ -27,6 +27,6 @@ public sealed partial class GrabberComponent : Component
     /// <summary>
     /// Applies movement modifier while grabbing.
     /// </summary>
-    public float WalkSpeedModifier => GrabbedEntity == default ? 1.0f : 0.75f;
-    public float SprintSpeedModifier => GrabbedEntity == default ? 1.0f : 0.75f;
+    public float WalkSpeedModifier => GrabbedEntity == default ? 1.0f : 0.9f;
+    public float SprintSpeedModifier => GrabbedEntity == default ? 1.0f : 0.9f;
 }
