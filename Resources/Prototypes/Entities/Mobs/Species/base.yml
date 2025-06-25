@@ -320,6 +320,12 @@
   - type: CombatStance
   - type: Grabbable
   - type: Grabber
+  - type: PointLight
+    netsync: false
+    enabled: false
+  - type: LocalLight
+    energy: 0.3
+    radius: 1.18
 # Imperial Medieval End
 
 - type: entity
