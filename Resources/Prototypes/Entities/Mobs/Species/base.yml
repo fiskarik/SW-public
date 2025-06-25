@@ -318,6 +318,8 @@
   - type: CanSurrender
   - type: RDDeathScreen
   - type: CombatStance
+  - type: Grabbable
+  - type: Grabber
 # Imperial Medieval End
 
 - type: entity
