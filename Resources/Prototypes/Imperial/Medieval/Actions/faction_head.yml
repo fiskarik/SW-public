@@ -28,7 +28,7 @@
   - type: InstantAction
     icon:
       sprite: Imperial/Medieval/Interface/Actions/faction-menu.rsi
-      state: bandit
+      state: kayot
 
 - type: entity
   id: VillageFactionMenuAction

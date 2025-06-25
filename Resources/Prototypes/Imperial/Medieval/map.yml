@@ -47,8 +47,8 @@
             MedievalBanditVeteran: [ 1, 1 ]
             MedievalBanditLeader: [ 1, 1 ]
             # Kayot (10 total)
-            MedievalKayotRecruit: [ 4, 4 ]
-            MedievalKayotRegular: [ 4, 4 ]
+            MedievalKayotRecruit: [ 3, 3 ]
+            MedievalKayotRegular: [ 3, 3 ]
             MedievalKayotVeteran: [ 1, 1 ]
             MedievalKayotLeader: [ 1, 1 ]
             # Collegium (15 total)
@@ -128,8 +128,8 @@
             MedievalBanditVeteran: [ 1, 1 ]
             MedievalBanditLeader: [ 1, 1 ]
             # Kayot (8 total)
-            MedievalKayotRecruit: [ 3, 3 ]
-            MedievalKayotRegular: [ 3, 3 ]
+            MedievalKayotRecruit: [ 2, 2 ]
+            MedievalKayotRegular: [ 2, 2 ]
             MedievalKayotVeteran: [ 1, 1 ]
             MedievalKayotLeader: [ 1, 1 ]            
             # Collegium (11 total)
@@ -209,8 +209,8 @@
             MedievalBanditVeteran: [ 1, 1 ]
             MedievalBanditLeader: [ 1, 1 ]
             # Kayot (6 total)
-            MedievalKayotRecruit: [ 2, 2 ]
-            MedievalKayotRegular: [ 2, 2 ]
+            MedievalKayotRecruit: [ 1, 1 ]
+            MedievalKayotRegular: [ 1, 1 ]
             MedievalKayotVeteran: [ 1, 1 ]
             MedievalKayotLeader: [ 1, 1 ]
             # Collegium (7 total)

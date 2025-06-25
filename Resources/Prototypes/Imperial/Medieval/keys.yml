@@ -182,7 +182,7 @@
   components:
   - type: Sprite
     sprite: Imperial/Medieval/Misc/keys.rsi
-    state: alchem
+    state: kayot
   - type: Key
     accesses:
     - Kayot

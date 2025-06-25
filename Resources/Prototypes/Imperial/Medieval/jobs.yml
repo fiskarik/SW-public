@@ -3094,7 +3094,7 @@
     jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
     mask: MedievalMaskFace
     head: MedievalClothingHeadHelmetHood
-    neck: MedievalClothingNeckCloakClanWolf
+    neck: MedievalClothingNeckCloakClanKayot
     id: MedievalKeyAlchem
 
 - type: playTimeTracker
@@ -3157,7 +3157,7 @@
     jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
     mask: MedievalMaskFace
     head: MedievalClothingHeadHelmetBand1
-    neck: MedievalClothingNeckCloakClanWolf
+    neck: MedievalClothingNeckCloakClanKayot
     id: MedievalKeyAlchem
 
 - type: playTimeTracker
@@ -3221,7 +3221,7 @@
     jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
     mask: MedievalMaskFace
     head: MedievalClothingHeadHelmetBand2
-    neck: MedievalClothingNeckCloakClanWolf
+    neck: MedievalClothingNeckCloakClanKayot
     id: MedievalKeyAlchem
 
 - type: playTimeTracker
@@ -3286,7 +3286,7 @@
     jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
     mask: MedievalMaskFace
     head: MedievalClothingHeadHelmetBand3
-    neck: MedievalClothingNeckCloakClanWolf
+    neck: MedievalClothingNeckCloakClanKayot
     id: MedievalKeyAlchem
 
 - type: playTimeTracker
@@ -3333,7 +3333,7 @@
       pasport: "no"
       jobPrefix: "[ГлБ]"
     - type: CloackMessage
-      action: CloackMessageActionBand
+      action: CloackMessageActionKayot
       faction: "band"
 
 - type: roleLoadout
@@ -3345,20 +3345,18 @@
   - MedievalTrinkets3
   - MedievalGlovesWithIron
 
-# !~~~~~~~~~!!!!!!!!!~~~~~~~~~~!!!!!!!!!!!!!~~~~~~~~~!!!!!!!!!!!
-
-# MEDIEVAL BANDIT RECRUIT
+# MEDIEVAL BANDIT KAYOT RECRUIT
 
 - type: startingGear
   id: MedievalKayotRecruitGear
   equipment:
     pocket1: MedievalRevent25
-    pocket2: MedievalCommsCrystallBand
+    pocket2: MedievalCommsCrystallKayot
     jumpsuit: MedievalClothingUniformJumpsuitShitCloth71
     shoes: MedievalClothingShoesDeserd
     mask: MedievalMaskFace
     head: MedievalClothingHeadHelmetHood
-    neck: MedievalClothingNeckCloakClanWolf
+    neck: MedievalClothingNeckCloakClanKayot
     id: MedievalKeyKayot
 
 - type: playTimeTracker
@@ -3369,7 +3367,7 @@
   id: JobIconMedievalKayotRecruit
   icon:
     sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
-    state: band_recruit
+    state: kayot_molodnyak
   jobName: Молодняк
 
 - type: job
@@ -3410,18 +3408,18 @@
   - MedievalTrinkets
   - MedievalGloves
 
-# MEDIEVAL BANDIT REGULAR
+# MEDIEVAL BANDI KAYOT REGULAR
 
 - type: startingGear
   id: MedievalKayotRegularGear
   equipment:
     pocket1: MedievalRevent25
-    pocket2: MedievalCommsCrystallBand
+    pocket2: MedievalCommsCrystallKayot
     jumpsuit: MedievalClothingUniformJumpsuitShitCloth71
     shoes: MedievalClothingShoesDeserd
     mask: MedievalMaskFace
     head: MedievalClothingHeadHelmetBand1
-    neck: MedievalClothingNeckCloakClanWolf
+    neck: MedievalClothingNeckCloakClanKayot
     id: MedievalKeyKayot
 
 - type: playTimeTracker
@@ -3432,7 +3430,7 @@
   id: JobIconMedievalKayotRegular
   icon:
     sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
-    state: band_common
+    state: kayot_bivalit
   jobName: job-name-KayotRegular-medieval
 
 - type: job
@@ -3480,12 +3478,12 @@
   id: MedievalKayotVeteranGear
   equipment:
     pocket1: MedievalRevent50
-    pocket2: MedievalCommsCrystallBand
+    pocket2: MedievalCommsCrystallKayot
     jumpsuit: MedievalClothingUniformJumpsuitShitCloth71
     shoes: MedievalClothingShoesDeserd
     mask: MedievalMaskFace
     head: MedievalClothingHeadHelmetBand2
-    neck: MedievalClothingNeckCloakClanWolf
+    neck: MedievalClothingNeckCloakClanKayot
     id: MedievalKeyKayot
 
 - type: playTimeTracker
@@ -3496,7 +3494,7 @@
   id: JobIconMedievalKayotVeteran
   icon:
     sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
-    state: band_veteran
+    state: kayot_veteran
   jobName: job-name-KayotVeteran-medieval
 
 - type: job
@@ -3550,7 +3548,7 @@
     shoes: MedievalClothingShoesDeserd
     mask: MedievalMaskFace
     head: MedievalClothingHeadHelmetBand3
-    neck: MedievalClothingNeckCloakClanWolf
+    neck: MedievalClothingNeckCloakClanKayot
     id: MedievalKeyKayot
 
 - type: playTimeTracker
@@ -3561,7 +3559,7 @@
   id: JobIconMedievalKayotLeader
   icon:
     sprite: /Textures/Imperial/Medieval/Misc/job_icons.rsi
-    state: band_leader
+    state: kayot_leader
   jobName: job-name-KayotLeader-medievals
 
 - type: job
@@ -3607,8 +3605,6 @@
   - MedievalBelt
   - MedievalTrinkets3
   - MedievalGlovesWithIron
-
-# !~~~~~~~~~!!!!!!!!!~~~~~~~~~~!!!!!!!!!!!!!~~~~~~~~~!!!!!!!!!!!
 
 # MEDIEVAL MERC REGULAR
 
