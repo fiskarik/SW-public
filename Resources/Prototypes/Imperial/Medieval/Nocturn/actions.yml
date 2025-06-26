@@ -130,7 +130,7 @@
       useDelay: 90
       icon:
         sprite: /Textures/Imperial/Medieval/Misc/cloack_message.rsi
-        state: bandits
+        state: naemniki
       event: !type:CloackMessageActionEvent
 
 - type: entity

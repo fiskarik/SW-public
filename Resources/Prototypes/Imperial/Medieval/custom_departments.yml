@@ -58,8 +58,8 @@
 
 - type: department
   id: Kayot
-  name: Банда койота
-  description: Воруй, убивай, сражайся против банды волка
+  name: Шайка койота
+  description: Воруй, убивай
   color: "#CCCCCC"
   roles:
   - MedievalKayotRecruit

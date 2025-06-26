@@ -47,7 +47,7 @@
 
 - type: medievalFaction
   id: Bandit
-  name: банда волка
+  name: банда
   icon:
     sprite: Imperial/Medieval/Interface/factions.rsi
     state: bandit
@@ -59,7 +59,7 @@
 
 - type: medievalFaction
   id: Kayot
-  name: банда койота
+  name: койоты
   icon:
     sprite: Imperial/Medieval/Interface/factions.rsi
     state: bandit

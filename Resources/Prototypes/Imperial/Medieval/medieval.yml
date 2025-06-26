@@ -7240,7 +7240,7 @@
     faction: "band"
 
 - type: entity
-  name: кристалл связи бандитов койота
+  name: кристалл связи шайки койота
   parent: MedievalCommsCrystallLeg
   id: MedievalCommsCrystallKayot
   description: Кристалл связи позволяет получать сообщения лидера фракции даже с другого конца острова.
