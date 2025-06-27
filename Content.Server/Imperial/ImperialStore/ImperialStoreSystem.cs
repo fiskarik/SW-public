@@ -194,8 +194,8 @@ public sealed partial class ImperialStoreSystem : SharedImperialStoreSystem
 
         if (store.DepositCount > 0)
         {
+            store.LastDepositIndex = --store.LastDepositIndex < 0 ? store.DepositCount - 1 : store.LastDepositIndex;
             store.LastDeposits[store.LastDepositIndex] = currency;
-            store.LastDepositIndex = --store.LastDepositIndex == 0 ? store.DepositCount : store.LastDepositIndex;
             store.LastDepositSum.Clear();
 
             foreach (Dictionary<string, FixedPoint2> deposit in store.LastDeposits)
