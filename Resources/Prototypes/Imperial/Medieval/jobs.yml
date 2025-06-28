@@ -3333,7 +3333,7 @@
       pasport: "no"
       jobPrefix: "[ГлБ]"
     - type: CloackMessage
-      action: CloackMessageActionKayot
+      action: CloackMessageActionBand
       faction: "band"
 
 - type: roleLoadout
@@ -3391,7 +3391,7 @@
     #- type: IdentityFaction
     #  faction: Bandit
     - type: MedievalJobSpawn
-      spawnType: Band
+      spawnType: Kayot
     - type: GiveItemObjective
     - type: MoneyCollector
       objectivePrototype: MedievalGetMoneyObjective300500
@@ -3455,7 +3455,7 @@
     #- type: IdentityFaction
     #  faction: Bandit
     - type: MedievalJobSpawn
-      spawnType: Band
+      spawnType: Kayot
     - type: GiveItemObjective
     - type: MoneyCollector
       objectivePrototype: MedievalGetMoneyObjective400800
@@ -3520,7 +3520,7 @@
     #- type: IdentityFaction
     #  faction: Bandit
     - type: MedievalJobSpawn
-      spawnType: Band
+      spawnType: Kayot
     - type: GiveItemObjective
     - type: MoneyCollector
       objectivePrototype: MedievalGetMoneyObjective400800
@@ -3564,7 +3564,7 @@
 
 - type: job
   id: MedievalKayotLeader
-  name: Главарь банды
+  name: Главарь шайки
   description: Руководите шайкой разбойников, богайтейте.
   playTimeTracker: JobMedievalKayotLeader
   #requirements:
@@ -3586,17 +3586,17 @@
     #- type: IdentityFaction
     #  faction: Bandit
     - type: MedievalJobSpawn
-      spawnType: Band
+      spawnType: Kayot
     - type: GiveItemObjective
     - type: MoneyCollector
       objectivePrototype: MedievalGetMoneyObjective5001000
     - type: MedievalPasportPerson
-      personJob: "[color=gray]Главарь банды[/color]"
+      personJob: "[color=gray]Главарь шайки[/color]"
       pasport: "no"
       jobPrefix: "[ГлБ]"
     - type: CloackMessage
-      action: CloackMessageActionBand
-      faction: "band"
+      action: CloackMessageActionKayot
+      faction: "kayot"
 
 - type: roleLoadout
   id: JobMedievalKayotLeader
