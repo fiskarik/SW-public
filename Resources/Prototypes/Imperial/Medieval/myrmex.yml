@@ -613,16 +613,16 @@
         volume: -5
   - type: MeleeWeapon
     animation: WeaponArcBite
-    range: 1.4
-    attackRate: 0.55
+    range: 2
+    attackRate: 0.45
     hidden: true
     angle: 0
     soundHit:
       collection: MyrmexAttack
     damage:
       groups:
-        Brute: 17
-        Airloss: 12
+        Brute: 23
+        Airloss: 9
       types:
         ParryAble: 1
         Bloodloss: 3
