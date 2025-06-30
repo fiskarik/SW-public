@@ -332,6 +332,12 @@
       types:
         Blunt: 0
         Slash: 0
+  - type: PointLight
+    netsync: false
+    enabled: false
+  - type: LocalLight
+    energy: 1
+    radius: 6
 
 - type: entity
   name: myrmeling
@@ -349,7 +355,7 @@
   - type: MeleeWeapon
     animation: WeaponArcBite
     range: 1.5
-    attackRate: 0.75
+    attackRate: 0.45
     hidden: true
     angle: 0
     soundHit:
@@ -359,7 +365,7 @@
         Brute: 10
       types:
         ParryAble: 1
-        Structural: 30
+        Structural: 85
   - type: MobThresholds
     thresholds:
       0: Alive

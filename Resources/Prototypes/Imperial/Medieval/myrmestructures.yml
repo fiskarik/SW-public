@@ -96,3 +96,55 @@
   - type: Tag
     tags:
     - MyrmexCanTake
+
+  # - type: Construction
+  #   graph: MedievalChest4
+  #   node: MedievalChest4
+
+# - type: construction
+#   id: MedievalChest4
+#   name: деревянный сундук
+#   description: Самый простой сундук.
+#   graph: MedievalChest4
+#   startNode: start
+#   targetNode: MedievalChest4
+#   category: construction-category-furniture
+#   icon:
+#     sprite: Imperial/Medieval/Decor/chest4.rsi
+#     state: base
+#   objectType: Structure
+#   placementMode: SnapgridCenter
+#   canBuildInImpassable: false
+#   conditions:
+#     - !type:TileNotBlocked
+
+# - type: constructionGraph
+#   id: MedievalChest4
+#   start: start
+#   graph:
+#     - node: start
+#       actions:
+#         - !type:DestroyEntity {}
+#       edges:
+#         - to: MedievalChest4
+#           completed:
+#             - !type:SnapToGrid { }
+#           steps:
+#             - material: WoodPlank
+#               amount: 5
+#               doAfter: 12
+#     - node: MedievalChest4
+#       entity: MedievalChest4
+
+      # edges:
+      #   - to: clownHardsuit
+      #     steps:
+      #       - material: Cloth
+      #         amount: 5
+      #         doAfter: 1
+      #       - tag: SuitEVA
+      #         name: скафандр EVA # Imperial Recipes Locale
+      #         icon:
+      #           sprite: Clothing/OuterClothing/Suits/eva.rsi
+      #           state: icon
+      #         doAfter: 1
