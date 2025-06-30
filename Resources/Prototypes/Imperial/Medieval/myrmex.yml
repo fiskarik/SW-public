@@ -211,11 +211,53 @@
     damageCoefficient: 20
 
 # ===========================
+
+- type: body
+  id: Myrmex
+  root: torso
+  slots:
+    head:
+      part: HeadReptilian
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoReptilian
+      organs:
+        heart: OrganAnimalHeart
+        lungs: OrganHumanLungs
+        stomach: OrganReptilianStomach
+        liver: OrganAnimalLiver
+        kidneys: OrganHumanKidneys
+      connections:
+      - right hand
+    right hand:
+      part: RightHandReptilian
+
 - type: entity
   abstract: true
   parent: SimpleMobBaseNoFood
   id: MedievalMyrmexBase
   components:
+  - type: Hands
+  - type: Body
+    prototype: Myrmex
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: ComplexInteraction
+  - type: Butcherable
+    spawned:
+    - id: MedievalLootAnt
+      amount: 3
+    - id: MedievalLeather1
+      amount: 3
+    - id: FoodMeat
+      amount: 1
   - type: DamageStateVisuals
     states:
       Alive:
@@ -521,6 +563,10 @@
   parent: MedievalMyrmexBase
   id: MedievalMyrmexLarva
   components:
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 1
   - type: GhostRole
     makeSentient: true
     allowSpeech: true
