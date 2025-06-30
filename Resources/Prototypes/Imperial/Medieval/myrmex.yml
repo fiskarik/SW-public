@@ -300,8 +300,8 @@
   - type: Physics
   - type: MeleeWeapon
     animation: WeaponArcBite
-    range: 1.4
-    attackRate: 0.55
+    range: 1.5
+    attackRate: 0.75
     hidden: true
     angle: 0
     soundHit:
@@ -315,7 +315,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      85: Critical
+      65: Critical
       110: Dead
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.2

@@ -446,8 +446,8 @@
             - !type:SpawnEntitiesBehavior
               spawn:
                 MedievalMobAnt:
-                  min: 3
-                  max: 6
+                  min: 4
+                  max: 9
             - !type:PlaySoundBehavior
               sound:
                 path: /Audio/Effects/break_stone.ogg
@@ -642,8 +642,8 @@
             - !type:SpawnEntitiesBehavior
               spawn:
                 MedievalMobAnt:
-                  min: 3
-                  max: 6
+                  min: 4
+                  max: 8
             - !type:PlaySoundBehavior
               sound:
                 path: /Audio/Effects/break_stone.ogg
@@ -838,8 +838,8 @@
             - !type:SpawnEntitiesBehavior
               spawn:
                 MedievalMobAnt:
-                  min: 3
-                  max: 6
+                  min: 5
+                  max: 10
             - !type:PlaySoundBehavior
               sound:
                 path: /Audio/Effects/break_stone.ogg
