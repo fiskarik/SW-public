@@ -242,6 +242,7 @@
   id: MedievalMyrmexBase
   components:
   - type: Hands
+    throwRange: 2
   - type: Body
     prototype: Myrmex
   - type: Strippable
