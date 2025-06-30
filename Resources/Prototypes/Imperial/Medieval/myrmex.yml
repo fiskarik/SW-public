@@ -237,11 +237,16 @@
     right hand:
       part: RightHandReptilian
 
+- type: Tag
+  id: MyrmexCanTake
+
 - type: entity
   abstract: true
   parent: SimpleMobBaseNoFood
   id: MedievalMyrmexBase
   components:
+  - type: BorgHandsImperial
+    whitelistHandTag: MyrmexCanTake
   - type: Hands
     throwRange: 2
   - type: Body
@@ -281,7 +286,6 @@
     bloodReagent: CopperBlood
     bloodMaxVolume: 100
   - type: Puller
-    needsHands: false
   - type: Appearance
   - type: Fixtures
     fixtures:

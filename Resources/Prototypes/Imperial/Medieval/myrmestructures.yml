@@ -75,18 +75,24 @@
   id: MedievalMyrmexResourceGum
   parent: BaseItem
   components:
-    - type: Sprite
-      sprite: Imperial/Medieval/Myrmex/resin.rsi
-      state: resin
-    - type: Item
-      size: Ginormous
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/resin.rsi
+    state: resin
+  - type: Item
+    size: Ginormous
+  - type: Tag
+    tags:
+    - MyrmexCanTake
 
 - type: entity
   id: MedievalMyrmexResourceYant
   parent: BaseItem
   components:
-    - type: Sprite
-      sprite: Imperial/Medieval/Myrmex/resin.rsi
-      state: clearresin
-    - type: Item
-      size: Ginormous
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/resin.rsi
+    state: clearresin
+  - type: Item
+    size: Ginormous
+  - type: Tag
+    tags:
+    - MyrmexCanTake
