@@ -75,32 +75,46 @@ namespace Content.Server.Myrmex
             var coords = xform.Coordinates;
             string light = CheckNearby(coords, "light");
             string spore = CheckNearby(coords, "spore");
-            args.PushMarkup($"[color=gray]Для благоприятных условий роста яйцу требуются[/color] [color=green]{comp.SporeType}[/color] и [color=green]{comp.LightColor}[/color] [color=gray]свечение[/color]", 3);
+            string cl = "white";
+            if (comp.LightColor == "руническое")
+                cl = "cyan";
+            else if (comp.LightColor == "эфирное")
+                cl = "orange";
+            else if (comp.LightColor == "теневое")
+                cl = "pink";
+            string cs = "white";
+            if (comp.SporeType == "споры железошляпника")
+                cs = "cyan";
+            else if (comp.SporeType == "едкие споры")
+                cs = "orange";
+            else if (comp.SporeType == "споры нейромицита")
+                cs = "pink";
+            args.PushMarkup($"[color=gray]Для благоприятных условий роста яйцу требуются[/color] [color={cs}]{comp.SporeType}[/color] [color=gray]и[/color] [color={cl}]{comp.LightColor}[/color] [color=gray]свечение[/color]", 3);
 
             if (light == "")
                 args.PushMarkup($"[color=gray]Яйцо [/color][color=red]не освещено[/color]", 1);
             else if (light == "many")
-                args.PushMarkup($"[color=gray]Яйцо [/color][color=red]слишком сильно освещено[/color]", 1);
+                args.PushMarkup($"[color=gray]Яйцо [/color][color=orange]слишком сильно освещено[/color]", 1);
             else if (light == comp.LightColor)
                 args.PushMarkup($"Яйцо освещено[color=green] верным[/color] свечением", 1);
             else if (light != comp.LightColor)
-                args.PushMarkup($"Яйцо освещено[color=red] неверным[/color] свечением", 1);
+                args.PushMarkup($"Яйцо освещено[color=orange] неверным[/color] свечением", 1);
 
             if (spore == "")
                 args.PushMarkup($"[color=gray]Яйцо [/color][color=red]не обрабатывается спорами[/color]", 2);
             else if (spore == "many")
-                args.PushMarkup($"[color=gray]Яйцо [/color][color=red]слишком сильно обрабатывается спорами[/color]", 2);
+                args.PushMarkup($"[color=gray]Яйцо [/color][color=orange]слишком сильно обрабатывается спорами[/color]", 2);
             else if (spore == comp.SporeType)
                 args.PushMarkup($"Яйцо обрабатывается[color=green] верными[/color] спорами", 2);
             else if (spore != comp.SporeType)
-                args.PushMarkup($"Яйцо обрабатывается[color=red] неверными[/color] спорами", 2);
+                args.PushMarkup($"Яйцо обрабатывается[color=orange] неверными[/color] спорами", 2);
 
             if (light == comp.LightColor && spore == comp.SporeType)
-                args.PushMarkup($"Текущие условия для роста яйца [color=green]идеальны[/color]", 0);
+                args.PushMarkup($"Текущие условия [color=green]идеальны[/color]", 0);
             else if (light != comp.LightColor && spore == comp.SporeType || light == comp.LightColor && spore != comp.SporeType)
-                args.PushMarkup($"Текущие условия для роста яйца [color=yellow]удовлетворительны[/color]", 0);
+                args.PushMarkup($"Текущие условия [color=yellow]удовлетворительны[/color]", 0);
             else
-                args.PushMarkup($"Текущие условия для роста яйца [color=yellow]ужасны[/color]", 0);
+                args.PushMarkup($"Текущие условия [color=red]ужасны[/color]", 0);
         }
         TimeSpan StartTime = TimeSpan.FromSeconds(0f);
         TimeSpan EndTime = TimeSpan.FromSeconds(0f);
