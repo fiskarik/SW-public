@@ -1,5 +1,6 @@
 ﻿using Content.Shared.Buckle.Components;
 using Content.Shared.Damage;
+using Content.Shared.Imperial.Medieval.Skills;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Projectiles;
@@ -12,6 +13,7 @@ namespace Content.Shared.Imperial.Medieval.MobRiding
     {
 
         [Dependency] private readonly SharedMoverController _mover = default!;
+        [Dependency] private readonly SharedSkillsSystem _skillsSystem = default!;
 
         public override void Initialize()
         {
@@ -64,11 +66,14 @@ namespace Content.Shared.Imperial.Medieval.MobRiding
 
         public void OnBuckled(EntityUid uid, RideableComponent component, ref StrappedEvent args)
         {
-            component.Rider = args.Buckle.Owner;
-            component.IsRiding = true;
-            _mover.SetRelay(args.Buckle.Owner, uid);
+            var strap = args.Strap;
+            var buckle = args.Buckle;
 
-            var ev = new StartRideEvent(args.Strap, args.Buckle);
+            component.Rider = buckle.Owner;
+            component.IsRiding = true;
+            _mover.SetRelay(buckle.Owner, uid);
+
+            var ev = new StartRideEvent(strap, buckle);
             RaiseLocalEvent(uid, ref ev);
         }
 
@@ -92,5 +97,3 @@ public readonly record struct StartRideEvent(Entity<StrapComponent> Strap, Entit
 
 [ByRefEvent]
 public readonly record struct StopRideEvent(Entity<StrapComponent> Strap, Entity<BuckleComponent> Buckle);
-
-

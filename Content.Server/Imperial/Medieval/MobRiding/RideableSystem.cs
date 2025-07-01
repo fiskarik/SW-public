@@ -5,6 +5,7 @@ using Content.Shared.Buckle.Components;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Imperial.Medieval.MobRiding;
+using Content.Shared.Imperial.Medieval.Skills;
 
 namespace Content.Server.Imperial.Medieval.MobRiding
 {
@@ -25,6 +26,29 @@ namespace Content.Server.Imperial.Medieval.MobRiding
             SubscribeLocalEvent<RideableComponent, BuckledEvent>(OnSelfBuckled);
             SubscribeLocalEvent<RideableComponent, UnbuckledEvent>(OnSelfUnbuckled);
 
+            SubscribeLocalEvent<RideableComponent, StrapAttemptEvent>(OnTryRide);
+        }
+
+        private void OnTryRide(EntityUid uid, RideableComponent component, ref StrapAttemptEvent args)
+        {
+            if (CheckAgility(args.Buckle))
+                return;
+
+            args.Cancelled = true;
+        }
+
+        private bool CheckAgility(BuckleComponent buckle)
+        {
+            if (!TryComp<SkillsComponent>(buckle.Owner, out var skills))
+                return false;
+
+            if (!skills.Levels.TryGetValue("Agility", out var agility))
+                return false;
+
+            if (agility < 9)
+                return false;
+
+            return true;
         }
 
         private void OnSelfBuckled(EntityUid uid, RideableComponent component, ref BuckledEvent args)
