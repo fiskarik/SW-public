@@ -1,0 +1,276 @@
+- type: entity
+  name: Exception Spawner
+  id: MedievalSpawnMineCaveMyrmex
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+      - SpiderWeb
+      - SpiderWeb
+      - MedievalWallSoilSolid
+      - MedievalWallSoilSolid
+      - MedievalWallSoilSolid
+      - MedievalWallSoilSolid
+      - MedievalWallSoilSolid
+      - MedievalWallSoilNormal
+      - MedievalWallSoilNormal
+      - MedievalWallSoilNormal
+      - MedievalWallSoilNormal
+      - MedievalWallSoilNormal
+      - MedievalWallSoilNormal
+      - MedievalWallSoilNormal
+      - MedievalWallSoilNormal
+      - MedievalWallSoilNormal
+      - MedievalWallSoilLoose
+      - MedievalWallSoilLoose
+      - MedievalWallSoilLoose
+      - MedievalWallSoilLoose
+      - MedievalWallSoilLoose
+      - MedievalWallSoilLooseAnt
+      - MedievalWallSoilLooseGum
+      - MedievalWallSoilLooseGum
+      - MedievalWallSoilLooseGum
+      - MedievalWallSoilLooseLGum
+      - MedievalWallSoilLooseMushroom
+      - MedievalWallSoilLooseRoot
+      - MedievalWallSoilLooseRoot
+      - MedievalWallSoilLooseRoot
+      - MedievalWallSoilNormalAnt
+      - MedievalWallSoilNormalGum
+      - MedievalWallSoilNormalGum
+      - MedievalWallSoilNormalGum
+      - MedievalWallSoilNormalLGum
+      - MedievalWallSoilNormalMushroom
+      - MedievalWallSoilNormalRoot
+      - MedievalWallSoilNormalRoot
+      - MedievalWallSoilNormalRoot
+      - MedievalWallSoilNormalRoot
+      - MedievalWallSoilSolidAnt
+      - MedievalWallSoilSolidAnt
+      - MedievalWallSoilSolidGum
+      - MedievalWallSoilSolidGum
+      - MedievalWallSoilSolidGum
+      - MedievalWallSoilSolidLGum
+      - MedievalWallSoilSolidMushroom
+      - MedievalWallSoilSolidRoot
+      - MedievalWallSoilSolidRoot
+      - MedievalWallSoilSolidRoot
+      chance: 0.98
+      offset: 0
+
+- type: entity
+  id: MedievalMyrmexResourceGum
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/resin.rsi
+    state: resin
+  - type: Item
+    size: Ginormous
+  - type: Tag
+    tags:
+    - MyrmexCanTake
+
+- type: entity
+  id: MedievalMyrmexResourceYant
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/resin.rsi
+    state: clearresin
+  - type: Item
+    size: Ginormous
+  - type: Tag
+    tags:
+    - MyrmexCanTake
+
+  # - type: Construction
+  #   graph: MedievalChest4
+  #   node: MedievalChest4
+
+# - type: construction
+#   id: MedievalChest4
+#   name: деревянный сундук
+#   description: Самый простой сундук.
+#   graph: MedievalChest4
+#   startNode: start
+#   targetNode: MedievalChest4
+#   category: construction-category-furniture
+#   icon:
+#     sprite: Imperial/Medieval/Decor/chest4.rsi
+#     state: base
+#   objectType: Structure
+#   placementMode: SnapgridCenter
+#   canBuildInImpassable: false
+#   conditions:
+#     - !type:TileNotBlocked
+
+# - type: constructionGraph
+#   id: MedievalChest4
+#   start: start
+#   graph:
+#     - node: start
+#       actions:
+#         - !type:DestroyEntity {}
+#       edges:
+#         - to: MedievalChest4
+#           completed:
+#             - !type:SnapToGrid { }
+#           steps:
+#             - material: WoodPlank
+#               amount: 5
+#               doAfter: 12
+#     - node: MedievalChest4
+#       entity: MedievalChest4
+
+      # edges:
+      #   - to: clownHardsuit
+      #     steps:
+      #       - material: Cloth
+      #         amount: 5
+      #         doAfter: 1
+      #       - tag: SuitEVA
+      #         name: скафандр EVA # Imperial Recipes Locale
+      #         icon:
+      #           sprite: Clothing/OuterClothing/Suits/eva.rsi
+      #           state: icon
+      #         doAfter: 1
+- type: entity
+  id: MedievalMyrmexBaseSmall
+  parent: MedievalBannerBase
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  abstract: true
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+          params:
+            volume: -8
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Opaque
+        - MidImpassable
+        - HighImpassable
+        - BulletImpassable
+
+- type: entity
+  id: MedievalMyrmexLightBlue
+  parent: MedievalMyrmexBaseSmall
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/Structures/lighting.rsi
+    state: blue
+  - type: MyrmexGrower
+    resType: light
+    resCur: руническое
+  - type: PointLight
+    color: "#107182FF"
+    castShadows: false
+    energy: 5
+    radius: 2
+
+- type: entity
+  id: MedievalMyrmexLightOrange
+  parent: MedievalMyrmexBaseSmall
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/Structures/lighting.rsi
+    state: orange
+  - type: MyrmexGrower
+    resType: light
+    resCur: эфирное
+  - type: PointLight
+    color: "#D1671AFF"
+    castShadows: false
+    energy: 3
+    radius: 2
+
+- type: entity
+  id: MedievalMyrmexLightPurple
+  parent: MedievalMyrmexBaseSmall
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/Structures/lighting.rsi
+    state: purple
+  - type: MyrmexGrower
+    resType: light
+    resCur: теневое
+  - type: PointLight
+    color: "#9f11bc"
+    castShadows: false
+    energy: 4
+    radius: 2
+
+- type: entity
+  id: MedievalMyrmexSporeBlue
+  parent: MedievalMyrmexBaseSmall
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/Structures/spores.rsi
+    state: blue
+  - type: MyrmexGrower
+    resType: spore
+    resCur: "споры железошляпника"
+  - type: PointLight
+    color: "#107182FF"
+    castShadows: false
+    energy: 5
+    radius: 2
+
+- type: entity
+  id: MedievalMyrmexSporeOrange
+  parent: MedievalMyrmexBaseSmall
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/Structures/spores.rsi
+    state: orange
+  - type: MyrmexGrower
+    resType: spore
+    resCur: "едкие споры"
+  - type: PointLight
+    color: "#D1671AFF"
+    castShadows: false
+    energy: 3
+    radius: 2
+
+- type: entity
+  id: MedievalMyrmexSporePurple
+  parent: MedievalMyrmexBaseSmall
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/Structures/spores.rsi
+    state: purple
+  - type: MyrmexGrower
+    resType: spore
+    resCur: "споры нейромицита"
+  - type: PointLight
+    color: "#9f11bc"
+    castShadows: false
+    energy: 4
+    radius: 2
+

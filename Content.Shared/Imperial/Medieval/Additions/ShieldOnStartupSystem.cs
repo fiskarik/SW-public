@@ -20,7 +20,7 @@ public partial class ShieldOnStartupSystem : EntitySystem
     public void Init(EntityUid uid, ShieldOnStartupComponent component, ComponentStartup args)
     {
         component.Spawned = _tick.CurTime;
-        _alert.ShowAlert(uid, "SpawnProtection", null, (_tick.CurTime, _tick.CurTime + TimeSpan.FromSeconds(90)), true);
+        _alert.ShowAlert(uid, "SpawnProtection", null, (_tick.CurTime, _tick.CurTime + TimeSpan.FromSeconds(45)), true);
     }
     private void OnBeforeDamageChanged(EntityUid uid, ShieldOnStartupComponent component, ref BeforeDamageChangedEvent args)
     {
