@@ -125,3 +125,17 @@
   icon: { sprite: Imperial/Medieval/Chem/Garden/root.rsi, state: icon }
   spawn: MedievalRootItem
   maxCount: 1
+
+- type: stack
+  id: MedievalMushroom2
+  name: mushroom
+  icon: { sprite: Imperial/Medieval/Chem/Garden/mushroom2.rsi, state: produce }
+  spawn: MedievalMushroom2
+  maxCount: 1
+
+- type: stack
+  id: MedievalMushroom3
+  name: mushroom
+  icon: { sprite: Imperial/Medieval/Chem/Garden/mushroom3.rsi, state: produce }
+  spawn: MedievalMushroom3
+  maxCount: 1
