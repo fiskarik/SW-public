@@ -298,4 +298,44 @@
             volume: -8
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Construction
+    graph: MedievalMyrmexSupportingColumnCraft
+    node: MedievalMyrmexSupportingColumnCraft
 
+- type: construction
+  id: MedievalMyrmexSupportingColumnCraft
+  name: supporting column
+  description: A primitive support column to protect against unexpected falling rocks on your head
+  graph: MedievalMyrmexSupportingColumnCraft
+  startNode: start
+  targetNode: ready
+  category: construction-category-structures
+  icon:
+    sprite: Imperial/Medieval/Myrmex/Structures/column.rsi
+    state: icon
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked ""
+
+- type: constructionGraph
+  id: MedievalMyrmexSupportingColumnCraft
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: ready
+          completed:
+            - !type:SnapToGrid { }
+          steps:
+             - tag: RootItem
+               name: корень # Imperial Recipes Locale
+               icon:
+                 sprite: Imperial/Medieval/Chem/Garden/root.rsi
+                 state: icon
+               doAfter: 1
+    - node: ready
+      entity: MedievalMyrmexSupportingColumn
