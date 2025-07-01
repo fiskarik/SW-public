@@ -1216,3 +1216,61 @@
     prototype: SmithWorkplace
     doAfter: 9
     deleteOnInteract: true
+
+- type: entity
+  name: MedievalMyrmexSupportingColumnCraft
+  description: MedievalMyrmexSupportingColumnCraft
+  id: MedievalMyrmexSupportingColumnCraft
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: MedievalMyrmexSupportingColumn
+    doAfter: 1
+    deleteOnInteract: true
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/Structures/column.rsi
+    state: icon
+  - type: Construction
+    graph: MedievalMyrmexSupportingColumnCraft
+    node: MedievalMyrmexSupportingColumnCraft
+
+- type: construction
+  id: MedievalMyrmexSupportingColumnCraft
+  name: supporting column
+  description: A primitive support column to protect against unexpected falling rocks on your head
+  graph: MedievalMyrmexSupportingColumnCraft
+  startNode: start
+  targetNode: MedievalMyrmexSupportingColumnCraft
+  category: construction-category-structures
+  icon:
+    sprite: Imperial/Medieval/Myrmex/Structures/column.rsi
+    state: icon
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked ""
+  #- type: Damageable
+  #- type: Anchorable
+
+- type: constructionGraph
+  id: MedievalMyrmexSupportingColumnCraft
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+       edges:
+         - to: MedievalMyrmexSupportingColumnCraft
+           steps:
+             - material: MedievalRootItem
+               amount: 1
+               doAfter: 1
+             - tag: RootItem
+               name: корень # Imperial Recipes Locale
+               icon:
+                 sprite: Imperial/Medieval/Chem/Garden/root.rsi
+                 state: icon
+               doAfter: 1
