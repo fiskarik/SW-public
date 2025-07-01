@@ -274,3 +274,28 @@
     energy: 4
     radius: 2
 
+- type: entity
+  id: MedievalMyrmexSupportingColumn
+  name: supporting column
+  description: A primitive support column to protect against unexpected falling rocks on your head
+  parent: MedievalMyrmexBaseSmall
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Myrmex/Structures/column.rsi
+    state: icon
+  - type: MyrmexProp
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 15
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+          params:
+            volume: -8
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
