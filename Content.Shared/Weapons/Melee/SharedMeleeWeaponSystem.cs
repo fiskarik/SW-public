@@ -512,8 +512,13 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         // Sawmill.Debug($"Melee damage is {damage.Total} out of {component.Damage.Total}");
 
         // Raise event before doing damage so we can cancel damage if the event is handled
+        // var hitEvent = new MeleeHitEvent(new List<EntityUid> { target.Value }, user, meleeUid, damage, null);
+        // RaiseLocalEvent(meleeUid, hitEvent);
 
-        // imperial medieval start
+        // if (hitEvent.Handled)
+        //     return;
+
+        // imperial medieval rideable start
         var targets = new List<EntityUid>(1)
         {
             target.Value
@@ -530,7 +535,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
 
         if (hitEvent.Handled)
             return;
-        // imperial medieval end
+        // imperial medieval rideable end
 
         var weapon = GetEntity(ev.Weapon);
 

@@ -245,7 +245,7 @@ public record struct ProjectileReflectAttemptEvent(EntityUid ProjUid, Projectile
 }
 
 [ByRefEvent]
-public record struct ProjectileBeforeHitEvent(EntityUid Target, EntityUid? Shooter = null, bool Cancelled = false); // imperial medieval
+public record struct ProjectileBeforeHitEvent(EntityUid Target, EntityUid? Shooter = null, bool Cancelled = false); // imperial medieval rideable
 
 /// <summary>
 /// Raised when a projectile hits an entity

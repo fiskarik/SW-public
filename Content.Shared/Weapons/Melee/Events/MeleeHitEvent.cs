@@ -5,7 +5,7 @@ using Robust.Shared.Audio;
 
 namespace Content.Shared.Weapons.Melee.Events;
 
-[ByRefEvent] public record struct BeforeMeleeHitEvent(List<EntityUid> HitEntities, EntityUid User, bool Cancelled = false);
+[ByRefEvent] public record struct BeforeMeleeHitEvent(List<EntityUid> HitEntities, EntityUid User, bool Cancelled = false); // imperial medieval rideable
 
 /// <summary>
 ///     Raised directed on the melee weapon entity used to attack something in combat mode,

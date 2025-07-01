@@ -44,13 +44,13 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             return;
         }
 
-        // imperial medieval start
+        // imperial medieval rideable start
         var before = new ProjectileBeforeHitEvent(target, component.Shooter);
 
         RaiseLocalEvent(uid, ref before);
 
         if (before.Cancelled) return;
-        // imperial medieval end
+        // imperial medieval rideable end
 
 
         var ev = new ProjectileHitEvent(component.Damage * _damageableSystem.UniversalProjectileDamageModifier, target, component.Shooter);

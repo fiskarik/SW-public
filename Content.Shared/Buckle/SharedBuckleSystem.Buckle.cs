@@ -179,7 +179,7 @@ public abstract partial class SharedBuckleSystem
     private void OnBuckleUpdateCanMove(EntityUid uid, BuckleComponent component, UpdateCanMoveEvent args)
     {
         if (HasComp<RideableComponent>(component.BuckledTo))
-            return; // imperial medieval
+            return; // imperial medieval rideable
 
         if (component.Buckled)
             args.Cancel();
