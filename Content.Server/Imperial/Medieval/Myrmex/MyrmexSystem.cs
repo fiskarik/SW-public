@@ -10,12 +10,16 @@ using Content.Shared.Alert;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Inventory;
 using Content.Shared.BadSmell;
+using Content.Shared.Damage;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map.Components;
 using Content.Shared.Maps;
 using Content.Shared.Clothing.Components;
 using Content.Server.Myrmex.Components;
 using Robust.Shared.Spawners;
+using System.Numerics;
+using Content.Shared.Body.Components;
+using Robust.Shared.GameObjects;
 
 namespace Content.Server.Myrmex
 {
@@ -26,6 +30,7 @@ namespace Content.Server.Myrmex
         [Dependency] internal readonly IMapManager _mapManager = default!;
         [Dependency] protected readonly SharedAudioSystem _audio = default!;
         [Dependency] private readonly IGameTiming _timing = default!;
+        [Dependency] private readonly DamageableSystem _damageableSystem = default!;
         [Dependency] private readonly SharedPopupSystem _popup = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly AlertsSystem _alerts = default!;
@@ -135,10 +140,59 @@ namespace Content.Server.Myrmex
                 {
                     UpdateGrow(comp.Owner, comp);
                 }
+
+                foreach (var rockfall in EntityManager.EntityQuery<MyrmexRockFallComponent>())
+                {
+                    UpdateRockfall(rockfall.Owner, rockfall);
+                }
             }
 
         }
+        private void UpdateRockfall(EntityUid uid, MyrmexRockFallComponent comp)
+        {
+            var c = Transform(uid).Coordinates;
+            if (_random.Prob(comp.Chanse) && !CheckProp(c, comp.Range))
+            {
+                comp.BadCount += 1;
+                Spawn(comp.WarningID, c);
+            }
+            if (comp.BadCount >= comp.MaxBadCount)
+            {
 
+                foreach (var entity in _lookup.GetEntitiesInRange(c, comp.Range))
+                {
+                    if (HasComp<BodyComponent>(entity))
+                        _damageableSystem.TryChangeDamage(entity, comp.Damage, true, true);
+                }
+
+                Spawn(comp.EndID, c);
+                Spawn(comp.FallID, c);
+                Spawn(comp.FallID, c.Offset(new Vector2(-1, -1)));
+                Spawn(comp.FallID, c.Offset(new Vector2(-1, 1)));
+                Spawn(comp.FallID, c.Offset(new Vector2(1, -1)));
+                Spawn(comp.FallID, c.Offset(new Vector2(1, 1)));
+                Spawn(comp.FallID, c.Offset(new Vector2(-1, 0)));
+                Spawn(comp.FallID, c.Offset(new Vector2(0, -1)));
+                Spawn(comp.FallID, c.Offset(new Vector2(1, 0)));
+                Spawn(comp.FallID, c.Offset(new Vector2(0, 1)));
+                Spawn(comp.FallID, c.Offset(new Vector2(-2, 0)));
+                Spawn(comp.FallID, c.Offset(new Vector2(2, 0)));
+                Spawn(comp.FallID, c.Offset(new Vector2(0, 2)));
+                Spawn(comp.FallID, c.Offset(new Vector2(0, -2)));
+                var time = EnsureComp<TimedDespawnComponent>(uid);
+                time.Lifetime = 0.03f;
+            }
+        }
+
+        public bool CheckProp(EntityCoordinates coords, float range)
+        {
+            foreach (var entity in _lookup.GetEntitiesInRange(coords, range))
+            {
+                if (HasComp<OccluderComponent>(entity) || HasComp<MyrmexPropComponent>(entity))
+                    return true;
+            }
+            return false;
+        }
         private void UpdateGrow(EntityUid uid, MyrmexEggComponent comp)
         {
 
@@ -146,11 +200,13 @@ namespace Content.Server.Myrmex
             var coords = xform.Coordinates;
             string light = CheckNearby(coords, "light");
             string spore = CheckNearby(coords, "spore");
-            int temp = 15;
+            float temp = 15f;
             if (light == comp.LightColor)
-                temp *= 2;
+                temp *= 2f;
             if (spore == comp.SporeType)
-                temp *= 2;
+                temp *= 2f;
+            if (light == comp.LightColor && spore == comp.SporeType)
+                temp *= 1.5f;
             comp.TimeTillSpawn -= temp;
             if (comp.TimeTillSpawn <= 0)
             {
